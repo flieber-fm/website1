@@ -1,0 +1,6 @@
+FROM caddy:2-alpine
+COPY Caddyfile /etc/caddy/Caddyfile
+# Only the public site files are served; README, Dockerfile etc. stay out.
+COPY index.html robots.txt llms.txt capabilities.json /srv/
+COPY agents /srv/agents
+COPY assets /srv/assets

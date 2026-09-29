@@ -1,0 +1,15 @@
+# Static preview server. The X-Robots-Tag header keeps every file
+# (pages, llms.txt, capabilities.json) out of search indexes.
+# Remove that header before the public launch.
+{
+	admin off
+}
+
+:{$PORT:8080} {
+	root * /srv
+	encode gzip
+	header X-Robots-Tag "noindex, nofollow, noarchive"
+	header /assets/* Cache-Control "public, max-age=3600"
+	try_files {path} {path}/index.html
+	file_server
+}

@@ -18,6 +18,18 @@ assets/logos/         Customer logos from the shared Drive logo folder
 
 Local preview: `python3 -m http.server` from the repo root, then open http://localhost:8000.
 
+## Private preview (current state)
+
+The site is deployed as a **hidden, non-indexed preview** on Railway (project `flieber-website-preview`), built from this branch with the `Dockerfile` (Caddy static server).
+
+Three layers keep it out of search engines. **All three must be removed before the public launch:**
+
+1. `<meta name="robots" content="noindex, nofollow">` in `index.html` and `agents/index.html`
+2. `robots.txt` with `Disallow: /`
+3. The `X-Robots-Tag` header in `Caddyfile`
+
+The preview is unlisted, not password-protected: anyone with the URL can open it.
+
 ## Brand rules applied
 
 - **Type:** Open Sauce One. Headings Regular at 110% line height and about -4% tracking; subheads SemiBold at -3%; body Regular.
