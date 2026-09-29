@@ -47,6 +47,6 @@ Also listed in the copy doc: someone needs to own the **"100+ brands"** figure (
 ## Notes
 
 - The hero "agent console" is an illustration and uses **made-up sample SKUs**; it is labeled "Sample brand · illustrative data". Replace it with real sandbox output once the sandbox exists.
-- The logo strip uses the six logos in the shared Drive logo folder (Lifepro, Zugu, Primal Harvest, Unybrands, Waterglider, Qualico). Modloft appears in a quote but has no logo in that folder. Check the strip against the live homepage before launch.
+- The logo strip uses the six logos (white PNGs, rendered black with a CSS filter) in the shared Drive logo folder (Lifepro, Zugu, Primal Harvest, Unybrands, Waterglider, Qualico). Modloft appears in a quote but has no logo in that folder. Check the strip against the live homepage before launch.
 - Keep `/agents`, `llms.txt` and `capabilities.json` in sync. They are three renderings of the same content.
 - Before launch, add an OG share image (`og:image`) and analytics.

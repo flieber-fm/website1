@@ -561,8 +561,9 @@ code { font-family: var(--mono); font-size: .88em; }
 }
 .logos-track { display: flex; gap: 64px; align-items: center; width: max-content; animation: marquee 38s linear infinite; }
 .logos:hover .logos-track { animation-play-state: paused; }
-.logos-track img { height: 30px; width: auto; filter: grayscale(1) contrast(1.1); opacity: .75; transition: opacity .2s, filter .2s; }
-.logos-track img:hover { opacity: 1; filter: none; }
+/* Source logos are white on transparent; render them in brand Black */
+.logos-track img { height: 34px; width: auto; filter: brightness(0); opacity: .72; transition: opacity .2s; }
+.logos-track img:hover { opacity: 1; }
 .logos-track .wordmark { font-size: 22px; font-weight: 600; letter-spacing: -0.04em; color: var(--charcoal); white-space: nowrap; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
@@ -750,3 +751,4 @@ code { font-family: var(--mono); font-size: .88em; }
 /* In the 2-column hero with a narrow viewport the console would crowd the H1 */
 @media (min-width: 981px) and (max-width: 1180px) { .hero-top { grid-template-columns: 1fr; } .console { max-width: 620px; } }
 .proof-head { margin-bottom: 28px; }
+.logos-track img.logo-square { height: 46px; }
