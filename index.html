@@ -24,7 +24,7 @@
 
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v=3">
+  <link rel="stylesheet" href="assets/css/site.css?v=4">
 
   <script>document.documentElement.classList.remove('no-js');</script>
   <script type="application/ld+json">
@@ -97,7 +97,7 @@
       <div class="wrap">
         <div class="hero-top">
           <div class="hero-copy">
-            <span class="eyebrow"><span class="pulse" aria-hidden="true"></span>Commerce data, maintained <span class="sep" aria-hidden="true"></span> MCP-native</span>
+            <span class="eyebrow"><span class="pulse" aria-hidden="true"></span><span>Inventory intelligence for multichannel brands</span><span class="eb-tail"><span class="sep" aria-hidden="true"></span>MCP-native</span></span>
             <h1 class="h1" id="hero-title">Before AI can run your brand, someone has to keep your data true.</h1>
             <p class="hero-decisions">
               <span class="sr-only">Make better inventory, purchasing, pricing, promo, ad spend, allocation, transfer and cash-flow decisions.</span>
@@ -170,7 +170,90 @@
       </div>
     </section>
 
-    <!-- ================= 2. THE PROBLEM ================= -->
+    <!-- ================= 2. WHY INVENTORY ================= -->
+    <section class="section section-soft" id="why-inventory" aria-labelledby="why-title">
+      <div class="wrap">
+        <div class="why-head reveal">
+          <div>
+            <span class="kicker">Why inventory</span>
+            <h2 class="h2" id="why-title" style="margin-top:20px">Purchases, promotions, ads, financing: every one is ultimately an inventory decision.</h2>
+          </div>
+          <p class="lead">For most product brands, inventory is the biggest use of cash. Every major decision either adds to it, draws it down, or depends on it being there. That’s why Flieber starts with inventory, and why getting it wrong costs more than almost any other mistake.</p>
+        </div>
+
+        <div class="cards-4 reveal-stagger">
+          <article class="icard">
+            <div class="icard-viz" aria-hidden="true">
+              <svg viewBox="0 0 260 120">
+                <path d="M14 104 H246" stroke="#CCD9DB"/>
+                <path class="viz-draw" d="M14 40 L60 70 L84 84 L100 92 L100 32 L150 58 L200 82 L246 96" fill="none" stroke="#1B1C1C" stroke-width="2"/>
+                <rect x="94" y="22" width="12" height="82" rx="3" fill="#F5ED61" opacity=".9"/>
+                <path d="M100 92 V32" stroke="#1B1C1C" stroke-width="2"/>
+                <text x="112" y="24" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">PO lands</text>
+                <text x="246" y="118" text-anchor="end" font-size="9" fill="#757F82" font-family="ui-monospace,monospace">units on hand</text>
+              </svg>
+            </div>
+            <span class="inv-tag inv-add"><i aria-hidden="true">+</i>Adds to it</span>
+            <h3 class="h3">Purchases and transfers.</h3>
+            <p>A PO locks up cash for months. Buy too much and it sits in a warehouse; buy too little and you stock out.</p>
+          </article>
+
+          <article class="icard">
+            <div class="icard-viz" aria-hidden="true">
+              <svg viewBox="0 0 260 120">
+                <rect x="118" y="14" width="76" height="90" fill="#F5ED61" opacity=".55"/>
+                <text x="156" y="28" text-anchor="middle" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">promo</text>
+                <path d="M14 104 H246" stroke="#CCD9DB"/>
+                <path class="viz-draw" d="M14 48 L60 56 L118 64 L160 104 L246 104" fill="none" stroke="#1B1C1C" stroke-width="2"/>
+                <circle cx="160" cy="104" r="4" fill="#1B1C1C"/>
+                <text x="170" y="96" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">stockout</text>
+              </svg>
+            </div>
+            <span class="inv-tag inv-draw"><i aria-hidden="true">−</i>Draws it down</span>
+            <h3 class="h3">Promotions.</h3>
+            <p>A discount only pays off if you have the units to sell. Run it on thin stock and you trade margin for a stockout.</p>
+          </article>
+
+          <article class="icard">
+            <div class="icard-viz" aria-hidden="true">
+              <svg viewBox="0 0 260 120">
+                <rect x="70" y="14" width="150" height="90" fill="#F5ED61" opacity=".55"/>
+                <text x="145" y="28" text-anchor="middle" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">campaign</text>
+                <path d="M14 104 H246" stroke="#CCD9DB"/>
+                <path d="M70 84 L110 60 L150 44 L220 36" fill="none" stroke="#757F82" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <text x="222" y="50" text-anchor="end" font-size="9" fill="#757F82" font-family="ui-monospace,monospace">paid demand</text>
+                <path class="viz-draw" d="M14 52 L70 58 L110 80 L138 104 L246 104" fill="none" stroke="#1B1C1C" stroke-width="2"/>
+                <circle cx="138" cy="104" r="4" fill="#1B1C1C"/>
+              </svg>
+            </div>
+            <span class="inv-tag inv-draw"><i aria-hidden="true">−</i>Draws it down</span>
+            <h3 class="h3">Ads and influencer campaigns.</h3>
+            <p>Demand you pay for is wasted if the product runs out mid-campaign.</p>
+          </article>
+
+          <article class="icard">
+            <div class="icard-viz" aria-hidden="true">
+              <svg viewBox="0 0 260 120">
+                <path d="M14 104 H246" stroke="#CCD9DB"/>
+                <g fill="#CCD9DB">
+                  <rect x="104" y="52" width="22" height="52" rx="3"/><rect x="132" y="44" width="22" height="60" rx="3"/><rect x="160" y="58" width="22" height="46" rx="3"/><rect x="188" y="38" width="22" height="66" rx="3"/>
+                </g>
+                <rect x="216" y="30" width="22" height="74" rx="3" fill="#F5ED61" stroke="#1B1C1C"/>
+                <path d="M14 66 H246" stroke="#1B1C1C" stroke-width="1.5" stroke-dasharray="5 4"/>
+                <text x="14" y="58" font-size="9" fill="#1B1C1C" font-family="ui-monospace,monospace">borrowing</text>
+                <text x="14" y="80" font-size="9" fill="#1B1C1C" font-family="ui-monospace,monospace">base</text>
+                <text x="104" y="22" font-size="9" fill="#757F82" font-family="ui-monospace,monospace">stock value</text>
+              </svg>
+            </div>
+            <span class="inv-tag inv-dep"><i aria-hidden="true">=</i>Depends on it</span>
+            <h3 class="h3">Financing.</h3>
+            <p>Credit lines and inventory loans are sized on stock value and sell-through. What you can borrow depends on your inventory numbers being right.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. THE PROBLEM ================= -->
     <section class="section on-dark problem" id="problem" aria-labelledby="problem-title">
       <div class="grid-bg" aria-hidden="true"></div>
       <div class="wrap" style="position:relative">
@@ -179,7 +262,7 @@
             <span class="kicker">The problem</span>
             <h2 class="h2" id="problem-title" style="margin-top:20px">Your data isn’t a set of facts. It’s a moving system.</h2>
           </div>
-          <p class="lead">Every system you sell and buy through sees a slice of the truth. None of them reconcile it. Hand that to an AI as-is and every answer is confidently out of date.</p>
+          <p class="lead">And the data behind those decisions won’t sit still. Every system you sell and buy through sees a slice of the truth. None of them reconcile it. Hand that to an AI as-is and every answer is confidently out of date.</p>
         </div>
 
         <div class="cards-4 reveal-stagger">
@@ -267,7 +350,7 @@
       </div>
     </section>
 
-    <!-- ================= 3. WHAT FLIEBER DOES ================= -->
+    <!-- ================= 4. WHAT FLIEBER DOES ================= -->
     <section class="section section-soft" id="how" aria-labelledby="how-title">
       <div class="wrap">
         <div class="section-head reveal">
@@ -408,7 +491,7 @@
       </div>
     </section>
 
-    <!-- ================= 4. TWO WAYS ================= -->
+    <!-- ================= 5. TWO WAYS ================= -->
     <section class="section" id="two-ways" aria-labelledby="ways-title">
       <div class="wrap">
         <div class="section-head reveal">
@@ -451,7 +534,7 @@
       </div>
     </section>
 
-    <!-- ================= 5. WHAT YOU CAN DO ================= -->
+    <!-- ================= 6. WHAT YOU CAN DO ================= -->
     <section class="section section-soft" id="use-cases" aria-labelledby="asks-title">
       <div class="wrap">
         <div class="section-head reveal">
@@ -500,7 +583,7 @@
       </div>
     </section>
 
-    <!-- ================= 6. PROOF ================= -->
+    <!-- ================= 7. PROOF ================= -->
     <section class="section" id="proof" aria-labelledby="proof-title">
       <div class="wrap">
         <div class="section-head proof-head reveal">
@@ -585,7 +668,7 @@
       </div>
     </section>
 
-    <!-- ================= 7. FIT ================= -->
+    <!-- ================= 8. FIT ================= -->
     <section class="section section-soft" id="fit" aria-labelledby="fit-title">
       <div class="wrap">
         <div class="section-head reveal">
@@ -614,7 +697,7 @@
       </div>
     </section>
 
-    <!-- ================= 8. TRY IT ================= -->
+    <!-- ================= 9. TRY IT ================= -->
     <section class="section try" id="try" aria-labelledby="try-title">
       <div class="grid-bg" aria-hidden="true"></div>
       <div class="wrap" style="position:relative">
@@ -693,6 +776,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/site.js?v=3" defer></script>
+  <script src="assets/js/site.js?v=4" defer></script>
 </body>
 </html>

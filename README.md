@@ -42,19 +42,19 @@ Every unconfirmed value is marked in the HTML with a `data-todo="KEY"` attribute
 
 | Key | Where | What's needed |
 | --- | --- | --- |
-| `MCP_ENDPOINT_URL` | Home §8, /agents, llms.txt, capabilities.json | MCP endpoint URL (**blocks launch**) |
+| `MCP_ENDPOINT_URL` | Home §9, /agents, llms.txt, capabilities.json | MCP endpoint URL (**blocks launch**) |
 | `MCP_AUTH` | /agents, llms.txt, capabilities.json | Auth method (copy says "OAuth, confirm") |
 | `MCP_DOCS_URL` | Footer, /agents, llms.txt, capabilities.json | MCP docs URL |
-| `SANDBOX_URL` | Home §8, /agents | Sandbox link (sandbox still to be built, **blocks launch**) |
-| `SIGNUP_URL` | Nav, hero, §4, §8 | Free trial / Get started destination |
-| `PLANNER_URL` | Nav, hero, §4, §8, /agents | Booking link for "Talk to a planner" / 30-minute call |
-| `NIXTLA_REPORT_URL` | Home §6, /agents | Link to the Nixtla report ("Read the method") |
+| `SANDBOX_URL` | Home §9, /agents | Sandbox link (sandbox still to be built, **blocks launch**) |
+| `SIGNUP_URL` | Nav, hero, §5, §9 | Free trial / Get started destination |
+| `PLANNER_URL` | Nav, hero, §5, §9, /agents | Booking link for "Talk to a planner" / 30-minute call |
+| `NIXTLA_REPORT_URL` | Home §7, /agents | Link to the Nixtla report ("Read the method") |
 | `SEC_*` (6 keys) | /agents Data handling, llms.txt, capabilities.json | Hosting, encryption, compliance, AI models, access, deletion |
 | `ERP_LIST` | /agents Capabilities | ERPs besides NetSuite for "Push to ERP" |
 | `CONTACT_EMAIL` | /agents Hand off, llms.txt, capabilities.json | Contact email |
 | `HELP_CENTER_URL`, `BLOG_URL`, `CONTACT_URL`, `PRIVACY_URL` | Footer | Existing flieber.com URLs |
 
-Also listed in the copy doc: someone needs to own the **"100+ brands"** figure (homepage §6, /agents, llms.txt, capabilities.json).
+Also listed in the copy doc: someone needs to own the **"100+ brands"** figure (homepage §7, /agents, llms.txt, capabilities.json).
 
 ## Notes
 
