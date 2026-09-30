@@ -826,3 +826,4 @@ code { font-family: var(--mono); font-size: .88em; }
   text-transform: uppercase; color: var(--text-2); margin-bottom: 26px;
 }
 .logos-block .logos { margin-top: 0; border: 0; border-radius: 0; padding: 8px 0; }
+.logos-track img.logo-thin { height: 20px; }
