@@ -279,6 +279,26 @@ code { font-family: var(--mono); font-size: .88em; }
 }
 .hero-copy .eyebrow { margin-bottom: 28px; }
 .hero-copy .lead { margin-top: 28px; max-width: 600px; }
+.hero-copy .hero-thesis + .lead { margin-top: 18px; }
+
+/* "Make better [word] decisions." The rotating word sits on its own line so
+   swapping it never reflows the rest of the headline. */
+.hero-h1 { font-size: clamp(46px, 7vw, 92px); line-height: 1.02; }
+.rotator {
+  display: inline-block; vertical-align: bottom;
+  height: 1.14em; line-height: 1.14em; overflow: hidden;
+  background: var(--yellow); padding: 0 .12em; margin: .04em 0 .04em -.04em;
+  border-radius: .08em;
+  transition: width .45s var(--ease);
+  white-space: nowrap;
+}
+.rotator-word { display: inline-block; transition: transform .38s var(--ease), opacity .38s var(--ease); }
+.rotator-word.out { transform: translateY(-105%); opacity: 0; }
+.rotator-word.enter { transform: translateY(105%); opacity: 0; transition: none; }
+.hero-thesis {
+  margin-top: 28px; max-width: 620px;
+  font-size: clamp(22px, 2.3vw, 30px); line-height: 1.18; letter-spacing: -0.03em;
+}
 
 /* Agent console */
 .console {

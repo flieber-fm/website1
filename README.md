@@ -58,6 +58,8 @@ Also listed in the copy doc: someone needs to own the **"100+ brands"** figure (
 
 ## Notes
 
+- **Hero headline differs from the approved copy doc.** The H1 is now "Make better [word] decisions." with a rotating word (inventory, purchasing, pricing, promo, ad spend, allocation, transfer, cash-flow). The approved H1 ("Before AI can run your brand, someone has to keep your data true.") is kept as the line under it. Edit the words in the `data-words` attribute in `index.html`; screen readers and crawlers get the full list as one sentence. The rotation runs once, settles on "inventory", pauses on hover, and is off for visitors who prefer reduced motion.
+
 - The hero "agent console" is an illustration and uses **made-up sample SKUs**; it is labeled "Sample brand · illustrative data". Replace it with real sandbox output once the sandbox exists.
 - The logo strip uses the six logos (white PNGs, rendered black with a CSS filter) in the shared Drive logo folder (Lifepro, Zugu, Primal Harvest, Unybrands, Waterglider, Qualico). Modloft appears in a quote but has no logo in that folder. Check the strip against the live homepage before launch.
 - Keep `/agents`, `llms.txt` and `capabilities.json` in sync. They are three renderings of the same content.

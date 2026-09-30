@@ -40,6 +40,50 @@
     revealEls.forEach(function (el) { el.classList.add('in-view'); });
   }
 
+  /* ---------- Hero headline: rotating decision word ---------- */
+  // Cycles through the list once and settles back on the first word, so the
+  // headline doesn't keep moving while people read. Pauses on hover.
+  var rotator = document.querySelector('.rotator');
+  if (rotator && !reduceMotion) {
+    var words = rotator.getAttribute('data-words').split('|');
+    var wordEl = rotator.querySelector('.rotator-word');
+    var idx = 0, paused = false, remaining = words.length;
+    var measure = document.createElement('span');
+    measure.setAttribute('aria-hidden', 'true');
+    measure.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;left:-9999px;top:0';
+    rotator.parentNode.appendChild(measure);
+    var widthOf = function (w) {
+      var cs = getComputedStyle(rotator);
+      measure.style.font = cs.font;
+      measure.style.letterSpacing = cs.letterSpacing;
+      measure.textContent = w;
+      return measure.getBoundingClientRect().width + parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+    };
+    var setWidth = function () { rotator.style.width = widthOf(words[idx]) + 'px'; };
+    var swap = function () {
+      idx = (idx + 1) % words.length;
+      wordEl.classList.add('out');
+      setTimeout(function () {
+        wordEl.textContent = words[idx];
+        setWidth();
+        wordEl.classList.remove('out');
+        wordEl.classList.add('enter');
+        void wordEl.offsetWidth;
+        wordEl.classList.remove('enter');
+      }, 380);
+    };
+    var loop = function () {
+      if (remaining <= 0) return;
+      if (!paused) { swap(); remaining--; }
+      setTimeout(loop, 1900);
+    };
+    rotator.addEventListener('mouseenter', function () { paused = true; });
+    rotator.addEventListener('mouseleave', function () { paused = false; });
+    window.addEventListener('resize', setWidth);
+    var start = function () { setWidth(); setTimeout(loop, 1600); };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(start); else start();
+  }
+
   /* ---------- Hero console: an agent asks, Flieber answers ---------- */
   var consoleEl = document.getElementById('console');
   if (consoleEl) {
