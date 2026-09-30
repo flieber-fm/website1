@@ -595,7 +595,7 @@ code { font-family: var(--mono); font-size: .88em; }
 }
 .brands-card .big { font-size: clamp(64px, 8vw, 104px); line-height: .9; letter-spacing: -0.06em; }
 .brands-card p { font-size: 19px; letter-spacing: -0.02em; margin-top: 12px; }
-.brands-card p.pre { margin: 0 0 10px; font-size: 15px; color: var(--text-2); }
+.brands-card p.since { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line-strong); font-size: 16px; color: var(--text-2); }
 .g2 { display: flex; align-items: center; gap: 12px; font-size: 14.5px; color: var(--text-2); }
 .g2 .stars { display: flex; gap: 2px; }
 
@@ -809,3 +809,12 @@ code { font-family: var(--mono); font-size: .88em; }
   .eyebrow .pulse { display: inline-block; margin-right: 8px; vertical-align: 1px; }
   .eyebrow .eb-tail { margin-left: 8px; gap: 8px; }
 }
+
+/* Section 4 closing line */
+.engine-close {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding-top: 32px; border-top: 1px solid var(--line-strong);
+  font-size: clamp(18px, 1.6vw, 22px); line-height: 1.35; letter-spacing: -0.02em;
+  max-width: 900px;
+}
+.engine-close img { flex: none; width: 28px; height: auto; margin-top: 4px; }

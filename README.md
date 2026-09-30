@@ -54,7 +54,7 @@ Every unconfirmed value is marked in the HTML with a `data-todo="KEY"` attribute
 | `CONTACT_EMAIL` | /agents Hand off, llms.txt, capabilities.json | Contact email |
 | `HELP_CENTER_URL`, `BLOG_URL`, `CONTACT_URL`, `PRIVACY_URL` | Footer | Existing flieber.com URLs |
 
-Also listed in the copy doc: someone needs to own the **"100+ brands"** figure (homepage §7, /agents, llms.txt, capabilities.json).
+Also listed in the copy doc: someone needs to own the **"100+ brands today, 1,000+ since 2019"** figures (homepage §4 closing line and §7, /agents, llms.txt, capabilities.json).
 
 ## Notes
 

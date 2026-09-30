@@ -71,7 +71,7 @@ Customer data stays the customer's and is never sold or shared. Calculations run
 ## Evidence
 
 - Forecast accuracy: 36% more accurate than the best of 16 statistical and machine-learning models, on 46,000 products, measured by MAE% and Bias%; verified by Nixtla. [Link to the report.]
-- Adoption: 100+ commerce brands.
+- Adoption: 100+ commerce brands today; more than 1,000 since 2019.
 - Reviews: https://www.g2.com/products/flieber/reviews. Customer references available on request.
 
 ## Hand off to a human
