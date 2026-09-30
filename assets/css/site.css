@@ -284,8 +284,9 @@ code { font-family: var(--mono); font-size: .88em; }
 /* "Make better [word] decisions." under the H1. The highlight box eases to
    each word's width so the line changes smoothly. */
 .hero-decisions {
-  margin-top: 26px;
-  font-size: clamp(28px, 3.3vw, 44px); line-height: 1.2; letter-spacing: -0.035em;
+  margin-top: 22px;
+  font-size: clamp(20px, 2.15vw, 30px); line-height: 1.2; letter-spacing: -0.03em;
+  white-space: nowrap;
 }
 .rotator {
   display: inline-block; vertical-align: bottom;
