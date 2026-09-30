@@ -163,6 +163,13 @@
     restart();
   }
 
+  /* ---------- Logo strip: drop any logo file that fails to load ---------- */
+  document.querySelectorAll('.logos-track img').forEach(function (img) {
+    var drop = function () { img.remove(); };
+    if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) drop();
+    else img.addEventListener('error', drop);
+  });
+
   /* ---------- Copy to clipboard ---------- */
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {
