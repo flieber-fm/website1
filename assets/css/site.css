@@ -574,7 +574,7 @@ code { font-family: var(--mono); font-size: .88em; }
 /* ==========================================================================
    6. Proof
    ========================================================================== */
-.proof-top { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; }
+.proof-top { display: grid; grid-template-columns: 1fr; gap: 14px; }
 .stat {
   background: var(--blue); color: var(--white);
   border-radius: var(--radius-l); padding: clamp(28px, 4vw, 48px);
@@ -818,3 +818,11 @@ code { font-family: var(--mono); font-size: .88em; }
   max-width: 900px;
 }
 .engine-close img { flex: none; width: 28px; height: auto; margin-top: 4px; }
+
+/* Logo strip: label above an unboxed, edge-faded marquee (matches the live site) */
+.logos-block { margin-top: clamp(48px, 6vw, 80px); }
+.logos-label {
+  text-align: center; font-size: 13px; font-weight: 500; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text-2); margin-bottom: 26px;
+}
+.logos-block .logos { margin-top: 0; border: 0; border-radius: 0; padding: 8px 0; }

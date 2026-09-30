@@ -77,7 +77,7 @@
   "evidence": {
     "forecast_accuracy": {
       "claim": "36% more accurate than the best of 16 statistical and machine-learning models",
-      "sample": "46,000 products",
+      "sample": "a sample of 46,000 products",
       "metrics": ["MAE%", "Bias%"],
       "verified_by": "Nixtla",
       "report_url": "[Link to the report]"
