@@ -110,7 +110,7 @@ Decided Oct 1 (Fabricio), round 2:
 The live site, book-a-demo, free trial and blog run on HubSpot (portal 5767502, www.flieber.com).
 
 - [ ] Build the new pages as HubSpot website pages from this repo (/, /agents, /pricing, /security, /contact), published at cutover only
-- [ ] Build the HubSpot drafts: needs api.hubapi.com allowed in the environment's network settings and a HubSpot personal access key (Design Manager and File Manager scopes) stored as the environment variable HUBSPOT_PERSONAL_ACCESS_KEY, plus HUBSPOT_PORTAL_ID=5767502; then `npx @hubspot/cli` uploads hubspot/build/ templates and the assets to File Manager folder flieber-2026
+- [ ] Build the HubSpot drafts: needs a HubSpot private app token (scopes `content` and `files`) added as an environment credential (Bearer, allowed website api.hubapi.com). The proxy adds the Authorization header, so no variable is needed. Upload with curl to the CMS source-code API (/cms/v3/source-code/draft/content/flieber-2026/...) and the Files API (folder flieber-2026); create pages as unpublished drafts with the HubSpot connector. Check access first with a read-only call (GET /cms/v3/source-code/draft/metadata/flieber-2026)
 - [ ] Follow `hubspot/CUTOVER.md` (unpublish, never delete, old pages; publish new ones; import `hubspot/url-redirects.csv`; upload llms.txt and capabilities.json; robots.txt)
 - [ ] Restyle the book-a-demo page (header, footer, copy) to the new site; keep the form and CRM scripts
 - [ ] Free-trial page: "Integrate any system or spreadsheet" contradicts the new rule (assisted integrations only on paid plans)
