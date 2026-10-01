@@ -197,6 +197,7 @@ code { font-family: var(--mono); font-size: .88em; }
   transition: background-color .2s, color .2s;
 }
 .nav-links a:hover { background: var(--gray-light); color: var(--black); }
+.nav-links a[aria-current="page"]:not(.agents-link) { color: var(--black); background: var(--gray-light); }
 .nav-links .agents-link { display: inline-flex; align-items: center; gap: 6px; }
 .nav-links .agents-link code {
   font-size: 13px; line-height: 1; padding: 5px 9px; border-radius: 6px; background: var(--black); color: var(--yellow);
@@ -789,3 +790,35 @@ code { font-family: var(--mono); font-size: .88em; }
 .doc-body p b { color: var(--black); font-weight: 600; }
 .doc-body a { text-underline-offset: 3px; }
 .agents-page .reveal, .agents-page .reveal-stagger > * { opacity: 1; transform: none; transition: none; }
+
+/* ==========================================================================
+   /pricing
+   ========================================================================== */
+.page-head { padding: clamp(48px, 7vw, 96px) 0 var(--section); }
+.page-head .section-head { margin-bottom: clamp(36px, 5vw, 56px); }
+.page-head .h1 { margin-top: 20px; }
+.page-head .under-doors { justify-content: flex-start; margin-top: 28px; }
+.plan-price { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
+.plan-amount { font-size: clamp(30px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.04em; }
+.plan-amount span { font-size: .5em; letter-spacing: -0.02em; color: var(--text-2); margin-left: 2px; }
+.plan-basis { margin-top: 8px; font-size: 15.5px; color: var(--text-2); max-width: 460px; }
+.plan-under { margin-top: 24px; max-width: 760px; }
+.plan-under a { text-underline-offset: 3px; }
+.incl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; border-bottom: 1px solid var(--line); }
+.incl li { display: flex; gap: 12px; padding: 16px 0; border-top: 1px solid var(--line); align-items: flex-start; font-size: 18px; letter-spacing: -0.015em; }
+.incl .ico { width: 22px; height: 22px; border-radius: 6px; flex: none; display: grid; place-items: center; background: var(--yellow); border: 1px solid var(--black); margin-top: 1px; }
+@media (max-width: 760px) { .incl { grid-template-columns: 1fr; } }
+.faq { max-width: 880px; border-top: 1px solid var(--line-strong); }
+.faq details { border-bottom: 1px solid var(--line-strong); }
+.faq summary {
+  list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  padding: 22px 0; font-size: clamp(18px, 1.7vw, 22px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.25;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq .plus { position: relative; width: 30px; height: 30px; flex: none; border-radius: 8px; border: 1px solid var(--line-strong); background: var(--white); }
+.faq .plus::before, .faq .plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.6px; background: var(--black); transform: translate(-50%, -50%); }
+.faq .plus::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .25s var(--ease); }
+.faq details[open] .plus::after { transform: translate(-50%, -50%) rotate(0deg); }
+.faq summary:hover .plus { border-color: var(--black); }
+.faq details p { padding: 0 54px 26px 0; color: var(--text-2); max-width: 760px; }
+.try-note { position: relative; margin-top: 18px; font-size: 14.5px; color: var(--black); }

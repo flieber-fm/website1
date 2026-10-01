@@ -7,9 +7,10 @@ No build step. Any static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages,
 ```
 index.html                 Homepage (7 sections + footer)
 agents/index.html          /agents: plain facts for AI agents, text-first, no animation
+pricing/index.html         /pricing: the two offers, how pricing works, what's included, FAQ
 llms.txt                   Generated from /agents (llms.txt convention)
 capabilities.json          Generated from /agents (schema from brief §5)
-sitemap.xml                /, /agents, /llms.txt, /capabilities.json
+sitemap.xml                /, /agents, /pricing, /llms.txt, /capabilities.json
 robots.txt                 PREVIEW: blocks all crawlers
 robots.production.txt      Launch version: allows search engines, AI crawler policy pending
 scripts/check-placeholders.py   Lists every placeholder still on the site
@@ -55,7 +56,7 @@ python3 scripts/check-placeholders.py --strict  # exit 1 if anything remains (us
 
 The check also reports the three preview-only no-index layers, which **must be removed at launch**:
 
-1. `<meta name="robots" content="noindex, nofollow">` in `index.html` and `agents/index.html`
+1. `<meta name="robots" content="noindex, nofollow">` in `index.html`, `agents/index.html` and `pricing/index.html`
 2. `robots.txt` (replace it with `robots.production.txt`, after filling in the AI crawler policy)
 3. The `X-Robots-Tag` header in `Caddyfile`
 
@@ -79,6 +80,16 @@ Before launch:
 - [ ] Blog, Contact and Privacy URLs for the footer (`[PLACEHOLDER: …]`), and check that `/pricing` and `/security` exist on the live site
 - [ ] "Push to ERP" ERPs besides NetSuite (`[others]`)
 - [ ] Source for the four results in "Who we are" (+38% sales, -62% stockouts, -17% excess inventory, -88% time on replenishment; "average across customers using Flieber for 12+ months"): keep the method on file, since agents and buyers will quote these
+
+## /pricing (Oct 1)
+
+Structure follows the live flieber.com/pricing (hero, how pricing works, what you get, FAQ, closing CTA); plans, prices and terms follow the brief, because the live page publishes no prices ("we share your price on the demo call"). Pending Fabricio's confirmation:
+
+- [ ] "From $149/month": the legacy flieber.com/pricing-plans calculator starts at $299/month (Essentials, tier 1; $209 with a 30% intro discount), with Essentials/Pro/Max tiers and an annual option
+- [ ] Price drivers: the brief says sales, channels and warehouses; the live page says sales volume, channels and SKU count
+- [ ] "14-day free trial, no credit card required" (from the live page; the brief only says "free trial")
+- [ ] Managed Services wording: the page uses "help you run your planning practice" (Products card), not "run it" (hero door, /agents)
+- Not carried over on purpose: the live page's stats band (4.7 on G2, 3M+ SKUs, 50K+ POs/yr, "500+ brands", year-one results incl. "88% less time forecasting", "40 min to set up") and its testimonials. Results stay homepage-only, and "500+ brands" and the setup times conflict with the homepage and other live pages
 
 ## Analytics
 
