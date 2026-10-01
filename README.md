@@ -30,7 +30,7 @@ Local preview: `python3 -m http.server` from the repo root, then open http://loc
 3. Which Flieber is right for you? (`#which-flieber`): two equal cards, neither visually favored, then "Probably not for you if"
 4. What Flieber does with your data (`#how-it-works`)
 5. What you can do with it (example prompts in the mono font)
-6. Who we are (`#who-we-are`, added Oct 1 at Fabricio's request; not in the brief): since 2019, 1,000+ brands, operators first, and the four customer results
+6. Who we are (`#who-we-are`, added Oct 1 at Fabricio's request; not in the brief): since 2019, 1,000+ brands, operators first, and the four customer results. Founders' other companies are deliberately not mentioned (agreement between the co-founders)
 7. Proof
 8. Try it
 
@@ -78,7 +78,6 @@ Before launch:
 - [ ] Owner for the "100+ brands" figure
 - [ ] Blog, Contact and Privacy URLs for the footer (`[PLACEHOLDER: …]`), and check that `/pricing` and `/security` exist on the live site
 - [ ] "Push to ERP" ERPs besides NetSuite (`[others]`)
-- [ ] Founders' prior companies for "Who we are" (`[FOUNDERS' PRIOR COMPANIES]`)
 - [ ] Source for the four results in "Who we are" (+38% sales, -62% stockouts, -17% excess inventory, -88% time on replenishment; "average across customers using Flieber for 12+ months"): keep the method on file, since agents and buyers will quote these
 
 ## Analytics
