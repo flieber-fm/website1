@@ -88,8 +88,14 @@ Structure follows the live flieber.com/pricing (hero, how pricing works, what yo
 - [ ] "From $149/month": the legacy flieber.com/pricing-plans calculator starts at $299/month (Essentials, tier 1; $209 with a 30% intro discount), with Essentials/Pro/Max tiers and an annual option
 - [ ] Price drivers: the brief says sales, channels and warehouses; the live page says sales volume, channels and SKU count
 - [ ] "14-day free trial, no credit card required" (from the live page; the brief only says "free trial")
-- [ ] Managed Services wording: the page uses "help you run your planning practice" (Products card), not "run it" (hero door, /agents)
 - Not carried over on purpose: the live page's stats band (4.7 on G2, 3M+ SKUs, 50K+ POs/yr, "500+ brands", year-one results incl. "88% less time forecasting", "40 min to set up") and its testimonials. Results stay homepage-only, and "500+ brands" and the setup times conflict with the homepage and other live pages
+
+Decided Oct 1 (Fabricio):
+
+- Managed Services everywhere: planners join the team, participate in S&OP meetings to get full context, keep Flieber updated and *help* run the planning practice (not "run" it)
+- Forecasting is described as AI forecasting with anomaly correction (homepage, /agents, llms.txt, capabilities.json, /pricing)
+- Integrations on /pricing mirror flieber.com/integrations (native vs assisted, with data types). Native: one click, available in the free trial. Assisted: set up by Flieber's team, included on a paid plan, not during the trial. SPS Commerce added (new; listed as assisted, data types `[DATA TYPES]` pending). Flieber works as an MCP client today
+- [ ] SPS Commerce: confirm native or assisted, and its data types (Sales, Inventory, Shipments)
 
 ## Analytics
 

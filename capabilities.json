@@ -1,6 +1,6 @@
 {
   "name": "Flieber",
-  "summary": "Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces and suppliers. It is offered two ways on the same platform: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber planners run the brand's planning practice.",
+  "summary": "Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level with anomaly correction, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces and suppliers. It is offered two ways on the same platform: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber planners join the brand's team, keep Flieber updated and help run its planning practice.",
   "offers": [
     {
       "name": "Flieber Self-Serve",
@@ -26,20 +26,25 @@
   "capabilities": [
     { "id": "data_health", "input": "Brand account", "output": "Issues found, gaps, anomalies, fixes applied", "access": "read" },
     { "id": "inventory_position", "input": "SKU, channel, location", "output": "On-hand, inbound, days of cover", "access": "read" },
-    { "id": "demand_forecast", "input": "SKU, channel, horizon", "output": "Forecast and stockout-adjusted history", "access": "read" },
+    { "id": "demand_forecast", "input": "SKU, channel, horizon", "output": "Forecast and anomaly-corrected history (stockouts, promotions)", "access": "read" },
     { "id": "decision_simulation", "input": "A proposed change", "output": "Inventory, revenue, margin and cash impact", "access": "read" },
     { "id": "replenishment_plan", "input": "Supplier or SKU set", "output": "Draft POs with MOQs applied", "access": "read" },
     { "id": "push_to_erp", "input": "Approved PO", "output": "PO in NetSuite [others]", "access": "write_with_approval" },
     { "id": "scheduled_agents", "input": "Plain-language rule", "output": "Recurring report or alert", "access": "write" }
   ],
   "integrations": {
-    "native": ["Amazon", "Shopify", "Walmart", "eBay", "Etsy", "BigCommerce", "Google Sheets"],
+    "native_note": "One-click connection, available during the free trial",
+    "native": ["Amazon Seller Central", "Shopify", "Walmart", "eBay", "Etsy", "BigCommerce", "Google Sheets"],
+    "assisted_note": "Parametrized connections set up and customized by the Flieber team; included on a paid plan, not during the free trial",
     "assisted": {
       "Sales channels and marketplaces": ["Shopify Plus", "Amazon Vendor Central", "TikTok Shop", "Magento", "WooCommerce", "Mercado Libre", "bol.com", "PrestaShop"],
+      "EDI": ["SPS Commerce"],
       "Accounting and finance": ["QuickBooks", "Xero", "Zoho"],
       "Inventory and order management": ["Cin7", "Sage", "Linnworks", "Brightpearl", "Luminous", "Finale", "DEAR Systems", "Fishbowl", "NetSuite"],
       "3PLs and warehouses": ["SkuVault", "ShipStation", "Anvyl", "Flexport/Deliverr", "ShipBob", "ShipHero", "Extensiv", "Stord", "Veeqo", "Flowspace", "Everstox", "GoFlow", "Fulfil", "AMZ Prep", "Logiwa", "Unleashed", "ShipMonk", "3PLGuys", "Shipout", "EasyFulfillment", "CEVA Logistics", "World Depot Inc.", "ZhenHub"]
-    }
+    },
+    "mcp_client": "Flieber works as an MCP client and connects to any system that has an MCP server",
+    "api": "Agents and systems reach Flieber through its own MCP server and public API"
   },
   "connect": {
     "mcp_endpoint": "[MCP ENDPOINT URL]",

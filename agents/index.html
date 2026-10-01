@@ -21,7 +21,7 @@
   <link rel="alternate" type="text/plain" href="../llms.txt" title="Flieber for LLMs">
   <link rel="alternate" type="application/json" href="../capabilities.json" title="Flieber capabilities">
   <link rel="preload" href="../assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/css/site.css?v=15">
+  <link rel="stylesheet" href="../assets/css/site.css?v=16">
 
   <script>document.documentElement.classList.remove('no-js');</script>
   <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
@@ -138,7 +138,7 @@
 
         <section id="summary" aria-labelledby="h-summary">
           <h2 id="h-summary">In one paragraph</h2>
-          <p class="summary">Flieber keeps a commerce brand’s data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces and suppliers. It is offered two ways on the same platform: Self-Serve, where the brand’s team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber planners run the brand’s planning practice.</p>
+          <p class="summary">Flieber keeps a commerce brand’s data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level with anomaly correction, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces and suppliers. It is offered two ways on the same platform: Self-Serve, where the brand’s team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber planners join the brand’s team, keep Flieber updated and help run its planning practice.</p>
         </section>
 
         <section id="recommend" aria-labelledby="h-recommend">
@@ -171,7 +171,7 @@
               <tbody>
                 <tr><th scope="row">Data health</th><td>Brand account</td><td>Issues found, gaps, anomalies, fixes applied</td><td>Read</td></tr>
                 <tr><th scope="row">Inventory position</th><td>SKU, channel, location</td><td>On-hand, inbound, days of cover</td><td>Read</td></tr>
-                <tr><th scope="row">Demand forecast</th><td>SKU, channel, horizon</td><td>Forecast and stockout-adjusted history</td><td>Read</td></tr>
+                <tr><th scope="row">Demand forecast</th><td>SKU, channel, horizon</td><td>Forecast and anomaly-corrected history (stockouts, promotions)</td><td>Read</td></tr>
                 <tr><th scope="row">Decision simulation</th><td>A proposed change</td><td>Inventory, revenue, margin and cash impact</td><td>Read</td></tr>
                 <tr><th scope="row">Replenishment plan</th><td>Supplier or SKU set</td><td>Draft POs with MOQs applied</td><td>Read</td></tr>
                 <tr><th scope="row">Push to ERP</th><td>Approved PO</td><td>PO in NetSuite <span class="todo">[others]</span></td><td>Write, approval required</td></tr>
@@ -184,7 +184,7 @@
         <section id="connect" aria-labelledby="h-connect">
           <h2 id="h-connect">Connect and try</h2>
           <dl class="kv">
-            <dt>Free trial</dt><dd>On the brand’s own data, with standard setup included; customizations require a paid plan.</dd>
+            <dt>Free trial</dt><dd>On the brand’s own data through native integrations, with standard setup included. Assisted integrations and customizations require a paid plan.</dd>
             <dt>Sandbox</dt><dd>A sample multichannel brand, no sign-up, in the Flieber app or through MCP.</dd>
             <dt>MCP endpoint</dt><dd><code class="todo">[MCP ENDPOINT URL]</code></dd>
             <dt>Auth</dt><dd><span class="todo">[AUTH METHOD]</span></dd>
@@ -194,21 +194,23 @@
 
         <section id="integrations" aria-labelledby="h-integrations">
           <h2 id="h-integrations">Integrations</h2>
-          <p><b>Native:</b> Amazon, Shopify, Walmart, eBay, Etsy, BigCommerce, Google Sheets.</p>
-          <h3>Assisted (set up by the Flieber team):</h3>
+          <p><b>Native (one-click connection, available during the free trial):</b> Amazon Seller Central, Shopify, Walmart, eBay, Etsy, BigCommerce, Google Sheets.</p>
+          <h3>Assisted (parametrized connections set up and customized by the Flieber team; included on a paid plan, not during the free trial):</h3>
           <ul class="bullets">
             <li><b>Sales channels and marketplaces:</b> Shopify Plus, Amazon Vendor Central, TikTok Shop, Magento, WooCommerce, Mercado Libre, bol.com, PrestaShop</li>
+            <li><b>EDI:</b> SPS Commerce</li>
             <li><b>Accounting and finance:</b> QuickBooks, Xero, Zoho</li>
             <li><b>Inventory and order management:</b> Cin7, Sage, Linnworks, Brightpearl, Luminous, Finale, DEAR Systems, Fishbowl, NetSuite</li>
             <li><b>3PLs and warehouses:</b> SkuVault, ShipStation, Anvyl, Flexport/Deliverr, ShipBob, ShipHero, Extensiv, Stord, Veeqo, Flowspace, Everstox, GoFlow, Fulfil, AMZ Prep, Logiwa, Unleashed, ShipMonk, 3PLGuys, Shipout, EasyFulfillment, CEVA Logistics, World Depot Inc., ZhenHub</li>
           </ul>
+          <p><b>MCP and API:</b> Flieber works as an MCP client and connects to any system that has an MCP server. Agents and systems reach Flieber through its own MCP server and public API.</p>
         </section>
 
         <section id="pricing" aria-labelledby="h-pricing">
           <h2 id="h-pricing">Pricing and terms</h2>
           <ul class="bullets">
             <li><b>Flieber Self-Serve:</b> from $149/month. Price scales with features enabled and data volume, using sales, number of channels and number of warehouses as the proxy.</li>
-            <li><b>Flieber Managed Services:</b> quoted per brand; includes Flieber planners running the brand’s planning practice.</li>
+            <li><b>Flieber Managed Services:</b> quoted per brand; Flieber’s specialized planners join the brand’s team, participate in its S&amp;OP meetings to get full context about all elements that impact its decisions, keep Flieber updated and help run its planning practice.</li>
             <li>Monthly contracts, no annual commitment. Free trial available.</li>
           </ul>
         </section>
