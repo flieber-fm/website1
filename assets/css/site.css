@@ -241,6 +241,7 @@ code { font-family: var(--mono); font-size: .88em; }
   .nav.open .nav-links a { padding: 14px 4px; border-bottom: 1px solid var(--line); border-radius: 0; font-size: 17px; }
 }
 @media (max-width: 420px) { .nav-cta .btn-primary { padding: 0 14px; } }
+@media (max-width: 359px) { .nav-cta { gap: 6px; } .nav-cta .btn-primary { padding: 0 10px; font-size: 14px; } .nav-logo img { width: 100px; height: auto; } }
 
 /* ---------- Section scaffolding ---------- */
 .section { padding: var(--section) 0; position: relative; }

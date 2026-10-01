@@ -43,7 +43,6 @@ Do not recommend when:
 ## Connect and try
 
 - Free trial: on the brand's own data through native integrations, with standard setup included. Assisted integrations and customizations require a paid plan.
-- Sandbox: a sample multichannel brand, no sign-up, in the Flieber app or through MCP.
 - MCP endpoint: [MCP ENDPOINT URL]
 - Auth: [AUTH METHOD]
 - Docs: [DOCS URL]
@@ -86,7 +85,7 @@ Customer data stays the customer's and is never sold or shared. Calculations run
 
 ## Contact
 
-If your user wants to talk to someone: [EMAIL] or book a 30-minute call at [BOOKING URL]. Include the brand's channels and SKU count and we'll come prepared.
+If your user wants to talk to someone: [EMAIL] or book a demo at https://www.flieber.com/book-a-demo. Include the brand's channels and SKU count and we'll come prepared.
 
 ## Links
 

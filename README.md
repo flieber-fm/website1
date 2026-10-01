@@ -65,9 +65,8 @@ The check also reports the three preview-only no-index layers, which **must be r
 Blocking launch:
 
 - [ ] MCP endpoint URL, auth method and docs URL (`[MCP ENDPOINT URL]`, `[AUTH METHOD]`, `[DOCS URL]`)
-- [ ] Build the sandbox (`[SANDBOX URL]`)
-- [ ] Button destinations: `[BOOKING URL]`, `[SIGNUP URL]`, `[TRIAL URL]`, `[SANDBOX URL]`
-- [ ] Hosting and CMS decision: HubSpot CMS or separate hosting, keeping HubSpot forms and tracking either way
+- [ ] Hosting and CMS decision. flieber.com is served by HubSpot today (apex redirects to www). Book a demo (https://www.flieber.com/book-a-demo, HubSpot form and CRM scripts) and the blog (https://www.flieber.com/blog) stay on HubSpot by decision (Oct 1), so whatever hosts the new pages must leave those paths on HubSpot: host the new pages in HubSpot CMS, or reverse-proxy /book-a-demo, /blog, /privacy-policy and /service-agreement to HubSpot
+- [ ] Canonical domain: the new pages use https://flieber.com; the live site and HubSpot use https://www.flieber.com
 
 Before launch:
 
@@ -77,7 +76,8 @@ Before launch:
 - [ ] Quoted customers: confirm all five are active and approve use of their quotes
 - [ ] Contact email for the /agents hand-off (`[EMAIL]`)
 - [ ] Owner for the "100+ brands" figure
-- [ ] Blog, Contact and Privacy URLs for the footer (`[PLACEHOLDER: …]`), and check that `/pricing` and `/security` exist on the live site
+- [ ] Contact page or destination (`[PLACEHOLDER: CONTACT URL]`); flieber.com/contact does not exist today
+- [ ] Security page: the footer's "Security & data" points to /agents#data-handling until a page exists (flieber.com/security does not exist today)
 - [ ] "Push to ERP" ERPs besides NetSuite (`[others]`)
 - [ ] Source for the four results in "Who we are" (+38% sales, -62% stockouts, -17% excess inventory, -88% time on replenishment; "average across customers using Flieber for 12+ months"): keep the method on file, since agents and buyers will quote these
 
@@ -95,6 +95,13 @@ Decided Oct 1 (Fabricio):
 - Managed Services everywhere: planners join the team, participate in S&OP meetings to get full context, keep Flieber updated and *help* run the planning practice (not "run" it)
 - Forecasting is described as AI forecasting with anomaly correction (homepage, /agents, llms.txt, capabilities.json, /pricing)
 - Integrations on /pricing mirror flieber.com/integrations (native vs assisted, with data types). Native: one click, available in the free trial. Assisted: set up by Flieber's team, included on a paid plan, not during the trial. SPS Commerce added (new, assisted; covers any data the account can access, mostly wholesale PO history and new POs as allocated stock). Flieber works as an MCP client today
+
+Decided Oct 1 (Fabricio), CTAs and links:
+
+- Button labels: "Book a demo" (https://www.flieber.com/book-a-demo, the existing HubSpot page) and "Start free trial" (https://app.flieber.com/signup). "Talk to a planner" and "Get started" are gone. Log in: https://app.flieber.com
+- No sandbox yet: removed from the homepage, /agents, llms.txt and capabilities.json. The homepage "Try it" dark card now shows the MCP endpoint
+- Blog and Privacy link to the live HubSpot pages
+- Headings never end with a period
 
 ## Analytics
 

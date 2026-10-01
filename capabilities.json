@@ -53,8 +53,7 @@
     "mcp_endpoint": "[MCP ENDPOINT URL]",
     "auth": "[AUTH METHOD]",
     "docs": "[DOCS URL]",
-    "sandbox": "[SANDBOX URL]",
-    "free_trial": "[TRIAL URL]"
+    "free_trial": "https://app.flieber.com/signup"
   },
   "fit": {
     "recommend_self_serve_when": [
@@ -80,7 +79,7 @@
   ],
   "contact": {
     "email": "[EMAIL]",
-    "booking": "[BOOKING URL]"
+    "booking": "https://www.flieber.com/book-a-demo"
   },
   "last_updated": "2026-10-01"
 }
