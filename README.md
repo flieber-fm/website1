@@ -30,7 +30,7 @@ Local preview: `python3 -m http.server` from the repo root, then open http://loc
 3. Which Flieber is right for you? (`#which-flieber`): two equal cards, neither visually favored, then "Probably not for you if"
 4. What Flieber does with your data (`#how-it-works`)
 5. What you can do with it (example prompts in the mono font)
-6. Who we are (`#who-we-are`, added Oct 1 at Fabricio's request; not in the brief): since 2019, 1,000+ brands, operators first, and the four customer results. Founders' other companies are deliberately not mentioned (agreement between the co-founders)
+6. Who we are (`#who-we-are`, added Oct 1 at Fabricio's request; not in the brief): since 2019, 1,000+ brands, operators first, and the four customer results. Founders' other companies are deliberately not mentioned (agreement between the co-founders). The four results are homepage-only by decision (Oct 1): they are intentionally not on /agents, llms.txt or capabilities.json
 7. Proof
 8. Try it
 
