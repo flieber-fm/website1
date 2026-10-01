@@ -139,7 +139,9 @@
               <button class="sim-tab" type="button" role="tab" id="sim-tab-0" aria-controls="sim-panel-0" aria-selected="true"><span>Wholesale order</span><i class="sim-progress" aria-hidden="true"></i></button>
               <button class="sim-tab" type="button" role="tab" id="sim-tab-1" aria-controls="sim-panel-1" aria-selected="false" tabindex="-1"><span>Promotion</span><i class="sim-progress" aria-hidden="true"></i></button>
               <button class="sim-tab" type="button" role="tab" id="sim-tab-2" aria-controls="sim-panel-2" aria-selected="false" tabindex="-1"><span>Influencer campaign</span><i class="sim-progress" aria-hidden="true"></i></button>
-              <button class="sim-tab" type="button" role="tab" id="sim-tab-3" aria-controls="sim-panel-3" aria-selected="false" tabindex="-1"><span>Purchase order</span><i class="sim-progress" aria-hidden="true"></i></button>
+              <button class="sim-tab" type="button" role="tab" id="sim-tab-3" aria-controls="sim-panel-3" aria-selected="false" tabindex="-1"><span>Ad campaign</span><i class="sim-progress" aria-hidden="true"></i></button>
+              <button class="sim-tab" type="button" role="tab" id="sim-tab-4" aria-controls="sim-panel-4" aria-selected="false" tabindex="-1"><span>Purchase order</span><i class="sim-progress" aria-hidden="true"></i></button>
+              <button class="sim-tab" type="button" role="tab" id="sim-tab-5" aria-controls="sim-panel-5" aria-selected="false" tabindex="-1"><span>Warehouse transfer</span><i class="sim-progress" aria-hidden="true"></i></button>
             </div>
             <div class="sim-stage">
               <div class="sim-panel active" role="tabpanel" id="sim-panel-0" aria-labelledby="sim-tab-0">
@@ -167,12 +169,28 @@
                 <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Launch after the PO lands: paid demand isn’t wasted on a sold-out product.</p>
               </div>
               <div class="sim-panel" role="tabpanel" id="sim-panel-3" aria-labelledby="sim-tab-3" aria-hidden="true">
+                <p class="sim-q">A hero SKU will <b>sell out 3 weeks</b> before its next PO lands.</p>
+                <table class="sim-table">
+                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Keep ads at full budget</th><th scope="col">Cut ads 60% until the PO lands</th></tr></thead>
+                  <tbody><tr><th scope="row">Stockout days</th><td>21</td><td class="win">0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$331K</td><td class="win">$348K</td></tr><tr><th scope="row">Margin</th><td>$88K</td><td class="win">$109K</td></tr><tr><th scope="row">Cash low point</th><td>$70K</td><td class="win">$84K</td></tr></tbody>
+                </table>
+                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Cut ad spend until the PO lands: no stockout, and no budget spent sending shoppers to a sold-out product.</p>
+              </div>
+              <div class="sim-panel" role="tabpanel" id="sim-panel-4" aria-labelledby="sim-tab-4" aria-hidden="true">
                 <p class="sim-q">A supplier offers <b>8% off</b> for six months of stock.</p>
                 <table class="sim-table">
                   <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Take the discount, order 6 months</th><th scope="col">Order 3 months at list price</th></tr></thead>
                   <tbody><tr><th scope="row">Stockout days</th><td>0</td><td>0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$520K</td><td>$520K</td></tr><tr><th scope="row">Margin</th><td class="win">$171K</td><td>$162K</td></tr><tr><th scope="row">Cash low point</th><td>$22K</td><td class="win">$95K</td></tr></tbody>
                 </table>
                 <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Order 3 months: the discount adds $9K of margin but drops the cash low point by $73K.</p>
+              </div>
+              <div class="sim-panel" role="tabpanel" id="sim-panel-5" aria-labelledby="sim-tab-5" aria-hidden="true">
+                <p class="sim-q">Ops wants to send <b>2,000 units</b> from the 3PL to Amazon FBA.</p>
+                <table class="sim-table">
+                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Send all 2,000 now</th><th scope="col">Send 1,200 now / 800 after the next PO</th></tr></thead>
+                  <tbody><tr><th scope="row">Shopify stockout days</th><td>16</td><td class="win">0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$447K</td><td class="win">$468K</td></tr><tr><th scope="row">Margin</th><td>$141K</td><td class="win">$147K</td></tr><tr><th scope="row">Cash low point</th><td class="win">$76K</td><td>$74K</td></tr></tbody>
+                </table>
+                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Split the transfer: the 3PL keeps enough stock to fulfill Shopify orders, for slightly more inbound freight.</p>
               </div>
             </div>
             <div class="sim-foot">

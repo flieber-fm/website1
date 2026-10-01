@@ -43,6 +43,9 @@
       "Inventory and order management": ["Cin7", "Sage", "Linnworks", "Brightpearl", "Luminous", "Finale", "DEAR Systems", "Fishbowl", "NetSuite"],
       "3PLs and warehouses": ["SkuVault", "ShipStation", "Anvyl", "Flexport/Deliverr", "ShipBob", "ShipHero", "Extensiv", "Stord", "Veeqo", "Flowspace", "Everstox", "GoFlow", "Fulfil", "AMZ Prep", "Logiwa", "Unleashed", "ShipMonk", "3PLGuys", "Shipout", "EasyFulfillment", "CEVA Logistics", "World Depot Inc.", "ZhenHub"]
     },
+    "notes": {
+      "SPS Commerce": "any data the brand's SPS account can access; most often the history of wholesale purchase orders, to project inventory needs, and new purchase orders added automatically, so Flieber knows those units are allocated"
+    },
     "mcp_client": "Flieber works as an MCP client and connects to any system that has an MCP server",
     "api": "Agents and systems reach Flieber through its own MCP server and public API"
   },

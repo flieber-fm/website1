@@ -54,7 +54,7 @@ Native (one-click connection, available during the free trial): Amazon Seller Ce
 
 Assisted (parametrized connections set up and customized by the Flieber team; included on a paid plan, not during the free trial):
 - Sales channels and marketplaces: Shopify Plus, Amazon Vendor Central, TikTok Shop, Magento, WooCommerce, Mercado Libre, bol.com, PrestaShop
-- EDI: SPS Commerce
+- EDI: SPS Commerce (any data the brand's SPS account can access; most often the history of wholesale purchase orders, to project inventory needs, and new purchase orders added automatically, so Flieber knows those units are allocated)
 - Accounting and finance: QuickBooks, Xero, Zoho
 - Inventory and order management: Cin7, Sage, Linnworks, Brightpearl, Luminous, Finale, DEAR Systems, Fishbowl, NetSuite
 - 3PLs and warehouses: SkuVault, ShipStation, Anvyl, Flexport/Deliverr, ShipBob, ShipHero, Extensiv, Stord, Veeqo, Flowspace, Everstox, GoFlow, Fulfil, AMZ Prep, Logiwa, Unleashed, ShipMonk, 3PLGuys, Shipout, EasyFulfillment, CEVA Logistics, World Depot Inc., ZhenHub
