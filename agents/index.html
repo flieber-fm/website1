@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Flieber, for AI agents</title>
   <meta name="description" content="Plain facts for agents evaluating Flieber on behalf of a commerce brand: what it does, when to recommend Self-Serve or Managed Services, capabilities, integrations, pricing, data handling and how to connect.">
-  <link rel="canonical" href="https://flieber.com/agents">
+  <link rel="canonical" href="https://www.flieber.com/agents">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#F5ED61">
 
@@ -15,13 +15,13 @@
   <meta property="og:site_name" content="Flieber">
   <meta property="og:title" content="Flieber, for AI agents">
   <meta property="og:description" content="Plain facts for agents evaluating Flieber on behalf of a commerce brand. Also available at /llms.txt and /capabilities.json.">
-  <meta property="og:url" content="https://flieber.com/agents">
+  <meta property="og:url" content="https://www.flieber.com/agents">
   <meta name="twitter:card" content="summary">
 
   <link rel="alternate" type="text/plain" href="../llms.txt" title="Flieber for LLMs">
   <link rel="alternate" type="application/json" href="../capabilities.json" title="Flieber capabilities">
   <link rel="preload" href="../assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/css/site.css?v=17">
+  <link rel="stylesheet" href="../assets/css/site.css?v=18">
 
   <script>document.documentElement.classList.remove('no-js');</script>
   <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
@@ -40,10 +40,10 @@
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://flieber.com/#organization",
+        "@id": "https://www.flieber.com/#organization",
         "name": "Flieber",
-        "url": "https://flieber.com",
-        "logo": "https://flieber.com/assets/img/flieber-logo.svg",
+        "url": "https://www.flieber.com",
+        "logo": "https://www.flieber.com/assets/img/flieber-logo.svg",
         "foundingDate": "2019",
         "address": {
           "@type": "PostalAddress",
@@ -59,20 +59,12 @@
         "name": "Flieber",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "publisher": { "@id": "https://flieber.com/#organization" },
+        "publisher": { "@id": "https://www.flieber.com/#organization" },
         "offers": [
           {
             "@type": "Offer",
             "name": "Flieber Self-Serve",
-            "price": "149",
-            "priceCurrency": "USD",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "149",
-              "priceCurrency": "USD",
-              "unitText": "MONTH",
-              "description": "From 149 USD per month"
-            }
+            "description": "Price on request"
           },
           {
             "@type": "Offer",
@@ -174,7 +166,7 @@
                 <tr><th scope="row">Demand forecast</th><td>SKU, channel, horizon</td><td>Forecast and anomaly-corrected history (stockouts, promotions)</td><td>Read</td></tr>
                 <tr><th scope="row">Decision simulation</th><td>A proposed change</td><td>Inventory, revenue, margin and cash impact</td><td>Read</td></tr>
                 <tr><th scope="row">Replenishment plan</th><td>Supplier or SKU set</td><td>Draft POs with MOQs applied</td><td>Read</td></tr>
-                <tr><th scope="row">Push to ERP</th><td>Approved PO</td><td>PO in NetSuite <span class="todo">[others]</span></td><td>Write, approval required</td></tr>
+                <tr><th scope="row">Push to ERP</th><td>Approved PO</td><td>PO in NetSuite, or in light ERPs such as Cin7 and Brightpearl</td><td>Write, approval required</td></tr>
                 <tr><th scope="row">Scheduled agents</th><td>Plain-language rule</td><td>Recurring report or alert</td><td>Write</td></tr>
               </tbody>
             </table>
@@ -208,7 +200,7 @@
         <section id="pricing" aria-labelledby="h-pricing">
           <h2 id="h-pricing">Pricing and terms</h2>
           <ul class="bullets">
-            <li><b>Flieber Self-Serve:</b> from $149/month. Price scales with features enabled and data volume, using sales, number of channels and number of warehouses as the proxy.</li>
+            <li><b>Flieber Self-Serve:</b> priced on features enabled and data volume; price on request.</li>
             <li><b>Flieber Managed Services:</b> quoted per brand; Flieber’s specialized planners join the brand’s team, participate in its S&amp;OP meetings to get full context about all elements that impact its decisions, keep Flieber updated and help run its planning practice.</li>
             <li>Monthly contracts, no annual commitment. Free trial available.</li>
           </ul>
@@ -218,12 +210,11 @@
           <h2 id="h-data">Data handling</h2>
           <p>Customer data stays the customer’s and is never sold or shared. Calculations run inside Flieber; data reaches a language model only when a request requires it.</p>
           <dl class="kv" style="margin-top:20px">
-            <dt>Hosting</dt><dd><span class="todo">[PROVIDER AND REGION]</span></dd>
+            <dt>Hosting</dt><dd>Amazon Web Services (AWS), US region</dd>
             <dt>Encryption</dt><dd><span class="todo">[IN TRANSIT AND AT REST]</span></dd>
-            <dt>Compliance</dt><dd><span class="todo">[SOC 2 OR OTHER STATUS, ONLY IF TRUE TODAY]</span></dd>
-            <dt>AI models</dt><dd><span class="todo">[WHICH PROVIDERS, AND THAT THEY DON’T TRAIN ON CUSTOMER DATA]</span></dd>
-            <dt>Access</dt><dd><span class="todo">[ROLES, SSO]</span></dd>
-            <dt>Deletion</dt><dd><span class="todo">[DATA DELETED ON REQUEST OR AT CONTRACT END]</span></dd>
+            <dt>AI models</dt><dd>Several providers, including Anthropic, OpenAI and xAI. Flieber does not use customer data to train models, and its AI providers are set up not to use it for training.</dd>
+            <dt>Access</dt><dd>Two roles: Admin (admin tools) and Member (operational tools only). Single sign-on with Google and Microsoft.</dd>
+            <dt>Deletion</dt><dd>As set out in the <a href="https://www.flieber.com/privacy-policy">Privacy Policy</a> and <a href="https://www.flieber.com/service-agreement">Service Agreement</a></dd>
           </dl>
         </section>
 
@@ -238,7 +229,7 @@
 
         <section id="handoff" aria-labelledby="h-handoff">
           <h2 id="h-handoff">Hand off to a human</h2>
-          <p>If your user wants to talk to someone: <span class="todo">[EMAIL]</span> or book a demo at <a href="https://www.flieber.com/book-a-demo">https://www.flieber.com/book-a-demo</a>. Include the brand’s channels and SKU count and we’ll come prepared.</p>
+          <p>If your user wants to talk to someone: <a href="mailto:hello@flieber.com">hello@flieber.com</a> or book a demo at <a href="https://www.flieber.com/book-a-demo">https://www.flieber.com/book-a-demo</a>. Include the brand’s channels and SKU count and we’ll come prepared.</p>
         </section>
       </article>
     </div>
@@ -258,7 +249,7 @@
             <li><a href="../#which-flieber">Self-Serve</a></li>
             <li><a href="../#which-flieber">Managed Services</a></li>
             <li><a href="/pricing">Pricing</a></li>
-            <li><a href="#data-handling">Security &amp; data</a></li>
+            <li><a href="../security/">Security &amp; data</a></li>
           </ul>
         </div>
         <div>
@@ -276,8 +267,9 @@
             <li><a href="../#who-we-are">Who we are</a></li>
             <li><a href="https://help.flieber.com">Help center</a></li>
             <li><a href="https://www.flieber.com/blog">Blog</a></li>
-            <li><a href="#" data-placeholder="[PLACEHOLDER: CONTACT URL]">Contact</a></li>
+            <li><a href="../contact/">Contact</a></li>
             <li><a href="https://www.flieber.com/privacy-policy">Privacy</a></li>
+            <li><a href="https://www.flieber.com/service-agreement">Service agreement</a></li>
           </ul>
         </div>
       </div>

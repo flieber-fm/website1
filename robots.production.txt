@@ -1,7 +1,8 @@
 # robots.txt for the public launch. At launch, replace robots.txt with this file.
-# Search engines are allowed. AI crawler rules are pending: [AI CRAWLER POLICY]
+# Search engines and AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended and others)
+# are all allowed, so AI assistants can read and recommend Flieber.
 
 User-agent: *
 Allow: /
 
-Sitemap: https://flieber.com/sitemap.xml
+Sitemap: https://www.flieber.com/sitemap.xml

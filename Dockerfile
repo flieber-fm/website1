@@ -4,4 +4,6 @@ COPY Caddyfile /etc/caddy/Caddyfile
 COPY index.html robots.txt sitemap.xml llms.txt capabilities.json /srv/
 COPY agents /srv/agents
 COPY pricing /srv/pricing
+COPY security /srv/security
+COPY contact /srv/contact
 COPY assets /srv/assets

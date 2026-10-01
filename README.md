@@ -65,20 +65,13 @@ The check also reports the three preview-only no-index layers, which **must be r
 Blocking launch:
 
 - [ ] MCP endpoint URL, auth method and docs URL (`[MCP ENDPOINT URL]`, `[AUTH METHOD]`, `[DOCS URL]`)
-- [ ] Hosting and CMS decision. flieber.com is served by HubSpot today (apex redirects to www). Book a demo (https://www.flieber.com/book-a-demo, HubSpot form and CRM scripts) and the blog (https://www.flieber.com/blog) stay on HubSpot by decision (Oct 1), so whatever hosts the new pages must leave those paths on HubSpot: host the new pages in HubSpot CMS, or reverse-proxy /book-a-demo, /blog, /privacy-policy and /service-agreement to HubSpot
-- [ ] Canonical domain: the new pages use https://flieber.com; the live site and HubSpot use https://www.flieber.com
+- [ ] Hosting: build the pages in HubSpot CMS (Fabricio's preference, Oct 1). Needs the HubSpot connector reconnected with website-page write access; see "HubSpot changes" below
 
 Before launch:
 
-- [ ] Nixtla report link (`[NIXTLA REPORT URL]`)
-- [ ] Six security and hosting placeholders in /agents Data handling
-- [ ] AI crawler policy for robots.txt (`[AI CRAWLER POLICY]` in `robots.production.txt`)
-- [ ] Quoted customers: confirm all five are active and approve use of their quotes
-- [ ] Contact email for the /agents hand-off (`[EMAIL]`)
-- [ ] Owner for the "100+ brands" figure
-- [ ] Contact page or destination (`[PLACEHOLDER: CONTACT URL]`); flieber.com/contact does not exist today
-- [ ] Security page: the footer's "Security & data" points to /agents#data-handling until a page exists (flieber.com/security does not exist today)
-- [ ] "Push to ERP" ERPs besides NetSuite (`[others]`)
+- [ ] Nixtla report link (`[NIXTLA REPORT URL]`): Fabricio to share the file; decide whether it can be public
+- [ ] Encryption details for /security, /agents and llms.txt (`[IN TRANSIT AND AT REST]`), from engineering
+- [ ] MCP endpoint and auth method: docs stay behind the customer login (Oct 1); decide whether the endpoint and auth method are shown publicly
 - [ ] Source for the four results in "Who we are" (+38% sales, -62% stockouts, -17% excess inventory, -88% time on replenishment; "average across customers using Flieber for 12+ months"): keep the method on file, since agents and buyers will quote these
 
 ## /pricing (Oct 1)
@@ -102,6 +95,29 @@ Decided Oct 1 (Fabricio), CTAs and links:
 - No sandbox yet: removed from the homepage, /agents, llms.txt and capabilities.json. The homepage "Try it" dark card now shows the MCP endpoint
 - Blog and Privacy link to the live HubSpot pages
 - Headings never end with a period
+
+Decided Oct 1 (Fabricio), round 2:
+
+- No prices on the site, so pricing can vary by customer: Self-Serve is "priced to your operation" (features enabled and data volume), Managed Services "quoted per brand". Terms stay: monthly contracts, free trial, standard setup included
+- Canonical domain is https://www.flieber.com
+- /security (AWS US; Admin and Member roles; Google and Microsoft SSO; AI providers incl. Anthropic, OpenAI, xAI, no training on customer data; deletion per Privacy Policy and Service Agreement; no compliance claims) and /contact (hello@flieber.com) added. Footer adds Service agreement
+- Push to ERP: NetSuite, plus light ERPs such as Cin7 and Brightpearl
+- AI crawlers are allowed (robots.production.txt)
+- Customer quotes approved; Fabricio owns the "100+ brands" figure; the four results are documented in a spreadsheet
+
+## HubSpot changes
+
+The live site, book-a-demo, free trial and blog run on HubSpot (portal 5767502, www.flieber.com).
+
+- [ ] Reconnect the HubSpot connector so it can write website pages (currently read-only for site pages; landing pages are writable)
+- [ ] Build the new pages as HubSpot website pages from this repo (/, /agents, /pricing, /security, /contact), published at cutover only
+- [ ] llms.txt and capabilities.json: HubSpot cannot serve arbitrary root files, so upload them to File Manager and add URL redirects from /llms.txt and /capabilities.json
+- [ ] robots.txt: set in HubSpot's SEO settings from robots.production.txt
+- [ ] Import `hubspot/url-redirects.csv` (old pages to their closest new page). Blog, glossary, learn-hub, videos, book-a-demo, free-trial, privacy-policy and service-agreement stay live
+- [ ] Restyle the book-a-demo page (header, footer, copy) to the new site; keep the form and CRM scripts
+- [ ] Free-trial page: "Integrate any system or spreadsheet" contradicts the new rule (assisted integrations only on paid plans)
+- [ ] Blog footer: address says NY 10017; correct is 10016
+- [ ] Restyle the blog header and footer to the new site
 
 ## Analytics
 

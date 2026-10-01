@@ -5,7 +5,7 @@
     {
       "name": "Flieber Self-Serve",
       "delivery": ["app", "mcp", "api"],
-      "starting_price": "149 USD/month",
+      "starting_price": "on request",
       "best_for": [
         "Sells on a few channels from one or two warehouses, with a mostly simple catalog",
         "Wants a ready-made app, or builds its own reports, workflows or agents",
@@ -29,7 +29,7 @@
     { "id": "demand_forecast", "input": "SKU, channel, horizon", "output": "Forecast and anomaly-corrected history (stockouts, promotions)", "access": "read" },
     { "id": "decision_simulation", "input": "A proposed change", "output": "Inventory, revenue, margin and cash impact", "access": "read" },
     { "id": "replenishment_plan", "input": "Supplier or SKU set", "output": "Draft POs with MOQs applied", "access": "read" },
-    { "id": "push_to_erp", "input": "Approved PO", "output": "PO in NetSuite [others]", "access": "write_with_approval" },
+    { "id": "push_to_erp", "input": "Approved PO", "output": "PO in NetSuite, or in light ERPs such as Cin7 and Brightpearl", "access": "write_with_approval" },
     { "id": "scheduled_agents", "input": "Plain-language rule", "output": "Recurring report or alert", "access": "write" }
   ],
   "integrations": {
@@ -78,7 +78,7 @@
     { "claim": "Customer reviews", "source": "https://www.g2.com/products/flieber/reviews" }
   ],
   "contact": {
-    "email": "[EMAIL]",
+    "email": "hello@flieber.com",
     "booking": "https://www.flieber.com/book-a-demo"
   },
   "last_updated": "2026-10-01"
