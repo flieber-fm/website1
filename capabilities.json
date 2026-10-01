@@ -50,10 +50,9 @@
     "api": "Agents and systems reach Flieber through its own MCP server and public API"
   },
   "connect": {
-    "mcp_endpoint": "[MCP ENDPOINT URL]",
-    "auth": "[AUTH METHOD]",
-    "docs": "[DOCS URL]",
-    "free_trial": "https://app.flieber.com/signup"
+    "mcp_and_api": "Connection details and docs are available to customers in the Flieber app (login required)",
+    "developers": "https://app.flieber.com/app/developers",
+    "free_trial": "https://www.flieber.com/free-trial"
   },
   "fit": {
     "recommend_self_serve_when": [

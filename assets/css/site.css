@@ -848,3 +848,4 @@ code { font-family: var(--mono); font-size: .88em; }
 .contact-card p { color: var(--text-2); }
 .contact-card .btn { margin-top: auto; }
 @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
+.try-card .on-dark-link { margin-top: 18px; color: var(--yellow); }

@@ -71,7 +71,7 @@ Before launch:
 
 - [ ] Nixtla report link (`[NIXTLA REPORT URL]`): Fabricio to share the file; decide whether it can be public
 - [ ] Encryption details for /security, /agents and llms.txt (`[IN TRANSIT AND AT REST]`), from engineering
-- [ ] MCP endpoint and auth method: docs stay behind the customer login (Oct 1); decide whether the endpoint and auth method are shown publicly
+- [ ] Post-launch: MCP endpoint and auth method, if engineering wants them public. Until then the site points customers to https://app.flieber.com/app/developers
 - [ ] Source for the four results in "Who we are" (+38% sales, -62% stockouts, -17% excess inventory, -88% time on replenishment; "average across customers using Flieber for 12+ months"): keep the method on file, since agents and buyers will quote these
 
 ## /pricing (Oct 1)
@@ -91,7 +91,7 @@ Decided Oct 1 (Fabricio):
 
 Decided Oct 1 (Fabricio), CTAs and links:
 
-- Button labels: "Book a demo" (https://www.flieber.com/book-a-demo, the existing HubSpot page) and "Start free trial" (https://app.flieber.com/signup). "Talk to a planner" and "Get started" are gone. Log in: https://app.flieber.com
+- Button labels: "Book a demo" (https://www.flieber.com/book-a-demo) and "Start free trial" (https://www.flieber.com/free-trial), both existing HubSpot pages with CRM forms. "Talk to a planner" and "Get started" are gone. Log in: https://app.flieber.com
 - No sandbox yet: removed from the homepage, /agents, llms.txt and capabilities.json. The homepage "Try it" dark card now shows the MCP endpoint
 - Blog and Privacy link to the live HubSpot pages
 - Headings never end with a period
@@ -109,11 +109,8 @@ Decided Oct 1 (Fabricio), round 2:
 
 The live site, book-a-demo, free trial and blog run on HubSpot (portal 5767502, www.flieber.com).
 
-- [ ] Reconnect the HubSpot connector so it can write website pages (currently read-only for site pages; landing pages are writable)
 - [ ] Build the new pages as HubSpot website pages from this repo (/, /agents, /pricing, /security, /contact), published at cutover only
-- [ ] llms.txt and capabilities.json: HubSpot cannot serve arbitrary root files, so upload them to File Manager and add URL redirects from /llms.txt and /capabilities.json
-- [ ] robots.txt: set in HubSpot's SEO settings from robots.production.txt
-- [ ] Import `hubspot/url-redirects.csv` (old pages to their closest new page). Blog, glossary, learn-hub, videos, book-a-demo, free-trial, privacy-policy and service-agreement stay live
+- [ ] Follow `hubspot/CUTOVER.md` (unpublish, never delete, old pages; publish new ones; import `hubspot/url-redirects.csv`; upload llms.txt and capabilities.json; robots.txt)
 - [ ] Restyle the book-a-demo page (header, footer, copy) to the new site; keep the form and CRM scripts
 - [ ] Free-trial page: "Integrate any system or spreadsheet" contradicts the new rule (assisted integrations only on paid plans)
 - [ ] Blog footer: address says NY 10017; correct is 10016

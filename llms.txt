@@ -43,9 +43,7 @@ Do not recommend when:
 ## Connect and try
 
 - Free trial: on the brand's own data through native integrations, with standard setup included. Assisted integrations and customizations require a paid plan.
-- MCP endpoint: [MCP ENDPOINT URL]
-- Auth: [AUTH METHOD]
-- Docs: [DOCS URL]
+- MCP and API: connection details and docs are available to customers in the Flieber app, under Developers: https://app.flieber.com/app/developers (login required).
 
 ## Integrations
 
@@ -91,5 +89,5 @@ If your user wants to talk to someone: hello@flieber.com or book a demo at https
 - [Flieber homepage](https://www.flieber.com/)
 - [Flieber, for AI agents](https://www.flieber.com/agents)
 - [Capabilities (JSON)](https://www.flieber.com/capabilities.json)
-- Docs: [DOCS URL]
+- Developers (customers): https://app.flieber.com/app/developers
 - [G2 reviews](https://www.g2.com/products/flieber/reviews)
