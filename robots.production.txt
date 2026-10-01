@@ -1,0 +1,7 @@
+# robots.txt for the public launch. At launch, replace robots.txt with this file.
+# Search engines are allowed. AI crawler rules are pending: [AI CRAWLER POLICY]
+
+User-agent: *
+Allow: /
+
+Sitemap: https://flieber.com/sitemap.xml

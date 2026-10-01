@@ -28,7 +28,7 @@
   }
 
   /* ---------- Reveal on scroll ---------- */
-  var revealEls = document.querySelectorAll('.reveal, .reveal-stagger, .pcard');
+  var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
   if ('IntersectionObserver' in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -38,87 +38,6 @@
     revealEls.forEach(function (el) { io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add('in-view'); });
-  }
-
-  /* ---------- Hero headline: rotating decision word ---------- */
-  // Cycles through the list once and settles back on the first word, so the
-  // headline doesn't keep moving while people read. Pauses on hover.
-  var rotator = document.querySelector('.rotator');
-  if (rotator && !reduceMotion) {
-    var words = rotator.getAttribute('data-words').split('|');
-    var wordEl = rotator.querySelector('.rotator-word');
-    var idx = 0, paused = false, remaining = words.length;
-    var measure = document.createElement('span');
-    measure.setAttribute('aria-hidden', 'true');
-    measure.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;left:-9999px;top:0';
-    rotator.parentNode.appendChild(measure);
-    var widthOf = function (w) {
-      var cs = getComputedStyle(rotator);
-      measure.style.font = cs.font;
-      measure.style.letterSpacing = cs.letterSpacing;
-      measure.textContent = w;
-      return measure.getBoundingClientRect().width + parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
-    };
-    var setWidth = function () { rotator.style.width = widthOf(words[idx]) + 'px'; };
-    var swap = function () {
-      idx = (idx + 1) % words.length;
-      wordEl.classList.add('out');
-      setTimeout(function () {
-        wordEl.textContent = words[idx];
-        setWidth();
-        wordEl.classList.remove('out');
-        wordEl.classList.add('enter');
-        void wordEl.offsetWidth;
-        wordEl.classList.remove('enter');
-      }, 380);
-    };
-    var loop = function () {
-      if (remaining <= 0) return;
-      if (!paused) { swap(); remaining--; }
-      setTimeout(loop, 1900);
-    };
-    rotator.addEventListener('mouseenter', function () { paused = true; });
-    rotator.addEventListener('mouseleave', function () { paused = false; });
-    window.addEventListener('resize', setWidth);
-    var start = function () { setWidth(); setTimeout(loop, 1600); };
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(start); else start();
-  }
-
-  /* ---------- Hero console: an agent asks, Flieber answers ---------- */
-  var consoleEl = document.getElementById('console');
-  if (consoleEl) {
-    var steps = consoleEl.querySelectorAll('[data-step]');
-    var typed = consoleEl.querySelector('.typed');
-    var call = consoleEl.querySelector('.tool-call');
-    var showAll = function () {
-      steps.forEach(function (s) { s.classList.add('in'); });
-      if (call) call.classList.add('done');
-    };
-
-    if (reduceMotion || !typed) {
-      showAll();
-    } else {
-      var text = typed.getAttribute('data-text') || typed.textContent;
-      typed.textContent = '';
-      var run = function () {
-        steps[0].classList.add('in');
-        var i = 0;
-        var tick = function () {
-          typed.textContent = text.slice(0, ++i);
-          if (i < text.length) { setTimeout(tick, 22 + Math.random() * 28); return; }
-          setTimeout(function () { steps[1].classList.add('in'); }, 350);
-          setTimeout(function () { call.classList.add('done'); steps[2].classList.add('in'); }, 1500);
-          setTimeout(function () { steps[3].classList.add('in'); }, 2200);
-        };
-        setTimeout(tick, 400);
-      };
-      if ('IntersectionObserver' in window) {
-        var cio = new IntersectionObserver(function (entries) {
-          if (entries[0].isIntersecting) { cio.disconnect(); run(); }
-        }, { threshold: 0.3 });
-        cio.observe(consoleEl);
-      } else { run(); }
-    }
   }
 
   /* ---------- Quotes carousel ---------- */
@@ -184,10 +103,11 @@
   });
 
   /* ---------- Placeholder links (see README "Open items") ---------- */
-  // Links whose destination is not confirmed yet carry data-todo. Until the URL
-  // is filled in, route them to the "Try it" section instead of a dead "#".
-  document.querySelectorAll('a[data-todo][href="#"]').forEach(function (a) {
-    if (document.getElementById('try')) a.setAttribute('href', '#try');
+  // Links whose destination is still a [BRACKET] placeholder stay on the page
+  // and show the pending placeholder on hover instead of jumping to "#".
+  document.querySelectorAll('a[data-placeholder]').forEach(function (a) {
+    a.setAttribute('title', 'Destination pending: ' + a.getAttribute('data-placeholder'));
+    a.addEventListener('click', function (e) { e.preventDefault(); });
   });
 
   /* ---------- Agents page: highlight current section in TOC ---------- */

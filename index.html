@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- PREVIEW ONLY: remove before public launch -->
   <meta name="robots" content="noindex, nofollow">
-  <title>Flieber — Commerce data, maintained</title>
-  <meta name="description" content="Flieber keeps a current picture of how your commerce brand works by connecting your data with the context behind it, so your team, your agents and your systems can act with confidence. Managed Services or Self-Serve, in the app or through MCP and API.">
+  <title>Flieber: inventory intelligence for multichannel brands</title>
+  <meta name="description" content="Inventory intelligence for multichannel brands. Flieber connects your data with the context behind it, so your team, your agents and your systems can act with confidence.">
   <link rel="canonical" href="https://flieber.com/">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#F5ED61">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Flieber">
-  <meta property="og:title" content="Before AI can run your brand, someone has to keep your data true.">
-  <meta property="og:description" content="Flieber connects your commerce data with the context behind it, so your team, your agents and your systems can act with confidence.">
+  <meta property="og:title" content="Flieber: inventory intelligence for multichannel brands">
+  <meta property="og:description" content="Before AI can run your brand, someone has to keep your data true. Flieber connects your data with the context behind it, so your team, your agents and your systems can act with confidence.">
   <meta property="og:url" content="https://flieber.com/">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
 
   <!-- Machine-readable versions for AI agents -->
   <link rel="alternate" type="text/plain" href="llms.txt" title="Flieber for LLMs">
@@ -24,18 +24,30 @@
 
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v=8">
+  <link rel="stylesheet" href="assets/css/site.css?v=9">
 
   <script>document.documentElement.classList.remove('no-js');</script>
+  <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
+       Loaded only on flieber.com so preview traffic stays out of analytics. -->
+  <script>
+    (function (h) {
+      if (!/(^|\.)flieber\.com$/.test(h)) return;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FS8NPG');
+      var hs = document.createElement('script'); hs.id = 'hs-script-loader'; hs.async = true; hs.defer = true;
+      hs.src = 'https://js.hs-scripts.com/5767502.js'; document.head.appendChild(hs);
+    })(location.hostname);
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
+        "@id": "https://flieber.com/#organization",
         "name": "Flieber",
         "url": "https://flieber.com",
-        "slogan": "Commerce data, maintained.",
+        "logo": "https://flieber.com/assets/img/flieber-logo.svg",
+        "foundingDate": "2019",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "169 Madison Avenue",
@@ -50,14 +62,27 @@
         "name": "Flieber",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "description": "Flieber keeps a commerce brand's data consolidated, contextualized and up to date, forecasts demand at SKU level, simulates decisions and pushes approved decisions to ERPs, marketplaces and suppliers. Available in the Flieber app or through MCP and API.",
-        "offers": {
-          "@type": "Offer",
-          "name": "Flieber Self-Serve",
-          "price": "149",
-          "priceCurrency": "USD",
-          "description": "From $149/month. Monthly contracts, free trial available."
-        }
+        "publisher": { "@id": "https://flieber.com/#organization" },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Flieber Self-Serve",
+            "price": "149",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "149",
+              "priceCurrency": "USD",
+              "unitText": "MONTH",
+              "description": "From 149 USD per month"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Flieber Managed Services",
+            "description": "Price on request"
+          }
+        ]
       }
     ]
   }
@@ -73,16 +98,16 @@
         <img src="assets/img/flieber-logo.svg" alt="Flieber" width="116" height="20">
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#how">How it works</a>
-        <a href="#two-ways">Two ways</a>
-        <a href="#use-cases">Use cases</a>
-        <a href="#proof">Customers</a>
-        <a href="#fit">Fit</a>
-        <a class="agents-link" href="agents/">For agents <code>/agents</code></a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#which-flieber">Which Flieber?</a>
+        <a href="/pricing">Pricing</a>
+        <a href="agents/">For agents</a>
+        <a href="#" data-placeholder="[DOCS URL]">Docs</a>
+        <a href="https://app.flieber.com">Log in</a>
       </nav>
       <div class="nav-cta">
-        <a class="btn btn-ghost btn-sm" href="#try" data-todo="PLANNER_URL">Talk to a planner</a>
-        <a class="btn btn-primary btn-sm" href="#try" data-todo="SIGNUP_URL">Get started</a>
+        <a class="btn btn-ghost btn-sm" href="#" data-placeholder="[BOOKING URL]">Talk to a planner</a>
+        <a class="btn btn-primary btn-sm" href="#" data-placeholder="[SIGNUP URL]">Get started</a>
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
       </div>
     </div>
@@ -92,49 +117,35 @@
 
     <!-- ================= 1. HERO ================= -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="grid-bg" aria-hidden="true"></div>
-      <div class="hero-glow" aria-hidden="true"></div>
       <div class="wrap">
         <div class="hero-top">
           <div class="hero-copy">
             <span class="eyebrow"><span class="pulse" aria-hidden="true"></span><span>Inventory intelligence for multichannel brands</span><span class="eb-tail"><span class="sep" aria-hidden="true"></span>MCP-native</span></span>
             <h1 class="h1" id="hero-title">Before AI can run your brand, someone has to keep your data true.</h1>
-            <p class="hero-decisions">
-              <span class="sr-only">Make better inventory, purchasing, pricing, promo, ad spend, allocation, transfer and cash-flow decisions.</span>
-              <span aria-hidden="true">Make better <span class="rotator" data-words="inventory|purchasing|pricing|promo|ad spend|allocation|transfer|cash-flow"><span class="rotator-word">inventory</span></span> decisions.</span>
-            </p>
             <p class="lead">Your business changes every day: a stockout, a promotion, an influencer post, a late container, a new product launch. And every change rewrites what your numbers mean. Flieber connects your data with the context behind it, so your team, your agents and your systems can act with confidence.</p>
           </div>
 
-          <!-- Illustrative agent session (sample brand data) -->
-          <div class="console" id="console" role="img" aria-label="Illustration: an AI agent asks Flieber which hero SKUs run out on Amazon before their next purchase order lands, and Flieber answers with stockout-adjusted days of cover per SKU.">
-            <div class="console-bar" aria-hidden="true">
-              <span class="dots"><i></i><i></i><i></i></span>
-              <span class="conn"><b></b>flieber · mcp connected</span>
+          <!-- Illustrative decision simulation (sample data, no customer data) -->
+          <figure class="sim" aria-labelledby="sim-title">
+            <div class="sim-head">
+              <span class="sim-title" id="sim-title">Decision simulation</span>
+              <span class="sim-badge">Sample data</span>
             </div>
-            <div class="console-body" aria-hidden="true">
-              <div class="msg-user" data-step="0"><span class="typed" data-text="Which hero SKUs run out on Amazon before their next PO lands?">Which hero SKUs run out on Amazon before their next PO lands?</span><span class="caret"></span></div>
-              <div class="tool-call" data-step="1"><span class="spin"></span><span><span class="tag">flieber</span> · inventory position · amazon · hero SKUs</span></div>
-              <div class="checks" data-step="2">
-                <span>✓ 4 warehouses + FBA reconciled</span>
-                <span>✓ Bundles resolved</span>
-                <span>✓ Stockout-adjusted demand</span>
-                <span class="flag">! 1 anomaly flagged for review</span>
-              </div>
-              <div class="answer" data-step="3">
-                <p><strong>3 hero SKUs</strong> run out on Amazon before their next PO lands. The travel kit is a bundle that draws on the same bottles, so its real cover is shorter than FBA shows.</p>
-                <table class="sku-table">
-                  <thead><tr><th>SKU</th><th>Cover</th><th>PO lands</th><th>Gap</th></tr></thead>
-                  <tbody>
-                    <tr><td>BTL-32-SLT</td><td>9 days</td><td>Nov 21</td><td><span class="gap">−14 d</span></td></tr>
-                    <tr><td>KIT-TRVL-02</td><td>6 days</td><td>Nov 12</td><td><span class="gap">−8 d</span></td></tr>
-                    <tr><td>FLT-3PK</td><td>17 days</td><td>Nov 30</td><td><span class="gap">−5 d</span></td></tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="console-foot" aria-hidden="true">Sample brand · illustrative data</div>
-          </div>
+            <p class="sim-q">A wholesale buyer wants <b>1,800 units</b>.</p>
+            <table class="sim-table">
+              <thead>
+                <tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Accept all</th><th scope="col">Split 1,100 now / 700 after the next PO</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Amazon stockout days</th><td>21</td><td class="win">0</td></tr>
+                <tr><th scope="row">Revenue, next 90 days</th><td>$384K</td><td class="win">$401K</td></tr>
+                <tr><th scope="row">Margin</th><td>$112K</td><td class="win">$127K</td></tr>
+                <tr><th scope="row">Cash low point</th><td>$64K</td><td class="win">$78K</td></tr>
+              </tbody>
+            </table>
+            <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Split the order: no Amazon stockout, more margin and a higher cash low point.</p>
+            <figcaption class="sim-foot">Sample data. Illustrative only.</figcaption>
+          </figure>
         </div>
 
         <!-- Two doors, shown as equals -->
@@ -144,9 +155,9 @@
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4"><circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg>
             </span>Flieber Managed Services</span>
             <h2>Let our planners run it.</h2>
-            <p>We maintain your data and run your planning practice.</p>
+            <p>We join your team and run your planning practice.</p>
             <div class="door-actions">
-              <a class="btn btn-dark" href="#try" data-todo="PLANNER_URL">Talk to a planner <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn-dark" href="#" data-placeholder="[BOOKING URL]">Talk to a planner <span class="arrow" aria-hidden="true">→</span></a>
             </div>
           </article>
           <article class="door">
@@ -156,17 +167,17 @@
             <h2>Run it yourself.</h2>
             <p>Use Flieber your way: in the Flieber app, or connected to Claude, Slack, your agents and systems through MCP or API.</p>
             <div class="door-actions">
-              <a class="btn btn-primary" href="#try" data-todo="SIGNUP_URL">Get started <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn-primary" href="#" data-placeholder="[SIGNUP URL]">Get started <span class="arrow" aria-hidden="true">→</span></a>
               <span class="door-note">App, MCP or API. <b>Same data, same context.</b></span>
             </div>
           </article>
         </div>
 
-        <div class="under-doors">
-          <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Free trial</span>
-          <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Monthly contracts</span>
-          <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Setup included</span>
-        </div>
+        <ul class="under-doors">
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Free trial</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Monthly contracts</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Setup included</li>
+        </ul>
       </div>
     </section>
 
@@ -190,10 +201,9 @@
                 <rect x="94" y="22" width="12" height="82" rx="3" fill="#F5ED61" opacity=".9"/>
                 <path d="M100 92 V32" stroke="#1B1C1C" stroke-width="2"/>
                 <text x="112" y="24" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">PO lands</text>
-                <text x="246" y="118" text-anchor="end" font-size="9" fill="#757F82" font-family="ui-monospace,monospace">units on hand</text>
+                <text x="246" y="118" text-anchor="end" font-size="9" fill="#5C6568" font-family="ui-monospace,monospace">units on hand</text>
               </svg>
             </div>
-            <span class="inv-tag inv-add"><i aria-hidden="true">+</i>Adds to it</span>
             <h3 class="h3">Purchases and transfers.</h3>
             <p>A PO locks up cash for months. Buy too much and it sits in a warehouse; buy too little and you stock out.</p>
           </article>
@@ -209,7 +219,6 @@
                 <text x="170" y="96" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">stockout</text>
               </svg>
             </div>
-            <span class="inv-tag inv-draw"><i aria-hidden="true">−</i>Draws it down</span>
             <h3 class="h3">Promotions.</h3>
             <p>A discount only pays off if you have the units to sell. Run it on thin stock and you trade margin for a stockout.</p>
           </article>
@@ -221,12 +230,11 @@
                 <text x="145" y="28" text-anchor="middle" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">campaign</text>
                 <path d="M14 104 H246" stroke="#CCD9DB"/>
                 <path d="M70 84 L110 60 L150 44 L220 36" fill="none" stroke="#757F82" stroke-width="1.5" stroke-dasharray="4 4"/>
-                <text x="222" y="50" text-anchor="end" font-size="9" fill="#757F82" font-family="ui-monospace,monospace">paid demand</text>
+                <text x="222" y="50" text-anchor="end" font-size="9" fill="#5C6568" font-family="ui-monospace,monospace">paid demand</text>
                 <path class="viz-draw" d="M14 52 L70 58 L110 80 L138 104 L246 104" fill="none" stroke="#1B1C1C" stroke-width="2"/>
                 <circle cx="138" cy="104" r="4" fill="#1B1C1C"/>
               </svg>
             </div>
-            <span class="inv-tag inv-draw"><i aria-hidden="true">−</i>Draws it down</span>
             <h3 class="h3">Ads and influencer campaigns.</h3>
             <p>Demand you pay for is wasted if the product runs out mid-campaign.</p>
           </article>
@@ -242,10 +250,9 @@
                 <path d="M14 66 H246" stroke="#1B1C1C" stroke-width="1.5" stroke-dasharray="5 4"/>
                 <text x="14" y="58" font-size="9" fill="#1B1C1C" font-family="ui-monospace,monospace">borrowing</text>
                 <text x="14" y="80" font-size="9" fill="#1B1C1C" font-family="ui-monospace,monospace">base</text>
-                <text x="104" y="22" font-size="9" fill="#757F82" font-family="ui-monospace,monospace">stock value</text>
+                <text x="104" y="22" font-size="9" fill="#5C6568" font-family="ui-monospace,monospace">stock value</text>
               </svg>
             </div>
-            <span class="inv-tag inv-dep"><i aria-hidden="true">=</i>Depends on it</span>
             <h3 class="h3">Financing.</h3>
             <p>Credit lines and inventory loans are sized on stock value and sell-through. What you can borrow depends on your inventory numbers being right.</p>
           </article>
@@ -253,110 +260,71 @@
       </div>
     </section>
 
-    <!-- ================= 3. THE PROBLEM ================= -->
-    <section class="section on-dark problem" id="problem" aria-labelledby="problem-title">
-      <div class="grid-bg" aria-hidden="true"></div>
-      <div class="wrap" style="position:relative">
-        <div class="problem-head reveal">
-          <div>
-            <span class="kicker">The problem</span>
-            <h2 class="h2" id="problem-title" style="margin-top:20px">Your data isn’t a set of facts. It’s a moving system.</h2>
-          </div>
-          <p class="lead">And the data behind those decisions won’t sit still. Every system you sell and buy through sees a slice of the truth. None of them reconcile it. Hand that to an AI as-is and every answer is confidently out of date.</p>
+    <!-- ================= 3. WHICH FLIEBER ================= -->
+    <section class="section" id="which-flieber" aria-labelledby="which-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 class="h2" id="which-title">Which Flieber is right for you?</h2>
+          <p class="lead">It depends less on your size than on how complex your operation is.</p>
         </div>
 
-        <div class="cards-4 reveal-stagger">
-          <!-- Card 1: stockouts -->
-          <article class="pcard">
-            <div class="pcard-viz" aria-hidden="true">
-              <svg viewBox="0 0 260 132" preserveAspectRatio="xMidYMid meet">
-                <rect x="112" y="16" width="62" height="96" rx="4" fill="rgba(245,237,97,.08)" stroke="rgba(245,237,97,.35)" stroke-dasharray="3 3"/>
-                <text x="143" y="12" text-anchor="middle" font-size="9" fill="#CCD9DB" font-family="ui-monospace,monospace">stock = 0</text>
-                <g fill="#757F82">
-                  <rect x="20" y="70" width="10" height="42" rx="2"/><rect x="36" y="62" width="10" height="50" rx="2"/><rect x="52" y="74" width="10" height="38" rx="2"/><rect x="68" y="58" width="10" height="54" rx="2"/><rect x="84" y="64" width="10" height="48" rx="2"/><rect x="100" y="80" width="10" height="32" rx="2"/>
-                  <rect x="118" y="110" width="10" height="2"/><rect x="134" y="110" width="10" height="2"/><rect x="150" y="110" width="10" height="2"/>
-                  <rect x="178" y="66" width="10" height="46" rx="2"/><rect x="194" y="56" width="10" height="56" rx="2"/><rect x="210" y="62" width="10" height="50" rx="2"/><rect x="226" y="54" width="10" height="58" rx="2"/>
-                </g>
-                <path class="viz-draw" d="M25 66 L41 58 L57 68 L73 54 L89 60 L105 62 L123 56 L139 54 L155 58 L183 60 L199 52 L215 56 L231 50" fill="none" stroke="#F5ED61" stroke-width="2" stroke-dasharray="400"/>
-                <text x="20" y="40" font-size="9" fill="#F5ED61" font-family="ui-monospace,monospace">— true demand</text>
-              </svg>
+        <div class="which reveal-stagger">
+          <article class="which-card" aria-labelledby="which-ss">
+            <h3 class="which-name" id="which-ss">Flieber Self-Serve</h3>
+            <p class="which-tag">Your operation is simple enough to build on.</p>
+            <h4 class="which-sub">You’re probably here if:</h4>
+            <ul class="which-list">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>You sell on a few channels from one or two warehouses</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Your catalog is mostly one SKU per product, with few bundles</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>You want a ready-made app, or someone on your team builds with AI tools</li>
+            </ul>
+            <p class="which-body">For you, the hard part isn’t the planning logic. It’s the plumbing: data that flows correctly and carries the right context, so every report, workflow or agent works from the truth.</p>
+            <p class="which-body"><b>What you get:</b> The Flieber app, plus Flieber’s data and context modules through MCP and API. Build the reports and workflows you need on top, and they keep working as you add channels, products or suppliers.</p>
+            <div class="which-foot">
+              <span class="which-price">From $149/month</span>
+              <a class="btn btn-dark" href="#" data-placeholder="[SIGNUP URL]">Get started <span class="arrow" aria-hidden="true">→</span></a>
             </div>
-            <h3 class="h3">Stockouts hide real demand.</h3>
-            <p>Zero sales on a day you had zero stock isn’t zero demand.</p>
           </article>
 
-          <!-- Card 2: bundles -->
-          <article class="pcard">
-            <div class="pcard-viz" aria-hidden="true">
-              <svg viewBox="0 0 260 132">
-                <g font-family="ui-monospace,monospace" font-size="9">
-                  <rect x="18" y="20" width="64" height="24" rx="6" fill="#353839" stroke="#757F82"/><text x="50" y="35" text-anchor="middle" fill="#F0F5F6">kit</text>
-                  <rect x="18" y="54" width="64" height="24" rx="6" fill="#353839" stroke="#757F82"/><text x="50" y="69" text-anchor="middle" fill="#F0F5F6">bundle</text>
-                  <rect x="18" y="88" width="64" height="24" rx="6" fill="#353839" stroke="#757F82"/><text x="50" y="103" text-anchor="middle" fill="#F0F5F6">preorder</text>
-                  <path class="viz-flow" d="M82 32 C130 32 130 66 172 66" fill="none" stroke="#CCD9DB" stroke-width="1.2"/>
-                  <path class="viz-flow" d="M82 66 L172 66" fill="none" stroke="#CCD9DB" stroke-width="1.2"/>
-                  <path class="viz-flow" d="M82 100 C130 100 130 66 172 66" fill="none" stroke="#CCD9DB" stroke-width="1.2"/>
-                  <rect x="172" y="44" width="70" height="44" rx="8" fill="#F5ED61"/>
-                  <text x="207" y="63" text-anchor="middle" fill="#1B1C1C">same units</text>
-                  <text x="207" y="77" text-anchor="middle" fill="#1B1C1C">× 1,240</text>
-                </g>
-              </svg>
+          <article class="which-card" aria-labelledby="which-ms">
+            <h3 class="which-name" id="which-ms">Flieber Managed Services</h3>
+            <p class="which-tag">Your operation is too complex to build around.</p>
+            <h4 class="which-sub">You’re probably here if:</h4>
+            <ul class="which-list">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>You sell across many channels, warehouses or regions</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>You run kits, bundles, backorders, long lead times or high MOQs</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Your team is buried in spreadsheets, with no time to build or maintain an internal tool</li>
+            </ul>
+            <p class="which-body">For you, the hard part is the decisions themselves. There are more edge cases than an in-house tool will cover, and a mistake ties up cash for months.</p>
+            <p class="which-body"><b>What you get:</b> Flieber planners join your team and run your planning practice on the same platform, drawing on experience from more than 1,000 brands.</p>
+            <div class="which-foot">
+              <span class="which-price">Quoted per brand</span>
+              <a class="btn btn-dark" href="#" data-placeholder="[BOOKING URL]">Talk to a planner <span class="arrow" aria-hidden="true">→</span></a>
             </div>
-            <h3 class="h3">Bundles consume components.</h3>
-            <p>Kits, bundles, preorders and backorders all draw on the same units.</p>
           </article>
+        </div>
 
-          <!-- Card 3: channels -->
-          <article class="pcard">
-            <div class="pcard-viz" aria-hidden="true">
-              <svg viewBox="0 0 260 132">
-                <g font-family="ui-monospace,monospace" font-size="9">
-                  <text x="20" y="30" fill="#CCD9DB">wholesale</text>
-                  <text x="20" y="70" fill="#CCD9DB">amazon</text>
-                  <text x="20" y="110" fill="#CCD9DB">dtc promo</text>
-                  <path class="viz-flow" d="M78 27 C130 27 140 58 176 62" fill="none" stroke="#F5ED61" stroke-width="1.4"/>
-                  <path class="viz-flow" d="M68 67 L176 67" fill="none" stroke="#F5ED61" stroke-width="1.4"/>
-                  <path class="viz-flow" d="M80 107 C130 107 140 76 176 72" fill="none" stroke="#F5ED61" stroke-width="1.4"/>
-                  <g transform="translate(178 40)">
-                    <rect x="0" y="0" width="62" height="44" rx="4" fill="#353839" stroke="#CCD9DB"/>
-                    <path d="M0 15 H62 M0 30 H62 M20 0 V15 M41 0 V15 M10 15 V30 M31 15 V30 M52 15 V30 M20 30 V44 M41 30 V44" stroke="#757F82"/>
-                    <rect x="0" y="46" width="62" height="5" rx="1" fill="#757F82"/>
-                  </g>
-                  <text x="209" y="112" text-anchor="middle" fill="#F0F5F6">1 pallet</text>
-                </g>
-              </svg>
-            </div>
-            <h3 class="h3">Channels compete for units.</h3>
-            <p>A wholesale order, an Amazon inbound and a DTC promo can all claim the same pallet.</p>
-          </article>
-
-          <!-- Card 4: ads distort history -->
-          <article class="pcard">
-            <div class="pcard-viz" aria-hidden="true">
-              <svg viewBox="0 0 260 132">
-                <g font-family="ui-monospace,monospace" font-size="9">
-                  <path d="M16 88 H244" stroke="#757F82" stroke-dasharray="3 4"/>
-                  <text x="244" y="102" text-anchor="end" fill="#757F82">baseline</text>
-                  <path class="viz-draw" d="M16 90 L40 86 L64 92 L88 84 L108 88 L122 30 L136 26 L150 82 L172 88 L196 84 L220 90 L244 86" fill="none" stroke="#CCD9DB" stroke-width="2"/>
-                  <rect x="102" y="10" width="56" height="16" rx="8" fill="#F5ED61"/>
-                  <text x="130" y="21" text-anchor="middle" fill="#1B1C1C">promo</text>
-                </g>
-              </svg>
-            </div>
-            <h3 class="h3">Ads and price changes distort history.</h3>
-            <p>Last month’s spike may have been a promotion, not demand.</p>
-          </article>
+        <div class="which-after reveal">
+          <p class="which-under">Same platform either way. Switch or combine any time. Complex operation, but a data or AI team in house? Self-Serve gives them the hard parts already solved. Not sure which fits? Talk to a planner and we’ll tell you honestly, even if the answer is neither.</p>
+          <div class="fit-col fit-no">
+            <h3 class="h3">Probably not for you if:</h3>
+            <ul>
+              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You sell on one channel and a spreadsheet still works</li>
+              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You’re looking for a warehouse management system or a full ERP</li>
+              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You plan manufacturing runs (MRP) rather than buying finished goods</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= 4. WHAT FLIEBER DOES ================= -->
-    <section class="section section-soft" id="how" aria-labelledby="how-title">
+    <!-- ================= 4. HOW IT WORKS ================= -->
+    <section class="section section-soft" id="how-it-works" aria-labelledby="how-title">
       <div class="wrap">
         <div class="section-head reveal">
           <span class="kicker">What Flieber does with your data</span>
           <h2 class="h2" id="how-title" style="margin-top:20px">Consolidated. Contextualized. Up to date.</h2>
-          <p class="lead">Flieber brings every source together and adds what none of them know, with inventory at the center because it is where every decision meets reality.</p>
+          <p class="lead">Flieber brings every source together and adds what none of them know, with inventory at the center because it’s where every decision meets reality.</p>
         </div>
 
         <div class="engine">
@@ -432,9 +400,9 @@
               </g>
 
               <!-- outputs -->
-              <g class="node"><rect x="896" y="92" width="180" height="56" rx="12"/><text x="914" y="115" font-weight="600">Your team</text><text x="914" y="134" style="fill:#757F82;font-size:12px">Flieber app</text></g>
-              <g class="node"><rect x="896" y="192" width="180" height="56" rx="12" style="stroke:#1B1C1C"/><text x="914" y="215" font-weight="600">Your agents</text><text x="914" y="234" style="fill:#757F82;font-size:12px">MCP · Claude, Slack</text></g>
-              <g class="node"><rect x="896" y="292" width="180" height="56" rx="12"/><text x="914" y="315" font-weight="600">Your systems</text><text x="914" y="334" style="fill:#757F82;font-size:12px">API · ERP, n8n, tools</text></g>
+              <g class="node"><rect x="896" y="92" width="180" height="56" rx="12"/><text x="914" y="115" font-weight="600">Your team</text><text x="914" y="134" style="fill:#5C6568;font-size:12px">Flieber app</text></g>
+              <g class="node"><rect x="896" y="192" width="180" height="56" rx="12" style="stroke:#1B1C1C"/><text x="914" y="215" font-weight="600">Your agents</text><text x="914" y="234" style="fill:#5C6568;font-size:12px">MCP · Claude, Slack</text></g>
+              <g class="node"><rect x="896" y="292" width="180" height="56" rx="12"/><text x="914" y="315" font-weight="600">Your systems</text><text x="914" y="334" style="fill:#5C6568;font-size:12px">API · ERP, n8n, tools</text></g>
             </svg>
 
             <!-- Mobile diagram -->
@@ -463,9 +431,9 @@
               <path class="wire" d="M170 370 V408"/><path class="pulse-line" d="M170 370 V408"/>
               <text class="lbl" x="0" y="424">WHO ACTS ON IT</text>
               <g class="node">
-                <rect x="0" y="436" width="106" height="56" rx="10"/><text x="12" y="459" font-weight="600">Your team</text><text x="12" y="478" style="fill:#757F82;font-size:11px">App</text>
-                <rect x="117" y="436" width="106" height="56" rx="10" style="stroke:#1B1C1C"/><text x="129" y="459" font-weight="600">Your agents</text><text x="129" y="478" style="fill:#757F82;font-size:11px">MCP</text>
-                <rect x="234" y="436" width="106" height="56" rx="10"/><text x="246" y="459" font-weight="600">Systems</text><text x="246" y="478" style="fill:#757F82;font-size:11px">API</text>
+                <rect x="0" y="436" width="106" height="56" rx="10"/><text x="12" y="459" font-weight="600">Your team</text><text x="12" y="478" style="fill:#5C6568;font-size:11px">App</text>
+                <rect x="117" y="436" width="106" height="56" rx="10" style="stroke:#1B1C1C"/><text x="129" y="459" font-weight="600">Your agents</text><text x="129" y="478" style="fill:#5C6568;font-size:11px">MCP</text>
+                <rect x="234" y="436" width="106" height="56" rx="10"/><text x="246" y="459" font-weight="600">Systems</text><text x="246" y="478" style="fill:#5C6568;font-size:11px">API</text>
               </g>
             </svg>
           </figure>
@@ -490,57 +458,14 @@
 
           <p class="engine-close reveal">
             <img src="assets/img/flieber-icon.svg" alt="" width="28" height="20">
-            <span>Built on proprietary algorithms and planning expertise from thousands of users since 2019, and shaped by the real-world business context of more than 1,000 modern commerce brands.</span>
+            <span>Built on proprietary algorithms and planning expertise from thousands of users since 2019, and shaped by the real-world business context of more than 1,000 commerce brands. Building in-house covers the use cases you face today. Flieber already covers most of the ones you’ll face next.</span>
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ================= 5. TWO WAYS ================= -->
-    <section class="section" id="two-ways" aria-labelledby="ways-title">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="kicker">Two ways to work with Flieber</span>
-          <h2 class="h2" id="ways-title" style="margin-top:20px">Have it done for you, or build on it yourself.</h2>
-        </div>
-
-        <div class="compare reveal" role="table" aria-label="Flieber Managed Services compared with Flieber Self-Serve">
-          <div role="row" style="display:contents">
-            <div class="c-label c-head" role="columnheader"><span class="sr-only">Compare</span></div>
-            <div class="c-col-a c-head" role="columnheader"><span class="tag">Done for you</span><h3>Flieber Managed Services</h3></div>
-            <div class="c-col-b c-head" role="columnheader"><span class="tag">Build on it</span><h3>Flieber Self-Serve</h3></div>
-          </div>
-          <div role="row" style="display:contents">
-            <div class="c-label" role="rowheader">Who does the work</div>
-            <div class="c-col-a" role="cell"><span class="row-label-inline">Who does the work</span>Flieber planners, backed by our AI checks</div>
-            <div class="c-col-b" role="cell"><span class="row-label-inline">Who does the work</span>Your team, in the app or through your own agents and systems</div>
-          </div>
-          <div role="row" style="display:contents">
-            <div class="c-label" role="rowheader">How you use it</div>
-            <div class="c-col-a" role="cell"><span class="row-label-inline">How you use it</span>Weekly reviews, flagged issues, ready-to-approve recommendations</div>
-            <div class="c-col-b" role="cell"><span class="row-label-inline">How you use it</span>The Flieber app, or MCP and API in Claude, Slack, n8n or your own tools</div>
-          </div>
-          <div role="row" style="display:contents">
-            <div class="c-label" role="rowheader">Best for</div>
-            <div class="c-col-a" role="cell"><span class="row-label-inline">Best for</span>Brands without a dedicated planner, or whose planner is buried in data work</div>
-            <div class="c-col-b" role="cell"><span class="row-label-inline">Best for</span>Brands with a planning team, including those building their own internal tools</div>
-          </div>
-          <div role="row" style="display:contents">
-            <div class="c-label c-foot" role="rowheader">Start with</div>
-            <div class="c-col-a c-foot" role="cell"><a class="btn btn-dark" href="#try" data-todo="PLANNER_URL">Talk to a planner <span class="arrow" aria-hidden="true">→</span></a></div>
-            <div class="c-col-b c-foot" role="cell"><a class="btn btn-primary" href="#try" data-todo="SIGNUP_URL">Get started <span class="arrow" aria-hidden="true">→</span></a></div>
-          </div>
-        </div>
-
-        <div class="compare-meta reveal" id="pricing">
-          <p class="same">Same engine either way. Switch or combine any time.</p>
-          <p class="price">Self-Serve starts at <b>$149/month</b>. Managed Services is quoted per brand.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 6. WHAT YOU CAN DO ================= -->
-    <section class="section section-soft" id="use-cases" aria-labelledby="asks-title">
+    <!-- ================= 5. WHAT YOU CAN DO ================= -->
+    <section class="section" id="use-cases" aria-labelledby="asks-title">
       <div class="wrap">
         <div class="section-head reveal">
           <span class="kicker">What you can do with it</span>
@@ -588,8 +513,8 @@
       </div>
     </section>
 
-    <!-- ================= 7. PROOF ================= -->
-    <section class="section" id="proof" aria-labelledby="proof-title">
+    <!-- ================= 6. PROOF ================= -->
+    <section class="section section-soft" id="proof" aria-labelledby="proof-title">
       <div class="wrap">
         <div class="section-head proof-head reveal">
           <span class="kicker">Proof</span>
@@ -605,7 +530,7 @@
             <p class="claim">more accurate forecasting than the best of 16 statistical and machine-learning models, tested on a sample of 46,000 products.</p>
             <div class="verify">
               <span class="badge"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#F5ED61" stroke-width="1.8"/></svg>Third-party verified by Nixtla</span>
-              <a class="link-arrow" href="#" data-todo="NIXTLA_REPORT_URL">Read the method (MAE% and Bias%) <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="link-arrow" href="#" data-placeholder="[NIXTLA REPORT URL]">Read the method (MAE% and Bias%) <span class="arrow" aria-hidden="true">→</span></a>
             </div>
           </div>
         </div>
@@ -684,38 +609,8 @@
       </div>
     </section>
 
-    <!-- ================= 8. FIT ================= -->
-    <section class="section section-soft" id="fit" aria-labelledby="fit-title">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="kicker">Fit</span>
-          <h2 class="h2" id="fit-title" style="margin-top:20px">Honest fit. We’d rather you, or your agent, know now.</h2>
-        </div>
-        <div class="fit reveal-stagger">
-          <div class="fit-col fit-yes">
-            <h3 class="h3">Built for brands that:</h3>
-            <ul>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Sell on two or more channels: Amazon, Walmart, DTC, wholesale or retail</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Manage catalog complexity: multiple SKUs per product, kits and bundles, or backorders</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Run a complex operation: multiple warehouses, overseas suppliers, long lead times or high MOQs</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Already work in Claude or Slack, or are building their own agents</li>
-            </ul>
-          </div>
-          <div class="fit-col fit-no">
-            <h3 class="h3">Probably not for you if:</h3>
-            <ul>
-              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You sell on one channel and a spreadsheet still works</li>
-              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You’re looking for a warehouse management system or a full ERP</li>
-              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You plan manufacturing runs (MRP) rather than buying finished goods</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 9. TRY IT ================= -->
+    <!-- ================= 7. TRY IT ================= -->
     <section class="section try" id="try" aria-labelledby="try-title">
-      <div class="grid-bg" aria-hidden="true"></div>
       <div class="wrap" style="position:relative">
         <div class="section-head reveal">
           <span class="kicker">Try it</span>
@@ -724,24 +619,24 @@
         </div>
         <div class="try-grid reveal-stagger">
           <div class="try-card dark">
-            <span class="label"><i aria-hidden="true"></i>Sandbox · ready now</span>
+            <span class="label"><i aria-hidden="true"></i>Sandbox</span>
             <h3 class="h3" style="color:#fff">A sample brand, ready now.</h3>
             <p>Open it in the Flieber app, or connect your agent through MCP:</p>
             <div class="endpoint">
-              <code id="mcp-endpoint" class="todo" data-todo="MCP_ENDPOINT_URL">[MCP ENDPOINT URL]</code>
+              <code id="mcp-endpoint" class="todo">[MCP ENDPOINT URL]</code>
               <button class="copy" type="button" data-copy="#mcp-endpoint">Copy</button>
             </div>
           </div>
           <div class="try-card">
-            <span class="label"><i aria-hidden="true"></i>Free trial · your data</span>
+            <span class="label"><i aria-hidden="true"></i>Free trial</span>
             <h3 class="h3">Connect your own channels and warehouses.</h3>
             <p>Standard setup included; customizations come with a paid plan.</p>
           </div>
         </div>
         <div class="try-actions reveal">
-          <a class="btn btn-primary" href="#" data-todo="SIGNUP_URL">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-ghost" href="#" data-todo="SANDBOX_URL">Explore the sandbox</a>
-          <a class="btn btn-ghost" href="#" data-todo="PLANNER_URL">Talk to a planner</a>
+          <a class="btn btn-primary" href="#" data-placeholder="[TRIAL URL]">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#" data-placeholder="[SANDBOX URL]">Explore the sandbox</a>
+          <a class="btn btn-ghost" href="#" data-placeholder="[BOOKING URL]">Talk to a planner</a>
         </div>
       </div>
     </section>
@@ -756,31 +651,31 @@
           <p class="tagline">Commerce data, <em>maintained.</em></p>
         </div>
         <div>
-          <h4>Product</h4>
+          <h2 class="footer-h">Product</h2>
           <ul>
-            <li><a href="#how">How it works</a></li>
-            <li><a href="#two-ways">Managed Services</a></li>
-            <li><a href="#two-ways">Self-Serve</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="agents/#data-handling">Security &amp; data</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#which-flieber">Self-Serve</a></li>
+            <li><a href="#which-flieber">Managed Services</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/security">Security &amp; data</a></li>
           </ul>
         </div>
         <div>
-          <h4>For agents</h4>
+          <h2 class="footer-h">For agents</h2>
           <ul>
             <li><a href="agents/"><code>/agents</code></a></li>
             <li><a href="llms.txt"><code>/llms.txt</code></a></li>
             <li><a href="capabilities.json"><code>/capabilities.json</code></a></li>
-            <li><a href="#" data-todo="MCP_DOCS_URL">MCP docs</a></li>
+            <li><a href="#" data-placeholder="[DOCS URL]">MCP docs</a></li>
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
+          <h2 class="footer-h">Company</h2>
           <ul>
-            <li><a href="#" data-todo="HELP_CENTER_URL">Help center</a></li>
-            <li><a href="#" data-todo="BLOG_URL">Blog</a></li>
-            <li><a href="#" data-todo="CONTACT_URL">Contact</a></li>
-            <li><a href="#" data-todo="PRIVACY_URL">Privacy</a></li>
+            <li><a href="https://help.flieber.com">Help center</a></li>
+            <li><a href="#" data-placeholder="[PLACEHOLDER: BLOG URL]">Blog</a></li>
+            <li><a href="#" data-placeholder="[PLACEHOLDER: CONTACT URL]">Contact</a></li>
+            <li><a href="#" data-placeholder="[PLACEHOLDER: PRIVACY URL]">Privacy</a></li>
           </ul>
         </div>
       </div>
@@ -792,6 +687,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/site.js?v=8" defer></script>
+  <script src="assets/js/site.js?v=9" defer></script>
 </body>
 </html>

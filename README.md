@@ -1,67 +1,98 @@
 # Flieber website
 
-Static site for flieber.com. Built from the approved **Flieber Website Copy (Sep 29, 2026)** as the source of truth for all copy, and the **Flieber Brand Guidelines v1.0** for logo, type and color.
+Static site for flieber.com. All copy comes from the **Flieber Website Brief (October 1, 2026)**, the source of truth for every word on the site. Logo, type and color follow the **Flieber Brand Guidelines v1.0**.
 
-No build step. Any static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages, S3) serves it as is.
+No build step. Any static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages, S3) can serve it as is, or HubSpot CMS can (hosting is still an open decision; see below).
 
 ```
-index.html            Homepage (8 sections + footer)
-agents/index.html     /agents: plain facts for AI agents
-llms.txt              Same content as /agents, plain text
-capabilities.json     Same content as /agents, machine-readable
-assets/css/site.css   All styles; brand tokens at the top
-assets/js/site.js     Nav, scroll reveals, hero agent demo, quote carousel, copy button
-assets/fonts/         Open Sauce One 400/500/600 (SIL OFL, self-hosted)
-assets/img/           Logo (dark + light), icon, favicon: vectors traced from the brand manual
-assets/logos/         Customer logos from the shared Drive logo folder
+index.html                 Homepage (7 sections + footer)
+agents/index.html          /agents: plain facts for AI agents, text-first, no animation
+llms.txt                   Generated from /agents (llms.txt convention)
+capabilities.json          Generated from /agents (schema from brief §5)
+sitemap.xml                /, /agents, /llms.txt, /capabilities.json
+robots.txt                 PREVIEW: blocks all crawlers
+robots.production.txt      Launch version: allows search engines, AI crawler policy pending
+scripts/check-placeholders.py   Lists every placeholder still on the site
+assets/css/site.css        All styles; brand tokens at the top
+assets/js/site.js          Nav, scroll reveals, quote carousel, copy button, logo fallback
+assets/fonts/              Open Sauce One 400/500/600 (SIL OFL, self-hosted)
+assets/img/                Flieber logo (dark + light), icon, favicon
+assets/logos/              Customer logos from the shared Drive logo folder
+Dockerfile, Caddyfile      Static server for the Railway preview
 ```
 
 Local preview: `python3 -m http.server` from the repo root, then open http://localhost:8000.
 
-## Private preview (current state)
+## Homepage structure (brief §3)
 
-The site is deployed as a **hidden, non-indexed preview** on Railway (project `flieber-website-preview`), built from this branch with the `Dockerfile` (Caddy static server).
+1. Hero, with a decision-simulation card on sample data (clearly labeled "Sample data")
+2. Why inventory
+3. Which Flieber is right for you? (`#which-flieber`): two equal cards, neither visually favored, then "Probably not for you if"
+4. What Flieber does with your data (`#how-it-works`)
+5. What you can do with it (example prompts in the mono font)
+6. Proof
+7. Try it
 
-Three layers keep it out of search engines. **All three must be removed before the public launch:**
+## Decisions that differ from the brief
+
+Confirmed with Fabricio on October 1, 2026:
+
+- **Visual system:** the site stays on the Flieber Brand Guidelines (Open Sauce One, yellow and black) instead of the brief's §6 palette and fonts. The brief's "editorial and calm" direction is applied: no gradient washes, glows or pulsing effects.
+- **Proof stat:** "tested on **a sample of** 46,000 products" (homepage, /agents, llms.txt, capabilities.json).
+- **Logo strip label:** "Trusted by hundreds of brands" (the brief's "100+ brands run on Flieber today…" line is not used on the homepage; /agents keeps "100+ commerce brands today; more than 1,000 since 2019").
+
+## Placeholders and launch checks
+
+Every `[BRACKET]` from the brief is rendered visibly (dashed outline, class `todo`). Links whose destination is still a placeholder carry `data-placeholder="[...]"`: they stay on the page when clicked and show the pending placeholder on hover.
+
+List everything that remains:
+
+```
+python3 scripts/check-placeholders.py           # list
+python3 scripts/check-placeholders.py --strict  # exit 1 if anything remains (use before launch)
+```
+
+The check also reports the three preview-only no-index layers, which **must be removed at launch**:
 
 1. `<meta name="robots" content="noindex, nofollow">` in `index.html` and `agents/index.html`
-2. `robots.txt` with `Disallow: /`
+2. `robots.txt` (replace it with `robots.production.txt`, after filling in the AI crawler policy)
 3. The `X-Robots-Tag` header in `Caddyfile`
 
-The preview is unlisted, not password-protected: anyone with the URL can open it.
+## Open items before launch (brief §8)
+
+Blocking launch:
+
+- [ ] MCP endpoint URL, auth method and docs URL (`[MCP ENDPOINT URL]`, `[AUTH METHOD]`, `[DOCS URL]`)
+- [ ] Build the sandbox (`[SANDBOX URL]`)
+- [ ] Button destinations: `[BOOKING URL]`, `[SIGNUP URL]`, `[TRIAL URL]`, `[SANDBOX URL]`
+- [ ] Hosting and CMS decision: HubSpot CMS or separate hosting, keeping HubSpot forms and tracking either way
+
+Before launch:
+
+- [ ] Nixtla report link (`[NIXTLA REPORT URL]`)
+- [ ] Six security and hosting placeholders in /agents Data handling
+- [ ] AI crawler policy for robots.txt (`[AI CRAWLER POLICY]` in `robots.production.txt`)
+- [ ] Quoted customers: confirm all five are active and approve use of their quotes
+- [ ] Contact email for the /agents hand-off (`[EMAIL]`)
+- [ ] Owner for the "100+ brands" figure
+- [ ] Blog, Contact and Privacy URLs for the footer (`[PLACEHOLDER: …]`), and check that `/pricing` and `/security` exist on the live site
+- [ ] "Push to ERP" ERPs besides NetSuite (`[others]`)
+
+## Analytics
+
+Google Tag Manager (`GTM-5FS8NPG`) and HubSpot tracking (portal `5767502`, the "Flieber" HubSpot account) load only when the hostname is flieber.com, so preview traffic stays out of analytics. Confirm that 5767502 is the portal the current site uses. No forms exist yet; route any form to HubSpot.
 
 ## Brand rules applied
 
-- **Type:** Open Sauce One. Headings Regular at 110% line height and about -4% tracking; subheads SemiBold at -3%; body Regular.
-- **Color:** Yellow `#F5ED61` is the primary color and is only used as a background, highlight or button fill. It is never used for text on a light background. Type is Black `#1B1C1C` on white and gray backgrounds. Dark sections use Black or Charcoal with Light Gray, White or Yellow text. Blue `#244AE3` appears once, on the forecast-accuracy stat, as an occasional bold accent.
-- **Logo:** the wordmark is always paired with the icon and is never shown under 100px wide. The favicon uses the icon alone.
-
-## Open items before launch
-
-Every unconfirmed value is marked in the HTML with a `data-todo="KEY"` attribute, so `grep -rn data-todo` lists them all. Visible placeholders keep the bracket text from the copy doc and get a dashed outline (class `todo`). Until a URL is filled in, placeholder links on the homepage point to the **Try it** section instead of a dead `#`.
-
-| Key | Where | What's needed |
-| --- | --- | --- |
-| `MCP_ENDPOINT_URL` | Home §9, /agents, llms.txt, capabilities.json | MCP endpoint URL (**blocks launch**) |
-| `MCP_AUTH` | /agents, llms.txt, capabilities.json | Auth method (copy says "OAuth, confirm") |
-| `MCP_DOCS_URL` | Footer, /agents, llms.txt, capabilities.json | MCP docs URL |
-| `SANDBOX_URL` | Home §9, /agents | Sandbox link (sandbox still to be built, **blocks launch**) |
-| `SIGNUP_URL` | Nav, hero, §5, §9 | Free trial / Get started destination |
-| `PLANNER_URL` | Nav, hero, §5, §9, /agents | Booking link for "Talk to a planner" / 30-minute call |
-| `NIXTLA_REPORT_URL` | Home §7, /agents | Link to the Nixtla report ("Read the method") |
-| `SEC_*` (6 keys) | /agents Data handling, llms.txt, capabilities.json | Hosting, encryption, compliance, AI models, access, deletion |
-| `ERP_LIST` | /agents Capabilities | ERPs besides NetSuite for "Push to ERP" |
-| `CONTACT_EMAIL` | /agents Hand off, llms.txt, capabilities.json | Contact email |
-| `HELP_CENTER_URL`, `BLOG_URL`, `CONTACT_URL`, `PRIVACY_URL` | Footer | Existing flieber.com URLs |
-
-Also listed in the copy doc: someone needs to own the **"100+ brands today, 1,000+ since 2019"** figures (homepage §4 closing line and §7, /agents, llms.txt, capabilities.json).
+- **Type:** Open Sauce One. Headings Regular at 110% line height and about -4% tracking; subheads SemiBold at -3%; body Regular. Example prompts, labels and data use the system mono font.
+- **Color:** Yellow `#F5ED61` is the primary color and is only used as a background, highlight or button fill, never for text on a light background. Type is Black `#1B1C1C` on white and gray backgrounds. Small muted text uses `#5C6568` (and `#A3AEB1` on black) so every text pairing meets WCAG AA 4.5:1. Blue `#244AE3` appears once, on the forecast-accuracy stat.
+- **Logo:** the wordmark is always paired with the icon and never shown under 100px wide.
 
 ## Notes
 
-- **Hero adds a line to the approved copy.** The approved H1 ("Before AI can run your brand, someone has to keep your data true.") stays as the H1. Directly under it is "Make better [word] decisions." with a rotating word (inventory, purchasing, pricing, promo, ad spend, allocation, transfer, cash-flow). Edit the words in the `data-words` attribute in `index.html`; screen readers and crawlers get the full list as one sentence. The rotation runs once, settles on "inventory", pauses on hover, and is off for visitors who prefer reduced motion.
+- **Copy rules (brief §0):** no em dashes in site copy, sentence-case headings, no serial comma. Short section labels above some H2s use the brief's own section names.
+- **Hero card:** illustrative numbers only, no customer data. Replace with real sandbox output once the sandbox exists, if wanted.
+- **Logo strip:** 14 logos matching the live homepage (white PNGs, rendered black with a CSS filter). Near-square logos use `logo-square` and very wide ones `logo-thin`.
+- **Keep /agents, llms.txt and capabilities.json in sync.** The two files are generated by hand from /agents and must never contradict it. Update `last_updated` and the /agents date together.
 - **Cache busting:** CSS and JS are linked with `?v=N`. Bump it when you change either file.
-
-- The hero "agent console" is an illustration and uses **made-up sample SKUs**; it is labeled "Sample brand · illustrative data". Replace it with real sandbox output once the sandbox exists.
-- The logo strip matches the live homepage: 14 logos from the shared Drive logo folder (white PNGs, rendered black with a CSS filter), under the label "Trusted by hundreds of brands". Near-square logos use `logo-square` and very wide ones `logo-thin` so they read at the same visual weight.
-- Keep `/agents`, `llms.txt` and `capabilities.json` in sync. They are three renderings of the same content.
-- Before launch, add an OG share image (`og:image`) and analytics.
+- **Lighthouse (mobile, Oct 1):** Performance 98, Accessibility 100, Best practices 100 on both pages. SEO scores 69 only because of the preview no-index; it clears at launch.
