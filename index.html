@@ -24,7 +24,7 @@
 
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v=9">
+  <link rel="stylesheet" href="assets/css/site.css?v=10">
 
   <script>document.documentElement.classList.remove('no-js');</script>
   <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
@@ -125,26 +125,58 @@
             <p class="lead">Your business changes every day: a stockout, a promotion, an influencer post, a late container, a new product launch. And every change rewrites what your numbers mean. Flieber connects your data with the context behind it, so your team, your agents and your systems can act with confidence.</p>
           </div>
 
-          <!-- Illustrative decision simulation (sample data, no customer data) -->
-          <figure class="sim" aria-labelledby="sim-title">
+          <!-- Illustrative decision simulations (sample data, no customer data).
+               Rotates slowly; pauses on hover/focus; pause button; no autoplay
+               under reduced motion. -->
+          <figure class="sim" id="sim" aria-labelledby="sim-title">
             <div class="sim-head">
               <span class="sim-title" id="sim-title">Decision simulation</span>
               <span class="sim-badge">Sample data</span>
             </div>
-            <p class="sim-q">A wholesale buyer wants <b>1,800 units</b>.</p>
-            <table class="sim-table">
-              <thead>
-                <tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Accept all</th><th scope="col">Split 1,100 now / 700 after the next PO</th></tr>
-              </thead>
-              <tbody>
-                <tr><th scope="row">Amazon stockout days</th><td>21</td><td class="win">0</td></tr>
-                <tr><th scope="row">Revenue, next 90 days</th><td>$384K</td><td class="win">$401K</td></tr>
-                <tr><th scope="row">Margin</th><td>$112K</td><td class="win">$127K</td></tr>
-                <tr><th scope="row">Cash low point</th><td>$64K</td><td class="win">$78K</td></tr>
-              </tbody>
-            </table>
-            <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Split the order: no Amazon stockout, more margin and a higher cash low point.</p>
-            <figcaption class="sim-foot">Sample data. Illustrative only.</figcaption>
+            <div class="sim-tabs" role="tablist" aria-label="Example decisions">
+              <button class="sim-tab" type="button" role="tab" id="sim-tab-0" aria-controls="sim-panel-0" aria-selected="true"><span>Wholesale order</span><i class="sim-progress" aria-hidden="true"></i></button>
+              <button class="sim-tab" type="button" role="tab" id="sim-tab-1" aria-controls="sim-panel-1" aria-selected="false" tabindex="-1"><span>Promotion</span><i class="sim-progress" aria-hidden="true"></i></button>
+              <button class="sim-tab" type="button" role="tab" id="sim-tab-2" aria-controls="sim-panel-2" aria-selected="false" tabindex="-1"><span>Influencer campaign</span><i class="sim-progress" aria-hidden="true"></i></button>
+              <button class="sim-tab" type="button" role="tab" id="sim-tab-3" aria-controls="sim-panel-3" aria-selected="false" tabindex="-1"><span>Purchase order</span><i class="sim-progress" aria-hidden="true"></i></button>
+            </div>
+            <div class="sim-stage">
+              <div class="sim-panel active" role="tabpanel" id="sim-panel-0" aria-labelledby="sim-tab-0">
+                <p class="sim-q">A wholesale buyer wants <b>1,800 units</b>.</p>
+                <table class="sim-table">
+                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Accept all</th><th scope="col">Split 1,100 now / 700 after the next PO</th></tr></thead>
+                  <tbody><tr><th scope="row">Amazon stockout days</th><td>21</td><td class="win">0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$384K</td><td class="win">$401K</td></tr><tr><th scope="row">Margin</th><td>$112K</td><td class="win">$127K</td></tr><tr><th scope="row">Cash low point</th><td>$64K</td><td class="win">$78K</td></tr></tbody>
+                </table>
+                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Split the order: no Amazon stockout, more margin and a higher cash low point.</p>
+              </div>
+              <div class="sim-panel" role="tabpanel" id="sim-panel-1" aria-labelledby="sim-tab-1" aria-hidden="true">
+                <p class="sim-q">Marketing wants <b>25% off</b> the travel kit next week.</p>
+                <table class="sim-table">
+                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Run next week</th><th scope="col">Run after the next PO lands</th></tr></thead>
+                  <tbody><tr><th scope="row">Stockout days</th><td>12</td><td class="win">0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$268K</td><td class="win">$291K</td></tr><tr><th scope="row">Margin</th><td>$61K</td><td class="win">$74K</td></tr><tr><th scope="row">Cash low point</th><td class="win">$83K</td><td>$79K</td></tr></tbody>
+                </table>
+                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Wait for the PO: no stockout mid-promo and $13K more margin, for a slightly lower cash low point.</p>
+              </div>
+              <div class="sim-panel" role="tabpanel" id="sim-panel-2" aria-labelledby="sim-tab-2" aria-hidden="true">
+                <p class="sim-q">An influencer post could <b>double demand</b> for a hero SKU.</p>
+                <table class="sim-table">
+                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Launch now</th><th scope="col">Launch after the next PO lands</th></tr></thead>
+                  <tbody><tr><th scope="row">Stockout days</th><td>18</td><td class="win">0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$212K</td><td class="win">$236K</td></tr><tr><th scope="row">Margin</th><td>$58K</td><td class="win">$71K</td></tr><tr><th scope="row">Cash low point</th><td class="win">$91K</td><td>$87K</td></tr></tbody>
+                </table>
+                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Launch after the PO lands: paid demand isn’t wasted on a sold-out product.</p>
+              </div>
+              <div class="sim-panel" role="tabpanel" id="sim-panel-3" aria-labelledby="sim-tab-3" aria-hidden="true">
+                <p class="sim-q">A supplier offers <b>8% off</b> for six months of stock.</p>
+                <table class="sim-table">
+                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Take the discount, order 6 months</th><th scope="col">Order 3 months at list price</th></tr></thead>
+                  <tbody><tr><th scope="row">Stockout days</th><td>0</td><td>0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$520K</td><td>$520K</td></tr><tr><th scope="row">Margin</th><td class="win">$171K</td><td>$162K</td></tr><tr><th scope="row">Cash low point</th><td>$22K</td><td class="win">$95K</td></tr></tbody>
+                </table>
+                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Order 3 months: the discount adds $9K of margin but drops the cash low point by $73K.</p>
+              </div>
+            </div>
+            <div class="sim-foot">
+              <figcaption>Sample data. Illustrative only.</figcaption>
+              <button class="sim-pause" type="button" aria-pressed="false" aria-label="Pause rotation"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect class="i-pause" x="2" y="1.5" width="2.6" height="9" rx=".6"/><rect class="i-pause" x="7.4" y="1.5" width="2.6" height="9" rx=".6"/><path class="i-play" d="M3 1.6v8.8L10.4 6z"/></svg></button>
+            </div>
           </figure>
         </div>
 
@@ -687,6 +719,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/site.js?v=9" defer></script>
+  <script src="assets/js/site.js?v=10" defer></script>
 </body>
 </html>
