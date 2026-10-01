@@ -6,7 +6,7 @@
   <!-- PREVIEW ONLY: remove before public launch -->
   <meta name="robots" content="noindex, nofollow">
   <title>Security and data at Flieber</title>
-  <meta name="description" content="Where Flieber hosts your data, who can access it and how AI models use it: AWS in the US, Admin and Member roles, Google and Microsoft sign-in, no training on customer data.">
+  <meta name="description" content="Where Flieber hosts your data, who can access it and how AI models use it: AWS in the US, encrypted in transit and at rest, Admin and Member roles, no training on customer data.">
   <link rel="canonical" href="https://www.flieber.com/security">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#F5ED61">
@@ -119,6 +119,10 @@
         <dl class="kv sec-kv">
           <dt>Ownership</dt><dd>Your data stays yours and is never sold or shared.</dd>
           <dt>Hosting</dt><dd>Amazon Web Services (AWS), US region.</dd>
+          <dt>Encryption in transit</dt><dd>HTTPS only, with TLS 1.2 or higher, for all external traffic and for internal database and cache connections.</dd>
+          <dt>Encryption at rest</dt><dd>AES-256 through AWS KMS for all customer data, including databases, backups, cache and file storage.</dd>
+          <dt>Marketplace connections</dt><dd>When you connect Amazon or Shopify, you authorize access through OAuth: Flieber never sees your marketplace passwords, only the access tokens you grant, which you can revoke at any time. Those tokens are encrypted with a dedicated AWS KMS key and stored in AWS Secrets Manager, isolated from the rest of the platform.</dd>
+          <dt>Passwords and secrets</dt><dd>Sign-in is handled by Clerk, so Flieber stores no user passwords. API tokens are stored only as hashes, and application secrets are kept in AWS Secrets Manager, never in code.</dd>
           <dt>Access</dt><dd>Two roles: Admin, with access to admin tools, and Member, with access to operational tools only. Single sign-on with Google and Microsoft.</dd>
           <dt>AI models</dt><dd>Flieber uses models from several providers, including Anthropic, OpenAI and xAI. Calculations run inside Flieber; data reaches a language model only when a request requires it. Flieber does not use customer data to train models, and its AI providers are set up not to use it for training.</dd>
           <dt>Changes to your systems</dt><dd>Purchase orders that Flieber sends to your ERP require approval first.</dd>

@@ -69,7 +69,6 @@ Blocking launch:
 
 Before launch:
 
-- [ ] Post-launch: encryption details from engineering (row removed from /security, /agents and llms.txt until then)
 - [ ] Optional: official accuracy report from Nixtla. Until then the claim reads "36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model" (approved Oct 1). Never "third-party verified": Nixtla co-built the model
 - [ ] Post-launch: MCP endpoint and auth method, if engineering wants them public. Until then the site points customers to https://app.flieber.com/app/developers
 - [ ] Source for the four results in "Who we are" (+38% sales, -62% stockouts, -17% excess inventory, -88% time on replenishment; "average across customers using Flieber for 12+ months"): keep the method on file, since agents and buyers will quote these

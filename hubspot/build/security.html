@@ -845,6 +845,10 @@ code { font-family: var(--mono); font-size: .88em; }
         <dl class="kv sec-kv">
           <dt>Ownership</dt><dd>Your data stays yours and is never sold or shared.</dd>
           <dt>Hosting</dt><dd>Amazon Web Services (AWS), US region.</dd>
+          <dt>Encryption in transit</dt><dd>HTTPS only, with TLS 1.2 or higher, for all external traffic and for internal database and cache connections.</dd>
+          <dt>Encryption at rest</dt><dd>AES-256 through AWS KMS for all customer data, including databases, backups, cache and file storage.</dd>
+          <dt>Marketplace connections</dt><dd>When you connect Amazon or Shopify, you authorize access through OAuth: Flieber never sees your marketplace passwords, only the access tokens you grant, which you can revoke at any time. Those tokens are encrypted with a dedicated AWS KMS key and stored in AWS Secrets Manager, isolated from the rest of the platform.</dd>
+          <dt>Passwords and secrets</dt><dd>Sign-in is handled by Clerk, so Flieber stores no user passwords. API tokens are stored only as hashes, and application secrets are kept in AWS Secrets Manager, never in code.</dd>
           <dt>Access</dt><dd>Two roles: Admin, with access to admin tools, and Member, with access to operational tools only. Single sign-on with Google and Microsoft.</dd>
           <dt>AI models</dt><dd>Flieber uses models from several providers, including Anthropic, OpenAI and xAI. Calculations run inside Flieber; data reaches a language model only when a request requires it. Flieber does not use customer data to train models, and its AI providers are set up not to use it for training.</dd>
           <dt>Changes to your systems</dt><dd>Purchase orders that Flieber sends to your ERP require approval first.</dd>

@@ -209,6 +209,9 @@
           <p>Customer data stays the customer’s and is never sold or shared. Calculations run inside Flieber; data reaches a language model only when a request requires it.</p>
           <dl class="kv" style="margin-top:20px">
             <dt>Hosting</dt><dd>Amazon Web Services (AWS), US region</dd>
+            <dt>Encryption</dt><dd>In transit: HTTPS only, with TLS 1.2 or higher, for all external traffic and for internal database and cache connections. At rest: AES-256 through AWS KMS for all customer data, including databases, backups, cache and file storage.</dd>
+            <dt>Marketplace connections</dt><dd>When you connect Amazon or Shopify, you authorize access through OAuth: Flieber never sees your marketplace passwords, only the access tokens you grant, which you can revoke at any time. Those tokens are encrypted with a dedicated AWS KMS key and stored in AWS Secrets Manager, isolated from the rest of the platform.</dd>
+            <dt>Passwords and secrets</dt><dd>Sign-in is handled by Clerk, so Flieber stores no user passwords. API tokens are stored only as hashes, and application secrets are kept in AWS Secrets Manager, never in code.</dd>
             <dt>AI models</dt><dd>Several providers, including Anthropic, OpenAI and xAI. Flieber does not use customer data to train models, and its AI providers are set up not to use it for training.</dd>
             <dt>Access</dt><dd>Two roles: Admin (admin tools) and Member (operational tools only). Single sign-on with Google and Microsoft.</dd>
             <dt>Deletion</dt><dd>As set out in the <a href="https://www.flieber.com/privacy-policy">Privacy Policy</a> and <a href="https://www.flieber.com/service-agreement">Service Agreement</a></dd>

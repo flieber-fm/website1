@@ -69,6 +69,9 @@ MCP and API: Flieber works as an MCP client and connects to any system that has 
 Customer data stays the customer's and is never sold or shared. Calculations run inside Flieber; data reaches a language model only when a request requires it.
 
 - Hosting: Amazon Web Services (AWS), US region
+- Encryption: in transit, HTTPS only, with TLS 1.2 or higher, for all external traffic and for internal database and cache connections. At rest, AES-256 through AWS KMS for all customer data, including databases, backups, cache and file storage.
+- Marketplace connections: when you connect Amazon or Shopify, you authorize access through OAuth: Flieber never sees your marketplace passwords, only the access tokens you grant, which you can revoke at any time. Those tokens are encrypted with a dedicated AWS KMS key and stored in AWS Secrets Manager, isolated from the rest of the platform.
+- Passwords and secrets: sign-in is handled by Clerk, so Flieber stores no user passwords. API tokens are stored only as hashes, and application secrets are kept in AWS Secrets Manager, never in code.
 - AI models: Several providers, including Anthropic, OpenAI and xAI. Flieber does not use customer data to train models, and its AI providers are set up not to use it for training.
 - Access: Two roles: Admin (admin tools) and Member (operational tools only). Single sign-on with Google and Microsoft.
 - Deletion: as set out in the Privacy Policy (https://www.flieber.com/privacy-policy) and Service Agreement (https://www.flieber.com/service-agreement)
