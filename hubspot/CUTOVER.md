@@ -4,18 +4,16 @@ Nothing is deleted or overwritten. The new site is built as **new** pages, templ
 
 ## Before the switch (Claude)
 
-1. Build the new pages in HubSpot as unpublished drafts: Home, /agents, /pricing, /security, /contact. Existing pages, templates and modules are not touched.
+1. Build the new pages in HubSpot as unpublished drafts: Home, /agents, /pricing, /security, /contact, under temporary URLs starting with `/new-site-2026/`. Existing pages, templates and modules are not touched. Templates are generated with `python3 scripts/build-hubspot.py` (output in `hubspot/build/`).
 2. Send you the HubSpot preview link for each draft to review.
 
 ## On the day of the switch (Fabricio, about 30 minutes)
 
 Do the steps in this order. Steps 2 and 3 should happen within a few minutes of each other, because between them those URLs show a 404.
 
-### 1. Upload the two agent files
+### 1. Check the uploaded files
 
-1. In HubSpot, open **Content > Files** (in older menus: Marketing > Files and Templates > Files).
-2. Upload `llms.txt` and `capabilities.json` from the repository root, at the top level of Files (not inside a folder).
-3. Click each file and copy its URL. It should look like `https://www.flieber.com/hubfs/llms.txt`. If the URL is different, tell Claude so the redirect file can be updated.
+Fonts, images, `llms.txt` and `capabilities.json` are uploaded ahead of time to the File Manager folder `flieber-2026` (by Claude through the HubSpot CLI, or by hand: **Content > Files**, folder `flieber-2026`, upload every file from `assets/fonts`, `assets/img`, `assets/logos` plus `llms.txt` and `capabilities.json`). Check that `https://www.flieber.com/hubfs/flieber-2026/llms.txt` opens. If the URL is different, tell Claude so the templates and the redirect file can be updated.
 
 ### 2. Unpublish the old pages (do not delete)
 
@@ -31,7 +29,7 @@ Keep these published: /book-a-demo, /free-trial, /blog (and every post), /privac
 
 ### 3. Publish the new pages
 
-Tell Claude, who publishes the five new pages (or open each draft and click **Publish**).
+Tell Claude, who changes each draft's URL from `/new-site-2026/...` to its final URL (`/`, `/agents`, `/pricing`, `/security`, `/contact`) and publishes it.
 
 If HubSpot says a URL is already in use, the old page still holds it: open the old page, change its URL to `/archive/<old-slug>` and keep it unpublished, then publish the new page.
 

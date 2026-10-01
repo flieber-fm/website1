@@ -72,7 +72,7 @@
     ]
   },
   "evidence": [
-    { "claim": "36% more accurate than the best of 16 statistical and machine-learning models, on a sample of 46,000 products, measured by MAE% and Bias%", "source": "Verified by Nixtla: [NIXTLA REPORT URL]" },
+    { "claim": "36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products", "source": "Flieber; Built with Nixtla, the team behind the TimeGPT forecasting model" },
     { "claim": "100+ commerce brands today; more than 1,000 since 2019", "source": "Flieber" },
     { "claim": "Customer reviews", "source": "https://www.g2.com/products/flieber/reviews" }
   ],

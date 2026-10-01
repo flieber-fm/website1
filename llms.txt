@@ -69,14 +69,13 @@ MCP and API: Flieber works as an MCP client and connects to any system that has 
 Customer data stays the customer's and is never sold or shared. Calculations run inside Flieber; data reaches a language model only when a request requires it.
 
 - Hosting: Amazon Web Services (AWS), US region
-- Encryption: [IN TRANSIT AND AT REST]
 - AI models: Several providers, including Anthropic, OpenAI and xAI. Flieber does not use customer data to train models, and its AI providers are set up not to use it for training.
 - Access: Two roles: Admin (admin tools) and Member (operational tools only). Single sign-on with Google and Microsoft.
 - Deletion: as set out in the Privacy Policy (https://www.flieber.com/privacy-policy) and Service Agreement (https://www.flieber.com/service-agreement)
 
 ## Evidence
 
-- Forecast accuracy: 36% more accurate than the best of 16 statistical and machine-learning models, on a sample of 46,000 products, measured by MAE% and Bias%; verified by Nixtla. [NIXTLA REPORT URL]
+- Forecast accuracy: 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.
 - Adoption: 100+ commerce brands today; more than 1,000 since 2019.
 - Reviews: G2, https://www.g2.com/products/flieber/reviews. Customer references available on request.
 

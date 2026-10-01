@@ -69,8 +69,8 @@ Blocking launch:
 
 Before launch:
 
-- [ ] Nixtla report link (`[NIXTLA REPORT URL]`): Fabricio to share the file; decide whether it can be public
-- [ ] Encryption details for /security, /agents and llms.txt (`[IN TRANSIT AND AT REST]`), from engineering
+- [ ] Post-launch: encryption details from engineering (row removed from /security, /agents and llms.txt until then)
+- [ ] Optional: official accuracy report from Nixtla. Until then the claim reads "36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model" (approved Oct 1). Never "third-party verified": Nixtla co-built the model
 - [ ] Post-launch: MCP endpoint and auth method, if engineering wants them public. Until then the site points customers to https://app.flieber.com/app/developers
 - [ ] Source for the four results in "Who we are" (+38% sales, -62% stockouts, -17% excess inventory, -88% time on replenishment; "average across customers using Flieber for 12+ months"): keep the method on file, since agents and buyers will quote these
 
@@ -110,6 +110,7 @@ Decided Oct 1 (Fabricio), round 2:
 The live site, book-a-demo, free trial and blog run on HubSpot (portal 5767502, www.flieber.com).
 
 - [ ] Build the new pages as HubSpot website pages from this repo (/, /agents, /pricing, /security, /contact), published at cutover only
+- [ ] Build the HubSpot drafts: needs api.hubapi.com allowed in the environment's network settings and a HubSpot private app or personal access key (Design Manager and File Manager write) stored as the environment variable HUBSPOT_ACCESS_KEY; then `npx @hubspot/cli` uploads hubspot/build/ templates and the assets to File Manager folder flieber-2026
 - [ ] Follow `hubspot/CUTOVER.md` (unpublish, never delete, old pages; publish new ones; import `hubspot/url-redirects.csv`; upload llms.txt and capabilities.json; robots.txt)
 - [ ] Restyle the book-a-demo page (header, footer, copy) to the new site; keep the form and CRM scripts
 - [ ] Free-trial page: "Integrate any system or spreadsheet" contradicts the new rule (assisted integrations only on paid plans)
