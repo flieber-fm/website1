@@ -7,6 +7,17 @@ Nothing is deleted or overwritten. The new site is built as **new** pages, templ
 1. Build the new pages in HubSpot as unpublished drafts: Home, /agents, /pricing, /security, /contact, under temporary URLs starting with `/new-site-2026/`. Existing pages, templates and modules are not touched. Templates are generated with `python3 scripts/build-hubspot.py` (output in `hubspot/build/`).
 2. Send you the HubSpot preview link for each draft to review.
 
+## Current state (Oct 1, 2026)
+
+- Files uploaded to File Manager folder `flieber-2026` (fonts, images, customer logos, llms.txt, capabilities.json), served at `https://www.flieber.com/hubfs/flieber-2026/...`
+- Templates in Design Manager folder `flieber-2026/templates` (home, agents, pricing, security, contact). Regenerate with `python3 scripts/build-hubspot.py` and upload with the CMS source-code API after any change
+- Draft pages (unpublished):
+  - [New site 2026] Home: 223386154416, `/new-site-2026/home`, final URL `/`
+  - [New site 2026] Agents: 223390302985, `/new-site-2026/agents`, final URL `/agents`
+  - [New site 2026] Pricing: 223390303022, `/new-site-2026/pricing`, final URL `/pricing`
+  - [New site 2026] Security: 223386154542, `/new-site-2026/security`, final URL `/security`
+  - [New site 2026] Contact: 223386154546, `/new-site-2026/contact`, final URL `/contact`
+
 ## On the day of the switch (Fabricio, about 30 minutes)
 
 Do the steps in this order. Steps 2 and 3 should happen within a few minutes of each other, because between them those URLs show a 404.
