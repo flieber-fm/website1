@@ -231,7 +231,7 @@ CONNECTED_APPS = ["Gmail", "Outlook", "Slack", "Microsoft Teams", "Google Sheets
 
 CONNECT = [
     ("Free trial", "14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and customizations require a paid plan.", TRIAL),
-    ("MCP server", "Claude, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. Full action list (customer login required):", DEV_DOCS),
+    ("MCP server", "Claude, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required):", DEV_DOCS),
     ("MCP client", "Flieber connects to any system with an MCP server. Built-in connections: " + ", ".join(CONNECTED_APPS) + ".", None),
     ("Public API", "Programmatic access to Flieber data. Details (customer login required):", DEV_DOCS),
     ("Demo", "", DEMO),
@@ -456,3 +456,79 @@ SOLUTIONS = [
         "quotes": ["unybrands"],
     },
 ]
+
+# ---------------------------------------------------------------- /mcp (brief section 5.6)
+MCP_PAGE = {
+    "slug": "mcp", "name": "MCP and AI agents",
+    "h1": "Connect Claude and ChatGPT to your sales, inventory and cash-flow data",
+    "lead": ("Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber "
+             "works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under "
+             "the approval rules you set."),
+    "what_h2": "What MCP is",
+    "what": ("The Model Context Protocol is an open standard that lets AI assistants connect securely to the tools and "
+             "data a business runs on. Connect Flieber once, and your assistant can ask Flieber questions and request "
+             "actions in plain language. Your data stays in Flieber; the assistant receives only what each request needs."),
+    "agents": ["Claude", "ChatGPT", "Cursor"], "agents_other": "Any MCP-compatible agent",
+    "convo_h2": "What a conversation looks like",
+    "convo_label": "Illustrative example with sample data",
+    "convos": [
+        ("Know the position",
+         "Which of our top SKUs run out on Amazon before their next purchase order lands?",
+         "Three do. The 32 oz bottle in black stocks out on Amazon in 11 days; its next PO arrives in 26. The travel mug "
+         "and the 20 oz lid follow. Moving 400 units from your New Jersey 3PL to FBA covers the bottle until the PO "
+         "lands. Want me to prepare the transfer?", None),
+        ("Simulate a decision",
+         "If we pause ads on the five SKUs most at risk of stocking out, what happens to cash in November?",
+         "Projected November revenue drops about 4%, but you avoid two stockouts and free roughly $38,000 you'd "
+         "otherwise spend on an expedited PO. Here's the projection by SKU.", None),
+        ("Draft purchase orders",
+         "Draft next month's purchase orders by supplier, with MOQs and container fill applied.",
+         "Done. Four draft POs for three suppliers, one 40-foot container at 92% fill. They're waiting for your "
+         "approval before anything goes to NetSuite or your suppliers.", "Waiting for your approval"),
+        ("Shape the data to your business",
+         "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days.",
+         "Using your routing rules: northern orders to Chicago, eastern orders to New Jersey. Chicago needs 1,200 more "
+         "units across 14 SKUs; New Jersey is covered except for two SKUs.", None),
+    ],
+    "ask_h2": "What you can ask",
+    "ask": [
+        ("data-layer", ["What changed in our inventory data since yesterday?", "Which listings aren't mapped to a product yet?",
+                        "Show sales by region for our Shopify store."]),
+        ("demand-forecasting", ["What will the holiday bundle sell in Q4?", "Which forecasts look wrong this week?",
+                                "How accurate was last quarter's forecast?"]),
+        ("inventory-forecasting", ["Where will we run out in the next 60 days?", "Which products are overstocked, and by how much?",
+                                   "What did stockouts cost us last month?"]),
+        ("replenishment", ["What should we order from each supplier this week?", "Fit this order into two containers.",
+                           "What if lead times slip by two weeks?"]),
+        ("workflows", ["Every Monday, send me the top inventory risks in Slack.", "Create the FBA inbound shipment for this plan.",
+                       "Email this PO to the supplier once I approve it."]),
+    ],
+    "do_h2": "What Flieber can do through MCP",
+    "do": [
+        ("Answer questions", "from your current data, with the reasoning behind each answer."),
+        ("Change records in Flieber", "such as bundles, forecasts, shipments and simulations, always with a preview first."),
+        ("Push decisions to other systems", "such as purchase orders to ERPs and suppliers and inbound shipments to Amazon and 3PLs."),
+        ("Run workflows on schedule", "across Flieber and your connected apps."),
+    ],
+    "do_note": "Every change follows the approval rules you set. By default, every change waits for your approval.",
+    "steps_h2": "Connect in three steps",
+    "steps": [("Open Flieber", "and copy your connection details from Connect Apps."),
+              ("Add Flieber as a connector", "in Claude, ChatGPT, Cursor or your own agent."),
+              ("Approve the connection", "and start asking.")],
+    "steps_link": "Full setup guide in the MCP docs (customer login required)",
+    "build_h2": "Build your own tools on Flieber",
+    "build": ("Building reports, dashboards or agents with AI? Connect them to Flieber's data layer and skip the plumbing: "
+              "your tools start from data that's already joined, mapped and corrected, and keep working as you add "
+              "channels, products or suppliers. The data layer can be bought on its own."),
+    "faq_h2": "Questions",
+    "faq": [
+        ("Which AI assistants work with Flieber?", "Claude, ChatGPT, Cursor and any agent that supports MCP."),
+        ("Do I need to be technical to connect?", "No. Connecting takes a few minutes and no code."),
+        ("Can my AI change things in my systems?", "Only within the approval rules you set. By default, every change waits for your approval."),
+        ("How long do answers take?", "Answers typically take 30 seconds to 5 minutes, because Flieber's agent runs the analysis on your data before it responds."),
+        ("Is my data used to train AI models?", "No. Flieber does not train on customer data, and its AI providers are set up not to."),
+        ("Does it work without an AI assistant?", "Yes. Everything here also works in the Flieber app and in Slack."),
+    ],
+    "close_h2": "Connect your AI to Flieber",
+    "close_body": "Start a 14-day free trial on your own data, or book a demo and we'll connect it with you.",
+}

@@ -11,4 +11,5 @@ COPY product /srv/product
 COPY multichannel /srv/multichannel
 COPY agencies /srv/agencies
 COPY before-you-choose /srv/before-you-choose
+COPY mcp /srv/mcp
 COPY assets /srv/assets

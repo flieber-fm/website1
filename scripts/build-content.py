@@ -407,6 +407,80 @@ def page_jsonld(url: str, name: str, desc: str, features=None) -> str:
             + json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2, ensure_ascii=False) + "\n  </script>")
 
 
+ICON_YOU = ('<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">'
+            '<circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg>')
+
+
+def mcp_main() -> str:
+    M, p = C.MCP_PAGE, "../"
+    out = page_head(f"Product · {M['name']}", M["h1"], M["lead"])
+    chips = "".join(f'<li class="mcp-agent">{esc(a)}</li>' for a in M["agents"])
+    chips += f'<li class="mcp-agent mcp-agent-any">{esc(M["agents_other"])}</li>'
+    out += section("what-mcp-is", "MCP", M["what_h2"], f'''        <p class="feat-approval">{esc(M["what"])}</p>
+        <ul class="mcp-agents" aria-label="Works with">{chips}</ul>''', soft=True)
+    convos = []
+    for title, you, flieber, status in M["convos"]:
+        status_html = f'\n              <p class="chat-status"><span aria-hidden="true"></span>{esc(status)}</p>' if status else ""
+        convos.append(f'''          <article class="chat">
+            <div class="chat-head">
+              <h3 class="h3">{esc(title)}</h3>
+              <p class="chat-label">{esc(M["convo_label"])}</p>
+            </div>
+            <div class="chat-msg chat-you"><span class="chat-who">{ICON_YOU} You</span><p>“{esc(you)}”</p></div>
+            <div class="chat-msg chat-flieber"><span class="chat-who"><img src="{p}assets/img/flieber-icon.svg" alt="" width="14" height="14"> Flieber</span><p>{esc(flieber)}</p>{status_html}
+            </div>
+          </article>''')
+    out += section("conversations", "Examples", M["convo_h2"], '        <div class="chat-grid">\n' + "\n".join(convos) + "\n        </div>", soft=False)
+    groups = []
+    for mslug, prompts in M["ask"]:
+        m = MODULE_BY_SLUG[mslug]
+        items = "\n".join(f'              <li>“{esc(q)}”</li>' for q in prompts)
+        groups.append(f'''          <article class="mcp-ask">
+            <h3 class="h3"><a href="{p}product/{mslug}/">{esc(m["name"])} {ARROW}</a></h3>
+            <ul>
+{items}
+            </ul>
+          </article>''')
+    out += section("what-you-can-ask", "Prompts", M["ask_h2"], '        <div class="mcp-ask-grid">\n' + "\n".join(groups) + "\n        </div>", soft=True)
+    dos = "\n".join(f'''          <article class="why-card">
+            <span class="n">{i:02d}</span>
+            <h3 class="h3">{esc(t)}</h3>
+            <p>{esc(d[0].upper() + d[1:])}</p>
+          </article>''' for i, (t, d) in enumerate(M["do"], 1))
+    out += section("through-mcp", "Capabilities", M["do_h2"], f'''        <div class="why-grid mcp-do">
+{dos}
+        </div>
+        <p class="mcp-note">{esc(M["do_note"])}</p>''', soft=False)
+    steps = "\n".join(f'''          <li class="mcp-step"><span class="n">{i}</span><p><b>{esc(t)}</b> {esc(d)}</p></li>''' for i, (t, d) in enumerate(M["steps"], 1))
+    out += section("connect", "Setup", M["steps_h2"], f'''        <ol class="mcp-steps">
+{steps}
+        </ol>
+        <p class="link-row"><a class="link-arrow" href="{C.DEV_DOCS}">{esc(M["steps_link"])} {ARROW}</a></p>''', soft=True)
+    out += section("build-your-own", "Data layer", M["build_h2"], f'''        <p class="feat-approval">{esc(M["build"])}</p>
+        <p class="link-row"><a class="link-arrow" href="{p}product/data-layer/">Data layer {ARROW}</a></p>''', soft=False)
+    faq = "\n".join(f'''          <div class="feat-faq-item">
+            <h3 class="h3">{esc(q)}</h3>
+            <p>{esc(a)}</p>
+          </div>''' for q, a in M["faq"])
+    out += section("questions", "Questions", M["faq_h2"], '        <div class="feat-faq">\n' + faq + "\n        </div>", soft=True)
+    out += closing(h2=M["close_h2"], body=M["close_body"])
+    return out
+
+
+def mcp_jsonld(url: str) -> str:
+    M = C.MCP_PAGE
+    graph = [
+        {"@type": "Organization", "@id": "https://www.flieber.com/#organization", "name": "Flieber",
+         "url": "https://www.flieber.com", "logo": "https://www.flieber.com/assets/img/flieber-logo.svg", "foundingDate": "2019"},
+        {"@type": "WebPage", "@id": url, "url": url, "name": M["h1"], "description": M["lead"],
+         "isPartOf": {"@type": "WebSite", "url": "https://www.flieber.com"}},
+        {"@type": "FAQPage", "@id": url + "#questions", "url": url,
+         "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in M["faq"]]},
+    ]
+    return ('<script type="application/ld+json">\n'
+            + json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2, ensure_ascii=False) + "\n  </script>")
+
+
 def write_page(rel: str, depth: int, url: str, title: str, desc: str, jsonld: str, main: str) -> None:
     src = (ROOT / "pricing/index.html").read_text(encoding="utf-8")
     top = src[: src.index('<main id="main">') + len('<main id="main">')]
@@ -436,6 +510,9 @@ def build_pages() -> None:
                    page_jsonld(url, x["h1"], x["lead"]), solution_main(x))
     url = f"{C.SITE}/{C.BYC['slug']}"
     write_page(f"{C.BYC['slug']}/index.html", 1, url, f"{C.BYC['h1']} | Flieber", C.BYC["lead"], byc_jsonld(url), byc_main())
+    url = f"{C.SITE}/{C.MCP_PAGE['slug']}"
+    write_page(f"{C.MCP_PAGE['slug']}/index.html", 1, url, f"{C.MCP_PAGE['name']}: connect Claude and ChatGPT to Flieber | Flieber",
+               C.MCP_PAGE["lead"], mcp_jsonld(url), mcp_main())
 
 
 def pages_text() -> list:
@@ -447,6 +524,20 @@ def pages_text() -> list:
             L += ["", f"**{m['extra'][0]}** {m['extra'][1]}"]
         L += ["", "How you work together:", "", f"- Your team: {m['team']}", f"- Flieber's AI: {m['ai']}",
               f"- Flieber's planners (Managed Services): {m['planners']}", ""]
+    M = C.MCP_PAGE
+    L += [f"## {M['name']}: {M['h1']}", "", f"{C.SITE}/{M['slug']}", "", M["lead"], "", f"**{M['what_h2']}** {M['what']}", "",
+          "Works with: " + ", ".join(M["agents"]) + " and any MCP-compatible agent.", "", f"### {M['convo_h2']}", "",
+          f"({M['convo_label']}; invented product names and numbers.)", ""]
+    for title, you, fl, status in M["convos"]:
+        L += [f"**{title}**", "", f'- You: "{you}"', f'- Flieber: "{fl}"' + (f" ({status})" if status else ""), ""]
+    L += [f"### {M['ask_h2']}", ""]
+    L += [f"- {MODULE_BY_SLUG[k]['name']} ({C.SITE}/product/{k}): " + " · ".join(f'"{q}"' for q in qs) for k, qs in M["ask"]]
+    L += ["", f"### {M['do_h2']}", ""] + [f"- {t} {d}" for t, d in M["do"]] + ["", M["do_note"], "", f"### {M['steps_h2']}", ""]
+    L += [f"{i}. {t} {d}" for i, (t, d) in enumerate(M["steps"], 1)]
+    L += ["", f"{M['steps_link']}: {C.DEV_DOCS}", "", f"### {M['build_h2']}", "", M["build"] + f" {C.SITE}/product/data-layer", "",
+          f"### {M['faq_h2']}", ""]
+    for q, a in M["faq"]:
+        L += [f"**{q}** {a}", ""]
     L += ["## Solutions by type of business", ""]
     for x in C.SOLUTIONS:
         L += [f"### {x['name']}: {x['h1']}", "", f"{C.SITE}/{x['slug']}", "", x["lead"], "", f"**{x['why_h2']}**", ""]
@@ -481,7 +572,7 @@ def agents_main() -> str:
                      for _, n, i, o, a in C.CAPABILITIES)
     connect = []
     for label, text, url in C.CONNECT:
-        body = esc(text)
+        body = re.sub(r"(https://[^\s]+?)(\.?)(?=\s|$)", lambda mm: link(mm.group(1)) + mm.group(2), esc(text))
         if url:
             body = (body + " " if body else "") + link(url)
         connect.append(f"            <li><b>{label}:</b> {body}</li>")
@@ -671,7 +762,7 @@ def llms_txt() -> str:
     L += ["", "## Data handling", "", "No compliance claims are made.", ""] + [f"- {k}: {v}" for k, v in C.DATA_HANDLING]
     L += ["", "## Evidence", ""] + [f"- {k}: {v}" for k, v, _ in C.EVIDENCE]
     L += ["", "## Contact", "", C.HANDOFF, "", "## Links", "",
-          f"- [Flieber homepage]({C.SITE}/)", f"- [Features]({C.SITE}/features)"] + [
+          f"- [Flieber homepage]({C.SITE}/)", f"- [Features]({C.SITE}/features)", f"- [{C.MCP_PAGE['name']}]({C.SITE}/{C.MCP_PAGE['slug']})"] + [
           f"- [{m['name']}]({C.SITE}/product/{m['slug']})" for m in C.MODULES] + [
           f"- [{x['name']}]({C.SITE}/{x['slug']})" for x in C.SOLUTIONS] + [f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']})"] + [ f"- [Flieber, for AI agents]({C.SITE}/agents)",
           f"- [Full text for LLMs]({C.SITE}/llms-full.txt)", f"- [Capabilities (JSON)]({C.SITE}/capabilities.json)",
@@ -681,7 +772,7 @@ def llms_txt() -> str:
 
 def llms_full_txt() -> str:
     L = ["# Flieber: full text for LLMs", "",
-         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
+         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/mcp, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
          f"## {C.FEATURES_H1}", "", C.FEATURES_INTRO, "", C.FEATURES_NOTE, ""]
     for g in C.GROUPS:
         lead = MODULE_BY_SLUG[g["id"]]["tab"] if g["id"] in MODULE_BY_SLUG else g["lead"]
@@ -763,7 +854,7 @@ def main() -> None:
     (ROOT / "llms-full.txt").write_text(llms_full_txt(), encoding="utf-8")
     (ROOT / "capabilities.json").write_text(json.dumps(capabilities(), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     site_chrome.apply(ROOT)
-    print("features, product modules (5), multichannel, agencies, agents, llms.txt, llms-full.txt, capabilities.json; nav and footer on every page")
+    print("features, product modules (5), mcp, multichannel, agencies, agents, llms.txt, llms-full.txt, capabilities.json; nav and footer on every page")
 
 
 if __name__ == "__main__":

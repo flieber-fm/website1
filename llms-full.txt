@@ -1,6 +1,6 @@
 # Flieber: full text for LLMs
 
-The complete text of https://www.flieber.com/features, the five module pages, https://www.flieber.com/multichannel, https://www.flieber.com/agencies, https://www.flieber.com/before-you-choose and https://www.flieber.com/agents. Last updated 2026-10-02.
+The complete text of https://www.flieber.com/features, the five module pages, https://www.flieber.com/mcp, https://www.flieber.com/multichannel, https://www.flieber.com/agencies, https://www.flieber.com/before-you-choose and https://www.flieber.com/agents. Last updated 2026-10-02.
 
 ## Collaborative AI for every inventory decision
 
@@ -212,6 +212,83 @@ How you work together:
 - Flieber's AI: Run it on schedule, across Flieber and your connected apps, and stop for approval where you asked it to.
 - Flieber's planners (Managed Services): Help design the workflows that save your team the most time.
 
+## MCP and AI agents: Connect Claude and ChatGPT to your sales, inventory and cash-flow data
+
+https://www.flieber.com/mcp
+
+Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under the approval rules you set.
+
+**What MCP is** The Model Context Protocol is an open standard that lets AI assistants connect securely to the tools and data a business runs on. Connect Flieber once, and your assistant can ask Flieber questions and request actions in plain language. Your data stays in Flieber; the assistant receives only what each request needs.
+
+Works with: Claude, ChatGPT, Cursor and any MCP-compatible agent.
+
+### What a conversation looks like
+
+(Illustrative example with sample data; invented product names and numbers.)
+
+**Know the position**
+
+- You: "Which of our top SKUs run out on Amazon before their next purchase order lands?"
+- Flieber: "Three do. The 32 oz bottle in black stocks out on Amazon in 11 days; its next PO arrives in 26. The travel mug and the 20 oz lid follow. Moving 400 units from your New Jersey 3PL to FBA covers the bottle until the PO lands. Want me to prepare the transfer?"
+
+**Simulate a decision**
+
+- You: "If we pause ads on the five SKUs most at risk of stocking out, what happens to cash in November?"
+- Flieber: "Projected November revenue drops about 4%, but you avoid two stockouts and free roughly $38,000 you'd otherwise spend on an expedited PO. Here's the projection by SKU."
+
+**Draft purchase orders**
+
+- You: "Draft next month's purchase orders by supplier, with MOQs and container fill applied."
+- Flieber: "Done. Four draft POs for three suppliers, one 40-foot container at 92% fill. They're waiting for your approval before anything goes to NetSuite or your suppliers." (Waiting for your approval)
+
+**Shape the data to your business**
+
+- You: "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days."
+- Flieber: "Using your routing rules: northern orders to Chicago, eastern orders to New Jersey. Chicago needs 1,200 more units across 14 SKUs; New Jersey is covered except for two SKUs."
+
+### What you can ask
+
+- Data layer (https://www.flieber.com/product/data-layer): "What changed in our inventory data since yesterday?" · "Which listings aren't mapped to a product yet?" · "Show sales by region for our Shopify store."
+- Demand forecasting (https://www.flieber.com/product/demand-forecasting): "What will the holiday bundle sell in Q4?" · "Which forecasts look wrong this week?" · "How accurate was last quarter's forecast?"
+- Inventory forecasting (https://www.flieber.com/product/inventory-forecasting): "Where will we run out in the next 60 days?" · "Which products are overstocked, and by how much?" · "What did stockouts cost us last month?"
+- Replenishment (https://www.flieber.com/product/replenishment): "What should we order from each supplier this week?" · "Fit this order into two containers." · "What if lead times slip by two weeks?"
+- Workflows (https://www.flieber.com/product/workflows): "Every Monday, send me the top inventory risks in Slack." · "Create the FBA inbound shipment for this plan." · "Email this PO to the supplier once I approve it."
+
+### What Flieber can do through MCP
+
+- Answer questions from your current data, with the reasoning behind each answer.
+- Change records in Flieber such as bundles, forecasts, shipments and simulations, always with a preview first.
+- Push decisions to other systems such as purchase orders to ERPs and suppliers and inbound shipments to Amazon and 3PLs.
+- Run workflows on schedule across Flieber and your connected apps.
+
+Every change follows the approval rules you set. By default, every change waits for your approval.
+
+### Connect in three steps
+
+1. Open Flieber and copy your connection details from Connect Apps.
+2. Add Flieber as a connector in Claude, ChatGPT, Cursor or your own agent.
+3. Approve the connection and start asking.
+
+Full setup guide in the MCP docs (customer login required): https://app.flieber.com/app/developers
+
+### Build your own tools on Flieber
+
+Building reports, dashboards or agents with AI? Connect them to Flieber's data layer and skip the plumbing: your tools start from data that's already joined, mapped and corrected, and keep working as you add channels, products or suppliers. The data layer can be bought on its own. https://www.flieber.com/product/data-layer
+
+### Questions
+
+**Which AI assistants work with Flieber?** Claude, ChatGPT, Cursor and any agent that supports MCP.
+
+**Do I need to be technical to connect?** No. Connecting takes a few minutes and no code.
+
+**Can my AI change things in my systems?** Only within the approval rules you set. By default, every change waits for your approval.
+
+**How long do answers take?** Answers typically take 30 seconds to 5 minutes, because Flieber's agent runs the analysis on your data before it responds.
+
+**Is my data used to train AI models?** No. Flieber does not train on customer data, and its AI providers are set up not to.
+
+**Does it work without an AI assistant?** Yes. Everything here also works in the Flieber app and in Slack.
+
 ## Solutions by type of business
 
 ### Multichannel brands: One plan for every channel you sell on
@@ -398,7 +475,7 @@ Every write follows approval rules the brand sets. By default every write requir
 ### Connect and try
 
 - Free trial: 14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and customizations require a paid plan. https://www.flieber.com/free-trial
-- MCP server: Claude, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. Full action list (customer login required): https://app.flieber.com/app/developers
+- MCP server: Claude, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required): https://app.flieber.com/app/developers
 - MCP client: Flieber connects to any system with an MCP server. Built-in connections: Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads, NetSuite.
 - Public API: Programmatic access to Flieber data. Details (customer login required): https://app.flieber.com/app/developers
 - Demo: https://www.flieber.com/book-a-demo
@@ -454,6 +531,7 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 
 - [Flieber homepage](https://www.flieber.com/)
 - [Features](https://www.flieber.com/features)
+- [MCP and AI agents](https://www.flieber.com/mcp)
 - [Data layer](https://www.flieber.com/product/data-layer)
 - [Demand forecasting](https://www.flieber.com/product/demand-forecasting)
 - [Inventory forecasting](https://www.flieber.com/product/inventory-forecasting)

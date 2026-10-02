@@ -1,6 +1,6 @@
 """Navigation and footer shared by every page (Option 2 brief, sections 3 and 4).
 
-Navigation: Product (menu: the five modules, then All features and Security & data) · Solutions (menu: the two pages by type of
+Navigation: Product (menu: the five modules, then All features, MCP and AI agents and Security & data) · Solutions (menu: the two pages by type of
 business, then Before you choose) · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
 build-content.py writes these into every page listed in PAGE_FILES.
 """
@@ -27,6 +27,7 @@ for _m in C.MODULES:
 for _s in C.SOLUTIONS:
     PAGE_FILES[f"{_s['slug']}/index.html"] = ("../", "solutions")
 PAGE_FILES[f"{C.BYC['slug']}/index.html"] = ("../", "solutions")
+PAGE_FILES[f"{C.MCP_PAGE['slug']}/index.html"] = ("../", "product")
 
 CHEVRON = ('<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">'
            '<path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg>')
@@ -48,6 +49,7 @@ def nav_html(p: str, cur) -> str:
         return f'<a href="{href}"{ac}>{label}</a>'
     product = "\n".join(f'            <a href="{p}product/{m["slug"]}/">{esc(m["name"])}</a>' for m in C.MODULES)
     product += f'\n            <a class="nav-menu-all" href="{p}features/">All features <span aria-hidden="true">→</span></a>'
+    product += f'\n            <a href="{p}{C.MCP_PAGE["slug"]}/">{esc(C.MCP_PAGE["name"])}</a>'
     product += f'\n            <a href="{p}security/">Security &amp; data</a>'
     sol = "\n".join(f'            <a href="{p}{x["slug"]}/">{esc(x["name"])}</a>' for x in C.SOLUTIONS)
     sol += f'\n            <a href="{p}{C.BYC["slug"]}/">{esc(C.BYC["name"])}</a>'

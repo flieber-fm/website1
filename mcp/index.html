@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PREVIEW ONLY: remove before public launch -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>MCP and AI agents: connect Claude and ChatGPT to Flieber | Flieber</title>
+  <meta name="description" content="Ask your own AI about your business and get answers from Flieber&#x27;s current, contextualized data. Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under the approval rules you set.">
+  <link rel="canonical" href="https://www.flieber.com/mcp">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#F5ED61">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Flieber">
+  <meta property="og:title" content="MCP and AI agents: connect Claude and ChatGPT to Flieber | Flieber">
+  <meta property="og:description" content="Ask your own AI about your business and get answers from Flieber&#x27;s current, contextualized data. Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under the approval rules you set.">
+  <meta property="og:url" content="https://www.flieber.com/mcp">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Machine-readable versions for AI agents -->
+  <link rel="alternate" type="text/plain" href="../llms.txt" title="Flieber for LLMs">
+  <link rel="alternate" type="application/json" href="../capabilities.json" title="Flieber capabilities">
+
+  <link rel="preload" href="../assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css?v=31">
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
+       Loaded only on flieber.com so preview traffic stays out of analytics. -->
+  <script>
+    (function (h) {
+      if (!/(^|\.)flieber\.com$/.test(h)) return;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FS8NPG');
+      var hs = document.createElement('script'); hs.id = 'hs-script-loader'; hs.async = true; hs.defer = true;
+      hs.src = 'https://js.hs-scripts.com/5767502.js'; document.head.appendChild(hs);
+    })(location.hostname);
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.flieber.com/#organization",
+      "name": "Flieber",
+      "url": "https://www.flieber.com",
+      "logo": "https://www.flieber.com/assets/img/flieber-logo.svg",
+      "foundingDate": "2019"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.flieber.com/mcp",
+      "url": "https://www.flieber.com/mcp",
+      "name": "Connect Claude and ChatGPT to your sales, inventory and cash-flow data",
+      "description": "Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under the approval rules you set.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://www.flieber.com"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.flieber.com/mcp#questions",
+      "url": "https://www.flieber.com/mcp",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which AI assistants work with Flieber?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Claude, ChatGPT, Cursor and any agent that supports MCP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be technical to connect?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Connecting takes a few minutes and no code."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my AI change things in my systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only within the approval rules you set. By default, every change waits for your approval."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long do answers take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Answers typically take 30 seconds to 5 minutes, because Flieber's agent runs the analysis on your data before it responds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data used to train AI models?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Flieber does not train on customer data, and its AI providers are set up not to."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work without an AI assistant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Everything here also works in the Flieber app and in Slack."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a class="nav-logo" href="../" aria-label="Flieber home">
+        <img src="../assets/img/flieber-logo.svg" alt="Flieber" width="116" height="20">
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <div class="nav-drop is-current">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-product">Product <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-product">
+            <a href="../product/data-layer/">Data layer</a>
+            <a href="../product/demand-forecasting/">Demand forecasting</a>
+            <a href="../product/inventory-forecasting/">Inventory forecasting</a>
+            <a href="../product/replenishment/">Replenishment</a>
+            <a href="../product/workflows/">Workflows</a>
+            <a class="nav-menu-all" href="../features/">All features <span aria-hidden="true">→</span></a>
+            <a href="../mcp/">MCP and AI agents</a>
+            <a href="../security/">Security &amp; data</a>
+          </div>
+        </div>
+        <div class="nav-drop">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-solutions">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-solutions">
+            <a href="../multichannel/">Multichannel brands</a>
+            <a href="../agencies/">Agencies and aggregators</a>
+            <a href="../before-you-choose/">Before you choose</a>
+          </div>
+        </div>
+        <a href="../pricing/">Pricing</a>
+        <a href="../#who-we-are">Who we are</a>
+        <a class="agents-link" href="../agents/" aria-label="For AI agents"><code>/agents</code></a>
+        <a class="menu-only" href="https://app.flieber.com">Log in</a>
+        <a class="menu-only" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="nav-login" href="https://app.flieber.com">Log in</a>
+        <a class="btn btn-ghost btn-sm" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        <a class="btn btn-primary btn-sm" href="https://www.flieber.com/free-trial">Start free trial</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head sol-head" aria-labelledby="page-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Product · MCP and AI agents</span>
+          <h1 class="h1" id="page-title">Connect Claude and ChatGPT to your sales, inventory and cash-flow data</h1>
+          <p class="lead">Ask your own AI about your business and get answers from Flieber’s current, contextualized data. Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under the approval rules you set.</p>
+        </div>
+        <div class="sol-actions">
+          <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="what-mcp-is" aria-labelledby="what-mcp-is-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">MCP</span>
+          <h2 class="h2" id="what-mcp-is-title" style="margin-top:20px">What MCP is</h2>
+        </div>
+        <p class="feat-approval">The Model Context Protocol is an open standard that lets AI assistants connect securely to the tools and data a business runs on. Connect Flieber once, and your assistant can ask Flieber questions and request actions in plain language. Your data stays in Flieber; the assistant receives only what each request needs.</p>
+        <ul class="mcp-agents" aria-label="Works with"><li class="mcp-agent">Claude</li><li class="mcp-agent">ChatGPT</li><li class="mcp-agent">Cursor</li><li class="mcp-agent mcp-agent-any">Any MCP-compatible agent</li></ul>
+      </div>
+    </section>
+
+    <section class="section" id="conversations" aria-labelledby="conversations-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Examples</span>
+          <h2 class="h2" id="conversations-title" style="margin-top:20px">What a conversation looks like</h2>
+        </div>
+        <div class="chat-grid">
+          <article class="chat">
+            <div class="chat-head">
+              <h3 class="h3">Know the position</h3>
+              <p class="chat-label">Illustrative example with sample data</p>
+            </div>
+            <div class="chat-msg chat-you"><span class="chat-who"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg> You</span><p>“Which of our top SKUs run out on Amazon before their next purchase order lands?”</p></div>
+            <div class="chat-msg chat-flieber"><span class="chat-who"><img src="../assets/img/flieber-icon.svg" alt="" width="14" height="14"> Flieber</span><p>Three do. The 32 oz bottle in black stocks out on Amazon in 11 days; its next PO arrives in 26. The travel mug and the 20 oz lid follow. Moving 400 units from your New Jersey 3PL to FBA covers the bottle until the PO lands. Want me to prepare the transfer?</p>
+            </div>
+          </article>
+          <article class="chat">
+            <div class="chat-head">
+              <h3 class="h3">Simulate a decision</h3>
+              <p class="chat-label">Illustrative example with sample data</p>
+            </div>
+            <div class="chat-msg chat-you"><span class="chat-who"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg> You</span><p>“If we pause ads on the five SKUs most at risk of stocking out, what happens to cash in November?”</p></div>
+            <div class="chat-msg chat-flieber"><span class="chat-who"><img src="../assets/img/flieber-icon.svg" alt="" width="14" height="14"> Flieber</span><p>Projected November revenue drops about 4%, but you avoid two stockouts and free roughly $38,000 you’d otherwise spend on an expedited PO. Here’s the projection by SKU.</p>
+            </div>
+          </article>
+          <article class="chat">
+            <div class="chat-head">
+              <h3 class="h3">Draft purchase orders</h3>
+              <p class="chat-label">Illustrative example with sample data</p>
+            </div>
+            <div class="chat-msg chat-you"><span class="chat-who"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg> You</span><p>“Draft next month’s purchase orders by supplier, with MOQs and container fill applied.”</p></div>
+            <div class="chat-msg chat-flieber"><span class="chat-who"><img src="../assets/img/flieber-icon.svg" alt="" width="14" height="14"> Flieber</span><p>Done. Four draft POs for three suppliers, one 40-foot container at 92% fill. They’re waiting for your approval before anything goes to NetSuite or your suppliers.</p>
+              <p class="chat-status"><span aria-hidden="true"></span>Waiting for your approval</p>
+            </div>
+          </article>
+          <article class="chat">
+            <div class="chat-head">
+              <h3 class="h3">Shape the data to your business</h3>
+              <p class="chat-label">Illustrative example with sample data</p>
+            </div>
+            <div class="chat-msg chat-you"><span class="chat-who"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg> You</span><p>“Split last week’s Shopify orders by region and show what each warehouse needs to cover the next 30 days.”</p></div>
+            <div class="chat-msg chat-flieber"><span class="chat-who"><img src="../assets/img/flieber-icon.svg" alt="" width="14" height="14"> Flieber</span><p>Using your routing rules: northern orders to Chicago, eastern orders to New Jersey. Chicago needs 1,200 more units across 14 SKUs; New Jersey is covered except for two SKUs.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="what-you-can-ask" aria-labelledby="what-you-can-ask-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Prompts</span>
+          <h2 class="h2" id="what-you-can-ask-title" style="margin-top:20px">What you can ask</h2>
+        </div>
+        <div class="mcp-ask-grid">
+          <article class="mcp-ask">
+            <h3 class="h3"><a href="../product/data-layer/">Data layer <span class="arrow" aria-hidden="true">→</span></a></h3>
+            <ul>
+              <li>“What changed in our inventory data since yesterday?”</li>
+              <li>“Which listings aren’t mapped to a product yet?”</li>
+              <li>“Show sales by region for our Shopify store.”</li>
+            </ul>
+          </article>
+          <article class="mcp-ask">
+            <h3 class="h3"><a href="../product/demand-forecasting/">Demand forecasting <span class="arrow" aria-hidden="true">→</span></a></h3>
+            <ul>
+              <li>“What will the holiday bundle sell in Q4?”</li>
+              <li>“Which forecasts look wrong this week?”</li>
+              <li>“How accurate was last quarter’s forecast?”</li>
+            </ul>
+          </article>
+          <article class="mcp-ask">
+            <h3 class="h3"><a href="../product/inventory-forecasting/">Inventory forecasting <span class="arrow" aria-hidden="true">→</span></a></h3>
+            <ul>
+              <li>“Where will we run out in the next 60 days?”</li>
+              <li>“Which products are overstocked, and by how much?”</li>
+              <li>“What did stockouts cost us last month?”</li>
+            </ul>
+          </article>
+          <article class="mcp-ask">
+            <h3 class="h3"><a href="../product/replenishment/">Replenishment <span class="arrow" aria-hidden="true">→</span></a></h3>
+            <ul>
+              <li>“What should we order from each supplier this week?”</li>
+              <li>“Fit this order into two containers.”</li>
+              <li>“What if lead times slip by two weeks?”</li>
+            </ul>
+          </article>
+          <article class="mcp-ask">
+            <h3 class="h3"><a href="../product/workflows/">Workflows <span class="arrow" aria-hidden="true">→</span></a></h3>
+            <ul>
+              <li>“Every Monday, send me the top inventory risks in Slack.”</li>
+              <li>“Create the FBA inbound shipment for this plan.”</li>
+              <li>“Email this PO to the supplier once I approve it.”</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="through-mcp" aria-labelledby="through-mcp-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Capabilities</span>
+          <h2 class="h2" id="through-mcp-title" style="margin-top:20px">What Flieber can do through MCP</h2>
+        </div>
+        <div class="why-grid mcp-do">
+          <article class="why-card">
+            <span class="n">01</span>
+            <h3 class="h3">Answer questions</h3>
+            <p>From your current data, with the reasoning behind each answer.</p>
+          </article>
+          <article class="why-card">
+            <span class="n">02</span>
+            <h3 class="h3">Change records in Flieber</h3>
+            <p>Such as bundles, forecasts, shipments and simulations, always with a preview first.</p>
+          </article>
+          <article class="why-card">
+            <span class="n">03</span>
+            <h3 class="h3">Push decisions to other systems</h3>
+            <p>Such as purchase orders to ERPs and suppliers and inbound shipments to Amazon and 3PLs.</p>
+          </article>
+          <article class="why-card">
+            <span class="n">04</span>
+            <h3 class="h3">Run workflows on schedule</h3>
+            <p>Across Flieber and your connected apps.</p>
+          </article>
+        </div>
+        <p class="mcp-note">Every change follows the approval rules you set. By default, every change waits for your approval.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="connect" aria-labelledby="connect-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Setup</span>
+          <h2 class="h2" id="connect-title" style="margin-top:20px">Connect in three steps</h2>
+        </div>
+        <ol class="mcp-steps">
+          <li class="mcp-step"><span class="n">1</span><p><b>Open Flieber</b> and copy your connection details from Connect Apps.</p></li>
+          <li class="mcp-step"><span class="n">2</span><p><b>Add Flieber as a connector</b> in Claude, ChatGPT, Cursor or your own agent.</p></li>
+          <li class="mcp-step"><span class="n">3</span><p><b>Approve the connection</b> and start asking.</p></li>
+        </ol>
+        <p class="link-row"><a class="link-arrow" href="https://app.flieber.com/app/developers">Full setup guide in the MCP docs (customer login required) <span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="build-your-own" aria-labelledby="build-your-own-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Data layer</span>
+          <h2 class="h2" id="build-your-own-title" style="margin-top:20px">Build your own tools on Flieber</h2>
+        </div>
+        <p class="feat-approval">Building reports, dashboards or agents with AI? Connect them to Flieber’s data layer and skip the plumbing: your tools start from data that’s already joined, mapped and corrected, and keep working as you add channels, products or suppliers. The data layer can be bought on its own.</p>
+        <p class="link-row"><a class="link-arrow" href="../product/data-layer/">Data layer <span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="questions" aria-labelledby="questions-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Questions</span>
+          <h2 class="h2" id="questions-title" style="margin-top:20px">Questions</h2>
+        </div>
+        <div class="feat-faq">
+          <div class="feat-faq-item">
+            <h3 class="h3">Which AI assistants work with Flieber?</h3>
+            <p>Claude, ChatGPT, Cursor and any agent that supports MCP.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3">Do I need to be technical to connect?</h3>
+            <p>No. Connecting takes a few minutes and no code.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3">Can my AI change things in my systems?</h3>
+            <p>Only within the approval rules you set. By default, every change waits for your approval.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3">How long do answers take?</h3>
+            <p>Answers typically take 30 seconds to 5 minutes, because Flieber’s agent runs the analysis on your data before it responds.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3">Is my data used to train AI models?</h3>
+            <p>No. Flieber does not train on customer data, and its AI providers are set up not to.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3">Does it work without an AI assistant?</h3>
+            <p>Yes. Everything here also works in the Flieber app and in Slack.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section try" id="next" aria-labelledby="next-title">
+      <div class="wrap" style="position:relative">
+        <div class="section-head">
+          <span class="kicker">Next step</span>
+          <h2 class="h2" id="next-title" style="margin-top:20px">Connect your AI to Flieber</h2>
+          <p class="lead">Start a 14-day free trial on your own data, or book a demo and we’ll connect it with you.</p>
+        </div>
+        <div class="try-actions">
+          <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../assets/img/flieber-logo-light.svg" alt="Flieber" width="132" height="23">
+          <p class="tagline">Collaborative AI for <em>multichannel brands.</em></p>
+        </div>
+        <div>
+          <h2 class="footer-h">Product</h2>
+          <ul>
+            <li><a href="../features/">Features</a></li>
+            <li><a href="../pricing/">Pricing</a></li>
+            <li><a href="../security/">Security &amp; data</a></li>
+            <li><a href="https://www.flieber.com/managed-services">Managed Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">Solutions</h2>
+          <ul>
+            <li><a href="../multichannel/">Multichannel brands</a></li>
+            <li><a href="../agencies/">Agencies and aggregators</a></li>
+            <li><a href="../before-you-choose/">Before you choose</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">For agents</h2>
+          <ul>
+            <li><a href="../agents/"><code>/agents</code></a></li>
+            <li><a href="../llms.txt"><code>/llms.txt</code></a></li>
+            <li><a href="../capabilities.json"><code>/capabilities.json</code></a></li>
+            <li><a href="https://app.flieber.com/app/developers">MCP docs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">Company</h2>
+          <ul>
+            <li><a href="../#who-we-are">Who we are</a></li>
+            <li><a href="https://help.flieber.com">Help center</a></li>
+            <li><a href="https://www.flieber.com/blog">Blog</a></li>
+            <li><a href="../contact/">Contact</a></li>
+            <li><a href="https://www.flieber.com/privacy-policy">Privacy</a></li>
+            <li><a href="https://www.flieber.com/service-agreement">Service agreement</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-mark" aria-hidden="true"><img src="../assets/img/flieber-logo-light.svg" alt=""></div>
+      <div class="footer-bottom">
+        <span>169 Madison Avenue, New York, NY 10016</span>
+        <span>© <span id="year">2026</span> Flieber</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js?v=15" defer></script>
+</body>
+</html>

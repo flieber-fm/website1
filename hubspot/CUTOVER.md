@@ -1,6 +1,6 @@
 # Switching www.flieber.com to the new site (HubSpot)
 
-> **Option 2 branch.** Nothing below has been done for Option 2: no files, templates or drafts exist in HubSpot for it. If Option 2 is elected, its 14 drafts go under `/new-site-2026-b/` and the lists below apply (see `docs/26-10-02 Website - Technical Briefing (Option 2).md`). The "Current state" section describes Option 1's drafts.
+> **Option 2 branch.** Nothing below has been done for Option 2: no files, templates or drafts exist in HubSpot for it. If Option 2 is elected, its 15 drafts go under `/new-site-2026-b/` and the lists below apply (see `docs/26-10-02 Website - Technical Briefing (Option 2).md`). The "Current state" section describes Option 1's drafts.
 
 Nothing is deleted or overwritten. The new site is built as **new** pages, templates and modules in HubSpot. Old pages are only **unpublished**: they stay in the account as drafts, with their full revision history, and can be republished at any time.
 
@@ -44,7 +44,7 @@ Keep these published: /book-a-demo, /free-trial, /blog (and every post), /privac
 
 ### 3. Publish the new pages
 
-Tell Claude, who changes each draft's URL from `/new-site-2026-b/...` to its final URL (`/`, `/features`, the five `/product/...` pages, `/multichannel`, `/agencies`, `/before-you-choose`, `/agents`, `/pricing`, `/security`, `/contact`) and publishes it.
+Tell Claude, who changes each draft's URL from `/new-site-2026-b/...` to its final URL (`/`, `/features`, the five `/product/...` pages, `/multichannel`, `/agencies`, `/before-you-choose`, `/mcp`, `/agents`, `/pricing`, `/security`, `/contact`) and publishes it.
 
 If HubSpot says a URL is already in use, the old page still holds it: open the old page, change its URL to `/archive/<old-slug>` and keep it unpublished, then publish the new page.
 

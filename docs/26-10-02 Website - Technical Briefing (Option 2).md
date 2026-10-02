@@ -66,12 +66,13 @@ Terms shown on the site (as in Option 1):
 
 ## Site map and page contents
 
-Fourteen pages and three machine-readable files make up Option 2. The blog, book-a-demo, free-trial, /managed-services and legal pages stay on the current HubSpot site.
+Fifteen pages and three machine-readable files make up Option 2. The blog, book-a-demo, free-trial, /managed-services and legal pages stay on the current HubSpot site.
 
 | Page | Sections |
 | --- | --- |
 | / (homepage) | Hero (eyebrow, H1, subhead, Decision simulation card with six sample scenarios, the two offers) · Logos · Why inventory · Collaborative AI · How Flieber is built · Modules · Solutions · What you can do with it · Two ways to work with Flieber · Proof · From the founder (`#who-we-are`) · Your data stays yours · Try it |
 | /product/data-layer, /product/demand-forecasting, /product/inventory-forecasting, /product/replenishment, /product/workflows | Label, H1, lead · What you can do (each feature links to its /features anchor) · How you work together · Works with (the other four modules and /features) · See it on your own data. The data layer page adds "Building your own tools?" |
+| /mcp | MCP and AI agents for operators and builders: What MCP is (with the Claude, ChatGPT, Cursor and "Any MCP-compatible agent" row) · What a conversation looks like (four example conversations, each labeled "Illustrative example with sample data") · What you can ask (three prompts per module) · What Flieber can do through MCP · Connect in three steps · Build your own tools on Flieber · Questions · Connect your AI to Flieber. Never shows the endpoint or connection details |
 | /features | Data layer · Demand forecasting · Inventory forecasting · Replenishment · Workflows · Access · Control and approval · Example requests · Does Flieber support · Probably not for you if · Next step. Every feature has its own anchor; each module section links to its module page |
 | /multichannel | Why channels drift apart · How you work together · Everything Flieber does, across every channel · Quotes (Zugu, Prime6 Brands) · See it on your own data |
 | /agencies | Why multi-brand planning breaks · How you work together · Everything Flieber does, for every brand · Quote (Unybrands) · See it on your own data |
@@ -94,11 +95,13 @@ Structured data, no prices anywhere:
 | Module pages | WebPage plus SoftwareApplication featureList for the features on the page |
 | /multichannel, /agencies | WebPage |
 | /before-you-choose | FAQPage (every question and Flieber's answer) |
+| /mcp | WebPage plus FAQPage (its six questions) |
 
 Machine-readable additions to Option 1:
 
 - **/llms.txt:** "Modules" section after "Offers" (one line per module page, noting the data layer can be bought alone); "Solutions" section after "Features" (/multichannel, /agencies, /before-you-choose); all of them in "Links".
-- **/llms-full.txt:** full text of the five module pages, /multichannel and /agencies after /features.
+- **/llms-full.txt:** full text of the five module pages, /mcp, /multichannel and /agencies after /features.
+- **/agents:** the MCP server line in "Connect and try" adds "How it works, with example conversations: https://www.flieber.com/mcp".
 - **/capabilities.json:** `positioning`; `modules` (id, name, url, sold_separately, feature ids; `sold_separately` is true only for the data layer); `solutions` (id, name, url) for the two solutions pages; a "Data layer only" option with `delivery` ["mcp", "api"] under the Self-Serve offer. No comparison fields.
 
 ## Copy and design rules
@@ -134,7 +137,7 @@ New components in Option 2:
 | Founder statement | Homepage, `#who-we-are` | Fabricio's photo (pending; a monogram stands in on the preview) |
 | Four-item security strip | Homepage | Approved /security wording |
 
-Navigation (identical on every page): Product (menu: Data layer, Demand forecasting, Inventory forecasting, Replenishment, Workflows, then All features → /features and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Before you choose) · Pricing · Who we are (links to the founder section) · /agents (black mono pill), then Log in (text link) · Book a demo (outline button) · Start free trial (yellow button). Five items before the buttons, as in Option 1; below 1140px it collapses into a menu. /security shows Product as the current section.
+Navigation (identical on every page): Product (menu: Data layer, Demand forecasting, Inventory forecasting, Replenishment, Workflows, then All features → /features, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Before you choose) · Pricing · Who we are (links to the founder section) · /agents (black mono pill), then Log in (text link) · Book a demo (outline button) · Start free trial (yellow button). Five items before the buttons, as in Option 1; below 1140px it collapses into a menu. /security and /mcp show Product as the current section.
 
 Footer columns: Product (Features, Pricing, Security & data, Managed Services) · Solutions (Multichannel brands, Agencies and aggregators, Before you choose) · For agents (/agents, /llms.txt, /capabilities.json, MCP docs) · Company (Who we are, Help center, Blog, Contact, Privacy, Service agreement). Address: 169 Madison Avenue, New York, NY 10016.
 
@@ -161,7 +164,8 @@ Use these exact wordings; anything not listed here needs Fabricio's approval bef
 | Feature list | Every feature on /features, as written in the Option 1 Content Briefing section 4, plus "Reports and dashboards" and "Sales order routing" | /features, module pages, /agents, llms-full.txt, capabilities.json | Feature Overview (Sep 7, 2026), AI Lab Confluence pages (Aug 24, 2026), Fabricio's corrections of Oct 2 |
 | Pushes | Approved decisions pushed to ERPs (NetSuite, Cin7, Brightpearl), marketplaces (Amazon inbound shipments), 3PLs and suppliers (into the supplier's system or as an email, CSV file or Google Sheet) | /features, /product/workflows, /before-you-choose, /agents, llms.txt, capabilities.json | Fabricio, Oct 2 |
 | Approval | "Every change Flieber makes to your systems follows approval rules you set; by default, every change requires approval" | /security, /agents, llms.txt, capabilities.json and the homepage security strip; /features, /before-you-choose and the module pages say the same in their own words | Fabricio, Oct 2 |
-| Agents | "any MCP-compatible agent, such as Claude"; "Claude, Cursor and any MCP-compatible agent connect through its MCP server". No other agent is named | /before-you-choose, /features, /agents | Fabricio, Oct 2 |
+| Agents | /mcp: "Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent". Elsewhere: "any MCP-compatible agent, such as Claude" (/before-you-choose question 9) and "Claude, Cursor and any MCP-compatible agent connect through its MCP server" | /mcp, /before-you-choose, /features, /agents | Content Briefing (Option 2), Oct 2 |
+| /mcp example conversations | Four chat exchanges with invented product names and numbers, each labeled "Illustrative example with sample data" | /mcp | Content Briefing (Option 2), Oct 2 |
 | Connected apps | Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads, NetSuite, plus any system with an MCP server | /features, /agents, llms.txt, capabilities.json | AI Lab Confluence pages; Fabricio, Oct 2 |
 | MCP response time | "Answers typically take 30 seconds to 5 minutes" | /features, /agents, capabilities.json | MCP tool description; Fabricio, Oct 2 |
 | On request | Forecast value added reports and wholesale forecast reconciliation are marked "on request" while they roll out | /features, /product/demand-forecasting, capabilities.json | Fabricio, Oct 2 |
@@ -225,6 +229,7 @@ Every button and footer link points to a real page; no placeholders remain apart
 | --- | --- | --- |
 | Product menu: module names | /product/data-layer, /product/demand-forecasting, /product/inventory-forecasting, /product/replenishment, /product/workflows | New pages |
 | All features | /features | Product menu, homepage Modules section, every module and solutions page |
+| MCP and AI agents | /mcp | Product menu; /agents and llms.txt |
 | Security & data | /security | Last entry in the Product menu; footer; homepage security strip and How Flieber is built |
 | Multichannel brands | /multichannel | New page; replaces /omnichannel and /ecommerce |
 | Agencies and aggregators | /agencies | Existing URL, new copy |
@@ -264,6 +269,7 @@ Files: fonts, logos, icons and the 14 customer logos are shared with Option 1 in
 | \[New site 2026 B\] Multichannel | Not created | /new-site-2026-b/multichannel | /multichannel |
 | \[New site 2026 B\] Agencies | Not created | /new-site-2026-b/agencies | /agencies |
 | \[New site 2026 B\] Before you choose | Not created | /new-site-2026-b/before-you-choose | /before-you-choose |
+| \[New site 2026 B\] MCP and AI agents | Not created | /new-site-2026-b/mcp | /mcp |
 | \[New site 2026 B\] Agents | Not created | /new-site-2026-b/agents | /agents |
 | \[New site 2026 B\] Pricing | Not created | /new-site-2026-b/pricing | /pricing |
 | \[New site 2026 B\] Security | Not created | /new-site-2026-b/security | /security |
@@ -291,7 +297,7 @@ Switch day, in order (about 30 minutes, only after Fabricio's go):
 
 1. Check that https://www.flieber.com/hubfs/flieber-2026/llms.txt, llms-full.txt and capabilities.json open with the Option 2 content.
 2. Unpublish (never delete) the old homepage, the old /pricing, the old /agencies and every page in `hubspot/url-redirects.csv` that is still published. Before unpublishing /old-home-page, check whether ads point to it (3,100 views Apr to Sep 2026).
-3. Claude moves the 14 drafts to their final URLs and publishes them.
+3. Claude moves the 15 drafts to their final URLs and publishes them.
 4. Import `hubspot/url-redirects.csv` in Settings > Content > Domains & URLs > URL Redirects.
 5. Paste `robots.production.txt` into the robots.txt setting (allows search engines and AI crawlers).
 6. Click through the new pages, the Product and Solutions menus, and old URLs such as /omnichannel, /flieber-vs-netsuite and /product to confirm the redirects; confirm /flieber-vs-inventory-planner returns "not found".
@@ -306,6 +312,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 2 | New /mcp page (MCP and AI agents) in the Product menu, between All features and Security & data; /agents links to it from the MCP server line |
 | Oct 2 | Options converge on a final version: Option 2 sharing the homepage H1 and the offer labels with Option 1 is accepted |
 | Oct 2 | /before-you-choose question 9: "any MCP-compatible agent, such as Claude"; no other agent is named |
 | Oct 2 | /before-you-choose question 17 answered for Flieber: it consolidates 3PL inventory data, connects to an existing ERP, WMS or MRP and does not replace them |
@@ -329,7 +336,8 @@ Choices made while building, open to change:
 - "Connect your sales channels and inventory" has no card copy in the Content Briefing; its card uses the approved integrations wording.
 - "Data health" is in no Option 2 list, but /features keeps every Option 1 card, so it stays in the Data layer section of /features (not on the data layer page, which follows the brief's list).
 - The homepage module answers are reused as the /features section leads, on the module pages' "Works with" cards, on /agents and in the llms files.
-- Small labels not in the Content Briefing: "Decides", "Prepares and carries out", "Advises" on the collaboration cards; "In their words" above the quotes on the solutions pages.
+- /mcp agents row: the names are shown as text chips, not brand logos, until approved logo files are supplied. The "Waiting for your approval" tag appears on the purchase order example, the only one whose action waits for approval.
+- Small labels not in the Content Briefing: "MCP", "Examples", "Prompts", "Capabilities", "Setup", "Data layer" and "Questions" above the /mcp H2s; "Decides", "Prepares and carries out", "Advises" on the collaboration cards; "In their words" above the quotes on the solutions pages.
 
 ## Build and switch checklist
 
@@ -339,12 +347,13 @@ Before an option is elected:
 
 - [ ] Fabricio's photo for the founder section (a monogram marked `[FOUNDER PHOTO]` stands in on the preview)
 - [ ] Fabricio confirms the claims first used in Option 2: "Proprietary algorithms, not language models", "more than 1,000 commerce brands" in the planning engine and planner copy, the /multichannel "For most brands" line and the regional markets example for sales order routing
+- [ ] Fabricio confirms ChatGPT connects to Flieber today: /mcp names it in the H1, lead, agents row, steps and questions, while /before-you-choose question 9 names only Claude
 - [ ] Content Briefing (Option 2) synced with the site: question 9 on /before-you-choose still names ChatGPT in the doc; section 4 says "Twelve sections plus footer" but lists thirteen; section 10 says /pricing, /security and /contact are shared with Option 1, while their templates must differ (header and footer)
 - [ ] Fabricio and the team compare both previews and elect one option
 
 If Option 2 is elected:
 
-- [ ] Upload the Option 2 templates to HubSpot and create the 14 drafts under /new-site-2026-b/
+- [ ] Upload the Option 2 templates to HubSpot and create the 15 drafts under /new-site-2026-b/
 - [ ] Upload Option 2's llms.txt, llms-full.txt and capabilities.json to `flieber-2026`, replacing Option 1's
 - [ ] Update `hubspot/CUTOVER.md` with the draft IDs
 - [ ] Fabricio reviews the drafts in HubSpot Preview (fonts, logos, the six-layer animation, the Product and Solutions menus, phone menu, any HubSpot banner or chat widget)

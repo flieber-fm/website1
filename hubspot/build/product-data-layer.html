@@ -1033,6 +1033,37 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .byc-item { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 16px; align-items: start; }
 .byc-n { font-family: var(--mono); font-size: 13px; color: var(--text-2); padding-top: 5px; }
 .byc-item p b { color: var(--black); font-weight: 600; }
+.mcp-agents { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.mcp-agent { padding: 10px 16px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--white); font-weight: 600; font-size: 15px; }
+.mcp-agent-any { font-weight: 500; color: var(--text-2); border-style: dashed; }
+.chat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.chat { display: flex; flex-direction: column; gap: 14px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l); padding: clamp(20px, 2.4vw, 28px); }
+.chat-head { display: flex; flex-direction: column; gap: 6px; margin-bottom: 4px; }
+.chat-label { font-family: var(--mono); font-size: 12px; color: var(--text-2); }
+.chat-msg { border-radius: var(--radius-m); padding: 14px 16px; max-width: 92%; }
+.chat-msg p { margin: 6px 0 0; }
+.chat-who { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.chat-you { align-self: flex-end; background: var(--black); color: var(--gray-light); }
+.chat-you .chat-who { color: #A3AEB1; }
+.chat-flieber { align-self: flex-start; background: var(--gray-light); border: 1px solid var(--line); }
+.chat-flieber .chat-who { color: var(--text-2); }
+.chat-status { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px !important; padding: 6px 10px; border-radius: 999px; background: var(--yellow); font-size: 13px; font-weight: 600; }
+.chat-status span { width: 7px; height: 7px; border-radius: 50%; background: var(--black); }
+.mcp-ask-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.mcp-ask { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l); padding: 22px; }
+.mcp-ask h3 a { color: var(--black); text-decoration: none; }
+.mcp-ask h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.mcp-ask ul { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.mcp-ask li { font-family: var(--mono); font-size: 13px; line-height: 1.5; color: var(--text-2); padding-top: 10px; border-top: 1px solid var(--line); }
+.mcp-do { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.mcp-note { margin-top: 22px; color: var(--text-2); }
+.mcp-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.mcp-step { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l); padding: 24px; }
+.mcp-step .n { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--yellow); font-weight: 600; margin-bottom: 18px; }
+.mcp-step p { margin: 0; color: var(--text-2); }
+.mcp-step b { color: var(--black); font-weight: 600; }
+@media (max-width: 1140px) { .mcp-ask-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .mcp-do { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 860px) { .chat-grid, .mcp-steps, .mcp-do { grid-template-columns: 1fr; } .mcp-ask-grid { grid-template-columns: 1fr; } .chat-msg { max-width: 100%; } }
 
 </style>
 
@@ -1107,6 +1138,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
             <a href="/product/replenishment">Replenishment</a>
             <a href="/product/workflows">Workflows</a>
             <a class="nav-menu-all" href="/features">All features <span aria-hidden="true">→</span></a>
+            <a href="/mcp">MCP and AI agents</a>
             <a href="/security">Security &amp; data</a>
           </div>
         </div>
