@@ -288,7 +288,7 @@ There are good inventory planning platforms on the market. If one answers yes to
 
 ### AI and execution
 
-**Can your team ask questions in plain language and get answers from your own data?** Flieber: yes, in the app, in Slack or in any agent you choose (Claude, ChatGPT or any other).
+**Can your team ask questions in plain language and get answers from your own data?** Flieber: yes, in the app, in Slack or in any MCP-compatible agent, such as Claude.
 
 **Can your own AI agents work with it?** Flieber: Claude, Cursor and any MCP-compatible agent connect through its MCP server; your systems can use its public API.
 

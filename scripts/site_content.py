@@ -391,7 +391,7 @@ BYC = {
         ]),
         ("ai-and-execution", "AI and execution", [
             ("Can your team ask questions in plain language and get answers from your own data?",
-             "Flieber: yes, in the app, in Slack or in any agent you choose (Claude, ChatGPT or any other)."),
+             "Flieber: yes, in the app, in Slack or in any MCP-compatible agent, such as Claude."),
             ("Can your own AI agents work with it?",
              "Flieber: Claude, Cursor and any MCP-compatible agent connect through its MCP server; your systems can use its public API."),
             ("Does it carry approved decisions into the systems where they land?",
