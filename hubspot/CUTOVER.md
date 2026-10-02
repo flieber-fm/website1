@@ -1,5 +1,7 @@
 # Switching www.flieber.com to the new site (HubSpot)
 
+> **Option 2 branch.** Nothing below has been done for Option 2: no files, templates or drafts exist in HubSpot for it. If Option 2 is elected, its 14 drafts go under `/new-site-2026-b/` and the lists below apply (see `docs/26-10-02 Website - Technical Briefing (Option 2).md`). The "Current state" section describes Option 1's drafts.
+
 Nothing is deleted or overwritten. The new site is built as **new** pages, templates and modules in HubSpot. Old pages are only **unpublished**: they stay in the account as drafts, with their full revision history, and can be republished at any time.
 
 ## Before the switch (Claude)
@@ -32,15 +34,17 @@ In **Content > Website Pages**, for each page below: hover over it, click **More
 
 - Flieber Home 2026 (`/`)
 - Pricing New (`/pricing`)
-- Every page in `url-redirects.csv` that is still published: /pricing-plans, /integrations, /frequently-asked-questions, /managed-services, /product, /flieber-inventory, /flieber-studio, /omnichannel, /ecommerce, /agencies, the three /flieber-vs-… pages, /best-inventory-software and its three child pages, /standardize-vs-pages, /feature-drops, /old-home-page, /book-a-demo-old
+- The old /agencies page (the new /agencies replaces it on the same URL)
+- Every page in `url-redirects.csv` that is still published: /pricing-plans, /integrations, /frequently-asked-questions, /product, /flieber-inventory, /flieber-studio, /omnichannel, /ecommerce, /flieber-vs-netsuite, /flieber-vs-netstock, /flieber-vs-foresight-ai, /best-inventory-software and its three child pages, /standardize-vs-pages, /feature-drops, /old-home-page, /book-a-demo-old
+- /flieber-vs-inventory-planner stays unpublished and is never redirected
 
 Before unpublishing **/old-home-page**: check whether any ad campaign sends traffic to it (3,100 views from April to September 2026). If one does, update the ad first.
 
-Keep these published: /book-a-demo, /free-trial, /blog (and every post), /privacy-policy, /service-agreement, /glossary, /learn-hub, /videos.
+Keep these published: /book-a-demo, /free-trial, /blog (and every post), /privacy-policy, /service-agreement, /glossary, /learn-hub, /videos, /ecommerce2, /managed-services (with the new header and footer).
 
 ### 3. Publish the new pages
 
-Tell Claude, who changes each draft's URL from `/new-site-2026/...` to its final URL (`/`, `/agents`, `/pricing`, `/security`, `/contact`) and publishes it.
+Tell Claude, who changes each draft's URL from `/new-site-2026-b/...` to its final URL (`/`, `/features`, the five `/product/...` pages, `/multichannel`, `/agencies`, `/before-you-choose`, `/agents`, `/pricing`, `/security`, `/contact`) and publishes it.
 
 If HubSpot says a URL is already in use, the old page still holds it: open the old page, change its URL to `/archive/<old-slug>` and keep it unpublished, then publish the new page.
 
@@ -48,7 +52,8 @@ If HubSpot says a URL is already in use, the old page still holds it: open the o
 
 1. Go to **Settings (gear icon) > Content > Domains & URLs > URL Redirects**.
 2. Click **Import** and upload `hubspot/url-redirects.csv`. Map the columns: Original URL and Redirect to. Use permanent (301) redirects.
-3. Check that /llms.txt and /capabilities.json open the two files you uploaded in step 1.
+3. Check that /llms.txt, /llms-full.txt and /capabilities.json open the files you uploaded in step 1.
+4. Do not tick "match path prefix" on the /product redirect, or the five /product/ pages would redirect too.
 
 ### 5. Set robots.txt
 
@@ -57,7 +62,7 @@ If HubSpot says a URL is already in use, the old page still holds it: open the o
 
 ### 6. Click through
 
-Open each of these and check they load the new design: `/`, `/agents`, `/pricing`, `/security`, `/contact`, `/llms.txt`, `/capabilities.json`, and three old URLs (for example `/pricing-plans`, `/product`, `/integrations`) to confirm they redirect.
+Open each new page, the Product and Solutions menus, `/llms.txt`, `/llms-full.txt` and `/capabilities.json`, and old URLs such as `/omnichannel`, `/flieber-vs-netsuite`, `/product` and `/pricing-plans` to confirm they redirect. Confirm `/flieber-vs-inventory-planner` returns "not found".
 
 ## Undo
 

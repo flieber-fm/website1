@@ -2,7 +2,7 @@
 
 **This branch (`claude/eager-bohr-ui8a03`) is Option 2.** Option 1 lives on `claude/gracious-dijkstra-qgcgls` and is not touched from here. Both are built in parallel so Fabricio and the team can compare and elect one (Option 2 brief, section 1).
 
-Copy source: *26-10-02 Website - Content Briefing (Option 2)*, on top of the Option 1 Content and Technical Briefings of October 2. Same layout, design system and copy rules as Option 1; the content and structure change.
+Copy source: *26-10-02 Website - Content Briefing (Option 2)*, on top of the Option 1 Content and Technical Briefings of October 2. Build, links, claims and the HubSpot switch plan: `docs/26-10-02 Website - Technical Briefing (Option 2).md`. Same layout, design system and copy rules as Option 1; the content and structure change.
 
 What Option 2 changes (revised brief, October 2):
 
@@ -12,9 +12,9 @@ What Option 2 changes (revised brief, October 2):
 - **`/before-you-choose`:** 17 buyer questions in four groups, answered for Flieber, with FAQPage structured data. Replaces the named comparison pages: /flieber-vs-netsuite, /flieber-vs-netstock and /flieber-vs-foresight-ai redirect to it. /flieber-vs-inventory-planner is deliberately not redirected (stays unpublished); /ecommerce2 is not redirected either
 - **/features** regrouped by module (`#data-layer`, `#demand-forecasting`, `#inventory-forecasting`, `#replenishment`, `#workflows`, `#access`), with the new "Reports and dashboards" card and the "Can I buy only the data layer?" question
 - **/agents:** data-layer recommendation group, "By type of business" and "Modules" sections
-- **llms.txt, llms-full.txt, capabilities.json:** Modules and Solutions sections; `modules`, `solutions`, `comparisons` and the data-layer offer option in capabilities.json
+- **llms.txt, llms-full.txt, capabilities.json:** Modules and Solutions sections; `positioning`, `modules`, `solutions` and the data-layer offer option in capabilities.json
 - **/pricing:** offer names, plus one line saying the data layer can be bought on its own
-- **Navigation** on every page (`scripts/site_chrome.py`): Product (menu: five modules, All features) · Solutions (menu: Multichannel brands, Agencies and aggregators, Before you choose) · Pricing · Security · Who we are · /agents. It collapses into the menu below 1280px (Option 1: 1140px)
+- **Navigation** on every page (`scripts/site_chrome.py`): Product (menu: five modules, All features, Security & data) · Solutions (menu: Multichannel brands, Agencies and aggregators, Before you choose) · Pricing · Who we are · /agents. It collapses into the menu below 1140px, as in Option 1
 - **Redirects:** `hubspot/url-redirects.csv` sends /omnichannel and /ecommerce to /multichannel, the three comparison pages to /before-you-choose and /product to /features; /managed-services and /agencies are no longer redirected. The preview mirrors these redirects in `Caddyfile`
 
 Build: `python3 scripts/build-content.py` regenerates /features, the module pages, /multichannel, /agencies, the /agents body, the three machine-readable files and the nav and footer of every page. The homepage, /pricing, /security and /contact bodies are edited by hand.
@@ -26,7 +26,7 @@ Choices made while building (open to change):
 - **"Data health"** is in no Option 2 list, but the brief keeps every Option 1 card, so it stays in the Data layer section of /features (not on the data layer page, which follows the brief's list)
 - **Founder photo:** pending, shown as a monogram marked `[FOUNDER PHOTO]`
 - **Module one-liners:** the homepage card answers (brief 4.5) are reused as the /features section leads, on the module pages' "Works with" cards, on /agents and in the llms files, since the brief no longer has any other one-line module descriptions
-- **Labels not in the brief:** "Decides", "Prepares and carries out", "Advises" (homepage collaboration cards), "With Managed Services" (planners card), "Data" and "Decisions" at the ends of the six-layer stack,  kickers "Features", "MCP and API", "Collaborative AI", "Modules", "The problem", "Customers", H2 "In their words" on the solutions pages, "Questions 1 to 4" style labels on /before-you-choose, "MCP docs" link on the data layer page
+- **Labels not in the brief:** "Decides", "Prepares and carries out", "Advises" (homepage collaboration cards), "With Managed Services" (planners card), kickers "Features", "MCP and API", "Collaborative AI", "Modules", "The problem", "Customers", H2 "In their words" on the solutions pages, "Questions 1 to 4" style labels on /before-you-choose, "MCP docs" link on the data layer page
 
 HubSpot: nothing created, edited or uploaded for Option 2. `scripts/build-hubspot.py` builds the templates locally only (`hubspot/build/`, including the five solutions templates). If Option 2 is elected, its drafts go under `/new-site-2026-b/` (brief section 9).
 
