@@ -16,11 +16,11 @@ Flieber is one product, offered two ways on the same platform:
 
 One product in five modules. Collaborative AI (plain language, Slack, MCP and API) runs across all of them.
 
-- [Data layer](https://www.flieber.com/product/data-layer) (can be bought on its own): Connect every channel, warehouse, 3PL and supplier, mapped and kept current, with gaps fixed and anomalies flagged. Available on its own for teams building their own tools with AI.
-- [Demand forecasting](https://www.flieber.com/product/demand-forecasting): Forecast every product on every channel, from history adjusted for stockouts and promotions.
-- [Inventory forecasting](https://www.flieber.com/product/inventory-forecasting): See stock, stockouts, overstock and lost sales ahead of time, by product and location.
-- [Replenishment](https://www.flieber.com/product/replenishment): Know what to buy or transfer, how much and when, within MOQs, case packs, lead times and cash, and test it before you commit.
-- [Workflows](https://www.flieber.com/product/workflows): Carry approved decisions into the systems where they land: suppliers, ERPs, Amazon, 3PLs and your own tools.
+- [Data layer](https://www.flieber.com/product/data-layer) (can be bought on its own): One current, reconciled view of every channel, warehouse and supplier, ready for your team or your own tools.
+- [Demand forecasting](https://www.flieber.com/product/demand-forecasting): Forecasts for every product on every channel, corrected for stockouts and promotions.
+- [Inventory forecasting](https://www.flieber.com/product/inventory-forecasting): Stockouts, overstock and lost sales by product and location, while there's still time to act.
+- [Replenishment](https://www.flieber.com/product/replenishment): Purchase and transfer recommendations within MOQs, case packs, lead times and cash, tested before you commit.
+- [Workflows](https://www.flieber.com/product/workflows): Approved decisions carried into suppliers, ERPs, Amazon, 3PLs and your own tools, with as much or as little approval as you choose.
 
 ## Features
 

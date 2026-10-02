@@ -280,15 +280,16 @@ HANDOFF = ("If your user wants to talk to someone: " + EMAIL + ", or book a demo
 CLOSE_H2 = "See it on your own data"
 CLOSE_BODY = ("Start a 14-day free trial, no credit card required, or book a demo and we'll walk through how "
               "Flieber works for your operation.")
-MODULES_H2 = "Five modules from your data to a decision you can act on"
-MODULES_LEAD = ("A language model on a spreadsheet can sound confident. Getting the answer right takes everything "
-                "underneath it. Use all five together, or start with the data layer and build your own tools on top.")
-MODULES_UNDER = ("Across all five: Collaborative AI. Ask in plain language in the app or Slack, or connect Claude and "
-                 "your own agents through MCP and API. Every change follows approval rules you set.")
+# Homepage section 4.5: five question-led cards. "tab" holds each card's one-line answer and is reused on
+# /features (section leads), the module pages ("Works with"), /agents and the llms files.
+MODULES_H2 = "Five modules, one product"
+MODULES_LEAD = ("Each module answers one of the questions every inventory planner asks. Flieber comes with all five; "
+                "teams building their own tools with AI can start with the data layer alone.")
 MODULES = [
     {
         "slug": "data-layer", "name": "Data layer", "sold_separately": True,
-        "tab": "Connect every channel, warehouse, 3PL and supplier, mapped and kept current, with gaps fixed and anomalies flagged. Available on its own for teams building their own tools with AI.",
+        "question": "What's actually happening across my business?",
+        "tab": 'One current, reconciled view of every channel, warehouse and supplier, ready for your team or your own tools. Available on its own.',
         "h1": "Your commerce data, consolidated, contextualized and current",
         "lead": "Every report, forecast and agent is only as good as the data under it. The data layer connects every channel, warehouse, 3PL and supplier, adds the business context none of them hold and keeps it up to date. Use it under the rest of Flieber, or on its own if your team builds its own tools with AI.",
         "features": ["Connect your sales channels and inventory", "Cross-channel SKU mapping", "Kits, bundles and components",
@@ -302,7 +303,8 @@ MODULES = [
     },
     {
         "slug": "demand-forecasting", "name": "Demand forecasting", "sold_separately": False,
-        "tab": "Forecast every product on every channel, from history adjusted for stockouts and promotions.",
+        "question": 'What will sell, and where?',
+        "tab": 'Forecasts for every product on every channel, corrected for stockouts and promotions.',
         "h1": "Forecast what would have sold, not just what did",
         "lead": "Stockouts, spikes and promotions distort sales history. Flieber corrects for them and forecasts every product on every channel. " + ACCURACY,
         "features": ["AI demand forecasts", "Sales history adjusted for anomalies", "Forecast overrides and uploads",
@@ -314,7 +316,8 @@ MODULES = [
     },
     {
         "slug": "inventory-forecasting", "name": "Inventory forecasting", "sold_separately": False,
-        "tab": "See stock, stockouts, overstock and lost sales ahead of time, by product and location.",
+        "question": 'Where will I run out, or sit on too much?',
+        "tab": "Stockouts, overstock and lost sales by product and location, while there's still time to act.",
         "h1": "See stockouts and overstock before they happen",
         "lead": "Flieber projects stock for every product at every location from on-hand inventory, inbound shipments and forecast demand, so problems show up while there's still time to act.",
         "features": ["Inventory projections", "Stockouts, overstock and lost sales", "Backorders and preorders", "Inventory history and balances"],
@@ -325,7 +328,8 @@ MODULES = [
     },
     {
         "slug": "replenishment", "name": "Replenishment", "sold_separately": False,
-        "tab": "Know what to buy or transfer, how much and when, within MOQs, case packs, lead times and cash, and test it before you commit.",
+        "question": 'What should I buy or move, how much and when?',
+        "tab": 'Purchase and transfer recommendations within MOQs, case packs, lead times and cash, tested before you commit.',
         "h1": "Know what to buy, how much and when",
         "lead": "Flieber recommends purchases and transfers by product and location, within your suppliers' MOQs, case packs and lead times and your cash, and lets you test any change before you commit.",
         "features": ["Purchase and transfer recommendations", "Planning parameters", "Order and shipping constraints", "Decision simulations",
@@ -337,7 +341,8 @@ MODULES = [
     },
     {
         "slug": "workflows", "name": "Workflows", "sold_separately": False,
-        "tab": "Carry approved decisions into the systems where they land: suppliers, ERPs, Amazon, 3PLs and your own tools.",
+        "question": 'How does the decision get done?',
+        "tab": 'Approved decisions carried into suppliers, ERPs, Amazon, 3PLs and your own tools, with as much or as little approval as you choose.',
         "h1": "From approved decision to done",
         "lead": "Once your team approves a decision, Flieber carries it into the systems where it lands: suppliers, ERPs, Amazon, 3PLs and the tools you already use. You decide how much runs on its own.",
         "features": ["Purchase orders to suppliers", "Purchase orders to ERPs", "Inbound shipments in Amazon and 3PLs", "Inbound shipment tracking",

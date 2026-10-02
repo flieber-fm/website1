@@ -10,7 +10,7 @@ Available with Flieber Self-Serve and Flieber Managed Services. During the 14-da
 
 ### Data layer: Your commerce data, consolidated, contextualized and current
 
-Connect every channel, warehouse, 3PL and supplier, mapped and kept current, with gaps fixed and anomalies flagged. Available on its own for teams building their own tools with AI. Module page: https://www.flieber.com/product/data-layer
+One current, reconciled view of every channel, warehouse and supplier, ready for your team or your own tools. Available on its own. Module page: https://www.flieber.com/product/data-layer
 
 - **Connect your sales channels and inventory** (https://www.flieber.com/features#connect-your-sales-channels-and-inventory): Flieber connects to pretty much any system through native and assisted integrations, plus MCP and API. Native integrations work during the free trial; assisted integrations are set up by Flieber's team on a paid plan. Access: Read.
 - **Data health** (https://www.flieber.com/features#data-health): Checks your account for issues, gaps and anomalies, applies the fixes it can and flags the ones that need a person. Access: Read and write.
@@ -26,7 +26,7 @@ Connect every channel, warehouse, 3PL and supplier, mapped and kept current, wit
 
 ### Demand forecasting: Forecast what would have sold, not just what did
 
-Forecast every product on every channel, from history adjusted for stockouts and promotions. Module page: https://www.flieber.com/product/demand-forecasting
+Forecasts for every product on every channel, corrected for stockouts and promotions. Module page: https://www.flieber.com/product/demand-forecasting
 
 - **AI demand forecasts** (https://www.flieber.com/features#ai-demand-forecasts): Product and channel level forecasts across marketplaces, DTC and wholesale, built from adjusted history and seasonality. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model. Access: Read.
 - **Forecast overrides and uploads** (https://www.flieber.com/features#forecast-overrides-and-uploads): Import your own forecasts, or adjust at SKU, store, channel or group level, including planned promotions and events. Access: Write.
@@ -36,7 +36,7 @@ Forecast every product on every channel, from history adjusted for stockouts and
 
 ### Inventory forecasting: See stockouts and overstock before they happen
 
-See stock, stockouts, overstock and lost sales ahead of time, by product and location. Module page: https://www.flieber.com/product/inventory-forecasting
+Stockouts, overstock and lost sales by product and location, while there's still time to act. Module page: https://www.flieber.com/product/inventory-forecasting
 
 - **Inventory projections** (https://www.flieber.com/features#inventory-projections): Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and consolidated warehouse needs. Access: Read.
 - **Stockouts, overstock and lost sales** (https://www.flieber.com/features#stockouts-overstock-and-lost-sales): Projected stockout dates, products below safety stock, excess inventory and the sales lost to unavailable stock or late shipments. Access: Read.
@@ -44,7 +44,7 @@ See stock, stockouts, overstock and lost sales ahead of time, by product and loc
 
 ### Replenishment: Know what to buy, how much and when
 
-Know what to buy or transfer, how much and when, within MOQs, case packs, lead times and cash, and test it before you commit. Module page: https://www.flieber.com/product/replenishment
+Purchase and transfer recommendations within MOQs, case packs, lead times and cash, tested before you commit. Module page: https://www.flieber.com/product/replenishment
 
 - **Purchase and transfer recommendations** (https://www.flieber.com/features#purchase-and-transfer-recommendations): What to order or transfer, how much and when, by product and location, including replenishment from warehouses or 3PLs to fulfillment locations such as FBA. Access: Read.
 - **Planning parameters** (https://www.flieber.com/features#planning-parameters): Safety stock, target days of cover, overstock thresholds, lead times and order frequency, with rules for products, categories and channels. Access: Write.
@@ -56,7 +56,7 @@ Know what to buy or transfer, how much and when, within MOQs, case packs, lead t
 
 ### Workflows: From approved decision to done
 
-Carry approved decisions into the systems where they land: suppliers, ERPs, Amazon, 3PLs and your own tools. Module page: https://www.flieber.com/product/workflows
+Approved decisions carried into suppliers, ERPs, Amazon, 3PLs and your own tools, with as much or as little approval as you choose. Module page: https://www.flieber.com/product/workflows
 
 - **Purchase orders to suppliers** (https://www.flieber.com/features#purchase-orders-to-suppliers): Sends each PO straight into the supplier's system or as an email, CSV file or Google Sheet in the supplier's own format, with products identified by SKU or product name. Access: Write.
 - **Purchase orders to ERPs** (https://www.flieber.com/features#purchase-orders-to-erps): Pushes approved POs into NetSuite or light ERPs such as Cin7 and Brightpearl. Access: Write.
@@ -277,11 +277,11 @@ Flieber is one product, offered two ways on the same platform:
 
 One product in five modules. Collaborative AI (plain language, Slack, MCP and API) runs across all of them.
 
-- [Data layer](https://www.flieber.com/product/data-layer) (can be bought on its own): Connect every channel, warehouse, 3PL and supplier, mapped and kept current, with gaps fixed and anomalies flagged. Available on its own for teams building their own tools with AI.
-- [Demand forecasting](https://www.flieber.com/product/demand-forecasting): Forecast every product on every channel, from history adjusted for stockouts and promotions.
-- [Inventory forecasting](https://www.flieber.com/product/inventory-forecasting): See stock, stockouts, overstock and lost sales ahead of time, by product and location.
-- [Replenishment](https://www.flieber.com/product/replenishment): Know what to buy or transfer, how much and when, within MOQs, case packs, lead times and cash, and test it before you commit.
-- [Workflows](https://www.flieber.com/product/workflows): Carry approved decisions into the systems where they land: suppliers, ERPs, Amazon, 3PLs and your own tools.
+- [Data layer](https://www.flieber.com/product/data-layer) (can be bought on its own): One current, reconciled view of every channel, warehouse and supplier, ready for your team or your own tools.
+- [Demand forecasting](https://www.flieber.com/product/demand-forecasting): Forecasts for every product on every channel, corrected for stockouts and promotions.
+- [Inventory forecasting](https://www.flieber.com/product/inventory-forecasting): Stockouts, overstock and lost sales by product and location, while there's still time to act.
+- [Replenishment](https://www.flieber.com/product/replenishment): Purchase and transfer recommendations within MOQs, case packs, lead times and cash, tested before you commit.
+- [Workflows](https://www.flieber.com/product/workflows): Approved decisions carried into suppliers, ERPs, Amazon, 3PLs and your own tools, with as much or as little approval as you choose.
 
 ### Features
 

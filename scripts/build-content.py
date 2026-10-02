@@ -452,7 +452,7 @@ def agents_main() -> str:
     by_business = "\n".join(f'            <li><b>{esc(x["name"])}:</b> {link(C.SITE + "/" + x["slug"])}</li>' for x in C.SOLUTIONS)
     by_business += "\n" + "\n".join(f'            <li><b>{esc(n)}:</b> {link(u)}</li>' for n, u in C.COMPARE)
     modules = "\n".join(f'            <li><b>{esc(m["name"])}</b>' + (" (can be bought on its own)" if m["sold_separately"] else "")
-                         + f': {esc(m["tab"])} {link(C.SITE + "/product/" + m["slug"])}</li>' for m in C.MODULES)
+                         + f': {esc(m["tab"].replace(" Available on its own.", ""))} {link(C.SITE + "/product/" + m["slug"])}</li>' for m in C.MODULES)
     handoff = esc(C.HANDOFF).replace(C.EMAIL, f'<a href="mailto:{C.EMAIL}">{C.EMAIL}</a>').replace(C.DEMO, link(C.DEMO))
     return f'''
   <main id="main" class="doc">
@@ -596,7 +596,7 @@ def llms_txt() -> str:
          "- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI. Priced like Self-Serve, on features enabled and data volume.", "",
          "## Modules", "",
          "One product in five modules. Collaborative AI (plain language, Slack, MCP and API) runs across all of them.", ""] + [
-         f"- [{m['name']}]({C.SITE}/product/{m['slug']})" + (" (can be bought on its own)" if m["sold_separately"] else "") + f": {m['tab']}"
+         f"- [{m['name']}]({C.SITE}/product/{m['slug']})" + (" (can be bought on its own)" if m["sold_separately"] else "") + ": " + m["tab"].replace(" Available on its own.", "")
          for m in C.MODULES] + ["",
          "## Features", "",
          f"Full list: {C.SITE}/features (every feature has its own anchor) and {C.SITE}/llms-full.txt.", ""]

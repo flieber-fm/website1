@@ -44,33 +44,6 @@
     document.addEventListener('click', function (e) { if (!drop.contains(e.target)) set(false); });
   });
 
-  /* ---------- How Flieber is built: five module tabs (Option 2) ---------- */
-  var layers = document.getElementById('layers');
-  if (layers) {
-    var ltabs = [].slice.call(layers.querySelectorAll('.layer-tab'));
-    var lpanels = ltabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
-    var pick = function (n, focus) {
-      n = (n + ltabs.length) % ltabs.length;
-      ltabs.forEach(function (t, i) {
-        var on = i === n;
-        t.setAttribute('aria-selected', String(on));
-        t.tabIndex = on ? 0 : -1;
-        lpanels[i].classList.toggle('active', on);
-      });
-      if (focus) ltabs[n].focus();
-    };
-    ltabs.forEach(function (t, i) {
-      t.addEventListener('click', function () { pick(i); });
-      t.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); pick(i + 1, true); }
-        if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); pick(i - 1, true); }
-        if (e.key === 'Home') { e.preventDefault(); pick(0, true); }
-        if (e.key === 'End') { e.preventDefault(); pick(ltabs.length - 1, true); }
-      });
-    });
-    pick(0);
-  }
-
   /* ---------- How Flieber is built: scroll-driven layer stack (Option 2, after legora.com) ---------- */
   // Scroll position maps to x: plate i drops while x goes from i to i+1, then the plates close up
   // into one block (x from n to n+1). Reduced motion keeps the static, fully open version.
