@@ -24,7 +24,7 @@
 
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v=23">
+  <link rel="stylesheet" href="assets/css/site.css?v=25">
 
   <script>document.documentElement.classList.remove('no-js');</script>
   <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
@@ -321,63 +321,120 @@
       </div>
     </section>
 
-    <!-- ================= 4. HOW FLIEBER IS BUILT (stacked six layers) ================= -->
-    <section class="section" id="how-flieber-is-built" aria-labelledby="stack-title">
+    <!-- ================= 4. HOW FLIEBER IS BUILT (stacked six layers) =================
+         Scroll-driven, after legora.com: the scene stays pinned while each layer drops onto the
+         stack (data first, at the bottom) and its card opens on the left; at the end the plates
+         close into one block. Pure CSS 3D; assets/js/site.js drives it. Reduced motion or no JS:
+         the full stack and every description show, unpinned. -->
+    <section class="section layerstack-sec" id="how-flieber-is-built" aria-labelledby="stack-title">
       <div class="wrap">
-        <div class="stack-wrap">
-          <div class="section-head reveal">
-            <span class="kicker">How Flieber is built</span>
-            <h2 class="h2" id="stack-title" style="margin-top:20px">Six layers between your data and a decision you can trust</h2>
-            <p class="lead">A language model on a spreadsheet can sound confident. Getting the answer right takes everything underneath it.</p>
-          </div>
-          <div class="stack reveal">
-            <span class="stack-axis stack-axis-top" aria-hidden="true">Decisions</span>
-            <!-- Layer 01 (data) is first in reading order and drawn at the bottom -->
-            <ol class="stack-list" id="stack">
-          <li class="stack-layer open" style="--i:1">
-            <h3><button class="stack-btn" type="button" aria-expanded="true" aria-controls="stack-1"><span class="stack-n">01</span><span class="stack-name">Your data</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-1">
-              <p>Connect sales channels, warehouses, 3PLs, suppliers and ERPs through native and assisted integrations, with gaps fixed and anomalies flagged.</p>
-              <a class="link-arrow" href="features/#data-layer">Data layer features <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
-          <li class="stack-layer" style="--i:2">
-            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-2"><span class="stack-n">02</span><span class="stack-name">Business context</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-2">
-              <p>SKU and bundle mapping, the supply chain map, replenishment rules and sales history adjusted for stockouts and promotions.</p>
-              <a class="link-arrow" href="features/#data-layer">Data layer features <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
-          <li class="stack-layer" style="--i:3">
-            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-3"><span class="stack-n">03</span><span class="stack-name">Planning engine</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-3">
-              <p>Forecasts, inventory projections, simulations and recommendations that respect MOQs, case packs, lead times and cash, built on proprietary algorithms and shaped by the business context of more than 1,000 commerce brands.</p>
-              <a class="link-arrow" href="features/#demand-forecasting">Forecasting features <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
-          <li class="stack-layer" style="--i:4">
-            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-4"><span class="stack-n">04</span><span class="stack-name">Collaborative AI</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-4">
-              <p>Ask in plain language, get answers with their reasoning, and run agents and workflows on schedule across Flieber and your connected apps.</p>
-              <a class="link-arrow" href="features/#workflows">Workflow features <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
-          <li class="stack-layer" style="--i:5">
-            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-5"><span class="stack-n">05</span><span class="stack-name">Where you work</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-5">
-              <p>The Flieber app, Slack and Google Sheets, plus Claude or your own agents through MCP and API.</p>
-              <a class="link-arrow" href="features/#access">Access features <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
-          <li class="stack-layer" style="--i:6">
-            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-6"><span class="stack-n">06</span><span class="stack-name">Control</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-6">
-              <p>Approval rules you set, your data never sold or shared and no training on customer data.</p>
-              <a class="link-arrow" href="features/#control-and-approval">Control and approval <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
+        <div class="section-head reveal">
+          <span class="kicker">How Flieber is built</span>
+          <h2 class="h2" id="stack-title" style="margin-top:20px">Six layers between your data and a decision you can trust</h2>
+          <p class="lead">A language model on a spreadsheet can sound confident. Getting the answer right takes everything underneath it.</p>
+        </div>
+      </div>
+      <div class="layerstack" id="layerstack" style="--n:6">
+        <div class="ls-pin">
+          <div class="wrap ls-grid">
+            <ol class="ls-steps" aria-label="The six layers, from data to decisions">
+              <li class="ls-step is-active" data-step="0">
+                <button class="ls-pill" type="button" aria-controls="ls-body-0" aria-expanded="true"><span class="ls-name">Your data</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-0">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Your data</p>
+                    <p>Connect sales channels, warehouses, 3PLs, suppliers and ERPs through native and assisted integrations, with gaps fixed and anomalies flagged.</p>
+                    <a class="ls-link" href="features/#data-layer">Data layer features <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="1">
+                <button class="ls-pill" type="button" aria-controls="ls-body-1" aria-expanded="false"><span class="ls-name">Business context</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-1">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Business context</p>
+                    <p>SKU and bundle mapping, the supply chain map, replenishment rules and sales history adjusted for stockouts and promotions.</p>
+                    <a class="ls-link" href="features/#data-layer">Data layer features <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="2">
+                <button class="ls-pill" type="button" aria-controls="ls-body-2" aria-expanded="false"><span class="ls-name">Planning engine</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-2">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Planning engine</p>
+                    <p>Forecasts, inventory projections, simulations and recommendations that respect MOQs, case packs, lead times and cash, built on proprietary algorithms and shaped by the business context of more than 1,000 commerce brands.</p>
+                    <a class="ls-link" href="features/#demand-forecasting">Forecasting features <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="3">
+                <button class="ls-pill" type="button" aria-controls="ls-body-3" aria-expanded="false"><span class="ls-name">Collaborative AI</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-3">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Collaborative AI</p>
+                    <p>Ask in plain language, get answers with their reasoning, and run agents and workflows on schedule across Flieber and your connected apps.</p>
+                    <a class="ls-link" href="features/#workflows">Workflow features <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="4">
+                <button class="ls-pill" type="button" aria-controls="ls-body-4" aria-expanded="false"><span class="ls-name">Where you work</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-4">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Where you work</p>
+                    <p>The Flieber app, Slack and Google Sheets, plus Claude or your own agents through MCP and API.</p>
+                    <a class="ls-link" href="features/#access">Access features <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="5">
+                <button class="ls-pill" type="button" aria-controls="ls-body-5" aria-expanded="false"><span class="ls-name">Control</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-5">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Control</p>
+                    <p>Approval rules you set, your data never sold or shared and no training on customer data.</p>
+                    <a class="ls-link" href="features/#control-and-approval">Control and approval <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
             </ol>
-            <span class="stack-axis stack-axis-bottom" aria-hidden="true">Data</span>
+            <div class="ls-scene" aria-hidden="true">
+              <div class="iso" id="iso">
+                <div class="iso-floor"></div>
+                <div class="iso-plate" style="--i:0" data-plate="0">
+                  <div class="iso-top"><span class="iso-label">Your data</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:1" data-plate="1">
+                  <div class="iso-top"><span class="iso-label">Business context</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:2" data-plate="2">
+                  <div class="iso-top"><span class="iso-label">Planning engine</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:3" data-plate="3">
+                  <div class="iso-top"><span class="iso-label">Collaborative AI</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:4" data-plate="4">
+                  <div class="iso-top"><span class="iso-label">Where you work</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:5" data-plate="5">
+                  <div class="iso-top"><span class="iso-label">Control</span><svg class="iso-mark" viewBox="0 2 192 137" aria-hidden="true"><path d="M0.3 3.25C0 2.74 0.37 2.1 0.96 2.1L107.21 2.1C110.4 2.1 113.48 3.21 115.95 5.22L187.56 63.81C191.68 67.19 191.68 73.49 187.56 76.86L115.95 135.45C113.48 137.47 110.4 138.57 107.21 138.57L70.3 138.57C69.47 138.57 68.71 138.13 68.3 137.42L43.57 94.23C43.27 93.72 43.64 93.08 44.23 93.08L141.7 93.08C142.12 93.08 142.46 92.74 142.46 92.32L142.46 48.36C142.46 47.94 142.12 47.59 141.7 47.59L27.29 47.59C26.47 47.59 25.71 47.16 25.3 46.45L0.3 3.25"/></svg></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ls-progress" aria-hidden="true"><i></i></div>
           </div>
         </div>
       </div>
@@ -876,6 +933,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/site.js?v=13" defer></script>
+  <script src="assets/js/site.js?v=14" defer></script>
 </body>
 </html>

@@ -1095,41 +1095,96 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .sol-others a:hover { background: var(--white); }
 #control-and-approval, #together, #what-you-can-do, #works-with, #why, #everything { scroll-margin-top: 140px; }
 
-/* How Flieber is built: stacked six layers, data at the bottom, each layer expands on click */
-.stack-wrap { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
-.stack-wrap .section-head { margin-bottom: 0; position: sticky; top: 120px; }
-.stack { display: flex; flex-direction: column; gap: 10px; }
-.stack-axis { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); display: flex; align-items: center; gap: 10px; }
-.stack-axis::after { content: ""; flex: 1; height: 1px; background: var(--line-strong); }
-.stack-list { display: flex; flex-direction: column-reverse; gap: 8px; }
-/* Upper layers are drawn narrower, so the stack tapers from data up to decisions */
-.stack-layer {
-  margin: 0 calc((var(--i) - 1) * 14px);
-  background: var(--gray-light); border: 1px solid var(--line-strong); border-radius: var(--radius-m);
-  transition: background-color .25s, border-color .25s;
+/* ==========================================================================
+   How Flieber is built: scroll-driven layer stack (after legora.com)
+   The scene is pinned while you scroll; each layer drops onto the stack and
+   its card opens on the left; at the end the plates close into one block.
+   Plates are CSS 3D. JS sets --z (height), --o (opacity), --lift and --f (fuse).
+   ========================================================================== */
+.layerstack-sec { padding-bottom: 0; background: linear-gradient(180deg, var(--white) 0%, var(--gray-light) 30%, var(--gray-light) 100%); }
+.layerstack-sec .section-head { margin-bottom: clamp(16px, 3vw, 32px); }
+.layerstack { position: relative; height: calc((var(--n) + 1.6) * 72vh); }
+.ls-pin { position: sticky; top: 72px; height: calc(100vh - 72px); min-height: 560px; display: flex; align-items: center; overflow: hidden; }
+.ls-grid { position: relative; height: 100%; display: grid; grid-template-columns: minmax(300px, 400px) minmax(0, 1fr); gap: 24px; align-items: center; }
+
+/* Left: pills, the active one opens into a card */
+.ls-steps { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; position: relative; z-index: 2; }
+.ls-step { display: flex; flex-direction: column; align-items: flex-start; max-width: 400px; background: var(--charcoal); color: var(--white); border-radius: 20px; transition: background-color .35s var(--ease), border-radius .35s var(--ease); }
+.ls-step.is-active { background: var(--black); border-radius: 18px; width: min(400px, 100%); }
+/* Collapsed bodies take no width, so each pill fits its text */
+.ls-step:not(.is-active) .ls-body { width: 0; }
+.ls-pill { display: inline-flex; align-items: center; gap: 10px; padding: 9px 10px 9px 16px; background: transparent; border: 0; color: inherit; cursor: pointer; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; text-align: left; }
+.ls-plus { position: relative; width: 20px; height: 20px; flex: none; border-radius: 50%; background: rgba(240,245,246,.18); }
+.ls-plus::before, .ls-plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 9px; height: 1.5px; background: currentColor; transform: translate(-50%, -50%); }
+.ls-plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+.ls-step.is-active .ls-pill { display: none; }
+.ls-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s var(--ease); }
+.ls-step.is-active .ls-body { grid-template-rows: 1fr; }
+.ls-body-inner { overflow: hidden; }
+.ls-step.is-active .ls-body-inner { padding: 16px 20px 18px; }
+.ls-body p { color: var(--gray-light); font-size: 16px; line-height: 1.45; }
+.ls-body .ls-title { color: #A3AEB1; font-size: 13.5px; margin-bottom: 8px; }
+.ls-link { display: inline-flex; gap: 6px; margin-top: 12px; color: var(--yellow); font-weight: 600; font-size: 15px; text-decoration: none; }
+.ls-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.ls-progress { position: absolute; left: var(--gutter); bottom: 24px; width: 92px; height: 26px; border-radius: 999px; background: var(--charcoal); display: flex; align-items: center; padding: 0 12px; }
+.ls-progress::before { content: ""; position: absolute; left: 12px; right: 12px; height: 3px; border-radius: 3px; background: rgba(240,245,246,.25); }
+.ls-progress i { position: relative; height: 3px; border-radius: 3px; background: var(--white); width: calc(var(--p, 0) * 100%); }
+
+/* Right: the isometric scene */
+.ls-scene { position: relative; height: 100%; display: grid; place-items: center; perspective: 2600px; perspective-origin: 50% 40%; }
+.iso {
+  --w: min(360px, 30vw); --t: 12; --f: 0;
+  position: relative; width: var(--w); height: var(--w); transform-style: preserve-3d;
+  transform: translateY(6%) rotateX(57deg) rotateZ(45deg) translateZ(calc(var(--lift, -115) * 1px));
 }
-.stack-layer:hover { border-color: var(--black); }
-.stack-layer.open { background: var(--yellow); border-color: var(--black); }
-.stack-layer h3 { margin: 0; }
-.stack-btn {
-  width: 100%; display: flex; align-items: center; gap: 16px; text-align: left; cursor: pointer;
-  background: transparent; border: 0; padding: 16px 20px;
-  font-size: clamp(18px, 1.6vw, 21px); letter-spacing: -0.02em; font-weight: 500;
+.iso-floor { position: absolute; inset: -12%; border-radius: 40px; background: radial-gradient(closest-side, rgba(27,28,28,.22), rgba(27,28,28,0)); transform: translateZ(-30px); filter: blur(18px); }
+.iso-plate {
+  position: absolute; inset: 0; transform-style: preserve-3d;
+  transform: translateZ(calc(var(--z, calc(var(--i) * 46)) * 1px));
+  opacity: var(--o, 1);
 }
-.stack-n { font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--text-2); }
-.stack-layer.open .stack-n { color: var(--black); }
-.stack-name { flex: 1; }
-.stack-plus { position: relative; width: 24px; height: 24px; flex: none; border-radius: 7px; border: 1px solid var(--line-strong); background: var(--white); }
-.stack-plus::before, .stack-plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 1.5px; background: var(--black); transform: translate(-50%, -50%); }
-.stack-plus::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .25s var(--ease); }
-.stack-layer.open .stack-plus { border-color: var(--black); }
-.stack-layer.open .stack-plus::after { transform: translate(-50%, -50%) rotate(0deg); }
-.stack-panel { padding: 0 20px 20px 56px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
-.stack-panel[hidden] { display: none; }
-.stack-panel p { color: var(--black); max-width: 560px; }
+.iso-top {
+  position: absolute; inset: 0; border-radius: 20px; transform: translateZ(calc(var(--t) * 1px));
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, rgba(255,255,255,.80) 0%, rgba(214,224,226,.62) 55%, rgba(190,202,205,.70) 100%);
+  border: 1px solid rgba(27,28,28,.22);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.65), inset 0 0 40px rgba(255,255,255,.45);
+  transition: background .4s var(--ease), border-color .4s var(--ease);
+}
+.iso-side { position: absolute; background: linear-gradient(90deg, rgba(53,56,57,.55), rgba(27,28,28,.85)); transition: background .4s var(--ease); }
+.iso-side-a { left: 14px; right: 14px; top: 100%; height: calc(var(--t) * 1px); transform-origin: top; transform: translateZ(calc(var(--t) * 1px)) rotateX(-90deg); }
+.iso-side-b { top: 14px; bottom: 14px; left: 100%; width: calc(var(--t) * 1px); transform-origin: left; transform: translateZ(calc(var(--t) * 1px)) rotateY(90deg); }
+.iso-label {
+  font-size: calc(var(--w) * .068); font-weight: 600; letter-spacing: -0.03em; color: rgba(27,28,28,.78);
+  white-space: nowrap; opacity: calc(1 - var(--f)); transition: color .3s;
+}
+.iso-plate.is-active .iso-top { background: linear-gradient(135deg, rgba(250,247,190,.88) 0%, rgba(245,237,97,.62) 60%, rgba(236,228,90,.7) 100%); border-color: rgba(27,28,28,.55); }
+.iso-plate.is-active .iso-label { color: var(--black); }
+.iso-mark { position: absolute; width: 34%; fill: var(--black); transform: rotate(-45deg); opacity: var(--f); }
+/* Fused: every plate turns white so the stack reads as one block */
+.iso.fused .iso-top { background: linear-gradient(135deg, rgba(255,255,255,.97), rgba(240,245,246,.94)); border-color: rgba(27,28,28,.14); }
+.iso.fused .iso-side { background: linear-gradient(90deg, rgba(220,229,231,.95), rgba(190,202,205,.95)); }
+
 @media (max-width: 900px) {
-  .stack-wrap { grid-template-columns: 1fr; }
-  .stack-wrap .section-head { position: static; }
-  .stack-layer { margin: 0 calc((var(--i) - 1) * 6px); }
-  .stack-panel { padding-left: 20px; }
+  .layerstack { height: calc((var(--n) + 1.6) * 64vh); }
+  .ls-grid { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; gap: 8px; padding-bottom: 64px; }
+  .ls-scene { grid-row: 1; }
+  .ls-steps { grid-row: 2; }
+  .ls-step:not(.is-active) { display: none; }
+  .ls-step.is-active .ls-body-inner { padding: 14px 16px 16px; }
+  .ls-body p { font-size: 15px; }
+  .iso { --w: min(250px, 58vw); }
 }
+
+/* Static version: reduced motion or no JS. Full stack, every description open, not pinned. */
+.no-js .layerstack, .layerstack.ls-static { height: auto; }
+.no-js .ls-pin, .ls-static .ls-pin { position: static; height: auto; min-height: 0; padding: 24px 0 var(--section); }
+.no-js .ls-step .ls-pill, .ls-static .ls-step .ls-pill { display: none; }
+.no-js .ls-step, .ls-static .ls-step { display: flex; background: var(--black); border-radius: 18px; width: min(400px, 100%); }
+.no-js .ls-step .ls-body, .ls-static .ls-step .ls-body { width: auto; }
+.no-js .ls-body, .ls-static .ls-body { grid-template-rows: 1fr; }
+.no-js .ls-body-inner, .ls-static .ls-body-inner { padding: 14px 18px 16px; }
+.no-js .ls-progress, .ls-static .ls-progress { display: none; }
+.no-js .ls-scene, .ls-static .ls-scene { min-height: 520px; }
+@media (max-width: 900px) { .no-js .ls-scene, .ls-static .ls-scene { min-height: 380px; } }

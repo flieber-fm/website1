@@ -968,42 +968,83 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .sol-others a { text-decoration: none; font-weight: 500; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--black); background: rgba(255,255,255,.35); }
 .sol-others a:hover { background: var(--white); }
 #control-and-approval, #together, #what-you-can-do, #works-with, #why, #everything { scroll-margin-top: 140px; }
-.stack-wrap { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
-.stack-wrap .section-head { margin-bottom: 0; position: sticky; top: 120px; }
-.stack { display: flex; flex-direction: column; gap: 10px; }
-.stack-axis { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); display: flex; align-items: center; gap: 10px; }
-.stack-axis::after { content: ""; flex: 1; height: 1px; background: var(--line-strong); }
-.stack-list { display: flex; flex-direction: column-reverse; gap: 8px; }
-.stack-layer {
-  margin: 0 calc((var(--i) - 1) * 14px);
-  background: var(--gray-light); border: 1px solid var(--line-strong); border-radius: var(--radius-m);
-  transition: background-color .25s, border-color .25s;
+.layerstack-sec { padding-bottom: 0; background: linear-gradient(180deg, var(--white) 0%, var(--gray-light) 30%, var(--gray-light) 100%); }
+.layerstack-sec .section-head { margin-bottom: clamp(16px, 3vw, 32px); }
+.layerstack { position: relative; height: calc((var(--n) + 1.6) * 72vh); }
+.ls-pin { position: sticky; top: 72px; height: calc(100vh - 72px); min-height: 560px; display: flex; align-items: center; overflow: hidden; }
+.ls-grid { position: relative; height: 100%; display: grid; grid-template-columns: minmax(300px, 400px) minmax(0, 1fr); gap: 24px; align-items: center; }
+.ls-steps { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; position: relative; z-index: 2; }
+.ls-step { display: flex; flex-direction: column; align-items: flex-start; max-width: 400px; background: var(--charcoal); color: var(--white); border-radius: 20px; transition: background-color .35s var(--ease), border-radius .35s var(--ease); }
+.ls-step.is-active { background: var(--black); border-radius: 18px; width: min(400px, 100%); }
+.ls-step:not(.is-active) .ls-body { width: 0; }
+.ls-pill { display: inline-flex; align-items: center; gap: 10px; padding: 9px 10px 9px 16px; background: transparent; border: 0; color: inherit; cursor: pointer; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; text-align: left; }
+.ls-plus { position: relative; width: 20px; height: 20px; flex: none; border-radius: 50%; background: rgba(240,245,246,.18); }
+.ls-plus::before, .ls-plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 9px; height: 1.5px; background: currentColor; transform: translate(-50%, -50%); }
+.ls-plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+.ls-step.is-active .ls-pill { display: none; }
+.ls-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s var(--ease); }
+.ls-step.is-active .ls-body { grid-template-rows: 1fr; }
+.ls-body-inner { overflow: hidden; }
+.ls-step.is-active .ls-body-inner { padding: 16px 20px 18px; }
+.ls-body p { color: var(--gray-light); font-size: 16px; line-height: 1.45; }
+.ls-body .ls-title { color: #A3AEB1; font-size: 13.5px; margin-bottom: 8px; }
+.ls-link { display: inline-flex; gap: 6px; margin-top: 12px; color: var(--yellow); font-weight: 600; font-size: 15px; text-decoration: none; }
+.ls-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.ls-progress { position: absolute; left: var(--gutter); bottom: 24px; width: 92px; height: 26px; border-radius: 999px; background: var(--charcoal); display: flex; align-items: center; padding: 0 12px; }
+.ls-progress::before { content: ""; position: absolute; left: 12px; right: 12px; height: 3px; border-radius: 3px; background: rgba(240,245,246,.25); }
+.ls-progress i { position: relative; height: 3px; border-radius: 3px; background: var(--white); width: calc(var(--p, 0) * 100%); }
+.ls-scene { position: relative; height: 100%; display: grid; place-items: center; perspective: 2600px; perspective-origin: 50% 40%; }
+.iso {
+  --w: min(360px, 30vw); --t: 12; --f: 0;
+  position: relative; width: var(--w); height: var(--w); transform-style: preserve-3d;
+  transform: translateY(6%) rotateX(57deg) rotateZ(45deg) translateZ(calc(var(--lift, -115) * 1px));
 }
-.stack-layer:hover { border-color: var(--black); }
-.stack-layer.open { background: var(--yellow); border-color: var(--black); }
-.stack-layer h3 { margin: 0; }
-.stack-btn {
-  width: 100%; display: flex; align-items: center; gap: 16px; text-align: left; cursor: pointer;
-  background: transparent; border: 0; padding: 16px 20px;
-  font-size: clamp(18px, 1.6vw, 21px); letter-spacing: -0.02em; font-weight: 500;
+.iso-floor { position: absolute; inset: -12%; border-radius: 40px; background: radial-gradient(closest-side, rgba(27,28,28,.22), rgba(27,28,28,0)); transform: translateZ(-30px); filter: blur(18px); }
+.iso-plate {
+  position: absolute; inset: 0; transform-style: preserve-3d;
+  transform: translateZ(calc(var(--z, calc(var(--i) * 46)) * 1px));
+  opacity: var(--o, 1);
 }
-.stack-n { font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--text-2); }
-.stack-layer.open .stack-n { color: var(--black); }
-.stack-name { flex: 1; }
-.stack-plus { position: relative; width: 24px; height: 24px; flex: none; border-radius: 7px; border: 1px solid var(--line-strong); background: var(--white); }
-.stack-plus::before, .stack-plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 1.5px; background: var(--black); transform: translate(-50%, -50%); }
-.stack-plus::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .25s var(--ease); }
-.stack-layer.open .stack-plus { border-color: var(--black); }
-.stack-layer.open .stack-plus::after { transform: translate(-50%, -50%) rotate(0deg); }
-.stack-panel { padding: 0 20px 20px 56px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
-.stack-panel[hidden] { display: none; }
-.stack-panel p { color: var(--black); max-width: 560px; }
+.iso-top {
+  position: absolute; inset: 0; border-radius: 20px; transform: translateZ(calc(var(--t) * 1px));
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, rgba(255,255,255,.80) 0%, rgba(214,224,226,.62) 55%, rgba(190,202,205,.70) 100%);
+  border: 1px solid rgba(27,28,28,.22);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.65), inset 0 0 40px rgba(255,255,255,.45);
+  transition: background .4s var(--ease), border-color .4s var(--ease);
+}
+.iso-side { position: absolute; background: linear-gradient(90deg, rgba(53,56,57,.55), rgba(27,28,28,.85)); transition: background .4s var(--ease); }
+.iso-side-a { left: 14px; right: 14px; top: 100%; height: calc(var(--t) * 1px); transform-origin: top; transform: translateZ(calc(var(--t) * 1px)) rotateX(-90deg); }
+.iso-side-b { top: 14px; bottom: 14px; left: 100%; width: calc(var(--t) * 1px); transform-origin: left; transform: translateZ(calc(var(--t) * 1px)) rotateY(90deg); }
+.iso-label {
+  font-size: calc(var(--w) * .068); font-weight: 600; letter-spacing: -0.03em; color: rgba(27,28,28,.78);
+  white-space: nowrap; opacity: calc(1 - var(--f)); transition: color .3s;
+}
+.iso-plate.is-active .iso-top { background: linear-gradient(135deg, rgba(250,247,190,.88) 0%, rgba(245,237,97,.62) 60%, rgba(236,228,90,.7) 100%); border-color: rgba(27,28,28,.55); }
+.iso-plate.is-active .iso-label { color: var(--black); }
+.iso-mark { position: absolute; width: 34%; fill: var(--black); transform: rotate(-45deg); opacity: var(--f); }
+.iso.fused .iso-top { background: linear-gradient(135deg, rgba(255,255,255,.97), rgba(240,245,246,.94)); border-color: rgba(27,28,28,.14); }
+.iso.fused .iso-side { background: linear-gradient(90deg, rgba(220,229,231,.95), rgba(190,202,205,.95)); }
 @media (max-width: 900px) {
-  .stack-wrap { grid-template-columns: 1fr; }
-  .stack-wrap .section-head { position: static; }
-  .stack-layer { margin: 0 calc((var(--i) - 1) * 6px); }
-  .stack-panel { padding-left: 20px; }
+  .layerstack { height: calc((var(--n) + 1.6) * 64vh); }
+  .ls-grid { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; gap: 8px; padding-bottom: 64px; }
+  .ls-scene { grid-row: 1; }
+  .ls-steps { grid-row: 2; }
+  .ls-step:not(.is-active) { display: none; }
+  .ls-step.is-active .ls-body-inner { padding: 14px 16px 16px; }
+  .ls-body p { font-size: 15px; }
+  .iso { --w: min(250px, 58vw); }
 }
+.no-js .layerstack, .layerstack.ls-static { height: auto; }
+.no-js .ls-pin, .ls-static .ls-pin { position: static; height: auto; min-height: 0; padding: 24px 0 var(--section); }
+.no-js .ls-step .ls-pill, .ls-static .ls-step .ls-pill { display: none; }
+.no-js .ls-step, .ls-static .ls-step { display: flex; background: var(--black); border-radius: 18px; width: min(400px, 100%); }
+.no-js .ls-step .ls-body, .ls-static .ls-step .ls-body { width: auto; }
+.no-js .ls-body, .ls-static .ls-body { grid-template-rows: 1fr; }
+.no-js .ls-body-inner, .ls-static .ls-body-inner { padding: 14px 18px 16px; }
+.no-js .ls-progress, .ls-static .ls-progress { display: none; }
+.no-js .ls-scene, .ls-static .ls-scene { min-height: 520px; }
+@media (max-width: 900px) { .no-js .ls-scene, .ls-static .ls-scene { min-height: 380px; } }
 
 </style>
 
@@ -1293,63 +1334,120 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
       </div>
     </section>
 
-    <!-- ================= 4. HOW FLIEBER IS BUILT (stacked six layers) ================= -->
-    <section class="section" id="how-flieber-is-built" aria-labelledby="stack-title">
+    <!-- ================= 4. HOW FLIEBER IS BUILT (stacked six layers) =================
+         Scroll-driven, after legora.com: the scene stays pinned while each layer drops onto the
+         stack (data first, at the bottom) and its card opens on the left; at the end the plates
+         close into one block. Pure CSS 3D; assets/js/site.js drives it. Reduced motion or no JS:
+         the full stack and every description show, unpinned. -->
+    <section class="section layerstack-sec" id="how-flieber-is-built" aria-labelledby="stack-title">
       <div class="wrap">
-        <div class="stack-wrap">
-          <div class="section-head reveal">
-            <span class="kicker">How Flieber is built</span>
-            <h2 class="h2" id="stack-title" style="margin-top:20px">Six layers between your data and a decision you can trust</h2>
-            <p class="lead">A language model on a spreadsheet can sound confident. Getting the answer right takes everything underneath it.</p>
-          </div>
-          <div class="stack reveal">
-            <span class="stack-axis stack-axis-top" aria-hidden="true">Decisions</span>
-            <!-- Layer 01 (data) is first in reading order and drawn at the bottom -->
-            <ol class="stack-list" id="stack">
-          <li class="stack-layer open" style="--i:1">
-            <h3><button class="stack-btn" type="button" aria-expanded="true" aria-controls="stack-1"><span class="stack-n">01</span><span class="stack-name">Your data</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-1">
-              <p>Connect sales channels, warehouses, 3PLs, suppliers and ERPs through native and assisted integrations, with gaps fixed and anomalies flagged.</p>
-              <a class="link-arrow" href="/features#data-layer">Data layer features <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
-          <li class="stack-layer" style="--i:2">
-            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-2"><span class="stack-n">02</span><span class="stack-name">Business context</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-2">
-              <p>SKU and bundle mapping, the supply chain map, replenishment rules and sales history adjusted for stockouts and promotions.</p>
-              <a class="link-arrow" href="/features#data-layer">Data layer features <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
-          <li class="stack-layer" style="--i:3">
-            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-3"><span class="stack-n">03</span><span class="stack-name">Planning engine</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-3">
-              <p>Forecasts, inventory projections, simulations and recommendations that respect MOQs, case packs, lead times and cash, built on proprietary algorithms and shaped by the business context of more than 1,000 commerce brands.</p>
-              <a class="link-arrow" href="/features#demand-forecasting">Forecasting features <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
-          <li class="stack-layer" style="--i:4">
-            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-4"><span class="stack-n">04</span><span class="stack-name">Collaborative AI</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-4">
-              <p>Ask in plain language, get answers with their reasoning, and run agents and workflows on schedule across Flieber and your connected apps.</p>
-              <a class="link-arrow" href="/features#workflows">Workflow features <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
-          <li class="stack-layer" style="--i:5">
-            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-5"><span class="stack-n">05</span><span class="stack-name">Where you work</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-5">
-              <p>The Flieber app, Slack and Google Sheets, plus Claude or your own agents through MCP and API.</p>
-              <a class="link-arrow" href="/features#access">Access features <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
-          <li class="stack-layer" style="--i:6">
-            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-6"><span class="stack-n">06</span><span class="stack-name">Control</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
-            <div class="stack-panel" id="stack-6">
-              <p>Approval rules you set, your data never sold or shared and no training on customer data.</p>
-              <a class="link-arrow" href="/features#control-and-approval">Control and approval <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </li>
+        <div class="section-head reveal">
+          <span class="kicker">How Flieber is built</span>
+          <h2 class="h2" id="stack-title" style="margin-top:20px">Six layers between your data and a decision you can trust</h2>
+          <p class="lead">A language model on a spreadsheet can sound confident. Getting the answer right takes everything underneath it.</p>
+        </div>
+      </div>
+      <div class="layerstack" id="layerstack" style="--n:6">
+        <div class="ls-pin">
+          <div class="wrap ls-grid">
+            <ol class="ls-steps" aria-label="The six layers, from data to decisions">
+              <li class="ls-step is-active" data-step="0">
+                <button class="ls-pill" type="button" aria-controls="ls-body-0" aria-expanded="true"><span class="ls-name">Your data</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-0">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Your data</p>
+                    <p>Connect sales channels, warehouses, 3PLs, suppliers and ERPs through native and assisted integrations, with gaps fixed and anomalies flagged.</p>
+                    <a class="ls-link" href="/features#data-layer">Data layer features <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="1">
+                <button class="ls-pill" type="button" aria-controls="ls-body-1" aria-expanded="false"><span class="ls-name">Business context</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-1">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Business context</p>
+                    <p>SKU and bundle mapping, the supply chain map, replenishment rules and sales history adjusted for stockouts and promotions.</p>
+                    <a class="ls-link" href="/features#data-layer">Data layer features <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="2">
+                <button class="ls-pill" type="button" aria-controls="ls-body-2" aria-expanded="false"><span class="ls-name">Planning engine</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-2">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Planning engine</p>
+                    <p>Forecasts, inventory projections, simulations and recommendations that respect MOQs, case packs, lead times and cash, built on proprietary algorithms and shaped by the business context of more than 1,000 commerce brands.</p>
+                    <a class="ls-link" href="/features#demand-forecasting">Forecasting features <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="3">
+                <button class="ls-pill" type="button" aria-controls="ls-body-3" aria-expanded="false"><span class="ls-name">Collaborative AI</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-3">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Collaborative AI</p>
+                    <p>Ask in plain language, get answers with their reasoning, and run agents and workflows on schedule across Flieber and your connected apps.</p>
+                    <a class="ls-link" href="/features#workflows">Workflow features <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="4">
+                <button class="ls-pill" type="button" aria-controls="ls-body-4" aria-expanded="false"><span class="ls-name">Where you work</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-4">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Where you work</p>
+                    <p>The Flieber app, Slack and Google Sheets, plus Claude or your own agents through MCP and API.</p>
+                    <a class="ls-link" href="/features#access">Access features <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="5">
+                <button class="ls-pill" type="button" aria-controls="ls-body-5" aria-expanded="false"><span class="ls-name">Control</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-5">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Control</p>
+                    <p>Approval rules you set, your data never sold or shared and no training on customer data.</p>
+                    <a class="ls-link" href="/features#control-and-approval">Control and approval <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </li>
             </ol>
-            <span class="stack-axis stack-axis-bottom" aria-hidden="true">Data</span>
+            <div class="ls-scene" aria-hidden="true">
+              <div class="iso" id="iso">
+                <div class="iso-floor"></div>
+                <div class="iso-plate" style="--i:0" data-plate="0">
+                  <div class="iso-top"><span class="iso-label">Your data</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:1" data-plate="1">
+                  <div class="iso-top"><span class="iso-label">Business context</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:2" data-plate="2">
+                  <div class="iso-top"><span class="iso-label">Planning engine</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:3" data-plate="3">
+                  <div class="iso-top"><span class="iso-label">Collaborative AI</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:4" data-plate="4">
+                  <div class="iso-top"><span class="iso-label">Where you work</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:5" data-plate="5">
+                  <div class="iso-top"><span class="iso-label">Control</span><svg class="iso-mark" viewBox="0 2 192 137" aria-hidden="true"><path d="M0.3 3.25C0 2.74 0.37 2.1 0.96 2.1L107.21 2.1C110.4 2.1 113.48 3.21 115.95 5.22L187.56 63.81C191.68 67.19 191.68 73.49 187.56 76.86L115.95 135.45C113.48 137.47 110.4 138.57 107.21 138.57L70.3 138.57C69.47 138.57 68.71 138.13 68.3 137.42L43.57 94.23C43.27 93.72 43.64 93.08 44.23 93.08L141.7 93.08C142.12 93.08 142.46 92.74 142.46 92.32L142.46 48.36C142.46 47.94 142.12 47.59 141.7 47.59L27.29 47.59C26.47 47.59 25.71 47.16 25.3 46.45L0.3 3.25"/></svg></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ls-progress" aria-hidden="true"><i></i></div>
           </div>
         </div>
       </div>
@@ -1922,24 +2020,70 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
     pick(0);
   }
 
-  /* ---------- How Flieber is built: stacked layers, one open at a time (Option 2) ---------- */
-  // Without JS every layer stays open (no hidden attribute in the markup).
-  var stack = document.getElementById('stack');
-  if (stack) {
-    var layerEls = [].slice.call(stack.querySelectorAll('.stack-layer'));
-    var setLayer = function (el, open) {
-      var b = el.querySelector('.stack-btn');
-      el.classList.toggle('open', open);
-      b.setAttribute('aria-expanded', String(open));
-      document.getElementById(b.getAttribute('aria-controls')).hidden = !open;
-    };
-    layerEls.forEach(function (el) {
-      setLayer(el, el.classList.contains('open'));
-      el.querySelector('.stack-btn').addEventListener('click', function () {
-        var opening = !el.classList.contains('open');
-        layerEls.forEach(function (o) { setLayer(o, o === el ? opening : false); });
+  /* ---------- How Flieber is built: scroll-driven layer stack (Option 2, after legora.com) ---------- */
+  // Scroll position maps to x: plate i drops while x goes from i to i+1, then the plates close up
+  // into one block (x from n to n+1). Reduced motion keeps the static, fully open version.
+  var ls = document.getElementById('layerstack');
+  if (ls) {
+    if (reduceMotion) {
+      ls.classList.add('ls-static');
+    } else {
+      var iso = document.getElementById('iso');
+      var pin = ls.querySelector('.ls-pin');
+      var plates = [].slice.call(ls.querySelectorAll('.iso-plate'));
+      var steps = [].slice.call(ls.querySelectorAll('.ls-step'));
+      var bar = ls.querySelector('.ls-progress');
+      var n = plates.length, X0 = 0.8, X1 = n + 1.3;
+      var GAP = 46, T = 12, DROP = 420;
+      var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+      var ease = function (v) { return 1 - Math.pow(1 - v, 3); };
+      var current = -1, ticking = false;
+
+      var setActive = function (k) {
+        if (k === current) return;
+        current = k;
+        steps.forEach(function (s, i) {
+          var on = i === k;
+          s.classList.toggle('is-active', on);
+          s.querySelector('.ls-pill').setAttribute('aria-expanded', String(on));
+        });
+      };
+      var render = function () {
+        ticking = false;
+        var total = ls.offsetHeight - pin.offsetHeight;
+        var p = total > 0 ? clamp(-ls.getBoundingClientRect().top / total, 0, 1) : 0;
+        var x = X0 + p * (X1 - X0);
+        var f = ease(clamp(x - n, 0, 1));
+        var gap = GAP * (1 - f) + T * f;
+        var top = 0;
+        plates.forEach(function (pl, i) {
+          var d = ease(clamp(x - i, 0, 1));
+          var rest = i * gap;
+          pl.style.setProperty('--z', (rest + (1 - d) * DROP).toFixed(1));
+          pl.style.setProperty('--o', clamp(d * 2.2, 0, 1).toFixed(3));
+          top = Math.max(top, rest * d);
+        });
+        var k = clamp(Math.floor(x), 0, n - 1);
+        plates.forEach(function (pl, i) { pl.classList.toggle('is-active', i === k && f < 0.05); });
+        iso.style.setProperty('--lift', (-(top + T) / 2).toFixed(1));
+        iso.style.setProperty('--f', f.toFixed(3));
+        iso.classList.toggle('fused', f > 0.5);
+        bar.style.setProperty('--p', p.toFixed(3));
+        setActive(k);
+      };
+      var request = function () { if (!ticking) { ticking = true; requestAnimationFrame(render); } };
+      window.addEventListener('scroll', request, { passive: true });
+      window.addEventListener('resize', request);
+      // A pill jumps to the point where its layer has just landed.
+      steps.forEach(function (s, i) {
+        s.querySelector('.ls-pill').addEventListener('click', function () {
+          var total = ls.offsetHeight - pin.offsetHeight;
+          var p = clamp((i + 0.95 - X0) / (X1 - X0), 0, 1);
+          window.scrollTo({ top: window.scrollY + ls.getBoundingClientRect().top + p * total, behavior: 'smooth' });
+        });
       });
-    });
+      render();
+    }
   }
 
   /* ---------- Reveal on scroll ---------- */

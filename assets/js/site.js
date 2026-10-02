@@ -71,24 +71,70 @@
     pick(0);
   }
 
-  /* ---------- How Flieber is built: stacked layers, one open at a time (Option 2) ---------- */
-  // Without JS every layer stays open (no hidden attribute in the markup).
-  var stack = document.getElementById('stack');
-  if (stack) {
-    var layerEls = [].slice.call(stack.querySelectorAll('.stack-layer'));
-    var setLayer = function (el, open) {
-      var b = el.querySelector('.stack-btn');
-      el.classList.toggle('open', open);
-      b.setAttribute('aria-expanded', String(open));
-      document.getElementById(b.getAttribute('aria-controls')).hidden = !open;
-    };
-    layerEls.forEach(function (el) {
-      setLayer(el, el.classList.contains('open'));
-      el.querySelector('.stack-btn').addEventListener('click', function () {
-        var opening = !el.classList.contains('open');
-        layerEls.forEach(function (o) { setLayer(o, o === el ? opening : false); });
+  /* ---------- How Flieber is built: scroll-driven layer stack (Option 2, after legora.com) ---------- */
+  // Scroll position maps to x: plate i drops while x goes from i to i+1, then the plates close up
+  // into one block (x from n to n+1). Reduced motion keeps the static, fully open version.
+  var ls = document.getElementById('layerstack');
+  if (ls) {
+    if (reduceMotion) {
+      ls.classList.add('ls-static');
+    } else {
+      var iso = document.getElementById('iso');
+      var pin = ls.querySelector('.ls-pin');
+      var plates = [].slice.call(ls.querySelectorAll('.iso-plate'));
+      var steps = [].slice.call(ls.querySelectorAll('.ls-step'));
+      var bar = ls.querySelector('.ls-progress');
+      var n = plates.length, X0 = 0.8, X1 = n + 1.3;
+      var GAP = 46, T = 12, DROP = 420;
+      var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+      var ease = function (v) { return 1 - Math.pow(1 - v, 3); };
+      var current = -1, ticking = false;
+
+      var setActive = function (k) {
+        if (k === current) return;
+        current = k;
+        steps.forEach(function (s, i) {
+          var on = i === k;
+          s.classList.toggle('is-active', on);
+          s.querySelector('.ls-pill').setAttribute('aria-expanded', String(on));
+        });
+      };
+      var render = function () {
+        ticking = false;
+        var total = ls.offsetHeight - pin.offsetHeight;
+        var p = total > 0 ? clamp(-ls.getBoundingClientRect().top / total, 0, 1) : 0;
+        var x = X0 + p * (X1 - X0);
+        var f = ease(clamp(x - n, 0, 1));
+        var gap = GAP * (1 - f) + T * f;
+        var top = 0;
+        plates.forEach(function (pl, i) {
+          var d = ease(clamp(x - i, 0, 1));
+          var rest = i * gap;
+          pl.style.setProperty('--z', (rest + (1 - d) * DROP).toFixed(1));
+          pl.style.setProperty('--o', clamp(d * 2.2, 0, 1).toFixed(3));
+          top = Math.max(top, rest * d);
+        });
+        var k = clamp(Math.floor(x), 0, n - 1);
+        plates.forEach(function (pl, i) { pl.classList.toggle('is-active', i === k && f < 0.05); });
+        iso.style.setProperty('--lift', (-(top + T) / 2).toFixed(1));
+        iso.style.setProperty('--f', f.toFixed(3));
+        iso.classList.toggle('fused', f > 0.5);
+        bar.style.setProperty('--p', p.toFixed(3));
+        setActive(k);
+      };
+      var request = function () { if (!ticking) { ticking = true; requestAnimationFrame(render); } };
+      window.addEventListener('scroll', request, { passive: true });
+      window.addEventListener('resize', request);
+      // A pill jumps to the point where its layer has just landed.
+      steps.forEach(function (s, i) {
+        s.querySelector('.ls-pill').addEventListener('click', function () {
+          var total = ls.offsetHeight - pin.offsetHeight;
+          var p = clamp((i + 0.95 - X0) / (X1 - X0), 0, 1);
+          window.scrollTo({ top: window.scrollY + ls.getBoundingClientRect().top + p * total, behavior: 'smooth' });
+        });
       });
-    });
+      render();
+    }
   }
 
   /* ---------- Reveal on scroll ---------- */
