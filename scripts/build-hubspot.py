@@ -27,6 +27,10 @@ PAGES = {  # source file: (site path, template label)
     "security/index.html": ("/security/", "Flieber 2026 - Security"),
     "contact/index.html": ("/contact/", "Flieber 2026 - Contact"),
 }
+# Option 2 adds five solutions pages (Option 2 brief, section 9). Templates are only built locally;
+# nothing is uploaded to HubSpot until an option is elected.
+for _slug in ["amazon-fba", "wholesale", "kits-and-bundles", "multi-brand", "promotions-and-launches"]:
+    PAGES[f"solutions/{_slug}/index.html"] = (f"/solutions/{_slug}/", f"Flieber 2026 B - Solutions - {_slug}")
 
 
 def data_uri(path: Path) -> str:
@@ -112,7 +116,7 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     for src_rel, (site_path, label) in PAGES.items():
         out = build(src_rel, site_path, label)
-        name = (site_path.strip("/") or "home") + ".html"
+        name = (site_path.strip("/").replace("/", "-") or "home") + ".html"
         (OUT / name).write_text(out, encoding="utf-8")
         print(f"{name}: {len(out.encode()) // 1024} KB")
 

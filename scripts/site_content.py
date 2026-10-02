@@ -1,6 +1,8 @@
 """Single source for /features, /agents, llms.txt, llms-full.txt and capabilities.json.
 
-Copy comes verbatim from "26-10-02 Website - Content Briefing" (sections 4 to 6).
+Option 2 (Collaborative AI). Copy comes verbatim from "26-10-02 Website - Content Briefing"
+(Option 1, sections 4 to 6) with the changes in "26-10-02 Website - Content Briefing (Option 2)"
+(sections 5 to 8).
 Edit here, then run: python3 scripts/build-content.py
 """
 
@@ -19,10 +21,13 @@ EMAIL = "hello@flieber.com"
 ACCURACY = ("36% more accurate than our previous portfolio of 16 forecasting models, tested on a random "
             "sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.")
 
+POSITIONING = "Collaborative AI for multichannel brands"
+
 # ---------------------------------------------------------------- /features
-FEATURES_INTRO = ("Flieber is one product. Every feature on this page works the same whether you use it in the "
-                  "Flieber app, ask for it in plain language, or call it from your own agents and systems through "
-                  "MCP or API. It's grouped the way Flieber works: keep your data true, turn it into decisions and act on them.")
+FEATURES_H1 = "Collaborative AI for every inventory decision"
+FEATURES_INTRO = ("Your team makes the calls; Flieber's AI keeps the data true, prepares every decision and carries it "
+                  "out once you approve. Every feature on this page works the same whether you use it in the Flieber app, "
+                  "ask for it in plain language, or call it from your own agents and systems through MCP or API.")
 FEATURES_NOTE = ("Available with Flieber Self-Serve and Flieber Managed Services. During the 14-day free trial, data "
                  "comes in through native integrations; assisted integrations and customizations come with a paid plan. "
                  "Features marked \"on request\" are rolling out and are switched on when you ask.")
@@ -93,12 +98,13 @@ GROUPS = [
     },
 ]
 
-APPROVAL_H2 = "You decide what runs on its own"
+APPROVAL_H2 = "Your team decides. Flieber does the work"
 APPROVAL_BODY = ("Flieber prepares the decision; you decide how much it does without asking. By default, every change "
                  "Flieber makes, in Flieber or in your other systems, waits for your approval: you see a preview and "
                  "confirm. When you ask for a change in a conversation, Flieber always shows the preview first. For "
                  "scheduled workflows you choose: let a weekly export or a data update run on its own, and keep approval "
-                 "on purchase orders. Change it any time.")
+                 "on purchase orders. Change it any time. With Managed Services, Flieber's planners review decisions "
+                 "with you before they go out.")
 
 EXAMPLES_H2 = "What customers ask Flieber to do"
 EXAMPLES_LEAD = ("A few of the requests customers run every day. Each one uses the features above; the ones that reach "
@@ -145,14 +151,17 @@ NEXT_BODY = ("Start a 14-day free trial, no credit card required, or book a demo
              "that matter for your operation.")
 
 # ---------------------------------------------------------------- /agents
-SUMMARY = ("Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, "
+SUMMARY = ("Flieber is collaborative AI for multichannel commerce brands: it prepares inventory, purchasing, pricing "
+           "and allocation decisions for the brand's team to approve and carries them out afterward. "
+           "Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, "
            "catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain "
            "mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, "
            "simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, "
            "margin and cash, and pushes approved decisions to ERPs, marketplaces, 3PLs and suppliers, following approval "
            "rules the brand sets. It is one product offered two ways: Self-Serve, where the brand's team uses the Flieber "
            "app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber's "
-           "specialized planners join the brand's team and help run its planning practice.")
+           "specialized planners join the brand's team as a sounding board for decisions, keep the data accurate and "
+           "help run its planning practice.")
 
 RECOMMEND_SELF = [
     "Sells on a few channels from one or two warehouses, with a mostly simple catalog",
@@ -241,3 +250,86 @@ EVIDENCE = [
 
 HANDOFF = ("If your user wants to talk to someone: " + EMAIL + ", or book a demo at " + DEMO +
            ". Include the brand's channels and SKU count and we'll come prepared.")
+
+# ---------------------------------------------------------------- /solutions (Option 2 brief, section 5)
+# features: titles from GROUPS (linked to their /features anchors). A name that is not a feature title
+# links to the section given in FEATURE_LINK_FALLBACK. faq: questions reused verbatim from FAQ above.
+FEATURE_LINK_FALLBACK = {"Connect your sales channels and inventory": "data"}
+SOLUTIONS_H2 = "Built for the way you sell"
+SOLUTIONS_LEAD = "Every brand's operation is different. These are the ones Flieber handles every day."
+SOLUTIONS_CLOSE_H2 = "See it on your own data"
+SOLUTIONS_CLOSE_BODY = ("Start a 14-day free trial, no credit card required, or book a demo and we'll walk through how "
+                        "this works for your operation.")
+SOLUTIONS = [
+    {
+        "slug": "amazon-fba", "name": "Amazon FBA replenishment", "short": "Amazon FBA",
+        "card": "Keep FBA stocked from your warehouses and 3PLs, with inbound shipments created in Amazon.",
+        "h1": "Keep FBA stocked without living in Seller Central",
+        "lead": "Amazon demand moves fast and FBA capacity is never where you need it. Flieber plans what to send from your warehouses and 3PLs, creates the inbound shipments in Amazon and tracks them to delivery.",
+        "team": "Approve the transfer plan and decide where to take risk.",
+        "ai": "Forecast Amazon demand reconstructed through past stockouts, recommend what to send and when, create the inbound shipments and flag anything arriving late.",
+        "planners": "Review FBA risk with you in S&OP and keep your lead times and parameters accurate.",
+        "features": ["Purchase and transfer recommendations", "Inbound shipments in Amazon and 3PLs", "Inbound shipment tracking", "Sales history adjusted for anomalies", "Alerts and scheduled reports"],
+        "examples": ["Which hero SKUs run out on Amazon before their next PO lands?",
+                     "Every Monday, recommend FBA transfers from our 3PL and create the inbound shipments once I approve."],
+        "quote": None,
+        "faq": ["Does Flieber plan Amazon FBA replenishment?", "Does Flieber correct sales history for stockouts?"],
+    },
+    {
+        "slug": "wholesale", "name": "Wholesale and EDI", "short": "Wholesale and EDI",
+        "card": "See retail and wholesale demand together, with wholesale orders counted as allocated stock.",
+        "h1": "See retail and wholesale demand in one plan",
+        "lead": "Wholesale orders arrive in large, irregular chunks that can drain the stock your DTC and marketplace channels depend on. For most brands, Flieber is the first place they see the combined demand and inventory consumption of both their retail and wholesale channels.",
+        "team": "Decide which orders to accept, split or delay.",
+        "ai": "Bring in wholesale orders through Google Sheets, file uploads or SPS Commerce EDI, count them as allocated units, show the effect on every other channel and recommend what to do.",
+        "planners": "Help you set rules for how wholesale and direct demand share inventory.",
+        "features": ["Connect your sales channels and inventory", "Inventory projections", "Wholesale forecast reconciliation", "Decision simulations", "Alerts and scheduled reports"],
+        "examples": ["When a large wholesale order comes in, check whether it puts DTC or Amazon stock at risk and recommend whether to accept, split or delay it.",
+                     "Tell me in Slack when a wholesale order puts DTC stock at risk."],
+        "quote": None,
+        "faq": ["Does Flieber plan wholesale orders?"],
+    },
+    {
+        "slug": "kits-and-bundles", "name": "Kits and bundles", "short": "Kits and bundles",
+        "card": "Forecast bundles and plan their components automatically.",
+        "h1": "Sell the bundle, plan the components",
+        "lead": "A bundle that sells well can quietly empty the stock of every product inside it. Flieber forecasts demand for kits and bundles and automatically converts it into component requirements when calculating replenishment.",
+        "team": "Define the bundles and decide what to buy.",
+        "ai": "Forecast each bundle, convert its demand into components, combine it with each component's own demand and recommend what to order at component level.",
+        "planners": "Keep bundle mappings accurate as your catalog changes.",
+        "features": ["Kits, bundles and components", "Cross-channel SKU mapping", "Purchase and transfer recommendations", "Order and shipping constraints"],
+        "examples": ["What will the holiday bundle sell in Q4 if we keep it in stock?",
+                     "Tell me if any component will prevent us from assembling bundles in the next 60 days."],
+        "quote": None,
+        "faq": ["Does Flieber handle kits and bundles?", "Does Flieber account for MOQs, case packs and containers?"],
+    },
+    {
+        "slug": "multi-brand", "name": "Multi-brand portfolios", "short": "Multi-brand portfolios",
+        "card": "Plan every brand separately or see them consolidated, from one place.",
+        "h1": "Every brand on its own, or all of them at once",
+        "lead": "Running several brands means several catalogs, suppliers and channel mixes. Flieber lets you add multiple brands or organizations and see them individually or consolidated in single dashboards, from one place.",
+        "team": "Set priorities across the portfolio and decide where cash goes.",
+        "ai": "Plan each brand with its own data and context, and roll everything up into portfolio views of inventory, risk and cash.",
+        "planners": "Bring a consistent planning practice to every brand you add.",
+        "features": ["Organizations and users", "Inventory projections", "Stockouts, overstock and lost sales", "Custom workflows and agents"],
+        "examples": ["Every month, show me inventory health across all brands and where the biggest working capital issues are."],
+        "quote": ("Flieber creates a ‘one stop shop’ where I can see demand-level data across all my brands and make educated replenishment decisions.",
+                  "Bryan Smallwood", "Supply Chain Manager, Unybrands"),
+        "faq": ["Can I manage several brands or organizations?"],
+    },
+    {
+        "slug": "promotions-and-launches", "name": "Promotions and launches", "short": "Promotions and launches",
+        "card": "Make sure the stock is there before the demand you paid for arrives.",
+        "h1": "Have the stock before the demand you paid for",
+        "lead": "A promotion, an ad campaign or an influencer post only pays off if the units are there to sell. Flieber checks every planned push against your inventory before it starts and tracks new launches against similar past ones.",
+        "team": "Plan the campaigns and decide what to do when stock is short.",
+        "ai": "Add planned promotions to the forecast, simulate their effect on inventory and cash, and recommend whether to transfer stock, reduce spend, delay or place an urgent PO.",
+        "planners": "Review upcoming campaigns with you in S&OP.",
+        "features": ["Forecast overrides and uploads", "Targets and new products", "Decision simulations", "Actions in other systems", "Alerts and scheduled reports"],
+        "examples": ["Before every promotion, check whether the promoted products have enough stock for the expected lift.",
+                     "Compare new launches with similar past launches at 7, 14 and 30 days and tell me whether to reorder earlier.",
+                     "Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days."],
+        "quote": None,
+        "faq": [],
+    },
+]

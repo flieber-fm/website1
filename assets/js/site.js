@@ -27,6 +27,61 @@
     }
   }
 
+  /* ---------- Nav: Solutions menu (Option 2) ---------- */
+  // Click or Enter opens it; Escape, a click outside or focus leaving closes it.
+  // In the collapsed phone menu the list is always shown (CSS), so the button does nothing there.
+  document.querySelectorAll('.nav-drop').forEach(function (drop) {
+    var btn = drop.querySelector('.nav-drop-btn');
+    var set = function (open) {
+      drop.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    };
+    btn.addEventListener('click', function () { set(!drop.classList.contains('open')); });
+    drop.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drop.classList.contains('open')) { set(false); btn.focus(); }
+    });
+    drop.addEventListener('focusout', function (e) { if (!drop.contains(e.relatedTarget)) set(false); });
+    document.addEventListener('click', function (e) { if (!drop.contains(e.target)) set(false); });
+  });
+
+  /* ---------- How Flieber is built: six layer tabs (Option 2) ---------- */
+  var layers = document.getElementById('layers');
+  if (layers) {
+    var ltabs = [].slice.call(layers.querySelectorAll('.layer-tab'));
+    var lpanels = ltabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+    var pick = function (n, focus) {
+      n = (n + ltabs.length) % ltabs.length;
+      ltabs.forEach(function (t, i) {
+        var on = i === n;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        lpanels[i].classList.toggle('active', on);
+      });
+      if (focus) ltabs[n].focus();
+    };
+    ltabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { pick(i); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); pick(i + 1, true); }
+        if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); pick(i - 1, true); }
+        if (e.key === 'Home') { e.preventDefault(); pick(0, true); }
+        if (e.key === 'End') { e.preventDefault(); pick(ltabs.length - 1, true); }
+      });
+    });
+    pick(0);
+  }
+
+  /* ---------- Solutions carousel arrows (Option 2) ---------- */
+  document.querySelectorAll('[data-scroll]').forEach(function (btn) {
+    var track = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!track) return;
+    btn.addEventListener('click', function () {
+      var card = track.querySelector('li');
+      var step = card ? card.getBoundingClientRect().width + 14 : track.clientWidth * 0.8;
+      track.scrollBy({ left: Number(btn.getAttribute('data-scroll')) * step, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  });
+
   /* ---------- Reveal on scroll ---------- */
   var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
   if ('IntersectionObserver' in window && !reduceMotion) {

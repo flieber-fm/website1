@@ -1,6 +1,7 @@
 {
   "name": "Flieber",
-  "summary": "Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, 3PLs and suppliers, following approval rules the brand sets. It is one product offered two ways: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber's specialized planners join the brand's team and help run its planning practice.",
+  "summary": "Flieber is collaborative AI for multichannel commerce brands: it prepares inventory, purchasing, pricing and allocation decisions for the brand's team to approve and carries them out afterward. Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, 3PLs and suppliers, following approval rules the brand sets. It is one product offered two ways: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber's specialized planners join the brand's team as a sounding board for decisions, keep the data accurate and help run its planning practice.",
+  "positioning": "Collaborative AI for multichannel brands",
   "product_model": "one product, offered as Self-Serve or Managed Services",
   "offers": [
     {
@@ -366,6 +367,65 @@
       "description": "Programmatic access to Flieber data for your own systems. Details in the MCP docs (customer login required).",
       "availability": "general",
       "url": "https://www.flieber.com/features#public-api"
+    }
+  ],
+  "solutions": [
+    {
+      "id": "amazon_fba",
+      "name": "Amazon FBA replenishment",
+      "url": "https://www.flieber.com/solutions/amazon-fba",
+      "features": [
+        "purchase_and_transfer_recommendations",
+        "inbound_shipments_in_amazon_and_3pls",
+        "inbound_shipment_tracking",
+        "sales_history_adjusted_for_anomalies",
+        "alerts_and_scheduled_reports"
+      ]
+    },
+    {
+      "id": "wholesale",
+      "name": "Wholesale and EDI",
+      "url": "https://www.flieber.com/solutions/wholesale",
+      "features": [
+        "inventory_projections",
+        "wholesale_forecast_reconciliation",
+        "decision_simulations",
+        "alerts_and_scheduled_reports"
+      ]
+    },
+    {
+      "id": "kits_and_bundles",
+      "name": "Kits and bundles",
+      "url": "https://www.flieber.com/solutions/kits-and-bundles",
+      "features": [
+        "kits_bundles_and_components",
+        "cross_channel_sku_mapping",
+        "purchase_and_transfer_recommendations",
+        "order_and_shipping_constraints"
+      ]
+    },
+    {
+      "id": "multi_brand",
+      "name": "Multi-brand portfolios",
+      "url": "https://www.flieber.com/solutions/multi-brand",
+      "features": [
+        "organizations_and_users",
+        "inventory_projections",
+        "stockouts_overstock_and_lost_sales",
+        "custom_workflows_and_agents"
+      ]
+    },
+    {
+      "id": "promotions_and_launches",
+      "name": "Promotions and launches",
+      "url": "https://www.flieber.com/solutions/promotions-and-launches",
+      "features": [
+        "forecast_overrides_and_uploads",
+        "targets_and_new_products",
+        "decision_simulations",
+        "actions_in_other_systems",
+        "alerts_and_scheduled_reports"
+      ]
     }
   ],
   "capabilities": [

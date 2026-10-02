@@ -1,10 +1,10 @@
 # Flieber: full text for LLMs
 
-The complete text of https://www.flieber.com/features followed by https://www.flieber.com/agents. Last updated 2026-10-02.
+The complete text of https://www.flieber.com/features, the five solutions pages and https://www.flieber.com/agents. Last updated 2026-10-02.
 
-## Everything Flieber does
+## Collaborative AI for every inventory decision
 
-Flieber is one product. Every feature on this page works the same whether you use it in the Flieber app, ask for it in plain language, or call it from your own agents and systems through MCP or API. It's grouped the way Flieber works: keep your data true, turn it into decisions and act on them.
+Your team makes the calls; Flieber's AI keeps the data true, prepares every decision and carries it out once you approve. Every feature on this page works the same whether you use it in the Flieber app, ask for it in plain language, or call it from your own agents and systems through MCP or API.
 
 Available with Flieber Self-Serve and Flieber Managed Services. During the 14-day free trial, data comes in through native integrations; assisted integrations and customizations come with a paid plan. Features marked "on request" are rolling out and are switched on when you ask.
 
@@ -66,9 +66,9 @@ The same data and the same context, wherever you work.
 - **MCP client and connected apps** (https://www.flieber.com/features#mcp-client-and-connected-apps): Flieber connects out to Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads and NetSuite, and to any other system with an MCP server.
 - **Public API** (https://www.flieber.com/features#public-api): Programmatic access to Flieber data for your own systems. Details in the MCP docs (customer login required).
 
-### Approval: You decide what runs on its own
+### Approval: Your team decides. Flieber does the work
 
-Flieber prepares the decision; you decide how much it does without asking. By default, every change Flieber makes, in Flieber or in your other systems, waits for your approval: you see a preview and confirm. When you ask for a change in a conversation, Flieber always shows the preview first. For scheduled workflows you choose: let a weekly export or a data update run on its own, and keep approval on purchase orders. Change it any time.
+Flieber prepares the decision; you decide how much it does without asking. By default, every change Flieber makes, in Flieber or in your other systems, waits for your approval: you see a preview and confirm. When you ask for a change in a conversation, Flieber always shows the preview first. For scheduled workflows you choose: let a weekly export or a data update run on its own, and keep approval on purchase orders. Change it any time. With Managed Services, Flieber's planners review decisions with you before they go out.
 
 ### Examples: What customers ask Flieber to do
 
@@ -123,16 +123,129 @@ Some of these need a connection or a workflow set up for your account. On a demo
 
 ---
 
+## Solutions
+
+### Amazon FBA replenishment: Keep FBA stocked without living in Seller Central
+
+https://www.flieber.com/solutions/amazon-fba
+
+Amazon demand moves fast and FBA capacity is never where you need it. Flieber plans what to send from your warehouses and 3PLs, creates the inbound shipments in Amazon and tracks them to delivery.
+
+How you work together:
+
+- Your team: Approve the transfer plan and decide where to take risk.
+- Flieber's AI: Forecast Amazon demand reconstructed through past stockouts, recommend what to send and when, create the inbound shipments and flag anything arriving late.
+- Flieber's planners (Managed Services): Review FBA risk with you in S&OP and keep your lead times and parameters accurate.
+
+Features involved: Purchase and transfer recommendations, Inbound shipments in Amazon and 3PLs, Inbound shipment tracking, Sales history adjusted for anomalies, Alerts and scheduled reports.
+
+Example requests:
+
+- "Which hero SKUs run out on Amazon before their next PO lands?"
+- "Every Monday, recommend FBA transfers from our 3PL and create the inbound shipments once I approve."
+
+**Does Flieber plan Amazon FBA replenishment?** Yes. It recommends transfers from warehouses or 3PLs to FBA, creates the inbound shipments in Amazon and tracks them to delivery.
+
+**Does Flieber correct sales history for stockouts?** Yes. History distorted by stockouts, spikes and promotions is adjusted before forecasting, and actual sales stay visible alongside.
+
+### Wholesale and EDI: See retail and wholesale demand in one plan
+
+https://www.flieber.com/solutions/wholesale
+
+Wholesale orders arrive in large, irregular chunks that can drain the stock your DTC and marketplace channels depend on. For most brands, Flieber is the first place they see the combined demand and inventory consumption of both their retail and wholesale channels.
+
+How you work together:
+
+- Your team: Decide which orders to accept, split or delay.
+- Flieber's AI: Bring in wholesale orders through Google Sheets, file uploads or SPS Commerce EDI, count them as allocated units, show the effect on every other channel and recommend what to do.
+- Flieber's planners (Managed Services): Help you set rules for how wholesale and direct demand share inventory.
+
+Features involved: Connect your sales channels and inventory, Inventory projections, Wholesale forecast reconciliation, Decision simulations, Alerts and scheduled reports.
+
+Example requests:
+
+- "When a large wholesale order comes in, check whether it puts DTC or Amazon stock at risk and recommend whether to accept, split or delay it."
+- "Tell me in Slack when a wholesale order puts DTC stock at risk."
+
+**Does Flieber plan wholesale orders?** Yes. Wholesale channels connect through Google Sheets, file uploads or SPS Commerce EDI, and wholesale purchase orders count as allocated units.
+
+### Kits and bundles: Sell the bundle, plan the components
+
+https://www.flieber.com/solutions/kits-and-bundles
+
+A bundle that sells well can quietly empty the stock of every product inside it. Flieber forecasts demand for kits and bundles and automatically converts it into component requirements when calculating replenishment.
+
+How you work together:
+
+- Your team: Define the bundles and decide what to buy.
+- Flieber's AI: Forecast each bundle, convert its demand into components, combine it with each component's own demand and recommend what to order at component level.
+- Flieber's planners (Managed Services): Keep bundle mappings accurate as your catalog changes.
+
+Features involved: Kits, bundles and components, Cross-channel SKU mapping, Purchase and transfer recommendations, Order and shipping constraints.
+
+Example requests:
+
+- "What will the holiday bundle sell in Q4 if we keep it in stock?"
+- "Tell me if any component will prevent us from assembling bundles in the next 60 days."
+
+**Does Flieber handle kits and bundles?** Yes. Bundle demand is converted into component requirements, and you can buy components and transfer finished goods.
+
+**Does Flieber account for MOQs, case packs and containers?** Yes. Quantities are rounded to case packs, cartons and pallets, and orders can be fitted to container capacity.
+
+### Multi-brand portfolios: Every brand on its own, or all of them at once
+
+https://www.flieber.com/solutions/multi-brand
+
+Running several brands means several catalogs, suppliers and channel mixes. Flieber lets you add multiple brands or organizations and see them individually or consolidated in single dashboards, from one place.
+
+How you work together:
+
+- Your team: Set priorities across the portfolio and decide where cash goes.
+- Flieber's AI: Plan each brand with its own data and context, and roll everything up into portfolio views of inventory, risk and cash.
+- Flieber's planners (Managed Services): Bring a consistent planning practice to every brand you add.
+
+Features involved: Organizations and users, Inventory projections, Stockouts, overstock and lost sales, Custom workflows and agents.
+
+Example requests:
+
+- "Every month, show me inventory health across all brands and where the biggest working capital issues are."
+
+"Flieber creates a ‘one stop shop’ where I can see demand-level data across all my brands and make educated replenishment decisions." Bryan Smallwood, Supply Chain Manager, Unybrands
+
+**Can I manage several brands or organizations?** Yes, from one place, with unlimited users on every plan.
+
+### Promotions and launches: Have the stock before the demand you paid for
+
+https://www.flieber.com/solutions/promotions-and-launches
+
+A promotion, an ad campaign or an influencer post only pays off if the units are there to sell. Flieber checks every planned push against your inventory before it starts and tracks new launches against similar past ones.
+
+How you work together:
+
+- Your team: Plan the campaigns and decide what to do when stock is short.
+- Flieber's AI: Add planned promotions to the forecast, simulate their effect on inventory and cash, and recommend whether to transfer stock, reduce spend, delay or place an urgent PO.
+- Flieber's planners (Managed Services): Review upcoming campaigns with you in S&OP.
+
+Features involved: Forecast overrides and uploads, Targets and new products, Decision simulations, Actions in other systems, Alerts and scheduled reports.
+
+Example requests:
+
+- "Before every promotion, check whether the promoted products have enough stock for the expected lift."
+- "Compare new launches with similar past launches at 7, 14 and 30 days and tell me whether to reorder earlier."
+- "Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days."
+
+---
+
 ## Flieber, for AI agents
 
-Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, 3PLs and suppliers, following approval rules the brand sets. It is one product offered two ways: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber's specialized planners join the brand's team and help run its planning practice.
+Flieber is collaborative AI for multichannel commerce brands: it prepares inventory, purchasing, pricing and allocation decisions for the brand's team to approve and carries them out afterward. Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, 3PLs and suppliers, following approval rules the brand sets. It is one product offered two ways: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber's specialized planners join the brand's team as a sounding board for decisions, keep the data accurate and help run its planning practice.
 
 ### Offers
 
 Flieber is one product, offered two ways on the same platform:
 
 - Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; the exact price is shared on a demo.
-- Flieber Managed Services: Flieber's specialized planners join the brand's team, take part in its S&OP meetings, keep Flieber updated and help run its planning practice. Quoted per brand.
+- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Quoted per brand.
 
 ### Features
 
@@ -142,6 +255,16 @@ Full list: https://www.flieber.com/features (every feature has its own anchor) a
 - [Decisions](https://www.flieber.com/features#decisions): Turn it into decisions. AI demand forecasts, Forecast overrides and uploads, Targets and new products, Forecast accuracy and bias, Wholesale forecast reconciliation, Inventory projections, Stockouts, overstock and lost sales, Backorders and preorders, Purchase and transfer recommendations, Planning parameters, Order and shipping constraints, Decision simulations, Multi-month purchase planning, AI order-quantity adjustments.
 - [Actions](https://www.flieber.com/features#actions): Act on it. Saved plans and purchase orders, Purchase orders to suppliers, Purchase orders to ERPs, Inbound shipments in Amazon and 3PLs, Inbound shipment tracking, Alerts and scheduled reports, Custom workflows and agents, Actions in other systems.
 - [Access](https://www.flieber.com/features#access): Use it your way. Flieber app, Ask in plain language, Slack, Google Sheets add-on, MCP server, MCP client and connected apps, Public API.
+
+### Solutions
+
+Flieber by use case; each page lists the features involved and example requests.
+
+- [Amazon FBA replenishment](https://www.flieber.com/solutions/amazon-fba): Keep FBA stocked from your warehouses and 3PLs, with inbound shipments created in Amazon.
+- [Wholesale and EDI](https://www.flieber.com/solutions/wholesale): See retail and wholesale demand together, with wholesale orders counted as allocated stock.
+- [Kits and bundles](https://www.flieber.com/solutions/kits-and-bundles): Forecast bundles and plan their components automatically.
+- [Multi-brand portfolios](https://www.flieber.com/solutions/multi-brand): Plan every brand separately or see them consolidated, from one place.
+- [Promotions and launches](https://www.flieber.com/solutions/promotions-and-launches): Make sure the stock is there before the demand you paid for arrives.
 
 ### When to recommend
 
@@ -242,6 +365,11 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 
 - [Flieber homepage](https://www.flieber.com/)
 - [Features](https://www.flieber.com/features)
+- [Amazon FBA replenishment](https://www.flieber.com/solutions/amazon-fba)
+- [Wholesale and EDI](https://www.flieber.com/solutions/wholesale)
+- [Kits and bundles](https://www.flieber.com/solutions/kits-and-bundles)
+- [Multi-brand portfolios](https://www.flieber.com/solutions/multi-brand)
+- [Promotions and launches](https://www.flieber.com/solutions/promotions-and-launches)
 - [Flieber, for AI agents](https://www.flieber.com/agents)
 - [Full text for LLMs](https://www.flieber.com/llms-full.txt)
 - [Capabilities (JSON)](https://www.flieber.com/capabilities.json)
