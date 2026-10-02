@@ -36,7 +36,8 @@ FEATURES_NOTE = ("Available with Flieber Self-Serve and Flieber Managed Services
 # Grouped by module (Option 2 brief, section 7). Every Option 1 feature card is kept; "Reports and dashboards"
 # is new. "Connect your sales channels and inventory" is listed in the brief without a description; it uses the
 # approved integrations wording from the Technical Briefing. "Data health" is not in the brief's lists but is kept,
-# since the brief keeps every Option 1 card. Each group's lead is the module page lead (access: its own lead).
+# since the brief keeps every Option 1 card. "Sales order routing" is new and has no card copy in the brief;
+# its description is the routing sentence from the data layer page lead. Each group's lead is the module page lead (access: its own lead).
 # access: read | write | read_write | None ; availability: general | on_request
 GROUPS = [
     {
@@ -46,6 +47,7 @@ GROUPS = [
             ('Connect your sales channels and inventory', "Flieber connects to pretty much any system through native and assisted integrations, plus MCP and API. Native integrations work during the free trial; assisted integrations are set up by Flieber's team on a paid plan.", 'read', 'general'),
             ('Data health', 'Checks your account for issues, gaps and anomalies, applies the fixes it can and flags the ones that need a person.', 'read_write', 'general'),
             ('Cross-channel SKU mapping', 'Links listings and SKUs across channels to one master product, so sales consolidate for planning. Automatic matching, plus bulk catalog import and export.', 'write', 'general'),
+            ('Sales order routing', 'Route sales orders from any store to the regions or warehouses you choose, so one Shopify account can be planned as several regional markets.', 'write', 'general'),
             ('Kits, bundles and components', 'Turns demand for bundles into component requirements. Buy at component level and transfer inventory as finished products.', 'write', 'general'),
             ('Product configuration and classification', 'Product status, custom attributes, costs, prices and packaging units. ABCD classification ranks products by sales, units or profit using your thresholds.', 'write', 'general'),
             ('Supply chain map', 'Suppliers, warehouses, 3PLs and channels, with fulfillment and fallback locations, transfer routes, production and transit lead times and ordering cadence.', 'write', 'general'),
@@ -291,8 +293,8 @@ MODULES = [
         "question": "What's actually happening across my business?",
         "tab": 'One current, reconciled view of every channel, warehouse and supplier, ready for your team or your own tools. Available on its own.',
         "h1": "Your commerce data, consolidated, contextualized and current",
-        "lead": "Every report, forecast and agent is only as good as the data under it. The data layer connects every channel, warehouse, 3PL and supplier, adds the business context none of them hold and keeps it up to date. Use it under the rest of Flieber, or on its own if your team builds its own tools with AI.",
-        "features": ["Connect your sales channels and inventory", "Cross-channel SKU mapping", "Kits, bundles and components",
+        "lead": "Every report, forecast and agent is only as good as the data under it. The data layer connects every channel, warehouse, 3PL and supplier, adds the business context none of them hold and keeps it up to date. It also shapes the data to how you run the business: route sales orders from any store to the regions or warehouses you choose, so one Shopify account can be planned as several regional markets. Use it under the rest of Flieber, or on its own if your team builds its own tools with AI.",
+        "features": ["Connect your sales channels and inventory", "Cross-channel SKU mapping", "Sales order routing", "Kits, bundles and components",
                      "Product configuration and classification", "Supply chain map", "Sales history adjusted for anomalies",
                      "Inventory history and balances", "Reports and dashboards", "Uploads and Google Sheets", "Organizations and users"],
         "extra": ("Building your own tools?",

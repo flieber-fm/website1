@@ -6,7 +6,7 @@ Copy source: *26-10-02 Website - Content Briefing (Option 2)*, on top of the Opt
 
 What Option 2 changes (revised brief, October 2):
 
-- **Homepage** (13 sections): Hero · Logos (under the hero) · Collaborative AI (your team, Flieber's AI, Flieber's planners) · How Flieber is built (scroll-driven, after legora.com: the scene stays pinned while each of the six layers drops onto an isometric CSS 3D stack, data first, and its card opens on the left; at the end the plates close into one white block with the Flieber mark. Reduced motion or no JS shows the full stack and every description, unpinned) · Modules (five question-led cards, each linking to its module page) · Why inventory · Solutions (two cards plus the comparison links) · What you can do with it · Two ways to work with Flieber · Proof · From the founder (`#who-we-are`) · Your data stays yours · Try it
+- **Homepage** (13 sections): Hero · Logos (under the hero) · Why inventory · Collaborative AI (your team, Flieber's AI, Flieber's planners) · How Flieber is built (scroll-driven, after legora.com: the scene stays pinned while each of the six layers drops onto an isometric CSS 3D stack, data first, and its card opens on the left; at the end the plates close into one white block with the Flieber mark. Reduced motion or no JS shows the full stack and every description, unpinned) · Modules (five question-led cards, each linking to its module page) · Solutions (two cards plus the comparison links) · What you can do with it · Two ways to work with Flieber · Proof · From the founder (`#who-we-are`) · Your data stays yours · Try it
 - **Five module pages** under `/product/`: data-layer, demand-forecasting, inventory-forecasting, replenishment, workflows. The data layer can be bought on its own
 - **Two solutions pages by type of business:** `/multichannel` (replaces /omnichannel and /ecommerce, which redirect to it) and `/agencies` (new copy on the existing URL). The three comparison pages and /managed-services stay on HubSpot and are linked
 - **/features** regrouped by module (`#data-layer`, `#demand-forecasting`, `#inventory-forecasting`, `#replenishment`, `#workflows`, `#access`), with the new "Reports and dashboards" card and the "Can I buy only the data layer?" question
@@ -21,6 +21,7 @@ Build: `python3 scripts/build-content.py` regenerates /features, the module page
 Choices made while building (open to change):
 
 - **"Connect your sales channels and inventory"** is listed in the brief as a Data layer feature without a description. Its card uses the approved integrations wording from the Technical Briefing
+- **"Sales order routing"** is new in the brief without card copy; its card uses the routing sentence from the data layer page lead, tagged Write (it sets routing rules)
 - **"Data health"** is in no Option 2 list, but the brief keeps every Option 1 card, so it stays in the Data layer section of /features (not on the data layer page, which follows the brief's list)
 - **Founder photo:** pending, shown as a monogram marked `[FOUNDER PHOTO]`
 - **Module one-liners:** the homepage card answers (brief 4.5) are reused as the /features section leads, on the module pages' "Works with" cards, on /agents and in the llms files, since the brief no longer has any other one-line module descriptions

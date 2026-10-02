@@ -75,6 +75,15 @@
       "url": "https://www.flieber.com/features#cross-channel-sku-mapping"
     },
     {
+      "id": "sales_order_routing",
+      "group": "data-layer",
+      "name": "Sales order routing",
+      "description": "Route sales orders from any store to the regions or warehouses you choose, so one Shopify account can be planned as several regional markets.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#sales-order-routing"
+    },
+    {
       "id": "kits_bundles_and_components",
       "group": "data-layer",
       "name": "Kits, bundles and components",
@@ -410,6 +419,7 @@
       "features": [
         "connect_your_sales_channels_and_inventory",
         "cross_channel_sku_mapping",
+        "sales_order_routing",
         "kits_bundles_and_components",
         "product_configuration_and_classification",
         "supply_chain_map",
