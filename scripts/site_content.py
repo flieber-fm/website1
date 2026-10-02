@@ -391,7 +391,7 @@ BYC = {
         ]),
         ("ai-and-execution", "AI and execution", [
             ("Can your team ask questions in plain language and get answers from your own data?",
-             "Flieber: yes, in the app or in Slack."),
+             "Flieber: yes, in the app, in Slack or in any agent you choose (Claude, ChatGPT or any other)."),
             ("Can your own AI agents work with it?",
              "Flieber: Claude, Cursor and any MCP-compatible agent connect through its MCP server; your systems can use its public API."),
             ("Does it carry approved decisions into the systems where they land?",
@@ -405,8 +405,11 @@ BYC = {
             ("Do you pay per user?", "Flieber: unlimited users on every plan."),
             ("Is there an expert who can plan alongside your team if you need one?",
              "Flieber: Managed Services adds Flieber's planners as a sounding board for your decisions."),
-            ("Do you actually need a warehouse management system, a full ERP or production planning (MRP)?",
-             "If so, choose one of those first. Flieber plans finished-goods inventory and connects to those systems; it doesn't replace them."),
+            ("Do you need a warehouse management system, a full ERP or production planning (MRP)?",
+             "Flieber: if your warehousing runs through 3PLs, Flieber consolidates their inventory data for you, so you may "
+             "not need a WMS of your own. If you already use an ERP, WMS or MRP, Flieber connects to it as a source of "
+             "truth or pushes approved decisions into it. What Flieber doesn't do is replace them: it doesn't run "
+             "accounting, warehouse operations or manufacturing."),
         ]),
     ],
     "close_h2": "Ask us the same questions",

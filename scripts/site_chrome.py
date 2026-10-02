@@ -1,7 +1,7 @@
 """Navigation and footer shared by every page (Option 2 brief, sections 3 and 4).
 
-Navigation: Product (menu: the five modules, then All features) · Solutions (menu: the two pages by type of
-business, then Before you choose) · Pricing · Security · Who we are · /agents, then Log in · Book a demo · Start free trial.
+Navigation: Product (menu: the five modules, then All features and Security & data) · Solutions (menu: the two pages by type of
+business, then Before you choose) · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
 build-content.py writes these into every page listed in PAGE_FILES.
 """
 import html
@@ -18,7 +18,7 @@ PAGE_FILES = {  # file: (path prefix to the site root, current nav item)
     "index.html": ("", None),
     "features/index.html": ("../", "product"),
     "pricing/index.html": ("../", "pricing"),
-    "security/index.html": ("../", "security"),
+    "security/index.html": ("../", "product"),
     "contact/index.html": ("../", None),
     "agents/index.html": ("../", "agents"),
 }
@@ -48,6 +48,7 @@ def nav_html(p: str, cur) -> str:
         return f'<a href="{href}"{ac}>{label}</a>'
     product = "\n".join(f'            <a href="{p}product/{m["slug"]}/">{esc(m["name"])}</a>' for m in C.MODULES)
     product += f'\n            <a class="nav-menu-all" href="{p}features/">All features <span aria-hidden="true">→</span></a>'
+    product += f'\n            <a href="{p}security/">Security &amp; data</a>'
     sol = "\n".join(f'            <a href="{p}{x["slug"]}/">{esc(x["name"])}</a>' for x in C.SOLUTIONS)
     sol += f'\n            <a href="{p}{C.BYC["slug"]}/">{esc(C.BYC["name"])}</a>'
     agents_cur = ' aria-current="page"' if cur == "agents" else ""
@@ -60,7 +61,6 @@ def nav_html(p: str, cur) -> str:
         {drop_html("product", "Product", cur, product)}
         {drop_html("solutions", "Solutions", cur, sol)}
         {a(p + "pricing/", "Pricing", "pricing")}
-        {a(p + "security/", "Security", "security")}
         <a href="{p}#who-we-are">Who we are</a>
         <a class="agents-link" href="{p}agents/"{agents_cur} aria-label="For AI agents"><code>/agents</code></a>
         <a class="menu-only" href="https://app.flieber.com">Log in</a>
