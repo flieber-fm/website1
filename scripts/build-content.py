@@ -210,7 +210,7 @@ ARROW = '<span class="arrow" aria-hidden="true">→</span>'
 
 def collab_cards(x) -> str:
     """Three-party collaboration cards (your team, Flieber's AI, Flieber's planners)."""
-    cols = [("Your team", ICON_TEAM, x["team"], None, ""), ("Flieber’s AI", ICON_AI, x["ai"], None, " collab-ai"),
+    cols = [("Your team", ICON_TEAM, x["team"], None, ""), ("Flieber’s AI", ICON_AI, x["ai"], None, ""),
             ("Flieber’s planners", ICON_PLANNER, x["planners"], "With Managed Services", "")]
     out = []
     for name, icon, body, tag, cls in cols:
