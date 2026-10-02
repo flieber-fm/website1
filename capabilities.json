@@ -1,11 +1,16 @@
 {
   "name": "Flieber",
-  "summary": "Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level with anomaly correction, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, suppliers and any other system it connects to through MCP. It is offered two ways on the same platform: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber planners join the brand's team, keep Flieber updated and help run its planning practice.",
+  "summary": "Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, 3PLs and suppliers, following approval rules the brand sets. It is one product offered two ways: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber's specialized planners join the brand's team and help run its planning practice.",
+  "product_model": "one product, offered as Self-Serve or Managed Services",
   "offers": [
     {
       "name": "Flieber Self-Serve",
-      "delivery": ["app", "mcp", "api"],
-      "starting_price": "on request",
+      "delivery": [
+        "app",
+        "mcp",
+        "api"
+      ],
+      "price": "Priced to your operation",
       "best_for": [
         "Sells on a few channels from one or two warehouses, with a mostly simple catalog",
         "Wants a ready-made app, or builds its own reports, workflows or agents",
@@ -14,8 +19,10 @@
     },
     {
       "name": "Flieber Managed Services",
-      "delivery": ["managed"],
-      "starting_price": "quoted per brand",
+      "delivery": [
+        "managed"
+      ],
+      "price": "Quoted per brand",
       "best_for": [
         "Sells across many channels, warehouses or regions",
         "Runs kits, bundles, backorders, long lead times or high MOQs",
@@ -23,37 +30,554 @@
       ]
     }
   ],
-  "capabilities": [
-    { "id": "data_health", "input": "Brand account", "output": "Issues found, gaps, anomalies, fixes applied", "access": "read" },
-    { "id": "inventory_position", "input": "SKU, channel, location", "output": "On-hand, inbound, days of cover", "access": "read" },
-    { "id": "demand_forecast", "input": "SKU, channel, horizon", "output": "Forecast and anomaly-corrected history (stockouts, promotions)", "access": "read" },
-    { "id": "decision_simulation", "input": "A proposed change", "output": "Inventory, revenue, margin and cash impact", "access": "read" },
-    { "id": "replenishment_plan", "input": "Supplier or SKU set", "output": "Draft POs with MOQs applied", "access": "read" },
-    { "id": "push_to_erp", "input": "Approved PO", "output": "PO in NetSuite, or in light ERPs such as Cin7 and Brightpearl", "access": "write_with_approval" },
-    { "id": "push_to_other_systems", "input": "Approved decision", "output": "Update in a marketplace, a supplier system or any system connected through MCP", "access": "write_with_approval" },
-    { "id": "scheduled_agents", "input": "Plain-language rule", "output": "Recurring report or alert", "access": "write" }
+  "features_url": "https://www.flieber.com/features",
+  "features": [
+    {
+      "id": "data_health",
+      "group": "data",
+      "name": "Data health",
+      "description": "Checks your account for issues, gaps and anomalies, applies the fixes it can and flags the ones that need a person.",
+      "access": "read_write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#data-health"
+    },
+    {
+      "id": "cross_channel_sku_mapping",
+      "group": "data",
+      "name": "Cross-channel SKU mapping",
+      "description": "Links listings and SKUs across channels to one master product, so sales consolidate for planning. Automatic matching, plus bulk catalog import and export.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#cross-channel-sku-mapping"
+    },
+    {
+      "id": "kits_bundles_and_components",
+      "group": "data",
+      "name": "Kits, bundles and components",
+      "description": "Turns demand for bundles into component requirements. Buy at component level and transfer inventory as finished products.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#kits-bundles-and-components"
+    },
+    {
+      "id": "product_configuration_and_classification",
+      "group": "data",
+      "name": "Product configuration and classification",
+      "description": "Product status, custom attributes, costs, prices and packaging units. ABCD classification ranks products by sales, units or profit using your thresholds.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#product-configuration-and-classification"
+    },
+    {
+      "id": "supply_chain_map",
+      "group": "data",
+      "name": "Supply chain map",
+      "description": "Suppliers, warehouses, 3PLs and channels, with fulfillment and fallback locations, transfer routes, production and transit lead times and ordering cadence.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#supply-chain-map"
+    },
+    {
+      "id": "sales_history_adjusted_for_anomalies",
+      "group": "data",
+      "name": "Sales history adjusted for anomalies",
+      "description": "Corrects history distorted by stockouts, spikes and promotions, and shows actual sales next to the adjusted demand used for forecasting.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#sales-history-adjusted-for-anomalies"
+    },
+    {
+      "id": "inventory_history_and_balances",
+      "group": "data",
+      "name": "Inventory history and balances",
+      "description": "Snapshots and balances across every connected location, including inbound and in-transit stock.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#inventory-history-and-balances"
+    },
+    {
+      "id": "uploads_and_google_sheets",
+      "group": "data",
+      "name": "Uploads and Google Sheets",
+      "description": "Bulk updates to catalog, forecasts, shipments, bundles and wholesale data through CSV files or Google Sheets, with a preview before anything is saved.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#uploads-and-google-sheets"
+    },
+    {
+      "id": "organizations_and_users",
+      "group": "data",
+      "name": "Organizations and users",
+      "description": "Manage several organizations from one place, with unlimited users on every plan and Admin and Member roles.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#organizations-and-users"
+    },
+    {
+      "id": "ai_demand_forecasts",
+      "group": "decisions",
+      "name": "AI demand forecasts",
+      "description": "Product and channel level forecasts across marketplaces, DTC and wholesale, built from adjusted history and seasonality. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#ai-demand-forecasts"
+    },
+    {
+      "id": "forecast_overrides_and_uploads",
+      "group": "decisions",
+      "name": "Forecast overrides and uploads",
+      "description": "Import your own forecasts, or adjust at SKU, store, channel or group level, including planned promotions and events.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#forecast-overrides-and-uploads"
+    },
+    {
+      "id": "targets_and_new_products",
+      "group": "decisions",
+      "name": "Targets and new products",
+      "description": "Apply growth percentages, unit targets or revenue targets across selected products. Forecast new products from similar ones or from a manual curve.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#targets-and-new-products"
+    },
+    {
+      "id": "forecast_accuracy_and_bias",
+      "group": "decisions",
+      "name": "Forecast accuracy and bias",
+      "description": "Error and bias metrics, with monthly forecast versions saved so past predictions can be compared with what actually sold. Forecast value added reports on request.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#forecast-accuracy-and-bias"
+    },
+    {
+      "id": "wholesale_forecast_reconciliation",
+      "group": "decisions",
+      "name": "Wholesale forecast reconciliation",
+      "description": "Finds wholesale demand parked on dates that passed without a sale and suggests where to move it. On request.",
+      "access": "read_write",
+      "availability": "on_request",
+      "url": "https://www.flieber.com/features#wholesale-forecast-reconciliation"
+    },
+    {
+      "id": "inventory_projections",
+      "group": "decisions",
+      "name": "Inventory projections",
+      "description": "Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and consolidated warehouse needs.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#inventory-projections"
+    },
+    {
+      "id": "stockouts_overstock_and_lost_sales",
+      "group": "decisions",
+      "name": "Stockouts, overstock and lost sales",
+      "description": "Projected stockout dates, products below safety stock, excess inventory and the sales lost to unavailable stock or late shipments.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#stockouts-overstock-and-lost-sales"
+    },
+    {
+      "id": "backorders_and_preorders",
+      "group": "decisions",
+      "name": "Backorders and preorders",
+      "description": "Counts accumulated backorder demand in inventory and replenishment calculations, with settings by channel, and plans for products sold before they arrive.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#backorders-and-preorders"
+    },
+    {
+      "id": "purchase_and_transfer_recommendations",
+      "group": "decisions",
+      "name": "Purchase and transfer recommendations",
+      "description": "What to order or transfer, how much and when, by product and location, including replenishment from warehouses or 3PLs to fulfillment locations such as FBA.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#purchase-and-transfer-recommendations"
+    },
+    {
+      "id": "planning_parameters",
+      "group": "decisions",
+      "name": "Planning parameters",
+      "description": "Safety stock, target days of cover, overstock thresholds, lead times and order frequency, with rules for products, categories and channels.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#planning-parameters"
+    },
+    {
+      "id": "order_and_shipping_constraints",
+      "group": "decisions",
+      "name": "Order and shipping constraints",
+      "description": "Minimum order quantities and supplier constraints, container planning and rounding to case packs, cartons or pallets.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#order-and-shipping-constraints"
+    },
+    {
+      "id": "decision_simulations",
+      "group": "decisions",
+      "name": "Decision simulations",
+      "description": "Test changes to order quantities, demand, arrival dates or lead times and see the effect on inventory, revenue, margin and cash before anything is committed.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#decision-simulations"
+    },
+    {
+      "id": "multi_month_purchase_planning",
+      "group": "decisions",
+      "name": "Multi-month purchase planning",
+      "description": "Splits a long buying horizon into seasonally weighted purchase orders, with cartons, MOQs and lead times applied and periods already covered by stock left at zero.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#multi-month-purchase-planning"
+    },
+    {
+      "id": "ai_order_quantity_adjustments",
+      "group": "decisions",
+      "name": "AI order-quantity adjustments",
+      "description": "Rebalances planned quantities across destinations and fits orders to container capacity, budget and cash-flow limits, following notes you write in plain language.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#ai-order-quantity-adjustments"
+    },
+    {
+      "id": "saved_plans_and_purchase_orders",
+      "group": "actions",
+      "name": "Saved plans and purchase orders",
+      "description": "Replenishment plans by supplier and date, with costs. Create and track POs, group them under master POs and record placed-order status.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#saved-plans-and-purchase-orders"
+    },
+    {
+      "id": "purchase_orders_to_suppliers",
+      "group": "actions",
+      "name": "Purchase orders to suppliers",
+      "description": "Sends each PO straight into the supplier's system or as an email, CSV file or Google Sheet in the supplier's own format, with products identified by SKU or product name.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#purchase-orders-to-suppliers"
+    },
+    {
+      "id": "purchase_orders_to_erps",
+      "group": "actions",
+      "name": "Purchase orders to ERPs",
+      "description": "Pushes approved POs into NetSuite or light ERPs such as Cin7 and Brightpearl.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#purchase-orders-to-erps"
+    },
+    {
+      "id": "inbound_shipments_in_amazon_and_3pls",
+      "group": "actions",
+      "name": "Inbound shipments in Amazon and 3PLs",
+      "description": "Creates inbound shipments in Amazon and in connected 3PL and warehouse systems from an approved plan.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#inbound-shipments-in-amazon-and-3pls"
+    },
+    {
+      "id": "inbound_shipment_tracking",
+      "group": "actions",
+      "name": "Inbound shipment tracking",
+      "description": "Follows POs and shipments through delivery, with manual entry, Google Sheets sync and automatic import of connected inbound shipments such as Amazon FBA.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#inbound-shipment-tracking"
+    },
+    {
+      "id": "alerts_and_scheduled_reports",
+      "group": "actions",
+      "name": "Alerts and scheduled reports",
+      "description": "Scheduled checks for stockout risk, excess inventory and orders due, delivered by email, Slack, Microsoft Teams or Google Sheets.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#alerts-and-scheduled-reports"
+    },
+    {
+      "id": "custom_workflows_and_agents",
+      "group": "actions",
+      "name": "Custom workflows and agents",
+      "description": "Describe a recurring job in plain language and Flieber runs it on schedule, across its own data and your connected apps.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#custom-workflows-and-agents"
+    },
+    {
+      "id": "actions_in_other_systems",
+      "group": "actions",
+      "name": "Actions in other systems",
+      "description": "Flieber is also an MCP client, so it can connect to any system with an MCP server and act where the decision lands: adjust an ad campaign, update a price, confirm with a supplier.",
+      "access": "write",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#actions-in-other-systems"
+    },
+    {
+      "id": "flieber_app",
+      "group": "access",
+      "name": "Flieber app",
+      "description": "Planning screens, saved views, dashboards and exports to CSV.",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#flieber-app"
+    },
+    {
+      "id": "ask_in_plain_language",
+      "group": "access",
+      "name": "Ask in plain language",
+      "description": "Ask questions about your data and get answers, tables, charts and dashboards. Save reports, refresh them and keep the conversation going.",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#ask-in-plain-language"
+    },
+    {
+      "id": "slack",
+      "group": "access",
+      "name": "Slack",
+      "description": "Ask questions and receive alerts in Slack.",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#slack"
+    },
+    {
+      "id": "google_sheets_add_on",
+      "group": "access",
+      "name": "Google Sheets add-on",
+      "description": "Pulls Flieber data into your own sheets and refreshes it on a schedule.",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#google-sheets-add-on"
+    },
+    {
+      "id": "mcp_server",
+      "group": "access",
+      "name": "MCP server",
+      "description": "Connect Claude, Cursor or your own agents. Requests go to Flieber's own agent (Flieber Studio), which answers questions and carries out the same actions as the app, following your approval rules. Answers typically take 30 seconds to 5 minutes. Full action list in the MCP docs (customer login required).",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#mcp-server"
+    },
+    {
+      "id": "mcp_client_and_connected_apps",
+      "group": "access",
+      "name": "MCP client and connected apps",
+      "description": "Flieber connects out to Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads and NetSuite, and to any other system with an MCP server.",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#mcp-client-and-connected-apps"
+    },
+    {
+      "id": "public_api",
+      "group": "access",
+      "name": "Public API",
+      "description": "Programmatic access to Flieber data for your own systems. Details in the MCP docs (customer login required).",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#public-api"
+    }
   ],
+  "capabilities": [
+    {
+      "id": "data_health",
+      "name": "Data health",
+      "input": "Brand account",
+      "output": "Issues, gaps and anomalies found; fixes applied; items flagged for a person",
+      "access": "read_write"
+    },
+    {
+      "id": "inventory_position",
+      "name": "Inventory position",
+      "input": "SKU, channel, location",
+      "output": "On-hand, inbound, in transit, days of cover",
+      "access": "read"
+    },
+    {
+      "id": "demand_forecast",
+      "name": "Demand forecast",
+      "input": "SKU, channel, horizon",
+      "output": "Forecast and anomaly-adjusted history",
+      "access": "read"
+    },
+    {
+      "id": "forecast_accuracy",
+      "name": "Forecast accuracy",
+      "input": "SKU set, period",
+      "output": "Error, bias and saved forecast versions",
+      "access": "read"
+    },
+    {
+      "id": "stockout_overstock_risk",
+      "name": "Stockout and overstock risk",
+      "input": "SKU set",
+      "output": "Stockout dates, excess inventory, lost sales",
+      "access": "read"
+    },
+    {
+      "id": "decision_simulation",
+      "name": "Decision simulation",
+      "input": "A proposed change",
+      "output": "Inventory, revenue, margin and cash impact",
+      "access": "write"
+    },
+    {
+      "id": "replenishment_plan",
+      "name": "Replenishment plan",
+      "input": "Supplier or SKU set",
+      "output": "Purchase and transfer recommendations with MOQs, case packs and lead times applied",
+      "access": "read"
+    },
+    {
+      "id": "multi_month_purchase_plan",
+      "name": "Multi-month purchase plan",
+      "input": "Supplier, horizon",
+      "output": "Seasonally weighted purchase orders",
+      "access": "write"
+    },
+    {
+      "id": "catalog_planning_data",
+      "name": "Catalog and planning data",
+      "input": "Bundles, SKU mappings, parameters, forecasts, shipments",
+      "output": "Updated records in Flieber",
+      "access": "write"
+    },
+    {
+      "id": "push_to_erp",
+      "name": "Push to ERP",
+      "input": "Approved PO",
+      "output": "PO in NetSuite, or in light ERPs such as Cin7 and Brightpearl",
+      "access": "write"
+    },
+    {
+      "id": "push_to_suppliers",
+      "name": "Push to suppliers",
+      "input": "Approved PO",
+      "output": "PO sent into the supplier's system or as an email, CSV file or Google Sheet",
+      "access": "write"
+    },
+    {
+      "id": "push_to_marketplaces_3pls",
+      "name": "Push to marketplaces and 3PLs",
+      "input": "Approved replenishment plan",
+      "output": "Inbound shipment created in Amazon or in a connected 3PL or warehouse system",
+      "access": "write"
+    },
+    {
+      "id": "scheduled_agents",
+      "name": "Scheduled agents",
+      "input": "Plain-language rule",
+      "output": "Recurring report, alert, export or action",
+      "access": "write"
+    },
+    {
+      "id": "actions_connected_systems",
+      "name": "Actions in connected systems",
+      "input": "Plain-language request",
+      "output": "Action in any system with an MCP server",
+      "access": "write"
+    }
+  ],
+  "approval": {
+    "default": "required",
+    "configurable_by_customer": true,
+    "conversation_writes": "always preview then confirm",
+    "scheduled_workflows": "customer can allow them to run without confirmation"
+  },
+  "mcp": {
+    "server": true,
+    "client": true,
+    "server_handled_by": "Flieber Studio agent",
+    "typical_response_seconds": {
+      "min": 30,
+      "max": 300
+    },
+    "connected_apps": [
+      "Gmail",
+      "Outlook",
+      "Slack",
+      "Microsoft Teams",
+      "Google Sheets",
+      "OneDrive",
+      "Notion",
+      "Airtable",
+      "Meta Ads",
+      "Google Ads",
+      "NetSuite"
+    ],
+    "connects_to_any_mcp_server": true
+  },
   "integrations": {
-    "native_note": "One-click connection, available during the free trial",
-    "native": ["Amazon Seller Central", "Shopify", "Walmart", "eBay", "Etsy", "BigCommerce", "Google Sheets"],
-    "assisted_note": "Parametrized connections set up and customized by the Flieber team; included on a paid plan, not during the free trial",
+    "native": [
+      "Amazon Seller Central",
+      "Shopify",
+      "Walmart (including WFS)",
+      "TikTok Shop",
+      "eBay",
+      "Etsy",
+      "BigCommerce",
+      "Google Sheets"
+    ],
     "assisted": {
-      "Sales channels and marketplaces": ["Shopify Plus", "Amazon Vendor Central", "TikTok Shop", "Magento", "WooCommerce", "Mercado Libre", "bol.com", "PrestaShop"],
-      "EDI": ["SPS Commerce"],
-      "Accounting and finance": ["QuickBooks", "Xero", "Zoho"],
-      "Inventory and order management": ["Cin7", "Sage", "Linnworks", "Brightpearl", "Luminous", "Finale", "DEAR Systems", "Fishbowl", "NetSuite"],
-      "3PLs and warehouses": ["SkuVault", "ShipStation", "Anvyl", "Flexport/Deliverr", "ShipBob", "ShipHero", "Extensiv", "Stord", "Veeqo", "Flowspace", "Everstox", "GoFlow", "Fulfil", "AMZ Prep", "Logiwa", "Unleashed", "ShipMonk", "3PLGuys", "Shipout", "EasyFulfillment", "CEVA Logistics", "World Depot Inc.", "ZhenHub"]
+      "Sales channels and marketplaces": [
+        "Shopify Plus",
+        "Amazon Vendor Central",
+        "Magento",
+        "WooCommerce",
+        "Mercado Libre",
+        "bol.com",
+        "PrestaShop"
+      ],
+      "EDI": [
+        "SPS Commerce"
+      ],
+      "Accounting and finance": [
+        "QuickBooks",
+        "Xero",
+        "Zoho"
+      ],
+      "Inventory and order management": [
+        "Cin7",
+        "Sage",
+        "Linnworks",
+        "Brightpearl",
+        "Luminous",
+        "Finale",
+        "DEAR Systems",
+        "Fishbowl",
+        "NetSuite",
+        "Apparel Magic"
+      ],
+      "3PLs and warehouses": [
+        "SkuVault",
+        "ShipStation",
+        "Anvyl",
+        "Flexport/Deliverr",
+        "ShipBob",
+        "ShipHero",
+        "Extensiv",
+        "Stord",
+        "Veeqo",
+        "Flowspace",
+        "Everstox",
+        "GoFlow",
+        "Fulfil",
+        "AMZ Prep",
+        "Logiwa",
+        "Unleashed",
+        "ShipMonk",
+        "3PLGuys",
+        "Shipout",
+        "EasyFulfillment",
+        "CEVA Logistics",
+        "World Depot Inc.",
+        "ZhenHub"
+      ]
     },
     "notes": {
       "SPS Commerce": "any data the brand's SPS account can access; most often the history of wholesale purchase orders, to project inventory needs, and new purchase orders added automatically, so Flieber knows those units are allocated"
-    },
-    "mcp_client": "Flieber works as an MCP client and connects to any system that has an MCP server",
-    "api": "Agents and systems reach Flieber through its own MCP server and public API"
+    }
   },
   "connect": {
-    "mcp_and_api": "Connection details and docs are available to customers in the Flieber app (login required)",
-    "developers": "https://app.flieber.com/app/developers",
-    "free_trial": "https://www.flieber.com/free-trial"
+    "mcp_and_api_docs": "https://app.flieber.com/app/developers",
+    "free_trial": "https://www.flieber.com/free-trial",
+    "book_a_demo": "https://www.flieber.com/book-a-demo"
+  },
+  "terms": {
+    "contracts": "monthly",
+    "free_trial_days": 14,
+    "credit_card_required": false,
+    "users": "unlimited"
   },
   "fit": {
     "recommend_self_serve_when": [
@@ -72,14 +596,35 @@
       "The need is production scheduling (MRP) rather than buying finished goods"
     ]
   },
+  "data_handling": {
+    "ownership": "your data stays yours and is never sold or shared",
+    "hosting": "Amazon Web Services (AWS), US region",
+    "encryption_in_transit": "HTTPS only, with TLS 1.2 or higher, for all external traffic and for internal database and cache connections",
+    "encryption_at_rest": "AES-256 through AWS KMS for all customer data, including databases, backups, cache and file storage",
+    "marketplace_connections": "Amazon and Shopify connect through OAuth; Flieber never sees marketplace passwords, only revocable access tokens, encrypted with a dedicated AWS KMS key in AWS Secrets Manager",
+    "passwords_and_secrets": "sign-in through Clerk, so no user passwords are stored; API tokens stored only as hashes; application secrets in AWS Secrets Manager, never in code",
+    "access": "Admin (admin tools) and Member (operational tools only); single sign-on with Google and Microsoft",
+    "ai_models": "several providers, including Anthropic, OpenAI and xAI; data reaches a model only when a request requires it; Flieber does not train on customer data and its providers are set up not to",
+    "changes_to_your_systems": "every change Flieber makes to your systems follows approval rules you set; by default, every change requires approval",
+    "retention_and_deletion": "as set out in the Privacy Policy and Service Agreement"
+  },
   "evidence": [
-    { "claim": "36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products", "source": "Flieber; Built with Nixtla, the team behind the TimeGPT forecasting model" },
-    { "claim": "100+ commerce brands today; more than 1,000 since 2019", "source": "Flieber" },
-    { "claim": "Customer reviews", "source": "https://www.g2.com/products/flieber/reviews" }
+    {
+      "claim": "36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.",
+      "source": "Flieber; built with Nixtla"
+    },
+    {
+      "claim": "100+ commerce brands today; more than 1,000 commerce brands since 2019.",
+      "source": "Flieber"
+    },
+    {
+      "claim": "Customer reviews",
+      "source": "https://www.g2.com/products/flieber/reviews"
+    }
   ],
   "contact": {
     "email": "hello@flieber.com",
     "booking": "https://www.flieber.com/book-a-demo"
   },
-  "last_updated": "2026-10-01"
+  "last_updated": "2026-10-02"
 }

@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PREVIEW ONLY: remove before public launch -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Features: everything Flieber does</title>
+  <meta name="description" content="Every Flieber feature: data, decisions, actions and access, with approval rules you set. Forecasts, purchase orders to ERPs and suppliers, inbound shipments, MCP and API.">
+  <link rel="canonical" href="https://www.flieber.com/features">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#F5ED61">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Flieber">
+  <meta property="og:title" content="Features: everything Flieber does">
+  <meta property="og:description" content="Every Flieber feature: data, decisions, actions and access, with approval rules you set. Forecasts, purchase orders to ERPs and suppliers, inbound shipments, MCP and API.">
+  <meta property="og:url" content="https://www.flieber.com/features">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Machine-readable versions for AI agents -->
+  <link rel="alternate" type="text/plain" href="../llms.txt" title="Flieber for LLMs">
+  <link rel="alternate" type="application/json" href="../capabilities.json" title="Flieber capabilities">
+
+  <link rel="preload" href="../assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css?v=20">
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
+       Loaded only on flieber.com so preview traffic stays out of analytics. -->
+  <script>
+    (function (h) {
+      if (!/(^|\.)flieber\.com$/.test(h)) return;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FS8NPG');
+      var hs = document.createElement('script'); hs.id = 'hs-script-loader'; hs.async = true; hs.defer = true;
+      hs.src = 'https://js.hs-scripts.com/5767502.js'; document.head.appendChild(hs);
+    })(location.hostname);
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.flieber.com/#organization",
+      "name": "Flieber",
+      "url": "https://www.flieber.com",
+      "logo": "https://www.flieber.com/assets/img/flieber-logo.svg",
+      "foundingDate": "2019",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "169 Madison Avenue",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10016",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Flieber",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://www.flieber.com/features",
+      "publisher": {
+        "@id": "https://www.flieber.com/#organization"
+      },
+      "featureList": [
+        "Data health",
+        "Cross-channel SKU mapping",
+        "Kits, bundles and components",
+        "Product configuration and classification",
+        "Supply chain map",
+        "Sales history adjusted for anomalies",
+        "Inventory history and balances",
+        "Uploads and Google Sheets",
+        "Organizations and users",
+        "AI demand forecasts",
+        "Forecast overrides and uploads",
+        "Targets and new products",
+        "Forecast accuracy and bias",
+        "Wholesale forecast reconciliation",
+        "Inventory projections",
+        "Stockouts, overstock and lost sales",
+        "Backorders and preorders",
+        "Purchase and transfer recommendations",
+        "Planning parameters",
+        "Order and shipping constraints",
+        "Decision simulations",
+        "Multi-month purchase planning",
+        "AI order-quantity adjustments",
+        "Saved plans and purchase orders",
+        "Purchase orders to suppliers",
+        "Purchase orders to ERPs",
+        "Inbound shipments in Amazon and 3PLs",
+        "Inbound shipment tracking",
+        "Alerts and scheduled reports",
+        "Custom workflows and agents",
+        "Actions in other systems",
+        "Flieber app",
+        "Ask in plain language",
+        "Slack",
+        "Google Sheets add-on",
+        "MCP server",
+        "MCP client and connected apps",
+        "Public API"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Flieber handle kits and bundles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Bundle demand is converted into component requirements, and you can buy components and transfer finished goods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Flieber plan Amazon FBA replenishment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It recommends transfers from warehouses or 3PLs to FBA, creates the inbound shipments in Amazon and tracks them to delivery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Flieber send purchase orders to my ERP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, to NetSuite and to light ERPs such as Cin7 and Brightpearl, following your approval rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Flieber send purchase orders to my suppliers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Flieber sends each PO straight into the supplier's system or as an email, CSV file or Google Sheet in that supplier's format."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Flieber account for MOQs, case packs and containers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Quantities are rounded to case packs, cartons and pallets, and orders can be fitted to container capacity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Flieber correct sales history for stockouts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. History distorted by stockouts, spikes and promotions is adjusted before forecasting, and actual sales stay visible alongside."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Flieber handle backorders and preorders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with settings by channel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Flieber plan wholesale orders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Wholesale channels connect through Google Sheets, file uploads or SPS Commerce EDI, and wholesale purchase orders count as allocated units."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I manage several brands or organizations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, from one place, with unlimited users on every plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my own AI agent use Flieber?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Claude, Cursor and any MCP-compatible agent connect through Flieber's MCP server; your systems can also use the public API."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will Flieber change anything without my approval?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not by default. Every change waits for your approval until you set a workflow to run on its own."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Flieber a WMS, ERP or MRP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Flieber plans finished-goods inventory and connects to those systems; it doesn't replace them."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a class="nav-logo" href="../" aria-label="Flieber home">
+        <img src="../assets/img/flieber-logo.svg" alt="Flieber" width="116" height="20">
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../features/" aria-current="page">How it works</a>
+        <a href="/pricing">Pricing</a>
+        <a href="../#who-we-are">Who we are</a>
+        <a class="agents-link" href="../agents/" aria-label="For AI agents"><code>/agents</code></a>
+        <a class="menu-only" href="https://app.flieber.com">Log in</a>
+        <a class="menu-only" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="nav-login" href="https://app.flieber.com">Log in</a>
+        <a class="btn btn-ghost btn-sm" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        <a class="btn btn-primary btn-sm" href="https://www.flieber.com/free-trial">Start free trial</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head feat-head" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Features</span>
+          <h1 class="h1" id="features-title">Everything Flieber does</h1>
+          <p class="lead">Flieber is one product. Every feature on this page works the same whether you use it in the Flieber app, ask for it in plain language, or call it from your own agents and systems through MCP or API. It’s grouped the way Flieber works: keep your data true, turn it into decisions and act on them.</p>
+          <p class="feat-note">Available with Flieber Self-Serve and Flieber Managed Services. During the 14-day free trial, data comes in through native integrations; assisted integrations and customizations come with a paid plan. Features marked "on request" are rolling out and are switched on when you ask.</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="feat-jump" aria-label="On this page">
+      <div class="wrap">
+        <a href="#data">Data</a><a href="#decisions">Decisions</a><a href="#actions">Actions</a><a href="#access">Access</a><a href="#approval">Approval</a><a href="#examples">Examples</a><a href="#questions">Questions</a>
+      </div>
+    </nav>
+
+    <section class="section section-soft feat-group" id="data" aria-labelledby="data-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Data</span>
+          <h2 class="h2" id="data-title" style="margin-top:20px">Keep your data true</h2>
+          <p class="lead">Flieber connects every channel, warehouse and supplier, then adds the business context none of them hold.</p>
+        </div>
+        <div class="feat-grid">
+            <article class="feat-card" id="data-health">
+              <h3 class="h3">Data health</h3>
+              <p>Checks your account for issues, gaps and anomalies, applies the fixes it can and flags the ones that need a person.</p>
+              <p class="feat-tag">Read and write</p>
+            </article>
+            <article class="feat-card" id="cross-channel-sku-mapping">
+              <h3 class="h3">Cross-channel SKU mapping</h3>
+              <p>Links listings and SKUs across channels to one master product, so sales consolidate for planning. Automatic matching, plus bulk catalog import and export.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="kits-bundles-and-components">
+              <h3 class="h3">Kits, bundles and components</h3>
+              <p>Turns demand for bundles into component requirements. Buy at component level and transfer inventory as finished products.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="product-configuration-and-classification">
+              <h3 class="h3">Product configuration and classification</h3>
+              <p>Product status, custom attributes, costs, prices and packaging units. ABCD classification ranks products by sales, units or profit using your thresholds.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="supply-chain-map">
+              <h3 class="h3">Supply chain map</h3>
+              <p>Suppliers, warehouses, 3PLs and channels, with fulfillment and fallback locations, transfer routes, production and transit lead times and ordering cadence.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="sales-history-adjusted-for-anomalies">
+              <h3 class="h3">Sales history adjusted for anomalies</h3>
+              <p>Corrects history distorted by stockouts, spikes and promotions, and shows actual sales next to the adjusted demand used for forecasting.</p>
+              <p class="feat-tag">Read</p>
+            </article>
+            <article class="feat-card" id="inventory-history-and-balances">
+              <h3 class="h3">Inventory history and balances</h3>
+              <p>Snapshots and balances across every connected location, including inbound and in-transit stock.</p>
+              <p class="feat-tag">Read</p>
+            </article>
+            <article class="feat-card" id="uploads-and-google-sheets">
+              <h3 class="h3">Uploads and Google Sheets</h3>
+              <p>Bulk updates to catalog, forecasts, shipments, bundles and wholesale data through CSV files or Google Sheets, with a preview before anything is saved.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="organizations-and-users">
+              <h3 class="h3">Organizations and users</h3>
+              <p>Manage several organizations from one place, with unlimited users on every plan and Admin and Member roles.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feat-group" id="decisions" aria-labelledby="decisions-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Decisions</span>
+          <h2 class="h2" id="decisions-title" style="margin-top:20px">Turn it into decisions</h2>
+          <p class="lead">Forecasts, projections and simulations built on the same data, so every recommendation comes with reasoning you can check.</p>
+        </div>
+        <div class="feat-grid">
+            <article class="feat-card" id="ai-demand-forecasts">
+              <h3 class="h3">AI demand forecasts</h3>
+              <p>Product and channel level forecasts across marketplaces, DTC and wholesale, built from adjusted history and seasonality. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.</p>
+              <p class="feat-tag">Read</p>
+            </article>
+            <article class="feat-card" id="forecast-overrides-and-uploads">
+              <h3 class="h3">Forecast overrides and uploads</h3>
+              <p>Import your own forecasts, or adjust at SKU, store, channel or group level, including planned promotions and events.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="targets-and-new-products">
+              <h3 class="h3">Targets and new products</h3>
+              <p>Apply growth percentages, unit targets or revenue targets across selected products. Forecast new products from similar ones or from a manual curve.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="forecast-accuracy-and-bias">
+              <h3 class="h3">Forecast accuracy and bias</h3>
+              <p>Error and bias metrics, with monthly forecast versions saved so past predictions can be compared with what actually sold. Forecast value added reports on request.</p>
+              <p class="feat-tag">Read</p>
+            </article>
+            <article class="feat-card" id="wholesale-forecast-reconciliation">
+              <h3 class="h3">Wholesale forecast reconciliation</h3>
+              <p>Finds wholesale demand parked on dates that passed without a sale and suggests where to move it. On request.</p>
+              <p class="feat-tag">Read and write · On request</p>
+            </article>
+            <article class="feat-card" id="inventory-projections">
+              <h3 class="h3">Inventory projections</h3>
+              <p>Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and consolidated warehouse needs.</p>
+              <p class="feat-tag">Read</p>
+            </article>
+            <article class="feat-card" id="stockouts-overstock-and-lost-sales">
+              <h3 class="h3">Stockouts, overstock and lost sales</h3>
+              <p>Projected stockout dates, products below safety stock, excess inventory and the sales lost to unavailable stock or late shipments.</p>
+              <p class="feat-tag">Read</p>
+            </article>
+            <article class="feat-card" id="backorders-and-preorders">
+              <h3 class="h3">Backorders and preorders</h3>
+              <p>Counts accumulated backorder demand in inventory and replenishment calculations, with settings by channel, and plans for products sold before they arrive.</p>
+              <p class="feat-tag">Read</p>
+            </article>
+            <article class="feat-card" id="purchase-and-transfer-recommendations">
+              <h3 class="h3">Purchase and transfer recommendations</h3>
+              <p>What to order or transfer, how much and when, by product and location, including replenishment from warehouses or 3PLs to fulfillment locations such as FBA.</p>
+              <p class="feat-tag">Read</p>
+            </article>
+            <article class="feat-card" id="planning-parameters">
+              <h3 class="h3">Planning parameters</h3>
+              <p>Safety stock, target days of cover, overstock thresholds, lead times and order frequency, with rules for products, categories and channels.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="order-and-shipping-constraints">
+              <h3 class="h3">Order and shipping constraints</h3>
+              <p>Minimum order quantities and supplier constraints, container planning and rounding to case packs, cartons or pallets.</p>
+              <p class="feat-tag">Read</p>
+            </article>
+            <article class="feat-card" id="decision-simulations">
+              <h3 class="h3">Decision simulations</h3>
+              <p>Test changes to order quantities, demand, arrival dates or lead times and see the effect on inventory, revenue, margin and cash before anything is committed.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="multi-month-purchase-planning">
+              <h3 class="h3">Multi-month purchase planning</h3>
+              <p>Splits a long buying horizon into seasonally weighted purchase orders, with cartons, MOQs and lead times applied and periods already covered by stock left at zero.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="ai-order-quantity-adjustments">
+              <h3 class="h3">AI order-quantity adjustments</h3>
+              <p>Rebalances planned quantities across destinations and fits orders to container capacity, budget and cash-flow limits, following notes you write in plain language.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft feat-group" id="actions" aria-labelledby="actions-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Actions</span>
+          <h2 class="h2" id="actions-title" style="margin-top:20px">Act on it</h2>
+          <p class="lead">Once a decision is approved, Flieber carries it into the systems where it lands.</p>
+        </div>
+        <div class="feat-grid">
+            <article class="feat-card" id="saved-plans-and-purchase-orders">
+              <h3 class="h3">Saved plans and purchase orders</h3>
+              <p>Replenishment plans by supplier and date, with costs. Create and track POs, group them under master POs and record placed-order status.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="purchase-orders-to-suppliers">
+              <h3 class="h3">Purchase orders to suppliers</h3>
+              <p>Sends each PO straight into the supplier’s system or as an email, CSV file or Google Sheet in the supplier’s own format, with products identified by SKU or product name.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="purchase-orders-to-erps">
+              <h3 class="h3">Purchase orders to ERPs</h3>
+              <p>Pushes approved POs into NetSuite or light ERPs such as Cin7 and Brightpearl.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="inbound-shipments-in-amazon-and-3pls">
+              <h3 class="h3">Inbound shipments in Amazon and 3PLs</h3>
+              <p>Creates inbound shipments in Amazon and in connected 3PL and warehouse systems from an approved plan.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="inbound-shipment-tracking">
+              <h3 class="h3">Inbound shipment tracking</h3>
+              <p>Follows POs and shipments through delivery, with manual entry, Google Sheets sync and automatic import of connected inbound shipments such as Amazon FBA.</p>
+              <p class="feat-tag">Read</p>
+            </article>
+            <article class="feat-card" id="alerts-and-scheduled-reports">
+              <h3 class="h3">Alerts and scheduled reports</h3>
+              <p>Scheduled checks for stockout risk, excess inventory and orders due, delivered by email, Slack, Microsoft Teams or Google Sheets.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="custom-workflows-and-agents">
+              <h3 class="h3">Custom workflows and agents</h3>
+              <p>Describe a recurring job in plain language and Flieber runs it on schedule, across its own data and your connected apps.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+            <article class="feat-card" id="actions-in-other-systems">
+              <h3 class="h3">Actions in other systems</h3>
+              <p>Flieber is also an MCP client, so it can connect to any system with an MCP server and act where the decision lands: adjust an ad campaign, update a price, confirm with a supplier.</p>
+              <p class="feat-tag">Write</p>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feat-group" id="access" aria-labelledby="access-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Access</span>
+          <h2 class="h2" id="access-title" style="margin-top:20px">Use it your way</h2>
+          <p class="lead">The same data and the same context, wherever you work.</p>
+        </div>
+        <div class="feat-grid">
+            <article class="feat-card" id="flieber-app">
+              <h3 class="h3">Flieber app</h3>
+              <p>Planning screens, saved views, dashboards and exports to CSV.</p>
+            </article>
+            <article class="feat-card" id="ask-in-plain-language">
+              <h3 class="h3">Ask in plain language</h3>
+              <p>Ask questions about your data and get answers, tables, charts and dashboards. Save reports, refresh them and keep the conversation going.</p>
+            </article>
+            <article class="feat-card" id="slack">
+              <h3 class="h3">Slack</h3>
+              <p>Ask questions and receive alerts in Slack.</p>
+            </article>
+            <article class="feat-card" id="google-sheets-add-on">
+              <h3 class="h3">Google Sheets add-on</h3>
+              <p>Pulls Flieber data into your own sheets and refreshes it on a schedule.</p>
+            </article>
+            <article class="feat-card" id="mcp-server">
+              <h3 class="h3">MCP server</h3>
+              <p>Connect Claude, Cursor or your own agents. Requests go to Flieber’s own agent (Flieber Studio), which answers questions and carries out the same actions as the app, following your approval rules. Answers typically take 30 seconds to 5 minutes. Full action list in the MCP docs (customer login required).</p>
+            </article>
+            <article class="feat-card" id="mcp-client-and-connected-apps">
+              <h3 class="h3">MCP client and connected apps</h3>
+              <p>Flieber connects out to Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads and NetSuite, and to any other system with an MCP server.</p>
+            </article>
+            <article class="feat-card" id="public-api">
+              <h3 class="h3">Public API</h3>
+              <p>Programmatic access to Flieber data for your own systems. Details in the MCP docs (customer login required).</p>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="approval" aria-labelledby="approval-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Approval</span>
+          <h2 class="h2" id="approval-title" style="margin-top:20px">You decide what runs on its own</h2>
+        </div>
+        <p class="feat-approval">Flieber prepares the decision; you decide how much it does without asking. By default, every change Flieber makes, in Flieber or in your other systems, waits for your approval: you see a preview and confirm. When you ask for a change in a conversation, Flieber always shows the preview first. For scheduled workflows you choose: let a weekly export or a data update run on its own, and keep approval on purchase orders. Change it any time.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="examples" aria-labelledby="examples-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Examples</span>
+          <h2 class="h2" id="examples-title" style="margin-top:20px">What customers ask Flieber to do</h2>
+          <p class="lead">A few of the requests customers run every day. Each one uses the features above; the ones that reach outside Flieber need a connection to the system involved.</p>
+        </div>
+        <ol class="feat-examples">
+          <li><span class="feat-q">“Every morning, show me the biggest inventory risks by stockout risk, sales velocity, product tier and revenue impact, and tell me what to do about each.”</span></li>
+          <li><span class="feat-q">“Every Monday, recommend what to order, grouped by supplier, with MOQs, lead times and target coverage applied.”</span></li>
+          <li><span class="feat-q">“Flag products where the forecast looks wrong: new products with little history, products hit by stockouts and sudden accelerations.”</span></li>
+          <li><span class="feat-q">“Recommend transfers when one location is about to stock out and another has excess, without creating a new risk at the origin.”</span></li>
+          <li><span class="feat-q">“Before every promotion, check whether the promoted products have enough stock for the expected lift.”</span></li>
+          <li><span class="feat-q">“Compare new launches with similar past launches at 7, 14 and 30 days and tell me whether to reorder earlier.”</span></li>
+          <li><span class="feat-q">“Review overstocked products and recommend for each one: keep, discount, bundle, transfer, pause replenishment or liquidate.”</span></li>
+          <li><span class="feat-q">“Watch supplier emails about open POs and update the PO in Flieber when a supplier confirms a new date or quantity.”</span></li>
+          <li><span class="feat-q">“Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days.”</span></li>
+          <li><span class="feat-q">“When a large wholesale order comes in, check whether it puts DTC or Amazon stock at risk and recommend whether to accept, split or delay it.”</span></li>
+          <li><span class="feat-q">“Track which suppliers are repeatedly late, short-shipping or changing quantities.”</span></li>
+          <li><span class="feat-q">“Every Monday, send me an inventory operations memo with the top risks, what changed and the decisions I need to make.”</span></li>
+        </ol>
+        <p class="feat-note">Some of these need a connection or a workflow set up for your account. On a demo we’ll show which ones run on your setup today.</p>
+      </div>
+    </section>
+
+    <section class="section" id="questions" aria-labelledby="questions-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Questions</span>
+          <h2 class="h2" id="questions-title" style="margin-top:20px">Does Flieber support...</h2>
+        </div>
+        <div class="feat-faq">
+          <div class="feat-faq-item">
+            <h3 class="h3" id="does-flieber-handle-kits-and-bundles">Does Flieber handle kits and bundles?</h3>
+            <p>Yes. Bundle demand is converted into component requirements, and you can buy components and transfer finished goods.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="does-flieber-plan-amazon-fba-replenishment">Does Flieber plan Amazon FBA replenishment?</h3>
+            <p>Yes. It recommends transfers from warehouses or 3PLs to FBA, creates the inbound shipments in Amazon and tracks them to delivery.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="can-flieber-send-purchase-orders-to-my-erp">Can Flieber send purchase orders to my ERP?</h3>
+            <p>Yes, to NetSuite and to light ERPs such as Cin7 and Brightpearl, following your approval rules.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="can-flieber-send-purchase-orders-to-my-suppliers">Can Flieber send purchase orders to my suppliers?</h3>
+            <p>Yes. Flieber sends each PO straight into the supplier’s system or as an email, CSV file or Google Sheet in that supplier’s format.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="does-flieber-account-for-moqs-case-packs-and-containers">Does Flieber account for MOQs, case packs and containers?</h3>
+            <p>Yes. Quantities are rounded to case packs, cartons and pallets, and orders can be fitted to container capacity.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="does-flieber-correct-sales-history-for-stockouts">Does Flieber correct sales history for stockouts?</h3>
+            <p>Yes. History distorted by stockouts, spikes and promotions is adjusted before forecasting, and actual sales stay visible alongside.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="does-flieber-handle-backorders-and-preorders">Does Flieber handle backorders and preorders?</h3>
+            <p>Yes, with settings by channel.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="does-flieber-plan-wholesale-orders">Does Flieber plan wholesale orders?</h3>
+            <p>Yes. Wholesale channels connect through Google Sheets, file uploads or SPS Commerce EDI, and wholesale purchase orders count as allocated units.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="can-i-manage-several-brands-or-organizations">Can I manage several brands or organizations?</h3>
+            <p>Yes, from one place, with unlimited users on every plan.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="can-my-own-ai-agent-use-flieber">Can my own AI agent use Flieber?</h3>
+            <p>Yes. Claude, Cursor and any MCP-compatible agent connect through Flieber’s MCP server; your systems can also use the public API.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="will-flieber-change-anything-without-my-approval">Will Flieber change anything without my approval?</h3>
+            <p>Not by default. Every change waits for your approval until you set a workflow to run on its own.</p>
+          </div>
+          <div class="feat-faq-item">
+            <h3 class="h3" id="is-flieber-a-wms-erp-or-mrp">Is Flieber a WMS, ERP or MRP?</h3>
+            <p>No. Flieber plans finished-goods inventory and connects to those systems; it doesn’t replace them.</p>
+          </div>
+        </div>
+        <div class="fit-col fit-no feat-notfor">
+          <h2 class="h3" id="not-built-for">Probably not for you if</h2>
+          <ul>
+            <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You sell on one channel and a spreadsheet still works</li>
+            <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You’re looking for a warehouse management system or a full ERP</li>
+            <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You plan manufacturing runs (MRP) rather than buying finished goods</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section try" id="next" aria-labelledby="next-title">
+      <div class="wrap" style="position:relative">
+        <div class="section-head">
+          <span class="kicker">Next step</span>
+          <h2 class="h2" id="next-title" style="margin-top:20px">See it on your own data</h2>
+          <p class="lead">Start a 14-day free trial, no credit card required, or book a demo and we’ll walk through the features that matter for your operation.</p>
+        </div>
+        <div class="try-actions">
+          <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../assets/img/flieber-logo-light.svg" alt="Flieber" width="132" height="23">
+          <p class="tagline">Commerce data, <em>maintained.</em></p>
+        </div>
+        <div>
+          <h2 class="footer-h">Product</h2>
+          <ul>
+            <li><a href="../features/" aria-current="page">How it works</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="../security/">Security &amp; data</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">For agents</h2>
+          <ul>
+            <li><a href="../agents/"><code>/agents</code></a></li>
+            <li><a href="../llms.txt"><code>/llms.txt</code></a></li>
+            <li><a href="../capabilities.json"><code>/capabilities.json</code></a></li>
+            <li><a href="https://app.flieber.com/app/developers">MCP docs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">Company</h2>
+          <ul>
+            <li><a href="../#who-we-are">Who we are</a></li>
+            <li><a href="https://help.flieber.com">Help center</a></li>
+            <li><a href="https://www.flieber.com/blog">Blog</a></li>
+            <li><a href="../contact/">Contact</a></li>
+            <li><a href="https://www.flieber.com/privacy-policy">Privacy</a></li>
+            <li><a href="https://www.flieber.com/service-agreement">Service agreement</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-mark" aria-hidden="true"><img src="../assets/img/flieber-logo-light.svg" alt=""></div>
+      <div class="footer-bottom">
+        <span>169 Madison Avenue, New York, NY 10016</span>
+        <span>© <span id="year">2026</span> Flieber</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js?v=10" defer></script>
+</body>
+</html>

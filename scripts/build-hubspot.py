@@ -21,6 +21,7 @@ ASSETS = "https://www.flieber.com/hubfs/flieber-2026/"
 OUT = ROOT / "hubspot" / "build"
 PAGES = {  # source file: (site path, template label)
     "index.html": ("/", "Flieber 2026 - Home"),
+    "features/index.html": ("/features/", "Flieber 2026 - Features"),
     "agents/index.html": ("/agents/", "Flieber 2026 - Agents"),
     "pricing/index.html": ("/pricing/", "Flieber 2026 - Pricing"),
     "security/index.html": ("/security/", "Flieber 2026 - Security"),
