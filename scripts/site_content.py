@@ -25,8 +25,8 @@ POSITIONING = "Collaborative AI for multichannel brands"
 
 # ---------------------------------------------------------------- /features
 FEATURES_H1 = "Collaborative AI for every inventory decision"
-FEATURES_INTRO = ("Your team makes the calls; Flieber's AI keeps the data true, prepares every decision and carries it "
-                  "out once you approve. Five modules cover the way from your data to a decision you can act on. Every "
+FEATURES_INTRO = ("Flieber keeps a current picture of how your business works, recommends your next move and acts on it, "
+                  "together with your team, your agents and your systems. Five modules cover the way from your data to a decision you can act on. Every "
                   "feature works the same whether you use it in the Flieber app, ask for it in plain language, or call it "
                   "from your own agents and systems through MCP or API.")
 FEATURES_NOTE = ("Available with Flieber Self-Serve and Flieber Managed Services. During the 14-day free trial, data "
