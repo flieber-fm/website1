@@ -851,7 +851,7 @@ code { font-family: var(--mono); font-size: .88em; }
           <dt>Passwords and secrets</dt><dd>Sign-in is handled by Clerk, so Flieber stores no user passwords. API tokens are stored only as hashes, and application secrets are kept in AWS Secrets Manager, never in code.</dd>
           <dt>Access</dt><dd>Two roles: Admin, with access to admin tools, and Member, with access to operational tools only. Single sign-on with Google and Microsoft.</dd>
           <dt>AI models</dt><dd>Flieber uses models from several providers, including Anthropic, OpenAI and xAI. Calculations run inside Flieber; data reaches a language model only when a request requires it. Flieber does not use customer data to train models, and its AI providers are set up not to use it for training.</dd>
-          <dt>Changes to your systems</dt><dd>Purchase orders that Flieber sends to your ERP require approval first.</dd>
+          <dt>Changes to your systems</dt><dd>Flieber pushes decisions to your ERP, marketplaces, suppliers or any system connected through MCP only once they are approved.</dd>
           <dt>Retention and deletion</dt><dd>As set out in our <a href="https://www.flieber.com/privacy-policy">Privacy Policy</a> and <a href="https://www.flieber.com/service-agreement">Service Agreement</a>.</dd>
         </dl>
         <p class="sec-more">Questions about security? Email <a href="mailto:hello@flieber.com">hello@flieber.com</a>.</p>

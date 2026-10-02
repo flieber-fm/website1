@@ -1,6 +1,6 @@
 {
   "name": "Flieber",
-  "summary": "Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level with anomaly correction, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces and suppliers. It is offered two ways on the same platform: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber planners join the brand's team, keep Flieber updated and help run its planning practice.",
+  "summary": "Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level with anomaly correction, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, suppliers and any other system it connects to through MCP. It is offered two ways on the same platform: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber planners join the brand's team, keep Flieber updated and help run its planning practice.",
   "offers": [
     {
       "name": "Flieber Self-Serve",
@@ -30,6 +30,7 @@
     { "id": "decision_simulation", "input": "A proposed change", "output": "Inventory, revenue, margin and cash impact", "access": "read" },
     { "id": "replenishment_plan", "input": "Supplier or SKU set", "output": "Draft POs with MOQs applied", "access": "read" },
     { "id": "push_to_erp", "input": "Approved PO", "output": "PO in NetSuite, or in light ERPs such as Cin7 and Brightpearl", "access": "write_with_approval" },
+    { "id": "push_to_other_systems", "input": "Approved decision", "output": "Update in a marketplace, a supplier system or any system connected through MCP", "access": "write_with_approval" },
     { "id": "scheduled_agents", "input": "Plain-language rule", "output": "Recurring report or alert", "access": "write" }
   ],
   "integrations": {

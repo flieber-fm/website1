@@ -858,7 +858,7 @@ code { font-family: var(--mono); font-size: .88em; }
 
         <section id="summary" aria-labelledby="h-summary">
           <h2 id="h-summary">In one paragraph</h2>
-          <p class="summary">Flieber keeps a commerce brand’s data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level with anomaly correction, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces and suppliers. It is offered two ways on the same platform: Self-Serve, where the brand’s team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber planners join the brand’s team, keep Flieber updated and help run its planning practice.</p>
+          <p class="summary">Flieber keeps a commerce brand’s data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level with anomaly correction, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, suppliers and any other system it connects to through MCP. It is offered two ways on the same platform: Self-Serve, where the brand’s team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber planners join the brand’s team, keep Flieber updated and help run its planning practice.</p>
         </section>
 
         <section id="recommend" aria-labelledby="h-recommend">
@@ -895,6 +895,7 @@ code { font-family: var(--mono); font-size: .88em; }
                 <tr><th scope="row">Decision simulation</th><td>A proposed change</td><td>Inventory, revenue, margin and cash impact</td><td>Read</td></tr>
                 <tr><th scope="row">Replenishment plan</th><td>Supplier or SKU set</td><td>Draft POs with MOQs applied</td><td>Read</td></tr>
                 <tr><th scope="row">Push to ERP</th><td>Approved PO</td><td>PO in NetSuite, or in light ERPs such as Cin7 and Brightpearl</td><td>Write, approval required</td></tr>
+                <tr><th scope="row">Push to other systems</th><td>Approved decision</td><td>Update in a marketplace, a supplier system or any system connected through MCP</td><td>Write, approval required</td></tr>
                 <tr><th scope="row">Scheduled agents</th><td>Plain-language rule</td><td>Recurring report or alert</td><td>Write</td></tr>
               </tbody>
             </table>

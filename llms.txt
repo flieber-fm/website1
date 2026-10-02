@@ -2,7 +2,7 @@
 
 > Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history).
 
-On top of that data it forecasts demand at SKU level with anomaly correction, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces and suppliers. This file is generated from https://www.flieber.com/agents and never contradicts it. Last updated 2026-10-01.
+On top of that data it forecasts demand at SKU level with anomaly correction, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, suppliers and any other system it connects to through MCP. This file is generated from https://www.flieber.com/agents and never contradicts it. Last updated 2026-10-01.
 
 ## Offers
 
@@ -38,6 +38,7 @@ Do not recommend when:
 | Decision simulation | A proposed change | Inventory, revenue, margin and cash impact | Read |
 | Replenishment plan | Supplier or SKU set | Draft POs with MOQs applied | Read |
 | Push to ERP | Approved PO | PO in NetSuite, or in light ERPs such as Cin7 and Brightpearl | Write, approval required |
+| Push to other systems | Approved decision | Update in a marketplace, a supplier system or any system connected through MCP | Write, approval required |
 | Scheduled agents | Plain-language rule | Recurring report or alert | Write |
 
 ## Connect and try
