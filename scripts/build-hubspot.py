@@ -27,10 +27,12 @@ PAGES = {  # source file: (site path, template label)
     "security/index.html": ("/security/", "Flieber 2026 - Security"),
     "contact/index.html": ("/contact/", "Flieber 2026 - Contact"),
 }
-# Option 2 adds five solutions pages (Option 2 brief, section 9). Templates are only built locally;
-# nothing is uploaded to HubSpot until an option is elected.
-for _slug in ["amazon-fba", "wholesale", "kits-and-bundles", "multi-brand", "promotions-and-launches"]:
-    PAGES[f"solutions/{_slug}/index.html"] = (f"/solutions/{_slug}/", f"Flieber 2026 B - Solutions - {_slug}")
+# Option 2 adds five module pages, /multichannel and /agencies (Option 2 brief, section 10). Templates are only
+# built locally; nothing is uploaded to HubSpot until an option is elected.
+for _slug in ["data-layer", "demand-forecasting", "inventory-forecasting", "replenishment", "workflows"]:
+    PAGES[f"product/{_slug}/index.html"] = (f"/product/{_slug}/", f"Flieber 2026 B - Product - {_slug}")
+PAGES["multichannel/index.html"] = ("/multichannel/", "Flieber 2026 B - Multichannel")
+PAGES["agencies/index.html"] = ("/agencies/", "Flieber 2026 B - Agencies")
 
 
 def data_uri(path: Path) -> str:

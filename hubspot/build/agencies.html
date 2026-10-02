@@ -1,14 +1,14 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: Flieber 2026 B - Solutions - wholesale
+  label: Flieber 2026 B - Agencies
 -->
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>See retail and wholesale demand in one plan | Flieber</title>
+  <title>The inventory planning platform built for multi-brand operators | Flieber</title>
   <link rel="icon" href="https://www.flieber.com/hubfs/flieber-2026/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#F5ED61">
 
@@ -874,31 +874,50 @@ a.ask { text-decoration: none; color: inherit; }
   .layer-tab { flex: none; padding: 10px 14px; font-size: 15px; gap: 10px; }
   .layer-tab[aria-selected="true"] { transform: none; }
 }
-.sol-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: clamp(40px, 6vw, 72px); }
-.sol-head .section-head { margin-bottom: 0; }
-.sol-arrows { flex: none; }
-.sol-viewport { --edge: max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter))); }
-.sol-track {
-  display: grid; grid-auto-flow: column; grid-auto-columns: clamp(280px, 30vw, 360px);
-  gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 var(--edge);
-  padding: 4px var(--edge) 12px; scrollbar-width: none;
-}
-.sol-track::-webkit-scrollbar { display: none; }
-.sol-track > li { scroll-snap-align: start; display: flex; }
+.sol-two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .sol-card {
-  flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 280px;
+  display: flex; flex-direction: column; gap: 10px; min-height: 260px;
   text-decoration: none; color: inherit; background: var(--white);
-  border: 1px solid var(--line-strong); border-radius: var(--radius-l); padding: clamp(22px, 2.6vw, 30px);
+  border: 1px solid var(--line-strong); border-radius: var(--radius-l); padding: clamp(24px, 3vw, 36px);
   transition: border-color .25s, background-color .25s;
 }
 .sol-card .n { font-family: var(--mono); font-size: 12px; color: var(--text-2); margin-bottom: 28px; }
-.sol-card p { color: var(--text-2); }
+.sol-card .h3 { font-size: clamp(26px, 2.6vw, 34px); font-weight: 400; letter-spacing: -0.04em; }
+.sol-card p { color: var(--text-2); font-size: 18px; }
 .sol-go { margin-top: auto; padding-top: 24px; font-weight: 600; letter-spacing: -0.02em; display: inline-flex; gap: 6px; }
 .sol-go .arrow { transition: transform .25s var(--ease); }
 .sol-card:hover { border-color: var(--black); background: var(--yellow); }
 .sol-card:hover p, .sol-card:hover .n { color: var(--black); }
 .sol-card:hover .sol-go .arrow { transform: translateX(3px); }
-@media (max-width: 620px) { .sol-arrows { display: none; } .sol-track { grid-auto-columns: 82%; } }
+.sol-compare { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; color: var(--text-2); }
+.sol-compare span { font-weight: 600; color: var(--black); }
+.sol-compare a { color: var(--black); text-underline-offset: 3px; }
+.section-head .link-row { margin-top: 22px; }
+@media (max-width: 720px) { .sol-two { grid-template-columns: 1fr; } .sol-card { min-height: 0; } }
+.layers-under { margin-top: 28px; max-width: 820px; color: var(--gray-medium); font-size: clamp(17px, 1.5vw, 19px); line-height: 1.45; }
+.layers-under-label { color: var(--white); font-weight: 600; }
+.nav-menu-label { padding: 12px 12px 4px; margin-top: 4px; border-top: 1px solid var(--line); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+.nav-links .nav-menu a.nav-menu-all { margin-top: 4px; border-top: 1px solid var(--line); border-radius: 0 0 var(--radius-s) var(--radius-s); font-weight: 600; color: var(--black); }
+@media (max-width: 1280px) {
+  .nav.open .nav-menu-label { padding: 14px 4px 6px; border-top: 0; }
+  .nav.open .nav-links .nav-menu a.nav-menu-all { border-top: 0; border-radius: 0; }
+}
+.mod-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.mod-card { display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 22px; transition: border-color .2s; }
+.mod-card .n { font-family: var(--mono); font-size: 12px; color: var(--text-2); margin-bottom: 18px; }
+.mod-card p { color: var(--text-2); font-size: 15.5px; }
+.mod-card .arrow { display: inline-block; transition: transform .25s var(--ease); }
+.mod-card:hover { border-color: var(--black); }
+.mod-card:hover .arrow { transform: translateX(3px); }
+@media (max-width: 1060px) { .mod-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .mod-grid { grid-template-columns: 1fr; } }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.why-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l); padding: clamp(22px, 2.6vw, 32px); display: flex; flex-direction: column; gap: 10px; }
+.why-card .n { font-family: var(--mono); font-size: 12px; color: var(--text-2); margin-bottom: 20px; }
+.why-card p { color: var(--text-2); }
+@media (max-width: 860px) { .why-grid { grid-template-columns: 1fr; } }
+.sol-quote + .sol-quote { margin-top: clamp(40px, 5vw, 56px); }
+#customers .sol-quote:first-child { margin-top: 0; }
 .results-light .results { border-color: var(--line-strong); }
 .results-light .result + .result { border-left-color: var(--line-strong); }
 .results-light .result-label { color: var(--black); }
@@ -908,9 +927,10 @@ a.ask { text-decoration: none; color: inherit; }
 .founder .h2 { color: var(--white); max-width: 900px; }
 .founder-quote { margin: 0; max-width: 980px; }
 .founder-quote blockquote { margin: 0; }
-.founder-quote blockquote p { font-size: clamp(22px, 2.6vw, 34px); line-height: 1.25; letter-spacing: -0.03em; color: var(--white); }
-.founder-quote blockquote p::before { content: "“"; }
-.founder-quote blockquote p::after { content: "”"; }
+.founder-quote blockquote p { font-size: clamp(20px, 2.1vw, 28px); line-height: 1.3; letter-spacing: -0.025em; color: var(--white); }
+.founder-quote blockquote p + p { margin-top: 1em; color: var(--gray-medium); }
+.founder-quote blockquote p:first-child::before { content: "“"; }
+.founder-quote blockquote p:last-child::after { content: "”"; }
 .founder-quote figcaption { margin-top: 32px; display: flex; align-items: center; gap: 16px; }
 .founder-photo {
   width: 64px; height: 64px; border-radius: 50%; flex: none; display: grid; place-items: center;
@@ -947,7 +967,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .sol-others div { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
 .sol-others a { text-decoration: none; font-weight: 500; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--black); background: rgba(255,255,255,.35); }
 .sol-others a:hover { background: var(--white); }
-#control-and-approval, #together, #features-involved { scroll-margin-top: 140px; }
+#control-and-approval, #together, #what-you-can-do, #works-with, #why, #everything { scroll-margin-top: 140px; }
 
 </style>
 
@@ -966,36 +986,14 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.flieber.com/solutions/wholesale",
-      "url": "https://www.flieber.com/solutions/wholesale",
-      "name": "See retail and wholesale demand in one plan",
-      "description": "Wholesale orders arrive in large, irregular chunks that can drain the stock your DTC and marketplace channels depend on. For most brands, Flieber is the first place they see the combined demand and inventory consumption of both their retail and wholesale channels.",
+      "@id": "https://www.flieber.com/agencies",
+      "url": "https://www.flieber.com/agencies",
+      "name": "The inventory planning platform built for multi-brand operators",
+      "description": "Run every brand's planning from one place instead of a stack of tools and spreadsheets per brand. Add multiple brands or organizations and see them individually or consolidated in single dashboards.",
       "isPartOf": {
         "@type": "WebSite",
         "url": "https://www.flieber.com"
-      },
-      "about": {
-        "@type": "SoftwareApplication",
-        "name": "Flieber",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "publisher": {
-          "@id": "https://www.flieber.com/#organization"
-        }
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does Flieber plan wholesale orders?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Wholesale channels connect through Google Sheets, file uploads or SPS Commerce EDI, and wholesale purchase orders count as allocated units."
-          }
-        }
-      ]
     }
   ]
 }
@@ -1012,15 +1010,26 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
         <img src="https://www.flieber.com/hubfs/flieber-2026/flieber-logo.svg" alt="Flieber" width="116" height="20">
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="/features">Product</a>
+        <div class="nav-drop">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-product">Product <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-product">
+            <a href="/product/data-layer">Data layer</a>
+            <a href="/product/demand-forecasting">Demand forecasting</a>
+            <a href="/product/inventory-forecasting">Inventory forecasting</a>
+            <a href="/product/replenishment">Replenishment</a>
+            <a href="/product/workflows">Workflows</a>
+            <a class="nav-menu-all" href="/features">All features <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
         <div class="nav-drop is-current">
           <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-solutions">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <div class="nav-menu" id="nav-solutions">
-            <a href="/solutions/amazon-fba">Amazon FBA replenishment</a>
-            <a href="/solutions/wholesale">Wholesale and EDI</a>
-            <a href="/solutions/kits-and-bundles">Kits and bundles</a>
-            <a href="/solutions/multi-brand">Multi-brand portfolios</a>
-            <a href="/solutions/promotions-and-launches">Promotions and launches</a>
+            <a href="/multichannel">Multichannel brands</a>
+            <a href="/agencies">Agencies and aggregators</a>
+            <span class="nav-menu-label">Compare</span>
+            <a href="https://www.flieber.com/flieber-vs-netsuite">Flieber vs NetSuite</a>
+            <a href="https://www.flieber.com/flieber-vs-netstock">Flieber vs Netstock</a>
+            <a href="https://www.flieber.com/flieber-vs-foresight-ai">Flieber vs Foresight AI</a>
           </div>
         </div>
         <a href="/pricing">Pricing</a>
@@ -1041,12 +1050,12 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 
   <main id="main">
 
-    <section class="page-head sol-head" aria-labelledby="sol-title">
+    <section class="page-head sol-head" aria-labelledby="page-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Solutions · Wholesale and EDI</span>
-          <h1 class="h1" id="sol-title">See retail and wholesale demand in one plan</h1>
-          <p class="lead">Wholesale orders arrive in large, irregular chunks that can drain the stock your DTC and marketplace channels depend on. For most brands, Flieber is the first place they see the combined demand and inventory consumption of both their retail and wholesale channels.</p>
+          <span class="kicker">Solutions · Agencies and aggregators</span>
+          <h1 class="h1" id="page-title">The inventory planning platform built for multi-brand operators</h1>
+          <p class="lead">Run every brand’s planning from one place instead of a stack of tools and spreadsheets per brand. Add multiple brands or organizations and see them individually or consolidated in single dashboards.</p>
         </div>
         <div class="sol-actions">
           <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
@@ -1055,95 +1064,79 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
       </div>
     </section>
 
-    <section class="section section-soft" id="together" aria-labelledby="together-title">
+    <section class="section section-soft" id="why" aria-labelledby="why-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">The problem</span>
+          <h2 class="h2" id="why-title" style="margin-top:20px">Why multi-brand planning breaks</h2>
+        </div>
+        <div class="why-grid">
+          <article class="why-card">
+            <span class="n">01</span>
+            <h3 class="h3">Every brand brings its own data</h3>
+            <p>Different channels, marketplaces, 3PLs and ERPs, each with its own format.</p>
+          </article>
+          <article class="why-card">
+            <span class="n">02</span>
+            <h3 class="h3">Every brand runs a different supply chain</h3>
+            <p>Different suppliers, lead times, MOQs and replenishment strategies, often down to the SKU.</p>
+          </article>
+          <article class="why-card">
+            <span class="n">03</span>
+            <h3 class="h3">The combined catalog is huge</h3>
+            <p>Problems hide in thousands of SKUs across brands, where no one has time to look.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="together" aria-labelledby="together-title">
       <div class="wrap">
         <div class="section-head">
           <span class="kicker">Collaborative AI</span>
           <h2 class="h2" id="together-title" style="margin-top:20px">How you work together</h2>
         </div>
-        <div class="collab reveal-stagger">
+        <div class="collab">
           <article class="collab-card">
             <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><circle cx="5.5" cy="5.5" r="2.2"/><circle cx="11" cy="6" r="1.8"/><path d="M1.6 13.5c.5-2.3 2-3.6 3.9-3.6s3.4 1.3 3.9 3.6M10 9.6c1.9 0 3.3 1.2 3.8 3.4"/></svg></span></div>
             <h3 class="h3">Your team</h3>
-            <p>Decide which orders to accept, split or delay.</p>
+            <p>Set priorities across the portfolio and decide where cash goes.</p>
           </article>
           <article class="collab-card collab-ai">
             <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><path d="M8 1.8l1.5 3.7 3.7 1.5-3.7 1.5L8 12.2 6.5 8.5 2.8 7l3.7-1.5z"/><path d="M12.6 11.2l.6 1.5 1.5.6-1.5.6-.6 1.5-.6-1.5-1.5-.6 1.5-.6z"/></svg></span></div>
             <h3 class="h3">Flieber’s AI</h3>
-            <p>Bring in wholesale orders through Google Sheets, file uploads or SPS Commerce EDI, count them as allocated units, show the effect on every other channel and recommend what to do.</p>
+            <p>Plan each brand with its own data, context and parameters, and roll everything up into portfolio views of inventory, risk and cash.</p>
           </article>
           <article class="collab-card">
             <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg></span><span class="collab-tag">With Managed Services</span></div>
             <h3 class="h3">Flieber’s planners</h3>
-            <p>Help you set rules for how wholesale and direct demand share inventory.</p>
+            <p>Bring the same planning practice to every brand you add, and help onboard new brands quickly.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="features-involved" aria-labelledby="feat-title">
+    <section class="section section-soft" id="everything" aria-labelledby="everything-title">
       <div class="wrap">
         <div class="section-head">
           <span class="kicker">Features</span>
-          <h2 class="h2" id="feat-title" style="margin-top:20px">Features involved</h2>
+          <h2 class="h2" id="everything-title" style="margin-top:20px">Everything Flieber does, for every brand</h2>
         </div>
-        <div class="feat-grid">
-            <a class="feat-card sol-feat" href="/features#data">
-              <h3 class="h3">Connect your sales channels and inventory <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Flieber connects every channel, warehouse and supplier, then adds the business context none of them hold.</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#inventory-projections">
-              <h3 class="h3">Inventory projections <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and consolidated warehouse needs.</p>
-              <p class="feat-tag">Read</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#wholesale-forecast-reconciliation">
-              <h3 class="h3">Wholesale forecast reconciliation <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Finds wholesale demand parked on dates that passed without a sale and suggests where to move it. On request.</p>
-              <p class="feat-tag">Read and write · On request</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#decision-simulations">
-              <h3 class="h3">Decision simulations <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Test changes to order quantities, demand, arrival dates or lead times and see the effect on inventory, revenue, margin and cash before anything is committed.</p>
-              <p class="feat-tag">Write</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#alerts-and-scheduled-reports">
-              <h3 class="h3">Alerts and scheduled reports <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Scheduled checks for stockout risk, excess inventory and orders due, delivered by email, Slack, Microsoft Teams or Google Sheets.</p>
-              <p class="feat-tag">Write</p>
-            </a>
-        </div>
+        <p class="feat-approval">Kits, bundles, preorders, backorders, wholesale, FBA and every other case your brands run into are covered for each brand on its own.</p>
         <p class="link-row"><a class="link-arrow" href="/features">See every feature <span class="arrow" aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
-    <section class="section section-soft" id="examples" aria-labelledby="examples-title">
+    <section class="section" id="customers" aria-labelledby="customers-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Examples</span>
-          <h2 class="h2" id="examples-title" style="margin-top:20px">Example requests</h2>
+          <span class="kicker">Customers</span>
+          <h2 class="h2" id="customers-title" style="margin-top:20px">In their words</h2>
         </div>
-        <ol class="feat-examples">
-          <li><span class="feat-q">“When a large wholesale order comes in, check whether it puts DTC or Amazon stock at risk and recommend whether to accept, split or delay it.”</span></li>
-          <li><span class="feat-q">“Tell me in Slack when a wholesale order puts DTC stock at risk.”</span></li>
-        </ol>
-        <p class="feat-note">Some of these need a connection or a workflow set up for your account. On a demo we’ll show which ones run on your setup today.</p>
-      </div>
-    </section>
-
-    <section class="section" id="questions" aria-labelledby="questions-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Questions</span>
-          <h2 class="h2" id="questions-title" style="margin-top:20px">Does Flieber support...</h2>
-        </div>
-        <div class="feat-faq">
-          <div class="feat-faq-item">
-            <h3 class="h3">Does Flieber plan wholesale orders?</h3>
-            <p>Yes. Wholesale channels connect through Google Sheets, file uploads or SPS Commerce EDI, and wholesale purchase orders count as allocated units.</p>
-          </div>
-        </div>
-        <p class="link-row"><a class="link-arrow" href="/features#questions">More questions <span class="arrow" aria-hidden="true">→</span></a></p>
+        <figure class="quote active sol-quote">
+          <blockquote>Flieber creates a ‘one stop shop’ where I can see demand-level data across all my brands and make educated replenishment decisions.</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">BS</span><span class="who"><b>Bryan Smallwood</b><span>Supply Chain Manager, Unybrands</span></span></figcaption>
+        </figure>
       </div>
     </section>
 
@@ -1152,19 +1145,18 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
         <div class="section-head">
           <span class="kicker">Next step</span>
           <h2 class="h2" id="next-title" style="margin-top:20px">See it on your own data</h2>
-          <p class="lead">Start a 14-day free trial, no credit card required, or book a demo and we’ll walk through how this works for your operation.</p>
+          <p class="lead">Start a 14-day free trial, no credit card required, or book a demo and we’ll walk through how Flieber works for your operation.</p>
         </div>
         <div class="try-actions">
           <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
           <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
         </div>
-        <nav class="sol-others" aria-label="Other solutions">
-          <span class="kicker">Other solutions</span>
+        <nav class="sol-others" aria-label="More solutions">
+          <span class="kicker">Comparing tools?</span>
           <div>
-            <a href="/solutions/amazon-fba">Amazon FBA replenishment</a>
-            <a href="/solutions/kits-and-bundles">Kits and bundles</a>
-            <a href="/solutions/multi-brand">Multi-brand portfolios</a>
-            <a href="/solutions/promotions-and-launches">Promotions and launches</a>
+            <a href="https://www.flieber.com/flieber-vs-netsuite">Flieber vs NetSuite</a>
+            <a href="https://www.flieber.com/flieber-vs-netstock">Flieber vs Netstock</a>
+            <a href="https://www.flieber.com/flieber-vs-foresight-ai">Flieber vs Foresight AI</a>
           </div>
         </nav>
       </div>
@@ -1186,16 +1178,17 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
             <li><a href="/features">Features</a></li>
             <li><a href="/pricing">Pricing</a></li>
             <li><a href="/security">Security &amp; data</a></li>
+            <li><a href="https://www.flieber.com/managed-services">Managed Services</a></li>
           </ul>
         </div>
         <div>
           <h2 class="footer-h">Solutions</h2>
           <ul>
-            <li><a href="/solutions/amazon-fba">Amazon FBA replenishment</a></li>
-            <li><a href="/solutions/wholesale">Wholesale and EDI</a></li>
-            <li><a href="/solutions/kits-and-bundles">Kits and bundles</a></li>
-            <li><a href="/solutions/multi-brand">Multi-brand portfolios</a></li>
-            <li><a href="/solutions/promotions-and-launches">Promotions and launches</a></li>
+            <li><a href="/multichannel">Multichannel brands</a></li>
+            <li><a href="/agencies">Agencies and aggregators</a></li>
+            <li><a href="https://www.flieber.com/flieber-vs-netsuite">Flieber vs NetSuite</a></li>
+            <li><a href="https://www.flieber.com/flieber-vs-netstock">Flieber vs Netstock</a></li>
+            <li><a href="https://www.flieber.com/flieber-vs-foresight-ai">Flieber vs Foresight AI</a></li>
           </ul>
         </div>
         <div>
@@ -1274,7 +1267,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
     document.addEventListener('click', function (e) { if (!drop.contains(e.target)) set(false); });
   });
 
-  /* ---------- How Flieber is built: six layer tabs (Option 2) ---------- */
+  /* ---------- How Flieber is built: five module tabs (Option 2) ---------- */
   var layers = document.getElementById('layers');
   if (layers) {
     var ltabs = [].slice.call(layers.querySelectorAll('.layer-tab'));
@@ -1300,17 +1293,6 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
     });
     pick(0);
   }
-
-  /* ---------- Solutions carousel arrows (Option 2) ---------- */
-  document.querySelectorAll('[data-scroll]').forEach(function (btn) {
-    var track = document.getElementById(btn.getAttribute('aria-controls'));
-    if (!track) return;
-    btn.addEventListener('click', function () {
-      var card = track.querySelector('li');
-      var step = card ? card.getBoundingClientRect().width + 14 : track.clientWidth * 0.8;
-      track.scrollBy({ left: Number(btn.getAttribute('data-scroll')) * step, behavior: reduceMotion ? 'auto' : 'smooth' });
-    });
-  });
 
   /* ---------- Reveal on scroll ---------- */
   var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');

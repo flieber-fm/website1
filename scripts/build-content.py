@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate /features, the five /solutions pages, the /agents body, llms.txt, llms-full.txt and
+"""Generate /features, the five /product module pages, /multichannel, /agencies, the /agents body, llms.txt, llms-full.txt and
 capabilities.json, then write the shared nav and footer into every page (scripts/site_chrome.py).
 
 All of them come from scripts/site_content.py so they can never contradict each other.
@@ -35,6 +35,9 @@ def md_bold(text: str) -> str:
     return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", text)
 
 
+MODULE_BY_SLUG = {m["slug"]: m for m in C.MODULES}
+
+
 # ------------------------------------------------------------------ /features
 def features_main() -> str:
     jump = [(g["id"], g["label"]) for g in C.GROUPS] + [("control-and-approval", "Approval"), ("examples", "Examples"), ("questions", "Questions")]
@@ -59,6 +62,10 @@ def features_main() -> str:
 ''')
     for n, g in enumerate(C.GROUPS):
         soft = " section-soft" if n % 2 == 0 else ""
+        mod = MODULE_BY_SLUG.get(g["id"])
+        lead = mod["tab"] if mod else g["lead"]
+        more = (f'\n        <p class="link-row"><a class="link-arrow" href="../product/{mod["slug"]}/">{esc(mod["name"])} <span class="arrow" aria-hidden="true">→</span></a></p>'
+                if mod else "")
         cards = []
         for title, desc, access, avail in g["features"]:
             tags = []
@@ -77,11 +84,11 @@ def features_main() -> str:
         <div class="section-head">
           <span class="kicker">{esc(g["label"])}</span>
           <h2 class="h2" id="{g["id"]}-title" style="margin-top:20px">{esc(g["h2"])}</h2>
-          <p class="lead">{esc(g["lead"])}</p>
+          <p class="lead">{esc(lead)}</p>
         </div>
         <div class="feat-grid">
 {chr(10).join(cards)}
-        </div>
+        </div>{more}
       </div>
     </section>
 ''')
@@ -193,18 +200,18 @@ def build_features() -> None:
     out.write_text(top + "\n" + features_main() + "\n" + bottom, encoding="utf-8")
 
 
-# ------------------------------------------------------------------ /solutions
+# ------------------------------------------------------------------ /product module pages, /multichannel, /agencies
 FEATURES_BY_TITLE = {t: (g, d, a, av) for g in C.GROUPS for t, d, a, av in g["features"]}
-FAQ_BY_Q = dict(C.FAQ)
 ICON_TEAM = '<svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><circle cx="5.5" cy="5.5" r="2.2"/><circle cx="11" cy="6" r="1.8"/><path d="M1.6 13.5c.5-2.3 2-3.6 3.9-3.6s3.4 1.3 3.9 3.6M10 9.6c1.9 0 3.3 1.2 3.8 3.4"/></svg>'
 ICON_AI = '<svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><path d="M8 1.8l1.5 3.7 3.7 1.5-3.7 1.5L8 12.2 6.5 8.5 2.8 7l3.7-1.5z"/><path d="M12.6 11.2l.6 1.5 1.5.6-1.5.6-.6 1.5-.6-1.5-1.5-.6 1.5-.6z"/></svg>'
 ICON_PLANNER = '<svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg>'
+ARROW = '<span class="arrow" aria-hidden="true">→</span>'
 
 
-def collab_cards(team: str, ai: str, planners: str, planners_tag: str) -> str:
-    """Three-party collaboration cards, shared by the solutions pages (the homepage has its own copy)."""
-    cols = [("Your team", ICON_TEAM, team, None, ""), ("Flieber’s AI", ICON_AI, ai, None, " collab-ai"),
-            ("Flieber’s planners", ICON_PLANNER, planners, planners_tag, "")]
+def collab_cards(x) -> str:
+    """Three-party collaboration cards (your team, Flieber's AI, Flieber's planners)."""
+    cols = [("Your team", ICON_TEAM, x["team"], None, ""), ("Flieber’s AI", ICON_AI, x["ai"], None, " collab-ai"),
+            ("Flieber’s planners", ICON_PLANNER, x["planners"], "With Managed Services", "")]
     out = []
     for name, icon, body, tag, cls in cols:
         tag_html = f'<span class="collab-tag">{esc(tag)}</span>' if tag else ""
@@ -213,195 +220,204 @@ def collab_cards(team: str, ai: str, planners: str, planners_tag: str) -> str:
             <h3 class="h3">{name}</h3>
             <p>{esc(body)}</p>
           </article>''')
-    return '        <div class="collab reveal-stagger">\n' + "\n".join(out) + "\n        </div>"
+    return '        <div class="collab">\n' + "\n".join(out) + "\n        </div>"
 
 
-def solution_feature_cards(x, p: str) -> str:
+def feature_cards(titles, p: str) -> str:
     cards = []
-    for f in x["features"]:
-        if f in FEATURES_BY_TITLE:
-            g, d, a, av = FEATURES_BY_TITLE[f]
-            href, desc = f"{p}features/#{slug(f)}", d
-            tags = [ACCESS_LABEL[a]] if ACCESS_LABEL[a] else []
-            if av == "on_request":
-                tags.append("On request")
-        else:
-            gid = C.FEATURE_LINK_FALLBACK[f]
-            g = next(g for g in C.GROUPS if g["id"] == gid)
-            href, desc, tags = f"{p}features/#{gid}", g["lead"], []
+    for f in titles:
+        g, d, a, av = FEATURES_BY_TITLE[f]
+        tags = [ACCESS_LABEL[a]] if ACCESS_LABEL[a] else []
+        if av == "on_request":
+            tags.append("On request")
         tag_html = f'\n              <p class="feat-tag">{" · ".join(tags)}</p>' if tags else ""
-        cards.append(f'''            <a class="feat-card sol-feat" href="{href}">
-              <h3 class="h3">{esc(f)} <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>{esc(desc)}</p>{tag_html}
+        cards.append(f'''            <a class="feat-card sol-feat" href="{p}features/#{slug(f)}">
+              <h3 class="h3">{esc(f)} {ARROW}</h3>
+              <p>{esc(d)}</p>{tag_html}
             </a>''')
     return "\n".join(cards)
 
 
-def solution_main(x) -> str:
-    p = "../../"
-    examples = "\n".join(f'          <li><span class="feat-q">“{esc(e)}”</span></li>' for e in x["examples"])
-    quote = ""
-    if x["quote"]:
-        q, who, role = x["quote"]
-        initials = "".join(w[0] for w in who.split()[:2])
-        quote = f'''
-        <figure class="quote active sol-quote">
-          <blockquote>{esc(q)}</blockquote>
-          <figcaption><span class="avatar" aria-hidden="true">{initials}</span><span class="who"><b>{esc(who)}</b><span>{esc(role)}</span></span></figcaption>
-        </figure>'''
-    faq = ""
-    if x["faq"]:
-        items = "\n".join(f'''          <div class="feat-faq-item">
-            <h3 class="h3">{esc(q)}</h3>
-            <p>{esc(FAQ_BY_Q[q])}</p>
-          </div>''' for q in x["faq"])
-        faq = f'''
-    <section class="section" id="questions" aria-labelledby="questions-title">
+def section(sid: str, kicker: str, h2: str, body: str, soft: bool, lead: str = "") -> str:
+    lead_html = f'\n          <p class="lead">{esc(lead)}</p>' if lead else ""
+    return f'''
+    <section class="section{" section-soft" if soft else ""}" id="{sid}" aria-labelledby="{sid}-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Questions</span>
-          <h2 class="h2" id="questions-title" style="margin-top:20px">{esc(C.FAQ_H2)}</h2>
+          <span class="kicker">{esc(kicker)}</span>
+          <h2 class="h2" id="{sid}-title" style="margin-top:20px">{esc(h2)}</h2>{lead_html}
         </div>
-        <div class="feat-faq">
-{items}
-        </div>
-        <p class="link-row"><a class="link-arrow" href="{p}features/#questions">More questions <span class="arrow" aria-hidden="true">→</span></a></p>
+{body}
       </div>
     </section>
 '''
-    others = "\n".join(f'            <a href="{p}solutions/{o["slug"]}/">{esc(o["name"])}</a>' for o in C.SOLUTIONS if o is not x)
+
+
+def page_head(kicker: str, h1: str, lead: str) -> str:
     return f'''
-    <section class="page-head sol-head" aria-labelledby="sol-title">
+    <section class="page-head sol-head" aria-labelledby="page-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Solutions · {esc(x["short"])}</span>
-          <h1 class="h1" id="sol-title">{esc(x["h1"])}</h1>
-          <p class="lead">{esc(x["lead"])}</p>
+          <span class="kicker">{esc(kicker)}</span>
+          <h1 class="h1" id="page-title">{esc(h1)}</h1>
+          <p class="lead">{esc(lead)}</p>
         </div>
         <div class="sol-actions">
-          <a class="btn btn-primary" href="{C.TRIAL}">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-primary" href="{C.TRIAL}">Start free trial {ARROW}</a>
           <a class="btn btn-ghost" href="{C.DEMO}">Book a demo</a>
         </div>
       </div>
     </section>
+'''
 
-    <section class="section section-soft" id="together" aria-labelledby="together-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Collaborative AI</span>
-          <h2 class="h2" id="together-title" style="margin-top:20px">How you work together</h2>
-        </div>
-{collab_cards(x["team"], x["ai"], x["planners"], "With Managed Services")}
-      </div>
-    </section>
 
-    <section class="section" id="features-involved" aria-labelledby="feat-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Features</span>
-          <h2 class="h2" id="feat-title" style="margin-top:20px">Features involved</h2>
-        </div>
-        <div class="feat-grid">
-{solution_feature_cards(x, p)}
-        </div>
-        <p class="link-row"><a class="link-arrow" href="{p}features/">See every feature <span class="arrow" aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="examples" aria-labelledby="examples-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Examples</span>
-          <h2 class="h2" id="examples-title" style="margin-top:20px">Example requests</h2>
-        </div>
-        <ol class="feat-examples">
-{examples}
-        </ol>
-        <p class="feat-note">{esc(C.EXAMPLES_NOTE)}</p>{quote}
-      </div>
-    </section>
-{faq}
+def closing(extra: str = "") -> str:
+    return f'''
     <section class="section try" id="next" aria-labelledby="next-title">
       <div class="wrap" style="position:relative">
         <div class="section-head">
           <span class="kicker">Next step</span>
-          <h2 class="h2" id="next-title" style="margin-top:20px">{esc(C.SOLUTIONS_CLOSE_H2)}</h2>
-          <p class="lead">{esc(C.SOLUTIONS_CLOSE_BODY)}</p>
+          <h2 class="h2" id="next-title" style="margin-top:20px">{esc(C.CLOSE_H2)}</h2>
+          <p class="lead">{esc(C.CLOSE_BODY)}</p>
         </div>
         <div class="try-actions">
-          <a class="btn btn-primary" href="{C.TRIAL}">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-primary" href="{C.TRIAL}">Start free trial {ARROW}</a>
           <a class="btn btn-ghost" href="{C.DEMO}">Book a demo</a>
-        </div>
-        <nav class="sol-others" aria-label="Other solutions">
-          <span class="kicker">Other solutions</span>
-          <div>
-{others}
-          </div>
-        </nav>
+        </div>{extra}
       </div>
     </section>
 '''
 
 
-def solution_jsonld(x) -> str:
-    url = f"{C.SITE}/solutions/{x['slug']}"
+def quotes_html(keys) -> str:
+    out = []
+    for k in keys:
+        q, who, role = C.QUOTES[k]
+        initials = "".join(w[0] for w in who.split()[:2])
+        out.append(f'''        <figure class="quote active sol-quote">
+          <blockquote>{esc(q)}</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">{initials}</span><span class="who"><b>{esc(who)}</b><span>{esc(role)}</span></span></figcaption>
+        </figure>''')
+    return "\n".join(out)
+
+
+def module_main(m) -> str:
+    p = "../../"
+    others = "\n".join(f'''          <a class="mod-card" href="{p}product/{o["slug"]}/">
+            <span class="n">{i:02d}</span>
+            <h3 class="h3">{esc(o["name"])} {ARROW}</h3>
+            <p>{esc(o["tab"])}</p>
+          </a>''' for i, o in enumerate(C.MODULES, 1) if o is not m)
+    out = page_head(f"Product · {m['name']}", m["h1"], m["lead"])
+    out += section("what-you-can-do", "Features", "What you can do",
+                   f'''        <div class="feat-grid">
+{feature_cards(m["features"], p)}
+        </div>''', soft=True)
+    if m["extra"]:
+        h2, body = m["extra"]
+        out += section("build-your-own", "MCP and API", h2,
+                       f'''        <p class="feat-approval">{esc(body)}</p>
+        <p class="link-row"><a class="link-arrow" href="{C.DEV_DOCS}">MCP docs (customer login required) {ARROW}</a></p>''', soft=False)
+    out += section("together", "Collaborative AI", "How you work together", collab_cards(m), soft=not m["extra"])
+    out += section("works-with", "Modules", "Works with", f'''        <div class="mod-grid">
+{others}
+        </div>
+        <p class="link-row"><a class="link-arrow" href="{p}features/">All features {ARROW}</a></p>''', soft=bool(m["extra"]))
+    out += closing()
+    return out
+
+
+def solution_main(x) -> str:
+    p = "../"
+    why = "\n".join(f'''          <article class="why-card">
+            <span class="n">{i:02d}</span>
+            <h3 class="h3">{esc(t)}</h3>
+            <p>{esc(d)}</p>
+          </article>''' for i, (t, d) in enumerate(x["why"], 1))
+    out = page_head(f"Solutions · {x['name']}", x["h1"], x["lead"])
+    out += section("why", "The problem", x["why_h2"], f'        <div class="why-grid">\n{why}\n        </div>', soft=True)
+    out += section("together", "Collaborative AI", "How you work together", collab_cards(x), soft=False)
+    out += section("everything", "Features", x["all_h2"], f'''        <p class="feat-approval">{esc(x["all"])}</p>
+        <p class="link-row"><a class="link-arrow" href="{p}features/">See every feature {ARROW}</a></p>''', soft=True)
+    out += section("customers", "Customers", "In their words", quotes_html(x["quotes"]), soft=False)
+    compare = "\n".join(f'            <a href="{u}">{esc(n)}</a>' for n, u in C.COMPARE)
+    out += closing(f'''
+        <nav class="sol-others" aria-label="More solutions">
+          <span class="kicker">Comparing tools?</span>
+          <div>
+{compare}
+          </div>
+        </nav>''')
+    return out
+
+
+def page_jsonld(url: str, name: str, desc: str, features=None) -> str:
     graph = [
         {"@type": "Organization", "@id": "https://www.flieber.com/#organization", "name": "Flieber",
          "url": "https://www.flieber.com", "logo": "https://www.flieber.com/assets/img/flieber-logo.svg", "foundingDate": "2019"},
-        {"@type": "WebPage", "@id": url, "url": url, "name": x["h1"], "description": x["lead"],
-         "isPartOf": {"@type": "WebSite", "url": "https://www.flieber.com"},
-         "about": {"@type": "SoftwareApplication", "name": "Flieber", "applicationCategory": "BusinessApplication",
-                   "operatingSystem": "Web", "publisher": {"@id": "https://www.flieber.com/#organization"}}},
+        {"@type": "WebPage", "@id": url, "url": url, "name": name, "description": desc,
+         "isPartOf": {"@type": "WebSite", "url": "https://www.flieber.com"}},
     ]
-    if x["faq"]:
-        graph.append({"@type": "FAQPage", "mainEntity": [
-            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": FAQ_BY_Q[q]}} for q in x["faq"]]})
+    if features:
+        graph.append({"@type": "SoftwareApplication", "name": "Flieber", "applicationCategory": "BusinessApplication",
+                      "operatingSystem": "Web", "url": url, "publisher": {"@id": "https://www.flieber.com/#organization"},
+                      "featureList": features})
     return ('<script type="application/ld+json">\n'
             + json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2, ensure_ascii=False) + "\n  </script>")
 
 
-def build_solutions() -> None:
+def write_page(rel: str, depth: int, url: str, title: str, desc: str, jsonld: str, main: str) -> None:
     src = (ROOT / "pricing/index.html").read_text(encoding="utf-8")
     top = src[: src.index('<main id="main">') + len('<main id="main">')]
     bottom = src[src.index("  </main>"):]
-    # One level deeper than /pricing: fix the relative asset paths in the head and the script tag.
-    top = top.replace('"../', '"../../')
-    bottom = bottom.replace('"../', '"../../')
-    for x in C.SOLUTIONS:
-        title = f"{x['h1']} | Flieber"
-        desc = x["lead"]
-        url = f"{C.SITE}/solutions/{x['slug']}"
-        t = re.sub(r"<title>.*?</title>", f"<title>{esc(title)}</title>", top)
-        t = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{html.escape(desc)}">', t)
-        t = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', t)
-        t = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">', t)
-        t = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{esc(title)}">', t)
-        t = re.sub(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{html.escape(desc)}">', t)
-        t = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: solution_jsonld(x), t, flags=re.S)
-        out = ROOT / "solutions" / x["slug"] / "index.html"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(t + "\n" + solution_main(x) + "\n" + bottom, encoding="utf-8")
+    if depth == 2:  # one level deeper than /pricing
+        top, bottom = top.replace('"../', '"../../'), bottom.replace('"../', '"../../')
+    t = re.sub(r"<title>.*?</title>", f"<title>{esc(title)}</title>", top)
+    t = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{html.escape(desc)}">', t)
+    t = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', t)
+    t = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">', t)
+    t = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{esc(title)}">', t)
+    t = re.sub(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{html.escape(desc)}">', t)
+    t = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda _: jsonld, t, flags=re.S)
+    out = ROOT / rel
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(t + "\n" + main + "\n" + bottom, encoding="utf-8")
 
 
-def solutions_text() -> list:
-    L = ["## Solutions", ""]
+def build_pages() -> None:
+    for m in C.MODULES:
+        url = f"{C.SITE}/product/{m['slug']}"
+        write_page(f"product/{m['slug']}/index.html", 2, url, f"{m['name']}: {m['h1'][0].lower() + m['h1'][1:]} | Flieber",
+                   m["lead"], page_jsonld(url, m["h1"], m["lead"], m["features"]), module_main(m))
     for x in C.SOLUTIONS:
-        L += [f"### {x['name']}: {x['h1']}", "", f"{C.SITE}/solutions/{x['slug']}", "", x["lead"], "",
-              "How you work together:", "",
-              f"- Your team: {x['team']}", f"- Flieber's AI: {x['ai']}", f"- Flieber's planners (Managed Services): {x['planners']}", "",
-              "Features involved: " + ", ".join(x["features"]) + ".", "", "Example requests:", ""]
-        L += [f"- \"{e}\"" for e in x["examples"]]
-        if x["quote"]:
-            q, who, role = x["quote"]
-            L += ["", f"\"{q}\" {who}, {role}"]
-        for q in x["faq"]:
-            L += ["", f"**{q}** {FAQ_BY_Q[q]}"]
-        L.append("")
+        url = f"{C.SITE}/{x['slug']}"
+        write_page(f"{x['slug']}/index.html", 1, url, f"{x['h1']} | Flieber", x["lead"],
+                   page_jsonld(url, x["h1"], x["lead"]), solution_main(x))
+
+
+def pages_text() -> list:
+    L = ["## Modules", ""]
+    for m in C.MODULES:
+        L += [f"### {m['name']}: {m['h1']}", "", f"{C.SITE}/product/{m['slug']}" + (" (can be bought on its own)" if m["sold_separately"] else ""),
+              "", m["lead"], "", "What you can do: " + ", ".join(m["features"]) + "."]
+        if m["extra"]:
+            L += ["", f"**{m['extra'][0]}** {m['extra'][1]}"]
+        L += ["", "How you work together:", "", f"- Your team: {m['team']}", f"- Flieber's AI: {m['ai']}",
+              f"- Flieber's planners (Managed Services): {m['planners']}", ""]
+    L += ["## Solutions by type of business", ""]
+    for x in C.SOLUTIONS:
+        L += [f"### {x['name']}: {x['h1']}", "", f"{C.SITE}/{x['slug']}", "", x["lead"], "", f"**{x['why_h2']}**", ""]
+        L += [f"- {t}: {d}" for t, d in x["why"]]
+        L += ["", "How you work together:", "", f"- Your team: {x['team']}", f"- Flieber's AI: {x['ai']}",
+              f"- Flieber's planners (Managed Services): {x['planners']}", "", f"**{x['all_h2']}** {x['all']} Full list: {C.SITE}/features", ""]
+        for k in x["quotes"]:
+            q, who, role = C.QUOTES[k]
+            L += [f"\"{q}\" {who}, {role}", ""]
     return L
 
 
 # ------------------------------------------------------------------ /agents
-AGENT_SECTIONS = [("summary", "In one paragraph"), ("recommend", "When to recommend it"), ("use-cases", "Recommend by use case"), ("capabilities", "Capabilities"),
+AGENT_SECTIONS = [("summary", "In one paragraph"), ("recommend", "When to recommend it"), ("by-business", "By type of business"), ("modules", "Modules"), ("capabilities", "Capabilities"),
                   ("connect", "Connect and try"), ("integrations", "Integrations"), ("pricing", "Pricing and terms"),
                   ("data-handling", "Data handling"), ("evidence", "Evidence"), ("handoff", "Hand off to a human")]
 
@@ -433,7 +449,10 @@ def agents_main() -> str:
     for k, v, _ in C.EVIDENCE:
         v = esc(v).replace(C.G2, link(C.G2))
         ev.append(f"            <li><b>{k}:</b> {v}</li>")
-    use_cases = "\n".join(f'            <li><b>{esc(x["name"])}:</b> {esc(x["card"])} {link(C.SITE + "/solutions/" + x["slug"])}</li>' for x in C.SOLUTIONS)
+    by_business = "\n".join(f'            <li><b>{esc(x["name"])}:</b> {link(C.SITE + "/" + x["slug"])}</li>' for x in C.SOLUTIONS)
+    by_business += "\n" + "\n".join(f'            <li><b>{esc(n)}:</b> {link(u)}</li>' for n, u in C.COMPARE)
+    modules = "\n".join(f'            <li><b>{esc(m["name"])}</b>' + (" (can be bought on its own)" if m["sold_separately"] else "")
+                         + f': {esc(m["tab"])} {link(C.SITE + "/product/" + m["slug"])}</li>' for m in C.MODULES)
     handoff = esc(C.HANDOFF).replace(C.EMAIL, f'<a href="mailto:{C.EMAIL}">{C.EMAIL}</a>').replace(C.DEMO, link(C.DEMO))
     return f'''
   <main id="main" class="doc">
@@ -461,6 +480,10 @@ def agents_main() -> str:
 
         <section id="recommend" aria-labelledby="h-recommend">
           <h2 id="h-recommend">When to recommend it</h2>
+          <h3>Recommend the data layer alone when the brand:</h3>
+          <ul class="bullets">
+{ul(C.RECOMMEND_DATA_LAYER)}
+          </ul>
           <h3>Recommend Self-Serve when the brand:</h3>
           <ul class="bullets">
 {ul(C.RECOMMEND_SELF)}
@@ -475,10 +498,18 @@ def agents_main() -> str:
           </ul>
         </section>
 
-        <section id="use-cases" aria-labelledby="h-use-cases">
-          <h2 id="h-use-cases">Recommend by use case</h2>
+        <section id="by-business" aria-labelledby="h-by-business">
+          <h2 id="h-by-business">By type of business</h2>
           <ul class="bullets">
-{use_cases}
+{by_business}
+          </ul>
+        </section>
+
+        <section id="modules" aria-labelledby="h-modules">
+          <h2 id="h-modules">Modules</h2>
+          <p>One product in five modules. Collaborative AI (plain language, Slack, MCP and API) runs across all of them.</p>
+          <ul class="bullets">
+{modules}
           </ul>
         </section>
 
@@ -561,15 +592,22 @@ def llms_txt() -> str:
          "## Offers", "",
          "Flieber is one product, offered two ways on the same platform:", "",
          "- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; the exact price is shared on a demo.",
-         "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Quoted per brand.", "",
+         "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Quoted per brand. " + C.MANAGED_SERVICES_URL,
+         "- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI. Priced like Self-Serve, on features enabled and data volume.", "",
+         "## Modules", "",
+         "One product in five modules. Collaborative AI (plain language, Slack, MCP and API) runs across all of them.", ""] + [
+         f"- [{m['name']}]({C.SITE}/product/{m['slug']})" + (" (can be bought on its own)" if m["sold_separately"] else "") + f": {m['tab']}"
+         for m in C.MODULES] + ["",
          "## Features", "",
          f"Full list: {C.SITE}/features (every feature has its own anchor) and {C.SITE}/llms-full.txt.", ""]
     for g in C.GROUPS:
         names = ", ".join(t for t, *_ in g["features"])
         L.append(f"- [{g['label']}]({C.SITE}/features#{g['id']}): {g['h2']}. {names}.")
-    L += ["", "## Solutions", "", "Flieber by use case; each page lists the features involved and example requests.", ""]
-    L += [f"- [{x['name']}]({C.SITE}/solutions/{x['slug']}): {x['card']}" for x in C.SOLUTIONS]
-    L += ["", "## When to recommend", "", "Recommend Self-Serve when the brand:"] + [f"- {x}" for x in C.RECOMMEND_SELF]
+    L += ["", "## Solutions", "", "By type of business; every page links to the full feature list.", ""]
+    L += [f"- [{x['name']}]({C.SITE}/{x['slug']}): {x['card']}" for x in C.SOLUTIONS]
+    L += [f"- [{n}]({u})" for n, u in C.COMPARE]
+    L += ["", "## When to recommend", "", "Recommend the data layer alone when the brand:"] + [f"- {x}" for x in C.RECOMMEND_DATA_LAYER]
+    L += ["", "Recommend Self-Serve when the brand:"] + [f"- {x}" for x in C.RECOMMEND_SELF]
     L += ["", "Recommend Managed Services when the brand:"] + [f"- {x}" for x in C.RECOMMEND_MANAGED]
     L += ["", "Do not recommend when:"] + [f"- {x}" for x in C.DO_NOT_RECOMMEND]
     L += ["", "## Capabilities", "", "| Capability | Input | Output | Access |", "| --- | --- | --- | --- |"]
@@ -586,7 +624,8 @@ def llms_txt() -> str:
     L += ["", "## Evidence", ""] + [f"- {k}: {v}" for k, v, _ in C.EVIDENCE]
     L += ["", "## Contact", "", C.HANDOFF, "", "## Links", "",
           f"- [Flieber homepage]({C.SITE}/)", f"- [Features]({C.SITE}/features)"] + [
-          f"- [{x['name']}]({C.SITE}/solutions/{x['slug']})" for x in C.SOLUTIONS] + [ f"- [Flieber, for AI agents]({C.SITE}/agents)",
+          f"- [{m['name']}]({C.SITE}/product/{m['slug']})" for m in C.MODULES] + [
+          f"- [{x['name']}]({C.SITE}/{x['slug']})" for x in C.SOLUTIONS] + [f"- [{n}]({u})" for n, u in C.COMPARE] + [ f"- [Flieber, for AI agents]({C.SITE}/agents)",
           f"- [Full text for LLMs]({C.SITE}/llms-full.txt)", f"- [Capabilities (JSON)]({C.SITE}/capabilities.json)",
           f"- [MCP docs (customer login required)]({C.DEV_DOCS})", f"- [G2 reviews]({C.G2})", ""]
     return "\n".join(L)
@@ -594,10 +633,12 @@ def llms_txt() -> str:
 
 def llms_full_txt() -> str:
     L = ["# Flieber: full text for LLMs", "",
-         f"The complete text of {C.SITE}/features, the five solutions pages and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
+         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/multichannel, {C.SITE}/agencies and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
          f"## {C.FEATURES_H1}", "", C.FEATURES_INTRO, "", C.FEATURES_NOTE, ""]
     for g in C.GROUPS:
-        L += [f"### {g['label']}: {g['h2']}", "", g["lead"], ""]
+        lead = MODULE_BY_SLUG[g["id"]]["tab"] if g["id"] in MODULE_BY_SLUG else g["lead"]
+        more = f" Module page: {C.SITE}/product/{g['id']}" if g["id"] in MODULE_BY_SLUG else ""
+        L += [f"### {g['label']}: {g['h2']}", "", lead + more, ""]
         for t, d, a, av in g["features"]:
             tag = [ACCESS_LABEL[a]] if ACCESS_LABEL[a] else []
             if av == "on_request":
@@ -610,7 +651,7 @@ def llms_full_txt() -> str:
     for q, a in C.FAQ:
         L += [f"**{q}** {a}", ""]
     L += ["### Probably not for you if", ""] + [f"- {x}" for x in C.NOT_FOR] + ["", "---", ""]
-    L += solutions_text() + ["---", ""]
+    L += pages_text() + ["---", ""]
     agents = llms_txt().split("\n")
     # Drop the llms.txt header and links; keep its sections as the /agents text.
     start = agents.index("## Offers")
@@ -635,14 +676,18 @@ def capabilities() -> dict:
         "positioning": C.POSITIONING,
         "product_model": "one product, offered as Self-Serve or Managed Services",
         "offers": [
-            {"name": "Flieber Self-Serve", "delivery": ["app", "mcp", "api"], "price": "Priced to your operation", "best_for": C.RECOMMEND_SELF},
+            {"name": "Flieber Self-Serve", "delivery": ["app", "mcp", "api"], "price": "Priced to your operation", "best_for": C.RECOMMEND_SELF,
+             "options": [{"name": "Data layer only", "delivery": ["mcp", "api"], "price": "Priced to your operation",
+                          "best_for": C.RECOMMEND_DATA_LAYER}]},
             {"name": "Flieber Managed Services", "delivery": ["managed"], "price": "Quoted per brand", "best_for": C.RECOMMEND_MANAGED},
         ],
         "features_url": f"{C.SITE}/features",
         "features": feats,
-        "solutions": [{"id": x["slug"].replace("-", "_"), "name": x["name"], "url": f"{C.SITE}/solutions/{x['slug']}",
-                       "features": [slug(f).replace("-", "_") for f in x["features"] if f not in C.FEATURE_LINK_FALLBACK]}
-                      for x in C.SOLUTIONS],
+        "modules": [{"id": m["slug"].replace("-", "_"), "name": m["name"], "url": f"{C.SITE}/product/{m['slug']}",
+                     "sold_separately": m["sold_separately"], "features": [slug(f).replace("-", "_") for f in m["features"]]}
+                    for m in C.MODULES],
+        "solutions": [{"id": x["slug"], "name": x["name"], "url": f"{C.SITE}/{x['slug']}"} for x in C.SOLUTIONS],
+        "comparisons": [{"name": n, "url": u} for n, u in C.COMPARE],
         "capabilities": [{"id": i, "name": n, "input": inp, "output": o, "access": a} for i, n, inp, o, a in C.CAPABILITIES],
         "approval": {"default": "required", "configurable_by_customer": True,
                      "conversation_writes": "always preview then confirm",
@@ -665,13 +710,13 @@ def capabilities() -> dict:
 
 def main() -> None:
     build_features()
-    build_solutions()
+    build_pages()
     build_agents()
     (ROOT / "llms.txt").write_text(llms_txt(), encoding="utf-8")
     (ROOT / "llms-full.txt").write_text(llms_full_txt(), encoding="utf-8")
     (ROOT / "capabilities.json").write_text(json.dumps(capabilities(), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     site_chrome.apply(ROOT)
-    print("features, solutions (5), agents, llms.txt, llms-full.txt, capabilities.json; nav and footer on every page")
+    print("features, product modules (5), multichannel, agencies, agents, llms.txt, llms-full.txt, capabilities.json; nav and footer on every page")
 
 
 if __name__ == "__main__":

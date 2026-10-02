@@ -7,5 +7,7 @@ COPY features /srv/features
 COPY pricing /srv/pricing
 COPY security /srv/security
 COPY contact /srv/contact
-COPY solutions /srv/solutions
+COPY product /srv/product
+COPY multichannel /srv/multichannel
+COPY agencies /srv/agencies
 COPY assets /srv/assets

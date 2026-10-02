@@ -1,14 +1,14 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: Flieber 2026 B - Solutions - amazon-fba
+  label: Flieber 2026 B - Product - inventory-forecasting
 -->
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Keep FBA stocked without living in Seller Central | Flieber</title>
+  <title>Inventory forecasting: see stockouts and overstock before they happen | Flieber</title>
   <link rel="icon" href="https://www.flieber.com/hubfs/flieber-2026/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#F5ED61">
 
@@ -874,31 +874,50 @@ a.ask { text-decoration: none; color: inherit; }
   .layer-tab { flex: none; padding: 10px 14px; font-size: 15px; gap: 10px; }
   .layer-tab[aria-selected="true"] { transform: none; }
 }
-.sol-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: clamp(40px, 6vw, 72px); }
-.sol-head .section-head { margin-bottom: 0; }
-.sol-arrows { flex: none; }
-.sol-viewport { --edge: max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter))); }
-.sol-track {
-  display: grid; grid-auto-flow: column; grid-auto-columns: clamp(280px, 30vw, 360px);
-  gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 var(--edge);
-  padding: 4px var(--edge) 12px; scrollbar-width: none;
-}
-.sol-track::-webkit-scrollbar { display: none; }
-.sol-track > li { scroll-snap-align: start; display: flex; }
+.sol-two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .sol-card {
-  flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 280px;
+  display: flex; flex-direction: column; gap: 10px; min-height: 260px;
   text-decoration: none; color: inherit; background: var(--white);
-  border: 1px solid var(--line-strong); border-radius: var(--radius-l); padding: clamp(22px, 2.6vw, 30px);
+  border: 1px solid var(--line-strong); border-radius: var(--radius-l); padding: clamp(24px, 3vw, 36px);
   transition: border-color .25s, background-color .25s;
 }
 .sol-card .n { font-family: var(--mono); font-size: 12px; color: var(--text-2); margin-bottom: 28px; }
-.sol-card p { color: var(--text-2); }
+.sol-card .h3 { font-size: clamp(26px, 2.6vw, 34px); font-weight: 400; letter-spacing: -0.04em; }
+.sol-card p { color: var(--text-2); font-size: 18px; }
 .sol-go { margin-top: auto; padding-top: 24px; font-weight: 600; letter-spacing: -0.02em; display: inline-flex; gap: 6px; }
 .sol-go .arrow { transition: transform .25s var(--ease); }
 .sol-card:hover { border-color: var(--black); background: var(--yellow); }
 .sol-card:hover p, .sol-card:hover .n { color: var(--black); }
 .sol-card:hover .sol-go .arrow { transform: translateX(3px); }
-@media (max-width: 620px) { .sol-arrows { display: none; } .sol-track { grid-auto-columns: 82%; } }
+.sol-compare { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; color: var(--text-2); }
+.sol-compare span { font-weight: 600; color: var(--black); }
+.sol-compare a { color: var(--black); text-underline-offset: 3px; }
+.section-head .link-row { margin-top: 22px; }
+@media (max-width: 720px) { .sol-two { grid-template-columns: 1fr; } .sol-card { min-height: 0; } }
+.layers-under { margin-top: 28px; max-width: 820px; color: var(--gray-medium); font-size: clamp(17px, 1.5vw, 19px); line-height: 1.45; }
+.layers-under-label { color: var(--white); font-weight: 600; }
+.nav-menu-label { padding: 12px 12px 4px; margin-top: 4px; border-top: 1px solid var(--line); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+.nav-links .nav-menu a.nav-menu-all { margin-top: 4px; border-top: 1px solid var(--line); border-radius: 0 0 var(--radius-s) var(--radius-s); font-weight: 600; color: var(--black); }
+@media (max-width: 1280px) {
+  .nav.open .nav-menu-label { padding: 14px 4px 6px; border-top: 0; }
+  .nav.open .nav-links .nav-menu a.nav-menu-all { border-top: 0; border-radius: 0; }
+}
+.mod-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.mod-card { display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 22px; transition: border-color .2s; }
+.mod-card .n { font-family: var(--mono); font-size: 12px; color: var(--text-2); margin-bottom: 18px; }
+.mod-card p { color: var(--text-2); font-size: 15.5px; }
+.mod-card .arrow { display: inline-block; transition: transform .25s var(--ease); }
+.mod-card:hover { border-color: var(--black); }
+.mod-card:hover .arrow { transform: translateX(3px); }
+@media (max-width: 1060px) { .mod-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .mod-grid { grid-template-columns: 1fr; } }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.why-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l); padding: clamp(22px, 2.6vw, 32px); display: flex; flex-direction: column; gap: 10px; }
+.why-card .n { font-family: var(--mono); font-size: 12px; color: var(--text-2); margin-bottom: 20px; }
+.why-card p { color: var(--text-2); }
+@media (max-width: 860px) { .why-grid { grid-template-columns: 1fr; } }
+.sol-quote + .sol-quote { margin-top: clamp(40px, 5vw, 56px); }
+#customers .sol-quote:first-child { margin-top: 0; }
 .results-light .results { border-color: var(--line-strong); }
 .results-light .result + .result { border-left-color: var(--line-strong); }
 .results-light .result-label { color: var(--black); }
@@ -908,9 +927,10 @@ a.ask { text-decoration: none; color: inherit; }
 .founder .h2 { color: var(--white); max-width: 900px; }
 .founder-quote { margin: 0; max-width: 980px; }
 .founder-quote blockquote { margin: 0; }
-.founder-quote blockquote p { font-size: clamp(22px, 2.6vw, 34px); line-height: 1.25; letter-spacing: -0.03em; color: var(--white); }
-.founder-quote blockquote p::before { content: "“"; }
-.founder-quote blockquote p::after { content: "”"; }
+.founder-quote blockquote p { font-size: clamp(20px, 2.1vw, 28px); line-height: 1.3; letter-spacing: -0.025em; color: var(--white); }
+.founder-quote blockquote p + p { margin-top: 1em; color: var(--gray-medium); }
+.founder-quote blockquote p:first-child::before { content: "“"; }
+.founder-quote blockquote p:last-child::after { content: "”"; }
 .founder-quote figcaption { margin-top: 32px; display: flex; align-items: center; gap: 16px; }
 .founder-photo {
   width: 64px; height: 64px; border-radius: 50%; flex: none; display: grid; place-items: center;
@@ -947,7 +967,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .sol-others div { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
 .sol-others a { text-decoration: none; font-weight: 500; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--black); background: rgba(255,255,255,.35); }
 .sol-others a:hover { background: var(--white); }
-#control-and-approval, #together, #features-involved { scroll-margin-top: 140px; }
+#control-and-approval, #together, #what-you-can-do, #works-with, #why, #everything { scroll-margin-top: 140px; }
 
 </style>
 
@@ -966,43 +986,29 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.flieber.com/solutions/amazon-fba",
-      "url": "https://www.flieber.com/solutions/amazon-fba",
-      "name": "Keep FBA stocked without living in Seller Central",
-      "description": "Amazon demand moves fast and FBA capacity is never where you need it. Flieber plans what to send from your warehouses and 3PLs, creates the inbound shipments in Amazon and tracks them to delivery.",
+      "@id": "https://www.flieber.com/product/inventory-forecasting",
+      "url": "https://www.flieber.com/product/inventory-forecasting",
+      "name": "See stockouts and overstock before they happen",
+      "description": "Flieber projects stock for every product at every location from on-hand inventory, inbound shipments and forecast demand, so problems show up while there's still time to act.",
       "isPartOf": {
         "@type": "WebSite",
         "url": "https://www.flieber.com"
-      },
-      "about": {
-        "@type": "SoftwareApplication",
-        "name": "Flieber",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "publisher": {
-          "@id": "https://www.flieber.com/#organization"
-        }
       }
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does Flieber plan Amazon FBA replenishment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. It recommends transfers from warehouses or 3PLs to FBA, creates the inbound shipments in Amazon and tracks them to delivery."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Flieber correct sales history for stockouts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. History distorted by stockouts, spikes and promotions is adjusted before forecasting, and actual sales stay visible alongside."
-          }
-        }
+      "@type": "SoftwareApplication",
+      "name": "Flieber",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://www.flieber.com/product/inventory-forecasting",
+      "publisher": {
+        "@id": "https://www.flieber.com/#organization"
+      },
+      "featureList": [
+        "Inventory projections",
+        "Stockouts, overstock and lost sales",
+        "Backorders and preorders",
+        "Inventory history and balances"
       ]
     }
   ]
@@ -1020,15 +1026,26 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
         <img src="https://www.flieber.com/hubfs/flieber-2026/flieber-logo.svg" alt="Flieber" width="116" height="20">
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="/features">Product</a>
         <div class="nav-drop is-current">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-product">Product <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-product">
+            <a href="/product/data-layer">Data layer</a>
+            <a href="/product/demand-forecasting">Demand forecasting</a>
+            <a href="/product/inventory-forecasting">Inventory forecasting</a>
+            <a href="/product/replenishment">Replenishment</a>
+            <a href="/product/workflows">Workflows</a>
+            <a class="nav-menu-all" href="/features">All features <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="nav-drop">
           <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-solutions">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <div class="nav-menu" id="nav-solutions">
-            <a href="/solutions/amazon-fba">Amazon FBA replenishment</a>
-            <a href="/solutions/wholesale">Wholesale and EDI</a>
-            <a href="/solutions/kits-and-bundles">Kits and bundles</a>
-            <a href="/solutions/multi-brand">Multi-brand portfolios</a>
-            <a href="/solutions/promotions-and-launches">Promotions and launches</a>
+            <a href="/multichannel">Multichannel brands</a>
+            <a href="/agencies">Agencies and aggregators</a>
+            <span class="nav-menu-label">Compare</span>
+            <a href="https://www.flieber.com/flieber-vs-netsuite">Flieber vs NetSuite</a>
+            <a href="https://www.flieber.com/flieber-vs-netstock">Flieber vs Netstock</a>
+            <a href="https://www.flieber.com/flieber-vs-foresight-ai">Flieber vs Foresight AI</a>
           </div>
         </div>
         <a href="/pricing">Pricing</a>
@@ -1049,16 +1066,47 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 
   <main id="main">
 
-    <section class="page-head sol-head" aria-labelledby="sol-title">
+    <section class="page-head sol-head" aria-labelledby="page-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Solutions · Amazon FBA</span>
-          <h1 class="h1" id="sol-title">Keep FBA stocked without living in Seller Central</h1>
-          <p class="lead">Amazon demand moves fast and FBA capacity is never where you need it. Flieber plans what to send from your warehouses and 3PLs, creates the inbound shipments in Amazon and tracks them to delivery.</p>
+          <span class="kicker">Product · Inventory forecasting</span>
+          <h1 class="h1" id="page-title">See stockouts and overstock before they happen</h1>
+          <p class="lead">Flieber projects stock for every product at every location from on-hand inventory, inbound shipments and forecast demand, so problems show up while there’s still time to act.</p>
         </div>
         <div class="sol-actions">
           <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
           <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="what-you-can-do" aria-labelledby="what-you-can-do-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Features</span>
+          <h2 class="h2" id="what-you-can-do-title" style="margin-top:20px">What you can do</h2>
+        </div>
+        <div class="feat-grid">
+            <a class="feat-card sol-feat" href="/features#inventory-projections">
+              <h3 class="h3">Inventory projections <span class="arrow" aria-hidden="true">→</span></h3>
+              <p>Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and consolidated warehouse needs.</p>
+              <p class="feat-tag">Read</p>
+            </a>
+            <a class="feat-card sol-feat" href="/features#stockouts-overstock-and-lost-sales">
+              <h3 class="h3">Stockouts, overstock and lost sales <span class="arrow" aria-hidden="true">→</span></h3>
+              <p>Projected stockout dates, products below safety stock, excess inventory and the sales lost to unavailable stock or late shipments.</p>
+              <p class="feat-tag">Read</p>
+            </a>
+            <a class="feat-card sol-feat" href="/features#backorders-and-preorders">
+              <h3 class="h3">Backorders and preorders <span class="arrow" aria-hidden="true">→</span></h3>
+              <p>Counts accumulated backorder demand in inventory and replenishment calculations, with settings by channel, and plans for products sold before they arrive.</p>
+              <p class="feat-tag">Read</p>
+            </a>
+            <a class="feat-card sol-feat" href="/features#inventory-history-and-balances">
+              <h3 class="h3">Inventory history and balances <span class="arrow" aria-hidden="true">→</span></h3>
+              <p>Snapshots and balances across every connected location, including inbound and in-transit stock.</p>
+              <p class="feat-tag">Read</p>
+            </a>
         </div>
       </div>
     </section>
@@ -1069,94 +1117,55 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
           <span class="kicker">Collaborative AI</span>
           <h2 class="h2" id="together-title" style="margin-top:20px">How you work together</h2>
         </div>
-        <div class="collab reveal-stagger">
+        <div class="collab">
           <article class="collab-card">
             <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><circle cx="5.5" cy="5.5" r="2.2"/><circle cx="11" cy="6" r="1.8"/><path d="M1.6 13.5c.5-2.3 2-3.6 3.9-3.6s3.4 1.3 3.9 3.6M10 9.6c1.9 0 3.3 1.2 3.8 3.4"/></svg></span></div>
             <h3 class="h3">Your team</h3>
-            <p>Approve the transfer plan and decide where to take risk.</p>
+            <p>Decide where to take risk and where to protect stock.</p>
           </article>
           <article class="collab-card collab-ai">
             <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><path d="M8 1.8l1.5 3.7 3.7 1.5-3.7 1.5L8 12.2 6.5 8.5 2.8 7l3.7-1.5z"/><path d="M12.6 11.2l.6 1.5 1.5.6-1.5.6-.6 1.5-.6-1.5-1.5-.6 1.5-.6z"/></svg></span></div>
             <h3 class="h3">Flieber’s AI</h3>
-            <p>Forecast Amazon demand reconstructed through past stockouts, recommend what to send and when, create the inbound shipments and flag anything arriving late.</p>
+            <p>Project inventory daily, surface the products at risk and estimate the sales at stake.</p>
           </article>
           <article class="collab-card">
             <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg></span><span class="collab-tag">With Managed Services</span></div>
             <h3 class="h3">Flieber’s planners</h3>
-            <p>Review FBA risk with you in S&amp;OP and keep your lead times and parameters accurate.</p>
+            <p>Walk through the biggest risks with you every planning cycle.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="features-involved" aria-labelledby="feat-title">
+    <section class="section" id="works-with" aria-labelledby="works-with-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Features</span>
-          <h2 class="h2" id="feat-title" style="margin-top:20px">Features involved</h2>
+          <span class="kicker">Modules</span>
+          <h2 class="h2" id="works-with-title" style="margin-top:20px">Works with</h2>
         </div>
-        <div class="feat-grid">
-            <a class="feat-card sol-feat" href="/features#purchase-and-transfer-recommendations">
-              <h3 class="h3">Purchase and transfer recommendations <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>What to order or transfer, how much and when, by product and location, including replenishment from warehouses or 3PLs to fulfillment locations such as FBA.</p>
-              <p class="feat-tag">Read</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#inbound-shipments-in-amazon-and-3pls">
-              <h3 class="h3">Inbound shipments in Amazon and 3PLs <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Creates inbound shipments in Amazon and in connected 3PL and warehouse systems from an approved plan.</p>
-              <p class="feat-tag">Write</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#inbound-shipment-tracking">
-              <h3 class="h3">Inbound shipment tracking <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Follows POs and shipments through delivery, with manual entry, Google Sheets sync and automatic import of connected inbound shipments such as Amazon FBA.</p>
-              <p class="feat-tag">Read</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#sales-history-adjusted-for-anomalies">
-              <h3 class="h3">Sales history adjusted for anomalies <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Corrects history distorted by stockouts, spikes and promotions, and shows actual sales next to the adjusted demand used for forecasting.</p>
-              <p class="feat-tag">Read</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#alerts-and-scheduled-reports">
-              <h3 class="h3">Alerts and scheduled reports <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Scheduled checks for stockout risk, excess inventory and orders due, delivered by email, Slack, Microsoft Teams or Google Sheets.</p>
-              <p class="feat-tag">Write</p>
-            </a>
+        <div class="mod-grid">
+          <a class="mod-card" href="/product/data-layer">
+            <span class="n">01</span>
+            <h3 class="h3">Data layer <span class="arrow" aria-hidden="true">→</span></h3>
+            <p>Connect every channel, warehouse, 3PL and supplier, mapped and kept current, with gaps fixed and anomalies flagged. Available on its own for teams building their own tools with AI.</p>
+          </a>
+          <a class="mod-card" href="/product/demand-forecasting">
+            <span class="n">02</span>
+            <h3 class="h3">Demand forecasting <span class="arrow" aria-hidden="true">→</span></h3>
+            <p>Forecast every product on every channel, from history adjusted for stockouts and promotions.</p>
+          </a>
+          <a class="mod-card" href="/product/replenishment">
+            <span class="n">04</span>
+            <h3 class="h3">Replenishment <span class="arrow" aria-hidden="true">→</span></h3>
+            <p>Know what to buy or transfer, how much and when, within MOQs, case packs, lead times and cash, and test it before you commit.</p>
+          </a>
+          <a class="mod-card" href="/product/workflows">
+            <span class="n">05</span>
+            <h3 class="h3">Workflows <span class="arrow" aria-hidden="true">→</span></h3>
+            <p>Carry approved decisions into the systems where they land: suppliers, ERPs, Amazon, 3PLs and your own tools.</p>
+          </a>
         </div>
-        <p class="link-row"><a class="link-arrow" href="/features">See every feature <span class="arrow" aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="examples" aria-labelledby="examples-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Examples</span>
-          <h2 class="h2" id="examples-title" style="margin-top:20px">Example requests</h2>
-        </div>
-        <ol class="feat-examples">
-          <li><span class="feat-q">“Which hero SKUs run out on Amazon before their next PO lands?”</span></li>
-          <li><span class="feat-q">“Every Monday, recommend FBA transfers from our 3PL and create the inbound shipments once I approve.”</span></li>
-        </ol>
-        <p class="feat-note">Some of these need a connection or a workflow set up for your account. On a demo we’ll show which ones run on your setup today.</p>
-      </div>
-    </section>
-
-    <section class="section" id="questions" aria-labelledby="questions-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Questions</span>
-          <h2 class="h2" id="questions-title" style="margin-top:20px">Does Flieber support...</h2>
-        </div>
-        <div class="feat-faq">
-          <div class="feat-faq-item">
-            <h3 class="h3">Does Flieber plan Amazon FBA replenishment?</h3>
-            <p>Yes. It recommends transfers from warehouses or 3PLs to FBA, creates the inbound shipments in Amazon and tracks them to delivery.</p>
-          </div>
-          <div class="feat-faq-item">
-            <h3 class="h3">Does Flieber correct sales history for stockouts?</h3>
-            <p>Yes. History distorted by stockouts, spikes and promotions is adjusted before forecasting, and actual sales stay visible alongside.</p>
-          </div>
-        </div>
-        <p class="link-row"><a class="link-arrow" href="/features#questions">More questions <span class="arrow" aria-hidden="true">→</span></a></p>
+        <p class="link-row"><a class="link-arrow" href="/features">All features <span class="arrow" aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
@@ -1165,21 +1174,12 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
         <div class="section-head">
           <span class="kicker">Next step</span>
           <h2 class="h2" id="next-title" style="margin-top:20px">See it on your own data</h2>
-          <p class="lead">Start a 14-day free trial, no credit card required, or book a demo and we’ll walk through how this works for your operation.</p>
+          <p class="lead">Start a 14-day free trial, no credit card required, or book a demo and we’ll walk through how Flieber works for your operation.</p>
         </div>
         <div class="try-actions">
           <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
           <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
         </div>
-        <nav class="sol-others" aria-label="Other solutions">
-          <span class="kicker">Other solutions</span>
-          <div>
-            <a href="/solutions/wholesale">Wholesale and EDI</a>
-            <a href="/solutions/kits-and-bundles">Kits and bundles</a>
-            <a href="/solutions/multi-brand">Multi-brand portfolios</a>
-            <a href="/solutions/promotions-and-launches">Promotions and launches</a>
-          </div>
-        </nav>
       </div>
     </section>
 
@@ -1199,16 +1199,17 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
             <li><a href="/features">Features</a></li>
             <li><a href="/pricing">Pricing</a></li>
             <li><a href="/security">Security &amp; data</a></li>
+            <li><a href="https://www.flieber.com/managed-services">Managed Services</a></li>
           </ul>
         </div>
         <div>
           <h2 class="footer-h">Solutions</h2>
           <ul>
-            <li><a href="/solutions/amazon-fba">Amazon FBA replenishment</a></li>
-            <li><a href="/solutions/wholesale">Wholesale and EDI</a></li>
-            <li><a href="/solutions/kits-and-bundles">Kits and bundles</a></li>
-            <li><a href="/solutions/multi-brand">Multi-brand portfolios</a></li>
-            <li><a href="/solutions/promotions-and-launches">Promotions and launches</a></li>
+            <li><a href="/multichannel">Multichannel brands</a></li>
+            <li><a href="/agencies">Agencies and aggregators</a></li>
+            <li><a href="https://www.flieber.com/flieber-vs-netsuite">Flieber vs NetSuite</a></li>
+            <li><a href="https://www.flieber.com/flieber-vs-netstock">Flieber vs Netstock</a></li>
+            <li><a href="https://www.flieber.com/flieber-vs-foresight-ai">Flieber vs Foresight AI</a></li>
           </ul>
         </div>
         <div>
@@ -1287,7 +1288,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
     document.addEventListener('click', function (e) { if (!drop.contains(e.target)) set(false); });
   });
 
-  /* ---------- How Flieber is built: six layer tabs (Option 2) ---------- */
+  /* ---------- How Flieber is built: five module tabs (Option 2) ---------- */
   var layers = document.getElementById('layers');
   if (layers) {
     var ltabs = [].slice.call(layers.querySelectorAll('.layer-tab'));
@@ -1313,17 +1314,6 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
     });
     pick(0);
   }
-
-  /* ---------- Solutions carousel arrows (Option 2) ---------- */
-  document.querySelectorAll('[data-scroll]').forEach(function (btn) {
-    var track = document.getElementById(btn.getAttribute('aria-controls'));
-    if (!track) return;
-    btn.addEventListener('click', function () {
-      var card = track.querySelector('li');
-      var step = card ? card.getBoundingClientRect().width + 14 : track.clientWidth * 0.8;
-      track.scrollBy({ left: Number(btn.getAttribute('data-scroll')) * step, behavior: reduceMotion ? 'auto' : 'smooth' });
-    });
-  });
 
   /* ---------- Reveal on scroll ---------- */
   var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');

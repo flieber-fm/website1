@@ -1,7 +1,7 @@
 """Navigation and footer shared by every page (Option 2 brief, sections 3 and 4).
 
-Navigation: Product · Solutions (menu with the five solutions pages) · Pricing · Security ·
-Who we are · /agents, then Log in · Book a demo · Start free trial.
+Navigation: Product (menu: the five modules, then All features) · Solutions (menu: the two pages by type of
+business, then Compare) · Pricing · Security · Who we are · /agents, then Log in · Book a demo · Start free trial.
 build-content.py writes these into every page listed in PAGE_FILES.
 """
 import html
@@ -16,25 +16,40 @@ def esc(text: str) -> str:
 
 PAGE_FILES = {  # file: (path prefix to the site root, current nav item)
     "index.html": ("", None),
-    "features/index.html": ("../", "features"),
+    "features/index.html": ("../", "product"),
     "pricing/index.html": ("../", "pricing"),
     "security/index.html": ("../", "security"),
     "contact/index.html": ("../", None),
     "agents/index.html": ("../", "agents"),
 }
+for _m in C.MODULES:
+    PAGE_FILES[f"product/{_m['slug']}/index.html"] = ("../../", "product")
 for _s in C.SOLUTIONS:
-    PAGE_FILES[f"solutions/{_s['slug']}/index.html"] = ("../../", "solutions")
+    PAGE_FILES[f"{_s['slug']}/index.html"] = ("../", "solutions")
 
 CHEVRON = ('<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">'
            '<path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg>')
+
+
+def drop_html(key: str, label: str, cur, items: str) -> str:
+    current = " is-current" if cur == key else ""
+    return f"""<div class="nav-drop{current}">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-{key}">{label} {CHEVRON}</button>
+          <div class="nav-menu" id="nav-{key}">
+{items}
+          </div>
+        </div>"""
 
 
 def nav_html(p: str, cur) -> str:
     def a(href, label, key):
         ac = ' aria-current="page"' if key == cur else ""
         return f'<a href="{href}"{ac}>{label}</a>'
-    sol = "\n".join(f'            <a href="{p}solutions/{x["slug"]}/">{esc(x["name"])}</a>' for x in C.SOLUTIONS)
-    drop_cur = " is-current" if cur == "solutions" else ""
+    product = "\n".join(f'            <a href="{p}product/{m["slug"]}/">{esc(m["name"])}</a>' for m in C.MODULES)
+    product += f'\n            <a class="nav-menu-all" href="{p}features/">All features <span aria-hidden="true">→</span></a>'
+    sol = "\n".join(f'            <a href="{p}{x["slug"]}/">{esc(x["name"])}</a>' for x in C.SOLUTIONS)
+    sol += '\n            <span class="nav-menu-label">Compare</span>\n'
+    sol += "\n".join(f'            <a href="{u}">{esc(n)}</a>' for n, u in C.COMPARE)
     agents_cur = ' aria-current="page"' if cur == "agents" else ""
     return f"""  <header class="nav" id="nav">
     <div class="wrap">
@@ -42,13 +57,8 @@ def nav_html(p: str, cur) -> str:
         <img src="{p}assets/img/flieber-logo.svg" alt="Flieber" width="116" height="20">
       </a>
       <nav class="nav-links" aria-label="Primary">
-        {a(p + "features/", "Product", "features")}
-        <div class="nav-drop{drop_cur}">
-          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-solutions">Solutions {CHEVRON}</button>
-          <div class="nav-menu" id="nav-solutions">
-{sol}
-          </div>
-        </div>
+        {drop_html("product", "Product", cur, product)}
+        {drop_html("solutions", "Solutions", cur, sol)}
         {a(p + "pricing/", "Pricing", "pricing")}
         {a(p + "security/", "Security", "security")}
         <a href="{p}#who-we-are">Who we are</a>
@@ -67,7 +77,8 @@ def nav_html(p: str, cur) -> str:
 
 
 def footer_html(p: str, mark: bool) -> str:
-    sol = "\n".join(f'            <li><a href="{p}solutions/{x["slug"]}/">{esc(x["name"])}</a></li>' for x in C.SOLUTIONS)
+    sol = "\n".join(f'            <li><a href="{p}{x["slug"]}/">{esc(x["name"])}</a></li>' for x in C.SOLUTIONS)
+    sol += "\n" + "\n".join(f'            <li><a href="{u}">{esc(n)}</a></li>' for n, u in C.COMPARE)
     mark_html = (f'\n      <div class="footer-mark" aria-hidden="true"><img src="{p}assets/img/flieber-logo-light.svg" alt=""></div>'
                  if mark else "")
     return f"""  <footer class="footer">
@@ -83,6 +94,7 @@ def footer_html(p: str, mark: bool) -> str:
             <li><a href="{p}features/">Features</a></li>
             <li><a href="{p}pricing/">Pricing</a></li>
             <li><a href="{p}security/">Security &amp; data</a></li>
+            <li><a href="{C.MANAGED_SERVICES_URL}">Managed Services</a></li>
           </ul>
         </div>
         <div>

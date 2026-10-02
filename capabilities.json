@@ -16,6 +16,20 @@
         "Sells on a few channels from one or two warehouses, with a mostly simple catalog",
         "Wants a ready-made app, or builds its own reports, workflows or agents",
         "Has a complex operation but an in-house data or AI team"
+      ],
+      "options": [
+        {
+          "name": "Data layer only",
+          "delivery": [
+            "mcp",
+            "api"
+          ],
+          "price": "Priced to your operation",
+          "best_for": [
+            "Has a team building its own reports, tools or agents with AI",
+            "Wants consolidated, contextualized commerce data through MCP or API without the planning app"
+          ]
+        }
       ]
     },
     {
@@ -34,8 +48,17 @@
   "features_url": "https://www.flieber.com/features",
   "features": [
     {
+      "id": "connect_your_sales_channels_and_inventory",
+      "group": "data-layer",
+      "name": "Connect your sales channels and inventory",
+      "description": "Flieber connects to pretty much any system through native and assisted integrations, plus MCP and API. Native integrations work during the free trial; assisted integrations are set up by Flieber's team on a paid plan.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#connect-your-sales-channels-and-inventory"
+    },
+    {
       "id": "data_health",
-      "group": "data",
+      "group": "data-layer",
       "name": "Data health",
       "description": "Checks your account for issues, gaps and anomalies, applies the fixes it can and flags the ones that need a person.",
       "access": "read_write",
@@ -44,7 +67,7 @@
     },
     {
       "id": "cross_channel_sku_mapping",
-      "group": "data",
+      "group": "data-layer",
       "name": "Cross-channel SKU mapping",
       "description": "Links listings and SKUs across channels to one master product, so sales consolidate for planning. Automatic matching, plus bulk catalog import and export.",
       "access": "write",
@@ -53,7 +76,7 @@
     },
     {
       "id": "kits_bundles_and_components",
-      "group": "data",
+      "group": "data-layer",
       "name": "Kits, bundles and components",
       "description": "Turns demand for bundles into component requirements. Buy at component level and transfer inventory as finished products.",
       "access": "write",
@@ -62,7 +85,7 @@
     },
     {
       "id": "product_configuration_and_classification",
-      "group": "data",
+      "group": "data-layer",
       "name": "Product configuration and classification",
       "description": "Product status, custom attributes, costs, prices and packaging units. ABCD classification ranks products by sales, units or profit using your thresholds.",
       "access": "write",
@@ -71,7 +94,7 @@
     },
     {
       "id": "supply_chain_map",
-      "group": "data",
+      "group": "data-layer",
       "name": "Supply chain map",
       "description": "Suppliers, warehouses, 3PLs and channels, with fulfillment and fallback locations, transfer routes, production and transit lead times and ordering cadence.",
       "access": "write",
@@ -80,7 +103,7 @@
     },
     {
       "id": "sales_history_adjusted_for_anomalies",
-      "group": "data",
+      "group": "data-layer",
       "name": "Sales history adjusted for anomalies",
       "description": "Corrects history distorted by stockouts, spikes and promotions, and shows actual sales next to the adjusted demand used for forecasting.",
       "access": "read",
@@ -89,7 +112,7 @@
     },
     {
       "id": "inventory_history_and_balances",
-      "group": "data",
+      "group": "data-layer",
       "name": "Inventory history and balances",
       "description": "Snapshots and balances across every connected location, including inbound and in-transit stock.",
       "access": "read",
@@ -97,8 +120,17 @@
       "url": "https://www.flieber.com/features#inventory-history-and-balances"
     },
     {
+      "id": "reports_and_dashboards",
+      "group": "data-layer",
+      "name": "Reports and dashboards",
+      "description": "Report sales by product and channel, inventory history and value, projected revenue and forecast performance, and build your own dashboards with live alerts and scheduled delivery.",
+      "access": "read",
+      "availability": "general",
+      "url": "https://www.flieber.com/features#reports-and-dashboards"
+    },
+    {
       "id": "uploads_and_google_sheets",
-      "group": "data",
+      "group": "data-layer",
       "name": "Uploads and Google Sheets",
       "description": "Bulk updates to catalog, forecasts, shipments, bundles and wholesale data through CSV files or Google Sheets, with a preview before anything is saved.",
       "access": "write",
@@ -107,7 +139,7 @@
     },
     {
       "id": "organizations_and_users",
-      "group": "data",
+      "group": "data-layer",
       "name": "Organizations and users",
       "description": "Manage several organizations from one place, with unlimited users on every plan and Admin and Member roles.",
       "access": "write",
@@ -116,7 +148,7 @@
     },
     {
       "id": "ai_demand_forecasts",
-      "group": "decisions",
+      "group": "demand-forecasting",
       "name": "AI demand forecasts",
       "description": "Product and channel level forecasts across marketplaces, DTC and wholesale, built from adjusted history and seasonality. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.",
       "access": "read",
@@ -125,7 +157,7 @@
     },
     {
       "id": "forecast_overrides_and_uploads",
-      "group": "decisions",
+      "group": "demand-forecasting",
       "name": "Forecast overrides and uploads",
       "description": "Import your own forecasts, or adjust at SKU, store, channel or group level, including planned promotions and events.",
       "access": "write",
@@ -134,7 +166,7 @@
     },
     {
       "id": "targets_and_new_products",
-      "group": "decisions",
+      "group": "demand-forecasting",
       "name": "Targets and new products",
       "description": "Apply growth percentages, unit targets or revenue targets across selected products. Forecast new products from similar ones or from a manual curve.",
       "access": "write",
@@ -143,7 +175,7 @@
     },
     {
       "id": "forecast_accuracy_and_bias",
-      "group": "decisions",
+      "group": "demand-forecasting",
       "name": "Forecast accuracy and bias",
       "description": "Error and bias metrics, with monthly forecast versions saved so past predictions can be compared with what actually sold. Forecast value added reports on request.",
       "access": "read",
@@ -152,7 +184,7 @@
     },
     {
       "id": "wholesale_forecast_reconciliation",
-      "group": "decisions",
+      "group": "demand-forecasting",
       "name": "Wholesale forecast reconciliation",
       "description": "Finds wholesale demand parked on dates that passed without a sale and suggests where to move it. On request.",
       "access": "read_write",
@@ -161,7 +193,7 @@
     },
     {
       "id": "inventory_projections",
-      "group": "decisions",
+      "group": "inventory-forecasting",
       "name": "Inventory projections",
       "description": "Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and consolidated warehouse needs.",
       "access": "read",
@@ -170,7 +202,7 @@
     },
     {
       "id": "stockouts_overstock_and_lost_sales",
-      "group": "decisions",
+      "group": "inventory-forecasting",
       "name": "Stockouts, overstock and lost sales",
       "description": "Projected stockout dates, products below safety stock, excess inventory and the sales lost to unavailable stock or late shipments.",
       "access": "read",
@@ -179,7 +211,7 @@
     },
     {
       "id": "backorders_and_preorders",
-      "group": "decisions",
+      "group": "inventory-forecasting",
       "name": "Backorders and preorders",
       "description": "Counts accumulated backorder demand in inventory and replenishment calculations, with settings by channel, and plans for products sold before they arrive.",
       "access": "read",
@@ -188,7 +220,7 @@
     },
     {
       "id": "purchase_and_transfer_recommendations",
-      "group": "decisions",
+      "group": "replenishment",
       "name": "Purchase and transfer recommendations",
       "description": "What to order or transfer, how much and when, by product and location, including replenishment from warehouses or 3PLs to fulfillment locations such as FBA.",
       "access": "read",
@@ -197,7 +229,7 @@
     },
     {
       "id": "planning_parameters",
-      "group": "decisions",
+      "group": "replenishment",
       "name": "Planning parameters",
       "description": "Safety stock, target days of cover, overstock thresholds, lead times and order frequency, with rules for products, categories and channels.",
       "access": "write",
@@ -206,7 +238,7 @@
     },
     {
       "id": "order_and_shipping_constraints",
-      "group": "decisions",
+      "group": "replenishment",
       "name": "Order and shipping constraints",
       "description": "Minimum order quantities and supplier constraints, container planning and rounding to case packs, cartons or pallets.",
       "access": "read",
@@ -215,7 +247,7 @@
     },
     {
       "id": "decision_simulations",
-      "group": "decisions",
+      "group": "replenishment",
       "name": "Decision simulations",
       "description": "Test changes to order quantities, demand, arrival dates or lead times and see the effect on inventory, revenue, margin and cash before anything is committed.",
       "access": "write",
@@ -224,7 +256,7 @@
     },
     {
       "id": "multi_month_purchase_planning",
-      "group": "decisions",
+      "group": "replenishment",
       "name": "Multi-month purchase planning",
       "description": "Splits a long buying horizon into seasonally weighted purchase orders, with cartons, MOQs and lead times applied and periods already covered by stock left at zero.",
       "access": "write",
@@ -233,7 +265,7 @@
     },
     {
       "id": "ai_order_quantity_adjustments",
-      "group": "decisions",
+      "group": "replenishment",
       "name": "AI order-quantity adjustments",
       "description": "Rebalances planned quantities across destinations and fits orders to container capacity, budget and cash-flow limits, following notes you write in plain language.",
       "access": "write",
@@ -242,7 +274,7 @@
     },
     {
       "id": "saved_plans_and_purchase_orders",
-      "group": "actions",
+      "group": "replenishment",
       "name": "Saved plans and purchase orders",
       "description": "Replenishment plans by supplier and date, with costs. Create and track POs, group them under master POs and record placed-order status.",
       "access": "write",
@@ -251,7 +283,7 @@
     },
     {
       "id": "purchase_orders_to_suppliers",
-      "group": "actions",
+      "group": "workflows",
       "name": "Purchase orders to suppliers",
       "description": "Sends each PO straight into the supplier's system or as an email, CSV file or Google Sheet in the supplier's own format, with products identified by SKU or product name.",
       "access": "write",
@@ -260,7 +292,7 @@
     },
     {
       "id": "purchase_orders_to_erps",
-      "group": "actions",
+      "group": "workflows",
       "name": "Purchase orders to ERPs",
       "description": "Pushes approved POs into NetSuite or light ERPs such as Cin7 and Brightpearl.",
       "access": "write",
@@ -269,7 +301,7 @@
     },
     {
       "id": "inbound_shipments_in_amazon_and_3pls",
-      "group": "actions",
+      "group": "workflows",
       "name": "Inbound shipments in Amazon and 3PLs",
       "description": "Creates inbound shipments in Amazon and in connected 3PL and warehouse systems from an approved plan.",
       "access": "write",
@@ -278,7 +310,7 @@
     },
     {
       "id": "inbound_shipment_tracking",
-      "group": "actions",
+      "group": "workflows",
       "name": "Inbound shipment tracking",
       "description": "Follows POs and shipments through delivery, with manual entry, Google Sheets sync and automatic import of connected inbound shipments such as Amazon FBA.",
       "access": "read",
@@ -287,7 +319,7 @@
     },
     {
       "id": "alerts_and_scheduled_reports",
-      "group": "actions",
+      "group": "workflows",
       "name": "Alerts and scheduled reports",
       "description": "Scheduled checks for stockout risk, excess inventory and orders due, delivered by email, Slack, Microsoft Teams or Google Sheets.",
       "access": "write",
@@ -296,7 +328,7 @@
     },
     {
       "id": "custom_workflows_and_agents",
-      "group": "actions",
+      "group": "workflows",
       "name": "Custom workflows and agents",
       "description": "Describe a recurring job in plain language and Flieber runs it on schedule, across its own data and your connected apps.",
       "access": "write",
@@ -305,7 +337,7 @@
     },
     {
       "id": "actions_in_other_systems",
-      "group": "actions",
+      "group": "workflows",
       "name": "Actions in other systems",
       "description": "Flieber is also an MCP client, so it can connect to any system with an MCP server and act where the decision lands: adjust an ad campaign, update a price, confirm with a supplier.",
       "access": "write",
@@ -369,63 +401,106 @@
       "url": "https://www.flieber.com/features#public-api"
     }
   ],
-  "solutions": [
+  "modules": [
     {
-      "id": "amazon_fba",
-      "name": "Amazon FBA replenishment",
-      "url": "https://www.flieber.com/solutions/amazon-fba",
+      "id": "data_layer",
+      "name": "Data layer",
+      "url": "https://www.flieber.com/product/data-layer",
+      "sold_separately": true,
       "features": [
-        "purchase_and_transfer_recommendations",
-        "inbound_shipments_in_amazon_and_3pls",
-        "inbound_shipment_tracking",
-        "sales_history_adjusted_for_anomalies",
-        "alerts_and_scheduled_reports"
-      ]
-    },
-    {
-      "id": "wholesale",
-      "name": "Wholesale and EDI",
-      "url": "https://www.flieber.com/solutions/wholesale",
-      "features": [
-        "inventory_projections",
-        "wholesale_forecast_reconciliation",
-        "decision_simulations",
-        "alerts_and_scheduled_reports"
-      ]
-    },
-    {
-      "id": "kits_and_bundles",
-      "name": "Kits and bundles",
-      "url": "https://www.flieber.com/solutions/kits-and-bundles",
-      "features": [
-        "kits_bundles_and_components",
+        "connect_your_sales_channels_and_inventory",
         "cross_channel_sku_mapping",
-        "purchase_and_transfer_recommendations",
-        "order_and_shipping_constraints"
+        "kits_bundles_and_components",
+        "product_configuration_and_classification",
+        "supply_chain_map",
+        "sales_history_adjusted_for_anomalies",
+        "inventory_history_and_balances",
+        "reports_and_dashboards",
+        "uploads_and_google_sheets",
+        "organizations_and_users"
       ]
     },
     {
-      "id": "multi_brand",
-      "name": "Multi-brand portfolios",
-      "url": "https://www.flieber.com/solutions/multi-brand",
+      "id": "demand_forecasting",
+      "name": "Demand forecasting",
+      "url": "https://www.flieber.com/product/demand-forecasting",
+      "sold_separately": false,
       "features": [
-        "organizations_and_users",
-        "inventory_projections",
-        "stockouts_overstock_and_lost_sales",
-        "custom_workflows_and_agents"
-      ]
-    },
-    {
-      "id": "promotions_and_launches",
-      "name": "Promotions and launches",
-      "url": "https://www.flieber.com/solutions/promotions-and-launches",
-      "features": [
+        "ai_demand_forecasts",
+        "sales_history_adjusted_for_anomalies",
         "forecast_overrides_and_uploads",
         "targets_and_new_products",
-        "decision_simulations",
-        "actions_in_other_systems",
-        "alerts_and_scheduled_reports"
+        "forecast_accuracy_and_bias",
+        "wholesale_forecast_reconciliation"
       ]
+    },
+    {
+      "id": "inventory_forecasting",
+      "name": "Inventory forecasting",
+      "url": "https://www.flieber.com/product/inventory-forecasting",
+      "sold_separately": false,
+      "features": [
+        "inventory_projections",
+        "stockouts_overstock_and_lost_sales",
+        "backorders_and_preorders",
+        "inventory_history_and_balances"
+      ]
+    },
+    {
+      "id": "replenishment",
+      "name": "Replenishment",
+      "url": "https://www.flieber.com/product/replenishment",
+      "sold_separately": false,
+      "features": [
+        "purchase_and_transfer_recommendations",
+        "planning_parameters",
+        "order_and_shipping_constraints",
+        "decision_simulations",
+        "multi_month_purchase_planning",
+        "ai_order_quantity_adjustments",
+        "saved_plans_and_purchase_orders"
+      ]
+    },
+    {
+      "id": "workflows",
+      "name": "Workflows",
+      "url": "https://www.flieber.com/product/workflows",
+      "sold_separately": false,
+      "features": [
+        "purchase_orders_to_suppliers",
+        "purchase_orders_to_erps",
+        "inbound_shipments_in_amazon_and_3pls",
+        "inbound_shipment_tracking",
+        "alerts_and_scheduled_reports",
+        "custom_workflows_and_agents",
+        "actions_in_other_systems"
+      ]
+    }
+  ],
+  "solutions": [
+    {
+      "id": "multichannel",
+      "name": "Multichannel brands",
+      "url": "https://www.flieber.com/multichannel"
+    },
+    {
+      "id": "agencies",
+      "name": "Agencies and aggregators",
+      "url": "https://www.flieber.com/agencies"
+    }
+  ],
+  "comparisons": [
+    {
+      "name": "Flieber vs NetSuite",
+      "url": "https://www.flieber.com/flieber-vs-netsuite"
+    },
+    {
+      "name": "Flieber vs Netstock",
+      "url": "https://www.flieber.com/flieber-vs-netstock"
+    },
+    {
+      "name": "Flieber vs Foresight AI",
+      "url": "https://www.flieber.com/flieber-vs-foresight-ai"
     }
   ],
   "capabilities": [

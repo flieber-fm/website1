@@ -44,7 +44,7 @@
     document.addEventListener('click', function (e) { if (!drop.contains(e.target)) set(false); });
   });
 
-  /* ---------- How Flieber is built: six layer tabs (Option 2) ---------- */
+  /* ---------- How Flieber is built: five module tabs (Option 2) ---------- */
   var layers = document.getElementById('layers');
   if (layers) {
     var ltabs = [].slice.call(layers.querySelectorAll('.layer-tab'));
@@ -70,17 +70,6 @@
     });
     pick(0);
   }
-
-  /* ---------- Solutions carousel arrows (Option 2) ---------- */
-  document.querySelectorAll('[data-scroll]').forEach(function (btn) {
-    var track = document.getElementById(btn.getAttribute('aria-controls'));
-    if (!track) return;
-    btn.addEventListener('click', function () {
-      var card = track.querySelector('li');
-      var step = card ? card.getBoundingClientRect().width + 14 : track.clientWidth * 0.8;
-      track.scrollBy({ left: Number(btn.getAttribute('data-scroll')) * step, behavior: reduceMotion ? 'auto' : 'smooth' });
-    });
-  });
 
   /* ---------- Reveal on scroll ---------- */
   var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');

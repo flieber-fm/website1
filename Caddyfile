@@ -15,6 +15,9 @@
 	@revalidate not path /assets/fonts/* /assets/img/* /assets/logos/*
 	header @static Cache-Control "public, max-age=86400"
 	header @revalidate Cache-Control "no-cache"
+	# Option 2 redirects (brief section 10)
+	redir /omnichannel /multichannel/ 301
+	redir /ecommerce /multichannel/ 301
 	try_files {path} {path}/index.html
 	file_server
 }

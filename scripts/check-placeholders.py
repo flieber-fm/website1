@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-FILES = ["index.html", "features/index.html", "agents/index.html", "pricing/index.html", "security/index.html", "contact/index.html"] + sorted(str(x.relative_to(ROOT)) for x in ROOT.glob("solutions/*/index.html")) + ["llms.txt", "llms-full.txt", "capabilities.json", "robots.txt", "sitemap.xml"]
+FILES = ["index.html", "features/index.html", "agents/index.html", "pricing/index.html", "security/index.html", "contact/index.html"] + sorted(str(x.relative_to(ROOT)) for x in ROOT.glob("product/*/index.html")) + ["multichannel/index.html", "agencies/index.html"] + ["llms.txt", "llms-full.txt", "capabilities.json", "robots.txt", "sitemap.xml"]
 BRACKET = re.compile(r"\[[A-Z][A-Z0-9 ,:/'’.&-]{2,}\]|\[others\]")
 LINK = re.compile(r'data-placeholder="([^"]+)"')
 NOINDEX = re.compile(r'name="robots" content="noindex|^Disallow: /\s*$', re.M)
