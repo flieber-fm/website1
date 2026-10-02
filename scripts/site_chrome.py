@@ -1,7 +1,7 @@
 """Navigation and footer shared by every page (Option 2 brief, sections 3 and 4).
 
 Navigation: Product (menu: the five modules, then All features) · Solutions (menu: the two pages by type of
-business, then Compare) · Pricing · Security · Who we are · /agents, then Log in · Book a demo · Start free trial.
+business, then Before you choose) · Pricing · Security · Who we are · /agents, then Log in · Book a demo · Start free trial.
 build-content.py writes these into every page listed in PAGE_FILES.
 """
 import html
@@ -26,6 +26,7 @@ for _m in C.MODULES:
     PAGE_FILES[f"product/{_m['slug']}/index.html"] = ("../../", "product")
 for _s in C.SOLUTIONS:
     PAGE_FILES[f"{_s['slug']}/index.html"] = ("../", "solutions")
+PAGE_FILES[f"{C.BYC['slug']}/index.html"] = ("../", "solutions")
 
 CHEVRON = ('<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">'
            '<path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg>')
@@ -48,8 +49,7 @@ def nav_html(p: str, cur) -> str:
     product = "\n".join(f'            <a href="{p}product/{m["slug"]}/">{esc(m["name"])}</a>' for m in C.MODULES)
     product += f'\n            <a class="nav-menu-all" href="{p}features/">All features <span aria-hidden="true">→</span></a>'
     sol = "\n".join(f'            <a href="{p}{x["slug"]}/">{esc(x["name"])}</a>' for x in C.SOLUTIONS)
-    sol += '\n            <span class="nav-menu-label">Compare</span>\n'
-    sol += "\n".join(f'            <a href="{u}">{esc(n)}</a>' for n, u in C.COMPARE)
+    sol += f'\n            <a href="{p}{C.BYC["slug"]}/">{esc(C.BYC["name"])}</a>'
     agents_cur = ' aria-current="page"' if cur == "agents" else ""
     return f"""  <header class="nav" id="nav">
     <div class="wrap">
@@ -78,7 +78,7 @@ def nav_html(p: str, cur) -> str:
 
 def footer_html(p: str, mark: bool) -> str:
     sol = "\n".join(f'            <li><a href="{p}{x["slug"]}/">{esc(x["name"])}</a></li>' for x in C.SOLUTIONS)
-    sol += "\n" + "\n".join(f'            <li><a href="{u}">{esc(n)}</a></li>' for n, u in C.COMPARE)
+    sol += f'\n            <li><a href="{p}{C.BYC["slug"]}/">{esc(C.BYC["name"])}</a></li>'
     mark_html = (f'\n      <div class="footer-mark" aria-hidden="true"><img src="{p}assets/img/flieber-logo-light.svg" alt=""></div>'
                  if mark else "")
     return f"""  <footer class="footer">

@@ -1175,3 +1175,8 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .ls-more { position: absolute; right: var(--gutter); bottom: 24px; z-index: 2; }
 @media (max-width: 900px) { .ls-more { right: auto; left: calc(var(--gutter) + 108px); bottom: 26px; font-size: 15px; } }
 .no-js .ls-more, .ls-static .ls-more { position: static; grid-column: 1 / -1; margin-top: 8px; }
+
+/* /before-you-choose: numbered buyer questions */
+.byc-item { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 16px; align-items: start; }
+.byc-n { font-family: var(--mono); font-size: 13px; color: var(--text-2); padding-top: 5px; }
+.byc-item p b { color: var(--black); font-weight: 600; }

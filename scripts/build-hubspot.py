@@ -33,6 +33,7 @@ for _slug in ["data-layer", "demand-forecasting", "inventory-forecasting", "repl
     PAGES[f"product/{_slug}/index.html"] = (f"/product/{_slug}/", f"Flieber 2026 B - Product - {_slug}")
 PAGES["multichannel/index.html"] = ("/multichannel/", "Flieber 2026 B - Multichannel")
 PAGES["agencies/index.html"] = ("/agencies/", "Flieber 2026 B - Agencies")
+PAGES["before-you-choose/index.html"] = ("/before-you-choose/", "Flieber 2026 B - Before you choose")
 
 
 def data_uri(path: Path) -> str:

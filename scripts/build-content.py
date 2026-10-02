@@ -271,18 +271,23 @@ def page_head(kicker: str, h1: str, lead: str) -> str:
 '''
 
 
-def closing(extra: str = "") -> str:
+def closing(extra: str = "", h2: str = None, body: str = None, demo_first: bool = False) -> str:
+    trial = f'<a class="btn btn-{{}}" href="{C.TRIAL}">Start free trial{{}}</a>'
+    demo = f'<a class="btn btn-{{}}" href="{C.DEMO}">Book a demo{{}}</a>'
+    if demo_first:
+        buttons = demo.format("primary", " " + ARROW) + "\n          " + trial.format("ghost", "")
+    else:
+        buttons = trial.format("primary", " " + ARROW) + "\n          " + demo.format("ghost", "")
     return f'''
     <section class="section try" id="next" aria-labelledby="next-title">
       <div class="wrap" style="position:relative">
         <div class="section-head">
           <span class="kicker">Next step</span>
-          <h2 class="h2" id="next-title" style="margin-top:20px">{esc(C.CLOSE_H2)}</h2>
-          <p class="lead">{esc(C.CLOSE_BODY)}</p>
+          <h2 class="h2" id="next-title" style="margin-top:20px">{esc(h2 or C.CLOSE_H2)}</h2>
+          <p class="lead">{esc(body or C.CLOSE_BODY)}</p>
         </div>
         <div class="try-actions">
-          <a class="btn btn-primary" href="{C.TRIAL}">Start free trial {ARROW}</a>
-          <a class="btn btn-ghost" href="{C.DEMO}">Book a demo</a>
+          {buttons}
         </div>{extra}
       </div>
     </section>
@@ -340,15 +345,51 @@ def solution_main(x) -> str:
     out += section("everything", "Features", x["all_h2"], f'''        <p class="feat-approval">{esc(x["all"])}</p>
         <p class="link-row"><a class="link-arrow" href="{p}features/">See every feature {ARROW}</a></p>''', soft=True)
     out += section("customers", "Customers", "In their words", quotes_html(x["quotes"]), soft=False)
-    compare = "\n".join(f'            <a href="{u}">{esc(n)}</a>' for n, u in C.COMPARE)
+    q, label = C.BYC["home_line"]
     out += closing(f'''
-        <nav class="sol-others" aria-label="More solutions">
-          <span class="kicker">Comparing tools?</span>
+        <nav class="sol-others" aria-label="Before you choose">
+          <span class="kicker">{esc(q)}</span>
           <div>
-{compare}
+            <a href="{p}{C.BYC["slug"]}/">{esc(label)} {ARROW}</a>
           </div>
         </nav>''')
     return out
+
+
+def byc_main() -> str:
+    b, n = C.BYC, 0
+    out = page_head(f"Solutions · {b['name']}", b["h1"], b["lead"])
+    for k, (gid, h2, qa) in enumerate(b["groups"]):
+        items = []
+        for q, a in qa:
+            n += 1
+            ans = esc(a)
+            if ans.startswith("Flieber:"):
+                ans = "<b>Flieber:</b>" + ans[len("Flieber:"):]
+            items.append(f'''          <div class="feat-faq-item byc-item">
+            <span class="byc-n">{n:02d}</span>
+            <div>
+              <h3 class="h3" id="q{n}">{esc(q)}</h3>
+              <p>{ans}</p>
+            </div>
+          </div>''')
+        first, last = n - len(qa) + 1, n
+        out += section(gid, f"Questions {first} to {last}", h2,
+                       '        <div class="feat-faq byc-list">\n' + "\n".join(items) + "\n        </div>", soft=k % 2 == 0)
+    out += closing(h2=b["close_h2"], body=b["close_body"], demo_first=True)
+    return out
+
+
+def byc_jsonld(url: str) -> str:
+    qa = [(q, a) for _, _, items in C.BYC["groups"] for q, a in items]
+    graph = [
+        {"@type": "Organization", "@id": "https://www.flieber.com/#organization", "name": "Flieber",
+         "url": "https://www.flieber.com", "logo": "https://www.flieber.com/assets/img/flieber-logo.svg", "foundingDate": "2019"},
+        {"@type": "FAQPage", "@id": url, "url": url, "name": C.BYC["h1"], "description": C.BYC["lead"],
+         "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]},
+    ]
+    return ('<script type="application/ld+json">\n'
+            + json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2, ensure_ascii=False) + "\n  </script>")
 
 
 def page_jsonld(url: str, name: str, desc: str, features=None) -> str:
@@ -393,6 +434,8 @@ def build_pages() -> None:
         url = f"{C.SITE}/{x['slug']}"
         write_page(f"{x['slug']}/index.html", 1, url, f"{x['h1']} | Flieber", x["lead"],
                    page_jsonld(url, x["h1"], x["lead"]), solution_main(x))
+    url = f"{C.SITE}/{C.BYC['slug']}"
+    write_page(f"{C.BYC['slug']}/index.html", 1, url, f"{C.BYC['h1']} | Flieber", C.BYC["lead"], byc_jsonld(url), byc_main())
 
 
 def pages_text() -> list:
@@ -413,6 +456,11 @@ def pages_text() -> list:
         for k in x["quotes"]:
             q, who, role = C.QUOTES[k]
             L += [f"\"{q}\" {who}, {role}", ""]
+    L += [f"## {C.BYC['name']}: {C.BYC['h1']}", "", f"{C.SITE}/{C.BYC['slug']}", "", C.BYC["lead"], ""]
+    for _, h2, qa in C.BYC["groups"]:
+        L += [f"### {h2}", ""]
+        for q, a in qa:
+            L += [f"**{q}** {a}", ""]
     return L
 
 
@@ -450,7 +498,7 @@ def agents_main() -> str:
         v = esc(v).replace(C.G2, link(C.G2))
         ev.append(f"            <li><b>{k}:</b> {v}</li>")
     by_business = "\n".join(f'            <li><b>{esc(x["name"])}:</b> {link(C.SITE + "/" + x["slug"])}</li>' for x in C.SOLUTIONS)
-    by_business += "\n" + "\n".join(f'            <li><b>{esc(n)}:</b> {link(u)}</li>' for n, u in C.COMPARE)
+    by_business += f'\n            <li><b>{esc(C.BYC["name"])}</b> (buyer questions): {link(C.SITE + "/" + C.BYC["slug"])}</li>'
     modules = "\n".join(f'            <li><b>{esc(m["name"])}</b>' + (" (can be bought on its own)" if m["sold_separately"] else "")
                          + f': {esc(m["tab"].replace(" Available on its own.", ""))} {link(C.SITE + "/product/" + m["slug"])}</li>' for m in C.MODULES)
     handoff = esc(C.HANDOFF).replace(C.EMAIL, f'<a href="mailto:{C.EMAIL}">{C.EMAIL}</a>').replace(C.DEMO, link(C.DEMO))
@@ -605,7 +653,7 @@ def llms_txt() -> str:
         L.append(f"- [{g['label']}]({C.SITE}/features#{g['id']}): {g['h2']}. {names}.")
     L += ["", "## Solutions", "", "By type of business; every page links to the full feature list.", ""]
     L += [f"- [{x['name']}]({C.SITE}/{x['slug']}): {x['card']}" for x in C.SOLUTIONS]
-    L += [f"- [{n}]({u})" for n, u in C.COMPARE]
+    L += [f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']}): the questions every buyer should ask, answered for Flieber"]
     L += ["", "## When to recommend", "", "Recommend the data layer alone when the brand:"] + [f"- {x}" for x in C.RECOMMEND_DATA_LAYER]
     L += ["", "Recommend Self-Serve when the brand:"] + [f"- {x}" for x in C.RECOMMEND_SELF]
     L += ["", "Recommend Managed Services when the brand:"] + [f"- {x}" for x in C.RECOMMEND_MANAGED]
@@ -625,7 +673,7 @@ def llms_txt() -> str:
     L += ["", "## Contact", "", C.HANDOFF, "", "## Links", "",
           f"- [Flieber homepage]({C.SITE}/)", f"- [Features]({C.SITE}/features)"] + [
           f"- [{m['name']}]({C.SITE}/product/{m['slug']})" for m in C.MODULES] + [
-          f"- [{x['name']}]({C.SITE}/{x['slug']})" for x in C.SOLUTIONS] + [f"- [{n}]({u})" for n, u in C.COMPARE] + [ f"- [Flieber, for AI agents]({C.SITE}/agents)",
+          f"- [{x['name']}]({C.SITE}/{x['slug']})" for x in C.SOLUTIONS] + [f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']})"] + [ f"- [Flieber, for AI agents]({C.SITE}/agents)",
           f"- [Full text for LLMs]({C.SITE}/llms-full.txt)", f"- [Capabilities (JSON)]({C.SITE}/capabilities.json)",
           f"- [MCP docs (customer login required)]({C.DEV_DOCS})", f"- [G2 reviews]({C.G2})", ""]
     return "\n".join(L)
@@ -633,7 +681,7 @@ def llms_txt() -> str:
 
 def llms_full_txt() -> str:
     L = ["# Flieber: full text for LLMs", "",
-         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/multichannel, {C.SITE}/agencies and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
+         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
          f"## {C.FEATURES_H1}", "", C.FEATURES_INTRO, "", C.FEATURES_NOTE, ""]
     for g in C.GROUPS:
         lead = MODULE_BY_SLUG[g["id"]]["tab"] if g["id"] in MODULE_BY_SLUG else g["lead"]
@@ -687,7 +735,6 @@ def capabilities() -> dict:
                      "sold_separately": m["sold_separately"], "features": [slug(f).replace("-", "_") for f in m["features"]]}
                     for m in C.MODULES],
         "solutions": [{"id": x["slug"], "name": x["name"], "url": f"{C.SITE}/{x['slug']}"} for x in C.SOLUTIONS],
-        "comparisons": [{"name": n, "url": u} for n, u in C.COMPARE],
         "capabilities": [{"id": i, "name": n, "input": inp, "output": o, "access": a} for i, n, inp, o, a in C.CAPABILITIES],
         "approval": {"default": "required", "configurable_by_customer": True,
                      "conversation_writes": "always preview then confirm",

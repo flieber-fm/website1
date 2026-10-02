@@ -18,6 +18,10 @@
 	# Option 2 redirects (brief section 10)
 	redir /omnichannel /multichannel/ 301
 	redir /ecommerce /multichannel/ 301
+	redir /flieber-vs-netsuite /before-you-choose/ 301
+	redir /flieber-vs-netstock /before-you-choose/ 301
+	redir /flieber-vs-foresight-ai /before-you-choose/ 301
+	# /flieber-vs-inventory-planner is deliberately not redirected (brief section 6.3)
 	try_files {path} {path}/index.html
 	file_server
 }

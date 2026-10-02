@@ -499,20 +499,6 @@
       "url": "https://www.flieber.com/agencies"
     }
   ],
-  "comparisons": [
-    {
-      "name": "Flieber vs NetSuite",
-      "url": "https://www.flieber.com/flieber-vs-netsuite"
-    },
-    {
-      "name": "Flieber vs Netstock",
-      "url": "https://www.flieber.com/flieber-vs-netstock"
-    },
-    {
-      "name": "Flieber vs Foresight AI",
-      "url": "https://www.flieber.com/flieber-vs-foresight-ai"
-    }
-  ],
   "capabilities": [
     {
       "id": "data_health",

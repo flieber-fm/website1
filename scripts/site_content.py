@@ -359,11 +359,60 @@ MODULES = [
 # ---------------------------------------------------------------- solutions by type of business (section 6)
 SOLUTIONS_H2 = "Built for the way your business is organized"
 SOLUTIONS_LEAD = "Whether you run one brand across many channels or many brands at once, Flieber covers the whole operation."
-COMPARE = [  # stay on the current HubSpot site (section 6.3)
-    ("Flieber vs NetSuite", "https://www.flieber.com/flieber-vs-netsuite"),
-    ("Flieber vs Netstock", "https://www.flieber.com/flieber-vs-netstock"),
-    ("Flieber vs Foresight AI", "https://www.flieber.com/flieber-vs-foresight-ai"),
-]
+# /before-you-choose (brief section 6.3): buyer questions answered for Flieber. Replaces the named comparison
+# pages (/flieber-vs-netsuite, -netstock and -foresight-ai redirect here). Never names a competitor.
+# /flieber-vs-inventory-planner is deliberately not redirected and stays unpublished.
+BYC = {
+    "slug": "before-you-choose", "name": "Before you choose",
+    "h1": "Before you choose another platform, ask these questions",
+    "lead": ("There are good inventory planning platforms on the market. If one answers yes to everything below, it "
+             "deserves a place on your shortlist. These are the questions we'd ask, and how Flieber answers them."),
+    "home_line": ("Comparing platforms?", "Before you choose, ask these questions"),
+    "groups": [
+        ("your-data", "Your data", [
+            ("Does it connect to every channel, warehouse, 3PL and ERP you use today, and the ones you'll add next year?",
+             "Flieber: native and assisted integrations cover marketplaces, DTC, wholesale and EDI, ERPs and 3PLs, and its MCP client connects to any system with an MCP server."),
+            ("Does it plan DTC, marketplace and wholesale demand together, drawing on one inventory?",
+             "Flieber: yes. Every channel and location feeds one plan, with wholesale orders counted as allocated stock."),
+            ("Can it model how your business actually runs?",
+             "Flieber: map listings across channels, convert kit and bundle demand into components and route one store's orders to the regions or warehouses you choose."),
+            ("Does it correct sales history for stockouts and promotions before it forecasts?",
+             "Flieber: yes, and it shows actual sales next to the adjusted demand."),
+        ]),
+        ("your-decisions", "Your decisions", [
+            ("Can it show you how accurate its forecasts have been?",
+             "Flieber: error and bias metrics with saved forecast versions. Its forecasts are 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products."),
+            ("Do its recommendations respect MOQs, case packs, containers, lead times and cash?",
+             "Flieber: yes, by product and location, for both purchases and transfers."),
+            ("Can you test a decision before you commit to it?",
+             "Flieber: simulate any change and see its effect on inventory, revenue, margin and cash."),
+            ("Does it explain why it recommends what it does?",
+             "Flieber: every recommendation comes with its reasoning, and you can ask follow-up questions in plain language."),
+        ]),
+        ("ai-and-execution", "AI and execution", [
+            ("Can your team ask questions in plain language and get answers from your own data?",
+             "Flieber: yes, in the app or in Slack."),
+            ("Can your own AI agents work with it?",
+             "Flieber: Claude, Cursor and any MCP-compatible agent connect through its MCP server; your systems can use its public API."),
+            ("Does it carry approved decisions into the systems where they land?",
+             "Flieber: purchase orders to ERPs and suppliers, inbound shipments to Amazon and 3PLs, alerts and workflows across your connected apps."),
+            ("Do you decide what needs your approval?",
+             "Flieber: yes. By default every change waits for approval; you choose what runs on its own."),
+        ]),
+        ("working-with-the-vendor", "Working with the vendor", [
+            ("Can you try it on your own data before you sign?", "Flieber: a 14-day free trial, no credit card required."),
+            ("Do you have to commit for a year?", "Flieber: monthly contracts, no annual commitment."),
+            ("Do you pay per user?", "Flieber: unlimited users on every plan."),
+            ("Is there an expert who can plan alongside your team if you need one?",
+             "Flieber: Managed Services adds Flieber's planners as a sounding board for your decisions."),
+            ("Do you actually need a warehouse management system, a full ERP or production planning (MRP)?",
+             "If so, choose one of those first. Flieber plans finished-goods inventory and connects to those systems; it doesn't replace them."),
+        ]),
+    ],
+    "close_h2": "Ask us the same questions",
+    "close_body": ("Book a demo and we'll answer every one of them on your own data, or start a free trial and check "
+                   "for yourself."),
+}
 MANAGED_SERVICES_URL = "https://www.flieber.com/managed-services"
 QUOTES = {
     "zugu": ("Flieber is helping us effectively manage stock across all of our sales channels by customizing our calculations to the data points that matter most.", "Jenn Angel", "COO, Zugu"),
