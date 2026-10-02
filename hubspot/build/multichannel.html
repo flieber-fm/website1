@@ -968,6 +968,42 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .sol-others a { text-decoration: none; font-weight: 500; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--black); background: rgba(255,255,255,.35); }
 .sol-others a:hover { background: var(--white); }
 #control-and-approval, #together, #what-you-can-do, #works-with, #why, #everything { scroll-margin-top: 140px; }
+.stack-wrap { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+.stack-wrap .section-head { margin-bottom: 0; position: sticky; top: 120px; }
+.stack { display: flex; flex-direction: column; gap: 10px; }
+.stack-axis { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); display: flex; align-items: center; gap: 10px; }
+.stack-axis::after { content: ""; flex: 1; height: 1px; background: var(--line-strong); }
+.stack-list { display: flex; flex-direction: column-reverse; gap: 8px; }
+.stack-layer {
+  margin: 0 calc((var(--i) - 1) * 14px);
+  background: var(--gray-light); border: 1px solid var(--line-strong); border-radius: var(--radius-m);
+  transition: background-color .25s, border-color .25s;
+}
+.stack-layer:hover { border-color: var(--black); }
+.stack-layer.open { background: var(--yellow); border-color: var(--black); }
+.stack-layer h3 { margin: 0; }
+.stack-btn {
+  width: 100%; display: flex; align-items: center; gap: 16px; text-align: left; cursor: pointer;
+  background: transparent; border: 0; padding: 16px 20px;
+  font-size: clamp(18px, 1.6vw, 21px); letter-spacing: -0.02em; font-weight: 500;
+}
+.stack-n { font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--text-2); }
+.stack-layer.open .stack-n { color: var(--black); }
+.stack-name { flex: 1; }
+.stack-plus { position: relative; width: 24px; height: 24px; flex: none; border-radius: 7px; border: 1px solid var(--line-strong); background: var(--white); }
+.stack-plus::before, .stack-plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 1.5px; background: var(--black); transform: translate(-50%, -50%); }
+.stack-plus::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .25s var(--ease); }
+.stack-layer.open .stack-plus { border-color: var(--black); }
+.stack-layer.open .stack-plus::after { transform: translate(-50%, -50%) rotate(0deg); }
+.stack-panel { padding: 0 20px 20px 56px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.stack-panel[hidden] { display: none; }
+.stack-panel p { color: var(--black); max-width: 560px; }
+@media (max-width: 900px) {
+  .stack-wrap { grid-template-columns: 1fr; }
+  .stack-wrap .section-head { position: static; }
+  .stack-layer { margin: 0 calc((var(--i) - 1) * 6px); }
+  .stack-panel { padding-left: 20px; }
+}
 
 </style>
 
@@ -1296,6 +1332,26 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
       });
     });
     pick(0);
+  }
+
+  /* ---------- How Flieber is built: stacked layers, one open at a time (Option 2) ---------- */
+  // Without JS every layer stays open (no hidden attribute in the markup).
+  var stack = document.getElementById('stack');
+  if (stack) {
+    var layerEls = [].slice.call(stack.querySelectorAll('.stack-layer'));
+    var setLayer = function (el, open) {
+      var b = el.querySelector('.stack-btn');
+      el.classList.toggle('open', open);
+      b.setAttribute('aria-expanded', String(open));
+      document.getElementById(b.getAttribute('aria-controls')).hidden = !open;
+    };
+    layerEls.forEach(function (el) {
+      setLayer(el, el.classList.contains('open'));
+      el.querySelector('.stack-btn').addEventListener('click', function () {
+        var opening = !el.classList.contains('open');
+        layerEls.forEach(function (o) { setLayer(o, o === el ? opening : false); });
+      });
+    });
   }
 
   /* ---------- Reveal on scroll ---------- */

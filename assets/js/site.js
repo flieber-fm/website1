@@ -71,6 +71,26 @@
     pick(0);
   }
 
+  /* ---------- How Flieber is built: stacked layers, one open at a time (Option 2) ---------- */
+  // Without JS every layer stays open (no hidden attribute in the markup).
+  var stack = document.getElementById('stack');
+  if (stack) {
+    var layerEls = [].slice.call(stack.querySelectorAll('.stack-layer'));
+    var setLayer = function (el, open) {
+      var b = el.querySelector('.stack-btn');
+      el.classList.toggle('open', open);
+      b.setAttribute('aria-expanded', String(open));
+      document.getElementById(b.getAttribute('aria-controls')).hidden = !open;
+    };
+    layerEls.forEach(function (el) {
+      setLayer(el, el.classList.contains('open'));
+      el.querySelector('.stack-btn').addEventListener('click', function () {
+        var opening = !el.classList.contains('open');
+        layerEls.forEach(function (o) { setLayer(o, o === el ? opening : false); });
+      });
+    });
+  }
+
   /* ---------- Reveal on scroll ---------- */
   var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
   if ('IntersectionObserver' in window && !reduceMotion) {

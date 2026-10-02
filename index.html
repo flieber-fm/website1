@@ -24,7 +24,7 @@
 
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v=22">
+  <link rel="stylesheet" href="assets/css/site.css?v=23">
 
   <script>document.documentElement.classList.remove('no-js');</script>
   <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
@@ -321,11 +321,73 @@
       </div>
     </section>
 
-    <!-- ================= 4. HOW FLIEBER IS BUILT ================= -->
-    <section class="section on-dark layers-sec" id="how-flieber-is-built" aria-labelledby="layers-title">
+    <!-- ================= 4. HOW FLIEBER IS BUILT (stacked six layers) ================= -->
+    <section class="section" id="how-flieber-is-built" aria-labelledby="stack-title">
+      <div class="wrap">
+        <div class="stack-wrap">
+          <div class="section-head reveal">
+            <span class="kicker">How Flieber is built</span>
+            <h2 class="h2" id="stack-title" style="margin-top:20px">Six layers between your data and a decision you can trust</h2>
+            <p class="lead">A language model on a spreadsheet can sound confident. Getting the answer right takes everything underneath it.</p>
+          </div>
+          <div class="stack reveal">
+            <span class="stack-axis stack-axis-top" aria-hidden="true">Decisions</span>
+            <!-- Layer 01 (data) is first in reading order and drawn at the bottom -->
+            <ol class="stack-list" id="stack">
+          <li class="stack-layer open" style="--i:1">
+            <h3><button class="stack-btn" type="button" aria-expanded="true" aria-controls="stack-1"><span class="stack-n">01</span><span class="stack-name">Your data</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
+            <div class="stack-panel" id="stack-1">
+              <p>Connect sales channels, warehouses, 3PLs, suppliers and ERPs through native and assisted integrations, with gaps fixed and anomalies flagged.</p>
+              <a class="link-arrow" href="features/#data-layer">Data layer features <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="stack-layer" style="--i:2">
+            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-2"><span class="stack-n">02</span><span class="stack-name">Business context</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
+            <div class="stack-panel" id="stack-2">
+              <p>SKU and bundle mapping, the supply chain map, replenishment rules and sales history adjusted for stockouts and promotions.</p>
+              <a class="link-arrow" href="features/#data-layer">Data layer features <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="stack-layer" style="--i:3">
+            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-3"><span class="stack-n">03</span><span class="stack-name">Planning engine</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
+            <div class="stack-panel" id="stack-3">
+              <p>Forecasts, inventory projections, simulations and recommendations that respect MOQs, case packs, lead times and cash, built on proprietary algorithms and shaped by the business context of more than 1,000 commerce brands.</p>
+              <a class="link-arrow" href="features/#demand-forecasting">Forecasting features <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="stack-layer" style="--i:4">
+            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-4"><span class="stack-n">04</span><span class="stack-name">Collaborative AI</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
+            <div class="stack-panel" id="stack-4">
+              <p>Ask in plain language, get answers with their reasoning, and run agents and workflows on schedule across Flieber and your connected apps.</p>
+              <a class="link-arrow" href="features/#workflows">Workflow features <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="stack-layer" style="--i:5">
+            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-5"><span class="stack-n">05</span><span class="stack-name">Where you work</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
+            <div class="stack-panel" id="stack-5">
+              <p>The Flieber app, Slack and Google Sheets, plus Claude or your own agents through MCP and API.</p>
+              <a class="link-arrow" href="features/#access">Access features <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="stack-layer" style="--i:6">
+            <h3><button class="stack-btn" type="button" aria-expanded="false" aria-controls="stack-6"><span class="stack-n">06</span><span class="stack-name">Control</span><span class="stack-plus" aria-hidden="true"></span></button></h3>
+            <div class="stack-panel" id="stack-6">
+              <p>Approval rules you set, your data never sold or shared and no training on customer data.</p>
+              <a class="link-arrow" href="features/#control-and-approval">Control and approval <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+            </ol>
+            <span class="stack-axis stack-axis-bottom" aria-hidden="true">Data</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. FIVE MODULES ================= -->
+    <section class="section on-dark layers-sec" id="modules" aria-labelledby="layers-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="kicker">How Flieber is built</span>
+          <span class="kicker">Modules</span>
           <h2 class="h2" id="layers-title" style="margin-top:20px">Five modules from your data to a decision you can act on</h2>
           <p class="lead">A language model on a spreadsheet can sound confident. Getting the answer right takes everything underneath it. Use all five together, or start with the data layer and build your own tools on top.</p>
         </div>
@@ -814,6 +876,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/site.js?v=12" defer></script>
+  <script src="assets/js/site.js?v=13" defer></script>
 </body>
 </html>

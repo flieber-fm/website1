@@ -6,7 +6,7 @@ Copy source: *26-10-02 Website - Content Briefing (Option 2)*, on top of the Opt
 
 What Option 2 changes (revised brief, October 2):
 
-- **Homepage** (12 sections): Hero · Logos (under the hero) · Collaborative AI (your team, Flieber's AI, Flieber's planners) · How Flieber is built (five module tabs) · Why inventory · Solutions (two cards plus the comparison links) · What you can do with it · Two ways to work with Flieber · Proof · From the founder (`#who-we-are`) · Your data stays yours · Try it
+- **Homepage** (13 sections): Hero · Logos (under the hero) · Collaborative AI (your team, Flieber's AI, Flieber's planners) · How Flieber is built (stacked six layers, data at the bottom, one layer open at a time) · Modules (five module tabs) · Why inventory · Solutions (two cards plus the comparison links) · What you can do with it · Two ways to work with Flieber · Proof · From the founder (`#who-we-are`) · Your data stays yours · Try it
 - **Five module pages** under `/product/`: data-layer, demand-forecasting, inventory-forecasting, replenishment, workflows. The data layer can be bought on its own
 - **Two solutions pages by type of business:** `/multichannel` (replaces /omnichannel and /ecommerce, which redirect to it) and `/agencies` (new copy on the existing URL). The three comparison pages and /managed-services stay on HubSpot and are linked
 - **/features** regrouped by module (`#data-layer`, `#demand-forecasting`, `#inventory-forecasting`, `#replenishment`, `#workflows`, `#access`), with the new "Reports and dashboards" card and the "Can I buy only the data layer?" question
@@ -24,7 +24,7 @@ Choices made while building (open to change):
 - **"Data health"** is in no Option 2 list, but the brief keeps every Option 1 card, so it stays in the Data layer section of /features (not on the data layer page, which follows the brief's list)
 - **Founder photo:** pending, shown as a monogram marked `[FOUNDER PHOTO]`
 - **Section leads on /features:** each module section uses the module's homepage tab description
-- **Labels not in the brief:** "Decides", "Prepares and carries out", "Advises" (homepage collaboration cards), "With Managed Services" (planners card), "Module 01" on the tabs, kickers "Features", "MCP and API", "Collaborative AI", "Modules", "The problem", "Customers", H2 "In their words" on the solutions pages, "Comparing tools?" above the comparison links, "MCP docs" link on the data layer page
+- **Labels not in the brief:** "Decides", "Prepares and carries out", "Advises" (homepage collaboration cards), "With Managed Services" (planners card), "Module 01" on the tabs, "Data" and "Decisions" at the ends of the six-layer stack, the layer links ("Data layer features", "Forecasting features", "Workflow features", "Access features", "Control and approval"), kickers "Features", "MCP and API", "Collaborative AI", "Modules", "The problem", "Customers", H2 "In their words" on the solutions pages, "Comparing tools?" above the comparison links, "MCP docs" link on the data layer page
 
 HubSpot: nothing created, edited or uploaded for Option 2. `scripts/build-hubspot.py` builds the templates locally only (`hubspot/build/`, including the five solutions templates). If Option 2 is elected, its drafts go under `/new-site-2026-b/` (brief section 9).
 
