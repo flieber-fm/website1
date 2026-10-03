@@ -357,7 +357,8 @@ def solution_main(x) -> str:
     out += section("why", "The problem", x["why_h2"], f'        <div class="why-grid">\n{why}\n        </div>', soft=True)
     out += section("together", "Collaborative AI", "How you work together", collab_cards(x), soft=False)
     out += section("everything", "Features", x["all_h2"], f'''        <p class="feat-approval">{esc(x["all"])}</p>
-        <p class="link-row"><a class="link-arrow" href="{p}features/">See every feature {ARROW}</a></p>''', soft=True)
+        <p class="link-row"><a class="link-arrow" href="{p}features/">See every feature {ARROW}</a></p>
+        <p class="sol-vibe">{esc(C.VIBE_LINE[0])} <a class="link-arrow" href="{p}{C.BWA["slug"]}/">{esc(C.VIBE_LINE[1])} {ARROW}</a></p>''', soft=True)
     out += section("customers", "Customers", "In their words", quotes_html(x["quotes"]), soft=False)
     q, label = C.BYC["home_line"]
     out += closing(f'''

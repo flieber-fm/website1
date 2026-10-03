@@ -338,6 +338,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 3 | Solutions overlap accepted (a multichannel brand or an agency can also vibe code); /multichannel and /agencies link to /vibe-coders: "Building your own tools with AI? Start from Flieber's data layer →" |
 | Oct 3 | Third solution renamed from "Build with AI" to "Vibe coders" (URL /vibe-coders): "Build with AI" read as building something inside Flieber; "Vibe coders" is the term the market recognises, and the page body still serves data teams |
 | Oct 3 | The vibe coders page speaks to vibe coders: H1 "Vibe coding your own tools? Start from data that's already right", the lead names Claude, Cursor and ChatGPT, the homepage card and "Why not build it all yourself?" use the term. |
 | Oct 3 | Product menu reordered: All features first with the five modules nested under it, a divider, then Integrations, MCP and AI agents and Security & data |

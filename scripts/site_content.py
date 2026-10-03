@@ -577,6 +577,9 @@ BWA = {
     "close_body": "Start a 14-day free trial on your own data, or book a demo and we'll connect it with you.",
 }
 
+# Cross-link from /multichannel and /agencies (a brand can be both, Fabricio, Oct 3)
+VIBE_LINE = ("Building your own tools with AI?", "Start from Flieber's data layer")
+
 # Use-case pages (brief 7). points: (text, /features anchor)
 UC_CLOSE = "This is one part of what Flieber does."
 UC_CLOSE_LINK = "See everything Flieber does"
