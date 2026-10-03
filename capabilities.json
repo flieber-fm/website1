@@ -24,7 +24,8 @@
             "mcp",
             "api"
           ],
-          "price": "Priced to your operation",
+          "url": "https://www.flieber.com/build-with-ai",
+          "free_trial": "14 days, no credit card required",
           "best_for": [
             "Has a team building its own reports, tools or agents with AI",
             "Wants consolidated, contextualized commerce data through MCP or API without the planning app"
@@ -497,6 +498,63 @@
       "id": "agencies",
       "name": "Agencies and aggregators",
       "url": "https://www.flieber.com/agencies"
+    },
+    {
+      "id": "build-with-ai",
+      "name": "Build with AI",
+      "url": "https://www.flieber.com/build-with-ai"
+    }
+  ],
+  "use_cases": [
+    {
+      "id": "amazon-fba-replenishment",
+      "name": "Amazon FBA replenishment",
+      "url": "https://www.flieber.com/use-cases/amazon-fba-replenishment"
+    },
+    {
+      "id": "claude-amazon-shopify-inventory",
+      "name": "Connect Claude to Amazon and Shopify",
+      "url": "https://www.flieber.com/use-cases/claude-amazon-shopify-inventory"
+    },
+    {
+      "id": "shopify-inventory-forecasting",
+      "name": "Shopify inventory forecasting",
+      "url": "https://www.flieber.com/use-cases/shopify-inventory-forecasting"
+    },
+    {
+      "id": "kits-and-bundles",
+      "name": "Kits and bundles",
+      "url": "https://www.flieber.com/use-cases/kits-and-bundles"
+    },
+    {
+      "id": "wholesale-edi-demand-planning",
+      "name": "Wholesale and EDI demand planning",
+      "url": "https://www.flieber.com/use-cases/wholesale-edi-demand-planning"
+    },
+    {
+      "id": "multi-warehouse-3pl-inventory",
+      "name": "Multi-warehouse and 3PL planning",
+      "url": "https://www.flieber.com/use-cases/multi-warehouse-3pl-inventory"
+    },
+    {
+      "id": "purchase-order-automation",
+      "name": "Purchase order automation",
+      "url": "https://www.flieber.com/use-cases/purchase-order-automation"
+    },
+    {
+      "id": "ai-demand-forecasting",
+      "name": "AI demand forecasting",
+      "url": "https://www.flieber.com/use-cases/ai-demand-forecasting"
+    },
+    {
+      "id": "moq-container-planning",
+      "name": "MOQ, case pack and container planning",
+      "url": "https://www.flieber.com/use-cases/moq-container-planning"
+    },
+    {
+      "id": "backorders-preorders",
+      "name": "Backorders and preorders",
+      "url": "https://www.flieber.com/use-cases/backorders-preorders"
     }
   ],
   "capabilities": [

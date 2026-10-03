@@ -1,7 +1,7 @@
 """Navigation and footer shared by every page (Option 2 brief, sections 3 and 4).
 
-Navigation: Product (menu: the five modules, then All features, MCP and AI agents and Security & data) · Solutions (menu: the two pages by type of
-business, then Before you choose) · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
+Navigation: Product (menu: the five modules, then All features, Integrations, MCP and AI agents and Security & data) · Solutions (menu: the three pages by type of
+business and goal, then Before you choose) · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
 build-content.py writes these into every page listed in PAGE_FILES.
 """
 import html
@@ -28,6 +28,14 @@ for _s in C.SOLUTIONS:
     PAGE_FILES[f"{_s['slug']}/index.html"] = ("../", "solutions")
 PAGE_FILES[f"{C.BYC['slug']}/index.html"] = ("../", "solutions")
 PAGE_FILES[f"{C.MCP_PAGE['slug']}/index.html"] = ("../", "product")
+PAGE_FILES[f"{C.BWA['slug']}/index.html"] = ("../", "solutions")
+PAGE_FILES["integrations/index.html"] = ("../", "product")
+for _x in C.INTEGRATIONS:
+    PAGE_FILES[f"integrations/{_x['slug']}/index.html"] = ("../../", "product")
+for _u in C.USE_CASES:  # not in any menu (brief 7)
+    PAGE_FILES[f"use-cases/{_u['slug']}/index.html"] = ("../../", None)
+PAGE_FILES[f"{C.MS['slug']}/index.html"] = ("../", None)
+PAGE_FILES[f"{C.WHO['slug']}/index.html"] = ("../", "who")
 
 CHEVRON = ('<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">'
            '<path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg>')
@@ -49,9 +57,11 @@ def nav_html(p: str, cur) -> str:
         return f'<a href="{href}"{ac}>{label}</a>'
     product = "\n".join(f'            <a href="{p}product/{m["slug"]}/">{esc(m["name"])}</a>' for m in C.MODULES)
     product += f'\n            <a class="nav-menu-all" href="{p}features/">All features <span aria-hidden="true">→</span></a>'
+    product += f'\n            <a href="{p}integrations/">Integrations</a>'
     product += f'\n            <a href="{p}{C.MCP_PAGE["slug"]}/">{esc(C.MCP_PAGE["name"])}</a>'
     product += f'\n            <a href="{p}security/">Security &amp; data</a>'
     sol = "\n".join(f'            <a href="{p}{x["slug"]}/">{esc(x["name"])}</a>' for x in C.SOLUTIONS)
+    sol += f'\n            <a href="{p}{C.BWA["slug"]}/">{esc(C.BWA["name"])}</a>'
     sol += f'\n            <a href="{p}{C.BYC["slug"]}/">{esc(C.BYC["name"])}</a>'
     agents_cur = ' aria-current="page"' if cur == "agents" else ""
     return f"""  <header class="nav" id="nav">
@@ -63,7 +73,7 @@ def nav_html(p: str, cur) -> str:
         {drop_html("product", "Product", cur, product)}
         {drop_html("solutions", "Solutions", cur, sol)}
         {a(p + "pricing/", "Pricing", "pricing")}
-        <a href="{p}#who-we-are">Who we are</a>
+        {a(p + "who-we-are/", "Who we are", "who")}
         <a class="agents-link" href="{p}agents/"{agents_cur} aria-label="For AI agents"><code>/agents</code></a>
         <a class="menu-only" href="https://app.flieber.com">Log in</a>
         <a class="menu-only" href="{C.DEMO}">Book a demo</a>
@@ -80,6 +90,7 @@ def nav_html(p: str, cur) -> str:
 
 def footer_html(p: str, mark: bool) -> str:
     sol = "\n".join(f'            <li><a href="{p}{x["slug"]}/">{esc(x["name"])}</a></li>' for x in C.SOLUTIONS)
+    sol += f'\n            <li><a href="{p}{C.BWA["slug"]}/">{esc(C.BWA["name"])}</a></li>'
     sol += f'\n            <li><a href="{p}{C.BYC["slug"]}/">{esc(C.BYC["name"])}</a></li>'
     mark_html = (f'\n      <div class="footer-mark" aria-hidden="true"><img src="{p}assets/img/flieber-logo-light.svg" alt=""></div>'
                  if mark else "")
@@ -94,9 +105,11 @@ def footer_html(p: str, mark: bool) -> str:
           <h2 class="footer-h">Product</h2>
           <ul>
             <li><a href="{p}features/">Features</a></li>
+            <li><a href="{p}integrations/">Integrations</a></li>
+            <li><a href="{p}{C.MCP_PAGE["slug"]}/">{esc(C.MCP_PAGE["name"])}</a></li>
             <li><a href="{p}pricing/">Pricing</a></li>
             <li><a href="{p}security/">Security &amp; data</a></li>
-            <li><a href="{C.MANAGED_SERVICES_URL}">Managed Services</a></li>
+            <li><a href="{p}{C.MS["slug"]}/">Managed Services</a></li>
           </ul>
         </div>
         <div>
@@ -117,7 +130,7 @@ def footer_html(p: str, mark: bool) -> str:
         <div>
           <h2 class="footer-h">Company</h2>
           <ul>
-            <li><a href="{p}#who-we-are">Who we are</a></li>
+            <li><a href="{p}who-we-are/">Who we are</a></li>
             <li><a href="https://help.flieber.com">Help center</a></li>
             <li><a href="https://www.flieber.com/blog">Blog</a></li>
             <li><a href="{p}contact/">Contact</a></li>

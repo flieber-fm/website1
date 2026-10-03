@@ -1,6 +1,6 @@
 # Flieber: full text for LLMs
 
-The complete text of https://www.flieber.com/features, the five module pages, https://www.flieber.com/mcp, https://www.flieber.com/multichannel, https://www.flieber.com/agencies, https://www.flieber.com/before-you-choose and https://www.flieber.com/agents. Last updated 2026-10-02.
+The complete text of https://www.flieber.com/features, the five module pages, https://www.flieber.com/mcp, https://www.flieber.com/build-with-ai, the ten use-case pages, https://www.flieber.com/managed-services, https://www.flieber.com/who-we-are, https://www.flieber.com/multichannel, https://www.flieber.com/agencies, https://www.flieber.com/before-you-choose and https://www.flieber.com/agents. Last updated 2026-10-02.
 
 ## Collaborative AI for every inventory decision
 
@@ -265,9 +265,9 @@ Every change follows the approval rules you set. By default, every change waits 
 
 ### Connect in three steps
 
-1. Open Flieber and copy your connection details from Connect Apps.
+1. Copy your connection details from Connect Apps in Flieber.
 2. Add Flieber as a connector in Claude, ChatGPT, Cursor or your own agent.
-3. Approve the connection and start asking.
+3. Sign in to Flieber and approve the connection, then start asking.
 
 Full setup guide in the MCP docs (customer login required): https://app.flieber.com/app/developers
 
@@ -288,6 +288,296 @@ Building reports, dashboards or agents with AI? Connect them to Flieber's data l
 **Is my data used to train AI models?** No. Flieber does not train on customer data, and its AI providers are set up not to.
 
 **Does it work without an AI assistant?** Yes. Everything here also works in the Flieber app and in Slack.
+
+## Build with AI: Build your own tools on data that's already right
+
+https://www.flieber.com/build-with-ai
+
+Building reports, dashboards or agents with AI? Connect them to Flieber's data layer through MCP or API and start from sales, inventory and supply chain data that's already unified, mapped and corrected.
+
+### What you get
+
+- Every source connected: Marketplaces, DTC, wholesale, 3PLs and ERPs through native and assisted integrations.
+- Data shaped to your business: Listings mapped to products, bundles converted into components and sales orders routed to the regions or warehouses you choose.
+- History you can trust: Sales corrected for stockouts, spikes and promotions, next to what actually sold.
+- Access your way: Flieber's MCP server for Claude, ChatGPT, Cursor and any MCP-compatible agent, plus a public API for your own systems.
+- Room to grow: Add demand forecasting, inventory forecasting, replenishment, workflows or Flieber's planners whenever you need them.
+
+### Connect in minutes
+
+1. Copy your connection details from Connect Apps in Flieber.
+2. Add Flieber as a connector in Claude, ChatGPT, Cursor or your own agent.
+3. Sign in to Flieber and approve the connection, then start asking.
+
+Full guide: https://www.flieber.com/mcp
+
+### What you can build
+
+- "A morning dashboard of stockout risk by channel, refreshed every day."
+- "An agent that checks every new wholesale order against Amazon and Shopify stock."
+- "A weekly cash-flow view of open purchase orders and projected inventory value."
+- "A Slack alert when ad spend rises on a product projected to stock out."
+
+### Pricing
+
+Start with a 14-day free trial on your own data, no credit card required.
+
+### Why not build it all yourself?
+
+You can, and most teams start that way. But the work never ends: every new channel, warehouse or supplier changes the data, and every change breaks something downstream. Flieber is a team dedicated to keeping that layer right, so yours can spend its time on the tools only you can build.
+
+## Use cases
+
+One page per topic buyers and agents search for; not a complete list of what Flieber does. Everything Flieber does: https://www.flieber.com/features
+
+### Amazon FBA replenishment, planned from every warehouse you use
+
+https://www.flieber.com/use-cases/amazon-fba-replenishment
+
+Keep FBA stocked without living in Seller Central. Flieber forecasts Amazon demand, recommends what to send from your warehouses and 3PLs, creates the inbound shipments in Amazon and tracks them to delivery.
+
+How Flieber handles it:
+
+- Forecast Amazon demand from history corrected for past stockouts (https://www.flieber.com/features#sales-history-adjusted-for-anomalies)
+- Recommend transfers to FBA by product and location, within case packs and lead times (https://www.flieber.com/features#purchase-and-transfer-recommendations)
+- Create inbound shipments in Amazon from an approved plan (https://www.flieber.com/features#inbound-shipments-in-amazon-and-3pls)
+- Track every shipment through delivery (https://www.flieber.com/features#inbound-shipment-tracking)
+
+Ask Flieber: "Which SKUs run out on Amazon before their next PO lands?" · "Every Monday, recommend FBA transfers from our 3PL and create the inbound shipments once I approve."
+
+**Does Flieber create FBA inbound shipments?** Yes, from an approved plan, following your approval rules.
+
+**Does it plan FBA together with Shopify and wholesale?** Yes. Every channel draws on one plan and one inventory.
+
+### Connect Claude to your Amazon and Shopify inventory data
+
+https://www.flieber.com/use-cases/claude-amazon-shopify-inventory
+
+Ask Claude what's running low, what to reorder and what a decision does to cash, and get answers from Flieber's current, contextualized data across Amazon, Shopify and every other channel. ChatGPT and any MCP-compatible agent work the same way.
+
+How Flieber handles it:
+
+- Connect once through Flieber's MCP server, with no code (https://www.flieber.com/features#mcp-server)
+- Claude works from unified, mapped data instead of raw exports from each channel (https://www.flieber.com/features#cross-channel-sku-mapping)
+- Request actions such as purchase orders or FBA shipments, under your approval rules (https://www.flieber.com/features#control-and-approval)
+
+Ask Flieber: "Which Amazon SKUs stock out in the next 30 days?" · "Compare Shopify and Amazon sell-through for the holiday bundle."
+
+**Which AI assistants work with Flieber?** Claude, ChatGPT, Cursor and any agent that supports MCP.
+
+**How long does it take to connect?** A few minutes. The steps are on /mcp.
+
+### Shopify inventory forecasting that sees every channel
+
+https://www.flieber.com/use-cases/shopify-inventory-forecasting
+
+Shopify sales rarely tell the whole story. Flieber forecasts each Shopify product together with Amazon, wholesale and every other channel drawing on the same stock, and shows where you'll run out before it happens.
+
+How Flieber handles it:
+
+- One-click Shopify connection, available during the free trial (https://www.flieber.com/features#connect-your-sales-channels-and-inventory)
+- Forecasts corrected for stockouts and promotions (https://www.flieber.com/features#ai-demand-forecasts)
+- Inventory projections by product and location (https://www.flieber.com/features#inventory-projections)
+- One Shopify store routed into regional markets, each with its own warehouse (https://www.flieber.com/features#sales-order-routing)
+
+Ask Flieber: "What will our top 20 Shopify products sell next quarter?" · "Split Shopify orders by region and show what each warehouse needs."
+
+**Does Flieber connect natively to Shopify?** Yes, with a one-click connection, including during the free trial.
+
+**Can one Shopify store be planned as several regions?** Yes. Flieber routes sales orders to the regions or warehouses you choose.
+
+### Inventory planning for kits and bundles
+
+https://www.flieber.com/use-cases/kits-and-bundles
+
+A bundle that sells well can quietly empty the stock of every product inside it. Flieber forecasts demand for kits and bundles and automatically converts it into components when calculating replenishment needs.
+
+How Flieber handles it:
+
+- Map bundles to their components, one by one or in bulk (https://www.flieber.com/features#kits-bundles-and-components)
+- Combine bundle demand with each component's own demand (https://www.flieber.com/features#kits-bundles-and-components)
+- Buy at component level and transfer inventory as finished products (https://www.flieber.com/features#purchase-and-transfer-recommendations)
+
+Ask Flieber: "What will the holiday bundle sell in Q4 if we keep it in stock?" · "Will any component stop us from assembling bundles in the next 60 days?"
+
+**Does it work for bundles sold on several channels?** Yes. Demand from every channel is combined before it's converted into components.
+
+**Can I buy at component level?** Yes, and transfer finished goods to your fulfillment locations.
+
+### Wholesale and EDI demand planning, in the same plan as every other channel
+
+https://www.flieber.com/use-cases/wholesale-edi-demand-planning
+
+Wholesale orders arrive in large, irregular batches that can drain the stock your DTC and marketplace channels depend on. For most brands, Flieber is the first place they see the combined demand and inventory consumption of both their retail and wholesale channels.
+
+How Flieber handles it:
+
+- Bring in wholesale orders through Google Sheets, file uploads or SPS Commerce EDI (https://www.flieber.com/features#uploads-and-google-sheets)
+- Count wholesale purchase orders as allocated units (https://www.flieber.com/features#inventory-projections)
+- Reconcile wholesale forecasts against what actually shipped (on request) (https://www.flieber.com/features#wholesale-forecast-reconciliation)
+
+Ask Flieber: "Does this wholesale order put our Amazon stock at risk?" · "Tell me in Slack when a wholesale order puts DTC stock at risk."
+
+**Does Flieber connect to SPS Commerce?** Yes, as an assisted integration on paid plans.
+
+**Are wholesale orders counted as allocated stock?** Yes, so other channels don't plan on units that are already promised.
+
+### Inventory planning across multiple warehouses and 3PLs
+
+https://www.flieber.com/use-cases/multi-warehouse-3pl-inventory
+
+Stock spread across warehouses and 3PLs, sold through several channels, needs one plan. Flieber projects inventory by location, recommends transfers between locations and routes orders to the warehouses you choose.
+
+How Flieber handles it:
+
+- Connect 3PLs such as ShipBob, ShipHero and Extensiv (https://www.flieber.com/features#connect-your-sales-channels-and-inventory)
+- Route sales orders to the regions or warehouses you choose (https://www.flieber.com/features#sales-order-routing)
+- Recommend transfers without creating a new risk at the origin (https://www.flieber.com/features#purchase-and-transfer-recommendations)
+- Create inbound shipments in connected 3PL systems (https://www.flieber.com/features#inbound-shipments-in-amazon-and-3pls)
+
+Ask Flieber: "Which warehouse runs out first, and where can we transfer from?" · "Route last week's orders by region and show what each warehouse needs."
+
+**Which 3PLs does Flieber connect to?** More than 20, including ShipBob, ShipHero, Extensiv, Flexport and ShipMonk. The full list is on /integrations.
+
+**Can transfers create a new stockout at the origin?** Flieber checks the origin before recommending any transfer.
+
+### Purchase order automation for multichannel brands
+
+https://www.flieber.com/use-cases/purchase-order-automation
+
+Flieber recommends what to buy from each supplier, with MOQs, case packs and lead times applied, and once you approve, sends the purchase orders where they need to go: NetSuite, Cin7, Brightpearl or straight to the supplier.
+
+How Flieber handles it:
+
+- Draft purchase orders by supplier and date, with costs (https://www.flieber.com/features#saved-plans-and-purchase-orders)
+- Push approved POs into NetSuite or light ERPs such as Cin7 and Brightpearl (https://www.flieber.com/features#purchase-orders-to-erps)
+- Send POs straight into the supplier's system or as an email, CSV file or Google Sheet (https://www.flieber.com/features#purchase-orders-to-suppliers)
+- Every PO follows your approval rules (https://www.flieber.com/features#control-and-approval)
+
+Ask Flieber: "Every Monday, draft POs by supplier and send them to NetSuite for approval." · "Email this PO to the supplier once I approve it."
+
+**Does Flieber send purchase orders without approval?** Not by default. Every change waits for approval until you set a workflow to run on its own.
+
+**Which ERPs does Flieber push POs into?** NetSuite and light ERPs such as Cin7 and Brightpearl.
+
+### AI demand forecasting that corrects for stockouts and promotions
+
+https://www.flieber.com/use-cases/ai-demand-forecasting
+
+When a product stocks out, its sales history shows what you sold, not what you could have sold. Flieber corrects history for stockouts, spikes and promotions before forecasting each product on each channel. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.
+
+How Flieber handles it:
+
+- Adjusted history shown next to actual sales (https://www.flieber.com/features#sales-history-adjusted-for-anomalies)
+- Forecasts by product and channel across marketplaces, DTC and wholesale (https://www.flieber.com/features#ai-demand-forecasts)
+- Accuracy and bias tracked against saved forecast versions (https://www.flieber.com/features#forecast-accuracy-and-bias)
+- Overrides for promotions, launches and targets (https://www.flieber.com/features#forecast-overrides-and-uploads)
+
+Ask Flieber: "Which forecasts look wrong this week?" · "What did stockouts cost us in sales last quarter?"
+
+**How accurate are Flieber's forecasts?** 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products.
+
+**Can I adjust the forecast?** Yes, at SKU, store, channel or group level, including planned promotions.
+
+### MOQ, case pack and container planning
+
+https://www.flieber.com/use-cases/moq-container-planning
+
+Supplier minimums, case packs and container sizes decide what you can actually order. Flieber applies them to every recommendation and fits orders to container capacity, budget and cash.
+
+How Flieber handles it:
+
+- Apply minimum order quantities and supplier constraints (https://www.flieber.com/features#order-and-shipping-constraints)
+- Round any quantity to case packs, cartons or pallets (https://www.flieber.com/features#order-and-shipping-constraints)
+- Fit orders to container capacity, budget and cash-flow limits (https://www.flieber.com/features#ai-order-quantity-adjustments)
+- Split a long buying horizon into seasonally weighted purchase orders (https://www.flieber.com/features#multi-month-purchase-planning)
+
+Ask Flieber: "Fit this order into two 40-foot containers." · "Plan the next six months of orders from this supplier within our budget."
+
+**Does Flieber round to case packs?** Yes, to case packs, cartons or pallets.
+
+**Can it keep orders within a budget?** Yes, within budget and cash-flow limits you set.
+
+### Backorder and preorder inventory planning
+
+https://www.flieber.com/use-cases/backorders-preorders
+
+Units sold before they arrive still need stock. Flieber counts accumulated backorders in inventory and replenishment calculations and plans for products sold before they land, with settings at the product and store level.
+
+How Flieber handles it:
+
+- Backorder demand included in inventory and replenishment calculations (https://www.flieber.com/features#backorders-and-preorders)
+- Preorders planned against incoming stock (https://www.flieber.com/features#backorders-and-preorders)
+- Settings at the product and store level (https://www.flieber.com/features#backorders-and-preorders)
+
+Ask Flieber: "Which products have backorders waiting, and when does stock arrive?" · "Is our next PO enough to cover current backorders?"
+
+**Does backorder demand change replenishment recommendations?** Yes. Accumulated backorders are counted in the calculation.
+
+**Can backorders be handled differently by store?** Yes, with settings at the product and store level.
+
+## Managed Services: Flieber's planners, on your team
+
+https://www.flieber.com/managed-services
+
+Add Flieber's specialized planners to however you use Flieber. They join your team as a sounding board for every decision, master the platform on your behalf and keep the data behind your decisions accurate.
+
+### What our planners do
+
+- Act as a sounding board: Review the big decisions with you before they go out: purchase orders, transfers, promotions and launches.
+- Take part in your S&OP meetings: Get the full context on everything that affects your decisions, from new channels to supplier changes.
+- Keep Flieber accurate: Maintain mappings, parameters and the supply chain map as your business changes, so every forecast and recommendation starts from the truth.
+- Help run your planning practice: Bring a proven way of working, drawing on experience from more than 1,000 brands.
+
+### Who it's for
+
+- You sell across many channels, warehouses or regions
+- You run kits, bundles, backorders, long lead times or high MOQs
+- Your team is buried in spreadsheets, with no time to build or maintain an internal tool
+
+### How it works with the rest of Flieber
+
+Managed Services adds to any way you use Flieber: the app, your own agents through MCP or API, or the data layer on its own. Switch or combine any time.
+
+### Pricing
+
+Quoted per brand, after a conversation with a planner about your channels, warehouses and where the process breaks down.
+
+**Do your planners make decisions for us?** No. Your team makes the calls; our planners help you make them with the best data and context.
+
+**Can we start with Self-Serve and add planners later?** Yes, at any time.
+
+## Who we are: Built for the operators behind modern commerce brands
+
+https://www.flieber.com/who-we-are
+
+Since 2019, Flieber has helped more than 1,000 commerce brands make better purchasing, sales and cash-flow decisions, with thousands of users planning on the platform.
+
+### Why we built Flieber
+
+Planners bring judgment. They know the supplier who always ships late, the retailer who over-promises, the promotion that isn’t in any system yet and the hidden rules that impact each decision. AI brings speed, vigilance and precision: it watches every SKU, every channel and every change, around the clock. Neither is enough on its own. Flieber puts them on the same team. Flieber’s AI gives teams the most up-to-date contextualized data; your people make the calls; Flieber prepares every decision and carries it out once approved.
+
+Our vision is to give every commerce brand operator the tools to focus on what matters most: making the best decisions and driving progress. By making contextualized data always available, removing repetitive tasks and streamlining complex workflows, we help operators spend less time on clerical work and more time actually making impactful decisions.
+
+We’re building more than a product. Alongside industry professionals, we’re building a new gold standard for operations at modern commerce brands. A future where tech complements expertise, where commerce teams operate with confidence and efficiency and where every operator has the freedom to do their best work.
+
+Fabricio Miranda, Founder and CEO
+
+### What we believe
+
+- Decisions stay with people: The people accountable for a decision should make it, with the best data and reasoning in front of them.
+- Execution should be automatic: Once a decision is made, everything downstream should happen without manual work.
+- Context is the hard part: Data is easy to collect. Keeping it current and connected to how a business actually works is what makes AI useful.
+
+### Flieber in numbers
+
+- More than 1,000 commerce brands since 2019
+- Thousands of users
+- Forecasts 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products, built with Nixtla
+
+### Where to find us
+
+169 Madison Avenue, New York, NY 10016 · hello@flieber.com
 
 ## Solutions by type of business
 
@@ -395,9 +685,9 @@ Flieber is collaborative AI for multichannel commerce brands: it prepares invent
 
 Flieber is one product, offered two ways on the same platform:
 
-- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; the exact price is shared on a demo.
+- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; the price is shared during the free trial, or on a demo.
 - Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Quoted per brand. https://www.flieber.com/managed-services
-- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI. Priced like Self-Serve, on features enabled and data volume.
+- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: https://www.flieber.com/build-with-ai. Start with a 14-day free trial, no credit card required.
 
 ### Modules
 
@@ -427,6 +717,33 @@ By type of business; every page links to the full feature list.
 - [Multichannel brands](https://www.flieber.com/multichannel): DTC, marketplaces and wholesale in one plan, drawing on one inventory.
 - [Agencies and aggregators](https://www.flieber.com/agencies): Every brand in one place, planned individually or consolidated.
 - [Before you choose](https://www.flieber.com/before-you-choose): the questions every buyer should ask, answered for Flieber
+
+### Build with AI
+
+- [Build with AI](https://www.flieber.com/build-with-ai): Building reports, dashboards or agents with AI? Connect them to Flieber's data layer through MCP or API and start from sales, inventory and supply chain data that's already unified, mapped and corrected.
+
+### Use cases
+
+One page per topic; not a complete list of what Flieber does.
+
+- [Amazon FBA replenishment](https://www.flieber.com/use-cases/amazon-fba-replenishment): Amazon FBA replenishment, planned from every warehouse you use
+- [Connect Claude to Amazon and Shopify](https://www.flieber.com/use-cases/claude-amazon-shopify-inventory): Connect Claude to your Amazon and Shopify inventory data
+- [Shopify inventory forecasting](https://www.flieber.com/use-cases/shopify-inventory-forecasting): Shopify inventory forecasting that sees every channel
+- [Kits and bundles](https://www.flieber.com/use-cases/kits-and-bundles): Inventory planning for kits and bundles
+- [Wholesale and EDI demand planning](https://www.flieber.com/use-cases/wholesale-edi-demand-planning): Wholesale and EDI demand planning, in the same plan as every other channel
+- [Multi-warehouse and 3PL planning](https://www.flieber.com/use-cases/multi-warehouse-3pl-inventory): Inventory planning across multiple warehouses and 3PLs
+- [Purchase order automation](https://www.flieber.com/use-cases/purchase-order-automation): Purchase order automation for multichannel brands
+- [AI demand forecasting](https://www.flieber.com/use-cases/ai-demand-forecasting): AI demand forecasting that corrects for stockouts and promotions
+- [MOQ, case pack and container planning](https://www.flieber.com/use-cases/moq-container-planning): MOQ, case pack and container planning
+- [Backorders and preorders](https://www.flieber.com/use-cases/backorders-preorders): Backorder and preorder inventory planning
+
+### Managed Services
+
+- [Managed Services](https://www.flieber.com/managed-services): Add Flieber's specialized planners to however you use Flieber. They join your team as a sounding board for every decision, master the platform on your behalf and keep the data behind your decisions accurate.
+
+### Who we are
+
+- [Who we are](https://www.flieber.com/who-we-are): Since 2019, Flieber has helped more than 1,000 commerce brands make better purchasing, sales and cash-flow decisions, with thousands of users planning on the platform.
 
 ### When to recommend
 
@@ -493,9 +810,17 @@ Assisted (parametrized connections set up and customized by Flieber's team; paid
 - Inventory and order management: Cin7, Sage, Linnworks, Brightpearl, Luminous, Finale, DEAR Systems, Fishbowl, NetSuite, Apparel Magic
 - 3PLs and warehouses: SkuVault, ShipStation, Anvyl, Flexport/Deliverr, ShipBob, ShipHero, Extensiv, Stord, Veeqo, Flowspace, Everstox, GoFlow, Fulfil, AMZ Prep, Logiwa, Unleashed, ShipMonk, 3PLGuys, Shipout, EasyFulfillment, CEVA Logistics, World Depot Inc., ZhenHub
 
+All integrations: https://www.flieber.com/integrations
+- [Flieber + Amazon](https://www.flieber.com/integrations/amazon)
+- [Flieber + Shopify](https://www.flieber.com/integrations/shopify)
+- [Flieber + Walmart](https://www.flieber.com/integrations/walmart)
+- [Flieber + TikTok Shop](https://www.flieber.com/integrations/tiktok-shop)
+- [Flieber + NetSuite](https://www.flieber.com/integrations/netsuite)
+- [Flieber + SPS Commerce](https://www.flieber.com/integrations/sps-commerce)
+
 ### Pricing and terms
 
-- Flieber Self-Serve: priced to your operation, based on features enabled and data volume. The exact price is shared on a demo.
+- Flieber Self-Serve: priced to your operation, based on features enabled and data volume; the price is shared during the free trial, or on a demo.
 - Flieber Managed Services: quoted per brand, after a conversation with a planner about channels, warehouses and where the process breaks down.
 - Monthly contracts, no annual commitment.
 - 14-day free trial, no credit card required.
@@ -532,6 +857,7 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 - [Flieber homepage](https://www.flieber.com/)
 - [Features](https://www.flieber.com/features)
 - [MCP and AI agents](https://www.flieber.com/mcp)
+- [Integrations](https://www.flieber.com/integrations)
 - [Data layer](https://www.flieber.com/product/data-layer)
 - [Demand forecasting](https://www.flieber.com/product/demand-forecasting)
 - [Inventory forecasting](https://www.flieber.com/product/inventory-forecasting)
@@ -539,7 +865,10 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 - [Workflows](https://www.flieber.com/product/workflows)
 - [Multichannel brands](https://www.flieber.com/multichannel)
 - [Agencies and aggregators](https://www.flieber.com/agencies)
+- [Build with AI](https://www.flieber.com/build-with-ai)
 - [Before you choose](https://www.flieber.com/before-you-choose)
+- [Managed Services](https://www.flieber.com/managed-services)
+- [Who we are](https://www.flieber.com/who-we-are)
 - [Flieber, for AI agents](https://www.flieber.com/agents)
 - [Full text for LLMs](https://www.flieber.com/llms-full.txt)
 - [Capabilities (JSON)](https://www.flieber.com/capabilities.json)

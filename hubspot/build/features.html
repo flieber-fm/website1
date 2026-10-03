@@ -1064,6 +1064,41 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .mcp-step b { color: var(--black); font-weight: 600; }
 @media (max-width: 1140px) { .mcp-ask-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .mcp-do { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 860px) { .chat-grid, .mcp-steps, .mcp-do { grid-template-columns: 1fr; } .mcp-ask-grid { grid-template-columns: 1fr; } .chat-msg { max-width: 100%; } }
+.sol-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 960px) { .sol-three { grid-template-columns: 1fr; } }
+.door-link { font-weight: 600; color: var(--black); text-decoration: none; }
+.door-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.which-name a { color: inherit; text-decoration: none; }
+.which-name a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.founder-more { margin-top: 28px; }
+.founder-more .link-arrow { color: var(--white); }
+.feat-uc { margin-top: 12px; font-size: 14px; }
+.feat-uc a { color: var(--black); font-weight: 600; text-underline-offset: 3px; }
+.uc-asks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.uc-asks li { font-family: var(--mono); font-size: 14px; line-height: 1.55; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 20px 22px; }
+@media (max-width: 760px) { .uc-asks { grid-template-columns: 1fr; } }
+.integ-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.integ-chips li { padding: 9px 14px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--white); font-size: 15px; }
+.integ-chips li a { color: var(--black); font-weight: 600; text-decoration: none; }
+.integ-chips li:has(a) { border-color: var(--black); }
+.integ-chips li a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.integ-cats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+.integ-cat .h3 { margin-bottom: 14px; }
+@media (max-width: 760px) { .integ-cats { grid-template-columns: 1fr; } }
+.integ-dl { margin: 0; max-width: 880px; border-top: 1px solid var(--line-strong); }
+.integ-row { display: grid; grid-template-columns: 220px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line-strong); }
+.integ-row dt { font-weight: 600; }
+.integ-row dd { margin: 0; color: var(--text-2); }
+@media (max-width: 640px) { .integ-row { grid-template-columns: 1fr; gap: 6px; } }
+.ms-for { max-width: 760px; }
+.who-numbers { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.who-numbers li { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l); padding: 24px; font-size: 18px; line-height: 1.4; }
+.who-find { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 18px; }
+.who-find a { color: var(--black); }
+@media (max-width: 860px) { .who-numbers { grid-template-columns: 1fr; } }
+.ms-for { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 18px; }
+.ms-for li { display: flex; align-items: baseline; gap: 12px; }
+.ms-for li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 2px; background: var(--yellow); border: 1px solid var(--black); transform: translateY(-2px); }
 
 </style>
 
@@ -1274,6 +1309,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
             <a href="/product/replenishment">Replenishment</a>
             <a href="/product/workflows">Workflows</a>
             <a class="nav-menu-all" href="/features">All features <span aria-hidden="true">→</span></a>
+            <a href="/integrations">Integrations</a>
             <a href="/mcp">MCP and AI agents</a>
             <a href="/security">Security &amp; data</a>
           </div>
@@ -1283,11 +1319,12 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
           <div class="nav-menu" id="nav-solutions">
             <a href="/multichannel">Multichannel brands</a>
             <a href="/agencies">Agencies and aggregators</a>
+            <a href="/build-with-ai">Build with AI</a>
             <a href="/before-you-choose">Before you choose</a>
           </div>
         </div>
         <a href="/pricing">Pricing</a>
-        <a href="/#who-we-are">Who we are</a>
+        <a href="/who-we-are">Who we are</a>
         <a class="agents-link" href="/agents" aria-label="For AI agents"><code>/agents</code></a>
         <a class="menu-only" href="https://app.flieber.com">Log in</a>
         <a class="menu-only" href="https://www.flieber.com/book-a-demo">Book a demo</a>
@@ -1347,11 +1384,13 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
               <h3 class="h3">Sales order routing</h3>
               <p>Route sales orders from any store to the regions or warehouses you choose, so one Shopify account can be planned as several regional markets.</p>
               <p class="feat-tag">Write</p>
+              <p class="feat-uc"><a href="/use-cases/shopify-inventory-forecasting">Use case: Shopify inventory forecasting <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="kits-bundles-and-components">
               <h3 class="h3">Kits, bundles and components</h3>
               <p>Turns demand for bundles into component requirements. Buy at component level and transfer inventory as finished products.</p>
               <p class="feat-tag">Write</p>
+              <p class="feat-uc"><a href="/use-cases/kits-and-bundles">Use case: Kits and bundles <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="product-configuration-and-classification">
               <h3 class="h3">Product configuration and classification</h3>
@@ -1362,11 +1401,13 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
               <h3 class="h3">Supply chain map</h3>
               <p>Suppliers, warehouses, 3PLs and channels, with fulfillment and fallback locations, transfer routes, production and transit lead times and ordering cadence.</p>
               <p class="feat-tag">Write</p>
+              <p class="feat-uc"><a href="/use-cases/multi-warehouse-3pl-inventory">Use case: Multi-warehouse and 3PL planning <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="sales-history-adjusted-for-anomalies">
               <h3 class="h3">Sales history adjusted for anomalies</h3>
               <p>Corrects history distorted by stockouts, spikes and promotions, and shows actual sales next to the adjusted demand used for forecasting.</p>
               <p class="feat-tag">Read</p>
+              <p class="feat-uc"><a href="/use-cases/ai-demand-forecasting">Use case: AI demand forecasting <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="inventory-history-and-balances">
               <h3 class="h3">Inventory history and balances</h3>
@@ -1405,6 +1446,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
               <h3 class="h3">AI demand forecasts</h3>
               <p>Product and channel level forecasts across marketplaces, DTC and wholesale, built from adjusted history and seasonality. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.</p>
               <p class="feat-tag">Read</p>
+              <p class="feat-uc"><a href="/use-cases/ai-demand-forecasting">Use case: AI demand forecasting <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="forecast-overrides-and-uploads">
               <h3 class="h3">Forecast overrides and uploads</h3>
@@ -1425,6 +1467,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
               <h3 class="h3">Wholesale forecast reconciliation</h3>
               <p>Finds wholesale demand parked on dates that passed without a sale and suggests where to move it. On request.</p>
               <p class="feat-tag">Read and write · On request</p>
+              <p class="feat-uc"><a href="/use-cases/wholesale-edi-demand-planning">Use case: Wholesale and EDI demand planning <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
         </div>
         <p class="link-row"><a class="link-arrow" href="/product/demand-forecasting">Demand forecasting <span class="arrow" aria-hidden="true">→</span></a></p>
@@ -1453,6 +1496,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
               <h3 class="h3">Backorders and preorders</h3>
               <p>Counts accumulated backorder demand in inventory and replenishment calculations, with settings by channel, and plans for products sold before they arrive.</p>
               <p class="feat-tag">Read</p>
+              <p class="feat-uc"><a href="/use-cases/backorders-preorders">Use case: Backorders and preorders <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
         </div>
         <p class="link-row"><a class="link-arrow" href="/product/inventory-forecasting">Inventory forecasting <span class="arrow" aria-hidden="true">→</span></a></p>
@@ -1471,6 +1515,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
               <h3 class="h3">Purchase and transfer recommendations</h3>
               <p>What to order or transfer, how much and when, by product and location, including replenishment from warehouses or 3PLs to fulfillment locations such as FBA.</p>
               <p class="feat-tag">Read</p>
+              <p class="feat-uc"><a href="/use-cases/amazon-fba-replenishment">Use case: Amazon FBA replenishment <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="planning-parameters">
               <h3 class="h3">Planning parameters</h3>
@@ -1481,6 +1526,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
               <h3 class="h3">Order and shipping constraints</h3>
               <p>Minimum order quantities and supplier constraints, container planning and rounding to case packs, cartons or pallets.</p>
               <p class="feat-tag">Read</p>
+              <p class="feat-uc"><a href="/use-cases/moq-container-planning">Use case: MOQ, case pack and container planning <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="decision-simulations">
               <h3 class="h3">Decision simulations</h3>
@@ -1496,11 +1542,13 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
               <h3 class="h3">AI order-quantity adjustments</h3>
               <p>Rebalances planned quantities across destinations and fits orders to container capacity, budget and cash-flow limits, following notes you write in plain language.</p>
               <p class="feat-tag">Write</p>
+              <p class="feat-uc"><a href="/use-cases/moq-container-planning">Use case: MOQ, case pack and container planning <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="saved-plans-and-purchase-orders">
               <h3 class="h3">Saved plans and purchase orders</h3>
               <p>Replenishment plans by supplier and date, with costs. Create and track POs, group them under master POs and record placed-order status.</p>
               <p class="feat-tag">Write</p>
+              <p class="feat-uc"><a href="/use-cases/purchase-order-automation">Use case: Purchase order automation <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
         </div>
         <p class="link-row"><a class="link-arrow" href="/product/replenishment">Replenishment <span class="arrow" aria-hidden="true">→</span></a></p>
@@ -1519,16 +1567,19 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
               <h3 class="h3">Purchase orders to suppliers</h3>
               <p>Sends each PO straight into the supplier’s system or as an email, CSV file or Google Sheet in the supplier’s own format, with products identified by SKU or product name.</p>
               <p class="feat-tag">Write</p>
+              <p class="feat-uc"><a href="/use-cases/purchase-order-automation">Use case: Purchase order automation <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="purchase-orders-to-erps">
               <h3 class="h3">Purchase orders to ERPs</h3>
               <p>Pushes approved POs into NetSuite or light ERPs such as Cin7 and Brightpearl.</p>
               <p class="feat-tag">Write</p>
+              <p class="feat-uc"><a href="/use-cases/purchase-order-automation">Use case: Purchase order automation <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="inbound-shipments-in-amazon-and-3pls">
               <h3 class="h3">Inbound shipments in Amazon and 3PLs</h3>
               <p>Creates inbound shipments in Amazon and in connected 3PL and warehouse systems from an approved plan.</p>
               <p class="feat-tag">Write</p>
+              <p class="feat-uc"><a href="/use-cases/amazon-fba-replenishment">Use case: Amazon FBA replenishment <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="inbound-shipment-tracking">
               <h3 class="h3">Inbound shipment tracking</h3>
@@ -1582,6 +1633,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
             <article class="feat-card" id="mcp-server">
               <h3 class="h3">MCP server</h3>
               <p>Connect Claude, Cursor or your own agents. Requests go to Flieber’s own agent (Flieber Studio), which answers questions and carries out the same actions as the app, following your approval rules. Answers typically take 30 seconds to 5 minutes. Full action list in the MCP docs (customer login required).</p>
+              <p class="feat-uc"><a href="/use-cases/claude-amazon-shopify-inventory">Use case: Connect Claude to Amazon and Shopify <span class="arrow" aria-hidden="true">→</span></a></p>
             </article>
             <article class="feat-card" id="mcp-client-and-connected-apps">
               <h3 class="h3">MCP client and connected apps</h3>
@@ -1729,9 +1781,11 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
           <h2 class="footer-h">Product</h2>
           <ul>
             <li><a href="/features">Features</a></li>
+            <li><a href="/integrations">Integrations</a></li>
+            <li><a href="/mcp">MCP and AI agents</a></li>
             <li><a href="/pricing">Pricing</a></li>
             <li><a href="/security">Security &amp; data</a></li>
-            <li><a href="https://www.flieber.com/managed-services">Managed Services</a></li>
+            <li><a href="/managed-services">Managed Services</a></li>
           </ul>
         </div>
         <div>
@@ -1739,6 +1793,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
           <ul>
             <li><a href="/multichannel">Multichannel brands</a></li>
             <li><a href="/agencies">Agencies and aggregators</a></li>
+            <li><a href="/build-with-ai">Build with AI</a></li>
             <li><a href="/before-you-choose">Before you choose</a></li>
           </ul>
         </div>
@@ -1754,7 +1809,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
         <div>
           <h2 class="footer-h">Company</h2>
           <ul>
-            <li><a href="/#who-we-are">Who we are</a></li>
+            <li><a href="/who-we-are">Who we are</a></li>
             <li><a href="https://help.flieber.com">Help center</a></li>
             <li><a href="https://www.flieber.com/blog">Blog</a></li>
             <li><a href="/contact">Contact</a></li>

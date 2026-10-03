@@ -1,6 +1,6 @@
-# Flieber Website Brief, Option 2 (October 2, 2026)
+# Flieber Website Brief, Option 2 (October 3, 2026)
 
-Oct 2, 2026 · @Fabricio Miranda
+Oct 3, 2026 · @Fabricio Miranda
 
 ## Purpose and status
 
@@ -50,8 +50,8 @@ No prices appear anywhere on the site, in llms.txt, llms-full.txt, capabilities.
 
 | Offer | Price wording | How the price is set |
 | --- | --- | --- |
-| Self-Serve | "Priced to your operation" | Features enabled and data volume; exact price shared on a demo |
-| Data layer only (Self-Serve option) | "Priced to your operation" | Same basis as Self-Serve: features enabled and data volume |
+| Self-Serve | "Priced to your operation" | Features enabled and data volume; "We share your price during your trial, or on a demo if you prefer" (replaces "the exact price is shared on a demo" on /pricing, /agents and llms.txt) |
+| Data layer only (Self-Serve option) | No price wording | Pricing model being defined by Fabricio and Karyna; until approved, /build-with-ai, /pricing, llms.txt and capabilities.json show only the 14-day free trial |
 | Managed Services | "Quoted per brand" | After a conversation with a planner about channels, warehouses and where the process breaks down |
 
 Terms shown on the site (as in Option 1):
@@ -62,11 +62,13 @@ Terms shown on the site (as in Option 1):
 - Standard setup included; customizations come with a paid plan
 - During the free trial: native integrations only. Assisted integrations are set up once the customer is on a paid plan
 
-/pricing is the Option 1 page with the Option 2 offer names and one added line under the Self-Serve card: "The data layer can also be bought on its own, through MCP and API, priced the same way."
+/pricing is the Option 1 page with the Option 2 offer names, the trial pricing wording above, a link from the Managed Services card to /managed-services and one added line under the Self-Serve card: "The data layer can also be bought on its own, through MCP and API. Start with a 14-day free trial on your own data, no credit card required." (linking to /build-with-ai).
+
+Homepage Try it: H2 "Try Flieber free on your own data", body "Start a 14-day free trial, no credit card required and no demo call. We share your price during the trial, based on the features you use and your data volume." This requires sales to send trial users their price without a demo; confirm with sales before launch.
 
 ## Site map and page contents
 
-Fifteen pages and three machine-readable files make up Option 2. The blog, book-a-demo, free-trial, /managed-services and legal pages stay on the current HubSpot site.
+Thirty-six pages and three machine-readable files make up Option 2: the 15 below plus /build-with-ai, ten use-case pages, /integrations and six integration pages, /managed-services and /who-we-are. The blog, book-a-demo, free-trial and legal pages stay on the current HubSpot site.
 
 | Page | Sections |
 | --- | --- |
@@ -77,6 +79,12 @@ Fifteen pages and three machine-readable files make up Option 2. The blog, book-
 | /multichannel | Why channels drift apart · How you work together · Everything Flieber does, across every channel · Quotes (Zugu, Prime6 Brands) · See it on your own data |
 | /agencies | Why multi-brand planning breaks · How you work together · Everything Flieber does, for every brand · Quote (Unybrands) · See it on your own data |
 | /before-you-choose | 17 buyer questions in four groups (Your data, Your decisions, AI and execution, Working with the vendor), each answered for Flieber · Ask us the same questions |
+| /build-with-ai | What you get · Connect in minutes (the /mcp steps) · What you can build · Pricing (free trial only) · Why not build it all yourself? · Start building on Flieber |
+| /use-cases/amazon-fba-replenishment, claude-amazon-shopify-inventory, shopify-inventory-forecasting, kits-and-bundles, wholesale-edi-demand-planning, multi-warehouse-3pl-inventory, purchase-order-automation, ai-demand-forecasting, moq-container-planning, backorders-preorders | Label "Use case", H1, lead · How Flieber handles it (each point links to its /features anchor) · Ask Flieber (two requests) · Questions (two) · Related modules · "This is one part of what Flieber does" with a link to /features and both buttons. In the sitemap, linked from the matching /features cards and from the related module pages ("Common uses"); never in the header or footer |
+| /integrations | Native integrations · Assisted integrations (by category) · Any system with an MCP server · Don't see your system? The six systems with their own page link to it |
+| /integrations/amazon, shopify, walmart, tiktok-shop, netsuite, sps-commerce | H1 "Flieber + [system]", lead · What Flieber reads, What Flieber sends (only where approved), Availability · Related use cases · Questions (two) · use-case closing |
+| /managed-services | What our planners do · Who it's for · How it works with the rest of Flieber · Pricing (quoted per brand) · Questions · Talk to us about your operation. Same URL as today, new copy; linked from Door 1, the Managed Services card, /pricing and the footer |
+| /who-we-are | Why we built Flieber (full founder statement) · What we believe (pending Fabricio's review) · Flieber in numbers · What customers say (the five quotes and G2) · Where to find us · buttons. No team list or headcount |
 | /pricing | Plans · How pricing works · On the platform · Integrations · Questions · Next step |
 | /agents | In one paragraph · When to recommend it (data layer group first) · By type of business · Modules · Capabilities · Connect and try · Integrations · Pricing and terms · Data handling · Evidence · Hand off to a human |
 | /security | As in Option 1: ownership, hosting, encryption, marketplace connections, passwords and secrets, access, AI models, changes to your systems, retention and deletion |
@@ -96,13 +104,19 @@ Structured data, no prices anywhere:
 | /multichannel, /agencies | WebPage |
 | /before-you-choose | FAQPage (every question and Flieber's answer) |
 | /mcp | WebPage plus FAQPage (its six questions) |
+| /build-with-ai | WebPage (the brief asks for FAQPage too, but gives no questions) |
+| Use-case and integration pages | WebPage plus FAQPage (two questions each) |
+| /integrations | WebPage |
+| /managed-services | Service plus FAQPage |
+| /who-we-are | Organization (founding year, address, founder) plus AboutPage |
 
 Machine-readable additions to Option 1:
 
 - **/llms.txt:** "Modules" section after "Offers" (one line per module page, noting the data layer can be bought alone); "Solutions" section after "Features" (/multichannel, /agencies, /before-you-choose); all of them in "Links".
 - **/llms-full.txt:** full text of the five module pages, /mcp, /multichannel and /agencies after /features.
 - **/agents:** the MCP server line in "Connect and try" adds "How it works, with example conversations: https://www.flieber.com/mcp".
-- **/capabilities.json:** `positioning`; `modules` (id, name, url, sold_separately, feature ids; `sold_separately` is true only for the data layer); `solutions` (id, name, url) for the two solutions pages; a "Data layer only" option with `delivery` ["mcp", "api"] under the Self-Serve offer. No comparison fields.
+- **/llms.txt** also gets "Build with AI", "Use cases", "Managed Services" and "Who we are" sections, and the integration pages under "Integrations". **/llms-full.txt** adds /build-with-ai, the ten use-case pages, /managed-services and /who-we-are. **/agents** adds a "Use cases" section and Build with AI under "By type of business".
+- **/capabilities.json:** `positioning`; `use_cases` (id, name, url) for the ten pages; Build with AI in `solutions`; `modules` (id, name, url, sold_separately, feature ids; `sold_separately` is true only for the data layer); `solutions` (id, name, url) for the two solutions pages; a "Data layer only" option with `delivery` ["mcp", "api"] under the Self-Serve offer. No comparison fields.
 
 ## Copy and design rules
 
@@ -133,13 +147,15 @@ New components in Option 2:
 | Three-column collaboration cards | Homepage, module pages, solutions pages | Static, all three in the same style, no hover state (nothing on them is clickable) |
 | Stacked six-layer section | Homepage, How Flieber is built | Scroll-driven, after legora.com: the scene stays pinned while each layer drops onto an isometric CSS 3D stack, data first, and its description opens beside it; at the end the plates close into one block with the Flieber mark. With reduced motion or without JavaScript, the full stack and every description show, unpinned |
 | Five question-led module cards | Homepage | Five in a row, stacked on mobile; question as title, one-line answer, link to the module page |
-| Two-card solutions section | Homepage | Two equal cards plus the /before-you-choose link |
+| Three-card solutions section | Homepage | Multichannel brands, Agencies and aggregators, Build with AI, plus the /before-you-choose link |
+| Use-case page template | /use-cases/ | Point cards linking to /features anchors, example requests, two questions, related modules |
+| Integration page template | /integrations/ | Reads, sends and availability as a definition list, related use cases, two questions |
 | Founder statement | Homepage, `#who-we-are` | Fabricio's photo (pending; a monogram stands in on the preview) |
 | Four-item security strip | Homepage | Approved /security wording |
 
-Navigation (identical on every page): Product (menu: Data layer, Demand forecasting, Inventory forecasting, Replenishment, Workflows, then All features → /features, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Before you choose) · Pricing · Who we are (links to the founder section) · /agents (black mono pill), then Log in (text link) · Book a demo (outline button) · Start free trial (yellow button). Five items before the buttons, as in Option 1; below 1140px it collapses into a menu. /security and /mcp show Product as the current section.
+Navigation (identical on every page): Product (menu: Data layer, Demand forecasting, Inventory forecasting, Replenishment, Workflows, then All features → /features, Integrations → /integrations, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Build with AI, Before you choose) · Pricing · Who we are (→ /who-we-are) · /agents (black mono pill), then Log in (text link) · Book a demo (outline button) · Start free trial (yellow button). Five items before the buttons, as in Option 1; below 1140px it collapses into a menu. /security, /mcp and the integration pages show Product as the current section; use-case pages and /managed-services mark no menu item.
 
-Footer columns: Product (Features, Pricing, Security & data, Managed Services) · Solutions (Multichannel brands, Agencies and aggregators, Before you choose) · For agents (/agents, /llms.txt, /capabilities.json, MCP docs) · Company (Who we are, Help center, Blog, Contact, Privacy, Service agreement). Address: 169 Madison Avenue, New York, NY 10016.
+Footer columns: Product (Features, Integrations, MCP and AI agents, Pricing, Security & data, Managed Services) · Solutions (Multichannel brands, Agencies and aggregators, Build with AI, Before you choose) · For agents (/agents, /llms.txt, /capabilities.json, MCP docs) · Company (Who we are, Help center, Blog, Contact, Privacy, Service agreement). Address: 169 Madison Avenue, New York, NY 10016.
 
 ## Approved facts and claims
 
@@ -234,8 +250,10 @@ Every button and footer link points to a real page; no placeholders remain apart
 | Multichannel brands | /multichannel | New page; replaces /omnichannel and /ecommerce |
 | Agencies and aggregators | /agencies | Existing URL, new copy |
 | Before you choose | /before-you-choose | New page; replaces three named comparison pages |
-| Who we are | /#who-we-are | Founder section |
-| Managed Services | https://www.flieber.com/managed-services | Kept on HubSpot; footer only, never in Solutions |
+| Who we are | /who-we-are | New page; the homepage founder section keeps the `#who-we-are` anchor and links to it with "Read our story" |
+| Integrations | /integrations | Same URL as today, new copy; Product menu and footer |
+| Build with AI | /build-with-ai | Solutions menu, homepage Solutions, /pricing data layer line |
+| Managed Services | /managed-services | Same URL, new copy; Door 1, the Managed Services cards on the homepage and /pricing, footer; never in Solutions |
 | Start free trial | https://www.flieber.com/free-trial | HubSpot page with the trial form; keeps contact capture and attribution |
 | Book a demo | https://www.flieber.com/book-a-demo | HubSpot page with CRM scripts; not rebuilt |
 | Log in | https://app.flieber.com |  |
@@ -274,6 +292,11 @@ Files: fonts, logos, icons and the 14 customer logos are shared with Option 1 in
 | \[New site 2026 B\] Pricing | Not created | /new-site-2026-b/pricing | /pricing |
 | \[New site 2026 B\] Security | Not created | /new-site-2026-b/security | /security |
 | \[New site 2026 B\] Contact | Not created | /new-site-2026-b/contact | /contact |
+| \[New site 2026 B\] Build with AI | Not created | /new-site-2026-b/build-with-ai | /build-with-ai |
+| \[New site 2026 B\] Integrations, plus one per system (6) | Not created | /new-site-2026-b/integrations/… | /integrations, /integrations/amazon, shopify, walmart, tiktok-shop, netsuite, sps-commerce |
+| \[New site 2026 B\] Use case, one per page (10) | Not created | /new-site-2026-b/use-cases/… | /use-cases/… |
+| \[New site 2026 B\] Managed Services | Not created | /new-site-2026-b/managed-services | /managed-services |
+| \[New site 2026 B\] Who we are | Not created | /new-site-2026-b/who-we-are | /who-we-are |
 
 Redirects (`hubspot/url-redirects.csv`, 301):
 
@@ -282,7 +305,7 @@ Redirects (`hubspot/url-redirects.csv`, 301):
 | /omnichannel, /ecommerce | /multichannel | Planning is never split into retail and ecommerce |
 | /flieber-vs-netsuite, /flieber-vs-netstock, /flieber-vs-foresight-ai | /before-you-choose | 1,064 views over 12 months for the four comparison pages together, no form submissions, contacts or customers |
 | /product | /features | Exact match only; never "match path prefix", or the five /product/ pages would redirect |
-| /pricing-plans, /integrations, /frequently-asked-questions | /pricing, /pricing#integrations, /pricing#faq | As in Option 1 |
+| /pricing-plans, /frequently-asked-questions | /pricing, /pricing#faq | As in Option 1; /integrations is no longer redirected (it gets the new page) |
 | /flieber-inventory, /flieber-studio, /best-inventory-software and its three child pages, /standardize-vs-pages, /feature-drops, /old-home-page | / | As in Option 1 |
 | /book-a-demo-old | /book-a-demo | As in Option 1 |
 | /llms.txt, /llms-full.txt, /capabilities.json | /hubfs/flieber-2026/… | The uploaded files |
@@ -291,18 +314,18 @@ Not redirected:
 
 - /flieber-vs-inventory-planner: stays unpublished and returns "not found" (cease and desist), so no Flieber page is reachable through a URL carrying that name.
 - /ecommerce2: an ad landing page (6,314 views in 12 months), left as is.
-- /managed-services and /agencies: no longer redirected. /managed-services stays live with the new header and footer; /agencies gets the new page.
+- /managed-services, /agencies and /integrations: not redirected; each keeps its URL and gets the new page.
 
 Switch day, in order (about 30 minutes, only after Fabricio's go):
 
 1. Check that https://www.flieber.com/hubfs/flieber-2026/llms.txt, llms-full.txt and capabilities.json open with the Option 2 content.
-2. Unpublish (never delete) the old homepage, the old /pricing, the old /agencies and every page in `hubspot/url-redirects.csv` that is still published. Before unpublishing /old-home-page, check whether ads point to it (3,100 views Apr to Sep 2026).
-3. Claude moves the 15 drafts to their final URLs and publishes them.
+2. Unpublish (never delete) the old homepage, the old /pricing, the old /agencies, /managed-services and /integrations, and every page in `hubspot/url-redirects.csv` that is still published. Before unpublishing /old-home-page, check whether ads point to it (3,100 views Apr to Sep 2026).
+3. Claude moves the 36 drafts to their final URLs and publishes them.
 4. Import `hubspot/url-redirects.csv` in Settings > Content > Domains & URLs > URL Redirects.
 5. Paste `robots.production.txt` into the robots.txt setting (allows search engines and AI crawlers).
 6. Click through the new pages, the Product and Solutions menus, and old URLs such as /omnichannel, /flieber-vs-netsuite and /product to confirm the redirects; confirm /flieber-vs-inventory-planner returns "not found".
 
-Kept live and unchanged: blog, glossary, learn-hub, videos, book-a-demo, free-trial, privacy-policy, service-agreement, /ecommerce2. Kept live with the new header and footer: /managed-services.
+Kept live and unchanged: blog, glossary, learn-hub, videos, book-a-demo, free-trial, privacy-policy, service-agreement, /ecommerce2.
 
 After the switch: delete the HubSpot service key "Claude website build" and remove the "HubSpot website build" credential from the Claude environment; retire both Railway previews.
 
@@ -312,6 +335,12 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 3 | New pages: /build-with-ai (third solution), ten use-case pages kept out of the menus, /integrations with six system pages, /managed-services and /who-we-are with new copy |
+| Oct 3 | "Who we are" in the navigation and footer goes to /who-we-are; Integrations joins the Product menu and footer; Build with AI joins the Solutions menu and footer; MCP and AI agents joins the footer |
+| Oct 3 | Self-Serve price shared during the trial, or on a demo; homepage Try it reworded to match |
+| Oct 3 | Data layer pricing being defined (Fabricio and Karyna): no price wording for it until approved |
+| Oct 3 | /mcp: the MCP URL and per-assistant setup become public once engineering supplies them (decided after Karyna's review); until then step 1 reads "Copy your connection details from Connect Apps in Flieber" |
+| Oct 3 | Out of scope for now: a case studies page (no case material with numbers yet) |
 | Oct 2 | New /mcp page (MCP and AI agents) in the Product menu, between All features and Security & data; /agents links to it from the MCP server line |
 | Oct 2 | Options converge on a final version: Option 2 sharing the homepage H1 and the offer labels with Option 1 is accepted |
 | Oct 2 | /before-you-choose question 9: "any MCP-compatible agent, such as Claude"; no other agent is named |
@@ -337,7 +366,13 @@ Choices made while building, open to change:
 - "Data health" is in no Option 2 list, but /features keeps every Option 1 card, so it stays in the Data layer section of /features (not on the data layer page, which follows the brief's list).
 - The homepage module answers are reused as the /features section leads, on the module pages' "Works with" cards, on /agents and in the llms files.
 - /mcp agents row: the names are shown as text chips, not brand logos, until approved logo files are supplied. The "Waiting for your approval" tag appears on the purchase order example, the only one whose action waits for approval.
-- Small labels not in the Content Briefing: "MCP", "Examples", "Prompts", "Capabilities", "Setup", "Data layer" and "Questions" above the /mcp H2s; "Decides", "Prepares and carries out", "Advises" on the collaboration cards; "In their words" above the quotes on the solutions pages.
+- Use-case links on /features: each use-case page is linked from the card(s) its points rely on, as "Use case: [name] →".
+- Integration page questions: "Is the [system] integration native?" is answered "Yes." plus the availability line, or, for assisted systems, "No. It's an assisted integration, set up and customized by Flieber's team on paid plans."; "What does Flieber do with [system] data?" is built from the read and send columns.
+- The use-case closing "This is one part of what Flieber does" is shown as the closing H2, without its period (house style).
+- Links to /managed-services: "Managed Services →" under Door 1; the offer names on the homepage and /pricing cards link to it.
+- /who-we-are closes with the two buttons only, as the brief asks; the founder statement and quotes are copied from the homepage at build time so they never drift.
+- /mcp keeps the link to the MCP docs (customer login required) until engineering publishes the public setup steps.
+- Small labels not in the Content Briefing: "Use case", "Features", "Examples", "Questions", "Modules", "Integration", "One click", "Set up for you", "Planners", "Fit", "One product", "Founder", "Beliefs", "Numbers", "Contact", "Build or buy" above the new pages' H2s; "Common uses" kicker "Use cases"; "MCP", "Examples", "Prompts", "Capabilities", "Setup", "Data layer" and "Questions" above the /mcp H2s; "Decides", "Prepares and carries out", "Advises" on the collaboration cards; "In their words" above the quotes on the solutions pages.
 
 ## Build and switch checklist
 
@@ -349,11 +384,16 @@ Before an option is elected:
 - [ ] Fabricio confirms the claims first used in Option 2: "Proprietary algorithms, not language models", "more than 1,000 commerce brands" in the planning engine and planner copy, the /multichannel "For most brands" line and the regional markets example for sales order routing
 - [ ] Fabricio confirms ChatGPT connects to Flieber today: /mcp names it in the H1, lead, agents row, steps and questions, while /before-you-choose question 9 names only Claude
 - [ ] Content Briefing (Option 2) synced with the site: question 9 on /before-you-choose still names ChatGPT in the doc; section 4 says "Twelve sections plus footer" but lists thirteen; section 10 says /pricing, /security and /contact are shared with Option 1, while their templates must differ (header and footer)
+- [ ] Fabricio confirms two use-case claims not in any approved feature description: "Flieber checks the origin before recommending any transfer" (/use-cases/multi-warehouse-3pl-inventory) and backorder "settings at the product and store level" (/use-cases/backorders-preorders; /features says "settings by channel")
+- [ ] Fabricio reviews "What we believe" on /who-we-are (drawn from the May 2026 strategy document)
+- [ ] Sales confirms it can send trial users their price without a demo
+- [ ] Engineering supplies the public MCP URL, confirms the sign-in flow and the per-assistant setup steps for /mcp and /build-with-ai
+- [ ] Check the ten use-case topics against HubSpot AEO prompts and search data (on Oct 3 the portal had no AEO prompts and no AEO profile set up, so nothing could be checked)
 - [ ] Fabricio and the team compare both previews and elect one option
 
 If Option 2 is elected:
 
-- [ ] Upload the Option 2 templates to HubSpot and create the 15 drafts under /new-site-2026-b/
+- [ ] Upload the Option 2 templates to HubSpot and create the 36 drafts under /new-site-2026-b/
 - [ ] Upload Option 2's llms.txt, llms-full.txt and capabilities.json to `flieber-2026`, replacing Option 1's
 - [ ] Update `hubspot/CUTOVER.md` with the draft IDs
 - [ ] Fabricio reviews the drafts in HubSpot Preview (fonts, logos, the six-layer animation, the Product and Solutions menus, phone menu, any HubSpot banner or chat widget)
@@ -369,7 +409,6 @@ Product and engineering, outside the site (as in Option 1):
 
 On the HubSpot pages that stay live:
 
-- [ ] /managed-services: new header and footer; check its copy against the Managed Services wording above
 - [ ] Free-trial page: "Integrate any system or spreadsheet" contradicts the rule that assisted integrations come only with a paid plan
 - [ ] Book-a-demo page: restyle header, footer and copy to the new site; keep the form and CRM scripts
 - [ ] Blog: restyle header and footer; fix the footer address to New York, NY 10016

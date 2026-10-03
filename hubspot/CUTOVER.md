@@ -1,6 +1,6 @@
 # Switching www.flieber.com to the new site (HubSpot)
 
-> **Option 2 branch.** Nothing below has been done for Option 2: no files, templates or drafts exist in HubSpot for it. If Option 2 is elected, its 15 drafts go under `/new-site-2026-b/` and the lists below apply (see `docs/26-10-02 Website - Technical Briefing (Option 2).md`). The "Current state" section describes Option 1's drafts.
+> **Option 2 branch.** Nothing below has been done for Option 2: no files, templates or drafts exist in HubSpot for it. If Option 2 is elected, its 36 drafts go under `/new-site-2026-b/` and the lists below apply (see `docs/26-10-02 Website - Technical Briefing (Option 2).md`). The "Current state" section describes Option 1's drafts.
 
 Nothing is deleted or overwritten. The new site is built as **new** pages, templates and modules in HubSpot. Old pages are only **unpublished**: they stay in the account as drafts, with their full revision history, and can be republished at any time.
 
@@ -34,17 +34,17 @@ In **Content > Website Pages**, for each page below: hover over it, click **More
 
 - Flieber Home 2026 (`/`)
 - Pricing New (`/pricing`)
-- The old /agencies page (the new /agencies replaces it on the same URL)
-- Every page in `url-redirects.csv` that is still published: /pricing-plans, /integrations, /frequently-asked-questions, /product, /flieber-inventory, /flieber-studio, /omnichannel, /ecommerce, /flieber-vs-netsuite, /flieber-vs-netstock, /flieber-vs-foresight-ai, /best-inventory-software and its three child pages, /standardize-vs-pages, /feature-drops, /old-home-page, /book-a-demo-old
+- The old /agencies, /managed-services and /integrations pages (the new pages replace them on the same URLs)
+- Every page in `url-redirects.csv` that is still published: /pricing-plans, /frequently-asked-questions, /product, /flieber-inventory, /flieber-studio, /omnichannel, /ecommerce, /flieber-vs-netsuite, /flieber-vs-netstock, /flieber-vs-foresight-ai, /best-inventory-software and its three child pages, /standardize-vs-pages, /feature-drops, /old-home-page, /book-a-demo-old
 - /flieber-vs-inventory-planner stays unpublished and is never redirected
 
 Before unpublishing **/old-home-page**: check whether any ad campaign sends traffic to it (3,100 views from April to September 2026). If one does, update the ad first.
 
-Keep these published: /book-a-demo, /free-trial, /blog (and every post), /privacy-policy, /service-agreement, /glossary, /learn-hub, /videos, /ecommerce2, /managed-services (with the new header and footer).
+Keep these published: /book-a-demo, /free-trial, /blog (and every post), /privacy-policy, /service-agreement, /glossary, /learn-hub, /videos, /ecommerce2.
 
 ### 3. Publish the new pages
 
-Tell Claude, who changes each draft's URL from `/new-site-2026-b/...` to its final URL (`/`, `/features`, the five `/product/...` pages, `/multichannel`, `/agencies`, `/before-you-choose`, `/mcp`, `/agents`, `/pricing`, `/security`, `/contact`) and publishes it.
+Tell Claude, who changes each draft's URL from `/new-site-2026-b/...` to its final URL (`/`, `/features`, the five `/product/...` pages, `/multichannel`, `/agencies`, `/before-you-choose`, `/mcp`, `/build-with-ai`, `/integrations` and its six pages, the ten `/use-cases/...` pages, `/managed-services`, `/who-we-are`, `/agents`, `/pricing`, `/security`, `/contact`) and publishes it.
 
 If HubSpot says a URL is already in use, the old page still holds it: open the old page, change its URL to `/archive/<old-slug>` and keep it unpublished, then publish the new page.
 

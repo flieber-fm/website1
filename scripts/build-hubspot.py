@@ -15,6 +15,10 @@ import mimetypes
 import re
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import site_content as C  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = "https://www.flieber.com/hubfs/flieber-2026/"
@@ -35,6 +39,14 @@ PAGES["multichannel/index.html"] = ("/multichannel/", "Flieber 2026 B - Multicha
 PAGES["agencies/index.html"] = ("/agencies/", "Flieber 2026 B - Agencies")
 PAGES["before-you-choose/index.html"] = ("/before-you-choose/", "Flieber 2026 B - Before you choose")
 PAGES["mcp/index.html"] = ("/mcp/", "Flieber 2026 B - MCP and AI agents")
+PAGES["build-with-ai/index.html"] = ("/build-with-ai/", "Flieber 2026 B - Build with AI")
+PAGES["integrations/index.html"] = ("/integrations/", "Flieber 2026 B - Integrations")
+for _x in C.INTEGRATIONS:
+    PAGES[f"integrations/{_x['slug']}/index.html"] = (f"/integrations/{_x['slug']}/", f"Flieber 2026 B - Integrations - {_x['slug']}")
+for _u in C.USE_CASES:
+    PAGES[f"use-cases/{_u['slug']}/index.html"] = (f"/use-cases/{_u['slug']}/", f"Flieber 2026 B - Use case - {_u['slug']}")
+PAGES["managed-services/index.html"] = ("/managed-services/", "Flieber 2026 B - Managed Services")
+PAGES["who-we-are/index.html"] = ("/who-we-are/", "Flieber 2026 B - Who we are")
 
 
 def data_uri(path: Path) -> str:

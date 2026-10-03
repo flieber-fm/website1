@@ -12,4 +12,9 @@ COPY multichannel /srv/multichannel
 COPY agencies /srv/agencies
 COPY before-you-choose /srv/before-you-choose
 COPY mcp /srv/mcp
+COPY build-with-ai /srv/build-with-ai
+COPY use-cases /srv/use-cases
+COPY integrations /srv/integrations
+COPY managed-services /srv/managed-services
+COPY who-we-are /srv/who-we-are
 COPY assets /srv/assets
