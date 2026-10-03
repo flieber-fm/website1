@@ -1,6 +1,6 @@
 """Navigation and footer shared by every page (Option 2 brief, sections 3 and 4).
 
-Navigation: Product (menu: the five modules, then All features, Integrations, MCP and AI agents and Security & data) · Solutions (menu: the three pages by type of
+Navigation: Product (menu: All features with the five modules nested under it, then Integrations, MCP and AI agents and Security & data) · Solutions (menu: the three pages by type of
 business and goal, then Before you choose) · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
 build-content.py writes these into every page listed in PAGE_FILES.
 """
@@ -55,8 +55,11 @@ def nav_html(p: str, cur) -> str:
     def a(href, label, key):
         ac = ' aria-current="page"' if key == cur else ""
         return f'<a href="{href}"{ac}>{label}</a>'
-    product = "\n".join(f'            <a href="{p}product/{m["slug"]}/">{esc(m["name"])}</a>' for m in C.MODULES)
-    product += f'\n            <a class="nav-menu-all" href="{p}features/">All features <span aria-hidden="true">→</span></a>'
+    # "All features" first, the five modules nested under it, then a divider and the other product pages.
+    product = f'            <a class="nav-menu-all" href="{p}features/">All features <span aria-hidden="true">→</span></a>\n'
+    product += '            <div class="nav-sub">\n'
+    product += "\n".join(f'              <a href="{p}product/{m["slug"]}/">{esc(m["name"])}</a>' for m in C.MODULES)
+    product += '\n            </div>\n            <hr class="nav-menu-sep">'
     product += f'\n            <a href="{p}integrations/">Integrations</a>'
     product += f'\n            <a href="{p}{C.MCP_PAGE["slug"]}/">{esc(C.MCP_PAGE["name"])}</a>'
     product += f'\n            <a href="{p}security/">Security &amp; data</a>'

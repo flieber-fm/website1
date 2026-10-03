@@ -968,10 +968,13 @@ a.ask { text-decoration: none; color: inherit; }
 
 /* Nav menu extras: group label and the "All features" link */
 .nav-menu-label { padding: 12px 12px 4px; margin-top: 4px; border-top: 1px solid var(--line); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
-.nav-links .nav-menu a.nav-menu-all { margin-top: 4px; border-top: 1px solid var(--line); border-radius: 0 0 var(--radius-s) var(--radius-s); font-weight: 600; color: var(--black); }
+.nav-links .nav-menu a.nav-menu-all { font-weight: 600; color: var(--black); }
+.nav-sub { display: flex; flex-direction: column; margin: 2px 0 4px 20px; padding-left: 4px; border-left: 1px solid var(--line-strong); }
+.nav-menu-sep { border: 0; border-top: 1px solid var(--line); margin: 6px 4px; }
 @media (max-width: 1140px) {
   .nav.open .nav-menu-label { padding: 14px 4px 6px; border-top: 0; }
-  .nav.open .nav-links .nav-menu a.nav-menu-all { border-top: 0; border-radius: 0; }
+  .nav.open .nav-sub { margin: 0 0 0 4px; padding-left: 14px; border-left: 2px solid var(--line-strong); }
+  .nav.open .nav-menu-sep { display: none; }
 }
 
 /* Module pages: the other four modules */

@@ -860,10 +860,13 @@ a.ask { text-decoration: none; color: inherit; }
 .section-head .link-row { margin-top: 22px; }
 @media (max-width: 720px) { .sol-two { grid-template-columns: 1fr; } .sol-card { min-height: 0; } }
 .nav-menu-label { padding: 12px 12px 4px; margin-top: 4px; border-top: 1px solid var(--line); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
-.nav-links .nav-menu a.nav-menu-all { margin-top: 4px; border-top: 1px solid var(--line); border-radius: 0 0 var(--radius-s) var(--radius-s); font-weight: 600; color: var(--black); }
+.nav-links .nav-menu a.nav-menu-all { font-weight: 600; color: var(--black); }
+.nav-sub { display: flex; flex-direction: column; margin: 2px 0 4px 20px; padding-left: 4px; border-left: 1px solid var(--line-strong); }
+.nav-menu-sep { border: 0; border-top: 1px solid var(--line); margin: 6px 4px; }
 @media (max-width: 1140px) {
   .nav.open .nav-menu-label { padding: 14px 4px 6px; border-top: 0; }
-  .nav.open .nav-links .nav-menu a.nav-menu-all { border-top: 0; border-radius: 0; }
+  .nav.open .nav-sub { margin: 0 0 0 4px; padding-left: 14px; border-left: 2px solid var(--line-strong); }
+  .nav.open .nav-menu-sep { display: none; }
 }
 .mod-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .mod-card { display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 22px; transition: border-color .2s; }
@@ -1162,12 +1165,15 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
         <div class="nav-drop is-current">
           <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-product">Product <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <div class="nav-menu" id="nav-product">
-            <a href="/product/data-layer">Data layer</a>
-            <a href="/product/demand-forecasting">Demand forecasting</a>
-            <a href="/product/inventory-forecasting">Inventory forecasting</a>
-            <a href="/product/replenishment">Replenishment</a>
-            <a href="/product/workflows">Workflows</a>
             <a class="nav-menu-all" href="/features">All features <span aria-hidden="true">→</span></a>
+            <div class="nav-sub">
+              <a href="/product/data-layer">Data layer</a>
+              <a href="/product/demand-forecasting">Demand forecasting</a>
+              <a href="/product/inventory-forecasting">Inventory forecasting</a>
+              <a href="/product/replenishment">Replenishment</a>
+              <a href="/product/workflows">Workflows</a>
+            </div>
+            <hr class="nav-menu-sep">
             <a href="/integrations">Integrations</a>
             <a href="/mcp">MCP and AI agents</a>
             <a href="/security">Security &amp; data</a>

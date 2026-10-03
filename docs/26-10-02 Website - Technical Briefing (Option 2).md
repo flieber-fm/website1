@@ -153,7 +153,7 @@ New components in Option 2:
 | Founder statement | Homepage, `#who-we-are` | Fabricio's photo (pending; a monogram stands in on the preview) |
 | Four-item security strip | Homepage | Approved /security wording |
 
-Navigation (identical on every page): Product (menu: Data layer, Demand forecasting, Inventory forecasting, Replenishment, Workflows, then All features → /features, Integrations → /integrations, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Build with AI, Before you choose) · Pricing · Who we are (→ /who-we-are) · /agents (black mono pill), then Log in (text link) · Book a demo (outline button) · Start free trial (yellow button). Five items before the buttons, as in Option 1; below 1140px it collapses into a menu. /security, /mcp and the integration pages show Product as the current section; use-case pages and /managed-services mark no menu item.
+Navigation (identical on every page): Product (menu: All features → /features first, with Data layer, Demand forecasting, Inventory forecasting, Replenishment and Workflows nested under it; then a divider and Integrations → /integrations, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Build with AI, Before you choose) · Pricing · Who we are (→ /who-we-are) · /agents (black mono pill), then Log in (text link) · Book a demo (outline button) · Start free trial (yellow button). Five items before the buttons, as in Option 1; below 1140px it collapses into a menu. /security, /mcp and the integration pages show Product as the current section; use-case pages and /managed-services mark no menu item.
 
 Footer columns: Product (Features, Integrations, MCP and AI agents, Pricing, Security & data, Managed Services) · Solutions (Multichannel brands, Agencies and aggregators, Build with AI, Before you choose) · For agents (/agents, /llms.txt, /capabilities.json, MCP docs) · Company (Who we are, Help center, Blog, Contact, Privacy, Service agreement). Address: 169 Madison Avenue, New York, NY 10016.
 
@@ -338,6 +338,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 3 | Product menu reordered: All features first with the five modules nested under it, a divider, then Integrations, MCP and AI agents and Security & data |
 | Oct 3 | ChatGPT confirmed: /before-you-choose question 9 goes back to "Claude, ChatGPT or any other", as in the Content Briefing |
 | Oct 3 | Use-case claims confirmed: the origin check before transfers and backorder settings at the product and store level; the /features backorders card and question changed from "settings by channel" to match |
 | Oct 3 | Trial pricing needs no sales step: the price is calculated from real data and shown automatically after onboarding |

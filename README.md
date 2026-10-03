@@ -16,7 +16,7 @@ What Option 2 changes (revised brief, October 2):
 - **/agents:** data-layer recommendation group, "By type of business" and "Modules" sections
 - **llms.txt, llms-full.txt, capabilities.json:** Modules and Solutions sections; `positioning`, `modules`, `solutions` and the data-layer offer option in capabilities.json
 - **/pricing:** offer names, plus one line saying the data layer can be bought on its own
-- **Navigation** on every page (`scripts/site_chrome.py`): Product (menu: five modules, All features, Integrations, MCP and AI agents, Security & data) · Solutions (menu: Multichannel brands, Agencies and aggregators, Build with AI, Before you choose) · Pricing · Who we are (/who-we-are) · /agents. It collapses into the menu below 1140px, as in Option 1
+- **Navigation** on every page (`scripts/site_chrome.py`): Product (menu: All features with the five modules nested under it, then Integrations, MCP and AI agents, Security & data) · Solutions (menu: Multichannel brands, Agencies and aggregators, Build with AI, Before you choose) · Pricing · Who we are (/who-we-are) · /agents. It collapses into the menu below 1140px, as in Option 1
 - **Redirects:** `hubspot/url-redirects.csv` sends /omnichannel and /ecommerce to /multichannel, the three comparison pages to /before-you-choose and /product to /features; /managed-services and /agencies are no longer redirected. The preview mirrors these redirects in `Caddyfile`
 
 Build: `python3 scripts/build-content.py` regenerates /features, the module pages, /multichannel, /agencies, the /agents body, the three machine-readable files and the nav and footer of every page. The homepage, /pricing, /security and /contact bodies are edited by hand.
