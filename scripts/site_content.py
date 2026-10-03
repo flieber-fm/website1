@@ -541,9 +541,9 @@ TRY_H2 = "Try Flieber free on your own data"
 TRY_BODY = ("Start a 14-day free trial, no credit card required and no demo call. Flieber shows your price as soon as "
             "onboarding is done, before you pay anything.")
 
-# /build-with-ai (brief 6.4)
+# /vibe-coders (brief 6.4)
 BWA = {
-    "slug": "build-with-ai", "name": "Build with AI",
+    "slug": "vibe-coders", "name": "Vibe coders",
     "card": "Vibe coding your own reports, dashboards or agents? Connect them to data that's already right.",
     "h1": "Vibe coding your own tools? Start from data that's already right",
     "lead": ("Building reports, dashboards or agents with Claude, Cursor or ChatGPT? Connect them to Flieber's data layer "

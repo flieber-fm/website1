@@ -1,6 +1,6 @@
 # Flieber: full text for LLMs
 
-The complete text of https://www.flieber.com/features, the five module pages, https://www.flieber.com/mcp, https://www.flieber.com/build-with-ai, the ten use-case pages, https://www.flieber.com/managed-services, https://www.flieber.com/who-we-are, https://www.flieber.com/multichannel, https://www.flieber.com/agencies, https://www.flieber.com/before-you-choose and https://www.flieber.com/agents. Last updated 2026-10-02.
+The complete text of https://www.flieber.com/features, the five module pages, https://www.flieber.com/mcp, https://www.flieber.com/vibe-coders, the ten use-case pages, https://www.flieber.com/managed-services, https://www.flieber.com/who-we-are, https://www.flieber.com/multichannel, https://www.flieber.com/agencies, https://www.flieber.com/before-you-choose and https://www.flieber.com/agents. Last updated 2026-10-02.
 
 ## Collaborative AI for every inventory decision
 
@@ -289,9 +289,9 @@ Building reports, dashboards or agents with AI? Connect them to Flieber's data l
 
 **Does it work without an AI assistant?** Yes. Everything here also works in the Flieber app and in Slack.
 
-## Build with AI: Vibe coding your own tools? Start from data that's already right
+## Vibe coders: Vibe coding your own tools? Start from data that's already right
 
-https://www.flieber.com/build-with-ai
+https://www.flieber.com/vibe-coders
 
 Building reports, dashboards or agents with Claude, Cursor or ChatGPT? Connect them to Flieber's data layer through MCP or API and start from sales, inventory and supply chain data that's already unified, mapped and corrected.
 
@@ -687,7 +687,7 @@ Flieber is one product, offered two ways on the same platform:
 
 - Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; Flieber shows the price as soon as onboarding is done, before the brand pays anything.
 - Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Quoted per brand. https://www.flieber.com/managed-services
-- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: https://www.flieber.com/build-with-ai. Start with a 14-day free trial, no credit card required.
+- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: https://www.flieber.com/vibe-coders. Start with a 14-day free trial, no credit card required.
 
 ### Modules
 
@@ -718,9 +718,9 @@ By type of business; every page links to the full feature list.
 - [Agencies and aggregators](https://www.flieber.com/agencies): Every brand in one place, planned individually or consolidated.
 - [Before you choose](https://www.flieber.com/before-you-choose): the questions every buyer should ask, answered for Flieber
 
-### Build with AI
+### Vibe coders
 
-- [Build with AI](https://www.flieber.com/build-with-ai): Vibe coding your own tools? Start from data that's already right. Building reports, dashboards or agents with Claude, Cursor or ChatGPT? Connect them to Flieber's data layer through MCP or API and start from sales, inventory and supply chain data that's already unified, mapped and corrected.
+- [Vibe coders](https://www.flieber.com/vibe-coders): Vibe coding your own tools? Start from data that's already right. Building reports, dashboards or agents with Claude, Cursor or ChatGPT? Connect them to Flieber's data layer through MCP or API and start from sales, inventory and supply chain data that's already unified, mapped and corrected.
 
 ### Use cases
 
@@ -865,7 +865,7 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 - [Workflows](https://www.flieber.com/product/workflows)
 - [Multichannel brands](https://www.flieber.com/multichannel)
 - [Agencies and aggregators](https://www.flieber.com/agencies)
-- [Build with AI](https://www.flieber.com/build-with-ai)
+- [Vibe coders](https://www.flieber.com/vibe-coders)
 - [Before you choose](https://www.flieber.com/before-you-choose)
 - [Managed Services](https://www.flieber.com/managed-services)
 - [Who we are](https://www.flieber.com/who-we-are)

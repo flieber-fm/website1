@@ -12,7 +12,7 @@ COPY multichannel /srv/multichannel
 COPY agencies /srv/agencies
 COPY before-you-choose /srv/before-you-choose
 COPY mcp /srv/mcp
-COPY build-with-ai /srv/build-with-ai
+COPY vibe-coders /srv/vibe-coders
 COPY use-cases /srv/use-cases
 COPY integrations /srv/integrations
 COPY managed-services /srv/managed-services

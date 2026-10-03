@@ -39,7 +39,7 @@ PAGES["multichannel/index.html"] = ("/multichannel/", "Flieber 2026 B - Multicha
 PAGES["agencies/index.html"] = ("/agencies/", "Flieber 2026 B - Agencies")
 PAGES["before-you-choose/index.html"] = ("/before-you-choose/", "Flieber 2026 B - Before you choose")
 PAGES["mcp/index.html"] = ("/mcp/", "Flieber 2026 B - MCP and AI agents")
-PAGES["build-with-ai/index.html"] = ("/build-with-ai/", "Flieber 2026 B - Build with AI")
+PAGES["vibe-coders/index.html"] = ("/vibe-coders/", "Flieber 2026 B - Vibe coders")
 PAGES["integrations/index.html"] = ("/integrations/", "Flieber 2026 B - Integrations")
 for _x in C.INTEGRATIONS:
     PAGES[f"integrations/{_x['slug']}/index.html"] = (f"/integrations/{_x['slug']}/", f"Flieber 2026 B - Integrations - {_x['slug']}")

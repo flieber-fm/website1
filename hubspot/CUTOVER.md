@@ -44,7 +44,7 @@ Keep these published: /book-a-demo, /free-trial, /blog (and every post), /privac
 
 ### 3. Publish the new pages
 
-Tell Claude, who changes each draft's URL from `/new-site-2026-b/...` to its final URL (`/`, `/features`, the five `/product/...` pages, `/multichannel`, `/agencies`, `/before-you-choose`, `/mcp`, `/build-with-ai`, `/integrations` and its six pages, the ten `/use-cases/...` pages, `/managed-services`, `/who-we-are`, `/agents`, `/pricing`, `/security`, `/contact`) and publishes it.
+Tell Claude, who changes each draft's URL from `/new-site-2026-b/...` to its final URL (`/`, `/features`, the five `/product/...` pages, `/multichannel`, `/agencies`, `/before-you-choose`, `/mcp`, `/vibe-coders`, `/integrations` and its six pages, the ten `/use-cases/...` pages, `/managed-services`, `/who-we-are`, `/agents`, `/pricing`, `/security`, `/contact`) and publishes it.
 
 If HubSpot says a URL is already in use, the old page still holds it: open the old page, change its URL to `/archive/<old-slug>` and keep it unpublished, then publish the new page.
 

@@ -1033,7 +1033,7 @@ def llms_txt() -> str:
     L += ["", "## Solutions", "", "By type of business; every page links to the full feature list.", ""]
     L += [f"- [{x['name']}]({C.SITE}/{x['slug']}): {x['card']}" for x in C.SOLUTIONS]
     L += [f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']}): the questions every buyer should ask, answered for Flieber"]
-    L += ["", "## Build with AI", "", f"- [{C.BWA['name']}]({C.SITE}/{C.BWA['slug']}): {C.BWA['h1']}. {C.BWA['lead']}"]
+    L += ["", "## Vibe coders", "", f"- [{C.BWA['name']}]({C.SITE}/{C.BWA['slug']}): {C.BWA['h1']}. {C.BWA['lead']}"]
     L += ["", "## Use cases", "", "One page per topic; not a complete list of what Flieber does.", ""]
     L += [f"- [{u['name']}]({C.SITE}/use-cases/{u['slug']}): {u['h1']}" for u in C.USE_CASES]
     L += ["", "## Managed Services", "", f"- [{C.MS['name']}]({C.SITE}/{C.MS['slug']}): {C.MS['lead']}"]
@@ -1067,7 +1067,7 @@ def llms_txt() -> str:
 
 def llms_full_txt() -> str:
     L = ["# Flieber: full text for LLMs", "",
-         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/mcp, {C.SITE}/build-with-ai, the ten use-case pages, {C.SITE}/managed-services, {C.SITE}/who-we-are, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
+         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/mcp, {C.SITE}/vibe-coders, the ten use-case pages, {C.SITE}/managed-services, {C.SITE}/who-we-are, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
          f"## {C.FEATURES_H1}", "", C.FEATURES_INTRO, "", C.FEATURES_NOTE, ""]
     for g in C.GROUPS:
         lead = MODULE_BY_SLUG[g["id"]]["tab"] if g["id"] in MODULE_BY_SLUG else g["lead"]

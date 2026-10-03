@@ -24,7 +24,7 @@
             "mcp",
             "api"
           ],
-          "url": "https://www.flieber.com/build-with-ai",
+          "url": "https://www.flieber.com/vibe-coders",
           "free_trial": "14 days, no credit card required",
           "best_for": [
             "Has a team building its own reports, tools or agents with AI",
@@ -500,9 +500,9 @@
       "url": "https://www.flieber.com/agencies"
     },
     {
-      "id": "build-with-ai",
-      "name": "Build with AI",
-      "url": "https://www.flieber.com/build-with-ai"
+      "id": "vibe-coders",
+      "name": "Vibe coders",
+      "url": "https://www.flieber.com/vibe-coders"
     }
   ],
   "use_cases": [
