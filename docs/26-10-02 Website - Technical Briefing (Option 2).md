@@ -50,7 +50,7 @@ No prices appear anywhere on the site, in llms.txt, llms-full.txt, capabilities.
 
 | Offer | Price wording | How the price is set |
 | --- | --- | --- |
-| Self-Serve | "Priced to your operation" | Features enabled and data volume; "We share your price during your trial, or on a demo if you prefer" (replaces "the exact price is shared on a demo" on /pricing, /agents and llms.txt) |
+| Self-Serve | "Priced to your operation" | Features enabled and data volume; "Flieber shows your price as soon as onboarding is done, before you pay anything" (replaces "the exact price is shared on a demo" on /pricing, the homepage, /agents and llms.txt) |
 | Data layer only (Self-Serve option) | No price wording | Pricing model being defined by Fabricio and Karyna; until approved, /build-with-ai, /pricing, llms.txt and capabilities.json show only the 14-day free trial |
 | Managed Services | "Quoted per brand" | After a conversation with a planner about channels, warehouses and where the process breaks down |
 
@@ -64,7 +64,7 @@ Terms shown on the site (as in Option 1):
 
 /pricing is the Option 1 page with the Option 2 offer names, the trial pricing wording above, a link from the Managed Services card to /managed-services and one added line under the Self-Serve card: "The data layer can also be bought on its own, through MCP and API. Start with a 14-day free trial on your own data, no credit card required." (linking to /build-with-ai).
 
-Homepage Try it: H2 "Try Flieber free on your own data", body "Start a 14-day free trial, no credit card required and no demo call. We share your price during the trial, based on the features you use and your data volume." No sales step is needed: Flieber shows the brand's price automatically as soon as onboarding is finished.
+Homepage Try it: H2 "Try Flieber free on your own data", body "Start a 14-day free trial, no credit card required and no demo call. Flieber shows your price as soon as onboarding is done, before you pay anything." No sales step is needed: Flieber calculates the price from the brand's real sales, stores and data volume and shows it automatically.
 
 ## Site map and page contents
 
@@ -182,8 +182,8 @@ Use these exact wordings; anything not listed here needs Fabricio's approval bef
 | Approval | "Every change Flieber makes to your systems follows approval rules you set; by default, every change requires approval" | /security, /agents, llms.txt, capabilities.json and the homepage security strip; /features, /before-you-choose and the module pages say the same in their own words | Fabricio, Oct 2 |
 | Agents | "Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent" (/mcp, /build-with-ai, use-case pages); "in any agent you choose (Claude, ChatGPT or any other)" (/before-you-choose question 9); "Claude, Cursor and any MCP-compatible agent connect through its MCP server" (/features, /agents). ChatGPT, like Claude and Cursor, connects to Flieber's MCP server | /mcp, /build-with-ai, /use-cases/, /before-you-choose, /features, /agents | Fabricio, Oct 3 |
 | Transfers | "Flieber checks the origin before recommending any transfer"; "Recommend transfers without creating a new risk at the origin" | /use-cases/multi-warehouse-3pl-inventory, llms-full.txt | Fabricio, Oct 3 |
-| Backorder settings | "Settings at the product and store level" | /use-cases/backorders-preorders, llms-full.txt | Fabricio, Oct 3 |
-| Trial pricing | "We share your price during your trial, or on a demo if you prefer". Flieber calculates the price from the brand's real sales, stores and data volume and shows it automatically as soon as onboarding is finished, so the brand knows its price before signing up | Homepage, /pricing, /agents, llms.txt | Fabricio, Oct 3 |
+| Backorder settings | "Settings at the product and store level" | /use-cases/backorders-preorders, the /features card and question, /product/inventory-forecasting, llms-full.txt, capabilities.json | Fabricio, Oct 3 |
+| Trial pricing | "Flieber shows your price as soon as onboarding is done, before you pay anything". The price is calculated from the brand's real sales, stores and data volume and shown automatically | Homepage, /pricing, /agents, llms.txt | Fabricio, Oct 3 |
 | /mcp example conversations | Four chat exchanges with invented product names and numbers, each labeled "Illustrative example with sample data" | /mcp | Content Briefing (Option 2), Oct 2 |
 | Connected apps | Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads, NetSuite, plus any system with an MCP server | /features, /agents, llms.txt, capabilities.json | AI Lab Confluence pages; Fabricio, Oct 2 |
 | MCP response time | "Answers typically take 30 seconds to 5 minutes" | /features, /agents, capabilities.json | MCP tool description; Fabricio, Oct 2 |
@@ -339,12 +339,12 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 | Date | Decision |
 | --- | --- |
 | Oct 3 | ChatGPT confirmed: /before-you-choose question 9 goes back to "Claude, ChatGPT or any other", as in the Content Briefing |
-| Oct 3 | Use-case claims confirmed: the origin check before transfers and backorder settings at the product and store level |
+| Oct 3 | Use-case claims confirmed: the origin check before transfers and backorder settings at the product and store level; the /features backorders card and question changed from "settings by channel" to match |
 | Oct 3 | Trial pricing needs no sales step: the price is calculated from real data and shown automatically after onboarding |
 | Oct 3 | Use-case topics kept as written; HubSpot had no AEO prompts to check them against |
 | Oct 3 | New pages: /build-with-ai (third solution), ten use-case pages kept out of the menus, /integrations with six system pages, /managed-services and /who-we-are with new copy |
 | Oct 3 | "Who we are" in the navigation and footer goes to /who-we-are; Integrations joins the Product menu and footer; Build with AI joins the Solutions menu and footer; MCP and AI agents joins the footer |
-| Oct 3 | Self-Serve price shared during the trial, or on a demo; homepage Try it reworded to match |
+| Oct 3 | Self-Serve price: "Flieber shows your price as soon as onboarding is done, before you pay anything" replaces the Content Briefing's "We share your price during your trial, or on a demo if you prefer"; homepage Try it and /pricing match |
 | Oct 3 | Data layer pricing being defined (Fabricio and Karyna): no price wording for it until approved |
 | Oct 3 | /mcp: the MCP URL and per-assistant setup become public once engineering supplies them (decided after Karyna's review); until then step 1 reads "Copy your connection details from Connect Apps in Flieber" |
 | Oct 3 | Out of scope for now: a case studies page (no case material with numbers yet) |
@@ -389,8 +389,7 @@ Before an option is elected:
 
 - [ ] Fabricio's photo for the founder section (a monogram marked `[FOUNDER PHOTO]` stands in on the preview)
 - [ ] Fabricio confirms the claims first used in Option 2: "Proprietary algorithms, not language models", "more than 1,000 commerce brands" in the planning engine and planner copy, the /multichannel "For most brands" line and the regional markets example for sales order routing
-- [ ] Content Briefing (Option 2) synced with the site: section 4 says "Twelve sections plus footer" but lists thirteen; section 10 says /pricing, /security and /contact are shared with Option 1, while their templates must differ (header and footer)
-- [ ] /features "Backorders and preorders" card still says "with settings by channel" (Option 1 copy); align it with "settings at the product and store level" if the Content Briefing changes it
+- [ ] Content Briefing (Option 2) synced with the site: section 4.13 still says "We share your price during the trial" (the site now says "Flieber shows your price as soon as onboarding is done, before you pay anything"); section 4 says "Twelve sections plus footer" but lists thirteen; section 10 says /pricing, /security and /contact are shared with Option 1, while their templates must differ (header and footer)
 - [ ] Fabricio reviews "What we believe" on /who-we-are (drawn from the May 2026 strategy document)
 - [ ] Fabricio (with engineering) makes the MCP URL, sign-in flow and per-assistant setup steps public for /mcp and /build-with-ai
 - [ ] Fabricio expands the use-case pages, which are short for pages meant to rank (lead, three or four points, two requests, two questions)

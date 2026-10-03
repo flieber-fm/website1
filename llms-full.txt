@@ -41,7 +41,7 @@ Stockouts, overstock and lost sales by product and location, while there's still
 
 - **Inventory projections** (https://www.flieber.com/features#inventory-projections): Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and consolidated warehouse needs. Access: Read.
 - **Stockouts, overstock and lost sales** (https://www.flieber.com/features#stockouts-overstock-and-lost-sales): Projected stockout dates, products below safety stock, excess inventory and the sales lost to unavailable stock or late shipments. Access: Read.
-- **Backorders and preorders** (https://www.flieber.com/features#backorders-and-preorders): Counts accumulated backorder demand in inventory and replenishment calculations, with settings by channel, and plans for products sold before they arrive. Access: Read.
+- **Backorders and preorders** (https://www.flieber.com/features#backorders-and-preorders): Counts accumulated backorder demand in inventory and replenishment calculations, with settings at the product and store level, and plans for products sold before they arrive. Access: Read.
 
 ### Replenishment: Know what to buy, how much and when
 
@@ -118,7 +118,7 @@ Some of these need a connection or a workflow set up for your account. On a demo
 
 **Does Flieber correct sales history for stockouts?** Yes. History distorted by stockouts, spikes and promotions is adjusted before forecasting, and actual sales stay visible alongside.
 
-**Does Flieber handle backorders and preorders?** Yes, with settings by channel.
+**Does Flieber handle backorders and preorders?** Yes, with settings at the product and store level.
 
 **Does Flieber plan wholesale orders?** Yes. Wholesale channels connect through Google Sheets, file uploads or SPS Commerce EDI, and wholesale purchase orders count as allocated units.
 
@@ -685,7 +685,7 @@ Flieber is collaborative AI for multichannel commerce brands: it prepares invent
 
 Flieber is one product, offered two ways on the same platform:
 
-- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; the price is shared during the free trial, or on a demo.
+- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; Flieber shows the price as soon as onboarding is done, before the brand pays anything.
 - Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Quoted per brand. https://www.flieber.com/managed-services
 - The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: https://www.flieber.com/build-with-ai. Start with a 14-day free trial, no credit card required.
 
@@ -820,7 +820,7 @@ All integrations: https://www.flieber.com/integrations
 
 ### Pricing and terms
 
-- Flieber Self-Serve: priced to your operation, based on features enabled and data volume; the price is shared during the free trial, or on a demo.
+- Flieber Self-Serve: priced to your operation, based on features enabled and data volume; Flieber shows the price as soon as onboarding is done, before the brand pays anything.
 - Flieber Managed Services: quoted per brand, after a conversation with a planner about channels, warehouses and where the process breaks down.
 - Monthly contracts, no annual commitment.
 - 14-day free trial, no credit card required.

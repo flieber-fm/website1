@@ -1018,7 +1018,7 @@ def llms_txt() -> str:
          f"Generated from {C.SITE}/features and {C.SITE}/agents and never contradicts them. Last updated {C.LAST_UPDATED}.", "",
          "## Offers", "",
          "Flieber is one product, offered two ways on the same platform:", "",
-         "- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; the price is shared during the free trial, or on a demo.",
+         "- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; Flieber shows the price as soon as onboarding is done, before the brand pays anything.",
          "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Quoted per brand. " + C.MANAGED_SERVICES_URL,
          f"- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: {C.SITE}/{C.BWA['slug']}. Start with a 14-day free trial, no credit card required.", "",
          "## Modules", "",

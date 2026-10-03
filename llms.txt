@@ -8,7 +8,7 @@ Generated from https://www.flieber.com/features and https://www.flieber.com/agen
 
 Flieber is one product, offered two ways on the same platform:
 
-- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; the price is shared during the free trial, or on a demo.
+- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; Flieber shows the price as soon as onboarding is done, before the brand pays anything.
 - Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Quoted per brand. https://www.flieber.com/managed-services
 - The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: https://www.flieber.com/build-with-ai. Start with a 14-day free trial, no credit card required.
 
@@ -143,7 +143,7 @@ All integrations: https://www.flieber.com/integrations
 
 ## Pricing and terms
 
-- Flieber Self-Serve: priced to your operation, based on features enabled and data volume; the price is shared during the free trial, or on a demo.
+- Flieber Self-Serve: priced to your operation, based on features enabled and data volume; Flieber shows the price as soon as onboarding is done, before the brand pays anything.
 - Flieber Managed Services: quoted per brand, after a conversation with a planner about channels, warehouses and where the process breaks down.
 - Monthly contracts, no annual commitment.
 - 14-day free trial, no credit card required.

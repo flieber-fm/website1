@@ -75,7 +75,7 @@ GROUPS = [
         "features": [
             ('Inventory projections', 'Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and consolidated warehouse needs.', 'read', 'general'),
             ('Stockouts, overstock and lost sales', 'Projected stockout dates, products below safety stock, excess inventory and the sales lost to unavailable stock or late shipments.', 'read', 'general'),
-            ('Backorders and preorders', 'Counts accumulated backorder demand in inventory and replenishment calculations, with settings by channel, and plans for products sold before they arrive.', 'read', 'general'),
+            ('Backorders and preorders', 'Counts accumulated backorder demand in inventory and replenishment calculations, with settings at the product and store level, and plans for products sold before they arrive.', 'read', 'general'),
         ],
     },
     {
@@ -155,7 +155,7 @@ FAQ = [
     ("Can Flieber send purchase orders to my suppliers?", "Yes. Flieber sends each PO straight into the supplier's system or as an email, CSV file or Google Sheet in that supplier's format."),
     ("Does Flieber account for MOQs, case packs and containers?", "Yes. Quantities are rounded to case packs, cartons and pallets, and orders can be fitted to container capacity."),
     ("Does Flieber correct sales history for stockouts?", "Yes. History distorted by stockouts, spikes and promotions is adjusted before forecasting, and actual sales stay visible alongside."),
-    ("Does Flieber handle backorders and preorders?", "Yes, with settings by channel."),
+    ("Does Flieber handle backorders and preorders?", "Yes, with settings at the product and store level."),
     ("Does Flieber plan wholesale orders?", "Yes. Wholesale channels connect through Google Sheets, file uploads or SPS Commerce EDI, and wholesale purchase orders count as allocated units."),
     ("Can I manage several brands or organizations?", "Yes, from one place, with unlimited users on every plan."),
     ("Can my own AI agent use Flieber?", "Yes. Claude, Cursor and any MCP-compatible agent connect through Flieber's MCP server; your systems can also use the public API."),
@@ -247,7 +247,7 @@ ASSISTED = [
 ]
 
 PRICING_TERMS = [
-    "**Flieber Self-Serve:** priced to your operation, based on features enabled and data volume; the price is shared during the free trial, or on a demo.",
+    "**Flieber Self-Serve:** priced to your operation, based on features enabled and data volume; Flieber shows the price as soon as onboarding is done, before the brand pays anything.",
     "**Flieber Managed Services:** quoted per brand, after a conversation with a planner about channels, warehouses and where the process breaks down.",
     "Monthly contracts, no annual commitment.",
     "14-day free trial, no credit card required.",
@@ -536,10 +536,10 @@ MCP_PAGE = {
 }
 
 # ---------------------------------------------------------------- Oct 3 brief additions
-PRICE_SHARED = "We share your price during your trial, or on a demo if you prefer."
+PRICE_SHARED = "Flieber shows your price as soon as onboarding is done, before you pay anything."
 TRY_H2 = "Try Flieber free on your own data"
-TRY_BODY = ("Start a 14-day free trial, no credit card required and no demo call. We share your price during the trial, "
-            "based on the features you use and your data volume.")
+TRY_BODY = ("Start a 14-day free trial, no credit card required and no demo call. Flieber shows your price as soon as "
+            "onboarding is done, before you pay anything.")
 
 # /build-with-ai (brief 6.4)
 BWA = {
