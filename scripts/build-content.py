@@ -1033,7 +1033,7 @@ def llms_txt() -> str:
     L += ["", "## Solutions", "", "By type of business; every page links to the full feature list.", ""]
     L += [f"- [{x['name']}]({C.SITE}/{x['slug']}): {x['card']}" for x in C.SOLUTIONS]
     L += [f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']}): the questions every buyer should ask, answered for Flieber"]
-    L += ["", "## Build with AI", "", f"- [{C.BWA['name']}]({C.SITE}/{C.BWA['slug']}): {C.BWA['lead']}"]
+    L += ["", "## Build with AI", "", f"- [{C.BWA['name']}]({C.SITE}/{C.BWA['slug']}): {C.BWA['h1']}. {C.BWA['lead']}"]
     L += ["", "## Use cases", "", "One page per topic; not a complete list of what Flieber does.", ""]
     L += [f"- [{u['name']}]({C.SITE}/use-cases/{u['slug']}): {u['h1']}" for u in C.USE_CASES]
     L += ["", "## Managed Services", "", f"- [{C.MS['name']}]({C.SITE}/{C.MS['slug']}): {C.MS['lead']}"]

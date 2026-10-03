@@ -43,7 +43,7 @@ By type of business; every page links to the full feature list.
 
 ## Build with AI
 
-- [Build with AI](https://www.flieber.com/build-with-ai): Building reports, dashboards or agents with AI? Connect them to Flieber's data layer through MCP or API and start from sales, inventory and supply chain data that's already unified, mapped and corrected.
+- [Build with AI](https://www.flieber.com/build-with-ai): Vibe coding your own tools? Start from data that's already right. Building reports, dashboards or agents with Claude, Cursor or ChatGPT? Connect them to Flieber's data layer through MCP or API and start from sales, inventory and supply chain data that's already unified, mapped and corrected.
 
 ## Use cases
 

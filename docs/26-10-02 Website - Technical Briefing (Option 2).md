@@ -338,6 +338,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 3 | Build with AI speaks to vibe coders: H1 "Vibe coding your own tools? Start from data that's already right", the lead names Claude, Cursor and ChatGPT, the homepage card and "Why not build it all yourself?" use the term. The menu label stays "Build with AI" |
 | Oct 3 | Product menu reordered: All features first with the five modules nested under it, a divider, then Integrations, MCP and AI agents and Security & data |
 | Oct 3 | ChatGPT confirmed: /before-you-choose question 9 goes back to "Claude, ChatGPT or any other", as in the Content Briefing |
 | Oct 3 | Use-case claims confirmed: the origin check before transfers and backorder settings at the product and store level; the /features backorders card and question changed from "settings by channel" to match |

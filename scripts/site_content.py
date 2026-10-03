@@ -544,10 +544,11 @@ TRY_BODY = ("Start a 14-day free trial, no credit card required and no demo call
 # /build-with-ai (brief 6.4)
 BWA = {
     "slug": "build-with-ai", "name": "Build with AI",
-    "card": "Connect your own reports, dashboards and agents to data that's already right.",
-    "h1": "Build your own tools on data that's already right",
-    "lead": ("Building reports, dashboards or agents with AI? Connect them to Flieber's data layer through MCP or API and "
-             "start from sales, inventory and supply chain data that's already unified, mapped and corrected."),
+    "card": "Vibe coding your own reports, dashboards or agents? Connect them to data that's already right.",
+    "h1": "Vibe coding your own tools? Start from data that's already right",
+    "lead": ("Building reports, dashboards or agents with Claude, Cursor or ChatGPT? Connect them to Flieber's data layer "
+             "through MCP or API and start from sales, inventory and supply chain data that's already unified, mapped and "
+             "corrected."),
     "get_h2": "What you get",
     "get": [
         ("Every source connected", "Marketplaces, DTC, wholesale, 3PLs and ERPs through native and assisted integrations."),
@@ -568,9 +569,10 @@ BWA = {
     "pricing_h2": "Pricing",
     "pricing": "Start with a 14-day free trial on your own data, no credit card required",
     "why_h2": "Why not build it all yourself?",
-    "why": ("You can, and most teams start that way. But the work never ends: every new channel, warehouse or supplier "
-            "changes the data, and every change breaks something downstream. Flieber is a team dedicated to keeping that "
-            "layer right, so yours can spend its time on the tools only you can build."),
+    "why": ("You can, and most teams start that way. Vibe coding the dashboard is the easy part. Keeping the data under it "
+            "right never ends: every new channel, warehouse or supplier changes the data, and every change breaks "
+            "something downstream. Flieber is a team dedicated to keeping that layer right, so yours can spend its time "
+            "on the tools only you can build."),
     "close_h2": "Start building on Flieber",
     "close_body": "Start a 14-day free trial on your own data, or book a demo and we'll connect it with you.",
 }
