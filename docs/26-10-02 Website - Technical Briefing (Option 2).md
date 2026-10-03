@@ -64,7 +64,7 @@ Terms shown on the site (as in Option 1):
 
 /pricing is the Option 1 page with the Option 2 offer names, the trial pricing wording above, a link from the Managed Services card to /managed-services and one added line under the Self-Serve card: "The data layer can also be bought on its own, through MCP and API. Start with a 14-day free trial on your own data, no credit card required." (linking to /build-with-ai).
 
-Homepage Try it: H2 "Try Flieber free on your own data", body "Start a 14-day free trial, no credit card required and no demo call. We share your price during the trial, based on the features you use and your data volume." This requires sales to send trial users their price without a demo; confirm with sales before launch.
+Homepage Try it: H2 "Try Flieber free on your own data", body "Start a 14-day free trial, no credit card required and no demo call. We share your price during the trial, based on the features you use and your data volume." No sales step is needed: Flieber shows the brand's price automatically as soon as onboarding is finished.
 
 ## Site map and page contents
 
@@ -180,7 +180,10 @@ Use these exact wordings; anything not listed here needs Fabricio's approval bef
 | Feature list | Every feature on /features, as written in the Option 1 Content Briefing section 4, plus "Reports and dashboards" and "Sales order routing" | /features, module pages, /agents, llms-full.txt, capabilities.json | Feature Overview (Sep 7, 2026), AI Lab Confluence pages (Aug 24, 2026), Fabricio's corrections of Oct 2 |
 | Pushes | Approved decisions pushed to ERPs (NetSuite, Cin7, Brightpearl), marketplaces (Amazon inbound shipments), 3PLs and suppliers (into the supplier's system or as an email, CSV file or Google Sheet) | /features, /product/workflows, /before-you-choose, /agents, llms.txt, capabilities.json | Fabricio, Oct 2 |
 | Approval | "Every change Flieber makes to your systems follows approval rules you set; by default, every change requires approval" | /security, /agents, llms.txt, capabilities.json and the homepage security strip; /features, /before-you-choose and the module pages say the same in their own words | Fabricio, Oct 2 |
-| Agents | /mcp: "Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent". Elsewhere: "any MCP-compatible agent, such as Claude" (/before-you-choose question 9) and "Claude, Cursor and any MCP-compatible agent connect through its MCP server" | /mcp, /before-you-choose, /features, /agents | Content Briefing (Option 2), Oct 2 |
+| Agents | "Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent" (/mcp, /build-with-ai, use-case pages); "in any agent you choose (Claude, ChatGPT or any other)" (/before-you-choose question 9); "Claude, Cursor and any MCP-compatible agent connect through its MCP server" (/features, /agents). ChatGPT, like Claude and Cursor, connects to Flieber's MCP server | /mcp, /build-with-ai, /use-cases/, /before-you-choose, /features, /agents | Fabricio, Oct 3 |
+| Transfers | "Flieber checks the origin before recommending any transfer"; "Recommend transfers without creating a new risk at the origin" | /use-cases/multi-warehouse-3pl-inventory, llms-full.txt | Fabricio, Oct 3 |
+| Backorder settings | "Settings at the product and store level" | /use-cases/backorders-preorders, llms-full.txt | Fabricio, Oct 3 |
+| Trial pricing | "We share your price during your trial, or on a demo if you prefer". Flieber calculates the price from the brand's real sales, stores and data volume and shows it automatically as soon as onboarding is finished, so the brand knows its price before signing up | Homepage, /pricing, /agents, llms.txt | Fabricio, Oct 3 |
 | /mcp example conversations | Four chat exchanges with invented product names and numbers, each labeled "Illustrative example with sample data" | /mcp | Content Briefing (Option 2), Oct 2 |
 | Connected apps | Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads, NetSuite, plus any system with an MCP server | /features, /agents, llms.txt, capabilities.json | AI Lab Confluence pages; Fabricio, Oct 2 |
 | MCP response time | "Answers typically take 30 seconds to 5 minutes" | /features, /agents, capabilities.json | MCP tool description; Fabricio, Oct 2 |
@@ -335,6 +338,10 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 3 | ChatGPT confirmed: /before-you-choose question 9 goes back to "Claude, ChatGPT or any other", as in the Content Briefing |
+| Oct 3 | Use-case claims confirmed: the origin check before transfers and backorder settings at the product and store level |
+| Oct 3 | Trial pricing needs no sales step: the price is calculated from real data and shown automatically after onboarding |
+| Oct 3 | Use-case topics kept as written; HubSpot had no AEO prompts to check them against |
 | Oct 3 | New pages: /build-with-ai (third solution), ten use-case pages kept out of the menus, /integrations with six system pages, /managed-services and /who-we-are with new copy |
 | Oct 3 | "Who we are" in the navigation and footer goes to /who-we-are; Integrations joins the Product menu and footer; Build with AI joins the Solutions menu and footer; MCP and AI agents joins the footer |
 | Oct 3 | Self-Serve price shared during the trial, or on a demo; homepage Try it reworded to match |
@@ -343,7 +350,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 | Oct 3 | Out of scope for now: a case studies page (no case material with numbers yet) |
 | Oct 2 | New /mcp page (MCP and AI agents) in the Product menu, between All features and Security & data; /agents links to it from the MCP server line |
 | Oct 2 | Options converge on a final version: Option 2 sharing the homepage H1 and the offer labels with Option 1 is accepted |
-| Oct 2 | /before-you-choose question 9: "any MCP-compatible agent, such as Claude"; no other agent is named |
+| Oct 2 | /before-you-choose question 9: "any MCP-compatible agent, such as Claude" (reversed Oct 3) |
 | Oct 2 | /before-you-choose question 17 answered for Flieber: it consolidates 3PL inventory data, connects to an existing ERP, WMS or MRP and does not replace them |
 | Oct 2 | Offer labels back to Option 1's: "Let our planners help you run it" and "Run it yourself" |
 | Oct 2 | Security moves from the top navigation into the Product menu as "Security & data"; five items before the buttons; collapse at 1140px |
@@ -382,13 +389,11 @@ Before an option is elected:
 
 - [ ] Fabricio's photo for the founder section (a monogram marked `[FOUNDER PHOTO]` stands in on the preview)
 - [ ] Fabricio confirms the claims first used in Option 2: "Proprietary algorithms, not language models", "more than 1,000 commerce brands" in the planning engine and planner copy, the /multichannel "For most brands" line and the regional markets example for sales order routing
-- [ ] Fabricio confirms ChatGPT connects to Flieber today: /mcp names it in the H1, lead, agents row, steps and questions, while /before-you-choose question 9 names only Claude
-- [ ] Content Briefing (Option 2) synced with the site: question 9 on /before-you-choose still names ChatGPT in the doc; section 4 says "Twelve sections plus footer" but lists thirteen; section 10 says /pricing, /security and /contact are shared with Option 1, while their templates must differ (header and footer)
-- [ ] Fabricio confirms two use-case claims not in any approved feature description: "Flieber checks the origin before recommending any transfer" (/use-cases/multi-warehouse-3pl-inventory) and backorder "settings at the product and store level" (/use-cases/backorders-preorders; /features says "settings by channel")
+- [ ] Content Briefing (Option 2) synced with the site: section 4 says "Twelve sections plus footer" but lists thirteen; section 10 says /pricing, /security and /contact are shared with Option 1, while their templates must differ (header and footer)
+- [ ] /features "Backorders and preorders" card still says "with settings by channel" (Option 1 copy); align it with "settings at the product and store level" if the Content Briefing changes it
 - [ ] Fabricio reviews "What we believe" on /who-we-are (drawn from the May 2026 strategy document)
-- [ ] Sales confirms it can send trial users their price without a demo
-- [ ] Engineering supplies the public MCP URL, confirms the sign-in flow and the per-assistant setup steps for /mcp and /build-with-ai
-- [ ] Check the ten use-case topics against HubSpot AEO prompts and search data (on Oct 3 the portal had no AEO prompts and no AEO profile set up, so nothing could be checked)
+- [ ] Fabricio (with engineering) makes the MCP URL, sign-in flow and per-assistant setup steps public for /mcp and /build-with-ai
+- [ ] Fabricio expands the use-case pages, which are short for pages meant to rank (lead, three or four points, two requests, two questions)
 - [ ] Fabricio and the team compare both previews and elect one option
 
 If Option 2 is elected:
