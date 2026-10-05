@@ -1292,3 +1292,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .feat-examples a.feat-q { color: inherit; text-decoration: none; }
 .feat-examples a.feat-q:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 860px) { .work-grid { grid-template-columns: 1fr; } .work-filter-label { min-width: 0; width: 100%; } }
+.work-kicker { margin-bottom: 16px; }
+.work-own { margin-top: 56px; padding: clamp(24px, 3vw, 36px); border: 1px dashed var(--line-strong); border-radius: var(--radius-l); max-width: 880px; }
+.work-own p { color: var(--text-2); margin-top: 8px; max-width: 680px; }
+.work-own .link-row { margin-top: 16px; }

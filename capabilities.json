@@ -505,6 +505,7 @@
       "url": "https://www.flieber.com/vibe-coders"
     }
   ],
+  "prompts_note": "Examples of jobs operators give Flieber, not a complete list of what Flieber can do.",
   "prompts": [
     {
       "id": "p1",

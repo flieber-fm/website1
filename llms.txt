@@ -35,7 +35,7 @@ Full list: https://www.flieber.com/features (every feature has its own anchor) a
 
 ## Put Flieber to work
 
-- [Put Flieber to work](https://www.flieber.com/put-flieber-to-work): Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, ChatGPT or any MCP-compatible agent. These are the jobs operators give Flieber today, what Flieber does with each one and what comes back.
+- [Put Flieber to work](https://www.flieber.com/put-flieber-to-work): Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, ChatGPT or any MCP-compatible agent. Below are ideas to start from: examples of jobs operators give Flieber, what Flieber does with each one and what comes back. They're not a complete list. Not on the list? Describe the job in your own words. If it runs on your sales, inventory and supply chain data or your connected apps, Flieber can probably take it on.
 
 ## Solutions
 

@@ -10,11 +10,16 @@ PAGE = {
     "slug": "put-flieber-to-work", "name": "Put Flieber to work",
     "h1": "Put Flieber to work on your operation",
     "lead": ("Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in "
-             "Slack or in Claude, ChatGPT or any MCP-compatible agent. These are the jobs operators give Flieber today, "
-             "what Flieber does with each one and what comes back."),
+             "Slack or in Claude, ChatGPT or any MCP-compatible agent. Below are ideas to start from: examples of jobs "
+             "operators give Flieber, what Flieber does with each one and what comes back. They're not a complete list."),
+    "ideas_label": "Ideas to start from",
+    "own_h": "Not on the list?",
+    "own": ("Describe the job in your own words. If it runs on your sales, inventory and supply chain data or your "
+            "connected apps, Flieber can probably take it on."),
+    "own_link": "Book a demo and we'll show you how",
     "note": ("Some of these need a connection or a workflow set up for your account. On a demo we'll show which ones run "
              "on your setup today."),
-    "close_h2": "Try these on your own data",
+    "close_h2": "Try it on your own data",
     "close_body": "Start a 14-day free trial, connect your channels and ask your first question in minutes.",
     "more": "More ways to put Flieber to work",
     "custom_label": "Requires custom configuration",

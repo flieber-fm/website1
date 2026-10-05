@@ -759,6 +759,7 @@ def work_main() -> str:
     out += f'''
     <section class="section work" id="jobs" aria-label="{esc(P['name'])}">
       <div class="wrap">
+        <p class="kicker work-kicker">{esc(P["ideas_label"])}</p>
         <div class="work-filters" hidden>
           <div class="work-filter-row" role="group" aria-label="Filter by goal"><span class="work-filter-label">Goal</span><button type="button" class="is-on" data-filter-group="">All</button>{gbtn}</div>
           <div class="work-filter-row" role="group" aria-label="Filter by module"><span class="work-filter-label">Module</span><button type="button" class="is-on" data-filter-module="">All</button>{mbtn}</div>
@@ -774,7 +775,12 @@ def work_main() -> str:
           </div>
         </div>
 '''
-    out += '''        <p class="work-empty" hidden>No jobs match both filters.</p>
+    out += f'''        <p class="work-empty" hidden>No ideas match both filters.</p>
+        <div class="work-own">
+          <h2 class="h3">{esc(P["own_h"])}</h2>
+          <p>{esc(P["own"])}</p>
+          <p class="link-row"><a class="link-arrow" href="{C.DEMO}">{esc(P["own_link"])} {ARROW}</a></p>
+        </div>
       </div>
     </section>
 '''
@@ -891,7 +897,7 @@ def pages_text() -> list:
     for q, a in M["faq"]:
         L += [f"**{q}** {a}", ""]
     WP = W.PAGE
-    L += [f"## {WP['name']}: {WP['h1']}", "", f"{C.SITE}/{WP['slug']}", "", WP["lead"], "", WP["note"], ""]
+    L += [f"## {WP['name']}: {WP['h1']}", "", f"{C.SITE}/{WP['slug']}", "", WP["lead"], "", WP["note"], "", f"{WP['own_h']} {WP['own']}", ""]
     for g, gname in W.GROUPS:
         L += [f"### {gname}", ""]
         for e in [x for x in W.ENTRIES if x["group"] == g]:
@@ -1055,7 +1061,7 @@ def agents_main() -> str:
 
         <section id="capabilities" aria-labelledby="h-capabilities">
           <h2 id="h-capabilities">Capabilities</h2>
-          <p>Full descriptions at <a href="../features/">/features</a>. Jobs operators give Flieber, with what it does for each one: <a href="../{W.PAGE["slug"]}/">/{W.PAGE["slug"]}</a>.</p>
+          <p>Full descriptions at <a href="../features/">/features</a>. Example jobs operators give Flieber (ideas, not a complete list), with what it does for each one: <a href="../{W.PAGE["slug"]}/">/{W.PAGE["slug"]}</a>.</p>
           <div class="table-wrap" style="margin-top:16px">
             <table class="doc-table">
               <thead><tr><th scope="col">Capability</th><th scope="col">Input</th><th scope="col">Output</th><th scope="col">Access</th></tr></thead>
@@ -1143,7 +1149,7 @@ def llms_txt() -> str:
     for g in C.GROUPS:
         names = ", ".join(t for t, *_ in g["features"])
         L.append(f"- [{g['label']}]({C.SITE}/features#{g['id']}): {g['h2']}. {names}.")
-    L += ["", f"## {W.PAGE['name']}", "", f"- [{W.PAGE['name']}]({C.SITE}/{W.PAGE['slug']}): {W.PAGE['lead']}"]
+    L += ["", f"## {W.PAGE['name']}", "", f"- [{W.PAGE['name']}]({C.SITE}/{W.PAGE['slug']}): {W.PAGE['lead']} {W.PAGE['own_h']} {W.PAGE['own']}"]
     L += ["", "## Solutions", "", "By type of business; every page links to the full feature list.", ""]
     L += [f"- [{x['name']}]({C.SITE}/{x['slug']}): {x['card']}" for x in C.SOLUTIONS]
     L += [f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']}): the questions every buyer should ask, answered for Flieber"]
@@ -1236,6 +1242,7 @@ def capabilities() -> dict:
                     for m in C.MODULES],
         "solutions": [{"id": x["slug"], "name": x["name"], "url": f"{C.SITE}/{x['slug']}"} for x in C.SOLUTIONS]
                      + [{"id": C.BWA["slug"], "name": C.BWA["name"], "url": f"{C.SITE}/{C.BWA['slug']}"}],
+        "prompts_note": "Examples of jobs operators give Flieber, not a complete list of what Flieber can do.",
         "prompts": [{"id": e["id"], "title": e["title"], "prompt": e["prompt"], "url": f"{C.SITE}/{W.PAGE['slug']}#{e['id']}",
                      "modules": e["modules"], "schedule": e["schedule"], "approval": e["approval"], "connections": e["connections"],
                      "custom_configuration": e["custom"]}

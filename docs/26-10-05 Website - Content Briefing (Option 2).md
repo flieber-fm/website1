@@ -988,10 +988,11 @@ AI Lab usage can later tell us which prompts customers actually run, to decide w
 - **Navigation:** Product menu, first item after the divider: Put Flieber to work · Integrations · MCP and AI agents · Security & data. Footer, Product column, after Features.
 - **Label:** Product · Put Flieber to work
 - **H1:** Put Flieber to work on your operation
-- **Lead:** Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, ChatGPT or any MCP-compatible agent. These are the jobs operators give Flieber today, what Flieber does with each one and what comes back.
+- **Lead:** Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, ChatGPT or any MCP-compatible agent. Below are ideas to start from: examples of jobs operators give Flieber, what Flieber does with each one and what comes back. They're not a complete list.
+- **Ideas, not a catalog (Fabricio, Oct 5):** the jobs are examples, never presented as everything Flieber can do. A label "Ideas to start from" sits above the filters, and after the last group a box reads: H3 "Not on the list?" · "Describe the job in your own words. If it runs on your sales, inventory and supply chain data or your connected apps, Flieber can probably take it on." · *Link:* Book a demo and we'll show you how. llms.txt, /agents and capabilities.json (`prompts_note`) say the list is examples, not a complete list.
 - **Filters:** by goal (the nine groups below) and by module (Data layer, Demand forecasting, Inventory forecasting, Replenishment, Workflows). Without JavaScript, all entries show, grouped by goal.
 - **Note under the filters:** "Some prompts need a connection or a workflow set up for your account. On a demo we'll show which ones run on your setup today." (the approved /features note)
-- **Closing:** H2 "Try these on your own data" · Body "Start a 14-day free trial, connect your channels and ask your first question in minutes." · *Buttons:* Start free trial · Book a demo
+- **Closing:** H2 "Try it on your own data" · Body "Start a 14-day free trial, connect your channels and ask your first question in minutes." · *Buttons:* Start free trial · Book a demo
 - **Structured data:** WebPage plus ItemList (one item per prompt). No prices.
 
 ### 15.3 Entry format
