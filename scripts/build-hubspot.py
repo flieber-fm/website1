@@ -47,6 +47,7 @@ for _u in C.USE_CASES:
     PAGES[f"use-cases/{_u['slug']}/index.html"] = (f"/use-cases/{_u['slug']}/", f"Flieber 2026 B - Use case - {_u['slug']}")
 PAGES["managed-services/index.html"] = ("/managed-services/", "Flieber 2026 B - Managed Services")
 PAGES["who-we-are/index.html"] = ("/who-we-are/", "Flieber 2026 B - Who we are")
+PAGES["put-flieber-to-work/index.html"] = ("/put-flieber-to-work/", "Flieber 2026 B - Put Flieber to work")
 
 
 def data_uri(path: Path) -> str:

@@ -1,6 +1,6 @@
 """Navigation and footer shared by every page (Option 2 brief, sections 3 and 4).
 
-Navigation: Product (menu: All features with the five modules nested under it, then Integrations, MCP and AI agents and Security & data) · Solutions (menu: the three pages by type of
+Navigation: Product (menu: All features with the five modules nested under it, then Put Flieber to work, Integrations, MCP and AI agents and Security & data) · Solutions (menu: the three pages by type of
 business and goal, then a divider and Before you choose) · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
 build-content.py writes these into every page listed in PAGE_FILES.
 """
@@ -8,6 +8,7 @@ import html
 import re
 
 import site_content as C
+import work_content as W
 
 
 def esc(text: str) -> str:
@@ -36,6 +37,7 @@ for _u in C.USE_CASES:  # not in any menu (brief 7)
     PAGE_FILES[f"use-cases/{_u['slug']}/index.html"] = ("../../", None)
 PAGE_FILES[f"{C.MS['slug']}/index.html"] = ("../", None)
 PAGE_FILES[f"{C.WHO['slug']}/index.html"] = ("../", "who")
+PAGE_FILES[f"{W.PAGE['slug']}/index.html"] = ("../", "product")
 
 CHEVRON = ('<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">'
            '<path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg>')
@@ -60,6 +62,7 @@ def nav_html(p: str, cur) -> str:
     product += '            <div class="nav-sub">\n'
     product += "\n".join(f'              <a href="{p}product/{m["slug"]}/">{esc(m["name"])}</a>' for m in C.MODULES)
     product += '\n            </div>\n            <hr class="nav-menu-sep">'
+    product += f'\n            <a href="{p}{W.PAGE["slug"]}/">{esc(W.PAGE["name"])}</a>'
     product += f'\n            <a href="{p}integrations/">Integrations</a>'
     product += f'\n            <a href="{p}{C.MCP_PAGE["slug"]}/">{esc(C.MCP_PAGE["name"])}</a>'
     product += f'\n            <a href="{p}security/">Security &amp; data</a>'
@@ -109,6 +112,7 @@ def footer_html(p: str, mark: bool) -> str:
           <h2 class="footer-h">Product</h2>
           <ul>
             <li><a href="{p}features/">Features</a></li>
+            <li><a href="{p}{W.PAGE["slug"]}/">{esc(W.PAGE["name"])}</a></li>
             <li><a href="{p}integrations/">Integrations</a></li>
             <li><a href="{p}{C.MCP_PAGE["slug"]}/">{esc(C.MCP_PAGE["name"])}</a></li>
             <li><a href="{p}pricing/">Pricing</a></li>

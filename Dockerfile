@@ -17,4 +17,5 @@ COPY use-cases /srv/use-cases
 COPY integrations /srv/integrations
 COPY managed-services /srv/managed-services
 COPY who-we-are /srv/who-we-are
+COPY put-flieber-to-work /srv/put-flieber-to-work
 COPY assets /srv/assets

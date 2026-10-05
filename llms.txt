@@ -33,6 +33,10 @@ Full list: https://www.flieber.com/features (every feature has its own anchor) a
 - [Workflows](https://www.flieber.com/features#workflows): From approved decision to done. Purchase orders to suppliers, Purchase orders to ERPs, Inbound shipments in Amazon and 3PLs, Inbound shipment tracking, Alerts and scheduled reports, Custom workflows and agents, Actions in other systems.
 - [Access](https://www.flieber.com/features#access): Use it your way. Flieber app, Ask in plain language, Slack, Google Sheets add-on, MCP server, MCP client and connected apps, Public API.
 
+## Put Flieber to work
+
+- [Put Flieber to work](https://www.flieber.com/put-flieber-to-work): Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, ChatGPT or any MCP-compatible agent. These are the jobs operators give Flieber today, what Flieber does with each one and what comes back.
+
 ## Solutions
 
 By type of business; every page links to the full feature list.
@@ -181,6 +185,7 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 - [Features](https://www.flieber.com/features)
 - [MCP and AI agents](https://www.flieber.com/mcp)
 - [Integrations](https://www.flieber.com/integrations)
+- [Put Flieber to work](https://www.flieber.com/put-flieber-to-work)
 - [Data layer](https://www.flieber.com/product/data-layer)
 - [Demand forecasting](https://www.flieber.com/product/demand-forecasting)
 - [Inventory forecasting](https://www.flieber.com/product/inventory-forecasting)

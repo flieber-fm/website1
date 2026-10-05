@@ -1,6 +1,6 @@
 # Flieber: full text for LLMs
 
-The complete text of https://www.flieber.com/features, the five module pages, https://www.flieber.com/mcp, https://www.flieber.com/vibe-coders, the ten use-case pages, https://www.flieber.com/managed-services, https://www.flieber.com/who-we-are, https://www.flieber.com/multichannel, https://www.flieber.com/agencies, https://www.flieber.com/before-you-choose and https://www.flieber.com/agents. Last updated 2026-10-02.
+The complete text of https://www.flieber.com/features, the five module pages, https://www.flieber.com/mcp, https://www.flieber.com/put-flieber-to-work, https://www.flieber.com/vibe-coders, the ten use-case pages, https://www.flieber.com/managed-services, https://www.flieber.com/who-we-are, https://www.flieber.com/multichannel, https://www.flieber.com/agencies, https://www.flieber.com/before-you-choose and https://www.flieber.com/agents. Last updated 2026-10-02.
 
 ## Collaborative AI for every inventory decision
 
@@ -87,18 +87,18 @@ Flieber prepares the decision; you decide how much it does without asking. By de
 
 A few of the requests customers run every day. Each one uses the features above; the ones that reach outside Flieber need a connection to the system involved.
 
-1. "Every morning, show me the biggest inventory risks by stockout risk, sales velocity, product tier and revenue impact, and tell me what to do about each."
-2. "Every Monday, recommend what to order, grouped by supplier, with MOQs, lead times and target coverage applied."
-3. "Flag products where the forecast looks wrong: new products with little history, products hit by stockouts and sudden accelerations."
+1. "Every morning, review my inventory position and tell me the biggest risks I need to act on. Prioritize by stockout risk, sales velocity, product tier, inbound shipments and revenue impact, and explain why each one matters."
+2. "Every Monday, review the products that may need replenishment and recommend what to order. Consider current stock, forecast demand, on-order inventory, supplier lead time, MOQ and target coverage. Group the recommendations by supplier and explain the reasoning."
+3. "Review my forecast every week and flag products where it looks wrong: new products with little history, products affected by stockouts, sudden accelerations, discontinued products still showing demand and products where actual sales are consistently above or below forecast."
 4. "Recommend transfers when one location is about to stock out and another has excess, without creating a new risk at the origin."
-5. "Before every promotion, check whether the promoted products have enough stock for the expected lift."
+5. "Before every promotion, check whether the promoted products have enough stock for the expected lift. If not, recommend whether to transfer inventory, reduce ad spend, delay the campaign or place an urgent PO."
 6. "Compare new launches with similar past launches at 7, 14 and 30 days and tell me whether to reorder earlier."
-7. "Review overstocked products and recommend for each one: keep, discount, bundle, transfer, pause replenishment or liquidate."
-8. "Watch supplier emails about open POs and update the PO in Flieber when a supplier confirms a new date or quantity."
+7. "Review my overstocked products and recommend what to do with each one: keep, discount, bundle, transfer, pause replenishment or liquidate. Consider sales velocity, margin, product tier, seasonality and inventory value."
+8. "Watch supplier emails about open POs. When a supplier confirms a new delivery date, quantity or split shipment, compare it with the PO in Flieber and ask me before updating it."
 9. "Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days."
-10. "When a large wholesale order comes in, check whether it puts DTC or Amazon stock at risk and recommend whether to accept, split or delay it."
+10. "When a large wholesale order comes in, check whether fulfilling it puts DTC or Amazon stock at risk and recommend whether to accept, split, delay or replenish."
 11. "Track which suppliers are repeatedly late, short-shipping or changing quantities."
-12. "Every Monday, send me an inventory operations memo with the top risks, what changed and the decisions I need to make."
+12. "Every Monday, prepare an inventory operations memo. Combine Flieber data with supplier emails, freight updates and major forecast exceptions. Tell me the top risks, what changed and what decisions need to be made."
 
 Some of these need a connection or a workflow set up for your account. On a demo we'll show which ones run on your setup today.
 
@@ -248,11 +248,11 @@ Works with: Claude, ChatGPT, Cursor and any MCP-compatible agent.
 
 ### What you can ask
 
-- Data layer (https://www.flieber.com/product/data-layer): "What changed in our inventory data since yesterday?" · "Which listings aren't mapped to a product yet?" · "Show sales by region for our Shopify store."
-- Demand forecasting (https://www.flieber.com/product/demand-forecasting): "What will the holiday bundle sell in Q4?" · "Which forecasts look wrong this week?" · "How accurate was last quarter's forecast?"
-- Inventory forecasting (https://www.flieber.com/product/inventory-forecasting): "Where will we run out in the next 60 days?" · "Which products are overstocked, and by how much?" · "What did stockouts cost us last month?"
-- Replenishment (https://www.flieber.com/product/replenishment): "What should we order from each supplier this week?" · "Fit this order into two containers." · "What if lead times slip by two weeks?"
-- Workflows (https://www.flieber.com/product/workflows): "Every Monday, send me the top inventory risks in Slack." · "Create the FBA inbound shipment for this plan." · "Email this PO to the supplier once I approve it."
+- Data layer (https://www.flieber.com/product/data-layer): "Review my catalog and inventory data weekly and tell me if anything looks wrong: missing product names, discontinued products with a forecast, active products with no sales, SKUs mapped incorrectly or inbound shipments not reflected correctly." · "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days." · "If inventory increases in a way that matches an open PO or inbound shipment, check whether the PO was marked as received. If it's still open, alert me before the same stock is counted twice."
+- Demand forecasting (https://www.flieber.com/product/demand-forecasting): "Review my forecast every week and flag products where it looks wrong: new products with little history, products affected by stockouts, sudden accelerations, discontinued products still showing demand and products where actual sales are consistently above or below forecast." · "How accurate was last quarter's forecast?" · "What will the holiday bundle sell in Q4 if we keep it in stock?"
+- Inventory forecasting (https://www.flieber.com/product/inventory-forecasting): "Which of our top SKUs run out on Amazon before their next purchase order lands?" · "What did stockouts cost us last month?" · "Review my overstocked products and recommend what to do with each one: keep, discount, bundle, transfer, pause replenishment or liquidate. Consider sales velocity, margin, product tier, seasonality and inventory value."
+- Replenishment (https://www.flieber.com/product/replenishment): "Every Monday, review the products that may need replenishment and recommend what to order. Consider current stock, forecast demand, on-order inventory, supplier lead time, MOQ and target coverage. Group the recommendations by supplier and explain the reasoning." · "Fit this order into two 40-foot containers." · "What if lead times slip by two weeks?"
+- Workflows (https://www.flieber.com/product/workflows): "Create the FBA inbound shipment for this plan." · "Email this PO to the supplier once I approve it." · "Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days."
 
 ### What Flieber can do through MCP
 
@@ -288,6 +288,218 @@ Building reports, dashboards or agents with AI? Connect them to Flieber's data l
 **Is my data used to train AI models?** No. Flieber does not train on customer data, and its AI providers are set up not to.
 
 **Does it work without an AI assistant?** Yes. Everything here also works in the Flieber app and in Slack.
+
+## Put Flieber to work: Put Flieber to work on your operation
+
+https://www.flieber.com/put-flieber-to-work
+
+Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, ChatGPT or any MCP-compatible agent. These are the jobs operators give Flieber today, what Flieber does with each one and what comes back.
+
+Some of these need a connection or a workflow set up for your account. On a demo we'll show which ones run on your setup today.
+
+### Daily risks and reviews
+
+**Morning risk review** (https://www.flieber.com/put-flieber-to-work#p1): "Every morning, review my inventory position and tell me the biggest risks I need to act on. Prioritize by stockout risk, sales velocity, product tier, inbound shipments and revenue impact, and explain why each one matters."
+
+- What Flieber does: Projects stock for every product and location, ranks the risks by the criteria you named and explains each one.
+- What you get: A short list of products to act on, with the reason and a recommended next step, every morning in the app or Slack.
+- Inventory forecasting · Workflows · Runs on schedule · Read only
+
+**Weekly operations memo** (https://www.flieber.com/put-flieber-to-work#p2): "Every Monday, prepare an inventory operations memo. Combine Flieber data with supplier emails, freight updates and major forecast exceptions. Tell me the top risks, what changed and what decisions need to be made."
+
+- What Flieber does: Gathers the week's changes in stock, forecasts and inbound shipments, reads connected supplier emails and ranks what needs a decision.
+- What you get: One memo every Monday with the risks, the changes and the decisions waiting for you.
+- Data layer · Demand forecasting · Inventory forecasting · Replenishment · Workflows · Runs on schedule · Read only · Needs Gmail or Outlook
+
+**Monthly inventory health** (https://www.flieber.com/put-flieber-to-work#p3): "Every month, review our overall inventory health and explain what changed. Tell me whether we are carrying too much or too little inventory, where the biggest working capital issues are and what we should prioritize."
+
+- What Flieber does: Compares inventory value, coverage, overstock and stockouts with the previous month and finds the products driving the change.
+- What you get: A monthly summary of inventory health with the working capital at stake and the actions to prioritize.
+- Inventory forecasting · Data layer · Runs on schedule · Read only
+
+**Amazon stockouts before the next PO** (https://www.flieber.com/put-flieber-to-work#p4): "Which of our top SKUs run out on Amazon before their next purchase order lands?"
+
+- What Flieber does: Projects Amazon stock for your top products and compares each stockout date with the arrival of open POs and inbound shipments.
+- What you get: The products that will run out first, by how many days, and the options to cover the gap.
+- Inventory forecasting · Runs once · Read only
+
+### Purchasing
+
+**Weekly replenishment** (https://www.flieber.com/put-flieber-to-work#p5): "Every Monday, review the products that may need replenishment and recommend what to order. Consider current stock, forecast demand, on-order inventory, supplier lead time, MOQ and target coverage. Group the recommendations by supplier and explain the reasoning."
+
+- What Flieber does: Runs replenishment for every product and location with your planning parameters and order constraints applied.
+- What you get: Recommended orders grouped by supplier, each with the reasoning behind the quantity.
+- Replenishment · Runs on schedule · Read only
+
+**Draft POs and send them to your ERP** (https://www.flieber.com/put-flieber-to-work#p6): "Every Monday, draft POs by supplier and send them to NetSuite for approval."
+
+- What Flieber does: Drafts purchase orders by supplier and date, with costs, and once you approve, pushes them into your ERP.
+- What you get: Draft POs ready for review every Monday; nothing reaches the ERP until you approve.
+- Replenishment · Workflows · Runs on schedule · Changes after your approval · Needs NetSuite, Cin7 or Brightpearl
+
+**Container fill** (https://www.flieber.com/put-flieber-to-work#p7): "Fit this order into two 40-foot containers."
+
+- What Flieber does: Rebalances the planned quantities to fit container capacity, with case packs and MOQs still applied.
+- What you get: An adjusted order that fills the containers, with what changed and why.
+- Replenishment · Runs once · Read only
+
+**Six months of buying within budget** (https://www.flieber.com/put-flieber-to-work#p8): "Plan the next six months of orders from this supplier within our budget."
+
+- What Flieber does: Splits the buying horizon into seasonally weighted purchase orders, applies cartons, MOQs and lead times and keeps the total within your budget and cash-flow limits.
+- What you get: A month-by-month purchase plan for that supplier.
+- Replenishment · Runs once · Read only
+
+**Lead time scenario** (https://www.flieber.com/put-flieber-to-work#p9): "What if lead times slip by two weeks?"
+
+- What Flieber does: Simulates the longer lead time and recalculates inventory, stockouts, revenue, margin and cash.
+- What you get: The products that would run out, the sales at stake and what to order earlier.
+- Replenishment · Runs once · Read only
+
+**Send a PO to the supplier** (https://www.flieber.com/put-flieber-to-work#p10): "Email this PO to the supplier once I approve it."
+
+- What Flieber does: Prepares the PO in the supplier's own format, as an email, CSV file or Google Sheet, and sends it once you approve.
+- What you get: The PO in the supplier's inbox, with the send recorded in Flieber.
+- Workflows · Runs once · Changes after your approval
+
+### Forecasting and launches
+
+**Forecasts that look wrong** (https://www.flieber.com/put-flieber-to-work#p11): "Review my forecast every week and flag products where it looks wrong: new products with little history, products affected by stockouts, sudden accelerations, discontinued products still showing demand and products where actual sales are consistently above or below forecast."
+
+- What Flieber does: Checks every forecast against these patterns and against actual sales.
+- What you get: A weekly list of forecasts to review, with the reason each one was flagged.
+- Demand forecasting · Runs on schedule · Read only
+
+**Why actuals and forecast differ** (https://www.flieber.com/put-flieber-to-work#p12): "When actual sales and forecast are far apart, investigate why. Check recent stockouts, promotions, ad spend changes, new product status and seasonality before recommending whether the forecast should change."
+
+- What Flieber does: Compares actual sales with the forecast and checks each likely cause in your data and connected apps.
+- What you get: The most likely reason for the gap and a recommendation to keep or change the forecast.
+- Demand forecasting · Runs once · Read only
+
+**New launches** (https://www.flieber.com/put-flieber-to-work#p13): "Compare new launches with similar past launches at 7, 14 and 30 days and tell me whether to reorder earlier."
+
+- What Flieber does: Compares each launch's early sales with similar past launches and updates the expected sales pace.
+- What you get: Which launches are over or under pace and whether to reorder earlier than planned.
+- Demand forecasting · Replenishment · Runs on schedule · Read only
+
+**Bundle demand** (https://www.flieber.com/put-flieber-to-work#p14): "What will the holiday bundle sell in Q4 if we keep it in stock?"
+
+- What Flieber does: Forecasts the bundle from history adjusted for past stockouts and converts the demand into components.
+- What you get: The Q4 forecast for the bundle and what it means for each component.
+- Demand forecasting · Data layer · Runs once · Read only
+
+**Forecast accuracy** (https://www.flieber.com/put-flieber-to-work#p15): "How accurate was last quarter's forecast?"
+
+- What Flieber does: Compares saved forecast versions with what actually sold.
+- What you get: Error and bias by product, channel or group, and where the forecast was furthest off.
+- Demand forecasting · Runs once · Read only
+
+### Stock across locations
+
+**Transfers between locations** (https://www.flieber.com/put-flieber-to-work#p16): "Recommend transfers when one location is about to stock out and another has excess, without creating a new risk at the origin."
+
+- What Flieber does: Projects stock at every location and checks the origin before recommending any transfer.
+- What you get: Transfers by product, from and to, with the stockout each one prevents.
+- Replenishment · Runs on schedule · Read only
+
+**FBA inbound shipment** (https://www.flieber.com/put-flieber-to-work#p17): "Create the FBA inbound shipment for this plan."
+
+- What Flieber does: Creates the inbound shipment in Amazon from the approved plan and tracks it to delivery.
+- What you get: The shipment created in Seller Central and visible in Flieber.
+- Workflows · Runs once · Changes after your approval
+
+**Regional demand from one store** (https://www.flieber.com/put-flieber-to-work#p18): "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days."
+
+- What Flieber does: Routes orders to the regions or warehouses you set and projects each location's needs.
+- What you get: Units needed by warehouse and product for the next 30 days.
+- Data layer · Inventory forecasting · Runs once · Read only
+
+### Promotions and ads
+
+**Stock check before a promotion** (https://www.flieber.com/put-flieber-to-work#p20): "Before every promotion, check whether the promoted products have enough stock for the expected lift. If not, recommend whether to transfer inventory, reduce ad spend, delay the campaign or place an urgent PO."
+
+- What Flieber does: Projects stock for the promoted products with the expected lift and tests each option.
+- What you get: Products at risk before the promotion starts, with the recommended fix.
+- Inventory forecasting · Runs on schedule · Read only
+
+**Ad spend on products about to run out** (https://www.flieber.com/put-flieber-to-work#p21): "Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days."
+
+- What Flieber does: Watches ad spend in connected ad accounts against projected stockouts.
+- What you get: A Slack alert with the SKU, the stockout date and the spend at risk.
+- Workflows · Runs on schedule · Read only · Needs Meta Ads, Google Ads
+
+**Ads and cash** (https://www.flieber.com/put-flieber-to-work#p22): "If we pause ads on the five SKUs most at risk of stocking out, what happens to cash in November?"
+
+- What Flieber does: Simulates the lower demand and recalculates inventory, revenue and cash.
+- What you get: The revenue given up, the stockouts avoided and the cash freed.
+- Replenishment · Runs once · Read only
+
+**Act on forecasted stockouts** (https://www.flieber.com/put-flieber-to-work#p23): "When a product has a forecasted stockout, adjust price and ad campaigns accordingly."
+
+- What Flieber does: Watches projected stockouts and prepares price and campaign changes in the connected systems.
+- What you get: Proposed changes for approval; with your rules, they can run on their own.
+- Workflows · Runs on schedule · Asks before changing anything · Needs Ad accounts or pricing system with an MCP server
+
+### Suppliers and inbound
+
+**Supplier emails update POs** (https://www.flieber.com/put-flieber-to-work#p24): "Watch supplier emails about open POs. When a supplier confirms a new delivery date, quantity or split shipment, compare it with the PO in Flieber and ask me before updating it."
+
+- What Flieber does: Reads connected supplier emails, matches them to open POs and prepares the update.
+- What you get: PO changes waiting for your approval instead of buried in your inbox.
+- Workflows · Runs on schedule · Changes after your approval · Needs Gmail or Outlook
+
+**Late POs that cause stockouts** (https://www.flieber.com/put-flieber-to-work#p25): "Tell me when any open PO is at risk of arriving late. If the delay may cause a stockout, show the affected SKUs, the expected stockout date and the recommended action."
+
+- What Flieber does: Tracks open POs and supplier updates and recalculates stock when an arrival moves.
+- What you get: An alert only when a delay matters, with what to do about it.
+- Workflows · Inventory forecasting · Runs on schedule · Read only · Needs Gmail or Outlook
+
+**Supplier behavior** (https://www.flieber.com/put-flieber-to-work#p26): "Track which suppliers are repeatedly late, short-shipping or changing quantities."
+
+- What Flieber does: Reviews PO and shipment history and supplier emails for each supplier.
+- What you get: A supplier scorecard with the patterns that affect your plan.
+- Workflows · Runs on schedule · Read only · Needs Gmail or Outlook
+
+### Overstock and cash
+
+**What to do with overstock** (https://www.flieber.com/put-flieber-to-work#p30): "Review my overstocked products and recommend what to do with each one: keep, discount, bundle, transfer, pause replenishment or liquidate. Consider sales velocity, margin, product tier, seasonality and inventory value."
+
+- What Flieber does: Finds excess inventory by product and location and weighs each option against the criteria you named.
+- What you get: A recommendation per product, with the inventory value at stake.
+- Inventory forecasting · Runs once · Read only
+
+**The cost of stockouts** (https://www.flieber.com/put-flieber-to-work#p31): "What did stockouts cost us last month?"
+
+- What Flieber does: Estimates the sales lost to unavailable stock, by product and channel.
+- What you get: Lost sales in units and revenue, and the products that cost the most.
+- Inventory forecasting · Runs once · Read only
+
+### Wholesale and bundles
+
+**Large wholesale orders** (https://www.flieber.com/put-flieber-to-work#p32): "When a large wholesale order comes in, check whether fulfilling it puts DTC or Amazon stock at risk and recommend whether to accept, split, delay or replenish."
+
+- What Flieber does: Counts the order as allocated stock and projects every channel with and without it.
+- What you get: The channels put at risk and the recommended response.
+- Inventory forecasting · Replenishment · Runs on schedule · Read only · Needs Gmail or Outlook, or SPS Commerce
+
+**Components that block bundles** (https://www.flieber.com/put-flieber-to-work#p33): "Tell me if any component will stop us from assembling finished goods or bundles in the next 60 days."
+
+- What Flieber does: Converts bundle demand into components and projects each component's stock.
+- What you get: The components that will run short, when and which bundles they block.
+- Data layer · Replenishment · Runs on schedule · Read only
+
+### Data quality
+
+**Weekly data check** (https://www.flieber.com/put-flieber-to-work#p34): "Review my catalog and inventory data weekly and tell me if anything looks wrong: missing product names, discontinued products with a forecast, active products with no sales, SKUs mapped incorrectly or inbound shipments not reflected correctly."
+
+- What Flieber does: Runs data health checks across catalog, mappings, forecasts and shipments.
+- What you get: A list of issues, with the fixes Flieber can apply and the ones that need a person.
+- Data layer · Runs on schedule · Read only
+
+**Stock counted twice** (https://www.flieber.com/put-flieber-to-work#p35): "If inventory increases in a way that matches an open PO or inbound shipment, check whether the PO was marked as received. If it's still open, alert me before the same stock is counted twice."
+
+- What Flieber does: Compares balance changes with open POs and inbound shipments at each location.
+- What you get: An alert for each PO that may be double counted, and for receipts that never reached the balance.
+- Data layer · Workflows · Runs on schedule · Read only
 
 ## Vibe coders: Vibe coding your own tools? Start from data that's already right
 
@@ -343,7 +555,7 @@ How Flieber handles it:
 - Create inbound shipments in Amazon from an approved plan (https://www.flieber.com/features#inbound-shipments-in-amazon-and-3pls)
 - Track every shipment through delivery (https://www.flieber.com/features#inbound-shipment-tracking)
 
-Ask Flieber: "Which SKUs run out on Amazon before their next PO lands?" · "Every Monday, recommend FBA transfers from our 3PL and create the inbound shipments once I approve."
+Ask Flieber: "Which of our top SKUs run out on Amazon before their next purchase order lands?" · "Create the FBA inbound shipment for this plan."
 
 **Does Flieber create FBA inbound shipments?** Yes, from an approved plan, following your approval rules.
 
@@ -361,7 +573,7 @@ How Flieber handles it:
 - Claude works from unified, mapped data instead of raw exports from each channel (https://www.flieber.com/features#cross-channel-sku-mapping)
 - Request actions such as purchase orders or FBA shipments, under your approval rules (https://www.flieber.com/features#control-and-approval)
 
-Ask Flieber: "Which Amazon SKUs stock out in the next 30 days?" · "Compare Shopify and Amazon sell-through for the holiday bundle."
+Ask Flieber: "Which of our top SKUs run out on Amazon before their next purchase order lands?" · "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days."
 
 **Which AI assistants work with Flieber?** Claude, ChatGPT, Cursor and any agent that supports MCP.
 
@@ -380,7 +592,7 @@ How Flieber handles it:
 - Inventory projections by product and location (https://www.flieber.com/features#inventory-projections)
 - One Shopify store routed into regional markets, each with its own warehouse (https://www.flieber.com/features#sales-order-routing)
 
-Ask Flieber: "What will our top 20 Shopify products sell next quarter?" · "Split Shopify orders by region and show what each warehouse needs."
+Ask Flieber: "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days." · "Review my forecast every week and flag products where it looks wrong: new products with little history, products affected by stockouts, sudden accelerations, discontinued products still showing demand and products where actual sales are consistently above or below forecast."
 
 **Does Flieber connect natively to Shopify?** Yes, with a one-click connection, including during the free trial.
 
@@ -398,7 +610,7 @@ How Flieber handles it:
 - Combine bundle demand with each component's own demand (https://www.flieber.com/features#kits-bundles-and-components)
 - Buy at component level and transfer inventory as finished products (https://www.flieber.com/features#purchase-and-transfer-recommendations)
 
-Ask Flieber: "What will the holiday bundle sell in Q4 if we keep it in stock?" · "Will any component stop us from assembling bundles in the next 60 days?"
+Ask Flieber: "What will the holiday bundle sell in Q4 if we keep it in stock?" · "Tell me if any component will stop us from assembling finished goods or bundles in the next 60 days."
 
 **Does it work for bundles sold on several channels?** Yes. Demand from every channel is combined before it's converted into components.
 
@@ -416,7 +628,7 @@ How Flieber handles it:
 - Count wholesale purchase orders as allocated units (https://www.flieber.com/features#inventory-projections)
 - Reconcile wholesale forecasts against what actually shipped (on request) (https://www.flieber.com/features#wholesale-forecast-reconciliation)
 
-Ask Flieber: "Does this wholesale order put our Amazon stock at risk?" · "Tell me in Slack when a wholesale order puts DTC stock at risk."
+Ask Flieber: "When a large wholesale order comes in, check whether fulfilling it puts DTC or Amazon stock at risk and recommend whether to accept, split, delay or replenish." · "Review my forecast every week and flag products where it looks wrong: new products with little history, products affected by stockouts, sudden accelerations, discontinued products still showing demand and products where actual sales are consistently above or below forecast."
 
 **Does Flieber connect to SPS Commerce?** Yes, as an assisted integration on paid plans.
 
@@ -435,7 +647,7 @@ How Flieber handles it:
 - Recommend transfers without creating a new risk at the origin (https://www.flieber.com/features#purchase-and-transfer-recommendations)
 - Create inbound shipments in connected 3PL systems (https://www.flieber.com/features#inbound-shipments-in-amazon-and-3pls)
 
-Ask Flieber: "Which warehouse runs out first, and where can we transfer from?" · "Route last week's orders by region and show what each warehouse needs."
+Ask Flieber: "Recommend transfers when one location is about to stock out and another has excess, without creating a new risk at the origin." · "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days."
 
 **Which 3PLs does Flieber connect to?** More than 20, including ShipBob, ShipHero, Extensiv, Flexport and ShipMonk. The full list is on /integrations.
 
@@ -473,7 +685,7 @@ How Flieber handles it:
 - Accuracy and bias tracked against saved forecast versions (https://www.flieber.com/features#forecast-accuracy-and-bias)
 - Overrides for promotions, launches and targets (https://www.flieber.com/features#forecast-overrides-and-uploads)
 
-Ask Flieber: "Which forecasts look wrong this week?" · "What did stockouts cost us in sales last quarter?"
+Ask Flieber: "Review my forecast every week and flag products where it looks wrong: new products with little history, products affected by stockouts, sudden accelerations, discontinued products still showing demand and products where actual sales are consistently above or below forecast." · "What did stockouts cost us last month?"
 
 **How accurate are Flieber's forecasts?** 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products.
 
@@ -510,7 +722,7 @@ How Flieber handles it:
 - Preorders planned against incoming stock (https://www.flieber.com/features#backorders-and-preorders)
 - Settings at the product and store level (https://www.flieber.com/features#backorders-and-preorders)
 
-Ask Flieber: "Which products have backorders waiting, and when does stock arrive?" · "Is our next PO enough to cover current backorders?"
+Ask Flieber: "Every Monday, review the products that may need replenishment and recommend what to order. Consider current stock, forecast demand, on-order inventory, supplier lead time, MOQ and target coverage. Group the recommendations by supplier and explain the reasoning." · "Which of our top SKUs run out on Amazon before their next purchase order lands?"
 
 **Does backorder demand change replenishment recommendations?** Yes. Accumulated backorders are counted in the calculation.
 
@@ -710,6 +922,10 @@ Full list: https://www.flieber.com/features (every feature has its own anchor) a
 - [Workflows](https://www.flieber.com/features#workflows): From approved decision to done. Purchase orders to suppliers, Purchase orders to ERPs, Inbound shipments in Amazon and 3PLs, Inbound shipment tracking, Alerts and scheduled reports, Custom workflows and agents, Actions in other systems.
 - [Access](https://www.flieber.com/features#access): Use it your way. Flieber app, Ask in plain language, Slack, Google Sheets add-on, MCP server, MCP client and connected apps, Public API.
 
+### Put Flieber to work
+
+- [Put Flieber to work](https://www.flieber.com/put-flieber-to-work): Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, ChatGPT or any MCP-compatible agent. These are the jobs operators give Flieber today, what Flieber does with each one and what comes back.
+
 ### Solutions
 
 By type of business; every page links to the full feature list.
@@ -858,6 +1074,7 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 - [Features](https://www.flieber.com/features)
 - [MCP and AI agents](https://www.flieber.com/mcp)
 - [Integrations](https://www.flieber.com/integrations)
+- [Put Flieber to work](https://www.flieber.com/put-flieber-to-work)
 - [Data layer](https://www.flieber.com/product/data-layer)
 - [Demand forecasting](https://www.flieber.com/product/demand-forecasting)
 - [Inventory forecasting](https://www.flieber.com/product/inventory-forecasting)

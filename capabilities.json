@@ -505,6 +505,410 @@
       "url": "https://www.flieber.com/vibe-coders"
     }
   ],
+  "prompts": [
+    {
+      "id": "p1",
+      "title": "Morning risk review",
+      "prompt": "Every morning, review my inventory position and tell me the biggest risks I need to act on. Prioritize by stockout risk, sales velocity, product tier, inbound shipments and revenue impact, and explain why each one matters.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p1",
+      "modules": [
+        "inventory-forecasting",
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p2",
+      "title": "Weekly operations memo",
+      "prompt": "Every Monday, prepare an inventory operations memo. Combine Flieber data with supplier emails, freight updates and major forecast exceptions. Tell me the top risks, what changed and what decisions need to be made.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p2",
+      "modules": [
+        "data-layer",
+        "demand-forecasting",
+        "inventory-forecasting",
+        "replenishment",
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": [
+        "Gmail or Outlook"
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Monthly inventory health",
+      "prompt": "Every month, review our overall inventory health and explain what changed. Tell me whether we are carrying too much or too little inventory, where the biggest working capital issues are and what we should prioritize.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p3",
+      "modules": [
+        "inventory-forecasting",
+        "data-layer"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p4",
+      "title": "Amazon stockouts before the next PO",
+      "prompt": "Which of our top SKUs run out on Amazon before their next purchase order lands?",
+      "url": "https://www.flieber.com/put-flieber-to-work#p4",
+      "modules": [
+        "inventory-forecasting"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p5",
+      "title": "Weekly replenishment",
+      "prompt": "Every Monday, review the products that may need replenishment and recommend what to order. Consider current stock, forecast demand, on-order inventory, supplier lead time, MOQ and target coverage. Group the recommendations by supplier and explain the reasoning.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p5",
+      "modules": [
+        "replenishment"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p6",
+      "title": "Draft POs and send them to your ERP",
+      "prompt": "Every Monday, draft POs by supplier and send them to NetSuite for approval.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p6",
+      "modules": [
+        "replenishment",
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "after_approval",
+      "connections": [
+        "NetSuite, Cin7 or Brightpearl"
+      ]
+    },
+    {
+      "id": "p7",
+      "title": "Container fill",
+      "prompt": "Fit this order into two 40-foot containers.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p7",
+      "modules": [
+        "replenishment"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p8",
+      "title": "Six months of buying within budget",
+      "prompt": "Plan the next six months of orders from this supplier within our budget.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p8",
+      "modules": [
+        "replenishment"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p9",
+      "title": "Lead time scenario",
+      "prompt": "What if lead times slip by two weeks?",
+      "url": "https://www.flieber.com/put-flieber-to-work#p9",
+      "modules": [
+        "replenishment"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p10",
+      "title": "Send a PO to the supplier",
+      "prompt": "Email this PO to the supplier once I approve it.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p10",
+      "modules": [
+        "workflows"
+      ],
+      "schedule": "once",
+      "approval": "after_approval",
+      "connections": []
+    },
+    {
+      "id": "p11",
+      "title": "Forecasts that look wrong",
+      "prompt": "Review my forecast every week and flag products where it looks wrong: new products with little history, products affected by stockouts, sudden accelerations, discontinued products still showing demand and products where actual sales are consistently above or below forecast.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p11",
+      "modules": [
+        "demand-forecasting"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p12",
+      "title": "Why actuals and forecast differ",
+      "prompt": "When actual sales and forecast are far apart, investigate why. Check recent stockouts, promotions, ad spend changes, new product status and seasonality before recommending whether the forecast should change.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p12",
+      "modules": [
+        "demand-forecasting"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p13",
+      "title": "New launches",
+      "prompt": "Compare new launches with similar past launches at 7, 14 and 30 days and tell me whether to reorder earlier.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p13",
+      "modules": [
+        "demand-forecasting",
+        "replenishment"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p14",
+      "title": "Bundle demand",
+      "prompt": "What will the holiday bundle sell in Q4 if we keep it in stock?",
+      "url": "https://www.flieber.com/put-flieber-to-work#p14",
+      "modules": [
+        "demand-forecasting",
+        "data-layer"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p15",
+      "title": "Forecast accuracy",
+      "prompt": "How accurate was last quarter's forecast?",
+      "url": "https://www.flieber.com/put-flieber-to-work#p15",
+      "modules": [
+        "demand-forecasting"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p16",
+      "title": "Transfers between locations",
+      "prompt": "Recommend transfers when one location is about to stock out and another has excess, without creating a new risk at the origin.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p16",
+      "modules": [
+        "replenishment"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p17",
+      "title": "FBA inbound shipment",
+      "prompt": "Create the FBA inbound shipment for this plan.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p17",
+      "modules": [
+        "workflows"
+      ],
+      "schedule": "once",
+      "approval": "after_approval",
+      "connections": []
+    },
+    {
+      "id": "p18",
+      "title": "Regional demand from one store",
+      "prompt": "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p18",
+      "modules": [
+        "data-layer",
+        "inventory-forecasting"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p20",
+      "title": "Stock check before a promotion",
+      "prompt": "Before every promotion, check whether the promoted products have enough stock for the expected lift. If not, recommend whether to transfer inventory, reduce ad spend, delay the campaign or place an urgent PO.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p20",
+      "modules": [
+        "inventory-forecasting"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p21",
+      "title": "Ad spend on products about to run out",
+      "prompt": "Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p21",
+      "modules": [
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": [
+        "Meta Ads, Google Ads"
+      ]
+    },
+    {
+      "id": "p22",
+      "title": "Ads and cash",
+      "prompt": "If we pause ads on the five SKUs most at risk of stocking out, what happens to cash in November?",
+      "url": "https://www.flieber.com/put-flieber-to-work#p22",
+      "modules": [
+        "replenishment"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p23",
+      "title": "Act on forecasted stockouts",
+      "prompt": "When a product has a forecasted stockout, adjust price and ad campaigns accordingly.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p23",
+      "modules": [
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "asks_first",
+      "connections": [
+        "Ad accounts or pricing system with an MCP server"
+      ]
+    },
+    {
+      "id": "p24",
+      "title": "Supplier emails update POs",
+      "prompt": "Watch supplier emails about open POs. When a supplier confirms a new delivery date, quantity or split shipment, compare it with the PO in Flieber and ask me before updating it.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p24",
+      "modules": [
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "after_approval",
+      "connections": [
+        "Gmail or Outlook"
+      ]
+    },
+    {
+      "id": "p25",
+      "title": "Late POs that cause stockouts",
+      "prompt": "Tell me when any open PO is at risk of arriving late. If the delay may cause a stockout, show the affected SKUs, the expected stockout date and the recommended action.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p25",
+      "modules": [
+        "workflows",
+        "inventory-forecasting"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": [
+        "Gmail or Outlook"
+      ]
+    },
+    {
+      "id": "p26",
+      "title": "Supplier behavior",
+      "prompt": "Track which suppliers are repeatedly late, short-shipping or changing quantities.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p26",
+      "modules": [
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": [
+        "Gmail or Outlook"
+      ]
+    },
+    {
+      "id": "p30",
+      "title": "What to do with overstock",
+      "prompt": "Review my overstocked products and recommend what to do with each one: keep, discount, bundle, transfer, pause replenishment or liquidate. Consider sales velocity, margin, product tier, seasonality and inventory value.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p30",
+      "modules": [
+        "inventory-forecasting"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p31",
+      "title": "The cost of stockouts",
+      "prompt": "What did stockouts cost us last month?",
+      "url": "https://www.flieber.com/put-flieber-to-work#p31",
+      "modules": [
+        "inventory-forecasting"
+      ],
+      "schedule": "once",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p32",
+      "title": "Large wholesale orders",
+      "prompt": "When a large wholesale order comes in, check whether fulfilling it puts DTC or Amazon stock at risk and recommend whether to accept, split, delay or replenish.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p32",
+      "modules": [
+        "inventory-forecasting",
+        "replenishment"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": [
+        "Gmail or Outlook, or SPS Commerce"
+      ]
+    },
+    {
+      "id": "p33",
+      "title": "Components that block bundles",
+      "prompt": "Tell me if any component will stop us from assembling finished goods or bundles in the next 60 days.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p33",
+      "modules": [
+        "data-layer",
+        "replenishment"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p34",
+      "title": "Weekly data check",
+      "prompt": "Review my catalog and inventory data weekly and tell me if anything looks wrong: missing product names, discontinued products with a forecast, active products with no sales, SKUs mapped incorrectly or inbound shipments not reflected correctly.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p34",
+      "modules": [
+        "data-layer"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": []
+    },
+    {
+      "id": "p35",
+      "title": "Stock counted twice",
+      "prompt": "If inventory increases in a way that matches an open PO or inbound shipment, check whether the PO was marked as received. If it's still open, alert me before the same stock is counted twice.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p35",
+      "modules": [
+        "data-layer",
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": []
+    }
+  ],
   "use_cases": [
     {
       "id": "amazon-fba-replenishment",

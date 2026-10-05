@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import site_content as C  # noqa: E402
 import site_chrome  # noqa: E402
+import work_content as W  # noqa: E402
 
 ACCESS_LABEL = {"read": "Read", "write": "Write", "read_write": "Read and write", None: None}
 
@@ -94,7 +95,7 @@ def features_main() -> str:
       </div>
     </section>
 ''')
-    examples = "\n".join(f'          <li><span class="feat-q">“{esc(e)}”</span></li>' for e in C.EXAMPLES)
+    examples = "\n".join(f'          <li><a class="feat-q" href="../{W.PAGE["slug"]}/#{i}">“{esc(W.BY_ID[i]["prompt"])}”</a></li>' for i in W.FEATURES)
     faq = "\n".join(f'''          <div class="feat-faq-item">
             <h3 class="h3" id="{slug(q)}">{esc(q)}</h3>
             <p>{esc(a)}</p>
@@ -122,6 +123,7 @@ def features_main() -> str:
 {examples}
         </ol>
         <p class="feat-note">{esc(C.EXAMPLES_NOTE)}</p>
+        {work_link("../")}
       </div>
     </section>
 
@@ -456,7 +458,7 @@ def mcp_main() -> str:
 {items}
             </ul>
           </article>''')
-    out += section("what-you-can-ask", "Prompts", M["ask_h2"], '        <div class="mcp-ask-grid">\n' + "\n".join(groups) + "\n        </div>", soft=True)
+    out += section("what-you-can-ask", "Prompts", M["ask_h2"], '        <div class="mcp-ask-grid">\n' + "\n".join(groups) + "\n        </div>\n        " + work_link(p), soft=True)
     dos = "\n".join(f'''          <article class="why-card">
             <span class="n">{i:02d}</span>
             <h3 class="h3">{esc(t)}</h3>
@@ -587,7 +589,7 @@ def uc_main(u) -> str:
               <h3 class="h3">{esc(t)} {ARROW}</h3>
             </a>''' for t, a in u["points"])
     out += section("how", "Features", "How Flieber handles it", f'        <div class="feat-grid">\n{pts}\n        </div>', soft=True)
-    out += section("ask", "Examples", "Ask Flieber", prompts(u["ask"]), soft=False)
+    out += section("ask", "Examples", "Ask Flieber", prompts(u["ask"]) + "\n        " + work_link(p), soft=False)
     out += section("questions", "Questions", "Questions", faq_html(u["faq"]), soft=True)
     rel = []
     for s in u["modules"]:
@@ -668,27 +670,27 @@ def ms_main() -> str:
 
 
 def who_main() -> str:
-    W, p = C.WHO, "../"
+    WH, p = C.WHO, "../"
     home = (ROOT / "index.html").read_text(encoding="utf-8")
     founder = re.search(r'<figure class="founder-quote reveal">.*?</figure>', home, re.S).group(0)
     quotes = re.search(r'<div class="quotes reveal" id="quotes".*?\n        </div>\n', home, re.S).group(0)
-    out = page_head(W["name"], W["h1"], W["lead"])
+    out = page_head(WH["name"], WH["h1"], WH["lead"])
     out += f'''
     <section class="section on-dark founder" id="why" aria-labelledby="why-title">
       <div class="wrap">
         <div class="section-head reveal">
           <span class="kicker">Founder</span>
-          <h2 class="h2" id="why-title" style="margin-top:20px">{esc(W["why_h2"])}</h2>
+          <h2 class="h2" id="why-title" style="margin-top:20px">{esc(WH["why_h2"])}</h2>
         </div>
         {founder}
       </div>
     </section>
 '''
-    out += section("beliefs", "Beliefs", W["believe_h2"], f'        <div class="why-grid">\n{cards(W["believe"])}\n        </div>', soft=False)
-    nums = "\n".join(f'          <li>{esc(x)}</li>' for x in W["numbers"])
-    out += section("numbers", "Numbers", W["numbers_h2"], f'        <ul class="who-numbers">\n{nums}\n        </ul>', soft=True)
-    out += section("customers", "Customers", W["quotes_h2"], "        " + quotes.rstrip("\n"), soft=False)
-    out += section("find-us", "Contact", W["find_h2"], f'''        <ul class="who-find">
+    out += section("beliefs", "Beliefs", WH["believe_h2"], f'        <div class="why-grid">\n{cards(WH["believe"])}\n        </div>', soft=False)
+    nums = "\n".join(f'          <li>{esc(x)}</li>' for x in WH["numbers"])
+    out += section("numbers", "Numbers", WH["numbers_h2"], f'        <ul class="who-numbers">\n{nums}\n        </ul>', soft=True)
+    out += section("customers", "Customers", WH["quotes_h2"], "        " + quotes.rstrip("\n"), soft=False)
+    out += section("find-us", "Contact", WH["find_h2"], f'''        <ul class="who-find">
           <li>169 Madison Avenue, New York, NY 10016</li>
           <li><a href="mailto:hello@flieber.com">hello@flieber.com</a></li>
           <li><a class="link-arrow" href="{p}contact/">Contact {ARROW}</a></li>
@@ -719,13 +721,114 @@ def build_oct3_pages() -> None:
                "description": M["lead"], "provider": {"@id": ORG["@id"]}}
     write_page(f"{M['slug']}/index.html", 1, url, f"Managed Services: {M['h1'][0].lower() + M['h1'][1:]} | Flieber", M["lead"],
                ld([ORG, webpage(url, M["h1"], M["lead"]), service, faqpage(url, M["faq"])]), ms_main())
-    W = C.WHO
-    url = f"{C.SITE}/{W['slug']}"
+    WH = C.WHO
+    url = f"{C.SITE}/{WH['slug']}"
     org = dict(ORG, address={"@type": "PostalAddress", "streetAddress": "169 Madison Avenue", "addressLocality": "New York",
                              "addressRegion": "NY", "postalCode": "10016", "addressCountry": "US"},
                founder={"@type": "Person", "name": "Fabricio Miranda", "jobTitle": "Founder and CEO"}, email="hello@flieber.com")
-    write_page(f"{W['slug']}/index.html", 1, url, f"Who we are | Flieber", W["lead"],
-               ld([org, dict(webpage(url, W["h1"], W["lead"], "AboutPage"), about={"@id": ORG["@id"]})]), who_main())
+    write_page(f"{WH['slug']}/index.html", 1, url, f"Who we are | Flieber", WH["lead"],
+               ld([org, dict(webpage(url, WH["h1"], WH["lead"], "AboutPage"), about={"@id": ORG["@id"]})]), who_main())
+
+
+# ------------------------------------------------------------------ /put-flieber-to-work (prompt source for the site)
+MOD_NAME = {m["slug"]: m["name"] for m in C.MODULES}
+
+
+def work_card(e, p: str) -> str:
+    tags = [esc(MOD_NAME[m]) for m in e["modules"]] if len(e["modules"]) < 5 else ["All modules"]
+    tags += [W.SCHEDULE[e["schedule"]], W.APPROVAL[e["approval"]]]
+    tags += [f"Needs {esc(c)}" for c in e["connections"]]
+    conf = ('\n              <p class="work-confirm" title="Pending Fabricio\'s confirmation before launch">[TO CONFIRM] '
+            'Relies on a capability not listed on /features</p>') if e["confirm"] else ""
+    return f'''          <article class="work-card" id="{e["id"]}" data-group="{e["group"]}" data-modules="{" ".join(e["modules"])}">
+            <div class="work-top"><span class="n">P{e["n"]}</span><h3 class="h3">{esc(e["title"])}</h3></div>
+            <div class="work-prompt"><p id="{e["id"]}-q">“{esc(e["prompt"])}”</p><button class="work-copy" type="button" data-copy="#{e["id"]}-q">Copy</button></div>
+            <dl class="work-dl">
+              <div><dt>What Flieber does</dt><dd>{esc(e["does"])}</dd></div>
+              <div><dt>What you get</dt><dd>{esc(e["gets"])}</dd></div>
+            </dl>
+            <p class="work-tags">{"".join(f"<span>{t}</span>" for t in tags)}</p>{conf}
+          </article>'''
+
+
+def work_main() -> str:
+    P, p = W.PAGE, "../"
+    out = page_head(f"Product · {P['name']}", P["h1"], P["lead"])
+    gbtn = "".join(f'<button type="button" data-filter-group="{g}">{esc(n)}</button>' for g, n in W.GROUPS)
+    mbtn = "".join(f'<button type="button" data-filter-module="{m["slug"]}">{esc(m["name"])}</button>' for m in C.MODULES)
+    out += f'''
+    <section class="section work" id="jobs" aria-label="{esc(P['name'])}">
+      <div class="wrap">
+        <div class="work-filters" hidden>
+          <div class="work-filter-row" role="group" aria-label="Filter by goal"><span class="work-filter-label">Goal</span><button type="button" class="is-on" data-filter-group="">All</button>{gbtn}</div>
+          <div class="work-filter-row" role="group" aria-label="Filter by module"><span class="work-filter-label">Module</span><button type="button" class="is-on" data-filter-module="">All</button>{mbtn}</div>
+        </div>
+        <p class="work-note">{esc(P["note"])}</p>
+'''
+    for g, name in W.GROUPS:
+        cards = "\n".join(work_card(e, p) for e in W.ENTRIES if e["group"] == g)
+        out += f'''        <div class="work-group" data-group="{g}">
+          <h2 class="h3 work-group-title" id="g-{g}">{esc(name)}</h2>
+          <div class="work-grid">
+{cards}
+          </div>
+        </div>
+'''
+    out += '''        <p class="work-empty" hidden>No jobs match both filters.</p>
+      </div>
+    </section>
+'''
+    out += closing(h2=P["close_h2"], body=P["close_body"])
+    return out
+
+
+def work_jsonld(url: str) -> str:
+    P = W.PAGE
+    items = [{"@type": "ListItem", "position": i, "url": f"{url}#{e['id']}", "name": e["title"], "description": e["prompt"]}
+             for i, e in enumerate(W.ENTRIES, 1)]
+    return ld([ORG, webpage(url, P["h1"], P["lead"]), {"@type": "ItemList", "@id": url + "#jobs", "name": P["name"],
+                                                        "numberOfItems": len(items), "itemListElement": items}])
+
+
+def work_link(p: str) -> str:
+    return f'<p class="link-row"><a class="link-arrow" href="{p}{W.PAGE["slug"]}/">{esc(W.PAGE["more"])} {ARROW}</a></p>'
+
+
+def sync_home_asks() -> None:
+    """The six homepage prompt cards come from the library (draft 15.5)."""
+    f = ROOT / "index.html"
+    s = f.read_text(encoding="utf-8")
+    start = s.index('<div class="asks reveal-stagger">')
+    end = s.index('</section>', start)
+    block = s[start:end]
+    cards = re.findall(r'<a class="ask[^"]*" href="[^"]*">.*?</a>', block, re.S)
+    assert len(cards) == 6, len(cards)
+    new = block
+    for card, pid in zip(cards, W.HOME):
+        e = W.BY_ID[pid]
+        c2 = re.sub(r'href="[^"]*"', f'href="{W.PAGE["slug"]}/#{pid}"', card, count=1)
+        c2 = re.sub(r'<span>“.*?”</span>', lambda _: f'<span>“{esc(e["prompt"])}”</span>', c2, count=1, flags=re.S)
+        new = new.replace(card, c2)
+    new = re.sub(r'<p class="link-row reveal">.*?</p>',
+                 f'<p class="link-row reveal"><a class="link-arrow" href="{W.PAGE["slug"]}/">{esc(W.PAGE["more"])} <span class="arrow" aria-hidden="true">→</span></a> '
+                 f'<a class="link-arrow" href="features/">See every feature <span class="arrow" aria-hidden="true">→</span></a></p>', new, count=1, flags=re.S)
+    f.write_text(s[:start] + new + s[end:], encoding="utf-8")
+
+
+def apply_work_sources() -> None:
+    """Point /features, /mcp and the use-case pages at the library entries before they are built."""
+    C.EXAMPLES[:] = [W.BY_ID[i]["prompt"] for i in W.FEATURES]
+    C.MCP_PAGE["ask"] = [(m, [W.BY_ID[i]["prompt"] for i in ids]) for m, ids in W.MCP_BY_MODULE.items()]
+    for u in C.USE_CASES:
+        u["ask"] = [W.BY_ID[i]["prompt"] for i in W.USE_CASES[u["slug"]]]
+
+
+def build_work() -> None:
+    P = W.PAGE
+    url = f"{C.SITE}/{P['slug']}"
+    write_page(f"{P['slug']}/index.html", 1, url, f"{P['name']}: {P['h1'][0].lower() + P['h1'][1:]} | Flieber", P["lead"],
+               work_jsonld(url), work_main())
+    sync_home_asks()
 
 
 def write_page(rel: str, depth: int, url: str, title: str, desc: str, jsonld: str, main: str) -> None:
@@ -758,6 +861,7 @@ def build_pages() -> None:
     url = f"{C.SITE}/{C.BYC['slug']}"
     write_page(f"{C.BYC['slug']}/index.html", 1, url, f"{C.BYC['h1']} | Flieber", C.BYC["lead"], byc_jsonld(url), byc_main())
     build_oct3_pages()
+    build_work()
     url = f"{C.SITE}/{C.MCP_PAGE['slug']}"
     write_page(f"{C.MCP_PAGE['slug']}/index.html", 1, url, f"{C.MCP_PAGE['name']}: connect Claude and ChatGPT to Flieber | Flieber",
                C.MCP_PAGE["lead"], mcp_jsonld(url), mcp_main())
@@ -786,6 +890,14 @@ def pages_text() -> list:
           f"### {M['faq_h2']}", ""]
     for q, a in M["faq"]:
         L += [f"**{q}** {a}", ""]
+    WP = W.PAGE
+    L += [f"## {WP['name']}: {WP['h1']}", "", f"{C.SITE}/{WP['slug']}", "", WP["lead"], "", WP["note"], ""]
+    for g, gname in W.GROUPS:
+        L += [f"### {gname}", ""]
+        for e in [x for x in W.ENTRIES if x["group"] == g and not x["confirm"]]:
+            tags = [MOD_NAME[m] for m in e["modules"]] + [W.SCHEDULE[e["schedule"]], W.APPROVAL[e["approval"]]] + [f"Needs {c}" for c in e["connections"]]
+            L += [f"**{e['title']}** ({C.SITE}/{WP['slug']}#{e['id']}): \"{e['prompt']}\"", "",
+                  f"- What Flieber does: {e['does']}", f"- What you get: {e['gets']}", f"- {' · '.join(tags)}", ""]
     B = C.BWA
     L += [f"## {B['name']}: {B['h1']}", "", f"{C.SITE}/{B['slug']}", "", B["lead"], "", f"### {B['get_h2']}", ""]
     L += [f"- {t}: {d}" for t, d in B["get"]]
@@ -807,15 +919,15 @@ def pages_text() -> list:
     L += ["", f"### {M['with_h2']}", "", M["with"], "", f"### {M['price_h2']}", "", M["price"], ""]
     for q, a in M["faq"]:
         L += [f"**{q}** {a}", ""]
-    W = C.WHO
+    WH = C.WHO
     home = (ROOT / "index.html").read_text(encoding="utf-8")
     paras = [html.unescape(re.sub(r"<[^>]+>", "", x)).strip() for x in
              re.findall(r"<p>(.*?)</p>", re.search(r'<figure class="founder-quote.*?</blockquote>', home, re.S).group(0), re.S)]
-    L += [f"## {W['name']}: {W['h1']}", "", f"{C.SITE}/{W['slug']}", "", W["lead"], "", f"### {W['why_h2']}", ""]
-    L += [x for p_ in paras for x in (p_, "")] + ["Fabricio Miranda, Founder and CEO", "", f"### {W['believe_h2']}", ""]
-    L += [f"- {t}: {d}" for t, d in W["believe"]]
-    L += ["", f"### {W['numbers_h2']}", ""] + [f"- {x}" for x in W["numbers"]]
-    L += ["", f"### {W['find_h2']}", "", "169 Madison Avenue, New York, NY 10016 · hello@flieber.com", ""]
+    L += [f"## {WH['name']}: {WH['h1']}", "", f"{C.SITE}/{WH['slug']}", "", WH["lead"], "", f"### {WH['why_h2']}", ""]
+    L += [x for p_ in paras for x in (p_, "")] + ["Fabricio Miranda, Founder and CEO", "", f"### {WH['believe_h2']}", ""]
+    L += [f"- {t}: {d}" for t, d in WH["believe"]]
+    L += ["", f"### {WH['numbers_h2']}", ""] + [f"- {x}" for x in WH["numbers"]]
+    L += ["", f"### {WH['find_h2']}", "", "169 Madison Avenue, New York, NY 10016 · hello@flieber.com", ""]
     L += ["## Solutions by type of business", ""]
     for x in C.SOLUTIONS:
         L += [f"### {x['name']}: {x['h1']}", "", f"{C.SITE}/{x['slug']}", "", x["lead"], "", f"**{x['why_h2']}**", ""]
@@ -943,7 +1055,7 @@ def agents_main() -> str:
 
         <section id="capabilities" aria-labelledby="h-capabilities">
           <h2 id="h-capabilities">Capabilities</h2>
-          <p>Full descriptions at <a href="../features/">/features</a>.</p>
+          <p>Full descriptions at <a href="../features/">/features</a>. Jobs operators give Flieber, with what it does for each one: <a href="../{W.PAGE["slug"]}/">/{W.PAGE["slug"]}</a>.</p>
           <div class="table-wrap" style="margin-top:16px">
             <table class="doc-table">
               <thead><tr><th scope="col">Capability</th><th scope="col">Input</th><th scope="col">Output</th><th scope="col">Access</th></tr></thead>
@@ -1031,6 +1143,7 @@ def llms_txt() -> str:
     for g in C.GROUPS:
         names = ", ".join(t for t, *_ in g["features"])
         L.append(f"- [{g['label']}]({C.SITE}/features#{g['id']}): {g['h2']}. {names}.")
+    L += ["", f"## {W.PAGE['name']}", "", f"- [{W.PAGE['name']}]({C.SITE}/{W.PAGE['slug']}): {W.PAGE['lead']}"]
     L += ["", "## Solutions", "", "By type of business; every page links to the full feature list.", ""]
     L += [f"- [{x['name']}]({C.SITE}/{x['slug']}): {x['card']}" for x in C.SOLUTIONS]
     L += [f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']}): the questions every buyer should ask, answered for Flieber"]
@@ -1057,7 +1170,7 @@ def llms_txt() -> str:
     L += ["", "## Data handling", "", "No compliance claims are made.", ""] + [f"- {k}: {v}" for k, v in C.DATA_HANDLING]
     L += ["", "## Evidence", ""] + [f"- {k}: {v}" for k, v, _ in C.EVIDENCE]
     L += ["", "## Contact", "", C.HANDOFF, "", "## Links", "",
-          f"- [Flieber homepage]({C.SITE}/)", f"- [Features]({C.SITE}/features)", f"- [{C.MCP_PAGE['name']}]({C.SITE}/{C.MCP_PAGE['slug']})", f"- [Integrations]({C.SITE}/integrations)"] + [
+          f"- [Flieber homepage]({C.SITE}/)", f"- [Features]({C.SITE}/features)", f"- [{C.MCP_PAGE['name']}]({C.SITE}/{C.MCP_PAGE['slug']})", f"- [Integrations]({C.SITE}/integrations)", f"- [{W.PAGE['name']}]({C.SITE}/{W.PAGE['slug']})"] + [
           f"- [{m['name']}]({C.SITE}/product/{m['slug']})" for m in C.MODULES] + [
           f"- [{x['name']}]({C.SITE}/{x['slug']})" for x in C.SOLUTIONS] + [f"- [{C.BWA['name']}]({C.SITE}/{C.BWA['slug']})", f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']})",
           f"- [{C.MS['name']}]({C.SITE}/{C.MS['slug']})", f"- [{C.WHO['name']}]({C.SITE}/{C.WHO['slug']})"] + [ f"- [Flieber, for AI agents]({C.SITE}/agents)",
@@ -1068,7 +1181,7 @@ def llms_txt() -> str:
 
 def llms_full_txt() -> str:
     L = ["# Flieber: full text for LLMs", "",
-         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/mcp, {C.SITE}/vibe-coders, the ten use-case pages, {C.SITE}/managed-services, {C.SITE}/who-we-are, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
+         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/mcp, {C.SITE}/put-flieber-to-work, {C.SITE}/vibe-coders, the ten use-case pages, {C.SITE}/managed-services, {C.SITE}/who-we-are, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
          f"## {C.FEATURES_H1}", "", C.FEATURES_INTRO, "", C.FEATURES_NOTE, ""]
     for g in C.GROUPS:
         lead = MODULE_BY_SLUG[g["id"]]["tab"] if g["id"] in MODULE_BY_SLUG else g["lead"]
@@ -1123,6 +1236,9 @@ def capabilities() -> dict:
                     for m in C.MODULES],
         "solutions": [{"id": x["slug"], "name": x["name"], "url": f"{C.SITE}/{x['slug']}"} for x in C.SOLUTIONS]
                      + [{"id": C.BWA["slug"], "name": C.BWA["name"], "url": f"{C.SITE}/{C.BWA['slug']}"}],
+        "prompts": [{"id": e["id"], "title": e["title"], "prompt": e["prompt"], "url": f"{C.SITE}/{W.PAGE['slug']}#{e['id']}",
+                     "modules": e["modules"], "schedule": e["schedule"], "approval": e["approval"], "connections": e["connections"]}
+                    for e in W.ENTRIES if not e["confirm"]],
         "use_cases": [{"id": u["slug"], "name": u["name"], "url": f"{C.SITE}/use-cases/{u['slug']}"} for u in C.USE_CASES],
         "capabilities": [{"id": i, "name": n, "input": inp, "output": o, "access": a} for i, n, inp, o, a in C.CAPABILITIES],
         "approval": {"default": "required", "configurable_by_customer": True,
@@ -1145,6 +1261,7 @@ def capabilities() -> dict:
 
 
 def main() -> None:
+    apply_work_sources()
     build_features()
     build_pages()
     build_agents()

@@ -1104,6 +1104,37 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .ms-for li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 2px; background: var(--yellow); border: 1px solid var(--black); transform: translateY(-2px); }
 .sol-vibe { margin-top: 24px; color: var(--text-2); }
 .sol-vibe .link-arrow { color: var(--black); }
+.work { padding-top: clamp(40px, 5vw, 64px); }
+.work-filters { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.work-filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.work-filter-label { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); min-width: 64px; }
+.work-filter-row button { font: inherit; font-size: 14px; padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--white); color: var(--text-2); cursor: pointer; }
+.work-filter-row button:hover { border-color: var(--black); color: var(--black); }
+.work-filter-row button.is-on { background: var(--black); border-color: var(--black); color: var(--white); }
+.work-note { color: var(--text-2); font-size: 15px; margin-bottom: 36px; max-width: 760px; }
+.work-group { margin-top: 44px; }
+.work-group[hidden] { display: none; }
+.work-group-title { margin-bottom: 18px; }
+.work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.work-card { display: flex; flex-direction: column; gap: 16px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l); padding: clamp(20px, 2.4vw, 28px); scroll-margin-top: 120px; }
+.work-card[hidden] { display: none; }
+.work-card:target { border-color: var(--black); box-shadow: 0 0 0 3px var(--yellow); }
+.work-top { display: flex; align-items: baseline; gap: 12px; }
+.work-top .n { font-family: var(--mono); font-size: 12px; color: var(--text-2); }
+.work-prompt { display: flex; gap: 12px; align-items: flex-start; background: var(--gray-light); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 14px 16px; }
+.work-prompt p { margin: 0; flex: 1; font-family: var(--mono); font-size: 13.5px; line-height: 1.55; }
+.work-copy { flex: none; font: inherit; font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--white); cursor: pointer; }
+.work-copy:hover { border-color: var(--black); }
+.work-dl { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.work-dl dt { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
+.work-dl dd { margin: 2px 0 0; }
+.work-tags { margin: auto 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.work-tags span { font-size: 12.5px; padding: 4px 9px; border-radius: 999px; background: var(--gray-light); color: var(--text-2); }
+.work-confirm { margin: 0; font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-s); background: var(--yellow); }
+.work-empty { color: var(--text-2); margin-top: 32px; }
+.feat-examples a.feat-q { color: inherit; text-decoration: none; }
+.feat-examples a.feat-q:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 860px) { .work-grid { grid-template-columns: 1fr; } .work-filter-label { min-width: 0; width: 100%; } }
 
 </style>
 
@@ -1317,6 +1348,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
               <a href="/product/workflows">Workflows</a>
             </div>
             <hr class="nav-menu-sep">
+            <a href="/put-flieber-to-work">Put Flieber to work</a>
             <a href="/integrations">Integrations</a>
             <a href="/mcp">MCP and AI agents</a>
             <a href="/security">Security &amp; data</a>
@@ -1674,20 +1706,21 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
           <p class="lead">A few of the requests customers run every day. Each one uses the features above; the ones that reach outside Flieber need a connection to the system involved.</p>
         </div>
         <ol class="feat-examples">
-          <li><span class="feat-q">“Every morning, show me the biggest inventory risks by stockout risk, sales velocity, product tier and revenue impact, and tell me what to do about each.”</span></li>
-          <li><span class="feat-q">“Every Monday, recommend what to order, grouped by supplier, with MOQs, lead times and target coverage applied.”</span></li>
-          <li><span class="feat-q">“Flag products where the forecast looks wrong: new products with little history, products hit by stockouts and sudden accelerations.”</span></li>
-          <li><span class="feat-q">“Recommend transfers when one location is about to stock out and another has excess, without creating a new risk at the origin.”</span></li>
-          <li><span class="feat-q">“Before every promotion, check whether the promoted products have enough stock for the expected lift.”</span></li>
-          <li><span class="feat-q">“Compare new launches with similar past launches at 7, 14 and 30 days and tell me whether to reorder earlier.”</span></li>
-          <li><span class="feat-q">“Review overstocked products and recommend for each one: keep, discount, bundle, transfer, pause replenishment or liquidate.”</span></li>
-          <li><span class="feat-q">“Watch supplier emails about open POs and update the PO in Flieber when a supplier confirms a new date or quantity.”</span></li>
-          <li><span class="feat-q">“Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days.”</span></li>
-          <li><span class="feat-q">“When a large wholesale order comes in, check whether it puts DTC or Amazon stock at risk and recommend whether to accept, split or delay it.”</span></li>
-          <li><span class="feat-q">“Track which suppliers are repeatedly late, short-shipping or changing quantities.”</span></li>
-          <li><span class="feat-q">“Every Monday, send me an inventory operations memo with the top risks, what changed and the decisions I need to make.”</span></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p1">“Every morning, review my inventory position and tell me the biggest risks I need to act on. Prioritize by stockout risk, sales velocity, product tier, inbound shipments and revenue impact, and explain why each one matters.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p5">“Every Monday, review the products that may need replenishment and recommend what to order. Consider current stock, forecast demand, on-order inventory, supplier lead time, MOQ and target coverage. Group the recommendations by supplier and explain the reasoning.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p11">“Review my forecast every week and flag products where it looks wrong: new products with little history, products affected by stockouts, sudden accelerations, discontinued products still showing demand and products where actual sales are consistently above or below forecast.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p16">“Recommend transfers when one location is about to stock out and another has excess, without creating a new risk at the origin.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p20">“Before every promotion, check whether the promoted products have enough stock for the expected lift. If not, recommend whether to transfer inventory, reduce ad spend, delay the campaign or place an urgent PO.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p13">“Compare new launches with similar past launches at 7, 14 and 30 days and tell me whether to reorder earlier.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p30">“Review my overstocked products and recommend what to do with each one: keep, discount, bundle, transfer, pause replenishment or liquidate. Consider sales velocity, margin, product tier, seasonality and inventory value.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p24">“Watch supplier emails about open POs. When a supplier confirms a new delivery date, quantity or split shipment, compare it with the PO in Flieber and ask me before updating it.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p21">“Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p32">“When a large wholesale order comes in, check whether fulfilling it puts DTC or Amazon stock at risk and recommend whether to accept, split, delay or replenish.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p26">“Track which suppliers are repeatedly late, short-shipping or changing quantities.”</a></li>
+          <li><a class="feat-q" href="/put-flieber-to-work#p2">“Every Monday, prepare an inventory operations memo. Combine Flieber data with supplier emails, freight updates and major forecast exceptions. Tell me the top risks, what changed and what decisions need to be made.”</a></li>
         </ol>
         <p class="feat-note">Some of these need a connection or a workflow set up for your account. On a demo we’ll show which ones run on your setup today.</p>
+        <p class="link-row"><a class="link-arrow" href="/put-flieber-to-work">More ways to put Flieber to work <span class="arrow" aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
@@ -1790,6 +1823,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
           <h2 class="footer-h">Product</h2>
           <ul>
             <li><a href="/features">Features</a></li>
+            <li><a href="/put-flieber-to-work">Put Flieber to work</a></li>
             <li><a href="/integrations">Integrations</a></li>
             <li><a href="/mcp">MCP and AI agents</a></li>
             <li><a href="/pricing">Pricing</a></li>
@@ -2066,6 +2100,34 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
     if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) drop();
     else img.addEventListener('error', drop);
   });
+
+  /* ---------- Put Flieber to work: filters ---------- */
+  var work = document.querySelector('.work');
+  if (work) {
+    var filters = work.querySelector('.work-filters');
+    var state = { group: '', module: '' };
+    filters.hidden = false;
+    var apply = function () {
+      var shown = 0;
+      work.querySelectorAll('.work-group').forEach(function (g) {
+        var any = false;
+        g.querySelectorAll('.work-card').forEach(function (c) {
+          var ok = (!state.group || c.dataset.group === state.group) &&
+                   (!state.module || (' ' + c.dataset.modules + ' ').indexOf(' ' + state.module + ' ') > -1);
+          c.hidden = !ok; if (ok) { any = true; shown++; }
+        });
+        g.hidden = !any;
+      });
+      work.querySelector('.work-empty').hidden = shown > 0;
+    };
+    filters.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      var key = b.hasAttribute('data-filter-group') ? 'group' : 'module';
+      state[key] = b.getAttribute(key === 'group' ? 'data-filter-group' : 'data-filter-module');
+      b.parentNode.querySelectorAll('button').forEach(function (x) { x.classList.toggle('is-on', x === b); x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      apply();
+    });
+  }
 
   /* ---------- Copy to clipboard ---------- */
   document.querySelectorAll('[data-copy]').forEach(function (btn) {

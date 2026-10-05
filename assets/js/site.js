@@ -229,6 +229,34 @@
     else img.addEventListener('error', drop);
   });
 
+  /* ---------- Put Flieber to work: filters ---------- */
+  var work = document.querySelector('.work');
+  if (work) {
+    var filters = work.querySelector('.work-filters');
+    var state = { group: '', module: '' };
+    filters.hidden = false;
+    var apply = function () {
+      var shown = 0;
+      work.querySelectorAll('.work-group').forEach(function (g) {
+        var any = false;
+        g.querySelectorAll('.work-card').forEach(function (c) {
+          var ok = (!state.group || c.dataset.group === state.group) &&
+                   (!state.module || (' ' + c.dataset.modules + ' ').indexOf(' ' + state.module + ' ') > -1);
+          c.hidden = !ok; if (ok) { any = true; shown++; }
+        });
+        g.hidden = !any;
+      });
+      work.querySelector('.work-empty').hidden = shown > 0;
+    };
+    filters.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      var key = b.hasAttribute('data-filter-group') ? 'group' : 'module';
+      state[key] = b.getAttribute(key === 'group' ? 'data-filter-group' : 'data-filter-module');
+      b.parentNode.querySelectorAll('button').forEach(function (x) { x.classList.toggle('is-on', x === b); x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      apply();
+    });
+  }
+
   /* ---------- Copy to clipboard ---------- */
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {
