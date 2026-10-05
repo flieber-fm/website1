@@ -814,7 +814,7 @@ Ten pages, one per topic buyers and AI agents search for. They are deliberately 
 
 ### 8.1 /integrations
 
-Same URL as today (1,628 views in the last 12 months), new copy. In the Product menu. Structured data: WebPage.
+Same URL as today (1,628 views in the last 12 months), new copy. In the Product menu. Structured data: WebPage. Restructured on Oct 5 after the live flieber.com/integrations, which Fabricio likes, keeping the MCP and API part that page didn't have.
 
 **Label:** Product · Integrations
 
@@ -822,15 +822,32 @@ Same URL as today (1,628 views in the last 12 months), new copy. In the Product 
 
 **Lead:** Flieber connects to pretty much any system through native and assisted integrations, plus MCP and API.
 
-**H2:** Native integrations · *One click. Free trial and paid plans.* Amazon Seller Central, Shopify, Walmart (including WFS), TikTok Shop, eBay, Etsy, BigCommerce, Google Sheets
+**Section label:** Data · **H2:** Inventory forecasts need three types of data
+- **Sales** Orders and sales by product, channel and location.
+- **Inventory** On-hand, inbound and in-transit stock at every location.
+- **Shipments** Purchase orders, inbound shipments and transfers.
 
-**H2:** Assisted integrations · *Set up and customized by Flieber's team. Paid plans.* The full approved list, by category, as on /agents (sales channels and marketplaces, EDI, accounting and finance, inventory and order management, 3PLs and warehouses)
+Flieber pulls all three from the systems you already use, so it can forecast sales and inventory across every channel and location, plan replenishment and keep the right amount of stock on hand.
 
-**H2:** Any system with an MCP server · Flieber's MCP client connects to any system with an MCP server; built-in connections to Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads and NetSuite. → /mcp
+**Section label:** Directory · **H2:** Find your system
 
-**H2:** Don't see your system? · Book a demo and we'll tell you how we'd connect it.
+A search field ("Search for your channel, ERP, 3PL or app") and filters (All, Native, Assisted, Connected apps), sticky while scrolling. Search matches system names and categories. With no match, a box reads "No match for “…”" · "Book a demo and we'll tell you how we'd connect it." · *Button:* Book a demo. Without JavaScript the full directory shows.
 
-Each system in the first six below links to its own page.
+**H3:** Native integrations · *One click. Free trial and paid plans.* One card per system, with logo, name, description, the data types it brings (Sales, Inventory, Shipments) and, for the systems with their own page, a link "Flieber + [system] →":
+- **Amazon Seller Central** Connect one or more Amazon stores from any marketplace to one Flieber account and get recommendations for purchases from suppliers and transfers to FBA.
+- **Shopify** Connect one or more Shopify stores to one Flieber account, set up kits and bundles, backorders and wholesale channels, and get purchase recommendations for every product at every inventory location.
+- **Walmart (including WFS)** Connect one or more Walmart stores to one Flieber account and get recommendations for purchases from suppliers and transfers to WFS.
+- **TikTok Shop** Connect one or more TikTok Shop stores to one Flieber account and get purchase recommendations for every product at every inventory location.
+- **eBay**, **Etsy**, **BigCommerce** Connect one or more [system] stores to one Flieber account and get purchase recommendations for every product at every inventory location.
+- **Google Sheets** Keep using your spreadsheets: connect any sales, inventory or shipment data and sync it with Flieber. We can help you automate the flow so nothing needs updating by hand.
+
+**H3:** Assisted integrations · *Set up and customized by Flieber's team. Paid plans.* For systems without a native integration, Flieber's team sets up the connection using data modeling and AI-based mapping. Tiles grouped by category (sales channels and marketplaces, EDI, accounting and finance, inventory and order management, 3PLs and warehouses), each with logo, name and data types; NetSuite and SPS Commerce link to their pages.
+
+**H3:** Any system with an MCP server · Flieber's MCP client connects to any system with an MCP server; built-in connections to Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads and NetSuite. Agents such as Claude, ChatGPT and Cursor connect to Flieber through its MCP server, and your own systems can use the public API. → /mcp
+
+**Closing:** H2 "Don't see your system?" · Body "Book a demo and we'll tell you how we'd connect it." · *Buttons:* Book a demo · Start free trial
+
+**Data types and logos** come from the live page. Differences from it, on purpose: TikTok Shop is native (Oct 2), Unleashed appears once, "brightpeart" is spelled Brightpearl, Walmart transfers go to WFS (the live page says WMS), SPS Commerce and Apparel Magic are added (no logo or data types on the live page). Eight logos drawn for a dark background (QuickBooks, Zoho, Linnworks, DEAR Systems, NetSuite, AMZ Prep, GoFlow, Google Sheets) show by name only.
 
 ### 8.2 Integration pages
 

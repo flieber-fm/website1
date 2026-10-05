@@ -1139,6 +1139,44 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .work-own { margin-top: 56px; padding: clamp(24px, 3vw, 36px); border: 1px dashed var(--line-strong); border-radius: var(--radius-l); max-width: 880px; }
 .work-own p { color: var(--text-2); margin-top: 8px; max-width: 680px; }
 .work-own .link-row { margin-top: 16px; }
+.int-data-body { margin-top: 24px; }
+.int-dir .section-head { margin-bottom: 28px; }
+.int-search { position: sticky; top: 72px; z-index: 20; background: var(--white); padding: 14px 0 16px; margin-bottom: 8px; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.int-search-box { flex: 1 1 340px; }
+.int-search input { width: 100%; font: inherit; font-size: 16px; padding: 13px 16px 13px 44px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--gray-light) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%231B1C1C' stroke-width='1.6'%3E%3Ccircle cx='8' cy='8' r='6'/%3E%3Cpath d='M12.5 12.5L17 17'/%3E%3C/svg%3E") no-repeat 16px center; }
+.int-search input:focus { outline: 2px solid var(--black); outline-offset: 2px; background-color: var(--white); }
+.int-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.int-chips button { font: inherit; font-size: 14px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--white); color: var(--text-2); cursor: pointer; }
+.int-chips button.is-on { background: var(--black); border-color: var(--black); color: var(--white); }
+.int-count { width: 100%; margin: 0; font-size: 14px; color: var(--text-2); }
+.int-block { margin-top: 48px; }
+.int-block[hidden], .int-cat[hidden], .int-card[hidden], .int-tile[hidden] { display: none; }
+.int-block-head { margin-bottom: 20px; max-width: 760px; }
+.int-block-head p { color: var(--text-2); margin-top: 6px; }
+.int-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.int-card { display: flex; flex-direction: column; gap: 12px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l); padding: 22px; }
+.int-card p { color: var(--text-2); font-size: 15px; }
+.int-card .int-more { margin-top: auto; font-size: 14px; }
+.int-logo { display: flex; align-items: center; height: 40px; }
+.int-logo img { max-height: 32px; max-width: 150px; width: auto; object-fit: contain; }
+.int-logo-text { font-weight: 600; font-size: 15px; color: var(--text-2); }
+.int-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.int-tags span { font-size: 12px; padding: 3px 8px; border-radius: 999px; background: var(--gray-light); color: var(--text-2); }
+.int-cat { margin-top: 28px; }
+.int-cat-title { margin: 0 0 12px; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+.int-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+.int-tile { display: flex; flex-direction: column; gap: 8px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius-m); background: var(--white); color: inherit; text-decoration: none; }
+a.int-tile { border-color: var(--line-strong); }
+a.int-tile:hover { border-color: var(--black); }
+.int-tile .int-logo { height: 34px; }
+.int-tile .int-logo img { max-height: 26px; max-width: 120px; }
+.int-name { font-size: 14px; font-weight: 600; }
+.int-tile-app { justify-content: center; min-height: 64px; }
+.int-tile-any { border-style: dashed; }
+.int-none { margin-top: 40px; padding: 28px; border: 1px dashed var(--line-strong); border-radius: var(--radius-l); max-width: 760px; }
+.int-none p { color: var(--text-2); margin-top: 6px; }
+@media (max-width: 1140px) { .int-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .int-cards { grid-template-columns: 1fr; } .int-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .int-search { top: 64px; } }
 
 </style>
 
@@ -1240,57 +1278,135 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
       </div>
     </section>
 
-    <section class="section section-soft" id="native" aria-labelledby="native-title">
+    <section class="section section-soft" id="data" aria-labelledby="data-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">One click</span>
-          <h2 class="h2" id="native-title" style="margin-top:20px">Native integrations</h2>
-          <p class="lead">One click. Free trial and paid plans.</p>
+          <span class="kicker">Data</span>
+          <h2 class="h2" id="data-title" style="margin-top:20px">Inventory forecasts need three types of data</h2>
         </div>
-        <ul class="integ-chips"><li><a href="/integrations/amazon">Amazon Seller Central <span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/integrations/shopify">Shopify <span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/integrations/walmart">Walmart (including WFS) <span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/integrations/tiktok-shop">TikTok Shop <span class="arrow" aria-hidden="true">→</span></a></li><li>eBay</li><li>Etsy</li><li>BigCommerce</li><li>Google Sheets</li></ul>
+        <div class="why-grid">
+          <article class="why-card int-type">
+            <h3 class="h3">Sales</h3>
+            <p>Orders and sales by product, channel and location.</p>
+          </article>
+          <article class="why-card int-type">
+            <h3 class="h3">Inventory</h3>
+            <p>On-hand, inbound and in-transit stock at every location.</p>
+          </article>
+          <article class="why-card int-type">
+            <h3 class="h3">Shipments</h3>
+            <p>Purchase orders, inbound shipments and transfers.</p>
+          </article>
+        </div>
+        <p class="feat-approval int-data-body">Flieber pulls all three from the systems you already use, so it can forecast sales and inventory across every channel and location, plan replenishment and keep the right amount of stock on hand.</p>
       </div>
     </section>
 
-    <section class="section" id="assisted" aria-labelledby="assisted-title">
+    <section class="section int-dir" id="directory" aria-labelledby="directory-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Set up for you</span>
-          <h2 class="h2" id="assisted-title" style="margin-top:20px">Assisted integrations</h2>
-          <p class="lead">Set up and customized by Flieber’s team. Paid plans.</p>
+          <span class="kicker">Directory</span>
+          <h2 class="h2" id="directory-title" style="margin-top:20px">Find your system</h2>
         </div>
-        <div class="integ-cats">
-          <div class="integ-cat">
-            <h3 class="h3">Sales channels and marketplaces</h3>
-            <ul class="integ-chips"><li>Shopify Plus</li><li>Amazon Vendor Central</li><li>Magento</li><li>WooCommerce</li><li>Mercado Libre</li><li>bol.com</li><li>PrestaShop</li></ul>
+        <div class="int-search" hidden>
+          <label class="int-search-box"><span class="sr-only">Search integrations</span>
+            <input type="search" placeholder="Search for your channel, ERP, 3PL or app" autocomplete="off" aria-controls="native assisted mcp-systems">
+          </label>
+          <div class="int-chips" role="group" aria-label="Filter by type">
+            <button type="button" class="is-on" data-kind="">All (63)</button><button type="button" data-kind="native">Native</button><button type="button" data-kind="assisted">Assisted</button><button type="button" data-kind="mcp">Connected apps</button>
           </div>
-          <div class="integ-cat">
-            <h3 class="h3">EDI</h3>
-            <ul class="integ-chips"><li><a href="/integrations/sps-commerce">SPS Commerce <span class="arrow" aria-hidden="true">→</span></a></li></ul>
-          </div>
-          <div class="integ-cat">
-            <h3 class="h3">Accounting and finance</h3>
-            <ul class="integ-chips"><li>QuickBooks</li><li>Xero</li><li>Zoho</li></ul>
-          </div>
-          <div class="integ-cat">
-            <h3 class="h3">Inventory and order management</h3>
-            <ul class="integ-chips"><li>Cin7</li><li>Sage</li><li>Linnworks</li><li>Brightpearl</li><li>Luminous</li><li>Finale</li><li>DEAR Systems</li><li>Fishbowl</li><li><a href="/integrations/netsuite">NetSuite <span class="arrow" aria-hidden="true">→</span></a></li><li>Apparel Magic</li></ul>
-          </div>
-          <div class="integ-cat">
-            <h3 class="h3">3PLs and warehouses</h3>
-            <ul class="integ-chips"><li>SkuVault</li><li>ShipStation</li><li>Anvyl</li><li>Flexport/Deliverr</li><li>ShipBob</li><li>ShipHero</li><li>Extensiv</li><li>Stord</li><li>Veeqo</li><li>Flowspace</li><li>Everstox</li><li>GoFlow</li><li>Fulfil</li><li>AMZ Prep</li><li>Logiwa</li><li>Unleashed</li><li>ShipMonk</li><li>3PLGuys</li><li>Shipout</li><li>EasyFulfillment</li><li>CEVA Logistics</li><li>World Depot Inc.</li><li>ZhenHub</li></ul>
+          <p class="int-count" aria-live="polite"></p>
+        </div>
+        <div class="int-block" id="native">
+          <div class="int-block-head"><h3 class="h3">Native integrations</h3><p>One click. Free trial and paid plans.</p></div>
+          <div class="int-cards">
+          <article class="int-card" data-kind="native" data-search="amazon seller central native marketplace channel">
+            <span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/amazon-seller-central.png" alt="" loading="lazy"></span>
+            <h3 class="h3">Amazon Seller Central</h3>
+            <p>Connect one or more Amazon stores from any marketplace to one Flieber account and get recommendations for purchases from suppliers and transfers to FBA.</p>
+            <p class="int-tags"><span>Sales</span><span>Inventory</span><span>Shipments</span></p>
+              <a class="link-arrow int-more" href="/integrations/amazon">Flieber + Amazon <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="int-card" data-kind="native" data-search="shopify native marketplace channel">
+            <span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/shopify.png" alt="" loading="lazy"></span>
+            <h3 class="h3">Shopify</h3>
+            <p>Connect one or more Shopify stores to one Flieber account, set up kits and bundles, backorders and wholesale channels, and get purchase recommendations for every product at every inventory location.</p>
+            <p class="int-tags"><span>Sales</span><span>Inventory</span></p>
+              <a class="link-arrow int-more" href="/integrations/shopify">Flieber + Shopify <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="int-card" data-kind="native" data-search="walmart (including wfs) native marketplace channel">
+            <span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/walmart-including-wfs.png" alt="" loading="lazy"></span>
+            <h3 class="h3">Walmart (including WFS)</h3>
+            <p>Connect one or more Walmart stores to one Flieber account and get recommendations for purchases from suppliers and transfers to WFS.</p>
+            <p class="int-tags"><span>Sales</span><span>Inventory</span></p>
+              <a class="link-arrow int-more" href="/integrations/walmart">Flieber + Walmart <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="int-card" data-kind="native" data-search="tiktok shop native marketplace channel">
+            <span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/tiktok-shop.png" alt="" loading="lazy"></span>
+            <h3 class="h3">TikTok Shop</h3>
+            <p>Connect one or more TikTok Shop stores to one Flieber account and get purchase recommendations for every product at every inventory location.</p>
+            <p class="int-tags"><span>Sales</span><span>Inventory</span></p>
+              <a class="link-arrow int-more" href="/integrations/tiktok-shop">Flieber + TikTok Shop <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="int-card" data-kind="native" data-search="ebay native marketplace channel">
+            <span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/ebay.png" alt="" loading="lazy"></span>
+            <h3 class="h3">eBay</h3>
+            <p>Connect one or more eBay stores to one Flieber account and get purchase recommendations for every product at every inventory location.</p>
+            <p class="int-tags"><span>Sales</span></p>
+          </article>
+          <article class="int-card" data-kind="native" data-search="etsy native marketplace channel">
+            <span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/etsy.png" alt="" loading="lazy"></span>
+            <h3 class="h3">Etsy</h3>
+            <p>Connect one or more Etsy stores to one Flieber account and get purchase recommendations for every product at every inventory location.</p>
+            <p class="int-tags"><span>Sales</span></p>
+          </article>
+          <article class="int-card" data-kind="native" data-search="bigcommerce native marketplace channel">
+            <span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/bigcommerce.png" alt="" loading="lazy"></span>
+            <h3 class="h3">BigCommerce</h3>
+            <p>Connect one or more BigCommerce stores to one Flieber account and get purchase recommendations for every product at every inventory location.</p>
+            <p class="int-tags"><span>Sales</span><span>Inventory</span></p>
+          </article>
+          <article class="int-card" data-kind="native" data-search="google sheets native marketplace channel">
+            
+            <h3 class="h3">Google Sheets</h3>
+            <p>Keep using your spreadsheets: connect any sales, inventory or shipment data and sync it with Flieber. We can help you automate the flow so nothing needs updating by hand.</p>
+            <p class="int-tags"><span>Sales</span><span>Inventory</span><span>Shipments</span></p>
+          </article>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="mcp-systems" aria-labelledby="mcp-systems-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">MCP</span>
-          <h2 class="h2" id="mcp-systems-title" style="margin-top:20px">Any system with an MCP server</h2>
+        <div class="int-block" id="assisted">
+          <div class="int-block-head"><h3 class="h3">Assisted integrations</h3><p>Set up and customized by Flieber’s team. Paid plans. For systems without a native integration, Flieber’s team sets up the connection using data modeling and AI-based mapping.</p></div>
+          <div class="int-cat" data-cat>
+            <h4 class="int-cat-title">Sales channels and marketplaces</h4>
+            <div class="int-tiles"><div class="int-tile" data-kind="assisted" data-search="shopify plus sales channels and marketplaces"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/shopify-plus.png" alt="" loading="lazy"></span><span class="int-name">Shopify Plus</span><p class="int-tags"><span>Sales</span><span>Inventory</span></p></div><div class="int-tile" data-kind="assisted" data-search="amazon vendor central sales channels and marketplaces"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/amazon-vendor-central.jpg" alt="" loading="lazy"></span><span class="int-name">Amazon Vendor Central</span><p class="int-tags"><span>Sales</span></p></div><div class="int-tile" data-kind="assisted" data-search="magento sales channels and marketplaces"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/magento.png" alt="" loading="lazy"></span><span class="int-name">Magento</span><p class="int-tags"><span>Sales</span><span>Inventory</span></p></div><div class="int-tile" data-kind="assisted" data-search="woocommerce sales channels and marketplaces"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/woocommerce.png" alt="" loading="lazy"></span><span class="int-name">WooCommerce</span><p class="int-tags"><span>Sales</span><span>Inventory</span></p></div><div class="int-tile" data-kind="assisted" data-search="mercado libre sales channels and marketplaces"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/mercado-libre.png" alt="" loading="lazy"></span><span class="int-name">Mercado Libre</span><p class="int-tags"><span>Sales</span><span>Inventory</span></p></div><div class="int-tile" data-kind="assisted" data-search="bol.com sales channels and marketplaces"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/bol-com.png" alt="" loading="lazy"></span><span class="int-name">bol.com</span><p class="int-tags"><span>Sales</span><span>Inventory</span></p></div><div class="int-tile" data-kind="assisted" data-search="prestashop sales channels and marketplaces"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/prestashop.png" alt="" loading="lazy"></span><span class="int-name">PrestaShop</span><p class="int-tags"><span>Sales</span><span>Inventory</span></p></div></div>
+          </div>
+          <div class="int-cat" data-cat>
+            <h4 class="int-cat-title">EDI</h4>
+            <div class="int-tiles"><a class="int-tile" href="/integrations/sps-commerce" data-kind="assisted" data-search="sps commerce edi"><span class="int-name">SPS Commerce</span></a></div>
+          </div>
+          <div class="int-cat" data-cat>
+            <h4 class="int-cat-title">Accounting and finance</h4>
+            <div class="int-tiles"><div class="int-tile" data-kind="assisted" data-search="quickbooks accounting and finance"><span class="int-name">QuickBooks</span><p class="int-tags"><span>Shipments</span><span>Inventory</span></p></div><div class="int-tile" data-kind="assisted" data-search="xero accounting and finance"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/xero.png" alt="" loading="lazy"></span><span class="int-name">Xero</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="zoho accounting and finance"><span class="int-name">Zoho</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div></div>
+          </div>
+          <div class="int-cat" data-cat>
+            <h4 class="int-cat-title">Inventory and order management</h4>
+            <div class="int-tiles"><div class="int-tile" data-kind="assisted" data-search="cin7 inventory and order management"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/cin7.png" alt="" loading="lazy"></span><span class="int-name">Cin7</span><p class="int-tags"><span>Sales</span><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="sage inventory and order management"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/sage.png" alt="" loading="lazy"></span><span class="int-name">Sage</span><p class="int-tags"><span>Sales</span><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="linnworks inventory and order management"><span class="int-name">Linnworks</span><p class="int-tags"><span>Sales</span><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="brightpearl inventory and order management"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/brightpearl.png" alt="" loading="lazy"></span><span class="int-name">Brightpearl</span><p class="int-tags"><span>Sales</span><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="luminous inventory and order management"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/luminous.png" alt="" loading="lazy"></span><span class="int-name">Luminous</span><p class="int-tags"><span>Sales</span><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="finale inventory and order management"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/finale.png" alt="" loading="lazy"></span><span class="int-name">Finale</span><p class="int-tags"><span>Sales</span><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="dear systems inventory and order management"><span class="int-name">DEAR Systems</span><p class="int-tags"><span>Sales</span><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="fishbowl inventory and order management"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/fishbowl.png" alt="" loading="lazy"></span><span class="int-name">Fishbowl</span><p class="int-tags"><span>Sales</span><span>Inventory</span><span>Shipments</span></p></div><a class="int-tile" href="/integrations/netsuite" data-kind="assisted" data-search="netsuite inventory and order management"><span class="int-name">NetSuite</span><p class="int-tags"><span>Sales</span><span>Inventory</span></p></a><div class="int-tile" data-kind="assisted" data-search="apparel magic inventory and order management"><span class="int-name">Apparel Magic</span></div></div>
+          </div>
+          <div class="int-cat" data-cat>
+            <h4 class="int-cat-title">3PLs and warehouses</h4>
+            <div class="int-tiles"><div class="int-tile" data-kind="assisted" data-search="skuvault 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/skuvault.png" alt="" loading="lazy"></span><span class="int-name">SkuVault</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="shipstation 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/shipstation.png" alt="" loading="lazy"></span><span class="int-name">ShipStation</span><p class="int-tags"><span>Sales</span><span>Inventory</span></p></div><div class="int-tile" data-kind="assisted" data-search="anvyl 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/anvyl.png" alt="" loading="lazy"></span><span class="int-name">Anvyl</span><p class="int-tags"><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="flexport/deliverr 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/flexport-deliverr.png" alt="" loading="lazy"></span><span class="int-name">Flexport/Deliverr</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="shipbob 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/shipbob.png" alt="" loading="lazy"></span><span class="int-name">ShipBob</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="shiphero 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/shiphero.png" alt="" loading="lazy"></span><span class="int-name">ShipHero</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="extensiv 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/extensiv.png" alt="" loading="lazy"></span><span class="int-name">Extensiv</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="stord 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/stord.png" alt="" loading="lazy"></span><span class="int-name">Stord</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="veeqo 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/veeqo.png" alt="" loading="lazy"></span><span class="int-name">Veeqo</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="flowspace 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/flowspace.png" alt="" loading="lazy"></span><span class="int-name">Flowspace</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="everstox 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/everstox.png" alt="" loading="lazy"></span><span class="int-name">Everstox</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="goflow 3pls and warehouses"><span class="int-name">GoFlow</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="fulfil 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/fulfil.png" alt="" loading="lazy"></span><span class="int-name">Fulfil</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="amz prep 3pls and warehouses"><span class="int-name">AMZ Prep</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="logiwa 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/logiwa.png" alt="" loading="lazy"></span><span class="int-name">Logiwa</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="unleashed 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/unleashed.png" alt="" loading="lazy"></span><span class="int-name">Unleashed</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="shipmonk 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/shipmonk.png" alt="" loading="lazy"></span><span class="int-name">ShipMonk</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="3plguys 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/3plguys.png" alt="" loading="lazy"></span><span class="int-name">3PLGuys</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="shipout 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/shipout.png" alt="" loading="lazy"></span><span class="int-name">Shipout</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="easyfulfillment 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/easyfulfillment.png" alt="" loading="lazy"></span><span class="int-name">EasyFulfillment</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="ceva logistics 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/ceva-logistics.png" alt="" loading="lazy"></span><span class="int-name">CEVA Logistics</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="world depot inc. 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/world-depot-inc.png" alt="" loading="lazy"></span><span class="int-name">World Depot Inc.</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div><div class="int-tile" data-kind="assisted" data-search="zhenhub 3pls and warehouses"><span class="int-logo"><img src="https://www.flieber.com/hubfs/flieber-2026/zhenhub.png" alt="" loading="lazy"></span><span class="int-name">ZhenHub</span><p class="int-tags"><span>Inventory</span><span>Shipments</span></p></div></div>
+          </div>
         </div>
-        <p class="feat-approval">Flieber’s MCP client connects to any system with an MCP server; built-in connections to Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads and NetSuite.</p>
-        <p class="link-row"><a class="link-arrow" href="/mcp">MCP and AI agents <span class="arrow" aria-hidden="true">→</span></a></p>
+        <div class="int-block" id="mcp-systems">
+          <div class="int-block-head"><h3 class="h3">Any system with an MCP server</h3><p>Flieber’s MCP client connects to any system with an MCP server; built-in connections to Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads and NetSuite. Agents such as Claude, ChatGPT and Cursor connect to Flieber through its MCP server, and your own systems can use the public API.</p></div>
+          <div class="int-tiles"><div class="int-tile int-tile-app" data-kind="mcp" data-search="gmail connected app mcp"><span class="int-name">Gmail</span></div><div class="int-tile int-tile-app" data-kind="mcp" data-search="outlook connected app mcp"><span class="int-name">Outlook</span></div><div class="int-tile int-tile-app" data-kind="mcp" data-search="slack connected app mcp"><span class="int-name">Slack</span></div><div class="int-tile int-tile-app" data-kind="mcp" data-search="microsoft teams connected app mcp"><span class="int-name">Microsoft Teams</span></div><div class="int-tile int-tile-app" data-kind="mcp" data-search="google sheets connected app mcp"><span class="int-name">Google Sheets</span></div><div class="int-tile int-tile-app" data-kind="mcp" data-search="onedrive connected app mcp"><span class="int-name">OneDrive</span></div><div class="int-tile int-tile-app" data-kind="mcp" data-search="notion connected app mcp"><span class="int-name">Notion</span></div><div class="int-tile int-tile-app" data-kind="mcp" data-search="airtable connected app mcp"><span class="int-name">Airtable</span></div><div class="int-tile int-tile-app" data-kind="mcp" data-search="meta ads connected app mcp"><span class="int-name">Meta Ads</span></div><div class="int-tile int-tile-app" data-kind="mcp" data-search="google ads connected app mcp"><span class="int-name">Google Ads</span></div><div class="int-tile int-tile-app" data-kind="mcp" data-search="netsuite connected app mcp"><span class="int-name">NetSuite</span></div><div class="int-tile int-tile-app int-tile-any" data-kind="mcp" data-search="any system with an mcp server mcp server api custom"><span class="int-name">Any system with an MCP server</span></div></div>
+          <p class="link-row"><a class="link-arrow" href="/mcp">MCP and AI agents <span class="arrow" aria-hidden="true">→</span></a></p>
+        </div>
+        <div class="int-none" hidden>
+          <h3 class="h3">No match for <span class="int-q"></span></h3>
+          <p>Book a demo and we’ll tell you how we’d connect it.</p>
+          <p class="link-row"><a class="btn btn-primary" href="https://www.flieber.com/book-a-demo">Book a demo <span class="arrow" aria-hidden="true">→</span></a></p>
+        </div>
       </div>
     </section>
 
@@ -1625,6 +1741,37 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
       state[key] = b.getAttribute(key === 'group' ? 'data-filter-group' : 'data-filter-module');
       b.parentNode.querySelectorAll('button').forEach(function (x) { x.classList.toggle('is-on', x === b); x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
       apply();
+    });
+  }
+
+  /* ---------- Integrations: search and type filter ---------- */
+  var dir = document.querySelector('.int-dir');
+  if (dir) {
+    var bar = dir.querySelector('.int-search');
+    var input = bar.querySelector('input');
+    var kind = '';
+    var items = dir.querySelectorAll('[data-search]');
+    bar.hidden = false;
+    var run = function () {
+      var q = input.value.trim().toLowerCase();
+      var n = 0;
+      items.forEach(function (el) {
+        var ok = (!kind || el.dataset.kind === kind) && (!q || el.dataset.search.indexOf(q) > -1);
+        el.hidden = !ok; if (ok) n++;
+      });
+      dir.querySelectorAll('[data-cat]').forEach(function (c) { c.hidden = !c.querySelector('[data-search]:not([hidden])'); });
+      dir.querySelectorAll('.int-block').forEach(function (b) { b.hidden = !b.querySelector('[data-search]:not([hidden])'); });
+      var none = dir.querySelector('.int-none');
+      none.hidden = n > 0;
+      none.querySelector('.int-q').textContent = '“' + input.value.trim() + '”';
+      bar.querySelector('.int-count').textContent = (q || kind) ? (n + (n === 1 ? ' system' : ' systems')) : '';
+    };
+    input.addEventListener('input', run);
+    bar.querySelector('.int-chips').addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      kind = b.getAttribute('data-kind');
+      b.parentNode.querySelectorAll('button').forEach(function (x) { x.classList.toggle('is-on', x === b); x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      run();
     });
   }
 

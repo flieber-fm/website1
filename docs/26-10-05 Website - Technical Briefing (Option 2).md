@@ -81,7 +81,7 @@ Thirty-seven pages and three machine-readable files make up Option 2: the 15 bel
 | /before-you-choose | 17 buyer questions in four groups (Your data, Your decisions, AI and execution, Working with the vendor), each answered for Flieber · Ask us the same questions |
 | /vibe-coders | What you get · Connect in minutes (the /mcp steps) · What you can build · Pricing (free trial only) · Why not build it all yourself? · Start building on Flieber |
 | /use-cases/amazon-fba-replenishment, claude-amazon-shopify-inventory, shopify-inventory-forecasting, kits-and-bundles, wholesale-edi-demand-planning, multi-warehouse-3pl-inventory, purchase-order-automation, ai-demand-forecasting, moq-container-planning, backorders-preorders | Label "Use case", H1, lead · How Flieber handles it (each point links to its /features anchor) · Ask Flieber (two requests) · Questions (two) · Related modules · "This is one part of what Flieber does" with a link to /features and both buttons. In the sitemap, linked from the matching /features cards and from the related module pages ("Common uses"); never in the header or footer |
-| /integrations | Native integrations · Assisted integrations (by category) · Any system with an MCP server · Don't see your system? The six systems with their own page link to it |
+| /integrations | Three types of data · Find your system: search field and type filters (sticky), native cards with logo, description and data types, assisted tiles by category with logo and data types, connected apps and MCP/API · Don't see your system? Restructured on Oct 5 after the live flieber.com/integrations. The six systems with their own page link to it. Logos in `assets/integrations/` (from the live page) |
 | /integrations/amazon, shopify, walmart, tiktok-shop, netsuite, sps-commerce | H1 "Flieber + [system]", lead · What Flieber reads, What Flieber sends (only where approved), Availability · Related use cases · Questions (two) · use-case closing |
 | /managed-services | What our planners do · Who it's for · How it works with the rest of Flieber · Pricing (quoted per brand) · Questions · Talk to us about your operation. Same URL as today, new copy; linked from Door 1, the Managed Services card, /pricing and the footer |
 | /who-we-are | Why we built Flieber (full founder statement) · What we believe (pending Fabricio's review) · Flieber in numbers · What customers say (the five quotes and G2) · Where to find us · buttons. No team list or headcount |
@@ -341,6 +341,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 5 | /integrations restructured after the live page: three data types, a searchable directory with filters, native cards and assisted tiles with logos and data types, keeping the MCP and API section; fixes TikTok Shop (native), the duplicate Unleashed, "brightpeart" and Walmart "WMS" (WFS) |
 | Oct 5 | Put Flieber to work is framed as ideas, not a complete list: new lead, an "Ideas to start from" label, a "Not on the list?" box inviting the visitor's own job, and the same note in llms.txt, /agents and capabilities.json |
 | Oct 5 | Five jobs (P19 cross-system inventory comparison, P27 freight ETA updates, P28 3PL receiving reports, P29 invoices and landed cost, P36 Amazon availability issues) are possible but not out of the box: they need the right sources connected through Flieber's MCP client. Their cards say "Requires custom configuration" in a yellow note |
 | Oct 5 | New page /put-flieber-to-work ("Put Flieber to work", chosen over "Prompt library" and "What you can ask Flieber"): 36 jobs from the AI Lab Product Strategy (May 29) and the site's own prompts, in the Product menu after the divider and in the footer. It is the single source of example prompts; prompts are never copied from customer accounts and there is no live feed for now |
@@ -412,6 +413,7 @@ If Option 2 is elected:
 
 - [ ] Upload the Option 2 templates to HubSpot and create the 37 drafts under /new-site-2026-b/
 - [ ] Upload Option 2's llms.txt, llms-full.txt and capabilities.json to `flieber-2026`, replacing Option 1's
+- [ ] Upload `assets/integrations/` (42 logos) to `flieber-2026`; the logos are copies of the ones on the live /integrations page
 - [ ] Update `hubspot/CUTOVER.md` with the draft IDs
 - [ ] Fabricio reviews the drafts in HubSpot Preview (fonts, logos, the six-layer animation, the Product and Solutions menus, phone menu, any HubSpot banner or chat widget)
 - [ ] Check whether ads point to /old-home-page before it is redirected

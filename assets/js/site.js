@@ -257,6 +257,37 @@
     });
   }
 
+  /* ---------- Integrations: search and type filter ---------- */
+  var dir = document.querySelector('.int-dir');
+  if (dir) {
+    var bar = dir.querySelector('.int-search');
+    var input = bar.querySelector('input');
+    var kind = '';
+    var items = dir.querySelectorAll('[data-search]');
+    bar.hidden = false;
+    var run = function () {
+      var q = input.value.trim().toLowerCase();
+      var n = 0;
+      items.forEach(function (el) {
+        var ok = (!kind || el.dataset.kind === kind) && (!q || el.dataset.search.indexOf(q) > -1);
+        el.hidden = !ok; if (ok) n++;
+      });
+      dir.querySelectorAll('[data-cat]').forEach(function (c) { c.hidden = !c.querySelector('[data-search]:not([hidden])'); });
+      dir.querySelectorAll('.int-block').forEach(function (b) { b.hidden = !b.querySelector('[data-search]:not([hidden])'); });
+      var none = dir.querySelector('.int-none');
+      none.hidden = n > 0;
+      none.querySelector('.int-q').textContent = '“' + input.value.trim() + '”';
+      bar.querySelector('.int-count').textContent = (q || kind) ? (n + (n === 1 ? ' system' : ' systems')) : '';
+    };
+    input.addEventListener('input', run);
+    bar.querySelector('.int-chips').addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      kind = b.getAttribute('data-kind');
+      b.parentNode.querySelectorAll('button').forEach(function (x) { x.classList.toggle('is-on', x === b); x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      run();
+    });
+  }
+
   /* ---------- Copy to clipboard ---------- */
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {

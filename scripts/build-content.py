@@ -19,6 +19,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import site_content as C  # noqa: E402
 import site_chrome  # noqa: E402
 import work_content as W  # noqa: E402
+import integ_content as IC  # noqa: E402
 
 ACCESS_LABEL = {"read": "Read", "write": "Write", "read_write": "Read and write", None: None}
 
@@ -638,23 +639,100 @@ def integrations_main() -> str:
     I, p = C.INTEG_PAGE, "../"
     pages = {x["match"]: x["slug"] for x in C.INTEGRATIONS}
 
-    def item(name):
-        if name in pages:
-            return f'<li><a href="{p}integrations/{pages[name]}/">{esc(name)} {ARROW}</a></li>'
-        return f"<li>{esc(name)}</li>"
-    native = '        <ul class="integ-chips">' + "".join(item(n) for n in C.NATIVE) + "</ul>"
-    assisted = "\n".join(f'''          <div class="integ-cat">
-            <h3 class="h3">{esc(cat)}</h3>
-            <ul class="integ-chips">{"".join(item(n) for n in items)}</ul>
-          </div>''' for cat, items in C.ASSISTED)
+    def tags_html(name):
+        tags = IC.LOGOS.get(name, (None, []))[1]
+        return f'<p class="int-tags">{"".join(f"<span>{t}</span>" for t in tags)}</p>' if tags else ""
+
+    def logo_html(name):
+        logo = IC.LOGOS.get(name)
+        if logo and name not in IC.NO_LOGO:
+            return f'<span class="int-logo"><img src="{p}{logo[0]}" alt="" loading="lazy"></span>'
+        return ""
+
+    def search_attr(name, kind, cat=""):
+        return f'data-kind="{kind}" data-search="{html.escape((name + " " + cat).lower())}"'
+
+    # data types
+    dt = "\n".join(f'''          <article class="why-card int-type">
+            <h3 class="h3">{esc(t)}</h3>
+            <p>{esc(d)}</p>
+          </article>''' for t, d in IC.DATA_TYPES)
     out = page_head("Product · Integrations", I["h1"], I["lead"])
-    out += section("native", "One click", I["native_h2"], native, soft=True, lead=I["native_note"])
-    out += section("assisted", "Set up for you", I["assisted_h2"], f'        <div class="integ-cats">\n{assisted}\n        </div>', soft=False, lead=I["assisted_note"])
-    out += section("mcp-systems", "MCP", I["mcp_h2"], f'''        <p class="feat-approval">{esc(I["mcp"])}</p>
-        <p class="link-row"><a class="link-arrow" href="{p}mcp/">{esc(C.MCP_PAGE["name"])} {ARROW}</a></p>''', soft=True)
+    out += section("data", "Data", IC.DATA_H2, f'        <div class="why-grid">\n{dt}\n        </div>\n        <p class="feat-approval int-data-body">{esc(IC.DATA_BODY)}</p>', soft=True)
+
+    # search + filters
+    total = len(C.NATIVE) + sum(len(x) for _, x in C.ASSISTED) + len(C.CONNECTED_APPS)
+    out += f'''
+    <section class="section int-dir" id="directory" aria-labelledby="directory-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Directory</span>
+          <h2 class="h2" id="directory-title" style="margin-top:20px">Find your system</h2>
+        </div>
+        <div class="int-search" hidden>
+          <label class="int-search-box"><span class="sr-only">Search integrations</span>
+            <input type="search" placeholder="{esc(IC.SEARCH_PLACEHOLDER)}" autocomplete="off" aria-controls="native assisted mcp-systems">
+          </label>
+          <div class="int-chips" role="group" aria-label="Filter by type">
+            <button type="button" class="is-on" data-kind="">All ({total})</button><button type="button" data-kind="native">Native</button><button type="button" data-kind="assisted">Assisted</button><button type="button" data-kind="mcp">Connected apps</button>
+          </div>
+          <p class="int-count" aria-live="polite"></p>
+        </div>
+'''
+    # native cards
+    cards = []
+    for n in C.NATIVE:
+        link = (f'\n              <a class="link-arrow int-more" href="{p}integrations/{pages[n]}/">Flieber + {esc(n.split(" (")[0].replace(" Seller Central", ""))} {ARROW}</a>'
+                if n in pages else "")
+        cards.append(f'''          <article class="int-card" {search_attr(n, "native", "native marketplace channel")}>
+            {logo_html(n)}
+            <h3 class="h3">{esc(n)}</h3>
+            <p>{esc(IC.NATIVE_DESC[n])}</p>
+            {tags_html(n)}{link}
+          </article>''')
+    out += f'''        <div class="int-block" id="native">
+          <div class="int-block-head"><h3 class="h3">{esc(I["native_h2"])}</h3><p>{esc(I["native_note"])}</p></div>
+          <div class="int-cards">
+{chr(10).join(cards)}
+          </div>
+        </div>
+'''
+    # assisted grid by category
+    cats = []
+    for cat, items in C.ASSISTED:
+        tiles = []
+        for n in items:
+            inner = f'{logo_html(n)}<span class="int-name">{esc(n)}</span>{tags_html(n)}'
+            if n in pages:
+                tiles.append(f'<a class="int-tile" href="{p}integrations/{pages[n]}/" {search_attr(n, "assisted", cat)}>{inner}</a>')
+            else:
+                tiles.append(f'<div class="int-tile" {search_attr(n, "assisted", cat)}>{inner}</div>')
+        cats.append(f'''          <div class="int-cat" data-cat>
+            <h4 class="int-cat-title">{esc(cat)}</h4>
+            <div class="int-tiles">{"".join(tiles)}</div>
+          </div>''')
+    out += f'''        <div class="int-block" id="assisted">
+          <div class="int-block-head"><h3 class="h3">{esc(I["assisted_h2"])}</h3><p>{esc(I["assisted_note"])} {esc(IC.ASSISTED_BODY)}</p></div>
+{chr(10).join(cats)}
+        </div>
+'''
+    # MCP / API
+    apps = "".join(f'<div class="int-tile int-tile-app" {search_attr(a, "mcp", "connected app mcp")}><span class="int-name">{esc(a)}</span></div>' for a in C.CONNECTED_APPS)
+    out += f'''        <div class="int-block" id="mcp-systems">
+          <div class="int-block-head"><h3 class="h3">{esc(I["mcp_h2"])}</h3><p>{esc(I["mcp"])} {esc(IC.API_BODY)}</p></div>
+          <div class="int-tiles">{apps}<div class="int-tile int-tile-app int-tile-any" {search_attr("any system with an MCP server", "mcp", "mcp server api custom")}><span class="int-name">Any system with an MCP server</span></div></div>
+          <p class="link-row"><a class="link-arrow" href="{p}mcp/">{esc(C.MCP_PAGE["name"])} {ARROW}</a></p>
+        </div>
+        <div class="int-none" hidden>
+          <h3 class="h3">No match for <span class="int-q"></span></h3>
+          <p>{esc(I["other"])}</p>
+          <p class="link-row"><a class="btn btn-primary" href="{C.DEMO}">Book a demo {ARROW}</a></p>
+        </div>
+      </div>
+    </section>
+'''
     out += closing(h2=I["other_h2"], body=I["other"], demo_first=True)
     return out
-
 
 def ms_main() -> str:
     M, p = C.MS, "../"
