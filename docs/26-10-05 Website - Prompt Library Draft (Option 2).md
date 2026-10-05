@@ -173,7 +173,7 @@ Everything works in the Flieber app, in Slack and in any MCP-compatible agent, s
 
 *What Flieber does:* tracks open POs and supplier updates and recalculates stock when an arrival moves. *What you get:* an alert only when a delay matters, with what to do about it.
 
-**P26 · Supplier behavior** · Workflows · Runs on schedule · Read only · Connection: Gmail or Outlook
+**P26 · Supplier behavior** · Workflows · Runs on schedule · Read only · Connection: Gmail or Outlook · Live (Fabricio, Oct 5)
 > "Track which suppliers are repeatedly late, short-shipping or changing quantities."
 
 *What Flieber does:* reviews PO and shipment history and supplier emails for each supplier. *What you get:* a supplier scorecard with the patterns that affect your plan.
@@ -257,5 +257,4 @@ The /mcp example conversations stay as they are: they show answers with sample n
 
 1. Approve the page (URL, name, menu position, H1, lead, closing).
 2. Confirm or drop the five entries marked **Confirm**: P19 cross-system reconciliation, P27 freight ETA updates, P28 3PL receiving reports, P29 invoices and landed cost, P36 Amazon availability issues. Until confirmed they stay off the site.
-3. Supplier behavior tracking (P26) was the June 15 AI Lab target. It is already approved as an /features example; confirm it shipped.
-4. Any prompts AI Lab users run often that are missing here.
+3. Any prompts AI Lab users run often that are missing here.
