@@ -1,4 +1,4 @@
-# 26-10-05 Website - Prompt Library Draft (Option 2)
+# 26-10-05 Website - Put Flieber to Work Draft (Option 2)
 
 Draft for Fabricio's approval, October 5, 2026. Once approved, it becomes section 15 of the Content Briefing (Option 2) and is built on the preview. Nothing here is on the site yet.
 
@@ -12,12 +12,12 @@ AI Lab usage can later tell us which prompts customers actually run, to decide w
 
 ## 15.2 Page
 
-- **URL:** /prompts
-- **Name:** Prompt library
-- **Navigation:** Product menu, first item after the divider: Prompt library · Integrations · MCP and AI agents · Security & data. Footer, Product column, after Features.
-- **Label:** Product · Prompt library
-- **H1:** Ask Flieber anything your operation depends on
-- **Lead:** Type a question or describe a job in plain language, in the Flieber app, in Slack or in Claude, ChatGPT or any MCP-compatible agent. These are prompts operators use today, what Flieber does with each one and what you get back.
+- **URL:** /put-flieber-to-work
+- **Name:** Put Flieber to work (chosen Oct 5 over "Prompt library", which is jargon for operators new to AI, and "What you can ask Flieber", which leaves out the jobs Flieber carries out; open to a better name before launch)
+- **Navigation:** Product menu, first item after the divider: Put Flieber to work · Integrations · MCP and AI agents · Security & data. Footer, Product column, after Features.
+- **Label:** Product · Put Flieber to work
+- **H1:** Put Flieber to work on your operation
+- **Lead:** Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, ChatGPT or any MCP-compatible agent. These are the jobs operators give Flieber today, what Flieber does with each one and what comes back.
 - **Filters:** by goal (the nine groups below) and by module (Data layer, Demand forecasting, Inventory forecasting, Replenishment, Workflows). Without JavaScript, all entries show, grouped by goal.
 - **Note under the filters:** "Some prompts need a connection or a workflow set up for your account. On a demo we'll show which ones run on your setup today." (the approved /features note)
 - **Closing:** H2 "Try these on your own data" · Body "Start a 14-day free trial, connect your channels and ask your first question in minutes." · *Buttons:* Start free trial · Book a demo
@@ -238,8 +238,8 @@ Everything works in the Flieber app, in Slack and in any MCP-compatible agent, s
 
 | Page | Today | With the library |
 | --- | --- | --- |
-| Homepage, "What you can do with it" | Six hand-written prompts | Six entries (P4, P14, P22, P6, P32, P23), each linking to its card; "See all prompts →" /prompts |
-| /features, "Example requests" | Twelve prompts | The same twelve, now library entries (P1, P5, P11, P16, P20, P13, P30, P24, P21, P32, P26, P2), plus "See all prompts →" |
+| Homepage, "What you can do with it" | Six hand-written prompts | Six entries (P4, P14, P22, P6, P32, P23), each linking to its card; "More ways to put Flieber to work →" |
+| /features, "Example requests" | Twelve prompts | The same twelve, now library entries (P1, P5, P11, P16, P20, P13, P30, P24, P21, P32, P26, P2), plus "More ways to put Flieber to work →" |
 | /mcp, "What you can ask" | Three prompts per module | Three entries per module from the library |
 | Use-case pages, "Ask Flieber" | Two prompts each | Two matching entries each |
 | /vibe-coders, "What you can build" | Four build ideas | Unchanged (they describe tools to build, not prompts) |
@@ -248,13 +248,13 @@ The /mcp example conversations stay as they are: they show answers with sample n
 
 ## 15.6 Machine-readable files
 
-- **/llms.txt:** a "Prompt library" line with the URL.
+- **/llms.txt:** a "Put Flieber to work" line with the URL.
 - **/llms-full.txt:** every entry in full.
 - **/capabilities.json:** `"prompts": [ { "id": "P1", "title": "string", "prompt": "string", "modules": ["string"], "schedule": "once | scheduled", "approval": "read_only | asks_first | after_approval", "connections": ["string"] } ]`, excluding entries still marked Confirm.
-- **/agents:** one line under "Capabilities" pointing to /prompts.
+- **/agents:** one line under "Capabilities" pointing to /put-flieber-to-work.
 
 ## 15.7 For Fabricio to decide
 
-1. Approve the page (URL, name, menu position, H1, lead, closing).
+1. Approve the page (menu position, H1, lead, closing). Name chosen: Put Flieber to work.
 2. Confirm or drop the five entries marked **Confirm**: P19 cross-system reconciliation, P27 freight ETA updates, P28 3PL receiving reports, P29 invoices and landed cost, P36 Amazon availability issues. Until confirmed they stay off the site.
 3. Any prompts AI Lab users run often that are missing here.
