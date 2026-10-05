@@ -866,7 +866,7 @@ a.ask { text-decoration: none; color: inherit; }
 @media (max-width: 1140px) {
   .nav.open .nav-menu-label { padding: 14px 4px 6px; border-top: 0; }
   .nav.open .nav-sub { margin: 0 0 0 4px; padding-left: 14px; border-left: 2px solid var(--line-strong); }
-  .nav.open .nav-menu-sep { display: none; }
+  .nav.open .nav-menu-sep { display: block; border: 0; height: 14px; margin: 0; }
 }
 .mod-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .mod-card { display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 22px; transition: border-color .2s; }
@@ -1102,7 +1102,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .ms-for { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 18px; }
 .ms-for li { display: flex; align-items: baseline; gap: 12px; }
 .ms-for li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 2px; background: var(--yellow); border: 1px solid var(--black); transform: translateY(-2px); }
-.sol-vibe { margin-top: 14px; color: var(--text-2); }
+.sol-vibe { margin-top: 24px; color: var(--text-2); }
 .sol-vibe .link-arrow { color: var(--black); }
 
 </style>
@@ -1303,6 +1303,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
             <a href="/multichannel">Multichannel brands</a>
             <a href="/agencies">Agencies and aggregators</a>
             <a href="/vibe-coders">Vibe coders</a>
+            <hr class="nav-menu-sep">
             <a href="/before-you-choose">Before you choose</a>
           </div>
         </div>

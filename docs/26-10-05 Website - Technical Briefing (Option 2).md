@@ -153,7 +153,7 @@ New components in Option 2:
 | Founder statement | Homepage, `#who-we-are` | Fabricio's photo (pending; a monogram stands in on the preview) |
 | Four-item security strip | Homepage | Approved /security wording |
 
-Navigation (identical on every page): Product (menu: All features → /features first, with Data layer, Demand forecasting, Inventory forecasting, Replenishment and Workflows nested under it; then a divider and Integrations → /integrations, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Vibe coders, Before you choose) · Pricing · Who we are (→ /who-we-are) · /agents (black mono pill), then Log in (text link) · Book a demo (outline button) · Start free trial (yellow button). Five items before the buttons, as in Option 1; below 1140px it collapses into a menu. /security, /mcp and the integration pages show Product as the current section; use-case pages and /managed-services mark no menu item.
+Navigation (identical on every page): Product (menu: All features → /features first, with Data layer, Demand forecasting, Inventory forecasting, Replenishment and Workflows nested under it; then a divider and Integrations → /integrations, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Vibe coders, then a divider and Before you choose) · Pricing · Who we are (→ /who-we-are) · /agents (black mono pill), then Log in (text link) · Book a demo (outline button) · Start free trial (yellow button). Five items before the buttons, as in Option 1; below 1140px it collapses into a menu. /security, /mcp and the integration pages show Product as the current section; use-case pages and /managed-services mark no menu item.
 
 Footer columns: Product (Features, Integrations, MCP and AI agents, Pricing, Security & data, Managed Services) · Solutions (Multichannel brands, Agencies and aggregators, Vibe coders, Before you choose) · For agents (/agents, /llms.txt, /capabilities.json, MCP docs) · Company (Who we are, Help center, Blog, Contact, Privacy, Service agreement). Address: 169 Madison Avenue, New York, NY 10016.
 
@@ -338,6 +338,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 5 | Solutions menu: a divider before Before you choose, which is a buyer resource rather than an audience (as in the Product menu); on phones the divider shows as a gap |
 | Oct 5 | Content Briefing (Option 2) and this brief re-issued as 26-10-05, reflecting every decision below |
 | Oct 3 | Solutions overlap accepted (a multichannel brand or an agency can also vibe code); /multichannel and /agencies link to /vibe-coders: "Building your own tools with AI? Start from Flieber's data layer →" |
 | Oct 3 | Third solution renamed from "Build with AI" to "Vibe coders" (URL /vibe-coders): "Build with AI" read as building something inside Flieber; "Vibe coders" is the term the market recognises, and the page body still serves data teams |

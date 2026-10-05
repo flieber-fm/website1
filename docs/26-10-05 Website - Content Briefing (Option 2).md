@@ -92,7 +92,7 @@ Collaborative AI (asking in plain language, Slack, MCP and API) runs across all 
 | /contact | As in Option 1 |
 | /llms.txt, /llms-full.txt and /capabilities.json | As in Option 1, with the additions in section 13 |
 
-**Navigation (every page):** Product (menu: All features → /features first, with Data layer, Demand forecasting, Inventory forecasting, Replenishment and Workflows nested under it; then a divider and Integrations → /integrations, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Vibe coders, Before you choose) · Pricing · Who we are (→ /who-we-are) · /agents (pill), then Log in · Book a demo · Start free trial
+**Navigation (every page):** Product (menu: All features → /features first, with Data layer, Demand forecasting, Inventory forecasting, Replenishment and Workflows nested under it; then a divider and Integrations → /integrations, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Vibe coders, then a divider and Before you choose, which is a buyer resource rather than an audience) · Pricing · Who we are (→ /who-we-are) · /agents (pill), then Log in · Book a demo · Start free trial
 
 **Buttons:** as in Option 1 (Start free trial, Book a demo, Log in, MCP docs; no sandbox).
 

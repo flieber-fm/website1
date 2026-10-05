@@ -1,7 +1,7 @@
 """Navigation and footer shared by every page (Option 2 brief, sections 3 and 4).
 
 Navigation: Product (menu: All features with the five modules nested under it, then Integrations, MCP and AI agents and Security & data) · Solutions (menu: the three pages by type of
-business and goal, then Before you choose) · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
+business and goal, then a divider and Before you choose) · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
 build-content.py writes these into every page listed in PAGE_FILES.
 """
 import html
@@ -65,6 +65,7 @@ def nav_html(p: str, cur) -> str:
     product += f'\n            <a href="{p}security/">Security &amp; data</a>'
     sol = "\n".join(f'            <a href="{p}{x["slug"]}/">{esc(x["name"])}</a>' for x in C.SOLUTIONS)
     sol += f'\n            <a href="{p}{C.BWA["slug"]}/">{esc(C.BWA["name"])}</a>'
+    sol += '\n            <hr class="nav-menu-sep">'  # Before you choose is a buyer resource, not an audience
     sol += f'\n            <a href="{p}{C.BYC["slug"]}/">{esc(C.BYC["name"])}</a>'
     agents_cur = ' aria-current="page"' if cur == "agents" else ""
     return f"""  <header class="nav" id="nav">

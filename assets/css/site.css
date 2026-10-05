@@ -974,7 +974,7 @@ a.ask { text-decoration: none; color: inherit; }
 @media (max-width: 1140px) {
   .nav.open .nav-menu-label { padding: 14px 4px 6px; border-top: 0; }
   .nav.open .nav-sub { margin: 0 0 0 4px; padding-left: 14px; border-left: 2px solid var(--line-strong); }
-  .nav.open .nav-menu-sep { display: none; }
+  .nav.open .nav-menu-sep { display: block; border: 0; height: 14px; margin: 0; }
 }
 
 /* Module pages: the other four modules */
