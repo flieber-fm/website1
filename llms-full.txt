@@ -413,6 +413,13 @@ Some of these need a connection or a workflow set up for your account. On a demo
 - What you get: Units needed by warehouse and product for the next 30 days.
 - Data layer · Inventory forecasting · Runs once · Read only
 
+**Inventory that doesn't match** (https://www.flieber.com/put-flieber-to-work#p19): "Compare inventory levels between Flieber, Shopify, Amazon and our 3PL every morning. If numbers don't match, investigate the likely reason and tell me which system to trust."
+
+- What Flieber does: Compares balances across connected systems and investigates each mismatch.
+- What you get: A daily list of mismatches with the likely cause and the system to trust.
+- Data layer · Runs on schedule · Read only
+- Requires custom configuration: Connect the right sources through Flieber's MCP client; not available out of the box.
+
 ### Promotions and ads
 
 **Stock check before a promotion** (https://www.flieber.com/put-flieber-to-work#p20): "Before every promotion, check whether the promoted products have enough stock for the expected lift. If not, recommend whether to transfer inventory, reduce ad spend, delay the campaign or place an urgent PO."
@@ -459,6 +466,27 @@ Some of these need a connection or a workflow set up for your account. On a demo
 - What you get: A supplier scorecard with the patterns that affect your plan.
 - Workflows · Runs on schedule · Read only · Needs Gmail or Outlook
 
+**Freight ETA changes** (https://www.flieber.com/put-flieber-to-work#p27): "When a freight forwarder or carrier updates an ETA, update the shipment in Flieber and recalculate whether any destination will stock out before arrival."
+
+- What Flieber does: Reads forwarder and carrier updates, matches them to inbound shipments and recalculates stock at each destination.
+- What you get: Shipment dates kept current, with an alert when a new ETA causes a stockout.
+- Workflows · Runs on schedule · Changes after your approval
+- Requires custom configuration: Connect the right sources through Flieber's MCP client; not available out of the box.
+
+**3PL receiving check** (https://www.flieber.com/put-flieber-to-work#p28): "Every day, compare our 3PL receiving reports with expected inbound shipments. If fewer units arrived than expected, flag it and update the received quantity only after my approval."
+
+- What Flieber does: Compares what the 3PL received with what was expected on each inbound shipment.
+- What you get: A daily list of short receipts, with the corrected quantities waiting for your approval.
+- Workflows · Runs on schedule · Changes after your approval
+- Requires custom configuration: Connect the right sources through Flieber's MCP client; not available out of the box.
+
+**Landed cost changes** (https://www.flieber.com/put-flieber-to-work#p29): "Compare supplier and freight invoices with PO costs and tell me which SKUs had landed cost changes that materially affect margin."
+
+- What Flieber does: Matches invoices to POs and recalculates landed cost by SKU.
+- What you get: The SKUs whose landed cost changed, by how much and the effect on margin.
+- Workflows · Runs on schedule · Read only
+- Requires custom configuration: Connect the right sources through Flieber's MCP client; not available out of the box.
+
 ### Overstock and cash
 
 **What to do with overstock** (https://www.flieber.com/put-flieber-to-work#p30): "Review my overstocked products and recommend what to do with each one: keep, discount, bundle, transfer, pause replenishment or liquidate. Consider sales velocity, margin, product tier, seasonality and inventory value."
@@ -500,6 +528,13 @@ Some of these need a connection or a workflow set up for your account. On a demo
 - What Flieber does: Compares balance changes with open POs and inbound shipments at each location.
 - What you get: An alert for each PO that may be double counted, and for receipts that never reached the balance.
 - Data layer · Workflows · Runs on schedule · Read only
+
+**Amazon availability issues** (https://www.flieber.com/put-flieber-to-work#p36): "Watch Seller Central for stranded inventory, suppressed listings, FBA receiving delays and restock limits, and tell me which problems are Amazon availability issues rather than real stock shortages."
+
+- What Flieber does: Checks Amazon inventory and listing status against your stock in Flieber.
+- What you get: Each Amazon issue labeled as an availability problem or a real shortage, with the next step.
+- Data layer · Runs on schedule · Read only
+- Requires custom configuration: Connect the right sources through Flieber's MCP client; not available out of the box.
 
 ## Vibe coders: Vibe coding your own tools? Start from data that's already right
 

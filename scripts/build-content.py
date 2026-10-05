@@ -738,8 +738,8 @@ def work_card(e, p: str) -> str:
     tags = [esc(MOD_NAME[m]) for m in e["modules"]] if len(e["modules"]) < 5 else ["All modules"]
     tags += [W.SCHEDULE[e["schedule"]], W.APPROVAL[e["approval"]]]
     tags += [f"Needs {esc(c)}" for c in e["connections"]]
-    conf = ('\n              <p class="work-confirm" title="Pending Fabricio\'s confirmation before launch">[TO CONFIRM] '
-            'Relies on a capability not listed on /features</p>') if e["confirm"] else ""
+    conf = (f'\n              <p class="work-confirm"><b>{esc(W.PAGE["custom_label"])}.</b> {esc(W.PAGE["custom_note"])}</p>'
+            if e["custom"] else "")
     return f'''          <article class="work-card" id="{e["id"]}" data-group="{e["group"]}" data-modules="{" ".join(e["modules"])}">
             <div class="work-top"><span class="n">P{e["n"]}</span><h3 class="h3">{esc(e["title"])}</h3></div>
             <div class="work-prompt"><p id="{e["id"]}-q">“{esc(e["prompt"])}”</p><button class="work-copy" type="button" data-copy="#{e["id"]}-q">Copy</button></div>
@@ -894,10 +894,10 @@ def pages_text() -> list:
     L += [f"## {WP['name']}: {WP['h1']}", "", f"{C.SITE}/{WP['slug']}", "", WP["lead"], "", WP["note"], ""]
     for g, gname in W.GROUPS:
         L += [f"### {gname}", ""]
-        for e in [x for x in W.ENTRIES if x["group"] == g and not x["confirm"]]:
+        for e in [x for x in W.ENTRIES if x["group"] == g]:
             tags = [MOD_NAME[m] for m in e["modules"]] + [W.SCHEDULE[e["schedule"]], W.APPROVAL[e["approval"]]] + [f"Needs {c}" for c in e["connections"]]
             L += [f"**{e['title']}** ({C.SITE}/{WP['slug']}#{e['id']}): \"{e['prompt']}\"", "",
-                  f"- What Flieber does: {e['does']}", f"- What you get: {e['gets']}", f"- {' · '.join(tags)}", ""]
+                  f"- What Flieber does: {e['does']}", f"- What you get: {e['gets']}", f"- {' · '.join(tags)}"] + ([f"- {W.PAGE['custom_label']}: {W.PAGE['custom_note']}"] if e["custom"] else []) + [""]
     B = C.BWA
     L += [f"## {B['name']}: {B['h1']}", "", f"{C.SITE}/{B['slug']}", "", B["lead"], "", f"### {B['get_h2']}", ""]
     L += [f"- {t}: {d}" for t, d in B["get"]]
@@ -1237,8 +1237,9 @@ def capabilities() -> dict:
         "solutions": [{"id": x["slug"], "name": x["name"], "url": f"{C.SITE}/{x['slug']}"} for x in C.SOLUTIONS]
                      + [{"id": C.BWA["slug"], "name": C.BWA["name"], "url": f"{C.SITE}/{C.BWA['slug']}"}],
         "prompts": [{"id": e["id"], "title": e["title"], "prompt": e["prompt"], "url": f"{C.SITE}/{W.PAGE['slug']}#{e['id']}",
-                     "modules": e["modules"], "schedule": e["schedule"], "approval": e["approval"], "connections": e["connections"]}
-                    for e in W.ENTRIES if not e["confirm"]],
+                     "modules": e["modules"], "schedule": e["schedule"], "approval": e["approval"], "connections": e["connections"],
+                     "custom_configuration": e["custom"]}
+                    for e in W.ENTRIES],
         "use_cases": [{"id": u["slug"], "name": u["name"], "url": f"{C.SITE}/use-cases/{u['slug']}"} for u in C.USE_CASES],
         "capabilities": [{"id": i, "name": n, "input": inp, "output": o, "access": a} for i, n, inp, o, a in C.CAPABILITIES],
         "approval": {"default": "required", "configurable_by_customer": True,

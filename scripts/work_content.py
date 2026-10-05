@@ -1,9 +1,9 @@
 """Put Flieber to work (/put-flieber-to-work): the single source of example prompts for the site.
 
 Built from the "Prompt Examples" in 26-05-29 AI Lab - Product Strategy and the prompts already on the site
-(draft: docs/26-10-05 Website - Put Flieber to Work Draft (Option 2).md). Entries with confirm=True rely on
-capabilities not listed on /features; they show a "To confirm" tag on the preview and stay out of
-capabilities.json until Fabricio confirms them.
+(Content Briefing section 15). Entries with custom=True are not out of the box: they work once the customer
+connects the right sources through Flieber's MCP client (Fabricio, Oct 5), and carry a "Requires custom
+configuration" note.
 """
 
 PAGE = {
@@ -17,6 +17,8 @@ PAGE = {
     "close_h2": "Try these on your own data",
     "close_body": "Start a 14-day free trial, connect your channels and ask your first question in minutes.",
     "more": "More ways to put Flieber to work",
+    "custom_label": "Requires custom configuration",
+    "custom_note": "Connect the right sources through Flieber's MCP client; not available out of the box.",
 }
 
 GROUPS = [
@@ -30,10 +32,10 @@ APPROVAL = {"read_only": "Read only", "asks_first": "Asks before changing anythi
 DL, DF, IF, RP, WF = "data-layer", "demand-forecasting", "inventory-forecasting", "replenishment", "workflows"
 ALL = [DL, DF, IF, RP, WF]
 
-def E(i, group, title, modules, schedule, approval, prompt, does, gets, connections=(), confirm=False):
+def E(i, group, title, modules, schedule, approval, prompt, does, gets, connections=(), custom=False):
     return {"id": f"p{i}", "n": i, "group": group, "title": title, "modules": modules, "schedule": schedule,
             "approval": approval, "prompt": prompt, "does": does, "gets": gets, "connections": list(connections),
-            "confirm": confirm}
+            "custom": custom}
 
 ENTRIES = [
     E(1, "daily", "Morning risk review", [IF, WF], "scheduled", "read_only",
@@ -111,7 +113,7 @@ ENTRIES = [
     E(19, "locations", "Inventory that doesn't match", [DL], "scheduled", "read_only",
       "Compare inventory levels between Flieber, Shopify, Amazon and our 3PL every morning. If numbers don't match, investigate the likely reason and tell me which system to trust.",
       "Compares balances across connected systems and investigates each mismatch.",
-      "A daily list of mismatches with the likely cause and the system to trust.", confirm=True),
+      "A daily list of mismatches with the likely cause and the system to trust.", custom=True),
     E(20, "promotions", "Stock check before a promotion", [IF], "scheduled", "read_only",
       "Before every promotion, check whether the promoted products have enough stock for the expected lift. If not, recommend whether to transfer inventory, reduce ad spend, delay the campaign or place an urgent PO.",
       "Projects stock for the promoted products with the expected lift and tests each option.",
@@ -143,15 +145,15 @@ ENTRIES = [
     E(27, "suppliers", "Freight ETA changes", [WF], "scheduled", "after_approval",
       "When a freight forwarder or carrier updates an ETA, update the shipment in Flieber and recalculate whether any destination will stock out before arrival.",
       "Reads forwarder and carrier updates, matches them to inbound shipments and recalculates stock at each destination.",
-      "Shipment dates kept current, with an alert when a new ETA causes a stockout.", confirm=True),
+      "Shipment dates kept current, with an alert when a new ETA causes a stockout.", custom=True),
     E(28, "suppliers", "3PL receiving check", [WF], "scheduled", "after_approval",
       "Every day, compare our 3PL receiving reports with expected inbound shipments. If fewer units arrived than expected, flag it and update the received quantity only after my approval.",
       "Compares what the 3PL received with what was expected on each inbound shipment.",
-      "A daily list of short receipts, with the corrected quantities waiting for your approval.", confirm=True),
+      "A daily list of short receipts, with the corrected quantities waiting for your approval.", custom=True),
     E(29, "suppliers", "Landed cost changes", [WF], "scheduled", "read_only",
       "Compare supplier and freight invoices with PO costs and tell me which SKUs had landed cost changes that materially affect margin.",
       "Matches invoices to POs and recalculates landed cost by SKU.",
-      "The SKUs whose landed cost changed, by how much and the effect on margin.", confirm=True),
+      "The SKUs whose landed cost changed, by how much and the effect on margin.", custom=True),
     E(30, "overstock", "What to do with overstock", [IF], "once", "read_only",
       "Review my overstocked products and recommend what to do with each one: keep, discount, bundle, transfer, pause replenishment or liquidate. Consider sales velocity, margin, product tier, seasonality and inventory value.",
       "Finds excess inventory by product and location and weighs each option against the criteria you named.",
@@ -179,7 +181,7 @@ ENTRIES = [
     E(36, "data", "Amazon availability issues", [DL], "scheduled", "read_only",
       "Watch Seller Central for stranded inventory, suppressed listings, FBA receiving delays and restock limits, and tell me which problems are Amazon availability issues rather than real stock shortages.",
       "Checks Amazon inventory and listing status against your stock in Flieber.",
-      "Each Amazon issue labeled as an availability problem or a real shortage, with the next step.", confirm=True),
+      "Each Amazon issue labeled as an availability problem or a real shortage, with the next step.", custom=True),
 ]
 BY_ID = {e["id"]: e for e in ENTRIES}
 

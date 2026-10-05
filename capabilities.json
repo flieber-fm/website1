@@ -517,7 +517,8 @@
       ],
       "schedule": "scheduled",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p2",
@@ -535,7 +536,8 @@
       "approval": "read_only",
       "connections": [
         "Gmail or Outlook"
-      ]
+      ],
+      "custom_configuration": false
     },
     {
       "id": "p3",
@@ -548,7 +550,8 @@
       ],
       "schedule": "scheduled",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p4",
@@ -560,7 +563,8 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p5",
@@ -572,7 +576,8 @@
       ],
       "schedule": "scheduled",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p6",
@@ -587,7 +592,8 @@
       "approval": "after_approval",
       "connections": [
         "NetSuite, Cin7 or Brightpearl"
-      ]
+      ],
+      "custom_configuration": false
     },
     {
       "id": "p7",
@@ -599,7 +605,8 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p8",
@@ -611,7 +618,8 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p9",
@@ -623,7 +631,8 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p10",
@@ -635,7 +644,8 @@
       ],
       "schedule": "once",
       "approval": "after_approval",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p11",
@@ -647,7 +657,8 @@
       ],
       "schedule": "scheduled",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p12",
@@ -659,7 +670,8 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p13",
@@ -672,7 +684,8 @@
       ],
       "schedule": "scheduled",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p14",
@@ -685,7 +698,8 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p15",
@@ -697,7 +711,8 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p16",
@@ -709,7 +724,8 @@
       ],
       "schedule": "scheduled",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p17",
@@ -721,7 +737,8 @@
       ],
       "schedule": "once",
       "approval": "after_approval",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p18",
@@ -734,7 +751,21 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
+    },
+    {
+      "id": "p19",
+      "title": "Inventory that doesn't match",
+      "prompt": "Compare inventory levels between Flieber, Shopify, Amazon and our 3PL every morning. If numbers don't match, investigate the likely reason and tell me which system to trust.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p19",
+      "modules": [
+        "data-layer"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": [],
+      "custom_configuration": true
     },
     {
       "id": "p20",
@@ -746,7 +777,8 @@
       ],
       "schedule": "scheduled",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p21",
@@ -760,7 +792,8 @@
       "approval": "read_only",
       "connections": [
         "Meta Ads, Google Ads"
-      ]
+      ],
+      "custom_configuration": false
     },
     {
       "id": "p22",
@@ -772,7 +805,8 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p23",
@@ -786,7 +820,8 @@
       "approval": "asks_first",
       "connections": [
         "Ad accounts or pricing system with an MCP server"
-      ]
+      ],
+      "custom_configuration": false
     },
     {
       "id": "p24",
@@ -800,7 +835,8 @@
       "approval": "after_approval",
       "connections": [
         "Gmail or Outlook"
-      ]
+      ],
+      "custom_configuration": false
     },
     {
       "id": "p25",
@@ -815,7 +851,8 @@
       "approval": "read_only",
       "connections": [
         "Gmail or Outlook"
-      ]
+      ],
+      "custom_configuration": false
     },
     {
       "id": "p26",
@@ -829,7 +866,47 @@
       "approval": "read_only",
       "connections": [
         "Gmail or Outlook"
-      ]
+      ],
+      "custom_configuration": false
+    },
+    {
+      "id": "p27",
+      "title": "Freight ETA changes",
+      "prompt": "When a freight forwarder or carrier updates an ETA, update the shipment in Flieber and recalculate whether any destination will stock out before arrival.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p27",
+      "modules": [
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "after_approval",
+      "connections": [],
+      "custom_configuration": true
+    },
+    {
+      "id": "p28",
+      "title": "3PL receiving check",
+      "prompt": "Every day, compare our 3PL receiving reports with expected inbound shipments. If fewer units arrived than expected, flag it and update the received quantity only after my approval.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p28",
+      "modules": [
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "after_approval",
+      "connections": [],
+      "custom_configuration": true
+    },
+    {
+      "id": "p29",
+      "title": "Landed cost changes",
+      "prompt": "Compare supplier and freight invoices with PO costs and tell me which SKUs had landed cost changes that materially affect margin.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p29",
+      "modules": [
+        "workflows"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": [],
+      "custom_configuration": true
     },
     {
       "id": "p30",
@@ -841,7 +918,8 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p31",
@@ -853,7 +931,8 @@
       ],
       "schedule": "once",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p32",
@@ -868,7 +947,8 @@
       "approval": "read_only",
       "connections": [
         "Gmail or Outlook, or SPS Commerce"
-      ]
+      ],
+      "custom_configuration": false
     },
     {
       "id": "p33",
@@ -881,7 +961,8 @@
       ],
       "schedule": "scheduled",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p34",
@@ -893,7 +974,8 @@
       ],
       "schedule": "scheduled",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
     },
     {
       "id": "p35",
@@ -906,7 +988,21 @@
       ],
       "schedule": "scheduled",
       "approval": "read_only",
-      "connections": []
+      "connections": [],
+      "custom_configuration": false
+    },
+    {
+      "id": "p36",
+      "title": "Amazon availability issues",
+      "prompt": "Watch Seller Central for stranded inventory, suppressed listings, FBA receiving delays and restock limits, and tell me which problems are Amazon availability issues rather than real stock shortages.",
+      "url": "https://www.flieber.com/put-flieber-to-work#p36",
+      "modules": [
+        "data-layer"
+      ],
+      "schedule": "scheduled",
+      "approval": "read_only",
+      "connections": [],
+      "custom_configuration": true
     }
   ],
   "use_cases": [

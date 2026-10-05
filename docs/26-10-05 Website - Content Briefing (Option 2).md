@@ -1105,10 +1105,10 @@ Everything works in the Flieber app, in Slack and in any MCP-compatible agent, s
 
 *What Flieber does:* routes orders to the regions or warehouses you set and projects each location's needs. *What you get:* units needed by warehouse and product for the next 30 days.
 
-**P19 · Inventory that doesn't match** · Data layer · Runs on schedule · Read only · **Confirm**
+**P19 · Inventory that doesn't match** · Data layer · Runs on schedule · Read only · Requires custom configuration
 > "Compare inventory levels between Flieber, Shopify, Amazon and our 3PL every morning. If numbers don't match, investigate the likely reason and tell me which system to trust."
 
-*What Flieber does:* compares balances across connected systems and investigates each mismatch. *What you get:* a daily list of mismatches with the likely cause. **Confirm:** cross-system reconciliation is not a listed feature.
+*What Flieber does:* compares balances across connected systems and investigates each mismatch. *What you get:* a daily list of mismatches with the likely cause. **Requires custom configuration:** connect the right sources through Flieber's MCP client; not available out of the box (Fabricio, Oct 5).
 
 ### Promotions and ads
 
@@ -1149,20 +1149,20 @@ Everything works in the Flieber app, in Slack and in any MCP-compatible agent, s
 
 *What Flieber does:* reviews PO and shipment history and supplier emails for each supplier. *What you get:* a supplier scorecard with the patterns that affect your plan.
 
-**P27 · Freight ETA changes** · Workflows · Runs on schedule · Changes after your approval · **Confirm**
+**P27 · Freight ETA changes** · Workflows · Runs on schedule · Changes after your approval · Requires custom configuration
 > "When a freight forwarder or carrier updates an ETA, update the shipment in Flieber and recalculate whether any destination will stock out before arrival."
 
-**Confirm:** reading freight forwarder updates and carrier tracking links is not a listed feature.
+**Requires custom configuration:** connect the right sources through Flieber's MCP client; not available out of the box (Fabricio, Oct 5).
 
-**P28 · 3PL receiving check** · Workflows · Runs on schedule · Changes after your approval · **Confirm**
+**P28 · 3PL receiving check** · Workflows · Runs on schedule · Changes after your approval · Requires custom configuration
 > "Every day, compare our 3PL receiving reports with expected inbound shipments. If fewer units arrived than expected, flag it and update the received quantity only after my approval."
 
-**Confirm:** reading 3PL receiving reports is not a listed feature.
+**Requires custom configuration:** connect the right sources through Flieber's MCP client; not available out of the box (Fabricio, Oct 5).
 
-**P29 · Landed cost changes** · Workflows · Runs on schedule · Read only · **Confirm**
+**P29 · Landed cost changes** · Workflows · Runs on schedule · Read only · Requires custom configuration
 > "Compare supplier and freight invoices with PO costs and tell me which SKUs had landed cost changes that materially affect margin."
 
-**Confirm:** invoices and landed cost are not listed features; the strategy doc names landed cost as a data gap.
+**Requires custom configuration:** connect the right sources through Flieber's MCP client; not available out of the box (Fabricio, Oct 5).
 
 ### Overstock and cash
 
@@ -1200,10 +1200,10 @@ Everything works in the Flieber app, in Slack and in any MCP-compatible agent, s
 
 *What Flieber does:* compares balance changes with open POs and inbound shipments at each location. *What you get:* an alert for each PO that may be double counted, and for receipts that never reached the balance.
 
-**P36 · Amazon availability issues** · Data layer · Runs on schedule · Read only · **Confirm**
+**P36 · Amazon availability issues** · Data layer · Runs on schedule · Read only · Requires custom configuration
 > "Watch Seller Central for stranded inventory, suppressed listings, FBA receiving delays and restock limits, and tell me which problems are Amazon availability issues rather than real stock shortages."
 
-**Confirm:** stranded inventory, suppressed listings and restock limits are not listed features.
+**Requires custom configuration:** connect the right sources through Flieber's MCP client; not available out of the box (Fabricio, Oct 5).
 
 ### 15.5 Where the library feeds other pages
 
@@ -1221,9 +1221,9 @@ The /mcp example conversations stay as they are: they show answers with sample n
 
 - **/llms.txt:** a "Put Flieber to work" line with the URL.
 - **/llms-full.txt:** every entry in full.
-- **/capabilities.json:** `"prompts": [ { "id": "P1", "title": "string", "prompt": "string", "modules": ["string"], "schedule": "once | scheduled", "approval": "read_only | asks_first | after_approval", "connections": ["string"] } ]`, excluding entries still marked Confirm.
+- **/capabilities.json:** `"prompts": [ { "id": "P1", "title": "string", "prompt": "string", "modules": ["string"], "schedule": "once | scheduled", "approval": "read_only | asks_first | after_approval", "connections": ["string"] } ]`, with `custom_configuration` true for the five jobs that need sources connected through the MCP client.
 - **/agents:** one line under "Capabilities" pointing to /put-flieber-to-work.
 
 ### 15.7 Status
 
-Built on the preview on Oct 5 for Fabricio's review there. The five entries that rely on capabilities not listed on /features (P19, P27, P28, P29, P36) are on the page with a yellow "[TO CONFIRM]" tag, are left out of capabilities.json and are counted by `scripts/check-placeholders.py` until Fabricio confirms or drops them. Supplier behavior tracking (P26) is live (Fabricio, Oct 5).
+Built on the preview on Oct 5. Five jobs (P19, P27, P28, P29, P36) are not out of the box: they work once the customer connects the right sources through Flieber's MCP client (Fabricio, Oct 5). Their cards carry a yellow note, "**Requires custom configuration.** Connect the right sources through Flieber's MCP client; not available out of the box.", and they are flagged `custom_configuration: true` in capabilities.json and noted in llms-full.txt. Supplier behavior tracking (P26) is live (Fabricio, Oct 5).

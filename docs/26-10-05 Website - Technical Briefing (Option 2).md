@@ -118,7 +118,7 @@ Machine-readable additions to Option 1:
 - **/llms-full.txt:** full text of the five module pages, /mcp, /multichannel and /agencies after /features.
 - **/agents:** the MCP server line in "Connect and try" adds "How it works, with example conversations: https://www.flieber.com/mcp".
 - **/llms.txt** also gets "Vibe coders", "Use cases", "Managed Services" and "Who we are" sections, and the integration pages under "Integrations". **/llms-full.txt** adds /vibe-coders, the ten use-case pages, /managed-services and /who-we-are. **/agents** adds a "Use cases" section and Vibe coders under "By type of business".
-- **/capabilities.json:** `prompts` (id, title, prompt, url, modules, schedule, approval, connections) for the confirmed jobs; `positioning`; `use_cases` (id, name, url) for the ten pages; Vibe coders in `solutions`; `modules` (id, name, url, sold_separately, feature ids; `sold_separately` is true only for the data layer); `solutions` (id, name, url) for the two solutions pages; a "Data layer only" option with `delivery` ["mcp", "api"] under the Self-Serve offer. No comparison fields.
+- **/capabilities.json:** `prompts` (id, title, prompt, url, modules, schedule, approval, connections, custom_configuration) for all 36 jobs; `positioning`; `use_cases` (id, name, url) for the ten pages; Vibe coders in `solutions`; `modules` (id, name, url, sold_separately, feature ids; `sold_separately` is true only for the data layer); `solutions` (id, name, url) for the two solutions pages; a "Data layer only" option with `delivery` ["mcp", "api"] under the Self-Serve offer. No comparison fields.
 
 ## Copy and design rules
 
@@ -341,6 +341,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 5 | Five jobs (P19 cross-system inventory comparison, P27 freight ETA updates, P28 3PL receiving reports, P29 invoices and landed cost, P36 Amazon availability issues) are possible but not out of the box: they need the right sources connected through Flieber's MCP client. Their cards say "Requires custom configuration" in a yellow note |
 | Oct 5 | New page /put-flieber-to-work ("Put Flieber to work", chosen over "Prompt library" and "What you can ask Flieber"): 36 jobs from the AI Lab Product Strategy (May 29) and the site's own prompts, in the Product menu after the divider and in the footer. It is the single source of example prompts; prompts are never copied from customer accounts and there is no live feed for now |
 | Oct 5 | Supplier behavior tracking confirmed live |
 | Oct 5 | Solutions menu: a divider before Before you choose, which is a buyer resource rather than an audience (as in the Product menu); on phones the divider shows as a gap |
@@ -403,7 +404,7 @@ Before an option is elected:
 - [ ] Fabricio reviews "What we believe" on /who-we-are (drawn from the May 2026 strategy document)
 - [ ] Fabricio (with engineering) makes the MCP URL, sign-in flow and per-assistant setup steps public for /mcp and /vibe-coders
 - [ ] Fabricio expands the use-case pages, which are short for pages meant to rank (lead, three or four points, two requests, two questions)
-- [ ] Fabricio reviews /put-flieber-to-work on the preview and confirms or drops the five jobs tagged [TO CONFIRM]: P19 cross-system inventory comparison, P27 freight ETA updates, P28 3PL receiving reports, P29 invoices and landed cost, P36 Amazon availability issues
+- [ ] Fabricio reviews /put-flieber-to-work on the preview
 - [ ] Fabricio and the team compare both previews and elect one option
 
 If Option 2 is elected:
