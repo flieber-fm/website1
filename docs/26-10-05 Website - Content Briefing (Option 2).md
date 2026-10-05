@@ -847,7 +847,7 @@ A search field ("Search for your channel, ERP, 3PL or app") and filters (All, Na
 
 **Closing:** H2 "Don't see your system?" · Body "Book a demo and we'll tell you how we'd connect it." · *Buttons:* Book a demo · Start free trial
 
-**Data types and logos** come from the live page. Differences from it, on purpose: TikTok Shop is native (Oct 2), Unleashed appears once, "brightpeart" is spelled Brightpearl, Walmart transfers go to WFS (the live page says WMS), SPS Commerce and Apparel Magic are added (no logo or data types on the live page). Eight logos drawn for a dark background (QuickBooks, Zoho, Linnworks, DEAR Systems, NetSuite, AMZ Prep, GoFlow, Google Sheets) show by name only.
+**Data types and logos** come from the live page. Differences from it, on purpose: TikTok Shop is native (Oct 2), Unleashed appears once, "brightpeart" is spelled Brightpearl, Walmart transfers go to WFS (the live page says WMS), SPS Commerce (Purchase orders) and Apparel Magic (Sales) are added, without a logo (data types from Fabricio, Oct 5). Every other system shows its logo, taken from the live page or Flieber's HubSpot file library.
 
 ### 8.2 Integration pages
 

@@ -1,7 +1,7 @@
 """Integrations page data (/integrations), restructured after the live flieber.com/integrations (Oct 5).
 
 Logos and data types (Sales, Inventory, Shipments) come from the live page; names follow the approved lists in
-site_content (NATIVE, ASSISTED). SPS Commerce and Apparel Magic were not on the live page: no logo, no data types.
+site_content (NATIVE, ASSISTED). SPS Commerce and Apparel Magic were not on the live page: no logo; data types from Fabricio (Oct 5).
 """
 
 LOGOS = {  # name: (logo path, data types)
@@ -11,7 +11,7 @@ LOGOS = {  # name: (logo path, data types)
     'eBay': ('assets/integrations/ebay.png', ['Sales']),
     'Etsy': ('assets/integrations/etsy.png', ['Sales']),
     'BigCommerce': ('assets/integrations/bigcommerce.png', ['Sales', 'Inventory']),
-    'Google Sheets': (None, ['Sales', 'Inventory', 'Shipments']),
+    'Google Sheets': ('assets/integrations/google-sheets.png', ['Sales', 'Inventory', 'Shipments']),
     'Shopify Plus': ('assets/integrations/shopify-plus.png', ['Sales', 'Inventory']),
     'Amazon Vendor Central': ('assets/integrations/amazon-vendor-central.jpg', ['Sales']),
     'TikTok Shop': ('assets/integrations/tiktok-shop.png', ['Sales', 'Inventory']),
@@ -20,16 +20,16 @@ LOGOS = {  # name: (logo path, data types)
     'Mercado Libre': ('assets/integrations/mercado-libre.png', ['Sales', 'Inventory']),
     'bol.com': ('assets/integrations/bol-com.png', ['Sales', 'Inventory']),
     'PrestaShop': ('assets/integrations/prestashop.png', ['Sales', 'Inventory']),
-    'QuickBooks': (None, ['Shipments', 'Inventory']),
+    'QuickBooks': ('assets/integrations/quickbooks.png', ['Shipments', 'Inventory']),
     'Xero': ('assets/integrations/xero.png', ['Inventory', 'Shipments']),
-    'Zoho': (None, ['Inventory', 'Shipments']),
+    'Zoho': ('assets/integrations/zoho.png', ['Inventory', 'Shipments']),
     'Cin7': ('assets/integrations/cin7.png', ['Sales', 'Inventory', 'Shipments']),
     'Sage': ('assets/integrations/sage.png', ['Sales', 'Inventory', 'Shipments']),
-    'Linnworks': (None, ['Sales', 'Inventory', 'Shipments']),
+    'Linnworks': ('assets/integrations/linnworks.png', ['Sales', 'Inventory', 'Shipments']),
     'Brightpearl': ('assets/integrations/brightpearl.png', ['Sales', 'Inventory', 'Shipments']),
     'Luminous': ('assets/integrations/luminous.png', ['Sales', 'Inventory', 'Shipments']),
     'Finale': ('assets/integrations/finale.png', ['Sales', 'Inventory', 'Shipments']),
-    'DEAR Systems': (None, ['Sales', 'Inventory', 'Shipments']),
+    'DEAR Systems': ('assets/integrations/dear-systems.png', ['Sales', 'Inventory', 'Shipments']),
     'Fishbowl': ('assets/integrations/fishbowl.png', ['Sales', 'Inventory', 'Shipments']),
     'SkuVault': ('assets/integrations/skuvault.png', ['Inventory', 'Shipments']),
     'ShipStation': ('assets/integrations/shipstation.png', ['Sales', 'Inventory']),
@@ -42,9 +42,9 @@ LOGOS = {  # name: (logo path, data types)
     'Veeqo': ('assets/integrations/veeqo.png', ['Inventory', 'Shipments']),
     'Flowspace': ('assets/integrations/flowspace.png', ['Inventory', 'Shipments']),
     'Everstox': ('assets/integrations/everstox.png', ['Inventory', 'Shipments']),
-    'GoFlow': (None, ['Inventory', 'Shipments']),
+    'GoFlow': ('assets/integrations/goflow.png', ['Inventory', 'Shipments']),
     'Fulfil': ('assets/integrations/fulfil.png', ['Inventory', 'Shipments']),
-    'AMZ Prep': (None, ['Inventory', 'Shipments']),
+    'AMZ Prep': ('assets/integrations/amz-prep.png', ['Inventory', 'Shipments']),
     'Logiwa': ('assets/integrations/logiwa.png', ['Inventory', 'Shipments']),
     'Unleashed': ('assets/integrations/unleashed.png', ['Inventory', 'Shipments']),
     'ShipMonk': ('assets/integrations/shipmonk.png', ['Inventory', 'Shipments']),
@@ -54,7 +54,9 @@ LOGOS = {  # name: (logo path, data types)
     'CEVA Logistics': ('assets/integrations/ceva-logistics.png', ['Inventory', 'Shipments']),
     'World Depot Inc.': ('assets/integrations/world-depot-inc.png', ['Inventory', 'Shipments']),
     'ZhenHub': ('assets/integrations/zhenhub.png', ['Inventory', 'Shipments']),
-    'NetSuite': (None, ['Sales', 'Inventory']),
+    'NetSuite': ('assets/integrations/netsuite.png', ['Sales', 'Inventory']),
+    'SPS Commerce': (None, ['Purchase orders']),  # Fabricio, Oct 5
+    'Apparel Magic': (None, ['Sales']),  # Fabricio, Oct 5
 }
 
 NATIVE_DESC = {
@@ -82,5 +84,4 @@ SEARCH_PLACEHOLDER = 'Search for your channel, ERP, 3PL or app'
 API_BODY = ("Agents such as Claude, ChatGPT and Cursor connect to Flieber through its MCP server, and your own systems can use "
             "the public API.")
 
-# Logos drawn for a dark background on the old site; shown by name only here.
-NO_LOGO = {"QuickBooks", "Zoho", "Linnworks", "DEAR Systems", "NetSuite", "AMZ Prep", "GoFlow", "Google Sheets"}
+NO_LOGO = set()  # names to show without a logo

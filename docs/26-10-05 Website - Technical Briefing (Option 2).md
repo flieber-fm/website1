@@ -413,7 +413,8 @@ If Option 2 is elected:
 
 - [ ] Upload the Option 2 templates to HubSpot and create the 37 drafts under /new-site-2026-b/
 - [ ] Upload Option 2's llms.txt, llms-full.txt and capabilities.json to `flieber-2026`, replacing Option 1's
-- [ ] Upload `assets/integrations/` (42 logos) to `flieber-2026`; the logos are copies of the ones on the live /integrations page
+- [ ] Upload `assets/integrations/` (50 logos) to `flieber-2026`; they are copies of the logos on the live /integrations page and in Flieber's HubSpot file library (NetSuite and GoFlow), not taken from the brands' own press kits
+- [ ] SPS Commerce and Apparel Magic have no logo; add one if a file becomes available
 - [ ] Update `hubspot/CUTOVER.md` with the draft IDs
 - [ ] Fabricio reviews the drafts in HubSpot Preview (fonts, logos, the six-layer animation, the Product and Solutions menus, phone menu, any HubSpot banner or chat widget)
 - [ ] Check whether ads point to /old-home-page before it is redirected
