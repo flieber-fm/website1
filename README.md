@@ -2,7 +2,7 @@
 
 **This branch (`claude/eager-bohr-ui8a03`) is Option 2.** Option 1 lives on `claude/gracious-dijkstra-qgcgls` and is not touched from here. Both are built in parallel so Fabricio and the team can compare and elect one (Option 2 brief, section 1).
 
-Copy source: *26-10-02 Website - Content Briefing (Option 2)*, on top of the Option 1 Content and Technical Briefings of October 2. Build, links, claims and the HubSpot switch plan: `docs/26-10-02 Website - Technical Briefing (Option 2).md`. Same layout, design system and copy rules as Option 1; the content and structure change.
+Copy source: `docs/26-10-05 Website - Content Briefing (Option 2).md` (latest), on top of the Option 1 Content and Technical Briefings of October 2. Build, links, claims and the HubSpot switch plan: `docs/26-10-05 Website - Technical Briefing (Option 2).md`. Same layout, design system and copy rules as Option 1; the content and structure change.
 
 What Option 2 changes (revised brief, October 2):
 

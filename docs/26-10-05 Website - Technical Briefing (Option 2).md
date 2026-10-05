@@ -1,10 +1,10 @@
-# Flieber Website Brief, Option 2 (October 3, 2026)
+# 26-10-05 Website - Technical Briefing (Option 2)
 
-Oct 3, 2026 · @Fabricio Miranda
+Oct 5, 2026 · @Fabricio Miranda
 
 ## Purpose and status
 
-Option 2 (Collaborative AI) of the new flieber.com is built in parallel with Option 1 so Fabricio and the team can compare both sites and elect one, then converge on a final version. This brief is the technical companion to the Content Briefing (Option 2) of October 2 and follows the same format as the Option 1 Technical Briefing. Where the two options share a rule, it is repeated here so this brief stands on its own. Nothing in HubSpot is created, edited or published for Option 2 until Fabricio elects an option and gives an explicit go.
+Option 2 (Collaborative AI) of the new flieber.com is built in parallel with Option 1 so Fabricio and the team can compare both sites and elect one, then converge on a final version. This brief is the technical companion to the Content Briefing (Option 2) of October 5 (26-10-05 Website - Content Briefing (Option 2)); the two are in sync with each other and with the preview and follows the same format as the Option 1 Technical Briefing. Where the two options share a rule, it is repeated here so this brief stands on its own. Nothing in HubSpot is created, edited or published for Option 2 until Fabricio elects an option and gives an explicit go.
 
 | Where | What is there | State |
 | --- | --- | --- |
@@ -338,6 +338,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 5 | Content Briefing (Option 2) and this brief re-issued as 26-10-05, reflecting every decision below |
 | Oct 3 | Solutions overlap accepted (a multichannel brand or an agency can also vibe code); /multichannel and /agencies link to /vibe-coders: "Building your own tools with AI? Start from Flieber's data layer →" |
 | Oct 3 | Third solution renamed from "Build with AI" to "Vibe coders" (URL /vibe-coders): "Build with AI" read as building something inside Flieber; "Vibe coders" is the term the market recognises, and the page body still serves data teams |
 | Oct 3 | The vibe coders page speaks to vibe coders: H1 "Vibe coding your own tools? Start from data that's already right", the lead names Claude, Cursor and ChatGPT, the homepage card and "Why not build it all yourself?" use the term. |
@@ -393,7 +394,6 @@ Before an option is elected:
 
 - [ ] Fabricio's photo for the founder section (a monogram marked `[FOUNDER PHOTO]` stands in on the preview)
 - [ ] Fabricio confirms the claims first used in Option 2: "Proprietary algorithms, not language models", "more than 1,000 commerce brands" in the planning engine and planner copy, the /multichannel "For most brands" line and the regional markets example for sales order routing
-- [ ] Content Briefing (Option 2) synced with the site: section 4.13 still says "We share your price during the trial" (the site now says "Flieber shows your price as soon as onboarding is done, before you pay anything"); section 4 says "Twelve sections plus footer" but lists thirteen; section 10 says /pricing, /security and /contact are shared with Option 1, while their templates must differ (header and footer)
 - [ ] Fabricio reviews "What we believe" on /who-we-are (drawn from the May 2026 strategy document)
 - [ ] Fabricio (with engineering) makes the MCP URL, sign-in flow and per-assistant setup steps public for /mcp and /vibe-coders
 - [ ] Fabricio expands the use-case pages, which are short for pages meant to rank (lead, three or four points, two requests, two questions)
