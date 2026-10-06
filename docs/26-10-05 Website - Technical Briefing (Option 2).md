@@ -341,6 +341,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 6 | The agent repositioning of the homepage was rolled back: the main homepage stays as it was. The agent-first versions live as five review variants at /home-variants/ (V1 Layer, V2 What agents know, V3 The right purchase order, V4 Bring your own AI, V5 Ask, automate, build), generated from the main page by scripts/build-home-variants.py. All five share the same follow-ons (agent hero card, doors, roles section, How Flieber is built lead) and differ in eyebrow, H1 and subhead. Not in the sitemap or llms files |
 | Oct 6 | /managed-services FAQ is collapsible (same details/summary markup and style as the /pricing FAQ), so only the 18 questions show until clicked. Other pages keep the open FAQ list |
 | Oct 6 | /managed-services FAQ to 18: hours (8am to 6pm ET as a rule, adjustable for Europe, Australia and other distant time zones) and languages (English, with native Spanish and Portuguese speakers among others). How planner access is controlled stays a demo follow-up, not on the page |
 | Oct 6 | /managed-services FAQ to 16 with Fabricio's answers: switch Lite/Full at the end of any billing cycle; monthly contract (also in the Pricing line); no free trial (tailored, paid from day one; the platform can be tried with the Self-Serve trial); a dedicated planner backed by a wider team; planners get the access the brand chooses, at a minimum full access to the brand's Flieber account data |

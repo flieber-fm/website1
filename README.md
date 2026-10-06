@@ -22,6 +22,8 @@ What Option 2 changes (revised brief, October 2):
 
 Build: `python3 scripts/build-content.py` regenerates /features, the module pages, /multichannel, /agencies, the /agents body, the three machine-readable files and the nav and footer of every page. The homepage, /pricing, /security and /contact bodies are edited by hand.
 
+Homepage variants (review only): `python3 scripts/build-home-variants.py`, run after build-content.py, writes /home-variants/ (a comparison hub) and /home-variants/1/ to /5/: the main homepage plus agent-first hero copy and follow-ons, with a compare bar on each page. Noindex like the rest of the preview, not in the sitemap or llms files. Delete the folder and its Dockerfile line once a version is chosen.
+
 Choices made while building (open to change):
 
 - **"Connect your sales channels and inventory"** is listed in the brief as a Data layer feature without a description. Its card uses the approved integrations wording from the Technical Briefing
