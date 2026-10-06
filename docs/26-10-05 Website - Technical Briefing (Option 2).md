@@ -341,6 +341,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 6 | Flieber's engineers can also build custom features and capabilities, only after approval from the Flieber team (fourth block in "What they build") |
 | Oct 6 | Third solution renamed "Customize Flieber" (/customize), replacing "Vibe coders": two paths on one page, build it yourself (the vibe-coding section stays) or have Flieber's engineers (forward-deployed engineers) build it: app customizations, dashboards and reports, tailored frontends, integrations, agents and workflows; quoted per project, separate from Managed Services, for qualified accounts, with a "Check if you qualify" button. Also on /pricing, /managed-services, /agents, llms files and capabilities.json (offers) |
 | Oct 6 | /managed-services, "What our planners do" reordered: S&OP meetings, keep Flieber accurate, sounding board, planning practice |
 | Oct 5 | /integrations restructured after the live page: three data types, a searchable directory with filters, native cards and assisted tiles with logos and data types, keeping the MCP and API section; fixes TikTok Shop (native), the duplicate Unleashed, "brightpeart" and Walmart "WMS" (WFS) |

@@ -652,6 +652,7 @@ Pricing for the data layer on its own is being defined (Fabricio and Karyna). Un
 - **Customizations of the Flieber app** Views, fields and screens adjusted to how your team plans.
 - **Custom dashboards and reports** The numbers your team and leadership look at, built on live Flieber data.
 - **Tailored frontends** An interface designed around how your business runs, using the same API as Flieber's own app.
+- **Custom features and capabilities** New features or capabilities built for your operation, only after approval from the Flieber team.
 - **Custom integrations** Connections to the systems your operation depends on that Flieber doesn't connect to yet.
 - **Custom agents and workflows** Recurring jobs and agents built for your process, under your approval rules.
 
@@ -664,7 +665,7 @@ Pricing for the data layer on its own is being defined (Fabricio and Karyna). Un
 
 **Closing:** H2 "Make Flieber fit your business" · Body "Start a 14-day free trial and build on your own data, or check whether your account qualifies for our engineers." · *Buttons:* Start free trial · Check if you qualify
 
-**Elsewhere:** homepage Solutions card "Customize Flieber" (Build your own reports, dashboards and agents on Flieber's data, or have our engineers build them for you.); /multichannel and /agencies: "Want tools built around your business? Customize Flieber yourself or with our engineers →"; /pricing, under the plans: "Need something built for you? Flieber's engineers build app customizations, dashboards, tailored frontends, integrations and agents, quoted per project, for qualified accounts. Check if you qualify →"; /managed-services, "How it works with the rest of Flieber", adds "Custom builds by Flieber's engineers are a separate project, quoted on their own."; /agents and llms.txt, Pricing and terms: "Flieber's engineers (custom builds): app customizations, dashboards and reports, tailored frontends, integrations, agents and workflows built for the brand; quoted per project, separate from Managed Services; for qualified accounts."; capabilities.json: a third entry under offers.
+**Elsewhere:** homepage Solutions card "Customize Flieber" (Build your own reports, dashboards and agents on Flieber's data, or have our engineers build them for you.); /multichannel and /agencies: "Want tools built around your business? Customize Flieber yourself or with our engineers →"; /pricing, under the plans: "Need something built for you? Flieber's engineers build app customizations, dashboards, tailored frontends, integrations and agents, quoted per project, for qualified accounts. Check if you qualify →"; /managed-services, "How it works with the rest of Flieber", adds "Custom builds by Flieber's engineers are a separate project, quoted on their own."; /agents and llms.txt, Pricing and terms: "Flieber's engineers (custom builds): app customizations, dashboards and reports, tailored frontends, custom features and capabilities (after approval from the Flieber team), integrations, agents and workflows built for the brand; quoted per project, separate from Managed Services; for qualified accounts."; capabilities.json: a third entry under offers.
 
 
 ## 7. Use-case pages

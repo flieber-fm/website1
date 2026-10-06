@@ -153,7 +153,7 @@ All integrations: https://www.flieber.com/integrations
 - 14-day free trial, no credit card required.
 - Unlimited users on every plan, including the free trial.
 - Standard setup included; customizations come with a paid plan.
-- Flieber's engineers (custom builds): app customizations, dashboards and reports, tailored frontends, integrations, agents and workflows built for the brand; quoted per project, separate from Managed Services; for qualified accounts.
+- Flieber's engineers (custom builds): app customizations, dashboards and reports, tailored frontends, custom features and capabilities (after approval from the Flieber team), integrations, agents and workflows built for the brand; quoted per project, separate from Managed Services; for qualified accounts.
 
 ## Data handling
 
