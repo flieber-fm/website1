@@ -940,8 +940,7 @@ def sync_home_asks() -> None:
         c2 = re.sub(r'<span>“.*?”</span>', lambda _: f'<span>“{esc(e["prompt"])}”</span>', c2, count=1, flags=re.S)
         new = new.replace(card, c2)
     new = re.sub(r'<p class="link-row reveal">.*?</p>',
-                 f'<p class="link-row reveal"><a class="link-arrow" href="{W.PAGE["slug"]}/">{esc(W.PAGE["more"])} <span class="arrow" aria-hidden="true">→</span></a> '
-                 f'<a class="link-arrow" href="features/">See every feature <span class="arrow" aria-hidden="true">→</span></a></p>', new, count=1, flags=re.S)
+                 f'<p class="link-row reveal"><a class="link-arrow" href="{W.PAGE["slug"]}/">{esc(W.PAGE["more"])} <span class="arrow" aria-hidden="true">→</span></a></p>', new, count=1, flags=re.S)
     f.write_text(s[:start] + new + s[end:], encoding="utf-8")
 
 

@@ -30,7 +30,7 @@ FEATURES_INTRO = ("Flieber keeps a current picture of how your business works, r
                   "feature works the same whether you use it in the Flieber app, ask for it in plain language, or call it "
                   "from your own agents and systems through MCP or API.")
 FEATURES_NOTE = ("Available with Flieber Self-Serve and Flieber Managed Services. During the 14-day free trial, data "
-                 "comes in through native integrations; assisted integrations and customizations come with a paid plan. "
+                 "comes in through native integrations; assisted integrations and simple customizations come with a paid plan. "
                  "Features marked \"on request\" are rolling out and are switched on when you ask.")
 
 # Grouped by module (Option 2 brief, section 7). Every Option 1 feature card is kept; "Reports and dashboards"
@@ -230,7 +230,7 @@ CONNECTED_APPS = ["Gmail", "Outlook", "Slack", "Microsoft Teams", "Google Sheets
                   "Meta Ads", "Google Ads", "NetSuite"]
 
 CONNECT = [
-    ("Free trial", "14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and customizations require a paid plan.", TRIAL),
+    ("Free trial", "14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan.", TRIAL),
     ("MCP server", "Claude, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required):", DEV_DOCS),
     ("MCP client", "Flieber connects to any system with an MCP server. Built-in connections: " + ", ".join(CONNECTED_APPS) + ".", None),
     ("Public API", "Programmatic access to Flieber data. Details (customer login required):", DEV_DOCS),

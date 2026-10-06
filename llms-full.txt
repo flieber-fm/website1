@@ -6,7 +6,7 @@ The complete text of https://www.flieber.com/features, the five module pages, ht
 
 Flieber keeps a current picture of how your business works, recommends your next move and acts on it, together with your team, your agents and your systems. Five modules cover the way from your data to a decision you can act on. Every feature works the same whether you use it in the Flieber app, ask for it in plain language, or call it from your own agents and systems through MCP or API.
 
-Available with Flieber Self-Serve and Flieber Managed Services. During the 14-day free trial, data comes in through native integrations; assisted integrations and customizations come with a paid plan. Features marked "on request" are rolling out and are switched on when you ask.
+Available with Flieber Self-Serve and Flieber Managed Services. During the 14-day free trial, data comes in through native integrations; assisted integrations and simple customizations come with a paid plan. Features marked "on request" are rolling out and are switched on when you ask.
 
 ### Data layer: Your commerce data, consolidated, contextualized and current
 
@@ -1106,7 +1106,7 @@ Every write follows approval rules the brand sets. By default every write requir
 
 ### Connect and try
 
-- Free trial: 14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and customizations require a paid plan. https://www.flieber.com/free-trial
+- Free trial: 14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan. https://www.flieber.com/free-trial
 - MCP server: Claude, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required): https://app.flieber.com/app/developers
 - MCP client: Flieber connects to any system with an MCP server. Built-in connections: Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads, NetSuite.
 - Public API: Programmatic access to Flieber data. Details (customer login required): https://app.flieber.com/app/developers

@@ -111,9 +111,9 @@ Thirteen sections plus footer, top to bottom. Each section after the hero opens 
 
 **Decision simulation card:** as in Option 1 (six sample scenarios, same four metric rows, labeled as illustrative sample data).
 
-**Door 1: Let our planners help you run it** Flieber's planners join your team as a sounding board for every decision. They're specialists who master Flieber, keep the data behind your decisions accurate and take part in your S&OP meetings to help run your planning practice. *Button:* Book a demo *Link under the button:* Managed Services → /managed-services
+**Door 1: Let our planners help you run it** Flieber's planners join your team as a sounding board for every decision. They're specialists who master Flieber, keep the data behind your decisions accurate and take part in your S&OP meetings to help run your planning practice. Learn more about Managed Services → (inline link at the end of the text, to /managed-services, so it doesn't compete with the button) *Button:* Book a demo
 
-**Door 2: Run it yourself** Plan with Flieber's AI in the Flieber app, or connect it to Claude, Slack, your agents and systems through MCP or API. *Button:* Start free trial. *Under the button:* App, MCP or API. Same data, same context.
+**Door 2: Run it yourself** Plan with Flieber's AI in the Flieber app, or connect it to Claude, Slack, your agents and systems through MCP or API. Every way in works from the same data and context. *Button:* Start free trial (nothing next to it)
 
 **Under the doors:** 14-day free trial · No credit card · Monthly contracts · Setup included
 
@@ -200,7 +200,7 @@ Three equal cards:
 
 ### 4.8 What you can do with it
 
-As in Option 1, section 3.5 (H2 "Ask anything your operation depends on", six cards), except that the six prompts are entries P4, P14, P22, P6, P32 and P23 of /put-flieber-to-work (section 15), each card links to its entry, and the section ends with "More ways to put Flieber to work →" and "See every feature →".
+As in Option 1, section 3.5 (H2 "Ask anything your operation depends on", six cards), except that the six prompts are entries P4, P14, P22, P6, P32 and P23 of /put-flieber-to-work (section 15), each card links to its entry, and the section ends with "More ways to put Flieber to work →" only ("See every feature" stays in the other sections of the page).
 
 ### 4.9 Two ways to work with Flieber
 
@@ -308,7 +308,7 @@ Four short items, each from the approved security wording:
 
 **Body:** Start a 14-day free trial, no credit card required and no demo call. Flieber shows your price as soon as onboarding is done, before you pay anything.
 
-Trial details (native integrations during the trial; assisted integrations and customizations on paid plans) and both buttons as in Option 1, section 3.8.
+Trial details (native integrations during the trial; assisted integrations and simple customizations on paid plans) and both buttons as in Option 1, section 3.8.
 
 **Pricing consistency:** /pricing in Option 2 says the same: "Priced to your operation" with "Based on the features you enable and your data volume. Flieber shows your price as soon as onboarding is done, before you pay anything." /agents and llms.txt say "Flieber shows the price as soon as onboarding is done, before the brand pays anything." This replaces "the exact price is shared on a demo" everywhere in Option 2. On /pricing, the data layer line reads "The data layer can also be bought on its own, through MCP and API. Start with a 14-day free trial on your own data, no credit card required." (linking to /customize), and the Managed Services card title links to /managed-services.
 
@@ -665,7 +665,7 @@ Pricing for the data layer on its own is being defined (Fabricio and Karyna). Un
 
 **Closing:** H2 "Make Flieber fit your business" · Body "Start a 14-day free trial and build on your own data, or check whether your account qualifies for our engineers." · *Buttons:* Start free trial · Check if you qualify
 
-**Elsewhere:** homepage Solutions card "Customize Flieber" (Build your own reports, dashboards and agents on Flieber's data, or have our engineers build them for you.); /multichannel and /agencies: "Want tools built around your business? Customize Flieber yourself or with our engineers →"; /pricing, under the plans: "Need something built for you? Flieber's engineers build app customizations, dashboards, tailored frontends, integrations and agents, quoted per project, for qualified accounts. Check if you qualify →"; /managed-services, "How it works with the rest of Flieber", adds "Custom builds by Flieber's engineers are a separate project, quoted on their own."; /agents and llms.txt, Pricing and terms: "Flieber's engineers (custom builds): app customizations, dashboards and reports, tailored frontends, custom features and capabilities (after approval from the Flieber team), integrations, agents and workflows built for the brand; quoted per project, separate from Managed Services; for qualified accounts."; capabilities.json: a third entry under offers.
+**Elsewhere:** homepage Solutions card "Customize Flieber" (Vibe code your own reports, dashboards and agents on Flieber's data, or have our engineers build them for you.); /multichannel and /agencies: "Want tools built around your business? Customize Flieber yourself or with our engineers →"; /pricing, under the plans: "Need something built for you? Flieber's engineers build app customizations, dashboards, tailored frontends, integrations and agents, quoted per project, for qualified accounts. Check if you qualify →"; /managed-services, "How it works with the rest of Flieber", adds "Custom builds by Flieber's engineers are a separate project, quoted on their own."; /agents and llms.txt, Pricing and terms: "Flieber's engineers (custom builds): app customizations, dashboards and reports, tailored frontends, custom features and capabilities (after approval from the Flieber team), integrations, agents and workflows built for the brand; quoted per project, separate from Managed Services; for qualified accounts."; capabilities.json: a third entry under offers.
 
 
 ## 7. Use-case pages
