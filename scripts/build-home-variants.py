@@ -17,9 +17,10 @@ VARIANTS = [
     {"name": "Layer",
      "eyebrow": "Built for AI agents and the teams who run them",
      "h1": "The inventory layer your agents run on",
-     "sub": ("Live data from every channel, the business context behind it, a planning engine that does the math and "
-             "workflows that carry out what you approve, all under rules you set. Connect Claude, ChatGPT or your own "
-             "agents through MCP and API. Your team works from the same layer in the Flieber app, in Slack or with our planners.")},
+     "sub": ("Live data from every channel, the business context that connects it, a planning engine that does the math, "
+             "and workflows that carry out what you approve, all under the rules you set. Connect Claude, ChatGPT or your "
+             "own agents through MCP or API. Your team works from the same data layer, whether in the Flieber app, in Slack "
+             "or with the help of our planners.")},
     {"name": "What agents know",
      "eyebrow": "Inventory intelligence for AI agents",
      "h1": "Your agents are only as good as what they know. Flieber is what they know about inventory",
@@ -47,9 +48,10 @@ VARIANTS = [
     {"name": "Intelligence layer",
      "eyebrow": "Built for AI agents and the teams who run them",
      "h1": "The inventory intelligence layer your agents run on",
-     "sub": ("Live data from every channel, the business context behind it, a planning engine that does the math and "
-             "workflows that carry out what you approve, all under rules you set. Connect Claude, ChatGPT or your own "
-             "agents through MCP and API. Your team works from the same layer in the Flieber app, in Slack or with our planners.")},
+     "sub": ("Live data from every channel, the business context that connects it, a planning engine that does the math, "
+             "and workflows that carry out what you approve, all under the rules you set. Connect Claude, ChatGPT or your "
+             "own agents through MCP or API. Your team works from the same data layer, whether in the Flieber app, in Slack "
+             "or with the help of our planners.")},
 ]
 
 # Hero card: the six sample scenarios, shown as requests from agents and people.
