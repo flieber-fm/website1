@@ -43,6 +43,31 @@
         "Sells across many channels, warehouses or regions",
         "Runs kits, bundles, backorders, long lead times or high MOQs",
         "Has a team without time to build or maintain an internal tool"
+      ],
+      "plans": [
+        {
+          "name": "Lite",
+          "scope": "Planning, co-led with your team",
+          "includes": [
+            "Configuration and parameters",
+            "Data loading",
+            "Forecast management",
+            "Anomaly detection",
+            "Replenishment recommendations",
+            "Reporting"
+          ]
+        },
+        {
+          "name": "Full",
+          "scope": "Planning and execution",
+          "includes": [
+            "Purchase and transfer orders",
+            "Production management",
+            "Freight management",
+            "Inbound shipments",
+            "Other specific needs"
+          ]
+        }
       ]
     },
     {

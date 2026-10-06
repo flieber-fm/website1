@@ -765,13 +765,30 @@ def integrations_main() -> str:
 
 def ms_main() -> str:
     M, p = C.MS, "../"
+    tick = '<span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>'
     out = page_head(M["name"], M["h1"], M["lead"], demo_first=True)
-    out += section("what-planners-do", "Planners", M["do_h2"], f'        <div class="why-grid mcp-do">\n{cards(M["do"])}\n        </div>', soft=True)
+    out += section("what-it-is", "Managed Services", M["what_h2"], f'        <p class="feat-approval">{esc(M["what"])}</p>', soft=True)
+    out += section("what-planners-do", "Planners", M["do_h2"], f'        <div class="why-grid mcp-do">\n{cards(M["do"])}\n        </div>', soft=False)
+    plans = []
+    for pl in M["plans"]:
+        items = "\n".join(f'              <li>{tick}<p><b>{esc(t)}</b> {esc(d)}</p></li>' for t, d in pl["items"])
+        plans.append(f'''          <article class="which-card ms-plan" id="{pl["id"]}" aria-labelledby="plan-{pl["id"]}">
+            <h3 class="which-name" id="plan-{pl["id"]}">{esc(pl["name"])}</h3>
+            <p class="which-tag">{esc(pl["tag"])}</p>
+            <h4 class="which-sub">{esc(pl["sub"])}</h4>
+            <ul class="which-list">
+{items}
+            </ul>
+          </article>''')
+    out += section("plans", "Scope", M["plans_h2"], '        <div class="which ms-plans">\n' + "\n".join(plans) + f'''
+        </div>
+        <p class="mcp-note">{esc(M["plans_note"])} <a class="link-arrow" href="{p}{C.BWA["slug"]}/#engineers">Customize Flieber {ARROW}</a></p>''', soft=True, lead=M["plans_lead"])
+    out += section("why-managed-services", "Outcomes", M["why_h2"], f'        <div class="why-grid mcp-do">\n{cards(M["why"])}\n        </div>', soft=False)
     fit = "\n".join(f'            <li>{esc(x)}</li>' for x in M["for"])
-    out += section("who-its-for", "Fit", M["for_h2"], f'        <ul class="ms-for">\n{fit}\n        </ul>', soft=False)
-    out += section("with-flieber", "One product", M["with_h2"], f'        <p class="feat-approval">{esc(M["with"])}</p>', soft=True)
-    out += section("pricing", "Pricing", M["price_h2"], f'        <p class="feat-approval">{esc(M["price"])}</p>', soft=False)
-    out += section("questions", "Questions", "Questions", faq_html(M["faq"]), soft=True)
+    out += section("who-its-for", "Fit", M["for_h2"], f'        <ul class="ms-for">\n{fit}\n        </ul>', soft=True)
+    out += section("with-flieber", "One product", M["with_h2"], f'        <p class="feat-approval">{esc(M["with"])}</p>', soft=False)
+    out += section("pricing", "Pricing", M["price_h2"], f'        <p class="feat-approval">{esc(M["price"])}</p>', soft=True)
+    out += section("questions", "Questions", "Questions", faq_html(M["faq"]), soft=False)
     out += closing(h2=M["close_h2"], body="", demo_first=True)
     return out
 
@@ -1030,8 +1047,13 @@ def pages_text() -> list:
         for q, a in u["faq"]:
             L += [f"**{q}** {a}", ""]
     M = C.MS
-    L += [f"## {M['name']}: {M['h1']}", "", f"{C.SITE}/{M['slug']}", "", M["lead"], "", f"### {M['do_h2']}", ""]
+    L += [f"## {M['name']}: {M['h1']}", "", f"{C.SITE}/{M['slug']}", "", M["lead"], "", f"### {M['what_h2']}", "", M["what"], "",
+          f"### {M['do_h2']}", ""]
     L += [f"- {t}: {d}" for t, d in M["do"]]
+    L += ["", f"### {M['plans_h2']}", "", M["plans_lead"], ""]
+    for pl in M["plans"]:
+        L += [f"**{pl['name']}: {pl['tag']}.** {pl['sub']}:", ""] + [f"- {t}: {d}" for t, d in pl["items"]] + [""]
+    L += [M["plans_note"], "", f"### {M['why_h2']}", ""] + [f"- {t}: {d}" for t, d in M["why"]]
     L += ["", f"### {M['for_h2']}", ""] + [f"- {x}" for x in M["for"]]
     L += ["", f"### {M['with_h2']}", "", M["with"], "", f"### {M['price_h2']}", "", M["price"], ""]
     for q, a in M["faq"]:
@@ -1249,7 +1271,7 @@ def llms_txt() -> str:
          "## Offers", "",
          "Flieber is one product, offered two ways on the same platform:", "",
          "- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; Flieber shows the price as soon as onboarding is done, before the brand pays anything.",
-         "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Quoted per brand. " + C.MANAGED_SERVICES_URL,
+         "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Two plans: Lite (planning) and Full (planning plus execution of approved orders, supplier follow-up, freight and inbound shipments). Quoted per brand. " + C.MANAGED_SERVICES_URL,
          f"- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: {C.SITE}/{C.BWA['slug']}. Start with a 14-day free trial, no credit card required.", "",
          "## Modules", "",
          "One product in five modules. Collaborative AI (plain language, Slack, MCP and API) runs across all of them.", ""] + [
@@ -1344,7 +1366,8 @@ def capabilities() -> dict:
             {"name": "Flieber Self-Serve", "delivery": ["app", "mcp", "api"], "price": "Priced to your operation", "best_for": C.RECOMMEND_SELF,
              "options": [{"name": "Data layer only", "delivery": ["mcp", "api"], "url": f"{C.SITE}/{C.BWA['slug']}", "free_trial": "14 days, no credit card required",
                           "best_for": C.RECOMMEND_DATA_LAYER}]},
-            {"name": "Flieber Managed Services", "delivery": ["managed"], "price": "Quoted per brand", "best_for": C.RECOMMEND_MANAGED},
+            {"name": "Flieber Managed Services", "delivery": ["managed"], "price": "Quoted per brand", "best_for": C.RECOMMEND_MANAGED,
+             "plans": [{"name": pl["name"], "scope": pl["tag"], "includes": [t for t, _ in pl["items"]]} for pl in C.MS["plans"]]},
             {"name": "Flieber's engineers (custom builds)", "delivery": ["service"], "price": "Quoted per project",
              "availability": "Qualified accounts", "separate_from": "Flieber Managed Services", "url": f"{C.SITE}/{C.BWA['slug']}#engineers",
              "builds": [t for t, _ in C.ENG["build"]]},

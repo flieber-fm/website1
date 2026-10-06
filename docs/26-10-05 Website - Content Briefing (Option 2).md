@@ -896,20 +896,52 @@ Lead for each page: "Connect [system] to Flieber and plan it together with every
 
 ## 9. /managed-services
 
-Same URL as today, new copy, so the footer link no longer leads to the old site. Linked from Door 1, the Managed Services card, /pricing and the footer; not in the Solutions menu, because Managed Services is a way to work with Flieber, not a product. Structured data: Service plus FAQPage. Never say "run it for you".
+Same URL as today, new copy, so the footer link no longer leads to the old site. Rebuilt on Oct 6 to match the depth of the live page, including the scope of its two plans (Lite and Full). Linked from Door 1, the Managed Services card, /pricing (which now names both plans and links to #plans) and the footer; not in the Solutions menu, because Managed Services is a way to work with Flieber, not a product. Structured data: Service plus FAQPage. Never say "run it for you". Left out from the live page: "the most modern forecasting models in the market", "celebrated interface" and "AI transformer" (unverifiable or superlative).
 
 **Label:** Managed Services
 
 **H1:** Flieber's planners, on your team
 
-**Lead:** Add Flieber's specialized planners to however you use Flieber. They join your team as a sounding board for every decision, master the platform on your behalf and keep the data behind your decisions accurate.
+**Lead:** Running demand and inventory planning in-house takes time, focus and expertise. Managed Services pairs the Flieber platform with a dedicated team of planners who co-lead your planning process with you. Your team keeps the final say on every decision.
 
-**H2:** What our planners do
+**H2:** What Managed Services is
+
+Flieber's AI forecasts every product on every channel, recommends what to buy and where to move it, and keeps your reports current. Our planners make sure every detail behind it is right, from setup to supplier follow-up. Think of them as an extension of your operations team, so yours can focus on growing the brand.
+
+**H2:** How our planners work with you
 
 - **Take part in your S&OP meetings** Get the full context on everything that affects your decisions, from new channels to supplier changes.
 - **Keep Flieber accurate** Maintain mappings, parameters and the supply chain map as your business changes, so every forecast and recommendation starts from the truth.
 - **Act as a sounding board** Review the big decisions with you before they go out: purchase orders, transfers, promotions and launches.
 - **Help run your planning practice** Bring a proven way of working, drawing on experience from more than 1,000 brands.
+
+**H2:** Two plans, two scopes · *Lead:* Lite covers the planning. Full adds the execution that follows your approval.
+
+**Lite** · *Planning, co-led with your team* · What's included:
+
+- **Configuration and parameters** New products, discontinued products, new channels, warehouse changes. Our planners keep your configuration and parameters up to date.
+- **Data loading** Flieber connects natively to most of your systems. Where you still rely on spreadsheets or disconnected systems, our planners keep sales, inventory and purchase order data in sync.
+- **Forecast management** Flieber's AI forecasting models give a strong baseline. Our planners review the forecasts and add what the data can't see yet, such as promotions.
+- **Anomaly detection** We flag risks early, such as stockouts, overstock and sudden shifts in demand, and help you act fast.
+- **Replenishment recommendations** Purchase and transfer recommendations on your schedule and in your preferred format, ready for your approval.
+- **Reporting** Recurring reports tailored to each team, in the format and frequency they need.
+
+**Full** · *Planning and execution* · Everything in Lite, plus:
+
+- **Purchase and transfer orders** Once you approve, our team extracts, adjusts and sends your purchase and transfer orders.
+- **Production management** Supplier follow-up at the cadence you choose, so you act early instead of reacting late.
+- **Freight management** From engaging freight forwarders to checking customs documents and coordinating trucking.
+- **Inbound shipments** Creating and managing FBA and 3PL inbound shipments, as part of our daily routine.
+- **Other specific needs** Special projects and needs specific to your operation. Tell us about your use case.
+
+*Note under the plans:* Software built for your business, such as custom features, dashboards or integrations, is a separate project by Flieber's engineers. Link: Customize Flieber → /customize#engineers
+
+**H2:** What it changes for your business
+
+- **Sell more** Meet demand without losing revenue to stockouts.
+- **Free up cash** Avoid tying capital up in inventory you don't need.
+- **Protect your margins** Fewer mistakes, lower storage costs and a more efficient operation.
+- **Give your team time back** No more spreadsheets or firefighting. Our planners take on the heavy lifting.
 
 **H2:** Who it's for
 
@@ -919,12 +951,13 @@ Same URL as today, new copy, so the footer link no longer leads to the old site.
 
 **H2:** How it works with the rest of Flieber
 
-Managed Services adds to any way you use Flieber: the app, your own agents through MCP or API, or the data layer on its own. Switch or combine any time.
+Managed Services adds to any way you use Flieber: the app, your own agents through MCP or API, or the data layer on its own. Your planners and your team see the same data and context in real time. Switch or combine any time. Custom builds by Flieber's engineers are a separate project, quoted on their own.
 
-**H2:** Pricing · Quoted per brand, after a conversation with a planner about your channels, warehouses and where the process breaks down.
+**H2:** Pricing · Quoted per brand, after a conversation with a planner about your channels, warehouses, the plan that fits and where the process breaks down.
 
 **FAQs**
-- **Do your planners make decisions for us?** No. Your team makes the calls; our planners help you make them with the best data and context.
+- **Do your planners make decisions for us?** No. Your team makes the calls; our planners help you make them with the best data and context. On the Full plan, our team carries out the orders and follow-ups you approve.
+- **What's the difference between Lite and Full?** Lite covers planning: keeping Flieber accurate, forecasts, anomalies, replenishment recommendations and reports. Full adds execution after your approval: purchase and transfer orders, supplier follow-up, freight and inbound shipments.
 - **Can we start with Self-Serve and add planners later?** Yes, at any time.
 
 **Closing:** H2 "Talk to us about your operation" · *Buttons:* Book a demo · Start free trial
