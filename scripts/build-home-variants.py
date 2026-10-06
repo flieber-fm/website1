@@ -55,6 +55,7 @@ VARIANTS = [
 ]
 
 # Hero card: the six sample scenarios, shown as requests from agents and people.
+# (The last field, a status line, is kept for reference but not shown: it cluttered the card.)
 SCENES = [
     ("A wholesale buyer wants <b>1,800 units</b>.", "Claude",
      "A wholesale buyer wants <b>1,800 units</b> of the travel kit. Can we take the order?", "Split order ready for your ERP. Waiting for your approval."),
@@ -125,9 +126,6 @@ def variant(base: str, i: int, v: dict) -> str:
         new = (f'<p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>{src} <span class="sim-src-arrow" aria-hidden="true">→</span> Flieber</p>\n'
                f'                <p class="sim-q">“{ask}”</p>')
         t = t[:k] + new + t[k + len(a):]
-        j = t.index('<p class="sim-rec">', k)
-        e = t.index("</p>", j) + 4
-        t = t[:e] + f'\n                <p class="sim-status"><span aria-hidden="true">✓</span> {status}</p>' + t[e:]
     t = rep(t, '<figure class="sim" id="sim"', '<figure class="sim sim-compact" id="sim"')
     t = re.sub(r'(<span class="eyebrow"><span class="pulse" aria-hidden="true"></span><span>)[^<]*(</span>)', lambda m: m.group(1) + v["eyebrow"] + m.group(2), t, count=1)
     t = re.sub(r'(<h1 class="h1" id="hero-title">)[^<]*(</h1>)', lambda m: m.group(1) + v["h1"] + m.group(2), t, count=1)
