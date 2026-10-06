@@ -852,18 +852,24 @@ Managed Services adds to any way you use Flieber: the app, your own agents throu
 
 ### Pricing
 
-Quoted per brand, after a conversation with a planner about your channels, warehouses, the plan that fits and where the process breaks down.
+Quoted per brand on a monthly contract, after a conversation with a planner about your channels, warehouses, the plan that fits and where the process breaks down.
 Talk to a planner: https://www.flieber.com/book-a-demo
 
 **Do your planners make decisions for us?** No. Your team makes the calls; our planners help you make them with the best data and context. On the Full plan, our team carries out the orders and follow-ups you approve.
 
 **What's the difference between Lite and Full?** Lite covers planning: keeping Flieber accurate, forecasts, anomalies, replenishment recommendations and reports. Full adds execution after your approval: purchase and transfer orders, supplier follow-up, freight and inbound shipments.
 
+**Can we switch between Lite and Full?** Yes, at the end of any billing cycle.
+
 **Who are Flieber's planners?** Specialists in demand and inventory planning who master the Flieber platform and draw on experience from more than 1,000 brands.
+
+**Do we get a dedicated planner?** Yes. A dedicated planner works with your team, backed by a wider team at Flieber that helps with most of the tasks behind the scenes.
 
 **How do we work with our planners day to day?** They take part in your S&OP meetings, send replenishment recommendations on your schedule and in your format, flag risks as they appear and keep your recurring reports coming.
 
 **Do we still have access to the Flieber app?** Yes. Managed Services includes everything in Self-Serve, so your team plans in the same app, with the same data, as your planners.
+
+**What access do your planners have to our data and systems?** The access you choose to give them. At a minimum, they have full access to the data in your Flieber account. The more context you share from outside Flieber, the better their work.
 
 **Can we use our own AI agents with Managed Services?** Yes. Your agents connect to Flieber through MCP or API and work from the same data and context as your team and your planners.
 
@@ -874,6 +880,10 @@ Talk to a planner: https://www.flieber.com/book-a-demo
 **Do your planners talk to our suppliers and freight forwarders?** On the Full plan, yes: supplier follow-up at the cadence you choose, freight forwarders, customs documents and trucking. On the Lite plan, your team keeps those relationships.
 
 **Do you build custom software as part of Managed Services?** No. Custom features, dashboards, frontends and integrations are a separate project by Flieber's engineers, quoted on its own.
+
+**Is it a monthly contract?** Yes, Managed Services runs on a monthly contract, like Self-Serve.
+
+**Is there a free trial of Managed Services?** No. Managed Services is tailored to your operation from day one and takes real work from our team, so it starts as a paid plan. You can try the platform itself with a 14-day Self-Serve trial on your own data.
 
 **Can we start with Self-Serve and add planners later?** Yes, at any time.
 
