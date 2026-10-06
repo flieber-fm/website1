@@ -341,6 +341,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 6 | /managed-services FAQ is collapsible (same details/summary markup and style as the /pricing FAQ), so only the 18 questions show until clicked. Other pages keep the open FAQ list |
 | Oct 6 | /managed-services FAQ to 18: hours (8am to 6pm ET as a rule, adjustable for Europe, Australia and other distant time zones) and languages (English, with native Spanish and Portuguese speakers among others). How planner access is controlled stays a demo follow-up, not on the page |
 | Oct 6 | /managed-services FAQ to 16 with Fabricio's answers: switch Lite/Full at the end of any billing cycle; monthly contract (also in the Pricing line); no free trial (tailored, paid from day one; the platform can be tried with the Self-Serve trial); a dedicated planner backed by a wider team; planners get the access the brand chooses, at a minimum full access to the brand's Flieber account data |
 | Oct 6 | /managed-services review: new "What Managed Services is" text (setup to data quality, bring in the context the data doesn't carry, help execute and automate); plans note says the offering doesn't include building customized software; two more "Who it's for" bullets (growing fast without hiring; more than 1,000 other brands, not "thousands", to match the verified number); "Talk to a planner" button in Pricing (book-a-demo URL); FAQ grown from 3 to 11, all drawn from the page's own scope |

@@ -527,6 +527,14 @@ def faq_html(faq) -> str:
           </div>''' for q, a in faq) + "\n        </div>"
 
 
+def faq_details(faq) -> str:
+    """Collapsible FAQ, same markup as the /pricing FAQ: only the questions show until clicked."""
+    return '        <div class="faq">\n' + "\n".join(f'''          <details>
+            <summary>{esc(q)}<span class="plus" aria-hidden="true"></span></summary>
+            <p>{esc(a)}</p>
+          </details>''' for q, a in faq) + "\n        </div>"
+
+
 def cards(items) -> str:
     return "\n".join(f'''          <article class="why-card">
             <span class="n">{i:02d}</span>
@@ -789,7 +797,7 @@ def ms_main() -> str:
     out += section("with-flieber", "One product", M["with_h2"], f'        <p class="feat-approval">{esc(M["with"])}</p>', soft=False)
     out += section("pricing", "Pricing", M["price_h2"], f'''        <p class="feat-approval">{esc(M["price"])}</p>
         <p class="ms-price-cta"><a class="btn btn-dark" href="{C.DEMO}">{esc(M["price_cta"])} {ARROW}</a></p>''', soft=True)
-    out += section("questions", "Questions", "Questions", faq_html(M["faq"]), soft=False)
+    out += section("questions", "Questions", "Questions", faq_details(M["faq"]), soft=False)
     out += closing(h2=M["close_h2"], body="", demo_first=True)
     return out
 

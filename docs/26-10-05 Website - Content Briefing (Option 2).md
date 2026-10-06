@@ -957,7 +957,7 @@ Managed Services adds to any way you use Flieber: the app, your own agents throu
 
 **H2:** Pricing · Quoted per brand on a monthly contract, after a conversation with a planner about your channels, warehouses, the plan that fits and where the process breaks down. *Button:* Talk to a planner → book a demo
 
-**FAQs**
+**FAQs** (collapsible, as on /pricing)
 - **Do your planners make decisions for us?** No. Your team makes the calls; our planners help you make them with the best data and context. On the Full plan, our team carries out the orders and follow-ups you approve.
 - **What's the difference between Lite and Full?** Lite covers planning: keeping Flieber accurate, forecasts, anomalies, replenishment recommendations and reports. Full adds execution after your approval: purchase and transfer orders, supplier follow-up, freight and inbound shipments.
 - **Can we switch between Lite and Full?** Yes, at the end of any billing cycle.
