@@ -812,6 +812,8 @@ MS = {
             ("Can we switch between Lite and Full?", "Yes, at the end of any billing cycle."),
             ("Who are Flieber's planners?", "Specialists in demand and inventory planning who master the Flieber platform and draw on experience from more than 1,000 brands."),
             ("Do we get a dedicated planner?", "Yes. A dedicated planner works with your team, backed by a wider team at Flieber that helps with most of the tasks behind the scenes."),
+            ("What hours and time zones do your planners work in?", "As a rule, 8am to 6pm Eastern Time. We can adjust for customers in very different time zones, such as Europe and Australia."),
+            ("Which languages do your planners speak?", "English is the team's main language, and the team includes native speakers of other languages, such as Spanish and Portuguese."),
             ("How do we work with our planners day to day?", "They take part in your S&OP meetings, send replenishment recommendations on your schedule and in your format, flag risks as they appear and keep your recurring reports coming."),
             ("Do we still have access to the Flieber app?", "Yes. Managed Services includes everything in Self-Serve, so your team plans in the same app, with the same data, as your planners."),
             ("What access do your planners have to our data and systems?", "The access you choose to give them. At a minimum, they have full access to the data in your Flieber account. The more context you share from outside Flieber, the better their work."),
