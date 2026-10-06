@@ -906,7 +906,7 @@ Same URL as today, new copy, so the footer link no longer leads to the old site.
 
 **H2:** What Managed Services is
 
-Flieber's AI forecasts every product on every channel, recommends what to buy and where to move it, and keeps your reports current. Our planners make sure every detail behind it is right, from setup to supplier follow-up. Think of them as an extension of your operations team, so yours can focus on growing the brand.
+Flieber forecasts every product on every channel, recommends what to buy and where to move it, and keeps your reports current. Our planners make sure every detail behind it is right, from setup to data quality, partner with you to bring into Flieber all the context your data doesn't carry, and help you execute and automate your operations. Think of them as an extension of your team, so yours can focus on what really matters: growing the brand.
 
 **H2:** How our planners work with you
 
@@ -934,7 +934,7 @@ Flieber's AI forecasts every product on every channel, recommends what to buy an
 - **Inbound shipments** Creating and managing FBA and 3PL inbound shipments, as part of our daily routine.
 - **Other specific needs** Special projects and needs specific to your operation. Tell us about your use case.
 
-*Note under the plans:* Software built for your business, such as custom features, dashboards or integrations, is a separate project by Flieber's engineers. Link: Customize Flieber → /customize#engineers
+*Note under the plans:* This offering doesn't include building customized software for your business, which is a separate project by Flieber's engineers. Link: Customize Flieber → /customize#engineers
 
 **H2:** What it changes for your business
 
@@ -948,16 +948,26 @@ Flieber's AI forecasts every product on every channel, recommends what to buy an
 - You sell across many channels, warehouses or regions
 - You run kits, bundles, backorders, long lead times or high MOQs
 - Your team is buried in spreadsheets, with no time to build or maintain an internal tool
+- You're growing fast but don't want to hire more people
+- You want to draw on the experience of more than 1,000 other brands to grow your business
 
 **H2:** How it works with the rest of Flieber
 
 Managed Services adds to any way you use Flieber: the app, your own agents through MCP or API, or the data layer on its own. Your planners and your team see the same data and context in real time. Switch or combine any time. Custom builds by Flieber's engineers are a separate project, quoted on their own.
 
-**H2:** Pricing · Quoted per brand, after a conversation with a planner about your channels, warehouses, the plan that fits and where the process breaks down.
+**H2:** Pricing · Quoted per brand, after a conversation with a planner about your channels, warehouses, the plan that fits and where the process breaks down. *Button:* Talk to a planner → book a demo
 
 **FAQs**
 - **Do your planners make decisions for us?** No. Your team makes the calls; our planners help you make them with the best data and context. On the Full plan, our team carries out the orders and follow-ups you approve.
 - **What's the difference between Lite and Full?** Lite covers planning: keeping Flieber accurate, forecasts, anomalies, replenishment recommendations and reports. Full adds execution after your approval: purchase and transfer orders, supplier follow-up, freight and inbound shipments.
+- **Who are Flieber's planners?** Specialists in demand and inventory planning who master the Flieber platform and draw on experience from more than 1,000 brands.
+- **How do we work with our planners day to day?** They take part in your S&OP meetings, send replenishment recommendations on your schedule and in your format, flag risks as they appear and keep your recurring reports coming.
+- **Do we still have access to the Flieber app?** Yes. Managed Services includes everything in Self-Serve, so your team plans in the same app, with the same data, as your planners.
+- **Can we use our own AI agents with Managed Services?** Yes. Your agents connect to Flieber through MCP or API and work from the same data and context as your team and your planners.
+- **Our data lives partly in spreadsheets. Is that a problem?** No. Flieber connects natively to most systems, and where you rely on spreadsheets or disconnected systems, our planners keep sales, inventory and purchase order data in sync.
+- **How do promotions and launches get into the forecast?** Your planners bring them in. They review the forecasts with you and add what the data can't see yet, such as promotions, launches and channel changes.
+- **Do your planners talk to our suppliers and freight forwarders?** On the Full plan, yes: supplier follow-up at the cadence you choose, freight forwarders, customs documents and trucking. On the Lite plan, your team keeps those relationships.
+- **Do you build custom software as part of Managed Services?** No. Custom features, dashboards, frontends and integrations are a separate project by Flieber's engineers, quoted on its own.
 - **Can we start with Self-Serve and add planners later?** Yes, at any time.
 
 **Closing:** H2 "Talk to us about your operation" · *Buttons:* Book a demo · Start free trial

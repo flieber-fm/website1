@@ -787,7 +787,8 @@ def ms_main() -> str:
     fit = "\n".join(f'            <li>{esc(x)}</li>' for x in M["for"])
     out += section("who-its-for", "Fit", M["for_h2"], f'        <ul class="ms-for">\n{fit}\n        </ul>', soft=True)
     out += section("with-flieber", "One product", M["with_h2"], f'        <p class="feat-approval">{esc(M["with"])}</p>', soft=False)
-    out += section("pricing", "Pricing", M["price_h2"], f'        <p class="feat-approval">{esc(M["price"])}</p>', soft=True)
+    out += section("pricing", "Pricing", M["price_h2"], f'''        <p class="feat-approval">{esc(M["price"])}</p>
+        <p class="ms-price-cta"><a class="btn btn-dark" href="{C.DEMO}">{esc(M["price_cta"])} {ARROW}</a></p>''', soft=True)
     out += section("questions", "Questions", "Questions", faq_html(M["faq"]), soft=False)
     out += closing(h2=M["close_h2"], body="", demo_first=True)
     return out
@@ -1054,7 +1055,7 @@ def pages_text() -> list:
         L += [f"**{pl['name']}: {pl['tag']}.** {pl['sub']}:", ""] + [f"- {t}: {d}" for t, d in pl["items"]] + [""]
     L += [M["plans_note"], "", f"### {M['why_h2']}", ""] + [f"- {t}: {d}" for t, d in M["why"]]
     L += ["", f"### {M['for_h2']}", ""] + [f"- {x}" for x in M["for"]]
-    L += ["", f"### {M['with_h2']}", "", M["with"], "", f"### {M['price_h2']}", "", M["price"], ""]
+    L += ["", f"### {M['with_h2']}", "", M["with"], "", f"### {M['price_h2']}", "", M["price"], f"{M['price_cta']}: {C.DEMO}", ""]
     for q, a in M["faq"]:
         L += [f"**{q}** {a}", ""]
     WH = C.WHO
