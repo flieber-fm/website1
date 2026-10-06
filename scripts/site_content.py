@@ -253,6 +253,7 @@ PRICING_TERMS = [
     "14-day free trial, no credit card required.",
     "Unlimited users on every plan, including the free trial.",
     "Standard setup included; customizations come with a paid plan.",
+    "**Flieber's engineers (custom builds):** app customizations, dashboards and reports, tailored frontends, integrations, agents and workflows built for the brand; quoted per project, separate from Managed Services; for qualified accounts.",
 ]
 
 DATA_HANDLING = [
@@ -541,11 +542,16 @@ TRY_H2 = "Try Flieber free on your own data"
 TRY_BODY = ("Start a 14-day free trial, no credit card required and no demo call. Flieber shows your price as soon as "
             "onboarding is done, before you pay anything.")
 
-# /vibe-coders (brief 6.4)
+# /customize (brief 6.4; named "Vibe coders" until Oct 6)
 BWA = {
-    "slug": "vibe-coders", "name": "Vibe coders",
-    "card": "Vibe coding your own reports, dashboards or agents? Connect them to data that's already right.",
-    "h1": "Vibe coding your own tools? Start from data that's already right",
+    "slug": "customize", "name": "Customize Flieber",
+    "card": "Build your own reports, dashboards and agents on Flieber's data, or have our engineers build them for you.",
+    "h1": "Customize Flieber yourself, or have our engineers do it",
+    "page_lead": ("Build your own reports, dashboards and agents on Flieber's data with Claude, Cursor or ChatGPT. Or have "
+                  "Flieber's engineers build them for you, up to a frontend tailored to how your business runs."),
+    "paths": [("yourself", "Build it yourself", "Vibe code your own tools on data that's already unified, mapped and corrected."),
+              ("engineers", "Have our engineers build it", "No time or team to build? Flieber's engineers build it with you. For qualified accounts.")],
+    "self_h2": "Vibe coding your own tools? Start from data that's already right",
     "lead": ("Building reports, dashboards or agents with Claude, Cursor or ChatGPT? Connect them to Flieber's data layer "
              "through MCP or API and start from sales, inventory and supply chain data that's already unified, mapped and "
              "corrected."),
@@ -573,12 +579,32 @@ BWA = {
             "right never ends: every new channel, warehouse or supplier changes the data, and every change breaks "
             "something downstream. Flieber is a team dedicated to keeping that layer right, so yours can spend its time "
             "on the tools only you can build."),
-    "close_h2": "Start building on Flieber",
-    "close_body": "Start a 14-day free trial on your own data, or book a demo and we'll connect it with you.",
+    "close_h2": "Make Flieber fit your business",
+    "close_body": "Start a 14-day free trial and build on your own data, or check whether your account qualifies for our engineers.",
 }
 
 # Cross-link from /multichannel and /agencies (a brand can be both, Fabricio, Oct 3)
-VIBE_LINE = ("Building your own tools with AI?", "Start from Flieber's data layer")
+VIBE_LINE = ("Want tools built around your business?", "Customize Flieber yourself or with our engineers")
+
+# Flieber's engineers (custom builds), on /customize (Fabricio, Oct 6)
+ENG = {
+    "h2": "No time or team to build? Our engineers will build it for you",
+    "lead": ("Flieber's engineers (forward-deployed engineers) work with your team to build what your business needs on "
+             "Flieber's data and planning engine."),
+    "build_h2": "What they build",
+    "build": [("Customizations of the Flieber app", "Views, fields and screens adjusted to how your team plans."),
+              ("Custom dashboards and reports", "The numbers your team and leadership look at, built on live Flieber data."),
+              ("Tailored frontends", "An interface designed around how your business runs, using the same API as Flieber's own app."),
+              ("Custom integrations", "Connections to the systems your operation depends on that Flieber doesn't connect to yet."),
+              ("Custom agents and workflows", "Recurring jobs and agents built for your process, under your approval rules.")],
+    "how_h2": "How it works",
+    "how": [("Tell us what you need", "the tool, the people who'll use it and the decisions it supports."),
+            ("We scope and quote it", "as a project, separate from your plan."),
+            ("Our engineers build it with you", "on your data, reviewing with your team as they go.")],
+    "terms": [("Quoted per project", "Separate from Managed Services; works with Self-Serve or Managed Services."),
+              ("For qualified accounts", "Tell us about your operation and what you want built, and we'll tell you whether your account qualifies.")],
+    "cta": "Check if you qualify",
+}
 
 # Use-case pages (brief 7). points: (text, /features anchor)
 UC_CLOSE = "This is one part of what Flieber does."
@@ -743,7 +769,8 @@ MS = {
             "Your team is buried in spreadsheets, with no time to build or maintain an internal tool"],
     "with_h2": "How it works with the rest of Flieber",
     "with": ("Managed Services adds to any way you use Flieber: the app, your own agents through MCP or API, or the data "
-             "layer on its own. Switch or combine any time."),
+             "layer on its own. Switch or combine any time. Custom builds by Flieber's engineers are a separate "
+             "project, quoted on their own."),
     "price_h2": "Pricing", "price": "Quoted per brand, after a conversation with a planner about your channels, warehouses and where the process breaks down.",
     "faq": [("Do your planners make decisions for us?", "No. Your team makes the calls; our planners help you make them with the best data and context."),
             ("Can we start with Self-Serve and add planners later?", "Yes, at any time.")],

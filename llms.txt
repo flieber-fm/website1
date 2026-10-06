@@ -10,7 +10,7 @@ Flieber is one product, offered two ways on the same platform:
 
 - Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; Flieber shows the price as soon as onboarding is done, before the brand pays anything.
 - Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Quoted per brand. https://www.flieber.com/managed-services
-- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: https://www.flieber.com/vibe-coders. Start with a 14-day free trial, no credit card required.
+- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: https://www.flieber.com/customize. Start with a 14-day free trial, no credit card required.
 
 ## Modules
 
@@ -45,9 +45,9 @@ By type of business; every page links to the full feature list.
 - [Agencies and aggregators](https://www.flieber.com/agencies): Every brand in one place, planned individually or consolidated.
 - [Before you choose](https://www.flieber.com/before-you-choose): the questions every buyer should ask, answered for Flieber
 
-## Vibe coders
+## Customize Flieber
 
-- [Vibe coders](https://www.flieber.com/vibe-coders): Vibe coding your own tools? Start from data that's already right. Building reports, dashboards or agents with Claude, Cursor or ChatGPT? Connect them to Flieber's data layer through MCP or API and start from sales, inventory and supply chain data that's already unified, mapped and corrected.
+- [Customize Flieber](https://www.flieber.com/customize): Customize Flieber yourself, or have our engineers do it. Build your own reports, dashboards and agents on Flieber's data with Claude, Cursor or ChatGPT. Or have Flieber's engineers build them for you, up to a frontend tailored to how your business runs. Build it yourself: Vibe coding your own tools? Start from data that's already right. Flieber's engineers: No time or team to build? Our engineers will build it for you; quoted per project, for qualified accounts.
 
 ## Use cases
 
@@ -153,6 +153,7 @@ All integrations: https://www.flieber.com/integrations
 - 14-day free trial, no credit card required.
 - Unlimited users on every plan, including the free trial.
 - Standard setup included; customizations come with a paid plan.
+- Flieber's engineers (custom builds): app customizations, dashboards and reports, tailored frontends, integrations, agents and workflows built for the brand; quoted per project, separate from Managed Services; for qualified accounts.
 
 ## Data handling
 
@@ -193,7 +194,7 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 - [Workflows](https://www.flieber.com/product/workflows)
 - [Multichannel brands](https://www.flieber.com/multichannel)
 - [Agencies and aggregators](https://www.flieber.com/agencies)
-- [Vibe coders](https://www.flieber.com/vibe-coders)
+- [Customize Flieber](https://www.flieber.com/customize)
 - [Before you choose](https://www.flieber.com/before-you-choose)
 - [Managed Services](https://www.flieber.com/managed-services)
 - [Who we are](https://www.flieber.com/who-we-are)

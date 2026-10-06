@@ -24,7 +24,7 @@
             "mcp",
             "api"
           ],
-          "url": "https://www.flieber.com/vibe-coders",
+          "url": "https://www.flieber.com/customize",
           "free_trial": "14 days, no credit card required",
           "best_for": [
             "Has a team building its own reports, tools or agents with AI",
@@ -43,6 +43,23 @@
         "Sells across many channels, warehouses or regions",
         "Runs kits, bundles, backorders, long lead times or high MOQs",
         "Has a team without time to build or maintain an internal tool"
+      ]
+    },
+    {
+      "name": "Flieber's engineers (custom builds)",
+      "delivery": [
+        "service"
+      ],
+      "price": "Quoted per project",
+      "availability": "Qualified accounts",
+      "separate_from": "Flieber Managed Services",
+      "url": "https://www.flieber.com/customize#engineers",
+      "builds": [
+        "Customizations of the Flieber app",
+        "Custom dashboards and reports",
+        "Tailored frontends",
+        "Custom integrations",
+        "Custom agents and workflows"
       ]
     }
   ],
@@ -500,9 +517,9 @@
       "url": "https://www.flieber.com/agencies"
     },
     {
-      "id": "vibe-coders",
-      "name": "Vibe coders",
-      "url": "https://www.flieber.com/vibe-coders"
+      "id": "customize",
+      "name": "Customize Flieber",
+      "url": "https://www.flieber.com/customize"
     }
   ],
   "prompts_note": "Examples of jobs operators give Flieber, not a complete list of what Flieber can do.",

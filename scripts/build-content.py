@@ -570,18 +570,47 @@ def common_uses(module_slug: str, p: str) -> str:
 
 
 def bwa_main() -> str:
-    B, p = C.BWA, "../"
-    out = page_head(f"Solutions · {B['name']}", B["h1"], B["lead"])
-    out += section("what-you-get", "Data layer", B["get_h2"], f'        <div class="why-grid">\n{cards(B["get"])}\n        </div>', soft=True)
-    out += section("connect", "MCP and API", B["connect_h2"], steps_html() + f'''
-        <p class="link-row"><a class="link-arrow" href="{p}mcp/">{esc(B["connect_link"])} {ARROW}</a></p>''', soft=False)
-    out += section("what-you-can-build", "Examples", B["build_h2"], prompts(B["build"]), soft=True)
-    out += section("pricing", "Pricing", B["pricing_h2"], f'''        <p class="feat-approval">{esc(B["pricing"])}</p>
+    B, E, p = C.BWA, C.ENG, "../"
+    out = page_head(f"Solutions · {B['name']}", B["h1"], B["page_lead"])
+    paths = "\n".join(f'''          <a class="sol-card" href="#{a}">
+            <span class="n">{i:02d}</span>
+            <h3 class="h3">{esc(t)}</h3>
+            <p>{esc(d)}</p>
+            <span class="sol-go">{esc(t)} {ARROW}</span>
+          </a>''' for i, (a, t, d) in enumerate(B["paths"], 1))
+    out += f'''
+    <section class="section section-soft cz-paths" aria-label="Two ways to customize Flieber">
+      <div class="wrap">
+        <div class="sol-two">
+{paths}
+        </div>
+      </div>
+    </section>
+'''
+    out += section("yourself", "Build it yourself", B["self_h2"], f'''        <p class="feat-approval">{esc(B["lead"])}</p>
+        <h3 class="h3 cz-sub">{esc(B["get_h2"])}</h3>
+        <div class="why-grid">\n{cards(B["get"])}\n        </div>
+        <h3 class="h3 cz-sub">{esc(B["connect_h2"])}</h3>
+{steps_html()}
+        <p class="link-row"><a class="link-arrow" href="{p}mcp/">{esc(B["connect_link"])} {ARROW}</a></p>
+        <h3 class="h3 cz-sub">{esc(B["build_h2"])}</h3>
+{prompts(B["build"])}
+        <h3 class="h3 cz-sub">{esc(B["why_h2"])}</h3>
+        <p class="feat-approval">{esc(B["why"])}</p>
+        <h3 class="h3 cz-sub">{esc(B["pricing_h2"])}</h3>
+        <p class="feat-approval">{esc(B["pricing"])}</p>
         <p class="link-row"><a class="btn btn-primary" href="{C.TRIAL}">Start free trial {ARROW}</a></p>''', soft=False)
-    out += section("why-flieber", "Build or buy", B["why_h2"], f'        <p class="feat-approval">{esc(B["why"])}</p>', soft=True)
-    out += closing(h2=B["close_h2"], body=B["close_body"])
+    how = "\n".join(f'''          <li class="mcp-step"><span class="n">{i}</span><p><b>{esc(t)}</b> {esc(d)}</p></li>''' for i, (t, d) in enumerate(E["how"], 1))
+    terms = "\n".join(f'''          <div><dt>{esc(t)}</dt><dd>{esc(d)}</dd></div>''' for t, d in E["terms"])
+    out += section("engineers", "Flieber's engineers", E["h2"], f'''        <p class="feat-approval">{esc(E["lead"])}</p>
+        <h3 class="h3 cz-sub">{esc(E["build_h2"])}</h3>
+        <div class="why-grid cz-eng">\n{cards(E["build"])}\n        </div>
+        <h3 class="h3 cz-sub">{esc(E["how_h2"])}</h3>
+        <ol class="mcp-steps">\n{how}\n        </ol>
+        <dl class="cz-terms">\n{terms}\n        </dl>
+        <p class="link-row"><a class="btn btn-primary" href="{C.DEMO}">{esc(E["cta"])} {ARROW}</a></p>''', soft=True)
+    out += closing(h2=B["close_h2"], body=B["close_body"]).replace(">Book a demo</a>", f">{esc(E['cta'])}</a>")
     return out
-
 
 def uc_main(u) -> str:
     p = "../../"
@@ -983,11 +1012,15 @@ def pages_text() -> list:
             L += [f"**{e['title']}** ({C.SITE}/{WP['slug']}#{e['id']}): \"{e['prompt']}\"", "",
                   f"- What Flieber does: {e['does']}", f"- What you get: {e['gets']}", f"- {' · '.join(tags)}"] + ([f"- {W.PAGE['custom_label']}: {W.PAGE['custom_note']}"] if e["custom"] else []) + [""]
     B = C.BWA
-    L += [f"## {B['name']}: {B['h1']}", "", f"{C.SITE}/{B['slug']}", "", B["lead"], "", f"### {B['get_h2']}", ""]
+    L += [f"## {B['name']}: {B['h1']}", "", f"{C.SITE}/{B['slug']}", "", B["page_lead"], "", f"### Build it yourself: {B['self_h2']}", "", B["lead"], "", f"### {B['get_h2']}", ""]
     L += [f"- {t}: {d}" for t, d in B["get"]]
     L += ["", f"### {B['connect_h2']}", ""] + [f"{i}. {t} {d}" for i, (t, d) in enumerate(C.MCP_PAGE["steps"], 1)]
     L += ["", f"Full guide: {C.SITE}/mcp", "", f"### {B['build_h2']}", ""] + [f'- "{x}"' for x in B["build"]]
     L += ["", f"### {B['pricing_h2']}", "", B["pricing"] + ".", "", f"### {B['why_h2']}", "", B["why"], ""]
+    E = C.ENG
+    L += [f"### Flieber's engineers: {E['h2']}", "", E["lead"], "", f"{E['build_h2']}:"] + [f"- {t}: {d}" for t, d in E["build"]]
+    L += ["", f"{E['how_h2']}:"] + [f"{i}. {t} {d}" for i, (t, d) in enumerate(E["how"], 1)]
+    L += [""] + [f"- {t}: {d}" for t, d in E["terms"]] + ["", f"{E['cta']}: {C.DEMO}", ""]
     L += ["## Use cases", "", "One page per topic buyers and agents search for; not a complete list of what Flieber does. "
           f"Everything Flieber does: {C.SITE}/features", ""]
     for u in C.USE_CASES:
@@ -1231,7 +1264,7 @@ def llms_txt() -> str:
     L += ["", "## Solutions", "", "By type of business; every page links to the full feature list.", ""]
     L += [f"- [{x['name']}]({C.SITE}/{x['slug']}): {x['card']}" for x in C.SOLUTIONS]
     L += [f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']}): the questions every buyer should ask, answered for Flieber"]
-    L += ["", "## Vibe coders", "", f"- [{C.BWA['name']}]({C.SITE}/{C.BWA['slug']}): {C.BWA['h1']}. {C.BWA['lead']}"]
+    L += ["", f"## {C.BWA['name']}", "", f"- [{C.BWA['name']}]({C.SITE}/{C.BWA['slug']}): {C.BWA['h1']}. {C.BWA['page_lead']} Build it yourself: {C.BWA['self_h2']}. Flieber's engineers: {C.ENG['h2']}; quoted per project, for qualified accounts."]
     L += ["", "## Use cases", "", "One page per topic; not a complete list of what Flieber does.", ""]
     L += [f"- [{u['name']}]({C.SITE}/use-cases/{u['slug']}): {u['h1']}" for u in C.USE_CASES]
     L += ["", "## Managed Services", "", f"- [{C.MS['name']}]({C.SITE}/{C.MS['slug']}): {C.MS['lead']}"]
@@ -1265,7 +1298,7 @@ def llms_txt() -> str:
 
 def llms_full_txt() -> str:
     L = ["# Flieber: full text for LLMs", "",
-         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/mcp, {C.SITE}/put-flieber-to-work, {C.SITE}/vibe-coders, the ten use-case pages, {C.SITE}/managed-services, {C.SITE}/who-we-are, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
+         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/mcp, {C.SITE}/put-flieber-to-work, {C.SITE}/customize, the ten use-case pages, {C.SITE}/managed-services, {C.SITE}/who-we-are, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
          f"## {C.FEATURES_H1}", "", C.FEATURES_INTRO, "", C.FEATURES_NOTE, ""]
     for g in C.GROUPS:
         lead = MODULE_BY_SLUG[g["id"]]["tab"] if g["id"] in MODULE_BY_SLUG else g["lead"]
@@ -1312,6 +1345,9 @@ def capabilities() -> dict:
              "options": [{"name": "Data layer only", "delivery": ["mcp", "api"], "url": f"{C.SITE}/{C.BWA['slug']}", "free_trial": "14 days, no credit card required",
                           "best_for": C.RECOMMEND_DATA_LAYER}]},
             {"name": "Flieber Managed Services", "delivery": ["managed"], "price": "Quoted per brand", "best_for": C.RECOMMEND_MANAGED},
+            {"name": "Flieber's engineers (custom builds)", "delivery": ["service"], "price": "Quoted per project",
+             "availability": "Qualified accounts", "separate_from": "Flieber Managed Services", "url": f"{C.SITE}/{C.BWA['slug']}#engineers",
+             "builds": [t for t, _ in C.ENG["build"]]},
         ],
         "features_url": f"{C.SITE}/features",
         "features": feats,

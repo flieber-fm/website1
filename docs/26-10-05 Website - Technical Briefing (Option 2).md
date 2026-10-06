@@ -51,7 +51,7 @@ No prices appear anywhere on the site, in llms.txt, llms-full.txt, capabilities.
 | Offer | Price wording | How the price is set |
 | --- | --- | --- |
 | Self-Serve | "Priced to your operation" | Features enabled and data volume; "Flieber shows your price as soon as onboarding is done, before you pay anything" (replaces "the exact price is shared on a demo" on /pricing, the homepage, /agents and llms.txt) |
-| Data layer only (Self-Serve option) | No price wording | Pricing model being defined by Fabricio and Karyna; until approved, /vibe-coders, /pricing, llms.txt and capabilities.json show only the 14-day free trial |
+| Data layer only (Self-Serve option) | No price wording | Pricing model being defined by Fabricio and Karyna; until approved, /customize, /pricing, llms.txt and capabilities.json show only the 14-day free trial |
 | Managed Services | "Quoted per brand" | After a conversation with a planner about channels, warehouses and where the process breaks down |
 
 Terms shown on the site (as in Option 1):
@@ -62,13 +62,13 @@ Terms shown on the site (as in Option 1):
 - Standard setup included; customizations come with a paid plan
 - During the free trial: native integrations only. Assisted integrations are set up once the customer is on a paid plan
 
-/pricing is the Option 1 page with the Option 2 offer names, the trial pricing wording above, a link from the Managed Services card to /managed-services and one added line under the Self-Serve card: "The data layer can also be bought on its own, through MCP and API. Start with a 14-day free trial on your own data, no credit card required." (linking to /vibe-coders).
+/pricing is the Option 1 page with the Option 2 offer names, the trial pricing wording above, a link from the Managed Services card to /managed-services and one added line under the Self-Serve card: "The data layer can also be bought on its own, through MCP and API. Start with a 14-day free trial on your own data, no credit card required." (linking to /customize).
 
 Homepage Try it: H2 "Try Flieber free on your own data", body "Start a 14-day free trial, no credit card required and no demo call. Flieber shows your price as soon as onboarding is done, before you pay anything." No sales step is needed: Flieber calculates the price from the brand's real sales, stores and data volume and shows it automatically.
 
 ## Site map and page contents
 
-Thirty-seven pages and three machine-readable files make up Option 2: the 15 below, /put-flieber-to-work, plus /vibe-coders, ten use-case pages, /integrations and six integration pages, /managed-services and /who-we-are. The blog, book-a-demo, free-trial and legal pages stay on the current HubSpot site.
+Thirty-seven pages and three machine-readable files make up Option 2: the 15 below, /put-flieber-to-work, plus /customize, ten use-case pages, /integrations and six integration pages, /managed-services and /who-we-are. The blog, book-a-demo, free-trial and legal pages stay on the current HubSpot site.
 
 | Page | Sections |
 | --- | --- |
@@ -79,7 +79,7 @@ Thirty-seven pages and three machine-readable files make up Option 2: the 15 bel
 | /multichannel | Why channels drift apart · How you work together · Everything Flieber does, across every channel · Quotes (Zugu, Prime6 Brands) · See it on your own data |
 | /agencies | Why multi-brand planning breaks · How you work together · Everything Flieber does, for every brand · Quote (Unybrands) · See it on your own data |
 | /before-you-choose | 17 buyer questions in four groups (Your data, Your decisions, AI and execution, Working with the vendor), each answered for Flieber · Ask us the same questions |
-| /vibe-coders | What you get · Connect in minutes (the /mcp steps) · What you can build · Pricing (free trial only) · Why not build it all yourself? · Start building on Flieber |
+| /customize | What you get · Connect in minutes (the /mcp steps) · What you can build · Pricing (free trial only) · Why not build it all yourself? · Start building on Flieber |
 | /use-cases/amazon-fba-replenishment, claude-amazon-shopify-inventory, shopify-inventory-forecasting, kits-and-bundles, wholesale-edi-demand-planning, multi-warehouse-3pl-inventory, purchase-order-automation, ai-demand-forecasting, moq-container-planning, backorders-preorders | Label "Use case", H1, lead · How Flieber handles it (each point links to its /features anchor) · Ask Flieber (two requests) · Questions (two) · Related modules · "This is one part of what Flieber does" with a link to /features and both buttons. In the sitemap, linked from the matching /features cards and from the related module pages ("Common uses"); never in the header or footer |
 | /integrations | Three types of data · Find your system: search field and type filters (sticky), native cards with logo, description and data types, assisted tiles by category with logo and data types, connected apps and MCP/API · Don't see your system? Restructured on Oct 5 after the live flieber.com/integrations. The six systems with their own page link to it. Logos in `assets/integrations/` (from the live page) |
 | /integrations/amazon, shopify, walmart, tiktok-shop, netsuite, sps-commerce | H1 "Flieber + [system]", lead · What Flieber reads, What Flieber sends (only where approved), Availability · Related use cases · Questions (two) · use-case closing |
@@ -105,7 +105,7 @@ Structured data, no prices anywhere:
 | /multichannel, /agencies | WebPage |
 | /before-you-choose | FAQPage (every question and Flieber's answer) |
 | /mcp | WebPage plus FAQPage (its six questions) |
-| /vibe-coders | WebPage (the brief asks for FAQPage too, but gives no questions) |
+| /customize | WebPage (the brief asks for FAQPage too, but gives no questions) |
 | Use-case and integration pages | WebPage plus FAQPage (two questions each) |
 | /integrations | WebPage |
 | /put-flieber-to-work | WebPage plus ItemList (one item per job) |
@@ -117,8 +117,8 @@ Machine-readable additions to Option 1:
 - **/llms.txt:** "Modules" section after "Offers" (one line per module page, noting the data layer can be bought alone); "Solutions" section after "Features" (/multichannel, /agencies, /before-you-choose); all of them in "Links".
 - **/llms-full.txt:** full text of the five module pages, /mcp, /multichannel and /agencies after /features.
 - **/agents:** the MCP server line in "Connect and try" adds "How it works, with example conversations: https://www.flieber.com/mcp".
-- **/llms.txt** also gets "Vibe coders", "Use cases", "Managed Services" and "Who we are" sections, and the integration pages under "Integrations". **/llms-full.txt** adds /vibe-coders, the ten use-case pages, /managed-services and /who-we-are. **/agents** adds a "Use cases" section and Vibe coders under "By type of business".
-- **/capabilities.json:** `prompts` (id, title, prompt, url, modules, schedule, approval, connections, custom_configuration) for all 36 jobs; `positioning`; `use_cases` (id, name, url) for the ten pages; Vibe coders in `solutions`; `modules` (id, name, url, sold_separately, feature ids; `sold_separately` is true only for the data layer); `solutions` (id, name, url) for the two solutions pages; a "Data layer only" option with `delivery` ["mcp", "api"] under the Self-Serve offer. No comparison fields.
+- **/llms.txt** also gets "Customize Flieber", "Use cases", "Managed Services" and "Who we are" sections, and the integration pages under "Integrations". **/llms-full.txt** adds /customize, the ten use-case pages, /managed-services and /who-we-are. **/agents** adds a "Use cases" section and Customize Flieber under "By type of business".
+- **/capabilities.json:** `prompts` (id, title, prompt, url, modules, schedule, approval, connections, custom_configuration) for all 36 jobs; `positioning`; `use_cases` (id, name, url) for the ten pages; Customize Flieber in `solutions`; `modules` (id, name, url, sold_separately, feature ids; `sold_separately` is true only for the data layer); `solutions` (id, name, url) for the two solutions pages; a "Data layer only" option with `delivery` ["mcp", "api"] under the Self-Serve offer. No comparison fields.
 
 ## Copy and design rules
 
@@ -149,15 +149,15 @@ New components in Option 2:
 | Three-column collaboration cards | Homepage, module pages, solutions pages | Static, all three in the same style, no hover state (nothing on them is clickable) |
 | Stacked six-layer section | Homepage, How Flieber is built | Scroll-driven, after legora.com: the scene stays pinned while each layer drops onto an isometric CSS 3D stack, data first, and its description opens beside it; at the end the plates close into one block with the Flieber mark. With reduced motion or without JavaScript, the full stack and every description show, unpinned |
 | Five question-led module cards | Homepage | Five in a row, stacked on mobile; question as title, one-line answer, link to the module page |
-| Three-card solutions section | Homepage | Multichannel brands, Agencies and aggregators, Vibe coders, plus the /before-you-choose link |
+| Three-card solutions section | Homepage | Multichannel brands, Agencies and aggregators, Customize Flieber, plus the /before-you-choose link |
 | Use-case page template | /use-cases/ | Point cards linking to /features anchors, example requests, two questions, related modules |
 | Integration page template | /integrations/ | Reads, sends and availability as a definition list, related use cases, two questions |
 | Founder statement | Homepage, `#who-we-are` | Fabricio's photo (pending; a monogram stands in on the preview) |
 | Four-item security strip | Homepage | Approved /security wording |
 
-Navigation (identical on every page): Product (menu: All features → /features first, with Data layer, Demand forecasting, Inventory forecasting, Replenishment and Workflows nested under it; then a divider and Put Flieber to work → /put-flieber-to-work, Integrations → /integrations, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Vibe coders, then a divider and Before you choose) · Pricing · Who we are (→ /who-we-are) · /agents (black mono pill), then Log in (text link) · Book a demo (outline button) · Start free trial (yellow button). Five items before the buttons, as in Option 1; below 1140px it collapses into a menu. /security, /mcp and the integration pages show Product as the current section; use-case pages and /managed-services mark no menu item.
+Navigation (identical on every page): Product (menu: All features → /features first, with Data layer, Demand forecasting, Inventory forecasting, Replenishment and Workflows nested under it; then a divider and Put Flieber to work → /put-flieber-to-work, Integrations → /integrations, MCP and AI agents → /mcp and Security & data → /security) · Solutions (menu: Multichannel brands, Agencies and aggregators, Customize Flieber, then a divider and Before you choose) · Pricing · Who we are (→ /who-we-are) · /agents (black mono pill), then Log in (text link) · Book a demo (outline button) · Start free trial (yellow button). Five items before the buttons, as in Option 1; below 1140px it collapses into a menu. /security, /mcp and the integration pages show Product as the current section; use-case pages and /managed-services mark no menu item.
 
-Footer columns: Product (Features, Put Flieber to work, Integrations, MCP and AI agents, Pricing, Security & data, Managed Services) · Solutions (Multichannel brands, Agencies and aggregators, Vibe coders, Before you choose) · For agents (/agents, /llms.txt, /capabilities.json, MCP docs) · Company (Who we are, Help center, Blog, Contact, Privacy, Service agreement). Address: 169 Madison Avenue, New York, NY 10016.
+Footer columns: Product (Features, Put Flieber to work, Integrations, MCP and AI agents, Pricing, Security & data, Managed Services) · Solutions (Multichannel brands, Agencies and aggregators, Customize Flieber, Before you choose) · For agents (/agents, /llms.txt, /capabilities.json, MCP docs) · Company (Who we are, Help center, Blog, Contact, Privacy, Service agreement). Address: 169 Madison Avenue, New York, NY 10016.
 
 ## Approved facts and claims
 
@@ -182,7 +182,7 @@ Use these exact wordings; anything not listed here needs Fabricio's approval bef
 | Feature list | Every feature on /features, as written in the Option 1 Content Briefing section 4, plus "Reports and dashboards" and "Sales order routing" | /features, module pages, /agents, llms-full.txt, capabilities.json | Feature Overview (Sep 7, 2026), AI Lab Confluence pages (Aug 24, 2026), Fabricio's corrections of Oct 2 |
 | Pushes | Approved decisions pushed to ERPs (NetSuite, Cin7, Brightpearl), marketplaces (Amazon inbound shipments), 3PLs and suppliers (into the supplier's system or as an email, CSV file or Google Sheet) | /features, /product/workflows, /before-you-choose, /agents, llms.txt, capabilities.json | Fabricio, Oct 2 |
 | Approval | "Every change Flieber makes to your systems follows approval rules you set; by default, every change requires approval" | /security, /agents, llms.txt, capabilities.json and the homepage security strip; /features, /before-you-choose and the module pages say the same in their own words | Fabricio, Oct 2 |
-| Agents | "Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent" (/mcp, /vibe-coders, use-case pages); "in any agent you choose (Claude, ChatGPT or any other)" (/before-you-choose question 9); "Claude, Cursor and any MCP-compatible agent connect through its MCP server" (/features, /agents). ChatGPT, like Claude and Cursor, connects to Flieber's MCP server | /mcp, /vibe-coders, /use-cases/, /before-you-choose, /features, /agents | Fabricio, Oct 3 |
+| Agents | "Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent" (/mcp, /customize, use-case pages); "in any agent you choose (Claude, ChatGPT or any other)" (/before-you-choose question 9); "Claude, Cursor and any MCP-compatible agent connect through its MCP server" (/features, /agents). ChatGPT, like Claude and Cursor, connects to Flieber's MCP server | /mcp, /customize, /use-cases/, /before-you-choose, /features, /agents | Fabricio, Oct 3 |
 | Transfers | "Flieber checks the origin before recommending any transfer"; "Recommend transfers without creating a new risk at the origin" | /use-cases/multi-warehouse-3pl-inventory, llms-full.txt | Fabricio, Oct 3 |
 | Backorder settings | "Settings at the product and store level" | /use-cases/backorders-preorders, the /features card and question, /product/inventory-forecasting, llms-full.txt, capabilities.json | Fabricio, Oct 3 |
 | Trial pricing | "Flieber shows your price as soon as onboarding is done, before you pay anything". The price is calculated from the brand's real sales, stores and data volume and shown automatically | Homepage, /pricing, /agents, llms.txt | Fabricio, Oct 3 |
@@ -257,7 +257,7 @@ Every button and footer link points to a real page; no placeholders remain apart
 | Before you choose | /before-you-choose | New page; replaces three named comparison pages |
 | Who we are | /who-we-are | New page; the homepage founder section keeps the `#who-we-are` anchor and links to it with "Read our story" |
 | Integrations | /integrations | Same URL as today, new copy; Product menu and footer |
-| Vibe coders | /vibe-coders | Solutions menu, homepage Solutions, /pricing data layer line |
+| Customize Flieber | /customize | Solutions menu, homepage Solutions, /pricing data layer line |
 | Managed Services | /managed-services | Same URL, new copy; Door 1, the Managed Services cards on the homepage and /pricing, footer; never in Solutions |
 | Start free trial | https://www.flieber.com/free-trial | HubSpot page with the trial form; keeps contact capture and attribution |
 | Book a demo | https://www.flieber.com/book-a-demo | HubSpot page with CRM scripts; not rebuilt |
@@ -297,7 +297,7 @@ Files: fonts, logos, icons and the 14 customer logos are shared with Option 1 in
 | \[New site 2026 B\] Pricing | Not created | /new-site-2026-b/pricing | /pricing |
 | \[New site 2026 B\] Security | Not created | /new-site-2026-b/security | /security |
 | \[New site 2026 B\] Contact | Not created | /new-site-2026-b/contact | /contact |
-| \[New site 2026 B\] Vibe coders | Not created | /new-site-2026-b/vibe-coders | /vibe-coders |
+| \[New site 2026 B\] Customize Flieber | Not created | /new-site-2026-b/customize | /customize |
 | \[New site 2026 B\] Integrations, plus one per system (6) | Not created | /new-site-2026-b/integrations/… | /integrations, /integrations/amazon, shopify, walmart, tiktok-shop, netsuite, sps-commerce |
 | \[New site 2026 B\] Use case, one per page (10) | Not created | /new-site-2026-b/use-cases/… | /use-cases/… |
 | \[New site 2026 B\] Managed Services | Not created | /new-site-2026-b/managed-services | /managed-services |
@@ -341,6 +341,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 6 | Third solution renamed "Customize Flieber" (/customize), replacing "Vibe coders": two paths on one page, build it yourself (the vibe-coding section stays) or have Flieber's engineers (forward-deployed engineers) build it: app customizations, dashboards and reports, tailored frontends, integrations, agents and workflows; quoted per project, separate from Managed Services, for qualified accounts, with a "Check if you qualify" button. Also on /pricing, /managed-services, /agents, llms files and capabilities.json (offers) |
 | Oct 6 | /managed-services, "What our planners do" reordered: S&OP meetings, keep Flieber accurate, sounding board, planning practice |
 | Oct 5 | /integrations restructured after the live page: three data types, a searchable directory with filters, native cards and assisted tiles with logos and data types, keeping the MCP and API section; fixes TikTok Shop (native), the duplicate Unleashed, "brightpeart" and Walmart "WMS" (WFS) |
 | Oct 5 | Put Flieber to work is framed as ideas, not a complete list: new lead, an "Ideas to start from" label, a "Not on the list?" box inviting the visitor's own job, and the same note in llms.txt, /agents and capabilities.json |
@@ -405,7 +406,7 @@ Before an option is elected:
 - [ ] Fabricio's photo for the founder section (a monogram marked `[FOUNDER PHOTO]` stands in on the preview)
 - [ ] Fabricio confirms the claims first used in Option 2: "Proprietary algorithms, not language models", "more than 1,000 commerce brands" in the planning engine and planner copy, the /multichannel "For most brands" line and the regional markets example for sales order routing
 - [ ] Fabricio reviews "What we believe" on /who-we-are (drawn from the May 2026 strategy document)
-- [ ] Fabricio (with engineering) makes the MCP URL, sign-in flow and per-assistant setup steps public for /mcp and /vibe-coders
+- [ ] Fabricio (with engineering) makes the MCP URL, sign-in flow and per-assistant setup steps public for /mcp and /customize
 - [ ] Fabricio expands the use-case pages, which are short for pages meant to rank (lead, three or four points, two requests, two questions)
 - [ ] Fabricio reviews /put-flieber-to-work on the preview
 - [ ] Fabricio and the team compare both previews and elect one option
