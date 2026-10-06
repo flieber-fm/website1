@@ -651,7 +651,7 @@ Pricing for the data layer on its own is being defined (Fabricio and Karyna). Un
 **H3:** What they build
 - **Customizations of the Flieber app** Views, fields and screens adjusted to how your team plans.
 - **Custom dashboards and reports** The numbers your team and leadership look at, built on live Flieber data.
-- **Tailored frontends** An interface designed around how your business runs, using the same API as Flieber's own app.
+- **Tailored frontends** An interface designed around how your business runs, built on Flieber's API.
 - **Custom features and capabilities** New features or capabilities built for your operation, only after approval from the Flieber team.
 - **Custom integrations** Connections to the systems your operation depends on that Flieber doesn't connect to yet.
 - **Custom agents and workflows** Recurring jobs and agents built for your process, under your approval rules.

@@ -341,6 +341,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 6 | Tailored frontends described as "built on Flieber's API" (not "the same API as Flieber's own app": the separation of the interface from the core is not complete yet) |
 | Oct 6 | Flieber's engineers can also build custom features and capabilities, only after approval from the Flieber team (fourth block in "What they build") |
 | Oct 6 | Third solution renamed "Customize Flieber" (/customize), replacing "Vibe coders": two paths on one page, build it yourself (the vibe-coding section stays) or have Flieber's engineers (forward-deployed engineers) build it: app customizations, dashboards and reports, tailored frontends, integrations, agents and workflows; quoted per project, separate from Managed Services, for qualified accounts, with a "Check if you qualify" button. Also on /pricing, /managed-services, /agents, llms files and capabilities.json (offers) |
 | Oct 6 | /managed-services, "What our planners do" reordered: S&OP meetings, keep Flieber accurate, sounding board, planning practice |
