@@ -876,9 +876,9 @@ Same URL as today, new copy, so the footer link no longer leads to the old site.
 
 **H2:** What our planners do
 
-- **Act as a sounding board** Review the big decisions with you before they go out: purchase orders, transfers, promotions and launches.
 - **Take part in your S&OP meetings** Get the full context on everything that affects your decisions, from new channels to supplier changes.
 - **Keep Flieber accurate** Maintain mappings, parameters and the supply chain map as your business changes, so every forecast and recommendation starts from the truth.
+- **Act as a sounding board** Review the big decisions with you before they go out: purchase orders, transfers, promotions and launches.
 - **Help run your planning practice** Bring a proven way of working, drawing on experience from more than 1,000 brands.
 
 **H2:** Who it's for

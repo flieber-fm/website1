@@ -341,6 +341,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 6 | /managed-services, "What our planners do" reordered: S&OP meetings, keep Flieber accurate, sounding board, planning practice |
 | Oct 5 | /integrations restructured after the live page: three data types, a searchable directory with filters, native cards and assisted tiles with logos and data types, keeping the MCP and API section; fixes TikTok Shop (native), the duplicate Unleashed, "brightpeart" and Walmart "WMS" (WFS) |
 | Oct 5 | Put Flieber to work is framed as ideas, not a complete list: new lead, an "Ideas to start from" label, a "Not on the list?" box inviting the visitor's own job, and the same note in llms.txt, /agents and capabilities.json |
 | Oct 5 | Five jobs (P19 cross-system inventory comparison, P27 freight ETA updates, P28 3PL receiving reports, P29 invoices and landed cost, P36 Amazon availability issues) are possible but not out of the box: they need the right sources connected through Flieber's MCP client. Their cards say "Requires custom configuration" in a yellow note |

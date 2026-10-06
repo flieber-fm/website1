@@ -734,9 +734,9 @@ MS = {
     "lead": ("Add Flieber's specialized planners to however you use Flieber. They join your team as a sounding board for "
              "every decision, master the platform on your behalf and keep the data behind your decisions accurate."),
     "do_h2": "What our planners do",
-    "do": [("Act as a sounding board", "Review the big decisions with you before they go out: purchase orders, transfers, promotions and launches."),
-           ("Take part in your S&OP meetings", "Get the full context on everything that affects your decisions, from new channels to supplier changes."),
+    "do": [("Take part in your S&OP meetings", "Get the full context on everything that affects your decisions, from new channels to supplier changes."),
            ("Keep Flieber accurate", "Maintain mappings, parameters and the supply chain map as your business changes, so every forecast and recommendation starts from the truth."),
+           ("Act as a sounding board", "Review the big decisions with you before they go out: purchase orders, transfers, promotions and launches."),
            ("Help run your planning practice", "Bring a proven way of working, drawing on experience from more than 1,000 brands.")],
     "for_h2": "Who it's for",
     "for": ["You sell across many channels, warehouses or regions", "You run kits, bundles, backorders, long lead times or high MOQs",
