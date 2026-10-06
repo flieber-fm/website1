@@ -44,6 +44,12 @@ VARIANTS = [
      "sub": ("Ask Flieber anything about your inventory from Claude or Slack, turn the answer into an automation that runs "
              "every Monday, or vibe code your own dashboards and agents on top. Flieber does the data and the math "
              "underneath, so none of it breaks when your business changes.")},
+    {"name": "Intelligence layer",
+     "eyebrow": "Built for AI agents and the teams who run them",
+     "h1": "The inventory intelligence layer your agents run on",
+     "sub": ("Live data from every channel, the business context behind it, a planning engine that does the math and "
+             "workflows that carry out what you approve, all under rules you set. Connect Claude, ChatGPT or your own "
+             "agents through MCP and API. Your team works from the same layer in the Flieber app, in Slack or with our planners.")},
 ]
 
 # Hero card: the six sample scenarios, shown as requests from agents and people.
@@ -153,7 +159,7 @@ p.lead{{color:var(--muted);margin:0 0 32px;max-width:680px}}
 .vh-sub{{display:block;margin-top:10px;color:var(--muted);font-size:15px}}
 </style></head><body><main>
 <h1>Homepage variants</h1>
-<p class="lead">The main homepage and five agent-first variants. Every variant shares the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so the difference between them is the eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
+<p class="lead">The main homepage and the agent-first variants. Every variant shares the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so the difference between them is the eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
         <a class="vh-card main" href="../"><span class="vh-n">Main · live preview today</span><span class="vh-h1">{main_h1}</span></a>
 {rows}
 </main></body></html>

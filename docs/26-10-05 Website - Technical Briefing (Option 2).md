@@ -341,6 +341,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 6 | Homepage variant V6 added at /home-variants/6/: "The inventory intelligence layer your agents run on" (Fabricio's proposal), same eyebrow and subhead as V1 for a direct comparison |
 | Oct 6 | The agent repositioning of the homepage was rolled back: the main homepage stays as it was. The agent-first versions live as five review variants at /home-variants/ (V1 Layer, V2 What agents know, V3 The right purchase order, V4 Bring your own AI, V5 Ask, automate, build), generated from the main page by scripts/build-home-variants.py. All five share the same follow-ons (agent hero card, doors, roles section, How Flieber is built lead) and differ in eyebrow, H1 and subhead. Not in the sitemap or llms files |
 | Oct 6 | /managed-services FAQ is collapsible (same details/summary markup and style as the /pricing FAQ), so only the 18 questions show until clicked. Other pages keep the open FAQ list |
 | Oct 6 | /managed-services FAQ to 18: hours (8am to 6pm ET as a rule, adjustable for Europe, Australia and other distant time zones) and languages (English, with native Spanish and Portuguese speakers among others). How planner access is controlled stays a demo follow-up, not on the page |
