@@ -1361,3 +1361,30 @@ a.int-tile:hover { border-color: var(--black); }
 .sim-work + .sim-table { margin-top: 8px; }
 .sim-status { margin-top: 10px; font-size: 13.5px; color: var(--white); opacity: .85; }
 .sim-status span { color: var(--yellow); margin-right: 4px; }
+/* Compact hero card (homepage variants): close to the height of eyebrow + H1 + subhead */
+.sim-compact { position: relative; padding: 20px 22px; }
+.sim-compact .sim-tabs { flex-wrap: nowrap; gap: 4px; margin-top: 10px; }
+.sim-compact .sim-tab { flex: 1; padding: 7px 0; border: 0; border-radius: 0; background: transparent; }
+.sim-compact .sim-tab::before { content: ""; display: block; height: 3px; border-radius: 2px; background: rgba(240,245,246,.18); transition: background-color .2s; }
+.sim-compact .sim-tab:hover::before { background: rgba(240,245,246,.45); }
+.sim-compact .sim-tab[aria-selected="true"] { background: transparent; }
+.sim-compact .sim-tab[aria-selected="true"]::before { background: rgba(240,245,246,.3); }
+.sim-compact .sim-tab span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sim-compact .sim-progress { top: 7px; bottom: auto; height: 3px; border-radius: 2px; }
+.sim-compact .sim-tab[aria-selected="true"] .sim-progress { background: var(--yellow); opacity: 1; }
+.sim-compact .sim-src { margin-top: 12px; }
+.sim-compact .sim-src-arrow { color: var(--yellow); }
+.sim-compact .sim-q { margin-top: 6px; font-size: clamp(17px, 1.45vw, 19px); }
+.sim-compact .sim-table { margin-top: 10px; font-size: 13px; }
+.sim-compact .sim-table th, .sim-compact .sim-table td { padding: 6px 6px; }
+.sim-compact .sim-table thead th { font-size: 10.5px; line-height: 1.25; }
+.sim-compact .sim-table thead th:nth-child(2), .sim-compact .sim-table thead th:nth-child(3) { width: 34%; }
+.sim-compact .sim-table tbody th { white-space: nowrap; }
+.sim-compact .sim-table td { font-size: 13px; }
+.sim-compact .sim-rec { margin-top: 10px; padding: 9px 12px; font-size: 14px; }
+.sim-compact .sim-rec-label { display: inline; margin: 0 6px 0 0; }
+.sim-compact .sim-status { margin-top: 8px; font-size: 13px; }
+.sim-compact .sim-foot { position: absolute; right: 20px; top: 17px; margin: 0; }
+.sim-compact .sim-badge { margin-right: 34px; }
+.sim-compact .sim-foot figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sim-compact .sim-pause { width: 26px; height: 26px; }

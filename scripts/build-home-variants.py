@@ -120,13 +120,13 @@ def variant(base: str, i: int, v: dict) -> str:
     for old_q, src, ask, status in SCENES:
         a = f'<p class="sim-q">{old_q}</p>'
         k = t.index(a)
-        new = (f'<p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>{src}</p>\n'
-               f'                <p class="sim-q">“{ask}”</p>\n'
-               f'                <p class="sim-work">Flieber checked live inventory, open POs, lead times and cash</p>')
+        new = (f'<p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>{src} <span class="sim-src-arrow" aria-hidden="true">→</span> Flieber</p>\n'
+               f'                <p class="sim-q">“{ask}”</p>')
         t = t[:k] + new + t[k + len(a):]
         j = t.index('<p class="sim-rec">', k)
         e = t.index("</p>", j) + 4
         t = t[:e] + f'\n                <p class="sim-status"><span aria-hidden="true">✓</span> {status}</p>' + t[e:]
+    t = rep(t, '<figure class="sim" id="sim"', '<figure class="sim sim-compact" id="sim"')
     t = re.sub(r'(<span class="eyebrow"><span class="pulse" aria-hidden="true"></span><span>)[^<]*(</span>)', lambda m: m.group(1) + v["eyebrow"] + m.group(2), t, count=1)
     t = re.sub(r'(<h1 class="h1" id="hero-title">)[^<]*(</h1>)', lambda m: m.group(1) + v["h1"] + m.group(2), t, count=1)
     s = t.index('<p class="lead">', t.index('id="hero-title"'))
