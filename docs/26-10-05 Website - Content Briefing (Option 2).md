@@ -19,7 +19,7 @@ Option 2 follows the structure of legora.com, applied to supply chain. Option 1 
 | Element | Option 1 | Option 2 |
 | --- | --- | --- |
 | Core message | Before AI can run your brand, someone has to keep your data true | Flieber's AI connects the variables behind each decision so the team can make the call: it keeps them in one current, contextualized, AI-ready picture and turns them into forecasts and recommendations for the team, agents and systems (collaborative AI) |
-| Hero eyebrow | Inventory intelligence for multichannel brands · MCP-native | Collaborative AI for multichannel brands · MCP-native |
+| Hero eyebrow | Inventory intelligence for multichannel brands · MCP-native | Built for AI agents and the teams who run them · MCP-native |
 | Customer logos | Near the bottom, in Proof | Directly under the hero |
 | How Flieber works | "Consolidated. Contextualized. Up to date" | A three-party collaboration section (your team, Flieber's AI, Flieber's planners) plus a stacked six-layer view of how the system works and five question-led module cards |
 | Solutions | Not in the navigation | Three solutions pages by type of business and goal (multichannel brands, agencies and aggregators, vibe coders) plus a "Before you choose" page of buyer questions that replaces the named comparison pages |
@@ -103,17 +103,30 @@ Thirteen sections plus footer, top to bottom. Each section after the hero opens 
 
 ### 4.1 Hero
 
-**Eyebrow:** Collaborative AI for multichannel brands · MCP-native
+Repositioned on Oct 6: Flieber as the layer that agents (and the people who run them) work from, not an inventory app with AI added. Page title and meta description follow the H1.
 
-**H1:** Before running your brand with AI, someone has to keep the data true
+**Eyebrow:** Built for AI agents and the teams who run them · MCP-native
 
-**Subhead:** Your business changes every day: a stockout, a promotion, an influencer post, a late container, a new product launch. And every change rewrites what your numbers mean. Flieber connects your data with the context behind it and turns it into forecasts and recommendations your team, your agents and your systems can act on with confidence.
+**H1:** The inventory layer your agents run on
 
-**Decision simulation card:** as in Option 1 (six sample scenarios, same four metric rows, labeled as illustrative sample data).
+**Subhead:** Live data from every channel, the business context behind it, a planning engine that does the math and workflows that carry out what you approve, all under rules you set. Connect Claude, ChatGPT or your own agents through MCP and API. Your team works from the same layer in the Flieber app, in Slack or with our planners.
 
-**Door 1: Let our planners help you run it** Flieber's planners join your team as a sounding board for every decision. They're specialists who master Flieber, keep the data behind your decisions accurate and take part in your S&OP meetings to help run your planning practice. Learn more about Managed Services → (inline link at the end of the text, to /managed-services, so it doesn't compete with the button) *Button:* Book a demo
+**Hero card: "Agents at work on Flieber"** The six sample scenarios from Option 1 (same metric rows, labeled as illustrative sample data), each now shown as a request from an agent or a person, Flieber's work and the result waiting on a person:
 
-**Door 2: Run it yourself** Plan with Flieber's AI in the Flieber app, or connect it to Claude, Slack, your agents and systems through MCP or API. Every way in works from the same data and context. *Button:* Start free trial (nothing next to it)
+| Scenario | Request comes from | Request | Result line |
+| --- | --- | --- | --- |
+| Wholesale order | Claude | A wholesale buyer wants 1,800 units of the travel kit. Can we take the order? | Split order ready for your ERP. Waiting for your approval. |
+| Promotion | Slack · #marketing | Can we run 25% off the travel kit next week? | Answer posted in the thread. Marketing makes the call. |
+| Influencer campaign | ChatGPT | An influencer post could double demand for our hero SKU. When should it go live? | Launch date goes into the forecast once you confirm. |
+| Ad campaign | Your agent · daily check | Flagged: a hero SKU will sell out 3 weeks before its next PO lands. | Recommendation sent to the ads team. |
+| Purchase order | Claude | A supplier offers 8% off for six months of stock. Is it worth it? | Three-month PO drafted. Waiting for your approval. |
+| Warehouse transfer | Slack · scheduled | Ops wants to send 2,000 units from the 3PL to Amazon FBA. Should we? | Transfer plan ready. Waiting for your approval. |
+
+Under each request: "Flieber checked live inventory, open POs, lead times and cash".
+
+**Door 1: Add planners who work alongside your agents** Flieber's planners join your team as a sounding board for every decision, whether it comes from a person or an agent. They're specialists who master Flieber, keep the data behind your decisions accurate and take part in your S&OP meetings to help run your planning practice. Learn more about Managed Services → (inline link at the end of the text, to /managed-services, so it doesn't compete with the button) *Button:* Book a demo
+
+**Door 2: Connect your agents, or use the app** Plug Claude, ChatGPT and your own agents into Flieber through MCP or API, or plan with Flieber's AI in the app and in Slack. Every way in works from the same data and context. *Button:* Start free trial (nothing next to it)
 
 **Under the doors:** 14-day free trial · No credit card · Monthly contracts · Setup included
 
@@ -131,15 +144,15 @@ As in Option 1, section 3.2 (H2 "Purchases, promotions, ads, financing: every on
 
 **Section label:** Collaborative AI
 
-**H2:** AI that plans with your team, not instead of it
+**H2:** Your team decides. Agents do the work around it
 
-**Lead:** Inventory decisions commit cash for months. Flieber keeps people in charge of them and takes on everything around them.
+**Lead:** Inventory decisions commit cash for months. With Flieber, your team stays in charge of them, while Flieber's AI and your own agents take on everything around them.
 
 Three columns:
 
 1. **Your team** Set the objectives and constraints, add the context no system has, and make the final call on every decision that commits cash.
-2. **Flieber's AI** Keeps your data consolidated and current, watches every SKU and every signal, prepares each decision with the reasoning behind it and carries it out once you approve.
-3. **Flieber's planners** Optional. Specialists in inventory planning and in Flieber who join your S&OP meetings, act as a sounding board for your decisions and keep the data they rely on accurate.
+2. **Flieber's AI and your agents** (label: Prepare and carry out) Keep your data consolidated and current, watch every SKU and every signal, prepare each decision with the reasoning behind it and carry it out once you approve. Your own agents work from the same data, context and engine through MCP and API.
+3. **Flieber's planners** Optional. Specialists in inventory planning and in Flieber who join your S&OP meetings, act as a sounding board for your decisions and keep the data your team and your agents rely on accurate.
 
 **Under the columns:** You decide how much runs on its own. By default, every change waits for your approval. → /features#control-and-approval
 
@@ -147,16 +160,16 @@ Three columns:
 
 **Section label:** How Flieber is built
 
-**H2:** From raw data to a decision you can trust
+**H2:** What your agents run on
 
-**Lead:** A language model on a spreadsheet can sound confident. Getting the answer right takes everything underneath it. Each layer adds something the one below it doesn't have.
+**Lead:** An agent on a spreadsheet can sound confident and still get inventory wrong. It doesn't know which listings are the same product, what's inside a bundle or that last month's dip was a stockout. Before running your brand with agents, someone has to keep the data true. Each layer adds something the one below it doesn't have.
 
 **What this section does:** explains how the system works, from raw data to a change in your systems. It describes the mechanism, not what a customer buys; it never names a module or links to a product page. Designed as a stacked diagram (data at the bottom, decisions at the top) with each layer expanding on click. One link at the bottom only.
 
 1. **Your data** Sales, orders, inventory and shipments arrive from every connected system, each in its own format, and are reconciled into one record. Gaps and anomalies surface here, before anything is planned on them.
 2. **Business context** The records become a model of how your business actually works: which listings are the same product, which components make a bundle, which supplier ships to which warehouse and what a stockout did to last month's sales.
 3. **Planning engine** Proprietary algorithms, not language models, do the math: forecasts, projections and recommendations computed against your real constraints, shaped by the business context of more than 1,000 commerce brands.
-4. **Collaborative AI** The AI layer translates between your team and the engine. It turns a question or an objective into a calculation, explains the result in plain language and runs the follow-up work on schedule.
+4. **Collaborative AI** The AI layer translates between the engine and whoever is asking, your team or your agents. It turns a question or an objective into a calculation, explains the result in plain language and runs the follow-up work on schedule.
 5. **Where you work** The same answers reach you wherever you work: in the Flieber app, Slack and Google Sheets, or through Claude and your own agents via MCP and API.
 6. **Control** Nothing changes in your systems without passing the approval rules you set. Your data is never sold or shared, and Flieber does not train on it.
 
