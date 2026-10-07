@@ -1,6 +1,6 @@
 # Flieber
 
-> Flieber is collaborative AI for multichannel commerce brands: it prepares inventory, purchasing, pricing and allocation decisions for the brand's team to approve and carries them out afterward.
+> Flieber is the inventory intelligence layer for multichannel commerce brands, built for AI agents and the teams who run them: it prepares inventory, purchasing, pricing and allocation decisions, explains the reasoning, and carries them out once the brand's team approves.
 
 Generated from https://www.flieber.com/features and https://www.flieber.com/agents and never contradicts them. Last updated 2026-10-02.
 

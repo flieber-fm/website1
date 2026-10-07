@@ -327,7 +327,7 @@ Trial details (native integrations during the trial; assisted integrations and s
 
 ### Footer
 
-**Tagline:** Collaborative AI for multichannel brands.
+**Tagline:** The inventory intelligence layer your agents run on.
 
 **Columns:** Product (Features, Put Flieber to work, Integrations, MCP and AI agents, Pricing, Security & data, Managed Services) · Solutions (Multichannel brands, Agencies and aggregators, Customize Flieber, Before you choose) · For agents (/agents, /llms.txt, /capabilities.json, MCP docs) · Company (Who we are → /who-we-are, Help center, Blog, Contact, Privacy, Service agreement)
 

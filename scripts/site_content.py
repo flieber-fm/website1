@@ -21,7 +21,7 @@ EMAIL = "hello@flieber.com"
 ACCURACY = ("36% more accurate than our previous portfolio of 16 forecasting models, tested on a random "
             "sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.")
 
-POSITIONING = "Collaborative AI for multichannel brands"
+POSITIONING = "The inventory intelligence layer your agents run on"
 
 # ---------------------------------------------------------------- /features
 FEATURES_H1 = "Collaborative AI for every inventory decision"
@@ -173,8 +173,9 @@ NEXT_BODY = ("Start a 14-day free trial, no credit card required, or book a demo
              "that matter for your operation.")
 
 # ---------------------------------------------------------------- /agents
-SUMMARY = ("Flieber is collaborative AI for multichannel commerce brands: it prepares inventory, purchasing, pricing "
-           "and allocation decisions for the brand's team to approve and carries them out afterward. "
+SUMMARY = ("Flieber is the inventory intelligence layer for multichannel commerce brands, built for AI agents and the "
+           "teams who run them: it prepares inventory, purchasing, pricing and allocation decisions, explains the "
+           "reasoning, and carries them out once the brand's team approves. "
            "Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, "
            "catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain "
            "mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, "
