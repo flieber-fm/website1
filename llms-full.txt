@@ -2,7 +2,7 @@
 
 The complete text of https://www.flieber.com/features, the five module pages, https://www.flieber.com/mcp, https://www.flieber.com/put-flieber-to-work, https://www.flieber.com/customize, the ten use-case pages, https://www.flieber.com/managed-services, https://www.flieber.com/who-we-are, https://www.flieber.com/multichannel, https://www.flieber.com/agencies, https://www.flieber.com/before-you-choose and https://www.flieber.com/agents. Last updated 2026-10-02.
 
-## Collaborative AI for every inventory decision
+## Everything Flieber does, for your team and your agents
 
 Flieber keeps a current picture of how your business works, recommends your next move and acts on it, together with your team, your agents and your systems. Five modules cover the way from your data to a decision you can act on. Every feature works the same whether you use it in the Flieber app, ask for it in plain language, or call it from your own agents and systems through MCP or API.
 
@@ -949,7 +949,7 @@ How you work together:
 
 "Flieber has allowed me to reduce manual work while planning and forecasting products, and to handle different regions and sales channels in a single place." Leonardo Escalona, Inventory Planner, Prime6 Brands (Primal Harvest)
 
-### Agencies and aggregators: The inventory planning platform built for multi-brand operators
+### Agencies and aggregators: The inventory intelligence layer for every brand you run
 
 https://www.flieber.com/agencies
 

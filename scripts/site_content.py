@@ -24,7 +24,7 @@ ACCURACY = ("36% more accurate than our previous portfolio of 16 forecasting mod
 POSITIONING = "The inventory intelligence layer your agents run on"
 
 # ---------------------------------------------------------------- /features
-FEATURES_H1 = "Collaborative AI for every inventory decision"
+FEATURES_H1 = "Everything Flieber does, for your team and your agents"
 FEATURES_INTRO = ("Flieber keeps a current picture of how your business works, recommends your next move and acts on it, "
                   "together with your team, your agents and your systems. Five modules cover the way from your data to a decision you can act on. Every "
                   "feature works the same whether you use it in the Flieber app, ask for it in plain language, or call it "
@@ -444,7 +444,7 @@ SOLUTIONS = [
     {
         "slug": "agencies", "name": "Agencies and aggregators",
         "card": "Every brand in one place, planned individually or consolidated.",
-        "h1": "The inventory planning platform built for multi-brand operators",
+        "h1": "The inventory intelligence layer for every brand you run",
         "lead": "Run every brand's planning from one place instead of a stack of tools and spreadsheets per brand. Add multiple brands or organizations and see them individually or consolidated in single dashboards.",
         "why_h2": "Why multi-brand planning breaks",
         "why": [("Every brand brings its own data", "Different channels, marketplaces, 3PLs and ERPs, each with its own format."),

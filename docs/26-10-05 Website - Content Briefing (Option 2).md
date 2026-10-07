@@ -545,7 +545,7 @@ Same URL as today; the copy is replaced.
 
 **Label:** Solutions · Agencies and aggregators
 
-**H1:** The inventory planning platform built for multi-brand operators
+**H1:** The inventory intelligence layer for every brand you run
 
 **Lead:** Run every brand's planning from one place instead of a stack of tools and spreadsheets per brand. Add multiple brands or organizations and see them individually or consolidated in single dashboards.
 
@@ -1028,7 +1028,7 @@ The full founder statement from section 4.11 (all three paragraphs), signed Fabr
 
 /features keeps every feature card of Option 1, section 4 (same titles, descriptions and access tags), regrouped by module. One feature is added. The approval section, example requests and FAQ are as in Option 1.
 
-- **H1:** Collaborative AI for every inventory decision
+- **H1:** Everything Flieber does, for your team and your agents
 - **Intro:** Flieber keeps a current picture of how your business works, recommends your next move and acts on it, together with your team, your agents and your systems. Five modules cover the way from your data to a decision you can act on. Every feature works the same whether you use it in the Flieber app, ask for it in plain language, or call it from your own agents and systems through MCP or API.
 - **Jump links:** Data layer · Demand forecasting · Inventory forecasting · Replenishment · Workflows · Access · Approval · Examples · Questions
 - **Sections and anchors** (each section links to its module page):

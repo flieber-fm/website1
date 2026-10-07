@@ -191,7 +191,7 @@ def build_features() -> None:
     bottom = bottom.replace('<a href="/pricing" aria-current="page">Pricing</a>', '<a href="/pricing">Pricing</a>')
     top = top.replace('<a href="../features/">How it works</a>', '<a href="../features/" aria-current="page">How it works</a>')
     bottom = bottom.replace('<a href="../features/">How it works</a>', '<a href="../features/" aria-current="page">How it works</a>')
-    title = "Features: collaborative AI for every inventory decision"
+    title = "Features: everything Flieber does, for your team and your agents"
     desc = ("Every Flieber feature: a current picture of how your business works, your next move recommended and "
             "carried out with your team, agents and systems. Forecasts, purchase orders, inbound shipments, MCP and API.")
     top = re.sub(r"<title>.*?</title>", f"<title>{title}</title>", top)
