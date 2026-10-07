@@ -45,7 +45,7 @@ VARIANTS = [
      "sub": ("Ask Flieber anything about your inventory from Claude or Slack, turn the answer into an automation that runs "
              "every Monday, or vibe code your own dashboards and agents on top. Flieber does the data and the math "
              "underneath, so none of it breaks when your business changes.")},
-    {"name": "Intelligence layer",
+    {"name": "Intelligence layer", "main_doors": True,
      "eyebrow": "Built for AI agents and the teams who run them",
      "h1": "The inventory intelligence layer your agents run on",
      "sub": ("Live data from every channel, the business context that connects it, a planning engine that does the math, "
@@ -74,11 +74,6 @@ SCENES = [
 # Follow-ons shared by every variant, so the comparison isolates the hero copy.
 SHARED = [
     ('<span class="sim-title" id="sim-title">Decision simulation</span>', '<span class="sim-title" id="sim-title">Agents at work on Flieber</span>'),
-    ("<h2>Run it yourself</h2>", "<h2>Connect your agents, or use the app</h2>"),
-    ("<p>Plan with Flieber’s AI in the Flieber app, or connect it to Claude, Slack, your agents and systems through MCP or API. Every way in works from the same data and context.</p>",
-     "<p>Plug Claude, ChatGPT and your own agents into Flieber through MCP or API, or plan with Flieber’s AI in the app and in Slack. Every way in works from the same data and context.</p>"),
-    ("<h2>Let our planners help you run it</h2>", "<h2>Add planners who work alongside your agents</h2>"),
-    ("<p>Flieber’s planners join your team as a sounding board for every decision.", "<p>Flieber’s planners join your team as a sounding board for every decision, whether it comes from a person or an agent."),
     ('id="collab-title" style="margin-top:20px">AI that plans with your team, not instead of it</h2>', 'id="collab-title" style="margin-top:20px">Your team decides. Agents do the work around it</h2>'),
     ('<p class="lead">Inventory decisions commit cash for months. Flieber keeps people in charge of them and takes on everything around them.</p>',
      '<p class="lead">Inventory decisions commit cash for months. With Flieber, your team stays in charge of them, while Flieber’s AI and your own agents take on everything around them.</p>'),
@@ -90,6 +85,15 @@ SHARED = [
     ('<p class="lead">A language model on a spreadsheet can sound confident. Getting the answer right takes everything underneath it. Each layer adds something the one below it doesn’t have.</p>',
      '<p class="lead">An agent on a spreadsheet can sound confident and still get inventory wrong. It doesn’t know which listings are the same product, what’s inside a bundle or that last month’s dip was a stockout. Before running your brand with agents, someone has to keep the data true. Each layer adds something the one below it doesn’t have.</p>'),
     ("<p>The AI layer translates between your team and the engine.", "<p>The AI layer translates between the engine and whoever is asking, your team or your agents."),
+]
+
+# Agent-first doors. A variant with "main_doors": True keeps the main page's doors instead.
+DOORS = [
+    ("<h2>Run it yourself</h2>", "<h2>Connect your agents, or use the app</h2>"),
+    ("<p>Plan with Flieber’s AI in the Flieber app, or connect it to Claude, Slack, your agents and systems through MCP or API. Every way in works from the same data and context.</p>",
+     "<p>Plug Claude, ChatGPT and your own agents into Flieber through MCP or API, or plan with Flieber’s AI in the app and in Slack. Every way in works from the same data and context.</p>"),
+    ("<h2>Let our planners help you run it</h2>", "<h2>Add planners who work alongside your agents</h2>"),
+    ("<p>Flieber’s planners join your team as a sounding board for every decision.", "<p>Flieber’s planners join your team as a sounding board for every decision, whether it comes from a person or an agent."),
 ]
 
 BAR_CSS = """<style>
@@ -118,7 +122,7 @@ def bar(current: int, up: str) -> str:
 
 def variant(base: str, i: int, v: dict) -> str:
     t = base
-    for a, b in SHARED:
+    for a, b in SHARED + ([] if v.get("main_doors") else DOORS):
         t = rep(t, a, b)
     for old_q, src, ask, status in SCENES:
         a = f'<p class="sim-q">{old_q}</p>'
