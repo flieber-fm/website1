@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Homepage variants for side-by-side review (preview only, never indexed, not in the sitemap).
 
-Each variant is the main index.html plus the agent-first follow-ons (hero card, doors, roles
+History of the homepage versions considered. On Oct 7 the "Intelligence layer" variant was promoted to the
+main homepage; the main page as it stood until then is frozen in scripts/home-variants-base.html and is both
+V6 (shown unchanged) and the base every other variant is built from, so V1 to V5 stay exactly as reviewed.
+Each variant is that base plus the agent-first follow-ons (hero card, doors, roles
 section, How Flieber is built lead) and its own eyebrow, H1 and subhead. Output:
 home-variants/index.html (the comparison hub) and home-variants/<n>/index.html.
-Run after build-content.py, so the variants pick up every change to the main page.
+The hub's Main card reads the live index.html.
 """
 import html
 import re
@@ -45,13 +48,12 @@ VARIANTS = [
      "sub": ("Ask Flieber anything about your inventory from Claude or Slack, turn the answer into an automation that runs "
              "every Monday, or vibe code your own dashboards and agents on top. Flieber does the data and the math "
              "underneath, so none of it breaks when your business changes.")},
-    {"name": "Intelligence layer", "main_doors": True,
-     "eyebrow": "Built for AI agents and the teams who run them",
-     "h1": "The inventory intelligence layer your agents run on",
-     "sub": ("Live data from every channel, the business context that connects it, a planning engine that does the math, "
-             "and workflows that carry out what you approve, all under the rules you set. Connect Claude, ChatGPT or your "
-             "own agents through MCP or API. Your team works from the same data layer, whether in the Flieber app, in Slack "
-             "or with the help of our planners.")},
+    {"name": "Collaborative AI (main until Oct 7)", "raw": True,
+     "eyebrow": "Collaborative AI for multichannel brands",
+     "h1": "Before running your brand with AI, someone has to keep the data true",
+     "sub": ("Your business changes every day: a stockout, a promotion, an influencer post, a late container, a new product "
+             "launch. And every change rewrites what your numbers mean. Flieber connects your data with the context behind it "
+             "and turns it into forecasts and recommendations your team, your agents and your systems can act on with confidence.")},
 ]
 
 # Hero card: the six sample scenarios, shown as requests from agents and people.
@@ -122,6 +124,8 @@ def bar(current: int, up: str) -> str:
 
 def variant(base: str, i: int, v: dict) -> str:
     t = base
+    if v.get("raw"):
+        return finish(t, i, v)
     for a, b in SHARED + ([] if v.get("main_doors") else DOORS):
         t = rep(t, a, b)
     for old_q, src, ask, status in SCENES:
@@ -135,6 +139,10 @@ def variant(base: str, i: int, v: dict) -> str:
     t = re.sub(r'(<h1 class="h1" id="hero-title">)[^<]*(</h1>)', lambda m: m.group(1) + v["h1"] + m.group(2), t, count=1)
     s = t.index('<p class="lead">', t.index('id="hero-title"'))
     t = t[:s] + f'<p class="lead">{v["sub"]}</p>' + t[t.index("</p>", s) + 4:]
+    return finish(t, i, v)
+
+
+def finish(t: str, i: int, v: dict) -> str:
     t = re.sub(r"<title>[^<]*</title>", f"<title>V{i} {html.escape(v['name'])}: {v['h1']} | Flieber</title>", t, count=1)
     t = re.sub(r'\s*<link rel="canonical"[^>]*>', "", t, count=1)
     up = "../../"
@@ -163,7 +171,7 @@ p.lead{{color:var(--muted);margin:0 0 32px;max-width:680px}}
 .vh-sub{{display:block;margin-top:10px;color:var(--muted);font-size:15px}}
 </style></head><body><main>
 <h1>Homepage variants</h1>
-<p class="lead">The main homepage and the agent-first variants. Every variant shares the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so the difference between them is the eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
+<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it. V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
         <a class="vh-card main" href="../"><span class="vh-n">Main · live preview today</span><span class="vh-h1">{main_h1}</span></a>
 {rows}
 </main></body></html>
@@ -171,9 +179,10 @@ p.lead{{color:var(--muted);margin:0 0 32px;max-width:680px}}
 
 
 def main() -> None:
-    base = (ROOT / "index.html").read_text(encoding="utf-8")
+    base = (ROOT / "scripts" / "home-variants-base.html").read_text(encoding="utf-8")
+    live = (ROOT / "index.html").read_text(encoding="utf-8")
     OUT.mkdir(exist_ok=True)
-    (OUT / "index.html").write_text(hub(base), encoding="utf-8")
+    (OUT / "index.html").write_text(hub(live), encoding="utf-8")
     for i, v in enumerate(VARIANTS, 1):
         d = OUT / str(i)
         d.mkdir(exist_ok=True)

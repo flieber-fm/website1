@@ -1198,6 +1198,22 @@ a.int-tile:hover { border-color: var(--black); }
 .sim-work + .sim-table { margin-top: 8px; }
 .sim-status { margin-top: 10px; font-size: 13.5px; color: var(--white); opacity: .85; }
 .sim-status span { color: var(--yellow); margin-right: 4px; }
+.sim-compact .sim-head { display: none; }
+.sim-compact .sim-tabs { flex-wrap: nowrap; gap: 6px; margin-top: 0; }
+.sim-compact .sim-tab { flex: 1; padding: 6px 0; border: 0; border-radius: 0; background: transparent; }
+.sim-compact .sim-tab::before { content: ""; display: block; height: 3px; border-radius: 2px; background: rgba(240,245,246,.16); transition: background-color .2s; }
+.sim-compact .sim-tab:hover::before { background: rgba(240,245,246,.4); }
+.sim-compact .sim-tab[aria-selected="true"] { background: transparent; }
+.sim-compact .sim-tab[aria-selected="true"]::before { background: rgba(240,245,246,.28); }
+.sim-compact .sim-tab span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sim-compact .sim-progress { top: 6px; bottom: auto; height: 3px; border-radius: 2px; }
+.sim-compact .sim-tab[aria-selected="true"] .sim-progress { background: var(--yellow); opacity: 1; }
+.sim-compact .sim-src { margin-top: 22px; }
+.sim-compact .sim-src-arrow { color: var(--yellow); }
+.sim-compact .sim-src + .sim-q { margin-top: 10px; }
+.sim-compact .sim-table tbody th { white-space: nowrap; }
+.sim-compact .sim-q { font-size: clamp(19px, 1.55vw, 21px); }
+.sim-compact .sim-table thead th:nth-child(2), .sim-compact .sim-table thead th:nth-child(3) { width: 33%; }
 
 </style>
 

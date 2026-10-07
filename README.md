@@ -22,7 +22,7 @@ What Option 2 changes (revised brief, October 2):
 
 Build: `python3 scripts/build-content.py` regenerates /features, the module pages, /multichannel, /agencies, the /agents body, the three machine-readable files and the nav and footer of every page. The homepage, /pricing, /security and /contact bodies are edited by hand.
 
-Homepage variants (review only): `python3 scripts/build-home-variants.py`, run after build-content.py, writes /home-variants/ (a comparison hub) and /home-variants/1/ to /5/: the main homepage plus agent-first hero copy and follow-ons, with a compare bar on each page. Noindex like the rest of the preview, not in the sitemap or llms files. Delete the folder and its Dockerfile line once a version is chosen.
+Homepage versions (review only): `python3 scripts/build-home-variants.py` writes /home-variants/ (a comparison hub) and /home-variants/1/ to /6/, the homepage versions considered, each with a compare bar. V6 is the main page as it stood until Oct 7; it is frozen in `scripts/home-variants-base.html`, which is also the base V1 to V5 are built from. Noindex like the rest of the preview, not in the sitemap or llms files.
 
 Choices made while building (open to change):
 
