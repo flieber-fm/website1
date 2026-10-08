@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flieber · The inventory intelligence layer your agents run on</title>
+    <meta name="description" content="Reconciled data, a planning engine and decision tools for multichannel commerce brands. Use Flieber from Claude, ChatGPT, Slack or your own agent.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F6F5F1;
+            --paper-2: #EDEBE4;
+            --card: #FFFFFF;
+            --ink: #0F1013;
+            --ink-2: #2A2C33;
+            --muted: #6B6E78;
+            --line: #DEDBD2;
+            --accent: #3A4BFF;
+            --accent-soft: rgba(58, 75, 255, 0.08);
+            --ok: #12805C;
+            --ok-soft: rgba(18, 128, 92, 0.1);
+            --warn: #B45309;
+            --warn-soft: rgba(180, 83, 9, 0.1);
+            --dark: #0F1013;
+            --dark-2: #17181C;
+            --dark-line: #2A2C33;
+            --dark-text: #E9E8E3;
+            --dark-muted: #9A9CA5;
+            --sans: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+            --mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+            --radius: 14px;
+            --max: 1160px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+        .mono { font-family: var(--mono); }
+
+        /* NAV */
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(246, 245, 241, 0.85);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+        }
+        .nav-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px;
+        }
+        .wordmark {
+            display: flex; align-items: center; gap: 0.55rem;
+            font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em;
+        }
+        .wordmark .mark {
+            width: 22px; height: 22px; border-radius: 6px;
+            background: var(--ink);
+            display: grid; place-items: center;
+        }
+        .wordmark .mark span {
+            width: 8px; height: 8px; border-radius: 2px; background: var(--accent);
+        }
+        .nav-links { display: flex; gap: 1.75rem; font-size: 0.9rem; color: var(--muted); }
+        .nav-links a:hover { color: var(--ink); }
+        .nav-actions { display: flex; gap: 0.6rem; align-items: center; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.45rem;
+            padding: 0.7rem 1.15rem;
+            border-radius: 10px;
+            font-family: var(--sans); font-weight: 600; font-size: 0.9rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: transform 0.15s, background 0.2s, border-color 0.2s;
+            white-space: nowrap;
+        }
+        .btn:hover { transform: translateY(-1px); }
+        .btn-primary { background: var(--ink); color: var(--paper); }
+        .btn-primary:hover { background: #24262D; }
+        .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+        .btn-ghost:hover { border-color: var(--ink); }
+        .btn-accent { background: var(--accent); color: #fff; }
+        .btn-sm { padding: 0.5rem 0.9rem; font-size: 0.85rem; }
+
+        /* HERO */
+        .hero { padding: 5rem 0 4rem; }
+        .hero-grid {
+            display: grid; grid-template-columns: 1.05fr 1fr; gap: 3.5rem; align-items: center;
+        }
+        .eyebrow {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-family: var(--mono); font-size: 0.75rem;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            color: var(--muted);
+            padding: 0.35rem 0.75rem;
+            border: 1px solid var(--line); border-radius: 100px;
+            background: var(--card);
+        }
+        .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ok); }
+        .hero h1 {
+            margin-top: 1.5rem;
+            font-size: clamp(2.6rem, 5.2vw, 4.25rem);
+            line-height: 1.02;
+            letter-spacing: -0.04em;
+            font-weight: 600;
+        }
+        .hero h1 .soft { color: var(--muted); }
+        .hero-sub {
+            margin-top: 1.4rem;
+            font-size: 1.15rem;
+            color: var(--ink-2);
+            max-width: 540px;
+        }
+        .hero-form {
+            margin-top: 2rem;
+            display: flex; gap: 0.5rem; max-width: 480px;
+        }
+        .hero-form input, .cta-form input {
+            flex: 1; min-width: 0;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--line); border-radius: 10px;
+            background: var(--card);
+            font-family: var(--sans); font-size: 0.95rem; color: var(--ink);
+            outline: none;
+        }
+        .hero-form input:focus, .cta-form input:focus { border-color: var(--accent); }
+        .hero-note {
+            margin-top: 0.9rem;
+            font-size: 0.82rem; color: var(--muted);
+        }
+        .hero-note a { color: var(--ink); border-bottom: 1px solid var(--line); }
+
+        /* CHAT MOCKUP */
+        .chat {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            box-shadow: 0 30px 60px -30px rgba(15, 16, 19, 0.25), 0 2px 6px rgba(15, 16, 19, 0.04);
+            overflow: hidden;
+        }
+        .chat-top {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--line);
+            font-size: 0.78rem; color: var(--muted);
+        }
+        .chat-top .dots { display: flex; gap: 6px; }
+        .chat-top .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); display: block; }
+        .chat-body { padding: 1.25rem; display: flex; flex-direction: column; gap: 0.9rem; }
+        .msg { opacity: 0; transform: translateY(8px); animation: rise 0.5s ease forwards; }
+        .msg-user {
+            align-self: flex-end;
+            max-width: 85%;
+            background: var(--paper-2);
+            padding: 0.7rem 0.95rem;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 0.9rem;
+        }
+        .msg-tool {
+            font-family: var(--mono); font-size: 0.74rem; color: var(--muted);
+            display: flex; align-items: center; gap: 0.5rem;
+            animation-delay: 0.5s;
+        }
+        .msg-tool .pill {
+            padding: 0.2rem 0.5rem; border-radius: 6px;
+            background: var(--accent-soft); color: var(--accent);
+        }
+        .msg-ai { font-size: 0.9rem; color: var(--ink-2); animation-delay: 0.9s; }
+
+        .tool-card {
+            border: 1px solid var(--line); border-radius: 12px;
+            overflow: hidden;
+            animation-delay: 1.3s;
+        }
+        .tool-card-head {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.7rem 0.9rem;
+            background: var(--paper);
+            border-bottom: 1px solid var(--line);
+            font-size: 0.8rem; font-weight: 600;
+        }
+        .tool-card-head .tag {
+            font-family: var(--mono); font-weight: 500; font-size: 0.68rem;
+            color: var(--muted);
+        }
+        .tool-rows { font-size: 0.8rem; }
+        .tool-row {
+            display: grid; grid-template-columns: 1.4fr 0.8fr 0.9fr;
+            padding: 0.55rem 0.9rem; gap: 0.5rem;
+            border-bottom: 1px solid var(--line);
+            align-items: center;
+        }
+        .tool-row.head { color: var(--muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .tool-row .sku { font-family: var(--mono); font-size: 0.76rem; }
+        .badge {
+            justify-self: start;
+            font-size: 0.7rem; font-weight: 600;
+            padding: 0.15rem 0.5rem; border-radius: 100px;
+        }
+        .badge.ok { background: var(--ok-soft); color: var(--ok); }
+        .badge.warn { background: var(--warn-soft); color: var(--warn); }
+        .tool-card-foot {
+            display: flex; gap: 0.5rem; padding: 0.7rem 0.9rem;
+            align-items: center; justify-content: space-between;
+        }
+        .tool-card-foot .src { font-size: 0.7rem; color: var(--muted); font-family: var(--mono); }
+        .tool-card-foot .actions { display: flex; gap: 0.4rem; }
+        .chat-caption {
+            margin-top: 0.75rem; text-align: center;
+            font-size: 0.75rem; color: var(--muted);
+        }
+
+        /* WORKS WITH */
+        .works {
+            border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+            padding: 1.25rem 0;
+        }
+        .works-inner {
+            display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+            justify-content: center;
+            font-size: 0.9rem; color: var(--muted);
+        }
+        .works-inner strong { color: var(--ink); font-weight: 600; }
+        .works-inner .sep { width: 4px; height: 4px; border-radius: 50%; background: var(--line); }
+
+        /* SECTIONS */
+        section.block { padding: 6rem 0; }
+        .label {
+            font-family: var(--mono); font-size: 0.75rem;
+            text-transform: uppercase; letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        h2.title {
+            font-size: clamp(2rem, 3.6vw, 2.9rem);
+            line-height: 1.08; letter-spacing: -0.035em; font-weight: 600;
+            max-width: 760px;
+        }
+        .lede { margin-top: 1rem; font-size: 1.08rem; color: var(--ink-2); max-width: 640px; }
+
+        /* COMPARE */
+        .compare {
+            margin-top: 3rem;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+        .compare-row {
+            display: grid; grid-template-columns: 1.2fr 1fr 1fr;
+            border-bottom: 1px solid var(--line);
+        }
+        .compare-row:last-child { border-bottom: none; }
+        .compare-row > div { padding: 1rem 1.25rem; font-size: 0.93rem; }
+        .compare-row > div + div { border-left: 1px solid var(--line); }
+        .compare-row.head > div {
+            font-family: var(--mono); font-size: 0.72rem;
+            text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+            background: var(--paper);
+        }
+        .compare-row.head > div:last-child { color: var(--accent); }
+        .compare-row .task { font-weight: 500; }
+        .compare-row .gen { color: var(--muted); }
+        .compare-row .fl { color: var(--ink); }
+        .compare-row .fl::before { content: '→ '; color: var(--accent); font-family: var(--mono); }
+
+        /* LAYERS (dark) */
+        .dark {
+            background: var(--dark); color: var(--dark-text);
+        }
+        .dark .label { color: #8F9BFF; }
+        .dark .lede { color: var(--dark-muted); }
+        .layers {
+            margin-top: 3.5rem;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+            background: var(--dark-line);
+            border: 1px solid var(--dark-line); border-radius: var(--radius);
+            overflow: hidden;
+        }
+        .layer { background: var(--dark-2); padding: 2rem 1.75rem 2.25rem; }
+        .layer .num {
+            font-family: var(--mono); font-size: 0.75rem; color: var(--dark-muted);
+            margin-bottom: 2.5rem; display: block;
+        }
+        .layer h3 { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+        .layer p { color: var(--dark-muted); font-size: 0.93rem; }
+        .layer ul { list-style: none; margin-top: 1.25rem; display: grid; gap: 0.5rem; }
+        .layer li {
+            font-size: 0.88rem; color: var(--dark-text);
+            padding-left: 1.1rem; position: relative;
+        }
+        .layer li::before {
+            content: ''; position: absolute; left: 0; top: 0.6em;
+            width: 6px; height: 6px; border-radius: 2px; background: #8F9BFF;
+        }
+        .stat {
+            margin-top: 3rem;
+            display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: center;
+            padding: 1.75rem;
+            border: 1px solid var(--dark-line); border-radius: var(--radius);
+        }
+        .stat .big { font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+        .stat p { color: var(--dark-muted); font-size: 0.95rem; max-width: 620px; }
+        .stat p strong { color: var(--dark-text); font-weight: 500; }
+
+        /* FLOW */
+        .flow-grid {
+            margin-top: 3.5rem;
+            display: grid; grid-template-columns: 300px 1fr; gap: 2.5rem; align-items: start;
+        }
+        .flow-steps { display: grid; gap: 0.5rem; }
+        .flow-step {
+            text-align: left;
+            background: transparent;
+            border: 1px solid transparent; border-radius: 12px;
+            padding: 0.9rem 1rem;
+            font-family: var(--sans); color: var(--muted);
+            cursor: pointer;
+            display: grid; grid-template-columns: 28px 1fr; gap: 0.5rem; align-items: start;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
+        }
+        .flow-step .n { font-family: var(--mono); font-size: 0.8rem; padding-top: 0.1rem; }
+        .flow-step strong { display: block; color: inherit; font-weight: 600; font-size: 0.98rem; }
+        .flow-step small { display: block; font-size: 0.84rem; margin-top: 0.15rem; }
+        .flow-step:hover { color: var(--ink-2); }
+        .flow-step.active { background: var(--card); border-color: var(--line); color: var(--ink); }
+        .flow-step.active .n { color: var(--accent); }
+
+        .flow-stage {
+            background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+            min-height: 380px; padding: 1.75rem;
+            position: relative;
+        }
+        .stage { display: none; animation: rise 0.35s ease; }
+        .stage.active { display: block; }
+        .stage h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.4rem; }
+        .stage > p { color: var(--muted); font-size: 0.93rem; margin-bottom: 1.25rem; max-width: 560px; }
+        .terminal {
+            background: var(--dark); color: var(--dark-text);
+            border-radius: 12px; padding: 1.1rem 1.25rem;
+            font-family: var(--mono); font-size: 0.8rem; line-height: 1.7;
+            overflow-x: auto;
+        }
+        .terminal .c { color: var(--dark-muted); }
+        .terminal .k { color: #8F9BFF; }
+        .terminal .s { color: #7FD8B0; }
+        .mini-dash {
+            display: grid; grid-template-columns: 180px 1fr; gap: 1rem;
+            border: 1px solid var(--line); border-radius: 12px; padding: 1rem;
+        }
+        .mini-dash .side { display: grid; gap: 0.4rem; align-content: start; }
+        .mini-dash .side span {
+            font-size: 0.78rem; padding: 0.4rem 0.6rem; border-radius: 8px; color: var(--muted);
+        }
+        .mini-dash .side span.on { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+        .mini-dash .main { display: grid; gap: 0.75rem; }
+        .scenario { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .scenario span {
+            font-family: var(--mono); font-size: 0.72rem;
+            padding: 0.3rem 0.6rem; border: 1px solid var(--line); border-radius: 6px;
+        }
+        .scenario span.on { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+        .bars { display: flex; align-items: flex-end; gap: 5px; height: 120px; padding-top: 0.5rem; }
+        .bars i { flex: 1; display: block; border-radius: 3px 3px 0 0; background: var(--paper-2); }
+        .bars i.f { background: var(--accent); opacity: 0.85; }
+        .preview {
+            border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+        }
+        .preview-head {
+            padding: 0.75rem 1rem; background: var(--warn-soft); color: var(--warn);
+            font-size: 0.82rem; font-weight: 600;
+        }
+        .preview-body { padding: 1rem; display: grid; gap: 0.55rem; font-size: 0.88rem; }
+        .preview-body .kv { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--line); padding-bottom: 0.5rem; }
+        .preview-body .kv span:first-child { color: var(--muted); }
+        .preview-foot { padding: 0.75rem 1rem; display: flex; gap: 0.5rem; justify-content: flex-end; border-top: 1px solid var(--line); }
+        .record { display: grid; gap: 0.6rem; }
+        .record-item {
+            display: grid; grid-template-columns: 110px 1fr auto; gap: 1rem; align-items: center;
+            padding: 0.8rem 1rem; border: 1px solid var(--line); border-radius: 10px; font-size: 0.86rem;
+        }
+        .record-item .when { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
+        .sample-note { margin-top: 1rem; font-size: 0.74rem; color: var(--muted); }
+
+        /* MODULES */
+        .modules {
+            margin-top: 3.5rem;
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem;
+        }
+        .module {
+            background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+            padding: 1.4rem 1.25rem 1.5rem;
+            display: flex; flex-direction: column;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .module:hover { border-color: var(--ink); transform: translateY(-2px); }
+        .module .idx { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
+        .module h3 { margin-top: 1.75rem; font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; }
+        .module p { margin-top: 0.5rem; font-size: 0.86rem; color: var(--muted); flex: 1; }
+        .module .ex {
+            margin-top: 1rem; font-family: var(--mono); font-size: 0.7rem; color: var(--ink-2);
+            border-top: 1px solid var(--line); padding-top: 0.75rem;
+        }
+        .collab {
+            margin-top: 1rem;
+            padding: 1rem 1.25rem;
+            border: 1px dashed var(--ink-2); border-radius: var(--radius);
+            font-size: 0.92rem; text-align: center; color: var(--ink-2);
+        }
+        .collab strong { font-weight: 600; color: var(--ink); }
+
+        /* TRUST */
+        .trust-grid {
+            margin-top: 3.5rem;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem 2rem;
+        }
+        .trust h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; display: flex; gap: 0.6rem; align-items: baseline; }
+        .trust h3 .mono { font-size: 0.72rem; color: var(--accent); font-weight: 500; }
+        .trust p { font-size: 0.92rem; color: var(--muted); }
+        .promise {
+            margin-top: 3.5rem;
+            display: flex; flex-wrap: wrap; gap: 0.6rem;
+        }
+        .promise span {
+            font-size: 0.85rem; padding: 0.45rem 0.85rem;
+            border: 1px solid var(--line); border-radius: 100px; background: var(--card);
+        }
+
+        /* OFFERS */
+        .offers {
+            margin-top: 3.5rem;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+        }
+        .offer {
+            background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+            padding: 1.6rem 1.4rem; display: flex; flex-direction: column;
+        }
+        .offer.featured { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
+        .offer .kicker { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+        .offer h3 { margin-top: 0.75rem; font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; }
+        .offer .tagline { margin-top: 0.3rem; color: var(--ink-2); font-size: 0.92rem; }
+        .offer p.desc { margin-top: 1rem; font-size: 0.87rem; color: var(--muted); flex: 1; }
+        .offer .price {
+            margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--line);
+            font-family: var(--mono); font-size: 0.78rem; color: var(--ink);
+        }
+        .offers-note { margin-top: 1.25rem; font-size: 0.88rem; color: var(--muted); }
+
+        /* AGENTS */
+        .agents-grid {
+            margin-top: 3rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;
+        }
+        .files { display: grid; gap: 0.5rem; }
+        .file {
+            display: grid; grid-template-columns: 170px 1fr; gap: 1rem; align-items: center;
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--dark-line); border-radius: 10px;
+            font-size: 0.88rem; color: var(--dark-muted);
+            transition: border-color 0.2s;
+        }
+        .file:hover { border-color: #8F9BFF; }
+        .file .mono { color: var(--dark-text); font-size: 0.82rem; }
+
+        /* CTA */
+        .cta { padding: 6rem 0 7rem; }
+        .cta-box {
+            background: var(--card); border: 1px solid var(--line); border-radius: 22px;
+            padding: 4rem 2rem; text-align: center;
+        }
+        .cta-box h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.035em; font-weight: 600; line-height: 1.08; }
+        .cta-box p { margin: 1rem auto 0; color: var(--ink-2); max-width: 520px; }
+        .cta-form { margin: 2rem auto 0; display: flex; gap: 0.5rem; max-width: 460px; }
+        .cta-alt { margin-top: 1rem; font-size: 0.85rem; color: var(--muted); }
+        .cta-alt a { color: var(--ink); border-bottom: 1px solid var(--line); }
+
+        footer { border-top: 1px solid var(--line); padding: 2rem 0; font-size: 0.82rem; color: var(--muted); }
+        .foot { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+        .foot nav { position: static; background: none; border: none; backdrop-filter: none; display: flex; gap: 1.25rem; }
+
+        /* TOAST */
+        .toast {
+            position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%) translateY(120px);
+            padding: 0.8rem 1.25rem; background: var(--ink); color: var(--paper);
+            border-radius: 10px; font-weight: 500; font-size: 0.9rem;
+            opacity: 0; transition: all 0.35s ease; z-index: 999;
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+        @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+        .stage { opacity: 1; transform: none; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            .msg { opacity: 1; transform: none; }
+        }
+
+        .hero-grid > *, .flow-grid > *, .agents-grid > * { min-width: 0; }
+        .tool-card-foot { flex-wrap: wrap; }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .modules { grid-template-columns: repeat(2, 1fr); }
+            .offers { grid-template-columns: repeat(2, 1fr); }
+            .nav-links { display: none; }
+        }
+        @media (max-width: 860px) {
+            .hero { padding: 3rem 0; }
+            .hero-grid, .flow-grid, .agents-grid { grid-template-columns: 1fr; }
+            .layers, .trust-grid { grid-template-columns: 1fr; }
+            .compare-row { grid-template-columns: 1fr; }
+            .compare-row > div + div { border-left: none; border-top: 1px dashed var(--line); }
+            .compare-row.head { display: none; }
+            .compare-row .gen::before { content: 'General AI on raw connectors: '; font-weight: 500; }
+            .stat { grid-template-columns: 1fr; }
+            .mini-dash { grid-template-columns: 1fr; }
+            .mini-dash .side { grid-template-columns: repeat(3, auto); }
+            .record-item { grid-template-columns: 1fr; gap: 0.25rem; }
+            section.block { padding: 4.5rem 0; }
+        }
+        @media (max-width: 560px) {
+            .wrap { padding: 0 1rem; }
+            .modules, .offers { grid-template-columns: 1fr; }
+            .hero-form, .cta-form { flex-direction: column; }
+            .nav-actions .btn-ghost { display: none; }
+            .file { grid-template-columns: 1fr; gap: 0.25rem; }
+            .eyebrow { white-space: normal; border-radius: 12px; }
+            .tool-row { grid-template-columns: 1.2fr 0.7fr 0.9fr; padding: 0.5rem 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="wrap nav-inner">
+        <a href="#" class="wordmark"><span class="mark"><span></span></span>Flieber</a>
+        <div class="nav-links">
+            <a href="#how">How it works</a>
+            <a href="#modules">Modules</a>
+            <a href="#ways">Ways to work</a>
+            <a href="#agents">For agents</a>
+        </div>
+        <div class="nav-actions">
+            <a href="#agents" class="btn btn-ghost btn-sm">Connect your AI</a>
+            <a href="#cta" class="btn btn-primary btn-sm">Start free trial</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="wrap hero-grid">
+        <div>
+            <span class="eyebrow"><span class="dot"></span>Works in Claude, ChatGPT, Slack and your own agents</span>
+            <h1>The inventory intelligence layer <span class="soft">your agents run on</span></h1>
+            <p class="hero-sub">Ask in the AI you already use. Flieber brings the reconciled data, the planning engine and the decision tools behind every forecast, purchase order and transfer.</p>
+            <form class="hero-form" onsubmit="handleSignup(event, this)">
+                <input type="email" placeholder="you@brand.com" aria-label="Work email" required>
+                <button type="submit" class="btn btn-primary" data-label="Start free trial">Start free trial</button>
+            </form>
+            <p class="hero-note">On your own data · No credit card · Unlimited users · <a href="#agents">Or connect your AI first</a></p>
+        </div>
+
+        <div>
+            <div class="chat" aria-label="Illustration of an operator using Flieber inside an AI assistant">
+                <div class="chat-top">
+                    <div class="dots"><i></i><i></i><i></i></div>
+                    <span>Your AI assistant</span>
+                    <span class="mono">MCP</span>
+                </div>
+                <div class="chat-body">
+                    <div class="msg msg-user">What should we reorder from our main supplier this month, and what's at risk if we wait?</div>
+                    <div class="msg msg-tool"><span class="pill">flieber</span>replenishment.recommend · 3 channels · 2 warehouses</div>
+                    <div class="msg msg-ai">Here is the recommendation from Flieber, already reconciled across your channels and respecting MOQs and case packs.</div>
+                    <div class="msg tool-card">
+                        <div class="tool-card-head">
+                            Purchase recommendation
+                            <span class="tag">preview · not sent</span>
+                        </div>
+                        <div class="tool-rows">
+                            <div class="tool-row head"><span>Product</span><span>Order</span><span>If you wait</span></div>
+                            <div class="tool-row"><span class="sku">Product A</span><span>Recommended</span><span class="badge warn">Stockout risk</span></div>
+                            <div class="tool-row"><span class="sku">Product B</span><span>Recommended</span><span class="badge warn">Stockout risk</span></div>
+                            <div class="tool-row"><span class="sku">Product C</span><span>Hold</span><span class="badge ok">Covered</span></div>
+                        </div>
+                        <div class="tool-card-foot">
+                            <span class="src">data fresh · all stores connected</span>
+                            <span class="actions">
+                                <span class="btn btn-ghost btn-sm">Open dashboard</span>
+                                <span class="btn btn-primary btn-sm">Review &amp; approve</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="chat-caption">Illustration. Product names are placeholders.</p>
+        </div>
+    </div>
+</header>
+
+<div class="works">
+    <div class="wrap works-inner">
+        <span>Use Flieber from</span>
+        <strong>Claude</strong><span class="sep"></span>
+        <strong>ChatGPT</strong><span class="sep"></span>
+        <strong>Cursor</strong><span class="sep"></span>
+        <strong>Slack</strong><span class="sep"></span>
+        <strong>Any MCP agent</strong><span class="sep"></span>
+        <strong>The Flieber app</strong>
+    </div>
+</div>
+
+<!-- WHY -->
+<section class="block">
+    <div class="wrap">
+        <p class="label">Why a specialist layer</p>
+        <h2 class="title">Your AI can fetch your data. It can't make it true or do the math</h2>
+        <p class="lede">Every channel will hand its own data to your AI. What no single channel holds is the joined, corrected picture of your whole operation, and the engine that plans on top of it.</p>
+
+        <div class="compare">
+            <div class="compare-row head">
+                <div>The job</div>
+                <div>A general AI on raw connectors</div>
+                <div>With Flieber</div>
+            </div>
+            <div class="compare-row">
+                <div class="task">Know that three listings on three channels are one product</div>
+                <div class="gen">Guesses each time, differently</div>
+                <div class="fl">Persistent cross-channel SKU mapping</div>
+            </div>
+            <div class="compare-row">
+                <div class="task">Turn bundle sales into component demand</div>
+                <div class="gen">Possible if told, error-prone at scale</div>
+                <div class="fl">Kits, bundles and components modeled once, applied everywhere</div>
+            </div>
+            <div class="compare-row">
+                <div class="task">Recognize that last month's dip was a stockout</div>
+                <div class="gen">Usually misses it</div>
+                <div class="fl">History adjusted for anomalies, shown next to actual sales</div>
+            </div>
+            <div class="compare-row">
+                <div class="task">Forecast thousands of product and channel combinations</div>
+                <div class="gen">Not feasible in a conversation</div>
+                <div class="fl">Multi-model engine, backtested per listing</div>
+            </div>
+            <div class="compare-row">
+                <div class="task">Recommend orders under MOQs, case packs, containers, lead times and cash</div>
+                <div class="gen">Not reliable</div>
+                <div class="fl">Replenishment with simulations</div>
+            </div>
+            <div class="compare-row">
+                <div class="task">Remember what was approved last month and why</div>
+                <div class="gen">Only what is in the transcript</div>
+                <div class="fl">A plan of record with versions and reasons</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LAYERS -->
+<section class="block dark">
+    <div class="wrap">
+        <p class="label">What Flieber is</p>
+        <h2 class="title">Three layers behind every answer</h2>
+        <p class="lede">Your AI is the front door. Flieber is the source of truth and judgment it calls.</p>
+
+        <div class="layers">
+            <div class="layer">
+                <span class="num">01 · Data layer</span>
+                <h3>Reconciled truth</h3>
+                <p>Every channel, warehouse, 3PL, ERP and supplier, connected, mapped and corrected into one model of your business.</p>
+                <ul>
+                    <li>Listings mapped to products across channels</li>
+                    <li>Inventory by location, inbound and in transit</li>
+                    <li>Corrected history next to raw history</li>
+                    <li>Data age and disconnected stores shown on every answer</li>
+                </ul>
+            </div>
+            <div class="layer">
+                <span class="num">02 · Planning engine</span>
+                <h3>Math your AI can't do</h3>
+                <p>Forecasts, projections, recommendations and simulations, computed by purpose-built models, not by a language model.</p>
+                <ul>
+                    <li>Many models, the best one chosen per listing</li>
+                    <li>Accuracy measured and shown</li>
+                    <li>MOQs, case packs, containers, lead times and cash built in</li>
+                    <li>Same inputs, same answer, with the reasoning attached</li>
+                </ul>
+            </div>
+            <div class="layer">
+                <span class="num">03 · Decision tools</span>
+                <h3>Room for the hard calls</h3>
+                <p>When a decision needs scenarios, scale or a team, your AI opens a tool built and refined with operators.</p>
+                <ul>
+                    <li>A card inside the conversation</li>
+                    <li>A full dashboard when the decision needs room</li>
+                    <li>Preview and approval before anything is written</li>
+                    <li>Every approved decision kept on the plan of record</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="big">36%</div>
+            <p><strong>More accurate than Flieber's previous portfolio of 16 forecasting models,</strong> tested on a random sample of 46,000 products. Built with Nixtla.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FLOW -->
+<section class="block" id="how">
+    <div class="wrap">
+        <p class="label">How it works</p>
+        <h2 class="title">From a question to a decision on record</h2>
+        <p class="lede">Simple questions get answers. Decisions that commit cash or stock get a tool, a preview and your approval.</p>
+
+        <div class="flow-grid">
+            <div class="flow-steps" role="tablist">
+                <button class="flow-step active" data-stage="0" role="tab" aria-selected="true">
+                    <span class="n">01</span>
+                    <span><strong>Ask where you already work</strong><small>Claude, ChatGPT, Slack or your agent</small></span>
+                </button>
+                <button class="flow-step" data-stage="1" role="tab" aria-selected="false">
+                    <span class="n">02</span>
+                    <span><strong>Explore the scenarios</strong><small>Open the dashboard when it needs room</small></span>
+                </button>
+                <button class="flow-step" data-stage="2" role="tab" aria-selected="false">
+                    <span class="n">03</span>
+                    <span><strong>Preview, then approve</strong><small>Nothing is written without you</small></span>
+                </button>
+                <button class="flow-step" data-stage="3" role="tab" aria-selected="false">
+                    <span class="n">04</span>
+                    <span><strong>Keep it on record</strong><small>What, who, when and from which inputs</small></span>
+                </button>
+            </div>
+
+            <div class="flow-stage">
+                <div class="stage active" data-stage="0">
+                    <h4>Ask in plain language</h4>
+                    <p>Your AI calls Flieber's tools and relays a short, plain answer with the evidence behind it, including how fresh the data is.</p>
+                    <div class="terminal">
+                        <div><span class="c"># in your AI assistant</span></div>
+                        <div><span class="k">you</span> &gt; Which products will stock out before the next container lands?</div>
+                        <div><span class="k">ai</span> &nbsp;&gt; calling <span class="s">flieber.inventory_risk</span> ...</div>
+                        <div><span class="k">ai</span> &nbsp;&gt; A short list, ranked by lost sales. Sources: all stores connected.</div>
+                        <div><span class="k">ai</span> &nbsp;&gt; Want me to open the purchase planner for these?</div>
+                    </div>
+                </div>
+
+                <div class="stage" data-stage="1">
+                    <h4>Change an input, watch the plan move</h4>
+                    <p>Scenario analysis across a whole catalog is a computation problem. The tool runs the engine, so the answer comes back fast and the same view is there next week.</p>
+                    <div class="mini-dash">
+                        <div class="side">
+                            <span class="on">Purchase planner</span>
+                            <span>Inventory risk</span>
+                            <span>Demand forecast</span>
+                        </div>
+                        <div class="main">
+                            <div class="scenario">
+                                <span>Base</span>
+                                <span class="on">Lead time +2 weeks</span>
+                                <span>Cash limit</span>
+                                <span>Promo in March</span>
+                            </div>
+                            <div class="bars" aria-hidden="true">
+                                <i style="height:40%"></i><i style="height:52%"></i><i style="height:48%"></i><i style="height:60%"></i>
+                                <i class="f" style="height:66%"></i><i class="f" style="height:74%"></i><i class="f" style="height:70%"></i>
+                                <i class="f" style="height:82%"></i><i class="f" style="height:78%"></i><i class="f" style="height:88%"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stage" data-stage="2">
+                    <h4>Every write starts as a preview</h4>
+                    <p>Purchase orders, transfers and inbound shipments wait for your approval by default. You decide what, if anything, runs on its own.</p>
+                    <div class="preview">
+                        <div class="preview-head">Preview · waiting for your approval</div>
+                        <div class="preview-body">
+                            <div class="kv"><span>Action</span><span>Create purchase order in your ERP</span></div>
+                            <div class="kv"><span>Supplier</span><span>Your main supplier</span></div>
+                            <div class="kv"><span>Constraints checked</span><span>MOQ · case pack · container fill · cash</span></div>
+                            <div class="kv"><span>Why</span><span>Stockout before next arrival at current demand</span></div>
+                        </div>
+                        <div class="preview-foot">
+                            <span class="btn btn-ghost btn-sm">Edit</span>
+                            <span class="btn btn-primary btn-sm">Approve</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stage" data-stage="3">
+                    <h4>A plan of record, not a chat transcript</h4>
+                    <p>Approving freezes a named version. When you adjust a forecast you record the cause, a promotion or an event, so it survives the next recalculation.</p>
+                    <div class="record">
+                        <div class="record-item"><span class="when">Approved</span><span>Purchase plan for next month</span><span class="badge ok">On record</span></div>
+                        <div class="record-item"><span class="when">Adjusted</span><span>Forecast raised for a planned promotion</span><span class="badge ok">Cause kept</span></div>
+                        <div class="record-item"><span class="when">Flagged</span><span>Base demand moved past your threshold since the last review</span><span class="badge warn">Review</span></div>
+                    </div>
+                </div>
+                <p class="sample-note">Illustrations. Tool names and values are examples.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODULES -->
+<section class="block" id="modules" style="padding-top:0">
+    <div class="wrap">
+        <p class="label">Modules</p>
+        <h2 class="title">One product, five modules</h2>
+
+        <div class="modules">
+            <div class="module">
+                <span class="idx">01</span>
+                <h3>Data layer</h3>
+                <p>Connected, mapped and corrected data across channels, locations and suppliers. Can be bought on its own.</p>
+                <span class="ex">Data health check</span>
+            </div>
+            <div class="module">
+                <span class="idx">02</span>
+                <h3>Demand forecasting</h3>
+                <p>Forecasts per listing and channel from a multi-model engine, with forecasts that look wrong flagged before they drive orders.</p>
+                <span class="ex">Forecast triage</span>
+            </div>
+            <div class="module">
+                <span class="idx">03</span>
+                <h3>Inventory forecasting</h3>
+                <p>Projected stock by location, including inbound and in transit, with stockout and overstock risk ahead of time.</p>
+                <span class="ex">Inventory risk review</span>
+            </div>
+            <div class="module">
+                <span class="idx">04</span>
+                <h3>Replenishment</h3>
+                <p>What to buy or move, how much and when, under your real constraints, with scenarios to compare.</p>
+                <span class="ex">Purchase planner</span>
+            </div>
+            <div class="module">
+                <span class="idx">05</span>
+                <h3>Workflows</h3>
+                <p>Approved decisions sent where they belong: your ERP, your suppliers, your 3PL and your marketplaces.</p>
+                <span class="ex">PO to ERP · scheduled checks</span>
+            </div>
+        </div>
+        <div class="collab"><strong>Collaborative AI runs across all five.</strong> It is how you use Flieber, from your AI, the app or Slack, not a sixth module.</div>
+    </div>
+</section>
+
+<!-- TRUST -->
+<section class="block" style="background:var(--paper-2)">
+    <div class="wrap">
+        <p class="label">Built to be trusted with cash</p>
+        <h2 class="title">Agents can call it. Only you approve it</h2>
+
+        <div class="trust-grid">
+            <div class="trust">
+                <h3><span class="mono">01</span>Preview before every write</h3>
+                <p>Every change arrives as a preview card and waits for an explicit confirmation. Approval is required by default.</p>
+            </div>
+            <div class="trust">
+                <h3><span class="mono">02</span>Edit causes, not numbers</h3>
+                <p>Tell Flieber why demand will change. The reason is stored as intent, survives recalculation and is flagged if the base moves.</p>
+            </div>
+            <div class="trust">
+                <h3><span class="mono">03</span>Evidence on every answer</h3>
+                <p>Recommendations show their reasoning, the data they used and its age. A disconnected store is never hidden in a summary.</p>
+            </div>
+            <div class="trust">
+                <h3><span class="mono">04</span>Measured, not assumed</h3>
+                <p>Forecast accuracy is tracked and shown against a simple benchmark, so you can see what the engine adds.</p>
+            </div>
+            <div class="trust">
+                <h3><span class="mono">05</span>The same answer twice</h3>
+                <p>Same inputs, same result. Two people asking the same question see the same view.</p>
+            </div>
+            <div class="trust">
+                <h3><span class="mono">06</span>Connects, never replaces</h3>
+                <p>Your ERP, WMS and 3PL stay the system of record for what they do. Flieber reads from them and sends approved decisions back.</p>
+            </div>
+        </div>
+
+        <div class="promise">
+            <span>Your data is never sold or shared</span>
+            <span>No training on your data</span>
+            <span>AI providers set up not to train on it either</span>
+        </div>
+    </div>
+</section>
+
+<!-- OFFERS -->
+<section class="block" id="ways">
+    <div class="wrap">
+        <p class="label">Ways to work with Flieber</p>
+        <h2 class="title">One product, any combination</h2>
+
+        <div class="offers">
+            <div class="offer">
+                <span class="kicker">Builders</span>
+                <h3>Data layer</h3>
+                <p class="tagline">Can be bought on its own</p>
+                <p class="desc">The reconciled data layer through MCP and API, for teams building their own agents, reports and dashboards on data that is already right.</p>
+                <div class="price">Priced to your data volume</div>
+            </div>
+            <div class="offer featured">
+                <span class="kicker">Most teams</span>
+                <h3>Flieber Self-Serve</h3>
+                <p class="tagline">Run it yourself</p>
+                <p class="desc">The Flieber app, the decision tools and the data and context modules, through your AI, the app and the API.</p>
+                <div class="price">Priced to your operation</div>
+            </div>
+            <div class="offer">
+                <span class="kicker">Complex operations</span>
+                <h3>Flieber Managed Services</h3>
+                <p class="tagline">Let our planners help you run it</p>
+                <p class="desc">Everything in Self-Serve, plus planners as a sounding board, in your S&amp;OP and keeping your data accurate. They work through the same tools you do.</p>
+                <div class="price">Quoted per brand</div>
+            </div>
+            <div class="offer">
+                <span class="kicker">Qualified accounts</span>
+                <h3>Customize Flieber</h3>
+                <p class="tagline">Flieber's engineers</p>
+                <p class="desc">Custom builds on the same data layer and tool contracts, for the parts of your operation nobody else has.</p>
+                <div class="price">Quoted per project</div>
+            </div>
+        </div>
+        <p class="offers-note">Unlimited users on every plan. Price shown after onboarding, based on your stores, data volume and the features you use.</p>
+    </div>
+</section>
+
+<!-- AGENTS -->
+<section class="block dark" id="agents">
+    <div class="wrap">
+        <p class="label">For your agents</p>
+        <h2 class="title">Readable by people. Callable by agents</h2>
+        <p class="lede">If your AI is evaluating Flieber for you, point it here. Setup steps for every assistant are public.</p>
+
+        <div class="agents-grid">
+            <div class="terminal" style="background:var(--dark-2); border:1px solid var(--dark-line)">
+                <div><span class="c"># ask your AI to set it up</span></div>
+                <div><span class="k">you</span> &gt; Read flieber.com/llms.txt and connect Flieber's MCP server.</div>
+                <div><span class="k">ai</span> &nbsp;&gt; Found the setup steps on <span class="s">/mcp</span>.</div>
+                <div><span class="k">ai</span> &nbsp;&gt; Connected. Sign in to Flieber to authorize your stores.</div>
+                <div><span class="k">ai</span> &nbsp;&gt; Ready. Try: "What did stockouts cost us last month?"</div>
+            </div>
+            <div class="files">
+                <a class="file" href="/mcp"><span class="mono">/mcp</span><span>MCP URL and setup steps per assistant</span></a>
+                <a class="file" href="/agents"><span class="mono">/agents</span><span>What Flieber does, written for agents</span></a>
+                <a class="file" href="/llms.txt"><span class="mono">/llms.txt</span><span>Short index for language models</span></a>
+                <a class="file" href="/llms-full.txt"><span class="mono">/llms-full.txt</span><span>The full reference in one file</span></a>
+                <a class="file" href="/capabilities.json"><span class="mono">/capabilities.json</span><span>Every tool, machine-readable</span></a>
+                <a class="file" href="/put-flieber-to-work"><span class="mono">/put-flieber-to-work</span><span>Ready-to-use prompts for common jobs</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+    <div class="wrap">
+        <div class="cta-box">
+            <h2>See your own operation, reconciled</h2>
+            <p>Start a free trial on your own data. No credit card. Your price is shown after onboarding.</p>
+            <form class="cta-form" onsubmit="handleSignup(event, this)">
+                <input type="email" placeholder="you@brand.com" aria-label="Work email" required>
+                <button type="submit" class="btn btn-primary" data-label="Start free trial">Start free trial</button>
+            </form>
+            <p class="cta-alt">Prefer people alongside the system? <a href="#ways">Talk to our planners</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="wrap foot">
+        <span>© 2026 Flieber</span>
+        <nav>
+            <a href="#how">How it works</a>
+            <a href="#modules">Modules</a>
+            <a href="#ways">Ways to work</a>
+            <a href="#agents">For agents</a>
+        </nav>
+    </div>
+</footer>
+
+<div class="toast" id="toast" role="status">Thanks. We'll be in touch to set up your trial.</div>
+
+<script>
+    // Flow tabs
+    const steps = document.querySelectorAll('.flow-step');
+    const stages = document.querySelectorAll('.stage');
+    steps.forEach(step => {
+        step.addEventListener('click', () => {
+            const i = step.dataset.stage;
+            steps.forEach(s => {
+                const on = s.dataset.stage === i;
+                s.classList.toggle('active', on);
+                s.setAttribute('aria-selected', on);
+            });
+            stages.forEach(s => s.classList.toggle('active', s.dataset.stage === i));
+        });
+    });
+
+    async function handleSignup(e, form) {
+        e.preventDefault();
+        const input = form.querySelector('input');
+        const button = form.querySelector('button');
+
+        button.disabled = true;
+        button.textContent = 'Sending...';
+
+        try {
+            await fetch('https://script.google.com/macros/s/AKfycbyxJqxpm8cC45rl2Bi5i0KYGoETb6wOgzrAgQSdgnMMK3ojXCzwii_GRGSrAztOauGmlg/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: input.value, version: 'v3' })
+            });
+            input.value = '';
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        } catch (err) {
+            alert('Something went wrong. Please try again.');
+            console.error(err);
+        }
+
+        button.disabled = false;
+        button.textContent = button.dataset.label;
+    }
+</script>
+</body>
+</html>
