@@ -35,6 +35,7 @@
 
     --wrap: 1140px;
     --nav-h: 68px;
+    color-scheme: dark;
 }
 
 body.theme-build { --accent: var(--build); --accent-dim: var(--build-dim); --accent-glow: var(--build-glow); }
@@ -49,6 +50,7 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: var(--sans);
+    font-size: 1rem;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
