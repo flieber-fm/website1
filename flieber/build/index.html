@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build with Flieber | Build your inventory software. Start miles ahead.</title>
+    <meta name="description" content="Use proven inventory data structures, business logic, working app templates and validation tools, then customize what matters.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Flieber">
+    <meta property="og:title" content="Build with Flieber | Build your inventory software. Start miles ahead.">
+    <meta property="og:description" content="Use proven inventory data structures, business logic, working app templates and validation tools, then customize what matters.">
+    <meta name="theme-color" content="#0A0A0C">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='32' height='32' rx='8'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Cpath fill='%238F9BFF' d='M0 0h32L0 32z'/%3E%3Cpath fill='%234AE68A' d='M32 0v32H0z'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="theme-build has-pathbar" data-path="build">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-nav">
+    <div class="wrap">
+        <a class="logo" href="../" aria-label="Flieber home"><span class="logo-mark" aria-hidden="true"></span>Flieber</a>
+        <nav aria-label="Primary">
+            <ul class="nav-menu" id="nav-menu">
+                <li>
+                    <button class="nav-trigger is-current" type="button" aria-expanded="false" aria-controls="mega-build"><span class="dot dot-build" aria-hidden="true"></span>Build <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+                    <div class="mega build" id="mega-build">
+                        <div class="mega-head">
+                            <p>Data, logic, templates and validation for teams building their own inventory software.</p>
+                            <a href="../build/" data-track="nav_journey" data-track-path="build">Build overview &rarr;</a>
+                        </div>
+                        <ul class="mega-grid">
+                            <li><a href="../build/#data"><strong>Data foundation</strong><span>Connectors, normalization, or bring your own data</span></a></li>
+                            <li><a href="../build/#intelligence"><strong>Inventory intelligence</strong><span>Domain model, projections and replenishment logic</span></a></li>
+                            <li><a href="../build/#templates"><strong>Working app templates</strong><span>Open-source starting points for real use cases</span></a></li>
+                            <li><a href="../build/#reliability"><strong>Reliability &amp; validation</strong><span>Checks for data quality, accuracy and decisions</span></a></li>
+                        </ul>
+                        <p class="mega-foot">Rather have it built for you? <a href="../build/#services">Build services</a></p>
+                    </div>
+                </li>
+                <li>
+                    <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="mega-run"><span class="dot dot-run" aria-hidden="true"></span>Run <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+                    <div class="mega run" id="mega-run">
+                        <div class="mega-head">
+                            <p>Ready-to-use applications for planners and operators. No build project required.</p>
+                            <a href="../run/" data-track="nav_journey" data-track-path="run">Run overview &rarr;</a>
+                        </div>
+                        <ul class="mega-grid">
+                            <li><a href="../run/forecasting/"><strong>Demand forecasting</strong><span>Forecast demand and track forecast performance</span></a></li>
+                            <li><a href="../run/inventory/"><strong>Inventory planning</strong><span>See where inventory is heading, SKU by SKU</span></a></li>
+                            <li><a href="../run/replenishment/"><strong>Replenishment</strong><span>Know what to reorder, and when</span></a></li>
+                            <li><a href="../run/workflows/"><strong>Workflows &amp; tools</strong><span>Reviews, approvals and alerts that drive action</span></a></li>
+                        </ul>
+                        <p class="mega-foot">Need something tailored? <a href="../run/#customize">Flieber can customize any app</a></p>
+                    </div>
+                </li>
+                <li><a class="nav-link" href="../about/">About</a></li>
+                <li class="mobile-cta"><a class="btn btn-primary" href="../contact/" data-track="cta_talk">Talk to us</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a class="btn btn-primary btn-sm" href="../contact/" data-track="cta_talk">Talk to us</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h14"/></svg>
+            </button>
+        </div>
+    </div>
+</header>
+<div class="pathbar">
+    <div class="wrap">
+        <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../">Home</a></li><li><span aria-current="page">Build with Flieber</span></li></ol></nav>
+        <nav class="path-switch" aria-label="Choose your journey">
+            <a href="../build/" aria-current="true" data-track="path_switch" data-track-path="build"><span class="path-dot dot-build" aria-hidden="true"></span>Build with Flieber</a>
+            <a href="../run/" data-track="path_switch" data-track-path="run"><span class="path-dot dot-run" aria-hidden="true"></span>Run with Flieber</a>
+        </nav>
+    </div>
+</div>
+<main id="main">
+
+<section class="page-hero" aria-labelledby="hero-title">
+    <div class="wrap hero-split">
+        <div>
+            <p class="eyebrow">Build with Flieber</p>
+            <h1 id="hero-title">Build your inventory software. <em>Start miles ahead.</em></h1>
+            <p class="lede">Use proven inventory data structures, business logic, working apps and validation tools, then customize what matters.</p>
+            <div class="hero-ctas">
+                <a class="btn btn-primary" href="#templates" data-track="cta_templates">Explore templates <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                <a class="btn btn-ghost" href="../contact/?intent=expert&amp;path=build" data-track="cta_expert">Talk to an expert</a>
+            </div>
+            <div class="hero-meta">
+                <span><span class="check">&#10003;</span> Use any layer on its own</span>
+                <span><span class="check">&#10003;</span> Bring your own data</span>
+                <span><span class="check">&#10003;</span> Build it yourself or with us</span>
+            </div>
+        </div>
+        <div class="mock" role="img" aria-label="Architecture diagram: your application sits on Flieber app templates, inventory intelligence and a data foundation. Your own warehouse data can enter at the intelligence layer, and validation runs across every layer.">
+    <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-title">Architecture</span><span class="mock-flag">Illustrative</span></div>
+    <div class="mock-body" style="grid-template-columns:1fr 64px;gap:0.75rem">
+        <div style="display:grid;gap:0.6rem">
+            <div class="mock-tile" style="border:1.5px dashed var(--build);background:var(--build-glow)">
+                <div class="mock-label" style="color:var(--build)">Your application</div>
+                <div style="font-size:0.85rem;margin-top:0.3rem">Your UI &middot; your workflows &middot; your fields</div>
+            </div>
+            <div class="mock-tile"><div class="mock-label">03 &middot; App templates</div><div style="font-size:0.85rem;margin-top:0.3rem">Fork, adapt or use as-is</div></div>
+            <div class="mock-tile" style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:0.5rem">
+                <div><div class="mock-label">02 &middot; Inventory intelligence</div><div style="font-size:0.85rem;margin-top:0.3rem">Projections &middot; consumption &middot; replenishment logic</div></div>
+                <span class="pill build" style="font-size:0.66rem">&larr; Your data</span>
+            </div>
+            <div class="mock-tile"><div class="mock-label">01 &middot; Data foundation</div><div style="font-size:0.85rem;margin-top:0.3rem">Connectors &middot; normalization &middot; mapping</div></div>
+        </div>
+        <div class="mock-tile" style="display:flex;align-items:center;justify-content:center;padding:0.5rem;border-color:var(--run-dim)">
+            <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--run)">04 &middot; Validation</div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- WHY -->
+<section class="section" aria-labelledby="why-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">Your business is unique</p>
+            <h2 class="section-title" id="why-title">Your inventory software can be too, <em>without rebuilding the hard parts.</em></h2>
+            <p class="lede">AI can write an interface in an afternoon. Getting stockout-adjusted demand, SKU replacements, open purchase orders and lead times right takes much longer. Flieber gives you those parts already working.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></svg></div><h3>Skip the plumbing</h3><p>Don&rsquo;t rebuild integrations, normalization and SKU mapping for every new tool.</p></div>
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M8 7h-.5A3.5 3.5 0 0 0 4 10.5v0A3.5 3.5 0 0 0 7.5 14H8"/><path d="M16 7h.5a3.5 3.5 0 0 1 3.5 3.5v0a3.5 3.5 0 0 1-3.5 3.5H16"/><circle cx="12" cy="7" r="1.5"/><circle cx="12" cy="17" r="1.5"/><path d="M8 17h-1"/><path d="M17 17h-1"/></svg></div><h3>Start with correct inventory logic</h3><p>Projections, consumption and replenishment logic built from years of real planning work.</p></div>
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><h3>Check your outputs</h3><p>Validation tools show you where a custom tool drifts from reality.</p></div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- WORKFLOW -->
+<section class="section" aria-labelledby="flow-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">A typical build</p>
+            <h2 class="section-title" id="flow-title">From raw data to a working app <em>in four steps.</em></h2>
+        </div>
+        <div class="steps reveal">
+            <div class="step"><div class="step-number">1</div><h3>Connect or bring data</h3><p>Use Flieber connectors, or point Flieber at data you already have in your warehouse.</p></div>
+            <div class="step"><div class="step-number">2</div><h3>Apply inventory intelligence</h3><p>Turn transactions into demand, consumption, projected inventory and replenishment signals.</p></div>
+            <div class="step"><div class="step-number">3</div><h3>Start from a working template</h3><p>Fork an app that already works, then change the workflows, fields and layout.</p></div>
+            <div class="step"><div class="step-number">4</div><h3>Validate and ship</h3><p>Check data quality, forecast accuracy and decisions against what actually happened.</p></div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- FOUR LAYERS -->
+<section class="section" aria-labelledby="layers-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">Four independent capabilities</p>
+            <h2 class="section-title" id="layers-title">Take what you need. <em>Leave what you don&rsquo;t.</em></h2>
+            <p class="lede">Each layer works on its own. Use one, some or all four, depending on what your team already has.</p>
+        </div>
+        <div class="grid-2">
+            <article class="card reveal" id="data">
+                <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+                <span class="kicker">01 &middot; Data foundation</span>
+                <h3>Consolidated, normalized inventory data</h3>
+                <p>Connectors, consolidated and normalized data, mapping and ongoing ingestion across your sales channels and operational systems.</p>
+                <ul>
+                    <li>Integration categories: marketplaces, storefronts, ERPs, 3PLs and warehouses</li>
+                    <li>Normalization and SKU/product mapping across channels</li>
+                    <li>Scheduled refresh with visible data freshness</li>
+                </ul>
+                <p class="card-foot small"><strong style="color:var(--text)">Use it independently:</strong> optional if you already have usable data.</p>
+            </article>
+            <article class="card reveal" id="intelligence">
+                <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M8 7h-.5A3.5 3.5 0 0 0 4 10.5v0A3.5 3.5 0 0 0 7.5 14H8"/><path d="M16 7h.5a3.5 3.5 0 0 1 3.5 3.5v0a3.5 3.5 0 0 1-3.5 3.5H16"/><circle cx="12" cy="7" r="1.5"/><circle cx="12" cy="17" r="1.5"/><path d="M8 17h-1"/><path d="M17 17h-1"/></svg></div>
+                <span class="kicker">02 &middot; Inventory intelligence</span>
+                <h3>The inventory domain model and logic</h3>
+                <p>Sales and inventory relationships, inventory consumption, projections and replenishment logic, already worked out.</p>
+                <ul>
+                    <li>Sales vs. true demand, with stockouts and returns accounted for</li>
+                    <li>SKU replacements, lead times and open purchase orders</li>
+                    <li>Projected inventory and replenishment calculations</li>
+                </ul>
+                <p class="card-foot small"><strong style="color:var(--text)">Use it independently:</strong> works on Flieber data or qualified data you provide.</p>
+            </article>
+            <article class="card reveal">
+                <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+                <span class="kicker">03 &middot; Working app templates</span>
+                <h3>Applications that already run</h3>
+                <p>Functional, open-source starting points for specific use cases. Use them, fork them, or just borrow ideas.</p>
+                <ul>
+                    <li>Full application code, not wireframes</li>
+                    <li>Production-ready and experimental templates labeled separately</li>
+                    <li>Requirements depend on the app and are listed on each template</li>
+                </ul>
+                <p class="card-foot small"><a class="text-link" href="#templates">See templates <span class="arrow" aria-hidden="true">&rarr;</span></a></p>
+            </article>
+            <article class="card reveal" id="reliability-layer">
+                <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+                <span class="kicker">04 &middot; Reliability &amp; validation</span>
+                <h3>Know whether your outputs hold up</h3>
+                <p>Checks and tools for data quality, forecast accuracy, decision-versus-actual analysis and output auditing.</p>
+                <ul>
+                    <li>Reconciliation and freshness alerts</li>
+                    <li>Forecast backtesting and projection error</li>
+                    <li>Decisions compared with what actually happened</li>
+                </ul>
+                <p class="card-foot small"><strong style="color:var(--text)">Use it independently:</strong> can support Flieber or eligible external workflows, subject to technical compatibility.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- BRING YOUR OWN DATA -->
+<section class="section" aria-labelledby="byod-title">
+    <div class="wrap split">
+        <div class="reveal">
+            <p class="section-label">Bring your own data</p>
+            <h2 class="section-title" id="byod-title">Already have a data warehouse? <em>Start from there.</em></h2>
+            <p class="lede">Flieber&rsquo;s data foundation is optional. If your data is already consolidated, bring it straight to the intelligence layer.</p>
+            <ul class="checklist">
+                <li><div><strong>Warehouse data</strong> <span>&rarr; Flieber inventory intelligence &rarr; your custom UI or a template</span></div></li>
+                <li><div><strong>An external forecast</strong> <span>&rarr; import it &rarr; inventory projection and replenishment</span></div></li>
+                <li><div><strong>No integrated data yet</strong> <span>&rarr; Flieber data foundation &rarr; the capabilities you need</span></div></li>
+            </ul>
+            <p class="muted small" style="margin-top:1.5rem">Each path has minimum input requirements. We&rsquo;ll confirm compatibility with your data during a technical discovery call.</p>
+        </div>
+        <div class="reveal" data-verify="Illustrative schema — replace with the published canonical schema">
+            <div class="code" role="img" aria-label="Illustrative example of an inventory position record with SKU, location, on-hand quantity, inbound purchase orders, forecast and lead time"><span class="c">// Illustrative inventory position record</span>
+{
+  <span class="k">"sku"</span>: <span class="s">"TENT-2P-GRN"</span>,
+  <span class="k">"location"</span>: <span class="s">"US-EAST-3PL"</span>,
+  <span class="k">"as_of"</span>: <span class="s">"2026-10-12"</span>,
+  <span class="k">"on_hand"</span>: <span class="n">412</span>,
+  <span class="k">"inbound"</span>: [
+    { <span class="k">"po"</span>: <span class="s">"PO-1187"</span>, <span class="k">"qty"</span>: <span class="n">600</span>, <span class="k">"eta"</span>: <span class="s">"2026-11-03"</span> }
+  ],
+  <span class="k">"daily_demand"</span>: <span class="n">18.4</span>,
+  <span class="k">"lead_time_days"</span>: <span class="n">45</span>
+}</div>
+            <p class="mock-caption">Illustrative. The published schema will ship with the developer documentation.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- BUSINESS LOGIC -->
+<section class="section" aria-labelledby="logic-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">Business logic, worked through</p>
+            <h2 class="section-title" id="logic-title">Raw transactions in. <em>Decisions you can trust out.</em></h2>
+            <p class="lede">A simple example: will this SKU make it to its next purchase order?</p>
+        </div>
+        <div class="worked reveal">
+            <div class="card">
+                <span class="kicker">Inputs</span>
+                <div class="calc-row"><span>On hand today</span><span>412 units</span></div>
+                <div class="calc-row"><span>Daily demand (stockout-adjusted)</span><span>18.4 / day</span></div>
+                <div class="calc-row"><span>Open PO-1187</span><span>600 units</span></div>
+                <div class="calc-row"><span>PO ETA</span><span>in 22 days</span></div>
+            </div>
+            <div class="worked-arrow" aria-hidden="true">&rarr;</div>
+            <div class="card" style="border-color:var(--build-dim)">
+                <span class="kicker">Outputs</span>
+                <div class="calc-row"><span>Demand until PO arrives</span><span>&minus;405 units</span></div>
+                <div class="calc-row"><span>Projected on hand at arrival</span><span>7 units</span></div>
+                <div class="calc-row"><span>Projected after receipt</span><span>607 units</span></div>
+                <div class="calc-row total"><span>Stockout risk</span><span style="color:var(--amber)">High: ~0.4 days of cover</span></div>
+            </div>
+        </div>
+        <div class="grid-3" style="margin-top:1.5rem">
+            <div class="card reveal"><h3>Edge case: stockout history</h3><p>Days with zero stock are excluded from demand history, so past stockouts don&rsquo;t make the forecast too low.</p></div>
+            <div class="card reveal"><h3>Edge case: SKU replacements</h3><p>When a product is replaced, its sales history carries over to the new SKU so the forecast doesn&rsquo;t start from zero.</p></div>
+            <div class="card reveal"><h3>Edge case: late suppliers</h3><p>Lead times come from actual receipt history, not only the quoted number.</p></div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- TEMPLATES -->
+<section class="section" id="templates" aria-labelledby="tpl-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">Working app templates</p>
+            <h2 class="section-title" id="tpl-title">Start from an app that works. <em>Make it yours.</em></h2>
+            <p class="lede">Open-source applications for specific inventory jobs. Each template lists what it does, what it needs and how ready it is.</p>
+        </div>
+        <div class="grid-3" data-verify="Template availability, license and repo links pending (§2 unresolved, §19 P0/P1)">
+            <article class="card tpl-card reveal">
+                <div class="tpl-top"><h3>Inventory projection app</h3><span class="pill soon">In preparation</span></div>
+                <p>Project inventory by SKU and location, including open POs, and flag stockout and overstock risk.</p>
+                <dl class="tpl-meta">
+                    <div><dt>Needs</dt><dd>Inventory positions, demand or forecast, open POs</dd></div>
+                    <div><dt>Level</dt><dd>Intermediate</dd></div>
+                    <div><dt>License</dt><dd>Open source (license to be confirmed)</dd></div>
+                </dl>
+            </article>
+            <article class="card tpl-card reveal">
+                <div class="tpl-top"><h3>Replenishment planner</h3><span class="pill soon">In preparation</span></div>
+                <p>Turn projections and lead times into purchase recommendations with a review-and-approve step.</p>
+                <dl class="tpl-meta">
+                    <div><dt>Needs</dt><dd>Projection output, supplier lead times, MOQs</dd></div>
+                    <div><dt>Level</dt><dd>Intermediate</dd></div>
+                    <div><dt>License</dt><dd>Open source (license to be confirmed)</dd></div>
+                </dl>
+            </article>
+            <article class="card tpl-card reveal">
+                <div class="tpl-top"><h3>Forecast accuracy monitor</h3><span class="pill soon">In preparation</span></div>
+                <p>Backtest any forecast, Flieber&rsquo;s or yours, and track error by SKU, channel and horizon.</p>
+                <dl class="tpl-meta">
+                    <div><dt>Needs</dt><dd>Historical forecasts and actual sales</dd></div>
+                    <div><dt>Level</dt><dd>Beginner</dd></div>
+                    <div><dt>License</dt><dd>Open source (license to be confirmed)</dd></div>
+                </dl>
+            </article>
+        </div>
+        <div class="reveal" style="margin-top:1.75rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between">
+            <p class="muted small">Each template will include a live preview, source repository, version and customization guide. Production-ready and experimental templates are labeled separately.</p>
+            <a class="btn btn-ghost btn-sm" href="../contact/?intent=templates&amp;path=build" data-track="cta_template_access">Get early access <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- VALIDATION -->
+<section class="section" id="reliability" aria-labelledby="val-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">Reliability &amp; validation</p>
+            <h2 class="section-title" id="val-title">Check every output <em>before your team acts on it.</em></h2>
+            <p class="lede">Validation shows how well things are working and where they aren&rsquo;t. It doesn&rsquo;t make anything &ldquo;guaranteed correct,&rdquo; and no tool can.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></svg></div><h3>Reconciliation</h3><p>Check that inventory and sales figures match their source systems.</p></div>
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Freshness alerts</h3><p>Know when a feed is late or stale before a decision depends on it.</p></div>
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></div><h3>Missing mappings</h3><p>Find unmapped SKUs, locations and channels that would quietly skew results.</p></div>
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div><h3>Forecast backtesting</h3><p>Measure forecast error by SKU, channel and horizon against actual results.</p></div>
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div><h3>Projection error</h3><p>Compare projected inventory with what was actually on hand.</p></div>
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg></div><h3>Decisions vs. outcomes</h3><p>Compare recommended orders with what was ordered and what happened next.</p></div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- SERVICES -->
+<section class="section" id="services" aria-labelledby="svc-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">Build it yourself, or hire Flieber</p>
+            <h2 class="section-title" id="svc-title">Choose how much <em>you want to build.</em></h2>
+            <p class="lede">Before any work begins, we agree in writing on what you own, what Flieber hosts and what support is included.</p>
+        </div>
+        <div class="own-grid" data-verify="Ownership, hosting and support boundaries pending (§5.1, §19 P1)">
+            <div class="own-card reveal">
+                <span class="pill build">Self-serve</span>
+                <h3>Self-serve development</h3>
+                <p>Your team builds on Flieber&rsquo;s layers and templates.</p>
+                <dl>
+                    <div><dt>You do</dt><dd>Design, build and maintain your application</dd></div>
+                    <div><dt>Flieber provides</dt><dd>Data, intelligence, templates and validation</dd></div>
+                    <div><dt>Good fit when</dt><dd>You have developers or AI-assisted builders in-house</dd></div>
+                </dl>
+            </div>
+            <div class="own-card featured reveal">
+                <span class="pill build">Assisted</span>
+                <h3>Implementation support</h3>
+                <p>You build, and Flieber helps you get there faster.</p>
+                <dl>
+                    <div><dt>You do</dt><dd>Own the build and the roadmap</dd></div>
+                    <div><dt>Flieber provides</dt><dd>Data onboarding, architecture guidance and reviews</dd></div>
+                    <div><dt>Good fit when</dt><dd>It&rsquo;s your first build on Flieber or the scope is complex</dd></div>
+                </dl>
+            </div>
+            <div class="own-card reveal">
+                <span class="pill build">Flieber-led</span>
+                <h3>Custom build by Flieber</h3>
+                <p>We scope, build and deliver the application.</p>
+                <dl>
+                    <div><dt>You do</dt><dd>Share your process, review and accept deliverables</dd></div>
+                    <div><dt>Flieber provides</dt><dd>Scoping, delivery and an agreed maintenance plan</dd></div>
+                    <div><dt>Good fit when</dt><dd>You need it built but not by your own team</dd></div>
+                </dl>
+            </div>
+        </div>
+        <div class="reveal" style="margin-top:1.75rem;text-align:center">
+            <a class="btn btn-ghost" href="../contact/?intent=customization&amp;path=build" data-track="cta_custom_build">Discuss a custom build <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">Questions builders ask</p>
+            <h2 class="section-title" id="faq-title">Frequently asked</h2>
+        </div>
+        <div class="faq reveal">
+            <details>
+                <summary>Our AI can write this. Why use Flieber?</summary>
+                <p>AI is very good at writing interfaces and glue code. It is much less reliable at producing correct inventory logic, such as stockout-adjusted demand, SKU replacements, open-PO timing and lead-time variability, and it won&rsquo;t keep your integrations running. Flieber gives your builders those parts already working and tested, so the AI-written code sits on something reliable.</p>
+            </details>
+            <details>
+                <summary>Do I have to use Flieber&rsquo;s data connectors?</summary>
+                <p>No. If your data is already consolidated, for example in a warehouse, you can bring it straight to the inventory intelligence layer, provided it meets the minimum input requirements for the capability you use.</p>
+            </details>
+            <details>
+                <summary>Am I locked in?</summary>
+                <p>The layers are designed to be selected independently, and templates are intended to be open source, so you can use only what you need. We&rsquo;ll go through data access and portability in detail during technical discovery.</p>
+            </details>
+            <details>
+                <summary>Who owns the integrations and the code we build?</summary>
+                <p>That depends on how you build: self-serve, assisted or Flieber-led. We agree in writing on ownership, hosting and maintenance before any work starts.</p>
+            </details>
+            <details>
+                <summary>Is Flieber really modular?</summary>
+                <p>Yes, with honest limits. Each layer can be used on its own, but some combinations need specific inputs. Replenishment logic, for example, needs inventory state, demand assumptions and supply parameters. We publish requirements for each capability rather than claiming everything works with everything.</p>
+            </details>
+            <details data-verify="API/MCP availability unresolved — describe only at actual release status (§11, §18)">
+                <summary>Do you have APIs, docs or agent (MCP) access?</summary>
+                <p>Developer documentation, API references and agent-accessible interfaces are being prepared, and we&rsquo;ll describe them only once they&rsquo;re released. Talk to us if you&rsquo;d like early access.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- LEAD CAPTURE -->
+<section class="section" aria-labelledby="lead-title">
+    <div class="wrap">
+        <div class="cta-box reveal">
+            <h2 id="lead-title">Talk to a build expert</h2>
+            <p>Tell us what you&rsquo;re building. We&rsquo;ll go through your data, the layers you&rsquo;d need, and whether to build it yourself or with us.</p>
+            <form class="lead-inline" data-lead data-intent="expert" data-path="build" aria-label="Request a technical discovery call">
+                <label class="sr-only" for="b-email">Work email</label>
+                <input id="b-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required>
+                <label class="sr-only" for="b-company">Company</label>
+                <input id="b-company" name="company" type="text" placeholder="Company" autocomplete="organization" required>
+                <button class="btn btn-primary" type="submit">Request a call</button>
+            </form>
+            <p class="muted small" style="margin-top:1.25rem">Looking for something ready-made? <a href="../run/" style="color:var(--run)" data-track="cross_link" data-track-path="run">See Run applications &rarr;</a></p>
+        </div>
+    </div>
+</section>
+
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div>
+                <a class="logo" href="../"><span class="logo-mark" aria-hidden="true"></span>Flieber</a>
+                <p class="footer-tag">Inventory software that works the way you do. Start ready. Make it yours.</p>
+            </div>
+            <div>
+                <h2>Build</h2>
+                <ul>
+                    <li><a href="../build/">Build overview</a></li>
+                    <li><a href="../build/#data">Data foundation</a></li>
+                    <li><a href="../build/#intelligence">Inventory intelligence</a></li>
+                    <li><a href="../build/#templates">App templates</a></li>
+                    <li><a href="../build/#reliability">Reliability &amp; validation</a></li>
+                    <li><a href="../build/#services">Build services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Run</h2>
+                <ul>
+                    <li><a href="../run/">Run overview</a></li>
+                    <li><a href="../run/forecasting/">Demand forecasting</a></li>
+                    <li><a href="../run/inventory/">Inventory planning</a></li>
+                    <li><a href="../run/replenishment/">Replenishment</a></li>
+                    <li><a href="../run/workflows/">Workflows &amp; tools</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="../about/">About</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                    <li><a href="../contact/?intent=demo">Book a demo</a></li>
+                    <li><a href="../contact/?intent=expert&amp;path=build">Talk to a build expert</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-base">
+            <span>&copy; 2026 Flieber. All rights reserved.</span>
+            <span>Product interfaces shown are illustrative.</span>
+        </div>
+    </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

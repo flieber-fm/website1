@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demand forecasting | Flieber</title>
+    <meta name="description" content="Forecast demand by SKU and channel and see exactly how accurate those forecasts are. A ready-to-use application from Flieber.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Flieber">
+    <meta property="og:title" content="Demand forecasting | Flieber">
+    <meta property="og:description" content="Forecast demand by SKU and channel and see exactly how accurate those forecasts are. A ready-to-use application from Flieber.">
+    <meta name="theme-color" content="#0A0A0C">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='32' height='32' rx='8'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Cpath fill='%238F9BFF' d='M0 0h32L0 32z'/%3E%3Cpath fill='%234AE68A' d='M32 0v32H0z'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body class="theme-run has-pathbar" data-path="run">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-nav">
+    <div class="wrap">
+        <a class="logo" href="../../" aria-label="Flieber home"><span class="logo-mark" aria-hidden="true"></span>Flieber</a>
+        <nav aria-label="Primary">
+            <ul class="nav-menu" id="nav-menu">
+                <li>
+                    <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="mega-build"><span class="dot dot-build" aria-hidden="true"></span>Build <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+                    <div class="mega build" id="mega-build">
+                        <div class="mega-head">
+                            <p>Data, logic, templates and validation for teams building their own inventory software.</p>
+                            <a href="../../build/" data-track="nav_journey" data-track-path="build">Build overview &rarr;</a>
+                        </div>
+                        <ul class="mega-grid">
+                            <li><a href="../../build/#data"><strong>Data foundation</strong><span>Connectors, normalization, or bring your own data</span></a></li>
+                            <li><a href="../../build/#intelligence"><strong>Inventory intelligence</strong><span>Domain model, projections and replenishment logic</span></a></li>
+                            <li><a href="../../build/#templates"><strong>Working app templates</strong><span>Open-source starting points for real use cases</span></a></li>
+                            <li><a href="../../build/#reliability"><strong>Reliability &amp; validation</strong><span>Checks for data quality, accuracy and decisions</span></a></li>
+                        </ul>
+                        <p class="mega-foot">Rather have it built for you? <a href="../../build/#services">Build services</a></p>
+                    </div>
+                </li>
+                <li>
+                    <button class="nav-trigger is-current" type="button" aria-expanded="false" aria-controls="mega-run"><span class="dot dot-run" aria-hidden="true"></span>Run <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+                    <div class="mega run" id="mega-run">
+                        <div class="mega-head">
+                            <p>Ready-to-use applications for planners and operators. No build project required.</p>
+                            <a href="../../run/" data-track="nav_journey" data-track-path="run">Run overview &rarr;</a>
+                        </div>
+                        <ul class="mega-grid">
+                            <li><a href="../../run/forecasting/"><strong>Demand forecasting</strong><span>Forecast demand and track forecast performance</span></a></li>
+                            <li><a href="../../run/inventory/"><strong>Inventory planning</strong><span>See where inventory is heading, SKU by SKU</span></a></li>
+                            <li><a href="../../run/replenishment/"><strong>Replenishment</strong><span>Know what to reorder, and when</span></a></li>
+                            <li><a href="../../run/workflows/"><strong>Workflows &amp; tools</strong><span>Reviews, approvals and alerts that drive action</span></a></li>
+                        </ul>
+                        <p class="mega-foot">Need something tailored? <a href="../../run/#customize">Flieber can customize any app</a></p>
+                    </div>
+                </li>
+                <li><a class="nav-link" href="../../about/">About</a></li>
+                <li class="mobile-cta"><a class="btn btn-primary" href="../../contact/" data-track="cta_talk">Talk to us</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a class="btn btn-primary btn-sm" href="../../contact/" data-track="cta_talk">Talk to us</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h14"/></svg>
+            </button>
+        </div>
+    </div>
+</header>
+<div class="pathbar">
+    <div class="wrap">
+        <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../../">Home</a></li><li><a href="../../run/">Run with Flieber</a></li><li><span aria-current="page">Demand forecasting</span></li></ol></nav>
+        <nav class="path-switch" aria-label="Choose your journey">
+            <a href="../../build/" data-track="path_switch" data-track-path="build"><span class="path-dot dot-build" aria-hidden="true"></span>Build with Flieber</a>
+            <a href="../../run/" aria-current="true" data-track="path_switch" data-track-path="run"><span class="path-dot dot-run" aria-hidden="true"></span>Run with Flieber</a>
+        </nav>
+    </div>
+</div>
+<main id="main">
+
+<section class="page-hero" aria-labelledby="hero-title">
+    <div class="wrap hero-split">
+        <div>
+            <p class="eyebrow">Demand forecasting</p>
+            <h1 id="hero-title">Forecast demand <em>with confidence.</em></h1>
+            <p class="lede">Forecast demand by SKU and channel and see how accurate it has been. Adjust it when you know something the history doesn&rsquo;t.</p>
+            <div class="hero-ctas">
+                <a class="btn btn-primary" href="../../contact/?intent=demo&amp;path=run&amp;app=forecasting" data-track="cta_demo">Book a demo <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                <a class="btn btn-ghost" href="../../contact/?intent=walkthrough&amp;path=run&amp;app=forecasting" data-track="cta_walkthrough">Request a walkthrough</a>
+            </div>
+            <div class="hero-meta"><span><strong style="color:var(--text);font-weight:500">Built for:</strong>&nbsp;Demand planners, inventory planners and supply chain leaders</span></div>
+        </div>
+        <div class="mock" role="img" aria-label="Illustrative forecast view: forecast versus actual demand over twelve weeks with a planner adjustment, plus accuracy and bias tiles">
+    <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-title">Demand forecast &middot; TENT-2P-GRN &middot; All channels</span><span class="mock-flag">Illustrative</span></div>
+    <div class="mock-body">
+        <div class="mock-row">
+            <div class="mock-tile"><div class="mock-label">Accuracy &middot; 8 wks</div><div class="mock-value good">86%</div></div>
+            <div class="mock-tile"><div class="mock-label">Bias</div><div class="mock-value">+2.1%</div></div>
+            <div class="mock-tile"><div class="mock-label">Next 4 wks</div><div class="mock-value">520<small> units</small></div></div>
+        </div>
+        <div class="mock-chart">
+            <svg viewBox="0 0 400 130" aria-hidden="true">
+                <line x1="250" y1="0" x2="250" y2="130" stroke="#2E2E36" stroke-dasharray="3 3"/>
+                <path d="M0,90 L25,82 L50,86 L75,74 L100,78 L125,66 L150,70 L175,58 L200,62 L225,52 L250,56" fill="none" stroke="#E8E8EC" stroke-width="2" opacity="0.65"/>
+                <path d="M0,86 L25,84 L50,80 L75,76 L100,73 L125,68 L150,66 L175,61 L200,58 L225,55 L250,52 L275,48 L300,42 L325,38 L350,40 L375,36 L400,33" fill="none" stroke="#4AE68A" stroke-width="2"/>
+                <path d="M250,52 L275,42 L300,36 L325,30 L350,34 L375,30 L400,26 L400,40 L375,44 L350,48 L325,46 L300,50 L275,56 L250,52 Z" fill="#4AE68A" opacity="0.10"/>
+                <circle cx="300" cy="42" r="4" fill="#8F9BFF"/>
+                <text x="258" y="14" fill="#8A8A96" font-size="10" font-family="DM Sans, sans-serif">Forecast &rarr;</text>
+            </svg>
+            <div class="mock-legend"><span><i style="background:#E8E8EC;opacity:.65"></i>Actual</span><span><i style="background:#4AE68A"></i>Forecast</span><span><i style="background:#8F9BFF;width:8px;height:8px;border-radius:50%"></i>Planner adjustment: promo</span></div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" aria-labelledby="jobs-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">What it does for you</p>
+            <h2 class="section-title" id="jobs-title">Three jobs, <em>done well.</em></h2>
+        </div>
+        <div class="grid-3"><div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div><h3>Forecast demand at the level you plan</h3><p>By SKU, channel and location, over the horizons that match your lead times.</p></div><div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>Know how much to trust the forecast</h3><p>Forecast vs. actual, error and bias tracked over time, so you can see where the forecast is reliable and where it isn&rsquo;t.</p></div><div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.4 3.4-5 6.5-5s5.7 1.6 6.5 5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.4.2 4 1.6 4.5 4.5"/></svg></div><h3>Add what only your team knows</h3><p>Record adjustments for promotions, launches and events, and see whether they helped.</p></div></div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" aria-labelledby="io-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">Inputs &amp; outputs</p>
+            <h2 class="section-title" id="io-title">What goes in, <em>and what you get out.</em></h2>
+        </div>
+        <div class="grid-2">
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div><h3>Inputs and integrations</h3><ul><li>Historical sales by SKU and channel (required)</li><li>Stockout history, so lost sales don&rsquo;t bias demand</li><li>Planned promotions and launches (optional)</li><li>Product relationships such as SKU replacements (optional)</li></ul></div>
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>Outputs and decisions supported</h3><ul><li>Demand forecast by SKU, channel and horizon</li><li>Forecast accuracy and bias trends</li><li>Planner adjustments with before/after comparison</li><li>Demand input for inventory planning and replenishment</li></ul></div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" aria-labelledby="acc-title">
+    <div class="wrap split">
+        <div class="reveal">
+            <p class="section-label">Performance &amp; accuracy</p>
+            <h2 class="section-title" id="acc-title">Accuracy you can see, <em>not just a claim.</em></h2>
+            <p class="lede">Every forecast is measured against what actually sold. You see accuracy by SKU, channel and horizon, and where it falls short.</p>
+        </div>
+        <div class="card reveal"><span class="kicker">How it&rsquo;s measured</span><ul class="checklist" style="margin-top:0.5rem"><li><div><span style="color:var(--text)">Historical forecast vs. actual, period by period</span></div></li><li><div><span style="color:var(--text)">Error and bias trends over time</span></div></li><li><div><span style="color:var(--text)">Impact of planner adjustments</span></div></li><li><div><span style="color:var(--text)">Stockout periods excluded so demand isn&rsquo;t underestimated</span></div></li></ul></div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" aria-labelledby="fit-title">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="section-label">Fit &amp; flexibility</p>
+            <h2 class="section-title" id="fit-title">Works with what you have. <em>Adapts to how you work.</em></h2>
+        </div>
+        <div class="grid-2">
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div><h3>Dependencies</h3><p>Needs relevant historical demand data. Feeds <a class="text-link" style="font-size:inherit;display:inline" href="../../run/inventory/">Inventory planning</a> and <a class="text-link" style="font-size:inherit;display:inline" href="../../run/replenishment/">Replenishment</a>, which can also use a forecast you already have.</p><p class="small muted" style="margin-top:0.9rem">We&rsquo;ll confirm the right combination for your business during your demo.</p></div>
+            <div class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5z"/></svg></div><h3>Customization options</h3><p>Flieber&rsquo;s team can tailor this application for you, with no code from your side.</p><ul class="checklist" style="margin-top:1rem"><li><div><span style="color:var(--text)">Forecast grouping by your own categories or hierarchies</span></div></li><li><div><span style="color:var(--text)">Custom horizons and review cadences</span></div></li><li><div><span style="color:var(--text)">Approval steps for large overrides</span></div></li><li><div><span style="color:var(--text)">Additional demand signals specific to your business</span></div></li></ul></div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" aria-labelledby="faq-title">
+    <div class="wrap">
+        <div class="section-head reveal"><p class="section-label">Questions</p><h2 class="section-title" id="faq-title">Frequently asked</h2></div>
+        <div class="faq reveal"><details><summary>Do I need clean historical data?</summary><p>You need relevant sales history. Flieber&rsquo;s data foundation handles consolidation and mapping across channels, and we&rsquo;ll check data readiness with you during setup.</p></details><details><summary>Can I adjust the forecast?</summary><p>Yes. Planners can record adjustments for promotions, launches or other known events, and Flieber tracks whether each adjustment improved accuracy.</p></details><details><summary>How accurate will it be?</summary><p>It depends on your products and data, and no forecast is perfect. Instead of quoting a number up front, Flieber measures accuracy continuously and shows it to you.</p></details></div>
+    </div>
+</section>
+
+<section class="section-tight" aria-labelledby="demo-title">
+    <div class="wrap">
+        <div class="cta-box reveal">
+            <h2 id="demo-title">See demand forecasting on your own data</h2>
+            <p>Book a demo built around your products, channels and planning process.</p>
+            <form class="lead-inline" data-lead data-intent="demo" data-path="run" aria-label="Book a demand forecasting demo">
+                <input type="hidden" name="useCase" value="forecasting">
+                <label class="sr-only" for="a-email">Work email</label>
+                <input id="a-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required>
+                <label class="sr-only" for="a-company">Company</label>
+                <input id="a-company" name="company" type="text" placeholder="Company" autocomplete="organization" required>
+                <button class="btn btn-primary" type="submit">Book a demo</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="section" aria-labelledby="related-title">
+    <div class="wrap">
+        <div class="section-head reveal"><p class="section-label">Related applications</p><h2 class="section-title" id="related-title">Works even better <em>together.</em></h2></div>
+        <div class="grid-3"><a class="card reveal" href="../../run/inventory/" data-track="related_app"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div><span class="kicker">Inventory planning</span><h3>See where inventory is heading.</h3><div class="card-foot"><span class="text-link">Explore <span class="arrow" aria-hidden="true">&rarr;</span></span></div></a><a class="card reveal" href="../../run/replenishment/" data-track="related_app"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 4h2l2.4 11h11.2L21 7H6.2"/></svg></div><span class="kicker">Replenishment</span><h3>Know what to reorder, and when.</h3><div class="card-foot"><span class="text-link">Explore <span class="arrow" aria-hidden="true">&rarr;</span></span></div></a><a class="card reveal" href="../../run/workflows/" data-track="related_app"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><path d="M6 9v4a2 2 0 0 0 2 2h7"/></svg></div><span class="kicker">Workflows & tools</span><h3>Make inventory decisions actionable.</h3><div class="card-foot"><span class="text-link">Explore <span class="arrow" aria-hidden="true">&rarr;</span></span></div></a></div>
+    </div>
+</section>
+
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div>
+                <a class="logo" href="../../"><span class="logo-mark" aria-hidden="true"></span>Flieber</a>
+                <p class="footer-tag">Inventory software that works the way you do. Start ready. Make it yours.</p>
+            </div>
+            <div>
+                <h2>Build</h2>
+                <ul>
+                    <li><a href="../../build/">Build overview</a></li>
+                    <li><a href="../../build/#data">Data foundation</a></li>
+                    <li><a href="../../build/#intelligence">Inventory intelligence</a></li>
+                    <li><a href="../../build/#templates">App templates</a></li>
+                    <li><a href="../../build/#reliability">Reliability &amp; validation</a></li>
+                    <li><a href="../../build/#services">Build services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Run</h2>
+                <ul>
+                    <li><a href="../../run/">Run overview</a></li>
+                    <li><a href="../../run/forecasting/">Demand forecasting</a></li>
+                    <li><a href="../../run/inventory/">Inventory planning</a></li>
+                    <li><a href="../../run/replenishment/">Replenishment</a></li>
+                    <li><a href="../../run/workflows/">Workflows &amp; tools</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="../../about/">About</a></li>
+                    <li><a href="../../contact/">Contact</a></li>
+                    <li><a href="../../contact/?intent=demo">Book a demo</a></li>
+                    <li><a href="../../contact/?intent=expert&amp;path=build">Talk to a build expert</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-base">
+            <span>&copy; 2026 Flieber. All rights reserved.</span>
+            <span>Product interfaces shown are illustrative.</span>
+        </div>
+    </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
