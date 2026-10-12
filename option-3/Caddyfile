@@ -15,13 +15,13 @@
 	@revalidate not path /assets/fonts/* /assets/img/* /assets/logos/*
 	header @static Cache-Control "public, max-age=86400"
 	header @revalidate Cache-Control "no-cache"
-	# Option 3: module pages moved under Build and Run
-	redir /product/data-layer* /build/data/ 301
-	redir /product/demand-forecasting* /run/forecasting/ 301
-	redir /product/inventory-forecasting* /run/inventory/ 301
-	redir /product/replenishment* /run/replenishment/ 301
-	redir /product/workflows* /run/workflows/ 301
-	redir /product /run/ 301
+	# Earlier Option 3 preview URLs
+	redir /build/data* /product/data-layer/ 301
+	redir /run/forecasting* /product/demand-forecasting/ 301
+	redir /run/inventory* /product/inventory-forecasting/ 301
+	redir /run/replenishment* /product/replenishment/ 301
+	redir /run/workflows* /product/workflows/ 301
+	redir /run* /features/ 301
 	# Option 2 redirects (brief section 10)
 	redir /omnichannel /multichannel/ 301
 	redir /ecommerce /multichannel/ 301

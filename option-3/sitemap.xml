@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.flieber.com/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://www.flieber.com/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://www.flieber.com/build</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://www.flieber.com/run</loc><lastmod>2026-10-12</lastmod></url>
   <url><loc>https://www.flieber.com/features</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://www.flieber.com/build/data</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://www.flieber.com/run/forecasting</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://www.flieber.com/run/inventory</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://www.flieber.com/run/replenishment</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://www.flieber.com/run/workflows</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.flieber.com/product/data-layer</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.flieber.com/product/demand-forecasting</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.flieber.com/product/inventory-forecasting</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.flieber.com/product/replenishment</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.flieber.com/product/workflows</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://www.flieber.com/multichannel</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://www.flieber.com/agencies</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://www.flieber.com/before-you-choose</loc><lastmod>2026-10-02</lastmod></url>

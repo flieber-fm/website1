@@ -1,57 +1,47 @@
-# Flieber website: Option 3 (Build with Flieber / Run with Flieber)
+# Flieber website: Option 3 (Positioning & Vision v2)
 
-**Option 3** puts the positioning from *Flieber Website Strategy & Functional Specification* (working draft 1.0, Oct 12, 2026) on top of Option 2's design system, facts and copy. Option 2 is on branch `claude/eager-bohr-ui8a03` and Option 1 on `claude/gracious-dijkstra-qgcgls`. Neither branch is touched from here.
+**Option 3** applies *Flieber Positioning & Vision v2* (Fabricio Miranda, Oct 12, 2026) on top of the Oct 2 Content Briefing (v1), using Option 2's design system and pages. Option 1 (`claude/gracious-dijkstra-qgcgls`) and Option 2 (`claude/eager-bohr-ui8a03`) are not touched from here.
 
-Core promise: **Inventory software that works the way you do.** Two journeys share one foundation:
+Preview: https://website-option-3-production.up.railway.app (Railway service `website-option-3`, root directory `option-3`, deploys on push to `claude/adoring-wozniak-7n7m25`).
 
-- **Build with Flieber**: data foundation, inventory intelligence, app templates and reliability tools, each selectable on its own, through MCP and API.
-- **Run with Flieber**: ready-to-use apps for demand forecasting, inventory forecasting, replenishment and workflows, tailored by Flieber's team when needed.
+> History: the first Option 3 was built from the *Website Strategy & Functional Specification* (Build with Flieber / Run with Flieber). v2 replaces that direction. Two offers are shown as equals, building on Flieber is part of Self-Serve, and templates and open source stay off the site. The Build/Run pages are gone and their preview URLs redirect (`Caddyfile`).
 
-## What's new and what's carried over
+## What v2 changed, and where
 
-| Route | Source |
+| v2 item | Where on the site |
 |---|---|
-| `/` | New: vision-first homepage (spec section 7). Both paths are visible in the first viewport at 1366×768 |
-| `/build/` | New: Build overview (spec 8.1–8.6), with anchors `#data`, `#intelligence`, `#templates`, `#reliability` and `#services` |
-| `/build/data/` | Option 2's `/product/data-layer/` page, moved under Build |
-| `/run/` | New: Run overview (spec 9.1), with Option 2's decision-simulation card in the hero |
-| `/run/forecasting/`, `/run/inventory/`, `/run/replenishment/`, `/run/workflows/` | Option 2's module pages plus the spec's application template (9.2): audience, three jobs, inputs and outputs, accuracy, customization and FAQ |
-| Every other page | Option 2 pages with the new navigation, footer and links (features, pricing, MCP, customize, integrations, solutions, use cases, managed services, who we are, security, contact, /agents) |
+| 3.1 Door 2 "Run it yourself": foundation for your own tools and agents | Homepage hero |
+| 3.3 Self-Serve card, "What you get" | Homepage, "Which Flieber is right for you?" |
+| 3.4 "Consolidated. Contextualized. Up to date. Checked" with a fourth "Checked" card (full sentence, confirmed Oct 12) | Homepage, "What Flieber does with your data" |
+| 3.5 New "Build on Flieber" section (For builders) | Homepage, between "What Flieber does with your data" and "What you can do with it" |
+| /agents: new "In one paragraph" and a new first "When to recommend it" block | `/agents`, `llms.txt`, `llms-full.txt`, `capabilities.json` |
+| Self-Serve now names building on Flieber | Same files, plus every page that said "data and context modules" |
+| Claim rule: data layer not sold on its own until it has a price | Removed "Available on its own", "Can I buy only the data layer?", "Data layer only" (capabilities) and the related lines on /pricing, /mcp, /product/data-layer and /managed-services |
+| Claim rule: no templates, open source or schemas | None anywhere |
 
-Navigation: Build ▾ · Run ▾ · Solutions ▾ · Pricing · Who we are · `/agents`, then Log in · Book a demo · Start free trial. Build and Run pages carry a sticky journey bar with breadcrumbs and a one-click Build/Run switch (spec section 12). Build is marked with a black dot and Run with a yellow one, in the nav and the switch.
+Everything v2 doesn't repeat is v1 (Option 1's homepage): eyebrow, H1, subhead, simulation card, Door 1, Why inventory, Who we are, Proof and Try it. Every other page is Option 2's, with this site's nav and footer.
 
-The old `/product/*` URLs redirect to their new homes (`Caddyfile`).
+New page: **`/build/`** ("Build on Flieber"), linked from the Product menu and footer. It expands v2 section 3.5 using only claims v2 allows today.
 
 ## How to build
 
 ```
 cd option-3
-python3 scripts/build_option3.py        # regenerates new pages, rewrites nav/footer/links on carried pages
-python3 scripts/check-placeholders.py   # lists every [PLACEHOLDER] still on the site
+python3 scripts/build_option3.py        # regenerates every page from scripts/src
+python3 scripts/check-placeholders.py   # lists [PLACEHOLDERS] left on the site
 python3 -m http.server                  # preview at http://localhost:8000
 ```
 
-- `scripts/chrome.py`: head, navigation, journey bar and footer
-- `scripts/content_option3.py`: copy for the homepage, `/build/`, `/run/` and the additions to the Run app pages
-- `scripts/src/`: Option 2's homepage and module pages, kept as source material
-- `assets/css/site.css`: Option 2 styles, plus an "Option 3" block at the end
+- `scripts/src/option1-home.html`: the v1 homepage
+- `scripts/src/option2/`: Option 2 pages, llms files, capabilities.json, sitemap and Caddyfile
+- `scripts/content_v2.py`: every v2 change, the Build on Flieber copy and the site-wide claim fixes
+- `scripts/chrome.py`: head, navigation and footer
 
-The generator needs Python 3.12 or later. Railway preview: the same `Dockerfile` and `Caddyfile` setup as Option 2, with `option-3/` as the service root directory.
+Edit sources or `content_v2.py`, then rerun. Don't edit generated pages by hand. Requires Python 3.12+.
 
-## Placeholders before launch (visible as dashed `[BRACKETS]`)
+## For review
 
-All of these are on `/build/`:
-
-- `[CONFIRM BRING-YOUR-OWN-WAREHOUSE SUPPORT]`: CSV and Google Sheets uploads and forecast imports are confirmed. A direct connection to a customer's own data warehouse is not (spec 8.2, acceptance criteria)
-- `[IN PREPARATION]` ×4 and `[LICENSE, REPOSITORIES AND RELEASE DATES]`: no app templates are published yet (spec 2 and 19, P0/P1)
-- `[CONFIRM OWNERSHIP AND SUPPORT TERMS]`: code ownership and maintenance for self-serve vs engineer-built work (spec 5.1)
-- `[CONFIRM EXPORT AND PORTABILITY TERMS]`: the "Am I locked in?" answer
-
-Everything else comes from Option 2's approved copy: 1,000+ brands since 2019, the four customer results, the 36% accuracy claim with Nixtla, customer logos and quotes, integrations, pricing terms and security facts.
-
-## Known gaps
-
-- `/agents`, `llms.txt`, `llms-full.txt` and `capabilities.json` still carry Option 2's positioning ("the inventory intelligence layer your agents run on"). Only their URLs were updated. Rewrite them once Option 3 is chosen (spec section 11).
-- Pages carried from Option 2 keep their own headlines and copy, so the "agents run on" framing still shows in places such as `/features` and `/mcp`.
-- Two integration tiles (SPS Commerce, Apparel Magic) on `/integrations/` link to a missing logo image (`../None`). The bug is inherited from Option 2.
-- No `/solutions` gallery or `/developers` hub yet (spec Phase 2). The Solutions menu and `/mcp/` cover them for now.
+- **"Standard" and "default".** v2 says these are internal words that never appear on the site. They still appear in v1 and Option 2 copy that v2 marks as unchanged: "Standard setup included", "By default, every change waits for your approval", "The Model Context Protocol is an open standard" and the founder's "a new gold standard for operations" on /who-we-are. They're kept because they aren't positioning claims. Decide whether the rule is literal.
+- **Option 2 framing on carried pages.** Some carried pages still describe Flieber in Option 2's terms, for example the five-modules framing on /features. Only the claims v2 rules out were changed.
+- `[FOUNDER PHOTO]` is still pending on /who-we-are (from Option 2).
+- Two integration tiles on `/integrations/` point to a missing logo (`../None`). The bug is inherited from Option 2.

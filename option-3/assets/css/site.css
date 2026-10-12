@@ -1381,87 +1381,14 @@ a.int-tile:hover { border-color: var(--black); }
 .sim-compact .sim-table thead th:nth-child(2), .sim-compact .sim-table thead th:nth-child(3) { width: 33%; }
 
 /* ==========================================================================
-   Option 3: Build with Flieber / Run with Flieber
-   (Website Strategy & Functional Specification, Oct 12, 2026)
+   Option 3 (Positioning & Vision v2)
    ========================================================================== */
-
-/* Journey dots: Build is black (code, architecture), Run is yellow (operations) */
-.jdot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex: none; }
-.jdot-build { background: var(--black); }
-.jdot-run { background: var(--yellow); box-shadow: 0 0 0 1px var(--black) inset; }
-.nav-drop-btn .jdot { margin-right: 2px; }
-
-/* Persistent journey bar on Build and Run pages (spec 12) */
-.pathbar { position: sticky; top: 72px; z-index: 90; background: rgba(240,245,246,.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); font-size: 14px; }
-.pathbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 48px; }
-.crumbs { display: flex; align-items: center; gap: 8px; color: var(--text-2); min-width: 0; }
-.crumbs li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.crumbs li + li::before { content: "/"; margin-right: 8px; color: var(--gray-dark); }
-.crumbs a { text-decoration: none; }
-.crumbs a:hover { color: var(--black); }
-.crumbs [aria-current] { color: var(--black); font-weight: 500; }
-.path-switch { display: inline-flex; gap: 2px; padding: 3px; background: var(--white); border: 1px solid var(--line-strong); border-radius: 999px; flex: none; }
-.path-switch a { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border-radius: 999px; text-decoration: none; color: var(--text-2); font-weight: 500; white-space: nowrap; }
-.path-switch a:hover { color: var(--black); }
-.path-switch a[aria-current="true"] { background: var(--black); color: var(--white); }
-.path-switch a[aria-current="true"] .jdot-build { background: var(--white); }
-@media (max-width: 720px) {
-  .pathbar .crumbs { display: none; }
-  .pathbar .wrap { justify-content: center; }
-  .path-switch a { padding: 5px 10px; font-size: 13px; }
-}
-
-/* Homepage hero: vision first, both paths visible in the first viewport */
-.hero-paths { padding-top: clamp(32px, 3.5vw, 56px); padding-bottom: clamp(56px, 7vw, 96px); }
-.hero-solo { max-width: 900px; margin: 0 auto; text-align: center; }
-.hero-solo .eyebrow { margin-bottom: 20px; }
-.hero-solo .h1 { font-size: clamp(40px, 4.8vw, 64px); text-wrap: balance; }
-.hero-solo .lead { margin: 22px auto 0; max-width: 640px; }
-.hero-paths .doors { margin-top: clamp(28px, 3vw, 40px); }
-.door-path .door-actions { padding-top: 20px; }
-a.door { text-decoration: none; color: inherit; }
-.door-path h2 { font-size: clamp(22px, 2vw, 28px); }
-.door-path:hover .btn .arrow { transform: translateX(3px); }
-.door-path .btn .arrow { transition: transform .25s var(--ease); }
-
-/* Proof facts under the logo strip */
-.section-tight { padding: 0 0 clamp(40px, 5vw, 64px); }
-.proof-facts .founder-facts { margin-top: 0; justify-content: center; border-top: 0; padding-top: 0; color: var(--text-2); }
-.proof-gap { height: clamp(48px, 6vw, 80px); }
-
-/* Four Run applications */
-.mq-grid.mq-four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-@media (max-width: 1180px) { .mq-grid.mq-four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 760px) { .mq-grid.mq-four { grid-template-columns: 1fr; } }
+/* "What Flieber does with your data": four properties, Checked added */
+.pillars.pillars-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1060px) { .pillars.pillars-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .pillars.pillars-4 { grid-template-columns: 1fr; } }
+/* Build on Flieber */
+.build-under { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; }
+.build-under p { color: var(--text-2); font-size: clamp(17px, 1.5vw, 19px); letter-spacing: -0.015em; }
+.build-under .try-actions { margin-top: 0; }
 .link-row { display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: center; }
-.collab-under { display: flex; flex-wrap: wrap; gap: 12px 32px; }
-
-/* Final CTA: two journey cards */
-a.try-link { text-decoration: none; color: inherit; transition: transform .25s var(--ease); }
-a.try-link:hover { transform: translateY(-2px); }
-.try-go { margin-top: 18px; font-weight: 600; }
-
-/* Build: inventory intelligence worked example */
-.intel-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: start; }
-.intel-table { min-width: 0; }
-.intel-table td { font-family: var(--mono); font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.intel-table tbody th { font-weight: 400; }
-.intel-table tr.hl th, .intel-table tr.hl td { background: var(--yellow); font-weight: 600; }
-.intel-note { margin-top: 10px; font-family: var(--mono); font-size: 12px; color: var(--text-2); }
-@media (max-width: 900px) { .intel-grid { grid-template-columns: 1fr; } }
-@media (max-width: 480px) { .intel-table td { white-space: normal; } }
-
-/* Build: app templates */
-.tpl-card { display: flex; flex-direction: column; gap: 12px; }
-.tpl-status { font-family: var(--mono); font-size: 12px; color: var(--text-2); }
-.tpl-needs { margin-top: auto; font-size: 14.5px; color: var(--text-2); }
-.tpl-needs b { color: var(--black); font-weight: 600; }
-.tpl-license { margin-top: 20px; font-size: 15px; color: var(--text-2); }
-
-/* Run applications: audience line, inputs and outputs */
-.built-for { margin-top: 24px; font-size: 15.5px; color: var(--text-2); }
-.built-for b { color: var(--black); font-weight: 600; }
-.io-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 48px); }
-.io-grid .cz-sub { margin-bottom: 16px; }
-.io-grid .kv { grid-template-columns: 150px 1fr; }
-@media (max-width: 860px) { .io-grid { grid-template-columns: 1fr; } }

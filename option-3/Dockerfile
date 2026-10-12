@@ -7,8 +7,8 @@ COPY features /srv/features
 COPY pricing /srv/pricing
 COPY security /srv/security
 COPY contact /srv/contact
+COPY product /srv/product
 COPY build /srv/build
-COPY run /srv/run
 COPY multichannel /srv/multichannel
 COPY agencies /srv/agencies
 COPY before-you-choose /srv/before-you-choose

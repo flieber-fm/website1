@@ -1,8 +1,8 @@
-"""Option 3: shared head, navigation, journey bar and footer.
+"""Option 3: shared head, navigation and footer.
 
-Navigation follows the Website Strategy & Functional Specification (Oct 12, 2026), section 6:
-Build · Run · Solutions · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
-Build and Run are menus whose subpages keep each audience's own terms.
+Positioning & Vision v2 (Oct 12, 2026): one foundation, several ways in, two offers shown as equals.
+Navigation keeps Option 2's structure (Product · Solutions · Pricing · Who we are · /agents) and adds
+Build on Flieber to the Product menu.
 """
 import re
 
@@ -14,15 +14,12 @@ SERVICE = "https://www.flieber.com/service-agreement"
 CSS_V = "49"
 JS_V = "17"
 
-RUN_APPS = [  # slug, name, one-line answer (Option 2 module copy)
-    ("forecasting", "Demand forecasting", "What will sell, and where?",
-     "Forecasts for every product on every channel, corrected for stockouts and promotions."),
-    ("inventory", "Inventory forecasting", "Where will I run out, or sit on too much?",
-     "Stockouts, overstock and lost sales by product and location, while there’s still time to act."),
-    ("replenishment", "Replenishment", "What should I buy or move, how much and when?",
-     "Purchase and transfer recommendations within MOQs, case packs, lead times and cash, tested before you commit."),
-    ("workflows", "Workflows", "How does the decision get done?",
-     "Approved decisions carried into suppliers, ERPs, Amazon, 3PLs and your own tools, with as much or as little approval as you choose."),
+MODULES = [  # slug, name (Option 2 module pages)
+    ("data-layer", "Data layer"),
+    ("demand-forecasting", "Demand forecasting"),
+    ("inventory-forecasting", "Inventory forecasting"),
+    ("replenishment", "Replenishment"),
+    ("workflows", "Workflows"),
 ]
 
 CHEVRON = ('<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">'
@@ -77,10 +74,10 @@ def head(p, path, title, desc, extra=""):
 """
 
 
-def drop(key, label, cur, items, dot=""):
+def drop(key, label, cur, items):
     current = " is-current" if cur == key else ""
     return f"""<div class="nav-drop{current}">
-          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-{key}">{dot}{label} {CHEVRON}</button>
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-{key}">{label} {CHEVRON}</button>
           <div class="nav-menu" id="nav-{key}">
 {items}
           </div>
@@ -91,26 +88,18 @@ def nav_html(p, cur):
     def a(href, label, key):
         ac = ' aria-current="page"' if key == cur else ""
         return f'<a href="{href}"{ac}>{label}</a>'
-    build = (f'            <a class="nav-menu-all" href="{p}build/">Build overview <span aria-hidden="true">→</span></a>\n'
-             '            <div class="nav-sub">\n'
-             f'              <a href="{p}build/data/">Data foundation</a>\n'
-             f'              <a href="{p}build/#intelligence">Inventory intelligence</a>\n'
-             f'              <a href="{p}build/#templates">App templates</a>\n'
-             f'              <a href="{p}build/#reliability">Reliability and validation</a>\n'
-             '            </div>\n            <hr class="nav-menu-sep">\n'
-             f'            <a href="{p}mcp/">MCP and API</a>\n'
-             f'            <a href="{p}customize/">Build services</a>\n'
-             f'            <a href="{p}integrations/">Integrations</a>\n'
-             f'            <a href="{p}security/">Security &amp; data</a>')
-    run = (f'            <a class="nav-menu-all" href="{p}run/">Run overview <span aria-hidden="true">→</span></a>\n'
-           '            <div class="nav-sub">\n'
-           + "\n".join(f'              <a href="{p}run/{s}/">{n}</a>' for s, n, _, _ in RUN_APPS) +
-           '\n            </div>\n            <hr class="nav-menu-sep">\n'
-           f'            <a href="{p}managed-services/">Managed Services</a>\n'
-           f'            <a href="{p}put-flieber-to-work/">Put Flieber to work</a>\n'
-           f'            <a href="{p}features/">All features</a>')
+    product = (f'            <a class="nav-menu-all" href="{p}features/">All features <span aria-hidden="true">→</span></a>\n'
+               '            <div class="nav-sub">\n'
+               + "\n".join(f'              <a href="{p}product/{s}/">{n}</a>' for s, n in MODULES) +
+               '\n            </div>\n            <hr class="nav-menu-sep">\n'
+               f'            <a href="{p}build/">Build on Flieber</a>\n'
+               f'            <a href="{p}put-flieber-to-work/">Put Flieber to work</a>\n'
+               f'            <a href="{p}integrations/">Integrations</a>\n'
+               f'            <a href="{p}mcp/">MCP and AI agents</a>\n'
+               f'            <a href="{p}security/">Security &amp; data</a>')
     sol = (f'            <a href="{p}multichannel/">Multichannel brands</a>\n'
            f'            <a href="{p}agencies/">Agencies and aggregators</a>\n'
+           f'            <a href="{p}customize/">Customize Flieber</a>\n'
            '            <hr class="nav-menu-sep">\n'
            f'            <a href="{p}before-you-choose/">Before you choose</a>')
     agents_cur = ' aria-current="page"' if cur == "agents" else ""
@@ -120,8 +109,7 @@ def nav_html(p, cur):
         <img src="{p}assets/img/flieber-logo.svg" alt="Flieber" width="116" height="20">
       </a>
       <nav class="nav-links" aria-label="Primary">
-        {drop("build", "Build", cur, build, '<i class="jdot jdot-build" aria-hidden="true"></i>')}
-        {drop("run", "Run", cur, run, '<i class="jdot jdot-run" aria-hidden="true"></i>')}
+        {drop("product", "Product", cur, product)}
         {drop("solutions", "Solutions", cur, sol)}
         {a(p + "pricing/", "Pricing", "pricing")}
         {a(p + "who-we-are/", "Who we are", "who")}
@@ -139,26 +127,7 @@ def nav_html(p, cur):
   </header>"""
 
 
-def pathbar(p, journey, crumbs):
-    """Persistent journey indicator with a one-click switch (spec section 12)."""
-    items = "".join(
-        f'<li><a href="{h}">{t}</a></li>' if h else f'<li><span aria-current="page">{t}</span></li>'
-        for t, h in crumbs)
-    b = ' aria-current="true"' if journey == "build" else ""
-    r = ' aria-current="true"' if journey == "run" else ""
-    return f"""  <div class="pathbar">
-    <div class="wrap">
-      <nav aria-label="Breadcrumb"><ol class="crumbs">{items}</ol></nav>
-      <nav class="path-switch" aria-label="Choose your path">
-        <a href="{p}build/"{b}><i class="jdot jdot-build" aria-hidden="true"></i>Build with Flieber</a>
-        <a href="{p}run/"{r}><i class="jdot jdot-run" aria-hidden="true"></i>Run with Flieber</a>
-      </nav>
-    </div>
-  </div>"""
-
-
 def footer_html(p, mark):
-    run = "\n".join(f'            <li><a href="{p}run/{s}/">{n}</a></li>' for s, n, _, _ in RUN_APPS)
     mark_html = (f'\n      <div class="footer-mark" aria-hidden="true"><img src="{p}assets/img/flieber-logo-light.svg" alt=""></div>'
                  if mark else "")
     return f"""  <footer class="footer">
@@ -166,26 +135,28 @@ def footer_html(p, mark):
       <div class="footer-top">
         <div class="footer-brand">
           <img src="{p}assets/img/flieber-logo-light.svg" alt="Flieber" width="132" height="23">
-          <p class="tagline">Inventory software that works <em>the way you do.</em></p>
+          <p class="tagline">Commerce data, <em>maintained.</em></p>
         </div>
         <div>
-          <h2 class="footer-h">Build</h2>
+          <h2 class="footer-h">Product</h2>
           <ul>
-            <li><a href="{p}build/">Build overview</a></li>
-            <li><a href="{p}build/data/">Data foundation</a></li>
-            <li><a href="{p}build/#templates">App templates</a></li>
-            <li><a href="{p}mcp/">MCP and API</a></li>
-            <li><a href="{p}customize/">Build services</a></li>
+            <li><a href="{p}features/">Features</a></li>
+            <li><a href="{p}build/">Build on Flieber</a></li>
+            <li><a href="{p}put-flieber-to-work/">Put Flieber to work</a></li>
             <li><a href="{p}integrations/">Integrations</a></li>
+            <li><a href="{p}mcp/">MCP and AI agents</a></li>
+            <li><a href="{p}pricing/">Pricing</a></li>
+            <li><a href="{p}security/">Security &amp; data</a></li>
+            <li><a href="{p}managed-services/">Managed Services</a></li>
           </ul>
         </div>
         <div>
-          <h2 class="footer-h">Run</h2>
+          <h2 class="footer-h">Solutions</h2>
           <ul>
-            <li><a href="{p}run/">Run overview</a></li>
-{run}
-            <li><a href="{p}managed-services/">Managed Services</a></li>
-            <li><a href="{p}pricing/">Pricing</a></li>
+            <li><a href="{p}multichannel/">Multichannel brands</a></li>
+            <li><a href="{p}agencies/">Agencies and aggregators</a></li>
+            <li><a href="{p}customize/">Customize Flieber</a></li>
+            <li><a href="{p}before-you-choose/">Before you choose</a></li>
           </ul>
         </div>
         <div>
@@ -201,9 +172,6 @@ def footer_html(p, mark):
           <h2 class="footer-h">Company</h2>
           <ul>
             <li><a href="{p}who-we-are/">Who we are</a></li>
-            <li><a href="{p}multichannel/">Multichannel brands</a></li>
-            <li><a href="{p}agencies/">Agencies and aggregators</a></li>
-            <li><a href="{p}security/">Security &amp; data</a></li>
             <li><a href="https://help.flieber.com">Help center</a></li>
             <li><a href="https://www.flieber.com/blog">Blog</a></li>
             <li><a href="{p}contact/">Contact</a></li>
