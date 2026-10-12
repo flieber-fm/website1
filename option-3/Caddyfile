@@ -1,0 +1,34 @@
+# Static preview server. The X-Robots-Tag header keeps every file
+# (pages, llms.txt, capabilities.json) out of search indexes.
+# Remove that header before the public launch.
+{
+	admin off
+}
+
+:{$PORT:8080} {
+	root * /srv
+	encode gzip
+	header X-Robots-Tag "noindex, nofollow, noarchive"
+	# HTML, CSS and JS are revalidated on every visit so preview updates show
+	# up immediately; fonts and images can be cached.
+	@static path /assets/fonts/* /assets/img/* /assets/logos/*
+	@revalidate not path /assets/fonts/* /assets/img/* /assets/logos/*
+	header @static Cache-Control "public, max-age=86400"
+	header @revalidate Cache-Control "no-cache"
+	# Option 3: module pages moved under Build and Run
+	redir /product/data-layer* /build/data/ 301
+	redir /product/demand-forecasting* /run/forecasting/ 301
+	redir /product/inventory-forecasting* /run/inventory/ 301
+	redir /product/replenishment* /run/replenishment/ 301
+	redir /product/workflows* /run/workflows/ 301
+	redir /product /run/ 301
+	# Option 2 redirects (brief section 10)
+	redir /omnichannel /multichannel/ 301
+	redir /ecommerce /multichannel/ 301
+	redir /flieber-vs-netsuite /before-you-choose/ 301
+	redir /flieber-vs-netstock /before-you-choose/ 301
+	redir /flieber-vs-foresight-ai /before-you-choose/ 301
+	# /flieber-vs-inventory-planner is deliberately not redirected (brief section 6.3)
+	try_files {path} {path}/index.html
+	file_server
+}

@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PREVIEW ONLY: remove before public launch -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Build with Flieber: build your inventory software, start miles ahead | Flieber</title>
+  <meta name="description" content="Use proven inventory data structures, business logic, working apps and validation tools, then customize what matters. Connect through MCP or API.">
+  <link rel="canonical" href="https://www.flieber.com/build/">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#F5ED61">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Flieber">
+  <meta property="og:title" content="Build with Flieber: build your inventory software, start miles ahead | Flieber">
+  <meta property="og:description" content="Use proven inventory data structures, business logic, working apps and validation tools, then customize what matters. Connect through MCP or API.">
+  <meta property="og:url" content="https://www.flieber.com/build/">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Machine-readable versions for AI agents -->
+  <link rel="alternate" type="text/plain" href="../llms.txt" title="Flieber for LLMs">
+  <link rel="alternate" type="application/json" href="../capabilities.json" title="Flieber capabilities">
+
+  <link rel="preload" href="../assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css?v=49">
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
+       Loaded only on flieber.com so preview traffic stays out of analytics. -->
+  <script>
+    (function (h) {
+      if (!/(^|\.)flieber\.com$/.test(h)) return;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FS8NPG');
+      var hs = document.createElement('script'); hs.id = 'hs-script-loader'; hs.async = true; hs.defer = true;
+      hs.src = 'https://js.hs-scripts.com/5767502.js'; document.head.appendChild(hs);
+    })(location.hostname);
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a class="nav-logo" href="../" aria-label="Flieber home">
+        <img src="../assets/img/flieber-logo.svg" alt="Flieber" width="116" height="20">
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <div class="nav-drop is-current">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-build"><i class="jdot jdot-build" aria-hidden="true"></i>Build <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-build">
+            <a class="nav-menu-all" href="../build/">Build overview <span aria-hidden="true">→</span></a>
+            <div class="nav-sub">
+              <a href="../build/data/">Data foundation</a>
+              <a href="../build/#intelligence">Inventory intelligence</a>
+              <a href="../build/#templates">App templates</a>
+              <a href="../build/#reliability">Reliability and validation</a>
+            </div>
+            <hr class="nav-menu-sep">
+            <a href="../mcp/">MCP and API</a>
+            <a href="../customize/">Build services</a>
+            <a href="../integrations/">Integrations</a>
+            <a href="../security/">Security &amp; data</a>
+          </div>
+        </div>
+        <div class="nav-drop">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-run"><i class="jdot jdot-run" aria-hidden="true"></i>Run <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-run">
+            <a class="nav-menu-all" href="../run/">Run overview <span aria-hidden="true">→</span></a>
+            <div class="nav-sub">
+              <a href="../run/forecasting/">Demand forecasting</a>
+              <a href="../run/inventory/">Inventory forecasting</a>
+              <a href="../run/replenishment/">Replenishment</a>
+              <a href="../run/workflows/">Workflows</a>
+            </div>
+            <hr class="nav-menu-sep">
+            <a href="../managed-services/">Managed Services</a>
+            <a href="../put-flieber-to-work/">Put Flieber to work</a>
+            <a href="../features/">All features</a>
+          </div>
+        </div>
+        <div class="nav-drop">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-solutions">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-solutions">
+            <a href="../multichannel/">Multichannel brands</a>
+            <a href="../agencies/">Agencies and aggregators</a>
+            <hr class="nav-menu-sep">
+            <a href="../before-you-choose/">Before you choose</a>
+          </div>
+        </div>
+        <a href="../pricing/">Pricing</a>
+        <a href="../who-we-are/">Who we are</a>
+        <a class="agents-link" href="../agents/" aria-label="For AI agents"><code>/agents</code></a>
+        <a class="menu-only" href="https://app.flieber.com">Log in</a>
+        <a class="menu-only" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="nav-login" href="https://app.flieber.com">Log in</a>
+        <a class="btn btn-ghost btn-sm" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        <a class="btn btn-primary btn-sm" href="https://www.flieber.com/free-trial">Start free trial</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="pathbar">
+    <div class="wrap">
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../">Home</a></li><li><span aria-current="page">Build with Flieber</span></li></ol></nav>
+      <nav class="path-switch" aria-label="Choose your path">
+        <a href="../build/" aria-current="true"><i class="jdot jdot-build" aria-hidden="true"></i>Build with Flieber</a>
+        <a href="../run/"><i class="jdot jdot-run" aria-hidden="true"></i>Run with Flieber</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <section class="page-head sol-head" aria-labelledby="page-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Build with Flieber</span>
+          <h1 class="h1" id="page-title">Build your inventory software. Start miles ahead</h1>
+          <p class="lead">Use proven inventory data structures, business logic, working apps and validation tools, then customize what matters. Connect Claude, Cursor, ChatGPT or your own code through Flieber’s MCP server and public API.</p>
+        </div>
+        <div class="sol-actions">
+          <a class="btn btn-primary" href="#templates">Explore templates <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="https://app.flieber.com/app/developers">View developer docs</a>
+        </div>
+        <ul class="under-doors">
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Use any layer on its own</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Start with the data layer alone</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Build it yourself or with our engineers</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="why-build" aria-labelledby="why-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Your business is unique</span>
+          <h2 class="h2" id="why-title" style="margin-top:20px">Your inventory software can be too, without rebuilding the hard parts</h2>
+          <p class="lead">Vibe coding the dashboard is the easy part. Keeping the data under it right never ends: every new channel, warehouse or supplier changes the data, and every change breaks something downstream. Flieber keeps that layer right, so your team can spend its time on the tools only you can build.</p>
+        </div>
+
+        <div class="why-grid reveal-stagger">
+          <article class="why-card"><span class="n">01</span><h3 class="h3">Skip the plumbing</h3><p>Every source connected through native and assisted integrations, so you don’t rebuild connectors, mapping and normalization for each new tool.</p></article>
+          <article class="why-card"><span class="n">02</span><h3 class="h3">Start from correct inventory logic</h3><p>Stockout-corrected demand, bundles, routing, lead times and open purchase orders, already worked out by a planning engine shaped by more than 1,000 brands.</p></article>
+          <article class="why-card"><span class="n">03</span><h3 class="h3">Check what you build</h3><p>Data health, forecast accuracy and decision tools show where a custom tool drifts from reality.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-a-build-works" aria-labelledby="flow-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">A typical build</span>
+          <h2 class="h2" id="flow-title" style="margin-top:20px">From raw data to a working app in four steps</h2>
+        </div>
+
+        <ol class="mcp-steps reveal">
+          <li class="mcp-step"><span class="n">1</span><p><b>Connect or bring your data.</b> Use Flieber’s integrations, or bulk upload catalog, forecasts, shipments and wholesale data.</p></li>
+          <li class="mcp-step"><span class="n">2</span><p><b>Apply inventory intelligence.</b> Business context and the planning engine turn records into demand, projections and recommendations.</p></li>
+          <li class="mcp-step"><span class="n">3</span><p><b>Start from a working app.</b> Use a Flieber app as is, start from a template or build your own through MCP and API.</p></li>
+          <li class="mcp-step"><span class="n">4</span><p><b>Validate and ship.</b> Check data health, forecast accuracy and decisions against what actually happened.</p></li>
+        </ol>
+        <p class="link-row reveal"><a class="link-arrow" href="../mcp/">Connect in minutes: the full guide on /mcp <span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section on-dark" id="layers" aria-labelledby="layers-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Four independent capabilities</span>
+          <h2 class="h2" id="layers-title" style="margin-top:20px">Take what you need. Leave what you don’t</h2>
+          <p class="lead">Each layer can be selected on its own. Some combinations need specific inputs, and we publish what each one requires rather than claiming everything works with everything.</p>
+        </div>
+
+        <div class="mq-grid mq-four reveal-stagger">
+          <a class="mq-card" href="../build/data/"><span class="mq-mod"><span class="n">01</span>Data foundation</span><h3 class="mq-q">Connectors, mapping and ingestion</h3><p>Optional if you already have usable data. Available on its own.</p><span class="mq-go">Data foundation <span class="arrow" aria-hidden="true">→</span></span></a>
+          <a class="mq-card" href="#intelligence"><span class="mq-mod"><span class="n">02</span>Inventory intelligence</span><h3 class="mq-q">The domain model and the math</h3><p>Runs on Flieber data or qualified data you provide.</p><span class="mq-go">Inventory intelligence <span class="arrow" aria-hidden="true">→</span></span></a>
+          <a class="mq-card" href="#templates"><span class="mq-mod"><span class="n">03</span>App templates</span><h3 class="mq-q">Working starting points</h3><p>Use, fork or borrow ideas. Requirements depend on the app.</p><span class="mq-go">App templates <span class="arrow" aria-hidden="true">→</span></span></a>
+          <a class="mq-card" href="#reliability"><span class="mq-mod"><span class="n">04</span>Reliability and validation</span><h3 class="mq-q">Checks for data, forecasts and decisions</h3><p>For Flieber or eligible external workflows.</p><span class="mq-go">Reliability <span class="arrow" aria-hidden="true">→</span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="data" aria-labelledby="data-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">01 · Data foundation</span>
+          <h2 class="h2" id="data-title" style="margin-top:20px">Your commerce data, consolidated, contextualized and current</h2>
+          <p class="lead">Every report, forecast and agent is only as good as the data under it. The data layer connects every channel, warehouse, 3PL and supplier, adds the business context none of them hold and keeps it up to date.</p>
+        </div>
+
+        <div class="feat-grid reveal-stagger">
+          <a class="feat-card" href="../features/#data-health"><h3 class="h3">Data health <span class="arrow" aria-hidden="true">→</span></h3><p>Checks your account for issues, gaps and anomalies, applies the fixes it can and flags the ones that need a person.</p><p class="feat-tag">Read and write</p></a>
+          <a class="feat-card" href="../features/#cross-channel-sku-mapping"><h3 class="h3">Cross-channel SKU mapping <span class="arrow" aria-hidden="true">→</span></h3><p>Links listings and SKUs across channels to one master product, so sales consolidate for planning.</p><p class="feat-tag">Write</p></a>
+          <a class="feat-card" href="../features/#kits-bundles-and-components"><h3 class="h3">Kits, bundles and components <span class="arrow" aria-hidden="true">→</span></h3><p>Bundle demand converted into component requirements, so you can buy components and transfer finished goods.</p><p class="feat-tag">Write</p></a>
+          <a class="feat-card" href="../features/#uploads-and-google-sheets"><h3 class="h3">Bring your own data <span class="arrow" aria-hidden="true">→</span></h3><p>Bulk updates to catalog, forecasts, shipments, bundles and wholesale data through CSV files or Google Sheets, with a preview before anything is saved. Direct connection to your own warehouse: <span class="todo">[CONFIRM BRING-YOUR-OWN-WAREHOUSE SUPPORT]</span></p><p class="feat-tag">Write</p></a>
+        </div>
+        <p class="link-row reveal"><a class="link-arrow" href="../build/data/">Everything in the data foundation <span class="arrow" aria-hidden="true">→</span></a> <a class="link-arrow" href="../integrations/">Supported data sources <span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="intelligence" aria-labelledby="intel-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">02 · Inventory intelligence</span>
+          <h2 class="h2" id="intel-title" style="margin-top:20px">Raw transactions in. Decisions you can trust out</h2>
+          <p class="lead">Business context turns records into a model of how your business works: which listings are the same product, which components make a bundle, which supplier ships to which warehouse and what a stockout did to last month’s sales. The planning engine then does the math with proprietary algorithms, not language models.</p>
+        </div>
+
+        <div class="intel-grid reveal">
+          <div>
+            <h3 class="h3 cz-sub" style="margin-top:0">A worked example</h3>
+            <p class="muted">Will this SKU make it to its next purchase order?</p>
+            <div class="table-wrap" style="margin-top:18px">
+              <table class="doc-table intel-table">
+                <thead><tr><th scope="col">Step</th><th scope="col">Value</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">On hand today</th><td>412 units</td></tr>
+                  <tr><th scope="row">Daily demand, corrected for stockouts</th><td>18.4 units</td></tr>
+                  <tr><th scope="row">Open PO-1187 arrives in</th><td>22 days, 600 units</td></tr>
+                  <tr><th scope="row">Demand until the PO lands</th><td>405 units</td></tr>
+                  <tr><th scope="row">Projected on hand when it lands</th><td>7 units</td></tr>
+                  <tr class="hl"><th scope="row">Stockout risk</th><td>High: under half a day of cover</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="intel-note">Sample data. Illustrative only.</p>
+          </div>
+          <div class="intel-edges">
+            <h3 class="h3 cz-sub" style="margin-top:0">Edge cases it already handles</h3>
+            <ul class="which-list">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Sales history corrected for stockouts, spikes and promotions, so demand isn’t underestimated</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Bundle demand converted into component requirements</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Sales orders routed to the regions or warehouses you choose</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>MOQs, case packs, cartons, pallets and container capacity</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Backorders and preorders, and wholesale demand parked on dates that passed</li>
+            </ul>
+            <p class="link-row"><a class="link-arrow" href="../features/">Every calculation, by module <span class="arrow" aria-hidden="true">→</span></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="templates" aria-labelledby="tpl-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">03 · App templates</span>
+          <h2 class="h2" id="tpl-title" style="margin-top:20px">Start from an app that works. Make it yours</h2>
+          <p class="lead">Functional starting points for specific inventory jobs. Use them as they are, fork them or borrow ideas. Each template lists what it does, what it needs and how ready it is. Production-ready and experimental templates are labeled separately.</p>
+        </div>
+
+        <div class="mod-grid tpl-grid reveal-stagger">
+          <article class="mod-card tpl-card"><span class="tpl-status"><span class="todo">[IN PREPARATION]</span></span><h3 class="h3">Inventory projection app</h3><p>Project inventory by SKU and location, including open purchase orders, and flag stockout and overstock risk.</p><p class="tpl-needs"><b>Needs:</b> inventory positions, demand or forecast, open POs</p></article>
+          <article class="mod-card tpl-card"><span class="tpl-status"><span class="todo">[IN PREPARATION]</span></span><h3 class="h3">Replenishment planner</h3><p>Turn projections and lead times into purchase recommendations with a review and approval step.</p><p class="tpl-needs"><b>Needs:</b> projection output, lead times, MOQs</p></article>
+          <article class="mod-card tpl-card"><span class="tpl-status"><span class="todo">[IN PREPARATION]</span></span><h3 class="h3">Forecast accuracy monitor</h3><p>Backtest any forecast, Flieber’s or yours, and track error by SKU, channel and horizon.</p><p class="tpl-needs"><b>Needs:</b> historical forecasts and actual sales</p></article>
+          <article class="mod-card tpl-card"><span class="tpl-status"><span class="todo">[IN PREPARATION]</span></span><h3 class="h3">Wholesale order check</h3><p>Check every new wholesale order against Amazon and Shopify stock before you accept it.</p><p class="tpl-needs"><b>Needs:</b> wholesale orders, channel inventory</p></article>
+        </div>
+        <p class="tpl-license reveal">Open source, with live preview, repository, version and customization guide on every template: <span class="todo">[LICENSE, REPOSITORIES AND RELEASE DATES]</span></p>
+        <h3 class="h3 cz-sub reveal">What teams build today on Flieber’s data</h3>
+        <ul class="uc-asks reveal">
+          <li>“A morning dashboard of stockout risk by channel, refreshed every day.”</li>
+          <li>“An agent that checks every new wholesale order against Amazon and Shopify stock.”</li>
+          <li>“A weekly cash-flow view of open purchase orders and projected inventory value.”</li>
+          <li>“A Slack alert when ad spend rises on a product projected to stock out.”</li>
+        </ul>
+        <p class="link-row reveal"><a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Get early access to templates <span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="reliability" aria-labelledby="rel-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">04 · Reliability and validation</span>
+          <h2 class="h2" id="rel-title" style="margin-top:20px">Check every output before it reaches a decision</h2>
+          <p class="lead">Validation shows how well things are working and where they aren’t. It doesn’t make anything guaranteed correct, and no tool can.</p>
+        </div>
+
+        <div class="feat-grid reveal-stagger">
+          <a class="feat-card" href="../features/#data-health"><h3 class="h3">Data health and freshness <span class="arrow" aria-hidden="true">→</span></h3><p>Issues, gaps and anomalies in every connected source, fixed where possible and flagged where a person is needed.</p><p class="feat-tag">Data quality</p></a>
+          <a class="feat-card" href="../features/#sales-history-adjusted-for-anomalies"><h3 class="h3">Adjusted history, side by side <span class="arrow" aria-hidden="true">→</span></h3><p>Actual sales next to the adjusted demand used for forecasting, so every correction can be checked.</p><p class="feat-tag">Data quality</p></a>
+          <a class="feat-card" href="../features/#forecast-accuracy-and-bias"><h3 class="h3">Forecast accuracy and bias <span class="arrow" aria-hidden="true">→</span></h3><p>Error and bias metrics, with monthly forecast versions saved so past predictions can be compared with what actually sold.</p><p class="feat-tag">Forecast accuracy</p></a>
+          <a class="feat-card" href="../features/#decision-simulations"><h3 class="h3">Decision simulations <span class="arrow" aria-hidden="true">→</span></h3><p>Test changes to order quantities, demand, arrival dates or lead times and see the effect on inventory, revenue, margin and cash before anything is committed.</p><p class="feat-tag">Decisions</p></a>
+          <a class="feat-card" href="../features/#control-and-approval"><h3 class="h3">Approval rules <span class="arrow" aria-hidden="true">→</span></h3><p>Nothing changes in your systems without passing the approval rules you set.</p><p class="feat-tag">Decisions</p></a>
+          <a class="feat-card" href="../features/#inventory-history-and-balances"><h3 class="h3">Inventory history and balances <span class="arrow" aria-hidden="true">→</span></h3><p>Snapshots and balances across every connected location, including inbound and in-transit stock, to compare projections with what was on hand.</p><p class="feat-tag">Output auditing</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="svc-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Build it yourself, or hire Flieber</span>
+          <h2 class="h2" id="svc-title" style="margin-top:20px">Choose how much you want to build</h2>
+          <p class="lead">Self-serve on Flieber’s layers, or have Flieber’s engineers build it with you. We agree on what you own, what Flieber hosts and what support is included before work starts.</p>
+        </div>
+
+        <div class="sol-two reveal-stagger">
+          <a class="sol-card" href="../customize/#yourself">
+            <span class="n">01</span>
+            <h3 class="h3">Build it yourself</h3>
+            <p>Vibe code your own tools on data that’s already unified, mapped and corrected. Start with a 14-day free trial on your own data.</p>
+            <span class="sol-go">Build it yourself <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+          <a class="sol-card" href="../customize/#engineers">
+            <span class="n">02</span>
+            <h3 class="h3">Have our engineers build it</h3>
+            <p>Custom dashboards, tailored frontends, integrations, agents and workflows. Quoted per project, for qualified accounts.</p>
+            <span class="sol-go">Have our engineers build it <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+        </div>
+        <p class="tpl-license reveal">Code ownership, hosting and maintenance terms for each model: <span class="todo">[CONFIRM OWNERSHIP AND SUPPORT TERMS]</span></p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Questions builders ask</span>
+          <h2 class="h2" id="faq-title" style="margin-top:20px">The usual ones, answered plainly</h2>
+        </div>
+
+        <div class="faq reveal">
+          <details>
+            <summary>Our AI can write this. Why use Flieber?<span class="plus" aria-hidden="true"></span></summary>
+            <p>AI is very good at writing interfaces and glue code. It is much less reliable at inventory logic, such as stockout-corrected demand, bundles, open-PO timing and lead times, and it won’t keep your integrations running. Flieber gives your builders those parts already working, so the code you write sits on something reliable.</p>
+          </details>
+          <details>
+            <summary>Can I buy only the data layer?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Yes. Teams building their own tools with AI can use Flieber’s data layer on its own through MCP and API, and add the other modules any time.</p>
+          </details>
+          <details>
+            <summary>Do I have to use Flieber’s connectors?<span class="plus" aria-hidden="true"></span></summary>
+            <p>No. If your data is already usable, bring it in through CSV files or Google Sheets, or import your own forecasts. Direct connection to your own data warehouse: <span class="todo">[CONFIRM BRING-YOUR-OWN-WAREHOUSE SUPPORT]</span></p>
+          </details>
+          <details>
+            <summary>Can my own AI agent use Flieber?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Yes. Claude, Cursor and any MCP-compatible agent connect through Flieber’s MCP server; your systems can also use the public API.</p>
+          </details>
+          <details>
+            <summary>Will Flieber change anything without my approval?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Not by default. Every change waits for your approval until you set a workflow to run on its own.</p>
+          </details>
+          <details>
+            <summary>Am I locked in?<span class="plus" aria-hidden="true"></span></summary>
+            <p>The layers are selected independently and your data is never sold or shared. Data access and portability are covered in technical discovery. <span class="todo">[CONFIRM EXPORT AND PORTABILITY TERMS]</span></p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section try" id="next" aria-labelledby="next-title">
+      <div class="wrap" style="position:relative">
+        <div class="section-head reveal">
+          <span class="kicker">Next step</span>
+          <h2 class="h2" id="next-title" style="margin-top:20px">Start building on your own data</h2>
+          <p class="lead">Start a 14-day free trial, no credit card required, or talk to an expert about what you want to build. Prefer ready-made? <a href="../run/">See Run with Flieber</a>.</p>
+        </div>
+
+        <div class="try-actions">
+          <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Talk to an expert</a>
+          <a class="btn btn-ghost" href="https://app.flieber.com/app/developers">View developer docs</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../assets/img/flieber-logo-light.svg" alt="Flieber" width="132" height="23">
+          <p class="tagline">Inventory software that works <em>the way you do.</em></p>
+        </div>
+        <div>
+          <h2 class="footer-h">Build</h2>
+          <ul>
+            <li><a href="../build/">Build overview</a></li>
+            <li><a href="../build/data/">Data foundation</a></li>
+            <li><a href="../build/#templates">App templates</a></li>
+            <li><a href="../mcp/">MCP and API</a></li>
+            <li><a href="../customize/">Build services</a></li>
+            <li><a href="../integrations/">Integrations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">Run</h2>
+          <ul>
+            <li><a href="../run/">Run overview</a></li>
+            <li><a href="../run/forecasting/">Demand forecasting</a></li>
+            <li><a href="../run/inventory/">Inventory forecasting</a></li>
+            <li><a href="../run/replenishment/">Replenishment</a></li>
+            <li><a href="../run/workflows/">Workflows</a></li>
+            <li><a href="../managed-services/">Managed Services</a></li>
+            <li><a href="../pricing/">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">For agents</h2>
+          <ul>
+            <li><a href="../agents/"><code>/agents</code></a></li>
+            <li><a href="../llms.txt"><code>/llms.txt</code></a></li>
+            <li><a href="../capabilities.json"><code>/capabilities.json</code></a></li>
+            <li><a href="https://app.flieber.com/app/developers">MCP docs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">Company</h2>
+          <ul>
+            <li><a href="../who-we-are/">Who we are</a></li>
+            <li><a href="../multichannel/">Multichannel brands</a></li>
+            <li><a href="../agencies/">Agencies and aggregators</a></li>
+            <li><a href="../security/">Security &amp; data</a></li>
+            <li><a href="https://help.flieber.com">Help center</a></li>
+            <li><a href="https://www.flieber.com/blog">Blog</a></li>
+            <li><a href="../contact/">Contact</a></li>
+            <li><a href="https://www.flieber.com/privacy-policy">Privacy</a></li>
+            <li><a href="https://www.flieber.com/service-agreement">Service agreement</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-mark" aria-hidden="true"><img src="../assets/img/flieber-logo-light.svg" alt=""></div>
+      <div class="footer-bottom">
+        <span>169 Madison Avenue, New York, NY 10016</span>
+        <span>© <span id="year">2026</span> Flieber</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js?v=17" defer></script>
+</body>
+</html>
