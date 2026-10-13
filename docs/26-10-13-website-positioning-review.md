@@ -455,6 +455,8 @@ Today's /product/data-layer, with the label "Build · Connected data" and the H1
 
 ## B8. Claims to confirm before publishing
 
+**Update (Oct 13):** Fabricio confirmed the claims used on homepage v1 (per-brand environment, coding-agent connection, open code, templates, Build pricing "Priced to your operation", trial findings, logo label, founder statement, AI specialists). They are recorded in `docs/26-10-13-approved-claims-addendum.md`. Rows below that the v1 homepage doesn't use stay open.
+
 | Claim | Where | Status |
 | --- | --- | --- |
 | Working app templates exist | Hero door 2 (omitted until true), /build, B4.5 | Not approved |
