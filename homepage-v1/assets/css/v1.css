@@ -135,3 +135,8 @@
 .sp-kpi-alert .sp-badge { border-color: var(--sp-alert); color: var(--sp-alert); }
 .sp-more { margin-top: 12px; padding: 12px 14px; border: 1px dashed rgba(240,245,246,.25); border-radius: 12px; font-size: 13.5px; line-height: 1.4; color: var(--gray-medium); }
 @media (max-width: 420px) { .sp-kpi b { font-size: 17px; } .sp-lever-big .sp-lever-head output { font-size: 24px; } }
+
+/* Oct 13 round 2 */
+.mq-card.key .mq-q { color: var(--black); }
+#why-different .section-head { margin-bottom: 0; }
+#why-different .ls-pin { height: calc(100vh - 240px); min-height: 540px; }
