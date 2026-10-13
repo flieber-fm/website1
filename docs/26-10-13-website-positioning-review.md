@@ -20,7 +20,7 @@ Cross-check of the live Option 2 brief (26-10-05 Website - Content Briefing, Opt
 | --- | --- | --- |
 | Hero eyebrow, H1, subhead ("intelligence layer your agents run on") | Replace | Leads with AI and agents; directly contradicts the agreed headline |
 | Hero card (six agent requests) | Replace | Shows AI conversations, not fit. The new visual must prove "works the way you do" |
-| Hero doors (Let our planners help you run it / Run it yourself) | Replace | "Run it yourself" collides with "Run with Flieber". Doors become Run and Build; services move inside each path |
+| Hero doors (Let our planners help you run it / Run it yourself) | Replace | "Run it yourself" collides with "Run with Flieber". Replaced by one offer with Run as the default and Build as a secondary path; services leave the hero (see A5) |
 | Logos under hero | Keep | Neutral, strong |
 | Why inventory (every decision is an inventory decision) | Move to /run | Good argument for Run buyers, not the homepage's job anymore |
 | Collaborative AI (three columns) | Demote | Becomes the approval and control point inside "Built to trust" and on /run |
@@ -62,7 +62,7 @@ Severity: **High** blocks launch or contradicts the strategy at the top. **Mediu
 | 15 | Two offers vs two journeys | Self-Serve and Managed Services are the two ways to buy | Build and Run are the two journeys; services are optional on both | Medium | Services become help options: planners (Run), engineers (Build) |
 | 16 | Founder statement | "Why we built Flieber to work with planners, not around them" | Software that fits; the hard part is keeping data and logic right | Medium | Draft in B4.8 for Fabricio's approval |
 | 17 | Pricing | No prices; "Priced to your operation"; data layer has no price wording | Packaging unresolved; avoid credit complexity | Medium | Keep "Priced to your operation" as the single metric across Run and Build. Build needs at least a pricing sentence before launch, because agents rank vendors with visible pricing higher |
-| 18 | Homepage priority | One audience (operators), agents secondary | Builders strategic priority, Run buyers current revenue | Medium | Doors equal in size; Run first in reading order, because that is who pays today. Build first in /agents and llms.txt, because that is who the agent channel brings |
+| 18 | Homepage priority | One audience (operators), agents secondary | Builders strategic priority, Run buyers current revenue | Medium | Run is the default in the hero and Build a visible secondary path (revised after the Comp benchmark, A5), because Run is who pays today. Build first in /agents and llms.txt, because that is who the agent channel brings |
 | 19 | Who-we-are "What we believe" | Decisions stay with people · Execution should be automatic · Context is the hard part | Fit, speed, trust | Low | Keep 1 and 3, replace 2 with "Software should fit the operation" (B7) |
 | 20 | "Inventory intelligence" phrase | Homepage H1 and footer tagline | Long-term ambition: the inventory intelligence foundation agents choose | Low | Use on /build, /agents and llms.txt; never as the homepage headline |
 | 21 | "Seven years" | Approved fact is "since 2019" | Discussion uses "roughly seven years" | Low | Say "since 2019". Never say templates were "used by 1,000 brands" |
