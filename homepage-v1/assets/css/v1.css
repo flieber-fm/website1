@@ -107,3 +107,31 @@
 .tool-table thead th:first-child { text-align: left; }
 .sim-tool .sim-tab { padding-top: 9px; padding-bottom: 9px; }
 .tool-send { display: flex; width: max-content; }
+
+/* Hero tool v2: scenario-planner style (after Flieber's Scenario Planner) */
+.sim-tool { --sp-line: rgba(240,245,246,.12); --sp-panel: rgba(240,245,246,.05); --sp-alert: #FF8A7A; }
+.sp-order { margin-top: 14px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: var(--white); }
+.sp-dim { font-weight: 400; color: var(--gray-medium); }
+.sp-pill { font-family: var(--mono); font-size: 11px; font-weight: 400; padding: 3px 7px; border-radius: 5px; background: var(--yellow); color: var(--black); }
+.sp-chips, .sp-rules { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.sp-chips span { font-family: var(--mono); font-size: 11.5px; padding: 5px 9px; border-radius: 7px; border: 1px solid var(--sp-line); background: var(--sp-panel); color: var(--gray-light); }
+.sp-rules span { font-family: var(--mono); font-size: 11.5px; padding: 5px 9px; border-radius: 999px; border: 1px solid rgba(245,237,97,.55); color: var(--yellow); }
+.sp-levers { display: grid; gap: 8px; margin-top: 12px; }
+.sp-lever { border: 1px solid var(--sp-line); background: var(--sp-panel); border-radius: 12px; padding: 10px 12px 8px; }
+.sp-lever-big { margin-top: 14px; padding: 14px 14px 10px; }
+.sp-lever-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.sp-lever-head label { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-medium); }
+.sp-lever-head output { font-size: 15px; font-weight: 600; color: var(--white); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sp-lever-big .sp-lever-head output { font-size: 28px; letter-spacing: -0.03em; }
+.sp-lever input[type=range] { width: 100%; margin: 8px 0 2px; accent-color: var(--yellow); cursor: pointer; }
+.sp-ticks { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 10.5px; color: var(--gray-dark); }
+.sp-kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.sp-kpi { border: 1px solid var(--sp-line); border-radius: 12px; padding: 10px 11px; display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.sp-kpi span { font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-medium); line-height: 1.25; }
+.sp-kpi b { font-size: 20px; font-weight: 600; letter-spacing: -0.03em; color: var(--white); font-variant-numeric: tabular-nums; }
+.sp-kpi small { font-size: 12px; color: var(--gray-medium); line-height: 1.3; }
+.sp-kpi .sp-badge { align-self: flex-start; font-family: var(--mono); font-size: 10.5px; padding: 3px 6px; border-radius: 6px; border: 1px solid rgba(240,245,246,.25); color: var(--gray-light); }
+.sp-kpi-alert { border-color: var(--sp-alert); }
+.sp-kpi-alert .sp-badge { border-color: var(--sp-alert); color: var(--sp-alert); }
+.sp-more { margin-top: 12px; padding: 12px 14px; border: 1px dashed rgba(240,245,246,.25); border-radius: 12px; font-size: 13.5px; line-height: 1.4; color: var(--gray-medium); }
+@media (max-width: 420px) { .sp-kpi b { font-size: 17px; } .sp-lever-big .sp-lever-head output { font-size: 24px; } }

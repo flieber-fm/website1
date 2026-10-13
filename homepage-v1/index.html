@@ -133,44 +133,58 @@
 
           <!-- Hero visual: one replenishment tool, as it comes and tailored. Sample data only. -->
           <div>
-            <figure class="sim sim-tool" id="sim" aria-labelledby="sim-title">
+            <figure class="sim sim-tool" id="sim" aria-labelledby="sim-title" style="--sim-interval:14s">
               <div class="sim-head">
                 <span class="sim-title" id="sim-title">Your replenishment tool</span>
                 <span class="sim-badge">Sample data</span>
               </div>
               <div class="sim-tabs" role="tablist" aria-label="Two versions of the same tool">
                 <button class="sim-tab" type="button" role="tab" id="sim-tab-0" aria-controls="sim-panel-0" aria-selected="true"><span>As it comes</span><i class="sim-progress" aria-hidden="true"></i></button>
-                <button class="sim-tab" type="button" role="tab" id="sim-tab-1" aria-controls="sim-panel-1" aria-selected="false" tabindex="-1"><span>Tailored</span><i class="sim-progress" aria-hidden="true"></i></button>
+                <button class="sim-tab" type="button" role="tab" id="sim-tab-1" aria-controls="sim-panel-1" aria-selected="false" tabindex="-1"><span>Tailored for your team</span><i class="sim-progress" aria-hidden="true"></i></button>
               </div>
               <div class="sim-stage">
+
+                <!-- As it comes: one lever -->
                 <div class="sim-panel active" role="tabpanel" id="sim-panel-0" aria-labelledby="sim-tab-0">
                   <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>Replenishment <span class="sim-src-arrow" aria-hidden="true">·</span> as it comes</p>
-                  <p class="sim-q">Recommended orders for the <b>week of Oct 19</b></p>
-                  <table class="tool-table">
-                    <thead><tr><th scope="col">Product</th><th scope="col">Days of cover</th><th scope="col">Order</th></tr></thead>
-                    <tbody>
-                      <tr><th scope="row">Travel kit</th><td>12</td><td>1,200</td></tr>
-                      <tr><th scope="row">32 oz bottle</th><td>9</td><td>800</td></tr>
-                      <tr><th scope="row">Hiking bundle</th><td>15</td><td>400</td></tr>
-                      <tr><th scope="row">Lid 3-pack</th><td>31</td><td>0</td></tr>
-                    </tbody>
-                  </table>
-                  <p class="sim-rec"><span class="sim-rec-label">Ready from day one</span> Within MOQs, case packs and lead times, built from what more than 1,000 brands taught us.</p>
+                  <p class="sp-order"><span class="sp-pill">Purchase</span>Ningbo → AWD <span class="sp-dim">· lands Jan 22</span></p>
+                  <div class="sp-lever sp-lever-big">
+                    <div class="sp-lever-head"><label for="a-cover">Coverage of this PO</label><output id="a-cover-out" for="a-cover">120 days</output></div>
+                    <input type="range" id="a-cover" min="30" max="270" step="15" value="120">
+                    <div class="sp-ticks" aria-hidden="true"><span>30d</span><span>150d</span><span>270d</span></div>
+                  </div>
+                  <div class="sp-kpis">
+                    <div class="sp-kpi"><span>Units to order</span><b id="a-units">15,600</b></div>
+                    <div class="sp-kpi"><span>Capital</span><b id="a-cap">$71.8k</b></div>
+                    <div class="sp-kpi"><span>Covers until</span><b id="a-until">May 22</b></div>
+                  </div>
+                  <p class="sp-more">MOQs, case packs and lead times already applied. Capital pools, sales pace, container rules and approvals come when you tailor it.</p>
                 </div>
+
+                <!-- Tailored: more levers, the brand's own rules -->
                 <div class="sim-panel" role="tabpanel" id="sim-panel-1" aria-labelledby="sim-tab-1" aria-hidden="true">
-                  <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>Replenishment <span class="sim-src-arrow" aria-hidden="true">·</span> tailored by your team or by our AI specialists</p>
-                  <p class="sim-q">Recommended orders for the <b>week of Oct 19</b>, your way</p>
-                  <table class="tool-table">
-                    <thead><tr><th scope="col">Product</th><th scope="col" class="new">Margin tier</th><th scope="col">Days of cover</th><th scope="col">Order</th></tr></thead>
-                    <tbody>
-                      <tr><th scope="row">Travel kit</th><td><span class="tier">A</span></td><td>12</td><td class="win">1,400</td></tr>
-                      <tr><th scope="row">32 oz bottle</th><td><span class="tier">A</span></td><td>9</td><td class="win">900</td></tr>
-                      <tr><th scope="row">Hiking bundle</th><td><span class="tier">B</span></td><td>15</td><td class="win">300</td></tr>
-                      <tr><th scope="row">Lid 3-pack</th><td><span class="tier">C</span></td><td>31</td><td>0</td></tr>
-                    </tbody>
-                  </table>
-                  <div class="tool-tags"><span>Rule · Ningbo ships full containers only</span><span>Approval · Ops lead</span></div>
-                  <p class="sim-rec"><span class="sim-rec-label">Your rules applied</span> Rebalanced to fill one 40-foot container, waiting for your Ops lead to approve. <span class="tool-send">Send to NetSuite <span aria-hidden="true">→</span></span></p>
+                  <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>Your scenario planner <span class="sim-src-arrow" aria-hidden="true">·</span> tailored</p>
+                  <div class="sp-chips"><span>Supplier · Ningbo</span><span>Destination · AWD</span><span>Forecast · agreed plan</span></div>
+                  <div class="sp-levers">
+                    <div class="sp-lever">
+                      <div class="sp-lever-head"><label for="b-cover">Coverage</label><output id="b-cover-out" for="b-cover">165 days</output></div>
+                      <input type="range" id="b-cover" min="30" max="270" step="15" value="165">
+                    </div>
+                    <div class="sp-lever">
+                      <div class="sp-lever-head"><label for="b-pool">Capital from the shared pool</label><output id="b-pool-out" for="b-pool">$100k</output></div>
+                      <input type="range" id="b-pool" min="0" max="200" step="5" value="100">
+                    </div>
+                    <div class="sp-lever">
+                      <div class="sp-lever-head"><label for="b-pace">Sales pace vs forecast</label><output id="b-pace-out" for="b-pace">0%</output></div>
+                      <input type="range" id="b-pace" min="-50" max="50" step="5" value="0">
+                    </div>
+                  </div>
+                  <div class="sp-rules"><span>Rule · full 40-ft containers only</span><span>Rule · A-tier lines never cut</span><span>Approval · Ops lead</span></div>
+                  <div class="sp-kpis">
+                    <div class="sp-kpi"><span>Capital required</span><b id="b-need">$119.6k</b><small id="b-need-units">26,000 units</small></div>
+                    <div class="sp-kpi sp-kpi-alert" id="b-fund-tile"><span>Purchase funded</span><b id="b-fund">$95.7k</b><small class="sp-badge" id="b-badge">$23.9k short · 2 containers cut</small></div>
+                    <div class="sp-kpi"><span>Short after PO lands</span><b id="b-short">5,200</b><small>units</small></div>
+                  </div>
                 </div>
               </div>
               <div class="sim-foot">
@@ -178,7 +192,7 @@
                 <button class="sim-pause" type="button" aria-pressed="false" aria-label="Pause rotation"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect class="i-pause" x="2" y="1.5" width="2.6" height="9" rx=".6"/><rect class="i-pause" x="7.4" y="1.5" width="2.6" height="9" rx=".6"/><path class="i-play" d="M3 1.6v8.8L10.4 6z"/></svg></button>
               </div>
             </figure>
-            <p class="sim-caption">Ready on day one. Tailored when you want, by you or by us.</p>
+            <p class="sim-caption">One lever on day one. Your levers and rules when you want them, set up by you or by us.</p>
           </div>
         </div>
       </div>
@@ -670,5 +684,6 @@
   </footer>
 
   <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/v1.js" defer></script>
 </body>
 </html>
