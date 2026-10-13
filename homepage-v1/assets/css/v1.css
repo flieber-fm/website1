@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Homepage v1 (Oct 13 positioning): additions on top of Option 2's site.css.
+   Same tokens, type and components; only the pieces Option 2 doesn't have.
+   ========================================================================== */
+
+/* Hero: two buttons instead of the two doors */
+.hero-actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 10px; }
+.hero .under-doors { margin-top: 22px; justify-content: flex-start; }
+
+/* Hero visual: the replenishment tool, "As it comes" vs "Tailored" (reuses .sim) */
+.sim-tool .sim-tabs { gap: 6px; }
+.sim-tool .sim-tab { flex: 1 1 0; justify-content: center; }
+.tool-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14.5px; }
+.tool-table th, .tool-table td { padding: 10px 8px; border-top: 1px solid rgba(240,245,246,.12); text-align: right; }
+.tool-table thead th { border-top: 0; font-family: var(--mono); font-size: 11.5px; font-weight: 400; color: var(--gray-medium); line-height: 1.3; }
+.tool-table tbody th { text-align: left; font-weight: 400; color: var(--gray-light); white-space: nowrap; }
+.tool-table td { font-family: var(--mono); font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--gray-light); }
+.tool-table td.win { background: var(--yellow); color: var(--black); font-weight: 600; }
+.tool-table .tier { display: inline-block; min-width: 22px; padding: 1px 6px; border-radius: 5px; border: 1px solid rgba(240,245,246,.3); text-align: center; font-size: 12px; }
+.tool-table .new { color: var(--yellow); }
+.tool-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.tool-tags span { font-family: var(--mono); font-size: 11.5px; padding: 5px 9px; border-radius: 999px; border: 1px solid rgba(245,237,97,.55); color: var(--yellow); }
+.tool-send { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 7px 12px; border-radius: 8px; background: var(--yellow); color: var(--black); font-size: 13.5px; font-weight: 600; }
+.sim-caption { margin-top: 12px; font-size: 14px; color: var(--text-2); }
+
+/* Pending claims: visible only in this review build */
+.tbc {
+  display: inline-block; vertical-align: middle; margin-left: 6px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase; line-height: 1;
+  padding: 4px 6px; border-radius: 5px; background: #FFF4D6; color: #6B4E00; border: 1px dashed #C9A227;
+}
+.on-dark .tbc, .sim .tbc { background: rgba(245,237,97,.12); color: var(--yellow); border-color: rgba(245,237,97,.5); }
+
+/* Section 4: Run / Build cards (on top of .which) */
+.which-card .ways { margin-top: 18px; }
+.which-card .ways li { display: grid; grid-template-columns: 24px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); }
+.which-card .ways li:first-child { border-top: 0; padding-top: 4px; }
+.which-card .ways b { display: block; font-weight: 600; letter-spacing: -0.02em; }
+.which-card .ways p { color: var(--text-2); font-size: 15.5px; margin-top: 2px; }
+.which-card .ways .price { display: block; margin-top: 6px; font-family: var(--mono); font-size: 12px; color: var(--black); }
+.which-card .ways .ico { width: 24px; height: 24px; border-radius: 7px; display: grid; place-items: center; background: var(--yellow); border: 1px solid var(--black); margin-top: 1px; }
+.which-card .cases { margin-top: 14px; color: var(--text-2); }
+
+/* Section 4: a tool for every person */
+.roles-head { margin-top: clamp(56px, 7vw, 88px); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+.roles-head .h3 { font-size: clamp(22px, 2.2vw, 28px); letter-spacing: -0.035em; }
+.roles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.role { border: 1px solid var(--line); border-radius: var(--radius-m); padding: 20px; background: var(--white); display: flex; flex-direction: column; gap: 8px; }
+.role .n { font-family: var(--mono); font-size: 12px; color: var(--text-2); }
+.role h4 { font-size: 18px; font-weight: 600; letter-spacing: -0.02em; }
+.role p { color: var(--text-2); font-size: 15px; line-height: 1.4; }
+.roles-under { margin-top: 18px; color: var(--text-2); }
+@media (max-width: 1060px) { .roles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .roles { grid-template-columns: 1fr; } }
+
+/* Section 5: one decision, five teams */
+.hub {
+  display: grid; gap: 14px;
+  grid-template-columns: 1fr 1.1fr 1fr;
+  grid-template-areas: "sales decision ops" "marketing decision purchasing" ". finance .";
+}
+.hub-team { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 20px 22px; }
+.hub-team h3 { font-size: 18px; font-weight: 600; letter-spacing: -0.02em; }
+.hub-team p { margin-top: 6px; color: var(--text-2); font-size: 15px; }
+.hub-decision {
+  grid-area: decision; align-self: stretch; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+  background: var(--yellow); border: 1px solid var(--black); border-radius: var(--radius-l); padding: 28px; box-shadow: 0 2px 0 var(--black);
+}
+.hub-decision b { font-size: clamp(22px, 2.2vw, 28px); font-weight: 400; letter-spacing: -0.035em; }
+.hub-decision span { margin-top: 8px; font-family: var(--mono); font-size: 13px; }
+.hub-sales { grid-area: sales; } .hub-marketing { grid-area: marketing; } .hub-ops { grid-area: ops; }
+.hub-purchasing { grid-area: purchasing; } .hub-finance { grid-area: finance; }
+.hub-under { margin-top: 28px; max-width: 760px; font-size: clamp(17px, 1.5vw, 19px); line-height: 1.45; }
+@media (max-width: 860px) {
+  .hub { grid-template-columns: 1fr 1fr; grid-template-areas: "decision decision" "sales ops" "marketing purchasing" "finance finance"; }
+}
+@media (max-width: 520px) {
+  .hub { grid-template-columns: 1fr; grid-template-areas: "decision" "sales" "marketing" "ops" "purchasing" "finance"; }
+}
+
+/* Section 6: the old way */
+.old-way .sol-card { min-height: 0; }
+.old-way .sol-card:hover { background: var(--white); border-color: var(--line-strong); }
+.old-way .sol-card:hover p, .old-way .sol-card:hover .n { color: var(--text-2); }
+.old-under { margin-top: 28px; font-size: clamp(20px, 2vw, 26px); letter-spacing: -0.03em; line-height: 1.25; max-width: 760px; }
+
+/* Section 7: what AI changes (four cards, the fourth emphasized) */
+.mq-grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.mq-grid.four .mq-card { min-height: 260px; cursor: default; }
+.mq-card.key { background: var(--yellow); color: var(--black); border-color: var(--yellow); }
+.mq-card.key p { color: var(--black); }
+.mq-card.key .mq-mod, .mq-card.key .mq-mod .n { color: var(--black); }
+.ai-close { margin-top: 32px; font-size: clamp(20px, 2vw, 26px); letter-spacing: -0.03em; color: var(--white); }
+@media (max-width: 1060px) { .mq-grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .mq-grid.four { grid-template-columns: 1fr; } }
+
+/* Section 10: start free */
+.try .fit-col { background: rgba(255,255,255,.45); border-color: var(--black); }
+.try-card ul { margin-top: 14px; }
+.try-card ul li { padding: 8px 0; border-top: 1px solid var(--line); }
+.try-card ul li:first-child { border-top: 0; }
+.try-card.dark ul li { border-color: rgba(240,245,246,.14); }
+
+/* Review banner (this build only) */
+.review-bar { background: var(--black); color: var(--gray-light); font-family: var(--mono); font-size: 12px; text-align: center; padding: 8px var(--gutter); }
+.review-bar b { color: var(--yellow); font-weight: 600; }
+.tool-table thead th:first-child { text-align: left; }
+.sim-tool .sim-tab { padding-top: 9px; padding-bottom: 9px; }
+.tool-send { display: flex; width: max-content; }

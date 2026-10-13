@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- REVIEW BUILD ONLY: homepage v1 (Oct 13 positioning) on Option 2's design system -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Flieber · Your own inventory planning system</title>
+  <meta name="description" content="Inventory planning tools built with 1,000+ brands since 2019. Use them as they are or have them tailored, by our team or yours. Free 14-day trial.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#F5ED61">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Flieber">
+  <meta property="og:title" content="Your own inventory planning system, backed by a time-tested engine">
+  <meta property="og:description" content="Your use cases. Your workflows. Your rules. Your views. Built on forecasting and replenishment logic learned from more than 1,000 brands since 2019.">
+  <link rel="preload" href="assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/v1.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.flieber.com/#organization",
+        "name": "Flieber",
+        "url": "https://www.flieber.com",
+        "foundingDate": "2019",
+        "founder": { "@type": "Person", "name": "Fabricio Miranda" },
+        "address": { "@type": "PostalAddress", "streetAddress": "169 Madison Avenue", "addressLocality": "New York", "addressRegion": "NY", "postalCode": "10016", "addressCountry": "US" }
+      },
+      { "@type": "WebSite", "name": "Flieber", "url": "https://www.flieber.com" },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Flieber",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "publisher": { "@id": "https://www.flieber.com/#organization" },
+        "offers": { "@type": "Offer", "name": "14-day free trial", "price": "0", "priceCurrency": "USD" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="review-bar">Review build · Homepage v1 · Oct 13 positioning on Option 2's design · <b>To confirm</b> tags mark claims not yet approved</div>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a class="nav-logo" href="./" aria-label="Flieber home">
+        <img src="assets/img/flieber-logo.svg" alt="Flieber" width="116" height="20">
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <div class="nav-drop">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-run">Run <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-run">
+            <a class="nav-menu-all" href="#two-ways" data-placeholder="/run">Run with Flieber <span aria-hidden="true">→</span></a>
+            <div class="nav-sub">
+              <a href="https://website-option-2-production.up.railway.app/product/demand-forecasting/">Demand forecasting</a>
+              <a href="https://website-option-2-production.up.railway.app/product/inventory-forecasting/">Inventory forecasting</a>
+              <a href="https://website-option-2-production.up.railway.app/product/replenishment/">Replenishment</a>
+              <a href="https://website-option-2-production.up.railway.app/product/workflows/">Workflows</a>
+            </div>
+            <hr class="nav-menu-sep">
+            <a href="https://website-option-2-production.up.railway.app/multichannel/">Multichannel brands</a>
+            <a href="https://website-option-2-production.up.railway.app/agencies/">Agencies and aggregators</a>
+            <a href="https://website-option-2-production.up.railway.app/managed-services/">Managed Services</a>
+          </div>
+        </div>
+        <div class="nav-drop">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-build">Build <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-build">
+            <a class="nav-menu-all" href="#two-ways" data-placeholder="/build">Build with Flieber <span aria-hidden="true">→</span></a>
+            <div class="nav-sub">
+              <a href="https://website-option-2-production.up.railway.app/product/data-layer/">Connected data</a>
+              <a href="https://website-option-2-production.up.railway.app/mcp/">MCP and AI agents</a>
+              <a href="#two-ways" data-placeholder="Docs">Docs</a>
+            </div>
+            <hr class="nav-menu-sep">
+            <a href="#two-ways" data-placeholder="AI specialists page">Our AI specialists</a>
+          </div>
+        </div>
+        <a href="https://website-option-2-production.up.railway.app/pricing/">Pricing</a>
+        <a href="#proof">Customers</a>
+        <div class="nav-drop">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-company">Company <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-company">
+            <a href="https://website-option-2-production.up.railway.app/who-we-are/">Who we are</a>
+            <a href="https://website-option-2-production.up.railway.app/integrations/">Integrations</a>
+            <a href="https://website-option-2-production.up.railway.app/security/">Security &amp; data</a>
+            <a href="https://website-option-2-production.up.railway.app/before-you-choose/">Before you choose</a>
+            <a href="https://website-option-2-production.up.railway.app/contact/">Contact</a>
+          </div>
+        </div>
+        <a class="agents-link" href="https://website-option-2-production.up.railway.app/agents/" aria-label="For AI agents"><code>/agents</code></a>
+        <a class="menu-only" href="https://app.flieber.com">Log in</a>
+        <a class="menu-only" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="nav-login" href="https://app.flieber.com">Log in</a>
+        <a class="btn btn-ghost btn-sm" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        <a class="btn btn-primary btn-sm" href="https://www.flieber.com/free-trial">Start free trial</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= 1. HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero-top">
+          <div class="hero-copy">
+            <span class="eyebrow"><span class="pulse" aria-hidden="true"></span><span>Inventory planning for multichannel brands</span></span>
+            <h1 class="h1" id="hero-title">Your own inventory planning system, backed by a time&#8209;tested engine</h1>
+            <p class="lead">Your use cases. Your workflows. Your rules. Your views. Built on forecasting and replenishment logic learned from more than 1,000 brands since 2019. Ready from day one, and customizable by you or our specialists to work exactly the way you want.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+            </div>
+            <ul class="under-doors">
+              <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>14-day free trial</li>
+              <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>No credit card</li>
+              <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Monthly contracts</li>
+              <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Setup included</li>
+            </ul>
+          </div>
+
+          <!-- Hero visual: one replenishment tool, as it comes and tailored. Sample data only. -->
+          <div>
+            <figure class="sim sim-tool" id="sim" aria-labelledby="sim-title">
+              <div class="sim-head">
+                <span class="sim-title" id="sim-title">Your replenishment tool</span>
+                <span class="sim-badge">Sample data</span>
+              </div>
+              <div class="sim-tabs" role="tablist" aria-label="Two versions of the same tool">
+                <button class="sim-tab" type="button" role="tab" id="sim-tab-0" aria-controls="sim-panel-0" aria-selected="true"><span>As it comes</span><i class="sim-progress" aria-hidden="true"></i></button>
+                <button class="sim-tab" type="button" role="tab" id="sim-tab-1" aria-controls="sim-panel-1" aria-selected="false" tabindex="-1"><span>Tailored</span><i class="sim-progress" aria-hidden="true"></i></button>
+              </div>
+              <div class="sim-stage">
+                <div class="sim-panel active" role="tabpanel" id="sim-panel-0" aria-labelledby="sim-tab-0">
+                  <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>Replenishment <span class="sim-src-arrow" aria-hidden="true">·</span> as it comes</p>
+                  <p class="sim-q">Recommended orders for the <b>week of Oct 19</b></p>
+                  <table class="tool-table">
+                    <thead><tr><th scope="col">Product</th><th scope="col">Days of cover</th><th scope="col">Order</th></tr></thead>
+                    <tbody>
+                      <tr><th scope="row">Travel kit</th><td>12</td><td>1,200</td></tr>
+                      <tr><th scope="row">32 oz bottle</th><td>9</td><td>800</td></tr>
+                      <tr><th scope="row">Hiking bundle</th><td>15</td><td>400</td></tr>
+                      <tr><th scope="row">Lid 3-pack</th><td>31</td><td>0</td></tr>
+                    </tbody>
+                  </table>
+                  <p class="sim-rec"><span class="sim-rec-label">Ready from day one</span> Within MOQs, case packs and lead times, built from what more than 1,000 brands taught us.</p>
+                </div>
+                <div class="sim-panel" role="tabpanel" id="sim-panel-1" aria-labelledby="sim-tab-1" aria-hidden="true">
+                  <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>Replenishment <span class="sim-src-arrow" aria-hidden="true">·</span> tailored by your team or by our AI specialists</p>
+                  <p class="sim-q">Recommended orders for the <b>week of Oct 19</b>, your way</p>
+                  <table class="tool-table">
+                    <thead><tr><th scope="col">Product</th><th scope="col" class="new">Margin tier</th><th scope="col">Days of cover</th><th scope="col">Order</th></tr></thead>
+                    <tbody>
+                      <tr><th scope="row">Travel kit</th><td><span class="tier">A</span></td><td>12</td><td class="win">1,400</td></tr>
+                      <tr><th scope="row">32 oz bottle</th><td><span class="tier">A</span></td><td>9</td><td class="win">900</td></tr>
+                      <tr><th scope="row">Hiking bundle</th><td><span class="tier">B</span></td><td>15</td><td class="win">300</td></tr>
+                      <tr><th scope="row">Lid 3-pack</th><td><span class="tier">C</span></td><td>31</td><td>0</td></tr>
+                    </tbody>
+                  </table>
+                  <div class="tool-tags"><span>Rule · Ningbo ships full containers only</span><span>Approval · Ops lead</span></div>
+                  <p class="sim-rec"><span class="sim-rec-label">Your rules applied</span> Rebalanced to fill one 40-foot container, waiting for your Ops lead to approve. <span class="tool-send">Send to NetSuite <span aria-hidden="true">→</span></span></p>
+                </div>
+              </div>
+              <div class="sim-foot">
+                <figcaption>Sample data. Illustrative only.</figcaption>
+                <button class="sim-pause" type="button" aria-pressed="false" aria-label="Pause rotation"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect class="i-pause" x="2" y="1.5" width="2.6" height="9" rx=".6"/><rect class="i-pause" x="7.4" y="1.5" width="2.6" height="9" rx=".6"/><path class="i-play" d="M3 1.6v8.8L10.4 6z"/></svg></button>
+              </div>
+            </figure>
+            <p class="sim-caption">Ready on day one. Tailored when you want, by you or by us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. LOGOS ================= -->
+    <section class="logos-band" aria-labelledby="logos-label">
+      <div class="wrap">
+        <div class="logos-block">
+          <p class="logos-label" id="logos-label">More than 1,000 brands have planned on Flieber since 2019 <span class="tbc">To confirm</span></p>
+          <div class="logos" role="group" aria-labelledby="logos-label">
+            <div class="logos-track">
+              <img src="assets/logos/mannatech.png" alt="Mannatech" loading="lazy">
+              <img src="assets/logos/piccalio.png" alt="Piccalio" loading="lazy">
+              <img class="logo-square" src="assets/logos/jaeger.png" alt="Jaeger Tools" loading="lazy">
+              <img src="assets/logos/lifepro.png" alt="Lifepro Fitness" loading="lazy">
+              <img class="logo-square" src="assets/logos/wargames.png" alt="Wargames Delivered" loading="lazy">
+              <img src="assets/logos/qualico.png" alt="Qualico" loading="lazy">
+              <img src="assets/logos/southshore.png" alt="Southshore Fine Linens" loading="lazy">
+              <img src="assets/logos/bearaby.png" alt="Bearaby" loading="lazy">
+              <img src="assets/logos/alt-group.png" alt="ALT Group" loading="lazy">
+              <img class="logo-square" src="assets/logos/waterglider.png" alt="Waterglider International" loading="lazy">
+              <img class="logo-thin" src="assets/logos/modloft.png" alt="Modloft" loading="lazy">
+              <img src="assets/logos/zugu.png" alt="Zugu" loading="lazy">
+              <img src="assets/logos/primal-harvest.png" alt="Primal Harvest" loading="lazy">
+              <img src="assets/logos/unybrands.png" alt="Unybrands" loading="lazy">
+              <img src="assets/logos/mannatech.png" alt="" aria-hidden="true" loading="lazy">
+              <img src="assets/logos/piccalio.png" alt="" aria-hidden="true" loading="lazy">
+              <img class="logo-square" src="assets/logos/jaeger.png" alt="" aria-hidden="true" loading="lazy">
+              <img src="assets/logos/lifepro.png" alt="" aria-hidden="true" loading="lazy">
+              <img class="logo-square" src="assets/logos/wargames.png" alt="" aria-hidden="true" loading="lazy">
+              <img src="assets/logos/qualico.png" alt="" aria-hidden="true" loading="lazy">
+              <img src="assets/logos/southshore.png" alt="" aria-hidden="true" loading="lazy">
+              <img src="assets/logos/bearaby.png" alt="" aria-hidden="true" loading="lazy">
+              <img src="assets/logos/alt-group.png" alt="" aria-hidden="true" loading="lazy">
+              <img class="logo-square" src="assets/logos/waterglider.png" alt="" aria-hidden="true" loading="lazy">
+              <img class="logo-thin" src="assets/logos/modloft.png" alt="" aria-hidden="true" loading="lazy">
+              <img src="assets/logos/zugu.png" alt="" aria-hidden="true" loading="lazy">
+              <img src="assets/logos/primal-harvest.png" alt="" aria-hidden="true" loading="lazy">
+              <img src="assets/logos/unybrands.png" alt="" aria-hidden="true" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. WHY IT'S DIFFERENT (scroll-driven stack, three layers) ================= -->
+    <section class="section layerstack-sec" id="why-different" aria-labelledby="stack-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Why it’s different</span>
+          <h2 class="h2" id="stack-title" style="margin-top:20px">The flexibility of a custom build. The foundation of more than 1,000 brands’ experience</h2>
+          <p class="lead">Start with a working application, customize it to your business or build something entirely new on top of Flieber. Every brand gets three things.</p>
+        </div>
+      </div>
+      <div class="layerstack" id="layerstack" style="--n:3">
+        <div class="ls-pin">
+          <div class="wrap ls-grid">
+            <ol class="ls-steps" aria-label="What every brand gets, from the engine up">
+              <li class="ls-step is-active" data-step="0">
+                <button class="ls-pill" type="button" aria-controls="ls-body-0" aria-expanded="true"><span class="ls-name">The planning engine</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-0">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">The planning engine</p>
+                    <p>A data model, tested since 2019, that holds the full logic of inventory planning: demand forecasts corrected for stockouts and promotions, inventory projections, and replenishment within MOQs, case packs, lead times and cash, with the use cases learned from more than 1,000 brands. Proprietary algorithms, not language models, do the math.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="1">
+                <button class="ls-pill" type="button" aria-controls="ls-body-1" aria-expanded="false"><span class="ls-name">Your own environment</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-1">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Your own environment <span class="tbc">To confirm</span></p>
+                    <p>Your brand’s space in Flieber, connected to your channels, warehouses and systems and, if you want to change things yourself, to Claude Code or whichever coding agent you use.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="ls-step" data-step="2">
+                <button class="ls-pill" type="button" aria-controls="ls-body-2" aria-expanded="false"><span class="ls-name">Working tools</span><span class="ls-plus" aria-hidden="true"></span></button>
+                <div class="ls-body" id="ls-body-2">
+                  <div class="ls-body-inner">
+                    <p class="ls-title">Working tools, with open code <span class="tbc">To confirm</span></p>
+                    <p>Demand forecasting, inventory forecasting, replenishment and workflows, ready on day one. They’re built from what we learned planning for more than 1,000 brands, so most teams use them as they are. Their code is open, so you or our AI specialists can change any of them or build new ones on the same engine.</p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+            <div class="ls-scene" aria-hidden="true">
+              <div class="iso" id="iso">
+                <div class="iso-floor"></div>
+                <div class="iso-plate" style="--i:0" data-plate="0">
+                  <div class="iso-top"><span class="iso-label">Planning engine</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:1" data-plate="1">
+                  <div class="iso-top"><span class="iso-label">Your environment</span></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+                <div class="iso-plate" style="--i:2" data-plate="2">
+                  <div class="iso-top"><span class="iso-label">Your tools</span><svg class="iso-mark" viewBox="0 2 192 137" aria-hidden="true"><path d="M0.3 3.25C0 2.74 0.37 2.1 0.96 2.1L107.21 2.1C110.4 2.1 113.48 3.21 115.95 5.22L187.56 63.81C191.68 67.19 191.68 73.49 187.56 76.86L115.95 135.45C113.48 137.47 110.4 138.57 107.21 138.57L70.3 138.57C69.47 138.57 68.71 138.13 68.3 137.42L43.57 94.23C43.27 93.72 43.64 93.08 44.23 93.08L141.7 93.08C142.12 93.08 142.46 92.74 142.46 92.32L142.46 48.36C142.46 47.94 142.12 47.59 141.7 47.59L27.29 47.59C26.47 47.59 25.71 47.16 25.3 46.45L0.3 3.25"/></svg></div>
+                  <div class="iso-side iso-side-a"></div>
+                  <div class="iso-side iso-side-b"></div>
+                </div>
+              </div>
+            </div>
+            <p class="ls-more"><a class="link-arrow" href="https://website-option-2-production.up.railway.app/security/">How we handle your data <span class="arrow" aria-hidden="true">→</span></a></p>
+            <div class="ls-progress" aria-hidden="true"><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. TWO WAYS TO GET STARTED ================= -->
+    <section class="section" id="two-ways" aria-labelledby="two-ways-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Two ways to get started</span>
+          <h2 class="h2" id="two-ways-title" style="margin-top:20px">Run with Flieber, or build with it</h2>
+        </div>
+
+        <div class="which reveal-stagger">
+          <article class="which-card" aria-labelledby="run-title">
+            <h3 class="which-name" id="run-title">Run with Flieber</h3>
+            <p class="which-tag">Get working inventory applications today</p>
+            <p class="cases">Demand forecasting, inventory forecasting, replenishment and workflows, ready from day one. They already handle kits and bundles, wholesale, FBA, multiple warehouses and 3PLs, backorders and the other cases more than 1,000 brands brought us.</p>
+            <ul class="ways">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span><div><b>Use them as they are</b><p>Connect your channels and plan, no code.</p><span class="price">Priced to your operation</span></div></li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span><div><b>Have our AI specialists tailor them</b><p>Your views, fields, rules and reports, adapted and handed over working.</p><span class="price">Quoted per project, for qualified accounts</span></div></li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span><div><b>Let our planners run them with you</b><p>Specialists in inventory planning and in Flieber join your S&amp;OP meetings, keep your data accurate and, on the Full plan, carry out the orders you approve.</p><span class="price">Quoted per brand · <a href="https://website-option-2-production.up.railway.app/managed-services/">Managed Services</a></span></div></li>
+            </ul>
+            <div class="which-foot">
+              <span class="which-price">14-day free trial</span>
+              <a class="btn btn-dark" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="which-card" aria-labelledby="build-title">
+            <h3 class="which-name" id="build-title">Build with Flieber</h3>
+            <p class="which-tag">Use our data, inventory logic and templates to build your own</p>
+            <p class="cases">Connect your coding agent to Flieber’s planning engine and your connected data, start from our templates and build the tools your team needs, connected to any other system you use. <span class="tbc">To confirm</span></p>
+            <ul class="ways">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span><div><b>Build it yourself</b><p>With Claude Code or any coding agent.</p><span class="price">Pricing <span class="tbc">To confirm</span></span></div></li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span><div><b>Have our AI specialists build it</b><p>Dashboards, tailored frontends, integrations and agents, built with you.</p><span class="price">Quoted per project, for qualified accounts</span></div></li>
+            </ul>
+            <div class="which-foot">
+              <span class="which-price">Docs and templates</span>
+              <a class="btn btn-dark" href="#two-ways" data-placeholder="Docs (to confirm)">Start building <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="which-after reveal">
+          <p class="which-under">Same environment either way. Switch or combine any time.</p>
+        </div>
+
+        <div class="roles-head reveal">
+          <h3 class="h3">One engine, a tool for every person</h3>
+        </div>
+        <div class="roles reveal-stagger">
+          <article class="role"><span class="n">01</span><h4>Buyer</h4><p>Purchase orders by supplier, with container fill and MOQs applied</p></article>
+          <article class="role"><span class="n">02</span><h4>Operations lead</h4><p>Stock by warehouse and the transfers to make this week</p></article>
+          <article class="role"><span class="n">03</span><h4>Marketing</h4><p>Which products can carry a promotion or more ad spend</p></article>
+          <article class="role"><span class="n">04</span><h4>Finance</h4><p>Cash committed to inventory, month by month</p></article>
+          <article class="role"><span class="n">05</span><h4>Founder</h4><p>One page with the risks and the decisions waiting</p></article>
+        </div>
+        <p class="roles-under reveal">Every tool runs on the same numbers, so the team argues about decisions, not about data.</p>
+      </div>
+    </section>
+
+    <!-- ================= 5. EVERY DECISION IS AN INVENTORY DECISION ================= -->
+    <section class="section section-soft" id="why-inventory" aria-labelledby="why-title">
+      <div class="wrap">
+        <div class="why-head reveal">
+          <div>
+            <span class="kicker">Why inventory</span>
+            <h2 class="h2" id="why-title" style="margin-top:20px">Every decision a brand makes is an inventory decision</h2>
+          </div>
+          <p class="lead">Purchases, transfers, ads, promotions and cash flow all come down to one question: will the stock be there? Answering it means weighing variables that live in different systems and different teams.</p>
+        </div>
+
+        <div class="hub reveal-stagger">
+          <div class="hub-decision"><b>One inventory decision</b><span>Buy, move, promote or spend?</span></div>
+          <div class="hub-team hub-sales"><h3>Sales</h3><p>Orders from every channel. Wholesale and EDI.</p></div>
+          <div class="hub-team hub-marketing"><h3>Marketing</h3><p>Ad spend and promotions. Launches and campaigns.</p></div>
+          <div class="hub-team hub-ops"><h3>Operations</h3><p>Warehouses and 3PLs. Inbound shipments.</p></div>
+          <div class="hub-team hub-purchasing"><h3>Purchasing</h3><p>Suppliers, MOQs and case packs. Lead times and containers.</p></div>
+          <div class="hub-team hub-finance"><h3>Finance</h3><p>Cash and budget. Margin by product.</p></div>
+        </div>
+
+        <p class="hub-under reveal">Get one wrong and it costs. A purchase order placed too late loses sales; one placed too big ties up cash for months.</p>
+      </div>
+    </section>
+
+    <!-- ================= 6. THE OLD WAY ================= -->
+    <section class="section" id="old-way" aria-labelledby="old-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">The old way</span>
+          <h2 class="h2" id="old-title" style="margin-top:20px">One of the hardest decisions in the business still runs on spreadsheets</h2>
+          <p class="lead">Brands have had two options, and neither was built for a decision this complex.</p>
+        </div>
+        <div class="sol-two old-way reveal-stagger">
+          <div class="sol-card">
+            <span class="n">01</span>
+            <h3 class="h3">Spreadsheets</h3>
+            <p>Flexible, but inaccurate, easy to break and a burden to keep current. Every new channel, product or supplier means more manual work, and the knowledge lives with whoever built the file.</p>
+          </div>
+          <div class="sol-card">
+            <span class="n">02</span>
+            <h3 class="h3">Platforms built for every brand</h3>
+            <p>Hard to operate and slow to change. They fit the average brand, so every brand runs into their limits and works around them.</p>
+          </div>
+        </div>
+        <p class="old-under reveal">Both made sense when building tools was slow and expensive. It isn’t anymore.</p>
+      </div>
+    </section>
+
+    <!-- ================= 7. WHAT AI CHANGES ================= -->
+    <section class="section on-dark" id="what-ai-changes" aria-labelledby="ai-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">What AI changes</span>
+          <h2 class="h2" id="ai-title" style="margin-top:20px">The bar for inventory decisions just went up</h2>
+          <p class="lead">AI makes a complex decision simpler without making it shallower.</p>
+        </div>
+        <div class="mq-grid four reveal-stagger">
+          <div class="mq-card">
+            <span class="mq-mod"><span class="n">01</span>Busywork</span>
+            <h3 class="mq-q">It does the work around each decision</h3>
+            <p>Reports, data pulls, purchase orders and follow-ups run on their own and stop where you want approval.</p>
+          </div>
+          <div class="mq-card">
+            <span class="mq-mod"><span class="n">02</span>Data</span>
+            <h3 class="mq-q">It handles messy data from any system</h3>
+            <p>Marketplaces, 3PLs, ERPs, spreadsheets and supplier emails, joined even when every source has its own format.</p>
+          </div>
+          <div class="mq-card">
+            <span class="mq-mod"><span class="n">03</span>Variables</span>
+            <h3 class="mq-q">It weighs more variables</h3>
+            <p>Ad spend, promotions, supplier delays, bundles and cash, for every product and location, every day.</p>
+          </div>
+          <div class="mq-card key">
+            <span class="mq-mod"><span class="n">04</span>Fit</span>
+            <h3 class="mq-q">It builds tools around each brand</h3>
+            <p>Each brand, and each person in it, can have tools that fit how they work. Customization used to take a project. Now it takes a conversation.</p>
+          </div>
+        </div>
+        <p class="ai-close reveal">Brands that plan this way will set the new standard. The rest will be catching up.</p>
+      </div>
+    </section>
+
+    <!-- ================= 8. YOUR RULES ================= -->
+    <section class="section" id="your-rules" aria-labelledby="rules-title">
+      <div class="wrap">
+        <div class="sec-strip-head reveal">
+          <div>
+            <span class="kicker">Your rules</span>
+            <h2 class="h2" id="rules-title" style="margin-top:20px">Change the tools. Keep control of the decisions</h2>
+          </div>
+          <a class="link-arrow" href="https://website-option-2-production.up.railway.app/security/">How we handle your data <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <ul class="sec-strip reveal-stagger">
+          <li>
+            <span class="sec-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#1B1C1C" stroke-width="1.4"><rect x="2.4" y="3" width="13.2" height="12" rx="2"/><path d="M5.6 9.2l2.2 2.2 4.6-4.8"/></svg></span>
+            <h3>Nothing changes without your approval</h3>
+            <p>By default, every change to your systems waits for your approval. You decide what runs on its own.</p>
+          </li>
+          <li>
+            <span class="sec-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#1B1C1C" stroke-width="1.4"><path d="M2.5 14.5h13"/><path d="M4 11l3-3.5 3 2 4-5"/></svg></span>
+            <h3>Checked against what happened</h3>
+            <p>Every forecast version is saved and measured against what actually sold.</p>
+          </li>
+          <li>
+            <span class="sec-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#1B1C1C" stroke-width="1.4"><path d="M9 1.8l6 2.4v4.3c0 3.7-2.5 6.6-6 7.7-3.5-1.1-6-4-6-7.7V4.2z"/><path d="M6.3 9.1l1.9 1.9 3.6-3.8"/></svg></span>
+            <h3>Never sold or shared</h3>
+            <p>Your data stays yours. Flieber does not train on it, and its AI providers are set up not to.</p>
+          </li>
+          <li>
+            <span class="sec-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#1B1C1C" stroke-width="1.4"><rect x="3.2" y="7.8" width="11.6" height="8" rx="2"/><path d="M5.8 7.8V5.6a3.2 3.2 0 016.4 0v2.2"/></svg></span>
+            <h3>Encrypted on AWS</h3>
+            <p>Hosted on Amazon Web Services in the US, encrypted in transit and at rest.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 9. PROOF ================= -->
+    <section class="section section-soft" id="proof" aria-labelledby="proof-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Proof</span>
+          <h2 class="h2" id="proof-title" style="margin-top:20px">What brands get from planning on Flieber</h2>
+        </div>
+
+        <div class="results-block results-light reveal">
+          <ul class="results">
+            <li class="result">
+              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5.5 11.5L12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>38%</span>
+              <span class="result-label">increase in sales</span>
+            </li>
+            <li class="result">
+              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5.5 12.5L12 19l6.5-6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>62%</span>
+              <span class="result-label">reduction in stockouts</span>
+            </li>
+            <li class="result">
+              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5.5 12.5L12 19l6.5-6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>17%</span>
+              <span class="result-label">reduction in excess inventory</span>
+            </li>
+            <li class="result">
+              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5.5 12.5L12 19l6.5-6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>88%</span>
+              <span class="result-label">less time on replenishment decisions</span>
+            </li>
+          </ul>
+          <p class="results-note">Average across customers using Flieber for 12+ months</p>
+        </div>
+
+        <div class="proof-top reveal-stagger">
+          <div class="stat">
+            <div class="stat-bars" aria-hidden="true">
+              <i style="--h:62%"></i><i style="--h:70%"></i><i style="--h:58%"></i><i style="--h:76%"></i><i style="--h:66%"></i><i style="--h:80%"></i><i style="--h:72%"></i><i style="--h:84%"></i><i class="win" style="--h:40%"></i>
+            </div>
+            <div class="big">36<sup>%</sup></div>
+            <p class="claim">more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products.</p>
+            <div class="verify"><span class="badge">Built with Nixtla, the team behind the TimeGPT forecasting model</span></div>
+          </div>
+        </div>
+
+        <div class="quotes reveal" id="quotes" aria-roledescription="carousel" aria-label="Customer quotes">
+          <div class="quote-stage" aria-live="polite">
+            <figure class="quote active" aria-roledescription="slide" aria-label="1 of 5">
+              <blockquote>Flieber considers everything no other software picks up. It killed our Amazon stockouts.</blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">TR</span><span class="who"><b>Tehsin Rashad</b><span>Operations Manager, Lifepro Fitness</span></span></figcaption>
+            </figure>
+            <figure class="quote" aria-roledescription="slide" aria-label="2 of 5">
+              <blockquote>Flieber is helping us effectively manage stock across all of our sales channels by customizing our calculations to the data points that matter most.</blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">JA</span><span class="who"><b>Jenn Angel</b><span>COO, Zugu</span></span></figcaption>
+            </figure>
+            <figure class="quote" aria-roledescription="slide" aria-label="3 of 5">
+              <blockquote>We have always been challenged with out-of-stock inventory and long lead times. Flieber was a game changer for us.</blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">SB</span><span class="who"><b>Stephanie Buchholtz</b><span>VP Merchandise Planning, Modloft</span></span></figcaption>
+            </figure>
+            <figure class="quote" aria-roledescription="slide" aria-label="4 of 5">
+              <blockquote>Flieber has allowed me to reduce manual work while planning and forecasting products, and to handle different regions and sales channels in a single place.</blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">LE</span><span class="who"><b>Leonardo Escalona</b><span>Inventory Planner, Prime6 Brands (Primal Harvest)</span></span></figcaption>
+            </figure>
+            <figure class="quote" aria-roledescription="slide" aria-label="5 of 5">
+              <blockquote>Flieber creates a ‘one stop shop’ where I can see demand-level data across all my brands and make educated replenishment decisions.</blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">BS</span><span class="who"><b>Bryan Smallwood</b><span>Supply Chain Manager, Unybrands</span></span></figcaption>
+            </figure>
+          </div>
+          <div class="quote-controls">
+            <div class="quote-dots" role="group" aria-label="Choose quote"></div>
+            <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+              <a class="link-arrow" href="https://www.g2.com/products/flieber/reviews" target="_blank" rel="noopener">Read more reviews on G2 <span class="arrow" aria-hidden="true">→</span></a>
+              <div class="quote-arrows">
+                <button class="icon-btn" type="button" data-dir="-1" aria-label="Previous quote"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="#1B1C1C" stroke-width="1.6"/></svg></button>
+                <button class="icon-btn" type="button" data-dir="1" aria-label="Next quote"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="#1B1C1C" stroke-width="1.6"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9b. FROM THE FOUNDER ================= -->
+    <section class="section on-dark founder" id="who-we-are" aria-labelledby="founder-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">From the founder <span class="tbc">To confirm</span></span>
+          <h2 class="h2" id="founder-title" style="margin-top:20px">Why we built Flieber this way</h2>
+        </div>
+        <figure class="founder-quote reveal">
+          <blockquote>
+            <p>Every purchase, transfer, promotion and ad a brand runs is an inventory decision, and each one depends on data from half a dozen systems and teams. For years, brands made those decisions in spreadsheets or in platforms built for everyone else.</p>
+            <p>AI changes that. It can read the messy data, weigh far more of it and do the work around each decision. It can also build tools that fit one brand, and one person, exactly. What it can’t do on its own is know how inventory works. That’s what we’ve spent since 2019 building with more than 1,000 brands.</p>
+            <p>So we’ve put that engine underneath, with tools that work from day one and a team that can tailor them or run them with you, so every brand gets planning that fits it.</p>
+          </blockquote>
+          <figcaption>
+            <span class="founder-photo todo" role="img" aria-label="Photo pending" title="Pending: founder photo">FM</span>
+            <span class="founder-who"><b>Fabricio Miranda</b><span>Founder and CEO</span></span>
+          </figcaption>
+        </figure>
+        <ul class="founder-facts reveal">
+          <li>More than 1,000 commerce brands since 2019</li>
+          <li>Thousands of users</li>
+          <li>169 Madison Avenue, New York</li>
+        </ul>
+        <p class="founder-more reveal"><a class="link-arrow" href="https://website-option-2-production.up.railway.app/who-we-are/">Read our story <span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <!-- ================= 10. START FREE ================= -->
+    <section class="section try" id="try" aria-labelledby="try-title">
+      <div class="wrap" style="position:relative">
+        <div class="section-head reveal">
+          <span class="kicker">Start free</span>
+          <h2 class="h2" id="try-title" style="margin-top:20px">Get your own Flieber environment, free for 14 days</h2>
+          <p class="lead">Connect your channels and plan with our tools on your own data from day one. No credit card, no demo call. Flieber shows your price as soon as onboarding is done, before you pay anything.</p>
+        </div>
+        <div class="try-grid reveal-stagger">
+          <div class="try-card dark">
+            <span class="label"><i aria-hidden="true"></i>What you’ll see in the first days <span class="tbc">To confirm</span></span>
+            <ul>
+              <li>Data issues to fix</li>
+              <li>Stockouts coming before the next purchase order lands</li>
+              <li>What stockouts cost you last month</li>
+              <li>Cash tied up in overstock</li>
+            </ul>
+          </div>
+          <div class="fit-col fit-no">
+            <h3 class="h3">Probably not for you if:</h3>
+            <ul>
+              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>One channel and a spreadsheet still work for you</li>
+              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You’re looking for a WMS or a full ERP</li>
+              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You plan manufacturing runs rather than buying finished goods</li>
+            </ul>
+          </div>
+        </div>
+        <div class="try-actions reveal">
+          <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/flieber-logo-light.svg" alt="Flieber" width="132" height="23">
+          <p class="tagline">Your own inventory planning system, <em>backed by a time-tested engine.</em></p>
+        </div>
+        <div>
+          <h2 class="footer-h">Run</h2>
+          <ul>
+            <li><a href="#two-ways" data-placeholder="/run">Overview</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/product/demand-forecasting/">Demand forecasting</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/product/inventory-forecasting/">Inventory forecasting</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/product/replenishment/">Replenishment</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/product/workflows/">Workflows</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/managed-services/">Managed Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">Build</h2>
+          <ul>
+            <li><a href="#two-ways" data-placeholder="/build">Overview</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/product/data-layer/">Connected data</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/mcp/">MCP and AI agents</a></li>
+            <li><a href="#two-ways" data-placeholder="Docs">Docs</a></li>
+            <li><a href="#two-ways" data-placeholder="AI specialists page">Our AI specialists</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">For agents</h2>
+          <ul>
+            <li><a href="https://website-option-2-production.up.railway.app/agents/"><code>/agents</code></a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/llms.txt"><code>/llms.txt</code></a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/capabilities.json"><code>/capabilities.json</code></a></li>
+            <li><a href="https://app.flieber.com/app/developers">MCP docs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">Company</h2>
+          <ul>
+            <li><a href="https://website-option-2-production.up.railway.app/who-we-are/">Who we are</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/integrations/">Integrations</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/before-you-choose/">Before you choose</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/security/">Security &amp; data</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/pricing/">Pricing</a></li>
+            <li><a href="https://help.flieber.com">Help center</a></li>
+            <li><a href="https://www.flieber.com/blog">Blog</a></li>
+            <li><a href="https://website-option-2-production.up.railway.app/contact/">Contact</a></li>
+            <li><a href="https://www.flieber.com/privacy-policy">Privacy</a></li>
+            <li><a href="https://www.flieber.com/service-agreement">Service agreement</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-mark" aria-hidden="true"><img src="assets/img/flieber-logo-light.svg" alt=""></div>
+      <div class="footer-bottom">
+        <span>169 Madison Avenue, New York, NY 10016</span>
+        <span>© <span id="year">2026</span> Flieber</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>
