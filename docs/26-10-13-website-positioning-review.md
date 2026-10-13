@@ -125,9 +125,9 @@ Flieber's planners are not alternative 3: they work on Flieber, not on spreadshe
 
 **Positioning statement (internal, do not publish verbatim).** For multichannel commerce brands, and the teams and agents that build tools for them, Flieber is inventory software that works the way they do. Run it ready-made, or build your own on it. Either way it starts from connected data and inventory logic shaped by more than 1,000 brands since 2019, so the software fits the operation without giving up speed or reliability.
 
-**Headline (revised Oct 13):** Code is cheap. Getting inventory right isn't
+**Headline (revised again Oct 13, supersedes the two versions before it):** AI just raised the bar for inventory planning
 
-The word "software" is dropped for Flieber: coding is commoditized, so Flieber sells what isn't, data and planning logic that stay right under whatever tools sit on top. "Software" now describes only the old alternative (off-the-shelf software). The promise "it works the way you do" moves to the subhead. "Inventory planning" stays in the eyebrow and page title, because buyers, G2 and agents still search for that category term. A/B variant: "Inventory planning that works the way you do". Full homepage copy: Claude Doc "Flieber homepage: structure and copy".
+AI now leads the message. This reverses the October discussion's "AI is an enabler, not the headline" and the "Code is cheap" version. The emotion is FOMO: brands that plan with AI weigh far more variables per decision and hand off the work around it, and the rest fall behind. The rule that keeps it from being wallpaper: every AI claim names the variables it weighs (sales, stockouts, promotions, ad spend, supplier delays, cash) or the work it takes on, and the hero carries approved result numbers, not a promise of "getting inventory right". "Software" is still never used for Flieber. A/B variant: "Your competitors are planning inventory with AI. Are you?". Full homepage copy: Claude Doc "Flieber homepage: structure and copy".
 
 **Three pillars** (each with the proof that already exists)
 
