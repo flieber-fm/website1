@@ -125,7 +125,9 @@ Flieber's planners are not alternative 3: they work on Flieber, not on spreadshe
 
 **Positioning statement (internal, do not publish verbatim).** For multichannel commerce brands, and the teams and agents that build tools for them, Flieber is inventory software that works the way they do. Run it ready-made, or build your own on it. Either way it starts from connected data and inventory logic shaped by more than 1,000 brands since 2019, so the software fits the operation without giving up speed or reliability.
 
-**Headline:** Inventory software that works the way you do
+**Headline (revised Oct 13):** Code is cheap. Getting inventory right isn't
+
+The word "software" is dropped for Flieber: coding is commoditized, so Flieber sells what isn't, data and planning logic that stay right under whatever tools sit on top. "Software" now describes only the old alternative (off-the-shelf software). The promise "it works the way you do" moves to the subhead. "Inventory planning" stays in the eyebrow and page title, because buyers, G2 and agents still search for that category term. A/B variant: "Inventory planning that works the way you do". Full homepage copy: Claude Doc "Flieber homepage: structure and copy".
 
 **Three pillars** (each with the proof that already exists)
 
