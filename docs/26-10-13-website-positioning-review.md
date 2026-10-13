@@ -86,13 +86,42 @@ A second, stronger Keepa analog may exist: patterns across more than 1,000 brand
 
 **What the discussion gets right and the current site gets wrong:** the current site describes how Flieber works (layers, engine, AI) far more than what the buyer gets. Six layers, three parties and five modules on one homepage is an explanation, not a pitch. The new direction forces the site to answer one question first: do you want it ready, or do you want it yours? That is a better first question than anything on the current homepage.
 
+## A5. Benchmark check: Comp (added Oct 13)
+
+Source: Comp Benchmark for Flieber Positioning (Fabricio, Oct 13). Each of the five moves it recommends borrowing is checked against the first version of this review. The benchmark's other points (where the analogy breaks, open questions) were checked too.
+
+| Comp move | Already in this review? | What changed |
+| --- | --- | --- |
+| 1. Name the category and say what you are not | **Partly.** B1 had a category frame (off-the-shelf vs build from scratch) but no "not X, not Y, not Z" sentence | Added a category sentence to B1 and used it as the H2 of the problem section (B4.3). No "AI-native inventory" label: the benchmark itself warns a borrowed label won't differentiate in US commerce, and it would reverse the "AI is not the headline" decision |
+| 2. Enemy = the buyer's failed alternatives | **Partly.** Two of the three were there (shelf software, DIY with AI). "Adding planners or consultants" was missing | Added the third alternative, framed as "more hands on spreadsheets", not "planners". Flieber sells planners, so the enemy is headcount doing clerical work around a weak system, not expertise. Did not use "only 10% used": it's not an approved number |
+| 3. Lead with one offer; configure after the call | **No, the opposite.** The first version had two equal hero doors (Run, Build) with services inside each: exactly the "two routes times two service options" the benchmark calls Flieber's clarity gap | Hero now leads with one offer and one entry (the free inventory health check). Build stays visible above the fold as a secondary path, so the agreed "both journeys visible" decision holds. Routes and modules live below the fold and on /run and /build. "Configure after the call" is adopted only for the services: Flieber's self-serve buyer gets a price after onboarding, with no sales step (Fabricio, Oct 3), and that shouldn't be lost |
+| 4. A diagnosis as the low-stakes entry | **No.** Entry was the 14-day free trial | Added a "Free inventory health check" (B4.9), built from features that already exist (data health checks, stockouts before the next PO, cost of stockouts, overstock). It is the trial with a defined result, not a new product. A planner-reviewed version is the entry for Managed Services. Avoided "AI readiness check": AI isn't the headline |
+| 5. Show the people if services are an equal option | **No**, and only partly applicable | Services are add-ons in this positioning, not equal to the product, so the people are not the hero (the benchmark agrees: Flieber's moat is maintained data plus cross-brand context, not pedigree). Added named planners to /managed-services only (B7), pending consent and a reversal of the "no team list" rule for that page (D11) |
+| Free tools as top of funnel (Comp: AI diagnosis, Claude Skills for CHROs, benchmark data) | **No** | Added a free tools block to /build (B6.1): Claude Skills for inventory planners and a stockout cost calculator. It is the same move as the agent channel, so it costs little extra **[Confirm]** |
+| One-line pricing logic | Flagged as a decision (D5) | Proposed the line in D5 |
+| Canonical proof number | Not flagged | Added to B8. "Trusted by hundreds of brands" (logo label) and "more than 1,000 brands since 2019" need one definition. The benchmark's churn figure (53 to 46) shows why: if a reader takes "hundreds" as current paying customers, it may not hold |
+| Who owns custom builds; does reuse become product | Not covered | Added D10. It matters for Build: a build by Flieber's engineers that becomes a template is how the template library grows without a separate team |
+| Hero of the story | Implicit | Made explicit in B1: the hero is the foundation that stays right (data and logic), shown through the software that fits. Not the AI, not the planners |
+
+**What not to borrow, agreeing with the benchmark:** a services-led homepage (reads as the product being deprioritized to remaining self-serve accounts), people as the proof (undersells the data moat) and an "AI-native" category label.
+
 ---
 
 # Part B. Recommended positioning and content
 
 ## B1. Positioning
 
-**Category frame (the enemy).** Off-the-shelf inventory tools make teams work their way. Building your own starts from zero, and the hard part is not the screen, it's the data and the logic under it. Flieber is the third option: software that fits, on a foundation that's already right.
+**Category sentence (after Comp).** Flieber is not inventory software you work around, not a tool you rebuild from scratch every time the business changes and not more hands on spreadsheets. It's inventory software that works the way you do, on data and logic that stay right as you grow.
+
+**The three failed alternatives (the enemy, never a named competitor)**
+
+1. **Off-the-shelf software:** built for the average brand. Teams bend their process around it, use a fraction of it and drift back to spreadsheets.
+2. **Building it yourself with AI:** fast to start, but it covers today's cases. Every new channel, bundle or supplier means rebuilding the data and logic under it.
+3. **More hands on spreadsheets:** more planners, analysts or consultants add hours, not a system. The work stays manual and the knowledge leaves when they do.
+
+Flieber's planners are not alternative 3: they work on Flieber, not on spreadsheets. Say so wherever planners appear.
+
+**Hero of the story.** The foundation that stays right (connected data and inventory logic), shown through the software that fits. Not the AI and not the people.
 
 **Positioning statement (internal, do not publish verbatim).** For multichannel commerce brands, and the teams and agents that build tools for them, Flieber is inventory software that works the way they do. Run it ready-made, or build your own on it. Either way it starts from connected data and inventory logic shaped by more than 1,000 brands since 2019, so the software fits the operation without giving up speed or reliability.
 
@@ -172,17 +201,15 @@ Eight sections plus footer.
 
 **Hero visual:** the same replenishment screen in two states with a toggle, "Ready-made" and "Yours". "Yours" shows a brand's own columns, a supplier-specific rule, its own approval step and a "Send to NetSuite" button. Footer label: "Sample data. Illustrative only." This is the proof of the headline; an AI chat window is not.
 
-**Door 1: Run with Flieber**
-*Ready to use from day one*
-Forecasting, inventory planning and replenishment shaped by more than 1,000 commerce brands since 2019. Connect your channels and start planning, no code needed. Add our planners whenever you want a second pair of eyes.
-*Button:* Start free trial · *Link:* See the tools → /run
+**One offer, one entry (revised Oct 13 after the Comp benchmark).** The hero sells Flieber, not a menu. Run is the default route, because it is what most buyers want on day one and what current customers pay for. Build is visible above the fold as a secondary path, not as an equal door. Services don't appear in the hero.
 
-**Door 2: Build with Flieber**
-*Your own inventory software, without starting from zero*
-Build your own tools on Flieber's connected data and inventory logic, through MCP and API, with Claude, Cursor or your own agents. Or have our engineers build it with you.
-*Button:* Start building → /build
+**Primary button:** Get your free inventory health check (→ trial signup; see B4.9)
 
-**Under the doors:** 14-day free trial · No credit card · Monthly contracts · Setup included
+**Secondary button:** Book a demo
+
+**Line under the buttons:** 14-day free trial · No credit card · Monthly contracts · Setup included
+
+**Build path, directly under it** (a single line with a link, visible without scrolling): Building your own tools or agents? Start from Flieber's data and inventory logic → /build
 
 ### B4.2 Logos
 
@@ -192,9 +219,17 @@ Build your own tools on Flieber's connected data and inventory logic, through MC
 
 **Label:** Why Flieber
 
-**H2:** Off-the-shelf tools make you work their way. Building your own starts from zero
+**H2:** Not a tool you work around. Not a build from scratch. Not more spreadsheets
 
-**Body:** Most inventory software is built for the average brand, so your team bends its process around it or goes back to spreadsheets. Building your own with AI is now fast, until you reach the hard part: data from every channel joined, mapped and corrected, and planning logic that knows a stockout from a slow month. Flieber gives you both halves: software that fits, on a foundation that's already right.
+**Lead:** Most brands try one of three fixes for inventory planning. Each one breaks in the same place: the data and the logic under the decisions.
+
+Three cards:
+
+1. **Off-the-shelf software** Built for the average brand. Your team bends its process around it, uses a fraction of it and drifts back to spreadsheets.
+2. **Building it yourself with AI** Fast to start, but it covers today's cases. Every new channel, bundle or supplier means rebuilding the data and logic under it.
+3. **More hands on spreadsheets** More planners, analysts or consultants add hours, not a system. The work stays manual, and the knowledge leaves when they do.
+
+**Under the cards:** Flieber is inventory software that works the way you do, on data and planning logic that stay right as you add channels, products or suppliers.
 
 ### B4.4 How Flieber works
 
@@ -290,13 +325,28 @@ Fabricio Miranda, Founder and CEO
 - **Our planners** Specialists in inventory planning and in Flieber who join your S&OP meetings, act as a sounding board for your decisions and keep your data accurate. Quoted per brand. → /managed-services
 - **Our engineers** Customizations, dashboards, tailored frontends, integrations and agents built for your operation. Quoted per project, for qualified accounts. → /build#engineers
 
-*Under:* Same platform either way. Switch or combine any time.
+*Under:* Our planners work on Flieber, not on spreadsheets, so what they set up keeps working after every meeting. Same platform either way. Switch or combine any time.
 
-**H2:** Try Flieber free on your own data
+**Entry offer (added after the Comp benchmark):** the free inventory health check. It is the 14-day free trial packaged with a defined result, so the buyer signs up to learn something about their business, not to learn a tool. Every item comes from a feature that exists today. Comp's diagnosis takes two weeks and a senior expert. Flieber's runs on connected data, which shows off the data edge Comp doesn't have.
 
-**Body:** Start a 14-day free trial, no credit card required and no demo call. Flieber shows your price as soon as onboarding is done, before you pay anything.
+**Label:** Free inventory health check
 
-*Buttons:* Start free trial · Book a demo
+**H2:** See what your inventory data is hiding
+
+**Lead:** Connect your channels and Flieber checks your inventory on your own data, free for 14 days. No credit card, no demo call.
+
+What you get:
+
+- **Data issues** Listings not mapped to a product, bundles without components, discontinued products still forecast and inbound shipments that never reached the balance.
+- **Stockouts ahead** The products that run out before their next purchase order lands, and by how many days.
+- **What stockouts cost you** Lost sales last month, in units and revenue, by product and channel.
+- **Cash tied up** Overstocked products and the inventory value at stake.
+
+**Under the list:** Flieber shows your price as soon as onboarding is done, before you pay anything. **[Confirm: the four results are produced automatically during the trial without setup by Flieber's team; native integrations only]**
+
+*Buttons:* Get your free health check · Book a demo
+
+**For complex brands:** "Many channels, warehouses or bundles? Book a demo and one of our planners will walk through your health check with you." This is the entry to Managed Services, the equivalent of Comp's diagnosis. **[Confirm: planner time per review call]**
 
 ### Footer
 
@@ -357,6 +407,12 @@ Fabricio Miranda, Founder and CEO
 
 **Section "Our engineers"** (anchor #engineers): today's /customize engineers section (what they build, how it works, terms), unchanged.
 
+**Section "Free tools" (added after the Comp benchmark; all [Confirm]):** H2 "Start with free tools" · Comp uses free tools (an AI maturity diagnosis, Claude Skills for CHROs, a benchmark) as its top of funnel. Flieber's version doubles as agent discoverability:
+
+- **Claude Skills for inventory planners** Ready-made skills for stockout checks, reorder points and bundle demand that run in Claude, and work better connected to Flieber.
+- **Stockout cost calculator** Estimate what stockouts cost you, then connect your store to see the real number in the free health check.
+- **Working app templates** As in "What you build on", once one ships.
+
 **Section "Pricing":** "Start with a 14-day free trial on your own data, no credit card required." Add price wording as soon as D5 is decided.
 
 **Closing:** H2 "Start building on data that's already right" · *Buttons:* Start free trial · Read the MCP docs
@@ -382,7 +438,7 @@ Today's /product/data-layer, with the label "Build · Connected data" and the H1
 | /agencies H1 | "The inventory intelligence layer for every brand you run" becomes "One plan for every brand you run" |
 | /before-you-choose | Add three questions under a new H2 "Fit": "Can you change how it works to fit your operation?" · "Can your own tools and agents use its data and logic?" · "Can you start with only what you need?" Answer only with approved facts |
 | /pricing | Remove "Run it yourself" and "Let our planners help you run it" as labels. Show Run and Build, then planners and engineers as add-ons. Keep "Priced to your operation" |
-| /managed-services | No copy change; it is now linked from Run, not from the hero |
+| /managed-services | Linked from Run and from the health check, not from the hero. Add a "Meet the planners" section after "How our planners work with you": name, role, background, and the categories and number of brands each has planned (after Comp, which makes its experts the proof). Add the line "Our planners work on Flieber, not on spreadsheets, so what they set up keeps working." **[Confirm: consent from each planner; D11]** |
 | /who-we-are | Founder statement from B4.8. "What we believe": 1 Decisions stay with people · 2 Software should fit the operation, not the other way round · 3 Context is the hard part |
 | /mcp | Keep. Change "Build your own tools on Flieber" link from /product/data-layer to /build |
 | /put-flieber-to-work | Keep. Lead adds "in the app or from your own tools" |
@@ -399,6 +455,10 @@ Today's /product/data-layer, with the label "Build · Connected data" and the H1
 | Bring your own data | Not used in copy | Not approved |
 | Validation of modified logic | Not used in copy | Not approved; do not imply |
 | Competitive analysis tool | Not used in copy | Mentioned in discussion only |
+| Health check results are produced automatically during the trial | B4.1, B4.9 | Each item maps to an existing feature (P34, P4, P31, P30); confirm they run without setup by Flieber's team |
+| Claude Skills for inventory planners, stockout cost calculator | /build free tools | Do not exist yet |
+| "Trusted by hundreds of brands" and "more than 1,000 brands since 2019" | Logo label, founder block, /who-we-are | Both approved, but define them: cumulative brands since 2019 vs current customers. If current paying customers are well below "hundreds", change the logo label to "More than 1,000 brands have planned on Flieber since 2019" |
+| Named planners and their track record | /managed-services | Needs consent and Fabricio's approval |
 
 ## B9. Decisions needed from Fabricio
 
@@ -406,8 +466,11 @@ Today's /product/data-layer, with the label "Build · Connected data" and the H1
 2. **What is open and what is hosted.** Recommendation: app code open, inventory logic and connected data hosted. That keeps the moat where AI can't reproduce it.
 3. **Layer-by-layer purchase.** Beyond the data layer alone (approved), which layers can be bought without the others today?
 4. **Run packaging.** Individual tools, or all four with the price driven by what's turned on and data volume? Recommendation: keep one account and one metric ("Priced to your operation") and avoid credits until usage data shows a need.
-5. **Build pricing sentence.** Even one line ("Priced by data volume, shown after onboarding") helps agents recommend Flieber.
+5. **Pricing in one line.** Proposed, for /pricing, /agents and llms.txt: "Software priced by your data volume and the tools you turn on, shown as soon as onboarding is done. Planners quoted per brand, engineers per project." Volume-based for the software and scope-based for services: that answers the benchmark's "retainer or volume" question with both, each where it fits.
 6. **Public MCP URL date.** Gates the Build launch.
 7. **Cross-brand patterns.** Is anonymized, aggregated insight from 1,000+ brands a product, and is it compatible with "never sold or shared"? Legal review before any mention.
 8. **Founder statement.** Approve or rewrite B4.8.
 9. **Headline test.** Approve running "Ready-made inventory planning you can change to fit" as the A/B variant.
+10. **Custom build ownership.** Who owns what Flieber's engineers build: the customer or Flieber? Recommendation: the customer owns its configuration and data, and Flieber keeps the right to turn the generic parts into templates. That is how the template library grows (Comp's reusable modules point the same way).
+11. **Named planners.** Reverse the "no team list" rule for /managed-services only? Recommended if services stay a paid option sold through a demo, because the buyer of a planner wants to see the planner.
+12. **Hero entry.** Approve the free inventory health check as the primary call to action, replacing "Start free trial" in the hero only. "Start free trial" stays everywhere else until the health check is confirmed to run automatically.
