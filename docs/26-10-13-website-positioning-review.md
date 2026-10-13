@@ -125,7 +125,9 @@ Flieber's planners are not alternative 3: they work on Flieber, not on spreadshe
 
 **Positioning statement (internal, do not publish verbatim).** For multichannel commerce brands, and the teams and agents that build tools for them, Flieber is inventory software that works the way they do. Run it ready-made, or build your own on it. Either way it starts from connected data and inventory logic shaped by more than 1,000 brands since 2019, so the software fits the operation without giving up speed or reliability.
 
-**Headline (version 6, Oct 13, chosen by Fabricio, supersedes all earlier versions):** Your own inventory planning system, on a time-tested engine
+**Headline (version 6, Oct 13, chosen by Fabricio, supersedes all earlier versions):** Your own inventory planning system, backed by a time-tested engine
+
+Revised the same day from "on a time-tested engine" to "backed by" (Fabricio): the system stays the brand's own, with the engine as the guarantee behind it.
 
 From Fabricio's line "Your own inventory system running on top of a time-tested platform": "planning" added so it doesn't read as a WMS, "engine" instead of "platform" (the word for the SaaS the page argues against). Subhead: Ready on day one and built from what we learned planning for more than 1,000 brands since 2019. Use our tools as they are, let our planners run them with you, have our AI specialists tailor them, or change them yourself with any coding agent. A/B variant: "Your most complex decision, made simple". The version 5 notes below on the four ways still apply.
 
