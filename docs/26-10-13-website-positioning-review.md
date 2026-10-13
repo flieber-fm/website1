@@ -125,7 +125,9 @@ Flieber's planners are not alternative 3: they work on Flieber, not on spreadshe
 
 **Positioning statement (internal, do not publish verbatim).** For multichannel commerce brands, and the teams and agents that build tools for them, Flieber is inventory software that works the way they do. Run it ready-made, or build your own on it. Either way it starts from connected data and inventory logic shaped by more than 1,000 brands since 2019, so the software fits the operation without giving up speed or reliability.
 
-**Headline (version 4, Oct 13, supersedes all earlier versions):** Build your own inventory planning tools. The hard part is done
+**Headline (version 5, Oct 13, supersedes all earlier versions):** Inventory planning tools that fit your brand. Ready from day one
+
+Version 5 change: coding is one of four ways in, never a requirement. The four ways, shown as equal cards with "Use them as they are" first: use the tools as they are; let Flieber's planners run them with you (Managed Services; never "run it for you"); have Flieber's AI specialists tailor them; change them yourself with any coding agent. Version 4's H1 ("Build your own inventory planning tools. The hard part is done") becomes the A/B variant. The rest of the version 4 narrative below still applies.
 
 Built on Fabricio's line of thought: every decision is an inventory decision; those decisions depend on variables from many teams and systems, and mistakes are expensive; spreadsheets and one-size-fits-all platforms can't keep up; AI makes custom tools possible for every brand and every person in it. Flieber is the planning engine underneath (a data model tested since 2019 with 1,000+ brands) plus each brand's own environment and working tools with open code it can change with its coding agent. AI is the reason this is possible, not the headline. The homepage has one offer: the tools are the ready-made path, and Run and Build are no longer two doors. The per-brand environment, the coding-agent connection and open code are not approved claims yet and gate the launch. Full homepage copy: Claude Doc "Flieber homepage: structure and copy".
 
