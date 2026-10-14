@@ -1,0 +1,17 @@
+# Static preview server for homepage Option 5. The X-Robots-Tag header keeps it out
+# of search indexes, as on the Option 2 preview. Remove before public launch.
+{
+	admin off
+}
+
+:{$PORT:8080} {
+	root * /srv
+	encode gzip
+	header X-Robots-Tag "noindex, nofollow, noarchive"
+	@static path /assets/fonts/* /assets/img/* /assets/logos/*
+	@revalidate not path /assets/fonts/* /assets/img/* /assets/logos/*
+	header @static Cache-Control "public, max-age=86400"
+	header @revalidate Cache-Control "no-cache"
+	try_files {path} {path}/index.html
+	file_server
+}
