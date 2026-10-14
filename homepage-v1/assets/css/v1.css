@@ -140,3 +140,12 @@
 .mq-card.key .mq-q { color: var(--black); }
 #why-different .section-head { margin-bottom: 0; }
 #why-different .ls-pin { height: calc(100vh - 240px); min-height: 540px; }
+
+/* Your team, plus ours: four roles */
+.collab.team4 { grid-template-columns: repeat(4, 1fr); }
+.team4 .collab-card { display: flex; flex-direction: column; }
+.team4 .collab-card > .collab-step { display: block; margin-bottom: -4px; }
+.team4 .collab-card > p { flex: 1; }
+.team-link { margin-top: 6px; font-size: 15px; text-decoration: none; display: inline-flex; gap: 6px; align-items: baseline; border-bottom: 1.5px solid currentColor; align-self: flex-start; }
+@media (max-width: 1100px) { .collab.team4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 860px) { .collab.team4 { grid-template-columns: 1fr; } }
