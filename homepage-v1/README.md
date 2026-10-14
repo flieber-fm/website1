@@ -1,4 +1,6 @@
-# Homepage v1 (Oct 13 positioning)
+# Option 4: homepage (Oct 13 positioning)
+
+Naming: Option 2 is the earlier prototype (`claude/eager-bohr-ui8a03`), Option 4 is this build (folder `homepage-v1/`, Railway service `website-homepage-v1`), Option 5 is the Comp-style version built on branch `claude/homepage-option-5`.
 
 Review build of the new flieber.com homepage, built on the Option 2 prototype's design system (`site.css`, `site.js`, fonts and logos copied unchanged from `claude/eager-bohr-ui8a03`). `assets/css/v1.css` adds only the new components: the hero tool toggle, the Run and Build cards, the role cards, the decision hub and the "What AI changes" grid.
 
