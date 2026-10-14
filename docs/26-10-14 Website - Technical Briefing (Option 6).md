@@ -9,7 +9,7 @@ Option 6 is a new version of flieber.com, built for review next to Option 1 and 
 | Where | What is there | State |
 | --- | --- | --- |
 | GitHub repo flieber-fm/website1, branch claude/option-6 | Option 6 source: the homepage, /security, CSS and JS | Current |
-| Railway preview for Option 6 | Not created yet; proposed service name "website-option-6", waiting for Fabricio's go | Pending |
+| Railway preview, service website-option-6 (website-option-6-production.up.railway.app) | Option 6 for review, hidden from search engines | Current |
 | Branch claude/eager-bohr-ui8a03 and service website-option-2 | Option 2 | Untouched from this branch |
 | Branch claude/gracious-dijkstra-qgcgls and its service | Option 1 | Untouched from this branch |
 | HubSpot (portal 5767502) | Nothing for Option 6 | Untouched |
@@ -101,7 +101,6 @@ Raised in the source brief ("Resolve before public launch") or created by Option
 6. Free trial: Option 2's 14-day free trial is not on Option 6 because the source brief is conversation-led. Decide whether it comes back as a secondary path.
 7. Redirects: if Option 6 replaces the live site, decide where the live site's other URLs (/pricing, /features, /managed-services, /agencies and others) should go.
 8. Editing copy without a rebuild (source brief): today copy is edited in `index.html`. HubSpot modules would solve it at the switch.
-9. Railway service "website-option-6" for the preview (needs Fabricio's go).
 
 ## Decision log
 
@@ -109,6 +108,7 @@ Newest first.
 
 | Date | Decision |
 | --- | --- |
+| Oct 14 | Railway service website-option-6 (2bd8097d-0023-4982-8d60-ffb12ad7ee8f) created for the preview at Fabricio's request, connected to claude/option-6 |
 | Oct 14 | Option 6 built on branch claude/option-6 from Option 2 (commit f4408ac). The source brief is the main direction and Option 2 is the structure and UI guideline where they don't conflict (Fabricio). Built as one focused homepage plus /security, following the source brief's recommended first release; the other Option 2 pages, machine-readable files and homepage variants are not part of Option 6 |
 | Oct 14 | Primary action "Talk about your planning needs" everywhere on the page, nav button "Talk to us", with "Book a call" (existing book-a-demo page) as the only alternative; no free trial and no plan names or prices (source brief, conversation-led pricing) |
 | Oct 14 | The source brief's proposed copy is used with house-style fixes only where possible (no serial comma, no final period on headings); every change is listed in the Content Briefing (Option 6), section 3 |
