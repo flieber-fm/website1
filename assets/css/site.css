@@ -1560,3 +1560,10 @@ a.int-tile:hover { border-color: var(--black); }
 /* Footer: three link columns */
 .footer-o6 { grid-template-columns: 1.6fr repeat(3, 1fr); }
 @media (max-width: 860px) { .footer-o6 { grid-template-columns: 1fr 1fr; } }
+
+/* Review banner (preview only): names the version under review */
+.review-bar {
+  background: var(--black); color: var(--gray-light); text-align: center;
+  font-family: var(--mono); font-size: 13px; line-height: 1.4; padding: 9px var(--gutter);
+}
+.review-bar b { color: var(--yellow); font-weight: 600; }

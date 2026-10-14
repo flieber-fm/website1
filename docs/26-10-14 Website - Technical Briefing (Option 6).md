@@ -43,7 +43,8 @@ Kept live on HubSpot and linked: book-a-demo (the "Book a call" link), blog, pri
 
 - `index.html` is edited by hand. Its nav and footer come from `scripts/site_chrome.py`; run `python3 scripts/site_chrome.py` after changing either (it rewrites `index.html` and `security/index.html`).
 - The FAQ appears twice in `index.html`: the visible `<details>` list and the FAQPage JSON-LD in the head. Change both together.
-- Styles: `assets/css/site.css` (Option 2's file; Option 6 styles are appended in the "Option 6" block). Scripts: `assets/js/site.js` (Option 6 adds the form and analytics events). Cache busting: `site.css?v=49`, `site.js?v=18`; bump with sed across .html files on every CSS or JS change.
+- Review banner: a dark bar above the nav on every page, "Review build · Option 6 · Oct 14 development brief on Option 2’s design" ("Option 6" in yellow), written by `scripts/site_chrome.py`. Preview only; remove before launch.
+- Styles: `assets/css/site.css` (Option 2's file; Option 6 styles are appended in the "Option 6" block). Scripts: `assets/js/site.js` (Option 6 adds the form and analytics events). Cache busting: `site.css?v=50`, `site.js?v=18`; bump with sed across .html files on every CSS or JS change.
 - Serving: Caddy (Dockerfile copies `index.html`, `robots.txt`, `sitemap.xml`, `security/` and `assets/`). No redirects yet.
 - Search engines stay blocked: meta robots on both pages, `robots.txt` and the `X-Robots-Tag` header. `python3 scripts/check-placeholders.py` lists them.
 - Removed from this branch (still on the Option 2 branch): every other page, llms.txt, llms-full.txt, capabilities.json, /home-variants, `assets/integrations/`, `hubspot/` and the Option 2 generators (`build-content.py`, `build-home-variants.py`, `build-hubspot.py`, `site_content.py`, `work_content.py`, `integ_content.py`).
@@ -108,6 +109,7 @@ Newest first.
 
 | Date | Decision |
 | --- | --- |
+| Oct 14 | Review banner on top of every page names the version under review: "Review build · Option 6 · Oct 14 development brief on Option 2’s design" (Fabricio: always add it). Preview only |
 | Oct 14 | Railway service website-option-6 (2bd8097d-0023-4982-8d60-ffb12ad7ee8f) created for the preview at Fabricio's request, connected to claude/option-6 |
 | Oct 14 | Option 6 built on branch claude/option-6 from Option 2 (commit f4408ac). The source brief is the main direction and Option 2 is the structure and UI guideline where they don't conflict (Fabricio). Built as one focused homepage plus /security, following the source brief's recommended first release; the other Option 2 pages, machine-readable files and homepage variants are not part of Option 6 |
 | Oct 14 | Primary action "Talk about your planning needs" everywhere on the page, nav button "Talk to us", with "Book a call" (existing book-a-demo page) as the only alternative; no free trial and no plan names or prices (source brief, conversation-led pricing) |

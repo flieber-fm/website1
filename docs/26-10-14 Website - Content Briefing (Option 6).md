@@ -33,6 +33,8 @@ One page, top to bottom. Each section after the hero opens with a small uppercas
 
 ### 2.1 Navigation
 
+**Review banner (preview only, above the nav on every page):** Review build · Option 6 · Oct 14 development brief on Option 2’s design
+
 How it works · Your options · Examples, then Log in (text link to app.flieber.com) and a yellow "Talk to us" button (to #talk). On phones the three links and Log in collapse into the menu; "Talk to us" stays visible.
 
 ### 2.2 Hero

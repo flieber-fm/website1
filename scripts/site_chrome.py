@@ -90,11 +90,18 @@ def footer_html(p: str) -> str:
   </footer>"""
 
 
+# Review banner on every page, so Fabricio always knows which version he is looking at (Oct 14).
+REVIEW_BAR = ('  <div class="review-bar" role="note">Review build · <b>Option 6</b> · '
+              'Oct 14 development brief on Option 2’s design</div>')
+
+
 def apply(root: pathlib.Path) -> None:
     for rel, p in PAGE_FILES.items():
         f = root / rel
         s = f.read_text(encoding="utf-8")
         s = re.sub(r'  <header class="nav[^"]*" id="nav">.*?</header>', lambda m: nav_html(p), s, count=1, flags=re.S)
+        s = re.sub(r'  <div class="review-bar"[^>]*>.*?</div>\n', "", s, flags=re.S)
+        s = s.replace('  <header class="nav', REVIEW_BAR + '\n  <header class="nav', 1)
         s = re.sub(r'  <footer class="footer">.*?</footer>', lambda m: footer_html(p), s, count=1, flags=re.S)
         f.write_text(s, encoding="utf-8")
 
