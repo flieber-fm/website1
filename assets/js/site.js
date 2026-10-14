@@ -384,18 +384,18 @@
     });
   }
 
-  /* ---------- Option 6: "Your options" decision tree ---------- */
-  // Step 1 as it is / customize; step 2 (only when customizing) our team / yours; step 3 Managed Services or not.
-  // The summary lists what Flieber does, what the team does and what is paid for; its button
-  // pre-ticks the matching interests in the form. Without JS every choice is still readable.
+  /* ---------- Option 7: "Your options" decision tree ---------- */
+  // Option 7 order (planning help leads): step 1 Managed Services or own team; step 2 as it is / tailored;
+  // step 3 (only when tailoring) our team / yours. The summary lists what Flieber does, what the team does
+  // and what is paid for; its button pre-ticks the matching interests in the form. Without JS every choice is still readable.
   var dt = document.getElementById('dt');
   if (dt) {
     var D = {
-      asis: { label: 'Use it as it is', f: 'Connects your data and sets up the ready-made templates', t: 'Plans with the templates in the Flieber app', interest: 'as-is' },
-      ours: { label: 'Customized by our team', f: 'Learns how you plan, agrees the scope with you and builds what was agreed', t: 'Explains how it plans today and reviews what we build', pay: 'Customization by our team, quoted once the scope is agreed', interest: 'custom-flieber' },
-      yours: { label: 'Customized by your team', f: 'Keeps the data connected, mapped and current, and supplies the planning logic through the API and MCP server', t: 'Builds and maintains its own views, workflows and tools', interest: 'custom-own' },
-      ms: { label: 'with Managed Services', f: 'Planners keep the data accurate, prepare the analysis, join your S&OP meetings and act as a sounding board', t: 'Makes every decision; if you choose, our planners carry out what you approve', pay: 'Managed Services', interest: 'managed-services' },
-      own: { label: 'run by your own team', t: 'Runs planning day to day, and can add Managed Services later' }
+      ms: { label: 'Planning with Flieber’s planners', f: 'Planners keep the data accurate, prepare the analysis, join your S&OP meetings and act as a sounding board', t: 'Makes every decision; if you choose, our team carries out what you approve', pay: 'Managed Services', interest: 'managed-services' },
+      own: { label: 'Planning with your own team', t: 'Runs planning day to day, and can add our planners later' },
+      asis: { label: 'on Flieber as it is', f: 'Connects your data and sets up the standard planning views, reports and workflows', t: 'Plans in the Flieber app', interest: 'as-is' },
+      ours: { label: 'tailored by our team', f: 'Learns how you plan, agrees the scope with you and builds what was agreed', t: 'Explains how it plans today and reviews what we build', pay: 'Tailoring by our team, quoted once the scope is agreed', interest: 'custom-flieber' },
+      yours: { label: 'tailored by your team', f: 'Keeps the data connected, mapped and current, and supplies the planning logic through the API and MCP server', t: 'Builds and maintains its own views, workflows and tools', interest: 'custom-own' }
     };
     var val = function (n) { var i = dt.querySelector('input[name="' + n + '"]:checked'); return i ? i.value : null; };
     var whoStep = dt.querySelector('[data-step="who"]');
@@ -413,19 +413,19 @@
       whoStep.querySelectorAll('input').forEach(function (i) { i.disabled = skip; });
       dt.querySelectorAll('.dt-choice').forEach(function (c) { c.classList.toggle('is-on', c.querySelector('input').checked && !c.querySelector('input').disabled); });
       var build = start === 'asis' ? 'asis' : (start === 'custom' ? who : null);
-      var missing = !start ? 'step 1' : (!build ? 'step 2' : (!sup ? 'step 3' : null));
+      var missing = !sup ? 'step 1' : (!start ? 'step 2' : (!build ? 'step 3' : null));
       if (missing) {
         pathEl.textContent = 'Choose an option in ' + missing + ' to see what your path includes.';
         detail.hidden = true; picked = []; return;
       }
-      var a = D[build], b = D[sup];
+      var a = D[sup], b = D[build];
       pathEl.textContent = a.label + ', ' + b.label;
       fill('[data-dt-flieber]', [a.f, b.f].filter(Boolean));
       fill('[data-dt-team]', [a.t, b.t].filter(Boolean));
       fill('[data-dt-pay]', ['The Flieber platform'].concat([a.pay, b.pay].filter(Boolean)));
       detail.hidden = false;
       picked = [a.interest, b.interest].filter(Boolean);
-      track('options_path', { path: build + '+' + sup });
+      track('options_path', { path: sup + '+' + build });
     };
     dt.addEventListener('change', update);
     update();

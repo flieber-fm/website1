@@ -1611,3 +1611,64 @@ a.int-tile:hover { border-color: var(--black); }
   .dt-sum-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) { .dt-choices { grid-template-columns: 1fr; } .dt-choice { padding: 20px 18px 20px 50px; } .dt-choice input { left: 18px; top: 23px; } }
+
+/* ==========================================================================
+   Option 7 (service-led positioning, Oct 14): homepage additions, /agents, /review
+   ========================================================================== */
+
+/* Nav: four anchor links, so collapse to the menu a little earlier than Option 6 */
+@media (min-width: 761px) and (max-width: 1000px) {
+  .nav-o7 .nav-links { display: none; }
+  .nav-o7 .nav-toggle { display: inline-flex; }
+}
+
+/* Footer: four link columns */
+.footer-o6 { grid-template-columns: 1.4fr repeat(4, 1fr); }
+@media (max-width: 980px) { .footer-o6 { grid-template-columns: 1fr 1fr; } }
+
+/* Review banner link to the reviewer's guide */
+.review-bar a { color: var(--yellow); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+
+/* Service section on dark: the closing line sits closer to the cards */
+#service .ai-close { max-width: 820px; font-size: clamp(18px, 1.7vw, 22px); color: var(--gray-light); }
+
+/* Tailored: examples heading under the role cards */
+#tailored .roles-head { margin-top: clamp(48px, 6vw, 72px); }
+
+/* /review: reviewer's guide (preview only) */
+.rv-stack { display: grid; gap: 14px; }
+.rv-two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.rv-layer { border: 1px solid var(--line-strong); border-radius: var(--radius-l); padding: clamp(22px, 2.6vw, 32px); background: var(--white); }
+.rv-lead { background: var(--yellow); border-color: var(--black); }
+.rv-tag { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; color: var(--text-2); }
+.rv-lead .rv-tag { color: var(--black); }
+.rv-tag span { padding: 3px 8px; border-radius: 999px; border: 1px solid var(--black); color: var(--black); background: var(--white); }
+.rv-h { margin-top: 14px; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.15; letter-spacing: -0.035em; font-weight: 500; }
+.rv-layer > p { margin-top: 10px; color: var(--text-2); max-width: 720px; }
+.rv-lead > p { color: var(--black); }
+.rv-kv { margin-top: 18px; display: grid; gap: 0; }
+.rv-kv div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
+.rv-lead .rv-kv div { border-color: rgba(27,28,28,.2); }
+.rv-kv dt { font-family: var(--mono); font-size: 12px; color: var(--text-2); padding-top: 3px; }
+.rv-lead .rv-kv dt { color: var(--black); }
+.rv-kv dd { margin: 0; font-size: 15.5px; }
+.rv-kv a { text-decoration: underline; text-underline-offset: 3px; }
+.rv-flow { display: grid; gap: 0; counter-reset: rv; }
+.rv-flow li { counter-increment: rv; display: grid; grid-template-columns: 40px minmax(0, 280px) 130px minmax(0, 1fr); gap: 8px 16px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--line-strong); }
+.rv-flow li::before { content: counter(rv, decimal-leading-zero); font-family: var(--mono); font-size: 12px; color: var(--text-2); }
+.rv-flow b { font-weight: 600; letter-spacing: -0.02em; }
+.rv-flow p { color: var(--text-2); font-size: 15.5px; }
+.rv-pill { justify-self: start; font-family: var(--mono); font-size: 11.5px; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--white); }
+.rv-p-lead { background: var(--yellow); border-color: var(--black); }
+.rv-cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); }
+.rv-list { margin-top: 24px; display: grid; gap: 0; }
+.rv-list li { padding: 14px 0; border-top: 1px solid var(--line); color: var(--text-2); }
+.rv-list b { color: var(--black); font-weight: 600; }
+.rv-note { margin-top: 16px; color: var(--text-2); }
+.rv-sub { margin-top: 36px; }
+@media (max-width: 860px) {
+  .rv-two, .rv-cols { grid-template-columns: 1fr; }
+  .rv-flow li { grid-template-columns: 32px minmax(0, 1fr); }
+  .rv-flow .rv-pill, .rv-flow p { grid-column: 2; }
+}
+@media (max-width: 480px) { .rv-kv div { grid-template-columns: 1fr; gap: 4px; } }

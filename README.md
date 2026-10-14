@@ -1,3 +1,18 @@
+# Flieber website: Option 7
+
+**This branch (`claude/option-7`) is Option 7**, the service-led positioning from the memo "Flieber Website: Path to the Final Version" (Oct 14). It starts from Option 6 (`claude/option-6`, f74517f) and adds Option 4's hero demo and role cards and Option 2's agent page and files, rewritten to the new lead. Options 1, 2, 4, 5 and 6 are never touched from here.
+
+- Lead: "Your inventory planning, done with you" (Flieber's planners and planning engine, Managed Services).
+- Supporting: customization (how the help fits the team) and the agent platform (MCP, API, /agents, llms.txt, capabilities.json).
+- `/review` is a preview-only reviewer's guide: which positioning leads, where each appears, open decisions and new wording. Remove before launch.
+- `scripts/build_agents.py` generates `agents/index.html`, `llms.txt` and `capabilities.json` from one source. Run it, then `python3 scripts/site_chrome.py`.
+- `assets/css/demo.css` and `assets/js/demo.js` are Option 4's `v1.css` / `v1.js` (hero tool demo), loaded on the homepage only.
+- Free trial: still out, as in Option 6. Open decision.
+
+The notes below are Option 6's and still describe the shared build.
+
+---
+
 # Flieber website: Option 6
 
 **This branch (`claude/option-6`) is Option 6.** It starts from Option 2 (`claude/eager-bohr-ui8a03`, commit f4408ac). Option 2 and Option 1 (`claude/gracious-dijkstra-qgcgls`) are never touched from here.

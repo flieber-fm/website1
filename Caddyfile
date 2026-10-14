@@ -15,7 +15,7 @@
 	@revalidate not path /assets/fonts/* /assets/img/* /assets/logos/*
 	header @static Cache-Control "public, max-age=86400"
 	header @revalidate Cache-Control "no-cache"
-	# Option 6 is one page: Option 2 URLs are not served. Redirects for the live
+	# Option 7 serves the homepage, /security, /agents, /review and the agent files; other Option 2 URLs are not served. Redirects for the live
 	# site's old URLs are decided before launch (26-10-14 brief, Navigation).
 	try_files {path} {path}/index.html
 	file_server

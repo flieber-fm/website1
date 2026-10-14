@@ -1,9 +1,9 @@
-"""Navigation and footer for Option 6 (26-10-14 Website Development Brief).
+"""Navigation, footer and review banner for Option 7 (service-led positioning, Oct 14).
 
-Option 6 is one focused homepage with anchor navigation (brief: "Navigation and content
-management"): How it works · Your options · Examples, then Log in and Talk to us.
-/security is the only other page. Run `python3 scripts/site_chrome.py` after editing
-the nav or footer; it rewrites both pages in place.
+Option 7 keeps Option 6's one focused homepage with anchor navigation, led by planning help:
+How we work · Tailored to you · Your options · Proof, then Log in and Talk to us.
+Other pages: /security, /agents (for AI agents) and /review (preview-only positioning guide).
+Run `python3 scripts/site_chrome.py` after editing the nav or footer; it rewrites every page in place.
 """
 import pathlib
 import re
@@ -16,20 +16,23 @@ SERVICE = "https://www.flieber.com/service-agreement"
 PAGE_FILES = {  # file: path prefix to the site root
     "index.html": "",
     "security/index.html": "../",
+    "agents/index.html": "../",
+    "review/index.html": "../",
 }
 
 # Anchor links on the homepage (label, anchor)
 SECTIONS = [
-    ("How it works", "how-it-works"),
+    ("How we work", "service"),
+    ("Tailored to you", "tailored"),
     ("Your options", "options"),
-    ("Examples", "examples"),
+    ("Proof", "proof"),
 ]
 
 
 def nav_html(p: str) -> str:
     home = p or "./"
     links = "\n".join(f'        <a href="{home}#{a}">{label}</a>' for label, a in SECTIONS)
-    return f"""  <header class="nav nav-o6" id="nav">
+    return f"""  <header class="nav nav-o6 nav-o7" id="nav">
     <div class="wrap">
       <a class="nav-logo" href="{home}" aria-label="Flieber home">
         <img src="{p}assets/img/flieber-logo.svg" alt="Flieber" width="116" height="20">
@@ -55,7 +58,7 @@ def footer_html(p: str) -> str:
       <div class="footer-top footer-o6">
         <div class="footer-brand">
           <img src="{p}assets/img/flieber-logo-light.svg" alt="Flieber" width="132" height="23">
-          <p class="tagline">Inventory planning <em>built around your business.</em></p>
+          <p class="tagline">Your inventory planning, <em>done with you.</em></p>
         </div>
         <div>
           <h2 class="footer-h">On this page</h2>
@@ -75,6 +78,14 @@ def footer_html(p: str) -> str:
           </ul>
         </div>
         <div>
+          <h2 class="footer-h">For AI agents</h2>
+          <ul>
+            <li><a href="{p}agents/">Flieber, for AI agents</a></li>
+            <li><a href="{p}llms.txt">llms.txt</a></li>
+            <li><a href="{p}capabilities.json">capabilities.json</a></li>
+          </ul>
+        </div>
+        <div>
           <h2 class="footer-h">Customers</h2>
           <ul>
             <li><a href="{LOGIN}">Log in</a></li>
@@ -91,8 +102,9 @@ def footer_html(p: str) -> str:
 
 
 # Review banner on every page, so Fabricio always knows which version he is looking at (Oct 14).
-REVIEW_BAR = ('  <div class="review-bar" role="note">Review build · <b>Option 6</b> · '
-              'Oct 14 development brief on Option 2’s design</div>')
+REVIEW_BAR = ('  <div class="review-bar" role="note">Review build · <b>Option 7</b> · '
+              'Service-led: Option 6’s structure, Option 2’s agent files, Option 4’s hero demo · '
+              '<a href="{p}review/">How the positioning fits together →</a></div>')
 
 
 def apply(root: pathlib.Path) -> None:
@@ -101,7 +113,7 @@ def apply(root: pathlib.Path) -> None:
         s = f.read_text(encoding="utf-8")
         s = re.sub(r'  <header class="nav[^"]*" id="nav">.*?</header>', lambda m: nav_html(p), s, count=1, flags=re.S)
         s = re.sub(r'  <div class="review-bar"[^>]*>.*?</div>\n', "", s, flags=re.S)
-        s = s.replace('  <header class="nav', REVIEW_BAR + '\n  <header class="nav', 1)
+        s = s.replace('  <header class="nav', REVIEW_BAR.format(p=p) + '\n  <header class="nav', 1)
         s = re.sub(r'  <footer class="footer">.*?</footer>', lambda m: footer_html(p), s, count=1, flags=re.S)
         f.write_text(s, encoding="utf-8")
 
