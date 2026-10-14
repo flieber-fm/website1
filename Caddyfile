@@ -1,5 +1,5 @@
 # Static preview server. The X-Robots-Tag header keeps every file
-# (pages, llms.txt, capabilities.json) out of search indexes.
+# (pages and sitemap) out of search indexes.
 # Remove that header before the public launch.
 {
 	admin off
@@ -15,13 +15,8 @@
 	@revalidate not path /assets/fonts/* /assets/img/* /assets/logos/*
 	header @static Cache-Control "public, max-age=86400"
 	header @revalidate Cache-Control "no-cache"
-	# Option 2 redirects (brief section 10)
-	redir /omnichannel /multichannel/ 301
-	redir /ecommerce /multichannel/ 301
-	redir /flieber-vs-netsuite /before-you-choose/ 301
-	redir /flieber-vs-netstock /before-you-choose/ 301
-	redir /flieber-vs-foresight-ai /before-you-choose/ 301
-	# /flieber-vs-inventory-planner is deliberately not redirected (brief section 6.3)
+	# Option 6 is one page: Option 2 URLs are not served. Redirects for the live
+	# site's old URLs are decided before launch (26-10-14 brief, Navigation).
 	try_files {path} {path}/index.html
 	file_server
 }

@@ -325,6 +325,65 @@
     Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) tio.observe(el); });
   }
 
+  /* ---------- Option 6: analytics events (brief: Technical implementation) ---------- */
+  // Pushed to the GTM dataLayer; GTM itself loads only on flieber.com, so the preview sends nothing.
+  // Events: cta_click {cta_location}, form_start, form_error {fields}, form_submit {service_interest}.
+  var track = function (event, data) {
+    window.dataLayer = window.dataLayer || [];
+    var o = { event: event };
+    if (data) Object.keys(data).forEach(function (k) { o[k] = data[k]; });
+    window.dataLayer.push(o);
+  };
+  document.querySelectorAll('[data-cta]').forEach(function (a) {
+    a.addEventListener('click', function () { track('cta_click', { cta_location: a.getAttribute('data-cta') }); });
+  });
+
+  /* ---------- Option 6: "Talk to us" form ---------- */
+  // Visible validation and a confirmation state. PREVIEW: nothing is sent anywhere; the delivery
+  // destination (HubSpot form or other) is set before launch, after Fabricio's go.
+  var form = document.getElementById('talk-form');
+  if (form) {
+    var started = false;
+    form.addEventListener('input', function () { if (!started) { started = true; track('form_start'); } });
+    var emailOk = function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); };
+    var checks = [
+      ['f-name', 'e-name', function (v) { return v.length > 0; }],
+      ['f-email', 'e-email', emailOk],
+      ['f-company', 'e-company', function (v) { return v.length > 0; }],
+      ['f-problem', 'e-problem', function (v) { return v.length > 0; }]
+    ];
+    var setErr = function (input, err, bad) {
+      input.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      err.hidden = !bad;
+    };
+    checks.forEach(function (c) {
+      var input = document.getElementById(c[0]), err = document.getElementById(c[1]);
+      input.addEventListener('blur', function () { if (input.value.trim() || input.getAttribute('aria-invalid') === 'true') setErr(input, err, !c[2](input.value.trim())); });
+      input.addEventListener('input', function () { if (input.getAttribute('aria-invalid') === 'true' && c[2](input.value.trim())) setErr(input, err, false); });
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var firstBad = null, bad = [];
+      checks.forEach(function (c) {
+        var input = document.getElementById(c[0]), err = document.getElementById(c[1]);
+        var isBad = !c[2](input.value.trim());
+        setErr(input, err, isBad);
+        if (isBad) { bad.push(input.name); if (!firstBad) firstBad = input; }
+      });
+      if (firstBad) { track('form_error', { fields: bad.join(',') }); firstBad.focus(); return; }
+      if (form.elements['website'].value) return; // spam trap filled: drop silently
+      var interest = form.querySelector('input[name="interest"]:checked');
+      track('form_submit', { service_interest: interest ? interest.value : 'none' });
+      var done = document.getElementById('talk-done');
+      var first = form.elements['name'].value.trim().split(/\s+/)[0];
+      done.querySelector('[data-done-name]').textContent = first ? ', ' + first : '';
+      done.querySelector('[data-done-email]').textContent = form.elements['email'].value.trim();
+      form.hidden = true;
+      done.hidden = false;
+      done.focus();
+    });
+  }
+
   var y = document.getElementById('year');
   if (y) y.textContent = String(new Date().getFullYear());
 })();
