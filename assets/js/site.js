@@ -372,8 +372,8 @@
       });
       if (firstBad) { track('form_error', { fields: bad.join(',') }); firstBad.focus(); return; }
       if (form.elements['website'].value) return; // spam trap filled: drop silently
-      var interest = form.querySelector('input[name="interest"]:checked');
-      track('form_submit', { service_interest: interest ? interest.value : 'none' });
+      var interest = [].map.call(form.querySelectorAll('input[name="interest"]:checked'), function (i) { return i.value; });
+      track('form_submit', { service_interest: interest.length ? interest.join(',') : 'none' });
       var done = document.getElementById('talk-done');
       var first = form.elements['name'].value.trim().split(/\s+/)[0];
       done.querySelector('[data-done-name]').textContent = first ? ', ' + first : '';
@@ -381,6 +381,57 @@
       form.hidden = true;
       done.hidden = false;
       done.focus();
+    });
+  }
+
+  /* ---------- Option 6: "Your options" decision tree ---------- */
+  // Step 1 as it is / customize; step 2 (only when customizing) our team / yours; step 3 Managed Services or not.
+  // The summary lists what Flieber does, what the team does and what is paid for; its button
+  // pre-ticks the matching interests in the form. Without JS every choice is still readable.
+  var dt = document.getElementById('dt');
+  if (dt) {
+    var D = {
+      asis: { label: 'Use it as it is', f: 'Connects your data and sets up the ready-made templates', t: 'Plans with the templates in the Flieber app', interest: 'as-is' },
+      ours: { label: 'Customized by our team', f: 'Learns how you plan, agrees the scope with you and builds what was agreed', t: 'Explains how it plans today and reviews what we build', pay: 'Customization by our team, quoted once the scope is agreed', interest: 'custom-flieber' },
+      yours: { label: 'Customized by your team', f: 'Keeps the data connected, mapped and current, and supplies the planning logic through the API and MCP server', t: 'Builds and maintains its own views, workflows and tools', interest: 'custom-own' },
+      ms: { label: 'with Managed Services', f: 'Planners keep the data accurate, prepare the analysis, join your S&OP meetings and act as a sounding board', t: 'Makes every decision; if you choose, our planners carry out what you approve', pay: 'Managed Services', interest: 'managed-services' },
+      own: { label: 'run by your own team', t: 'Runs planning day to day, and can add Managed Services later' }
+    };
+    var val = function (n) { var i = dt.querySelector('input[name="' + n + '"]:checked'); return i ? i.value : null; };
+    var whoStep = dt.querySelector('[data-step="who"]');
+    var pathEl = dt.querySelector('[data-dt-path]'), detail = dt.querySelector('[data-dt-detail]');
+    var fill = function (sel, items) {
+      var ul = dt.querySelector(sel); ul.textContent = '';
+      items.forEach(function (x) { var li = document.createElement('li'); li.textContent = x; ul.appendChild(li); });
+    };
+    var picked = [];
+    var update = function () {
+      var start = val('dt-start'), who = val('dt-who'), sup = val('dt-support');
+      var skip = start === 'asis';
+      whoStep.classList.toggle('is-skipped', skip);
+      whoStep.querySelector('.dt-skip').hidden = !skip;
+      whoStep.querySelectorAll('input').forEach(function (i) { i.disabled = skip; });
+      dt.querySelectorAll('.dt-choice').forEach(function (c) { c.classList.toggle('is-on', c.querySelector('input').checked && !c.querySelector('input').disabled); });
+      var build = start === 'asis' ? 'asis' : (start === 'custom' ? who : null);
+      var missing = !start ? 'step 1' : (!build ? 'step 2' : (!sup ? 'step 3' : null));
+      if (missing) {
+        pathEl.textContent = 'Choose an option in ' + missing + ' to see what your path includes.';
+        detail.hidden = true; picked = []; return;
+      }
+      var a = D[build], b = D[sup];
+      pathEl.textContent = a.label + ', ' + b.label;
+      fill('[data-dt-flieber]', [a.f, b.f].filter(Boolean));
+      fill('[data-dt-team]', [a.t, b.t].filter(Boolean));
+      fill('[data-dt-pay]', ['The Flieber platform'].concat([a.pay, b.pay].filter(Boolean)));
+      detail.hidden = false;
+      picked = [a.interest, b.interest].filter(Boolean);
+      track('options_path', { path: build + '+' + sup });
+    };
+    dt.addEventListener('change', update);
+    update();
+    dt.querySelector('[data-dt-cta]').addEventListener('click', function () {
+      if (!form || !picked.length) return;
+      form.querySelectorAll('input[name="interest"]').forEach(function (i) { i.checked = picked.indexOf(i.value) > -1; });
     });
   }
 

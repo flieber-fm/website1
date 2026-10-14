@@ -99,21 +99,43 @@ How it works · Your options · Examples, then Log in (text link to app.flieber.
 
 ### 2.6 Your options (`#options`)
 
+A decision tree in three steps (Fabricio, Oct 14), then a summary of the chosen path. Every choice is readable without JavaScript; with it, picking a path fills the summary.
+
 **Label:** Your options
 
 **H2:** Choose how much help you need
 
-**Lead:** Every option runs on the same foundation. Start with the help you need now and change it later. Ongoing services are always optional.
+**Lead:** Three decisions shape your system, and every path runs on the same foundation. Ongoing services are always optional, and you can change any decision later.
 
-**The starting point:** The Flieber app, a ready-made planning workspace on that foundation. Use it as it is, or tailor it in any of the ways below.
+**Step 1 · How do you want to start?**
 
-Three equal cards, each with what Flieber does and what your team does:
+- **Use it as it is** Plan with Flieber’s ready-made templates for planning views, reports and workflows, in the Flieber app. *Good fit if a standard planning routine works for your team.*
+- **Customize it** Adapt the views, workflows and reports to how your team plans, your products and your rules, on the same foundation. *Good fit if standard software has never matched how you plan.*
 
-1. *With our specialists* · **Tailor it with our team** We learn how you plan, then configure and build the views, workflows and reports your team needs on Flieber. *Flieber:* Understands your process, agrees the scope with you and builds what was agreed. *Your team:* Explains how it plans today, reviews what we build and runs the system day to day.
-2. *With your own resources* · **Build it with your own team** Your developers, or the AI tools your team already uses, build on Flieber’s data and planning logic through our API and MCP server. Claude, ChatGPT and Cursor connect directly. *Flieber:* Keeps the data connected, mapped and current, and supplies the planning logic. *Your team:* Builds and maintains its own views and tools.
-3. *Optional* · **Add ongoing planning support** Flieber’s planners work alongside your team on day-to-day planning, with dashboards that keep the work visible. *Flieber:* Keeps the data accurate, prepares the analysis, joins your S&OP meetings and acts as a sounding board. *Your team:* Makes every decision. If you choose, our planners carry out what you approve.
+**Step 2 · only if you customize · Who builds it?** (dimmed, with "Skipped: you’re using Flieber as it is.", when step 1 is "Use it as it is")
 
-**How pricing works:** Using the Flieber platform, tailoring work and ongoing planning support are priced separately, and you only pay for what you choose. We share pricing in the first conversation, once we understand your operation. *Button:* Talk about your planning needs
+- **Our team** We learn how you plan, agree the scope with you and build the views, workflows and reports your team needs. Your team explains how it plans and reviews what we build.
+- **Your team** Your developers, or the AI tools your team already uses, build on Flieber’s data and planning logic through our API and MCP server. Claude, ChatGPT and Cursor connect directly.
+
+**Step 3 · in every case · Do you want ongoing planning support?**
+
+- **Add Managed Services** (tag: Optional) Flieber’s planners work alongside your team on day-to-day planning, with dashboards that keep the work visible. They keep the data accurate, prepare the analysis, join your S&OP meetings and act as a sounding board. Your team makes every decision.
+- **Run it with your own team** Your team plans in Flieber on its own. You can add Managed Services later if you need more capacity.
+
+**Your path** (dark summary): before a full path is chosen, "Choose an option in step N to see what your path includes." Then the path name ("Use it as it is" / "Customized by our team" / "Customized by your team", followed by "with Managed Services" or "run by your own team") and three lists:
+
+| Choice | Flieber | Your team | You pay for |
+| --- | --- | --- | --- |
+| Every path | | | The Flieber platform |
+| Use it as it is | Connects your data and sets up the ready-made templates | Plans with the templates in the Flieber app | |
+| Customized by our team | Learns how you plan, agrees the scope with you and builds what was agreed | Explains how it plans today and reviews what we build | Customization by our team, quoted once the scope is agreed |
+| Customized by your team | Keeps the data connected, mapped and current, and supplies the planning logic through the API and MCP server | Builds and maintains its own views, workflows and tools | |
+| With Managed Services | Planners keep the data accurate, prepare the analysis, join your S&OP meetings and act as a sounding board | Makes every decision; if you choose, our planners carry out what you approve | Managed Services |
+| Run by your own team | | Runs planning day to day, and can add Managed Services later | |
+
+*Button:* Talk about your planning needs (goes to the form and ticks the matching interests).
+
+**How pricing works:** Every path includes the Flieber platform. Customization by our team and Managed Services are priced separately, so you only pay for what you choose. We share pricing in the first conversation, once we understand your operation. *Button:* Talk about your planning needs
 
 ### 2.7 Examples (`#examples`)
 
@@ -153,9 +175,9 @@ No timelines (source brief, section 6).
 Collapsible, as the Option 2 /pricing FAQ. Also published as FAQPage structured data.
 
 - **What can Flieber help me do, and what will my team still handle?** Flieber connects and reconciles your data, forecasts demand, projects inventory and recommends what to buy or move, in views and workflows that fit how you plan. Your team sets the objectives, adds what no system knows and makes every decision that commits cash. If you add ongoing support, our planners help with the analysis and the planning routine; the decisions stay with you.
-- **Can I use Flieber without ongoing services?** Yes. Ongoing planning support is a separate, optional engagement. Your team can use the Flieber app, and any system we tailor for you, on its own.
+- **Can I use Flieber without ongoing services?** Yes. Ongoing planning support (Managed Services) is a separate, optional engagement. Your team can use Flieber as it is, or any system you customize, on its own.
 - **What can be tailored, and how do we agree on scope?** Views, reports, dashboards and workflows, built around your process and rules on top of Flieber’s shared data connections and planning logic. Before any work starts, we agree on what will be built, who maintains it and how it’s priced.
-- **If my own team builds or runs the tools, what do I keep paying Flieber for?** Ongoing use of the Flieber platform: the data connections, business context and planning logic your tools run on. Tailoring work and ongoing planning support are charged separately, and only if you choose them.
+- **If my own team builds or runs the tools, what do I keep paying Flieber for?** Ongoing use of the Flieber platform: the data connections, business context and planning logic your tools run on. Customization by our team and Managed Services are charged separately, and only if you choose them.
 - **How much does it cost?** It depends on your operation and on the help you choose. We share pricing in the first conversation, once we understand how you plan.
 - **Does my team need to know AI to use Flieber?** No. Your team works in views built for how it plans. AI works in the background: it speeds up tailoring, takes repetitive work off your team and explains results in plain language.
 - **Can Flieber change anything in our systems on its own?** Only within the approval rules you set. By default, every change Flieber makes to your systems requires approval.
@@ -188,7 +210,7 @@ As in Option 2: label "Security", H2 "Your data stays yours", the four items (Ne
 
 **Alternative:** Prefer to pick a time now? Book a call → https://www.flieber.com/book-a-demo
 
-**Form:** Name · Work email · Company · "How do you plan today, and what do you want to improve?" (hint: "A few sentences is enough. Please don’t include passwords or data files.") · "What kind of help are you interested in? (optional)": Tailoring a system with Flieber’s team / Building with our own team / Ongoing planning support / Not sure yet. Button: Talk about your planning needs. Under it: "By sending this form you agree to our Privacy Policy." Preview only: "Preview: this form doesn’t send anything yet. Its destination is set before launch."
+**Form:** Name · Work email · Company · "How do you plan today, and what do you want to improve?" (hint: "A few sentences is enough. Please don’t include passwords or data files.") · "What are you interested in? (optional, choose any)", checkboxes matching the tree: Using Flieber as it is / Customizing it with Flieber’s team / Customizing it with our own team / Ongoing planning support (Managed Services) / Not sure yet. Button: Talk about your planning needs. Under it: "By sending this form you agree to our Privacy Policy." Preview only: "Preview: this form doesn’t send anything yet. Its destination is set before launch."
 
 **Errors:** Please enter your name. · Please enter a valid work email, like name@yourbrand.com. · Please enter your company. · Please tell us a little about how you plan today.
 
@@ -206,7 +228,7 @@ As in Option 2: label "Security", H2 "Your data stays yours", the four items (Ne
 | --- | --- | --- |
 | "Flieber's data, integrations, and planning logic" (and other lists with a comma before "and") | No serial comma | House style |
 | Section 4 options "tailor with our specialists; build with your own resources where supported; add ongoing planning help" | "Tailor it with our team", "Build it with your own team", "Add ongoing planning support", each with what Flieber does and what your team does | Answers "what will my team still handle?" on the card itself; "where supported" is made concrete (API and MCP server, Claude, ChatGPT and Cursor, all approved in Option 2) |
-| Section 4 "a ready-made starting experience can be added if its availability is confirmed" | "The starting point: the Flieber app" | The app is sold today (Option 2 Self-Serve); still listed as open for Fabricio to confirm |
+| Section 4 options and "a ready-made starting experience can be added if its availability is confirmed" | A three-step decision tree: use the templates as they are or customize; if customizing, our team or yours; in every case, Managed Services or not | Fabricio's direction, Oct 14. "Ready-made templates" is his wording and still needs confirming as an available product |
 | Section 7 "Close with: Tell us how you plan today and what you want to improve" | Used as the H2 of the closing section | Heading, so no final period |
 | Nav "Talk to us" | Yellow button; the in-page buttons say "Talk about your planning needs" | The long label does not fit the nav |
 | Questions the website must answer | A "Questions" section with seven answers, plus FAQPage structured data | The four required questions, plus price, AI and control |

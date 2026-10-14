@@ -44,7 +44,7 @@ Kept live on HubSpot and linked: book-a-demo (the "Book a call" link), blog, pri
 - `index.html` is edited by hand. Its nav and footer come from `scripts/site_chrome.py`; run `python3 scripts/site_chrome.py` after changing either (it rewrites `index.html` and `security/index.html`).
 - The FAQ appears twice in `index.html`: the visible `<details>` list and the FAQPage JSON-LD in the head. Change both together.
 - Review banner: a dark bar above the nav on every page, "Review build · Option 6 · Oct 14 development brief on Option 2’s design" ("Option 6" in yellow), written by `scripts/site_chrome.py`. Preview only; remove before launch.
-- Styles: `assets/css/site.css` (Option 2's file; Option 6 styles are appended in the "Option 6" block). Scripts: `assets/js/site.js` (Option 6 adds the form and analytics events). Cache busting: `site.css?v=50`, `site.js?v=18`; bump with sed across .html files on every CSS or JS change.
+- Styles: `assets/css/site.css` (Option 2's file; Option 6 styles are appended in the "Option 6" block). Scripts: `assets/js/site.js` (Option 6 adds the form and analytics events). Cache busting: `site.css?v=51`, `site.js?v=19`; bump with sed across .html files on every CSS or JS change.
 - Serving: Caddy (Dockerfile copies `index.html`, `robots.txt`, `sitemap.xml`, `security/` and `assets/`). No redirects yet.
 - Search engines stay blocked: meta robots on both pages, `robots.txt` and the `X-Robots-Tag` header. `python3 scripts/check-placeholders.py` lists them.
 - Removed from this branch (still on the Option 2 branch): every other page, llms.txt, llms-full.txt, capabilities.json, /home-variants, `assets/integrations/`, `hubspot/` and the Option 2 generators (`build-content.py`, `build-home-variants.py`, `build-hubspot.py`, `site_content.py`, `work_content.py`, `integ_content.py`).
@@ -52,7 +52,7 @@ Kept live on HubSpot and linked: book-a-demo (the "Book a call" link), blog, pri
 
 ## Lead capture and analytics
 
-Form fields follow the source brief: name, work email, company, a short description of the planning problem, and an optional choice (tailoring a system, building with our own team, ongoing support, not sure yet). Visible validation with messages tied to each field (`aria-describedby`, `aria-invalid`), focus on the first error, a confirmation state that takes focus, a honeypot field against bots and a note asking not to send passwords or data files.
+Form fields follow the source brief: name, work email, company, a short description of the planning problem, and optional checkboxes that match the "Your options" tree (using Flieber as it is, customizing with Flieber’s team, customizing with our own team, Managed Services, not sure yet). The tree's button ticks the matching boxes. Visible validation with messages tied to each field (`aria-describedby`, `aria-invalid`), focus on the first error, a confirmation state that takes focus, a honeypot field against bots and a note asking not to send passwords or data files.
 
 **Preview only:** the form sends nothing. A visible note says so on the form and on the confirmation. Connecting it (for example to a HubSpot form) is a HubSpot change and waits for Fabricio's go.
 
@@ -60,10 +60,11 @@ Analytics events are pushed to the GTM `dataLayer` (GTM loads only on flieber.co
 
 | Event | When | Fields |
 | --- | --- | --- |
-| `cta_click` | Any "Talk about your planning needs", "Talk to us" or "Book a call" click | `cta_location`: nav, hero, options, book |
+| `cta_click` | Any "Talk about your planning needs", "Talk to us" or "Book a call" click | `cta_location`: nav, hero, options-path, options, book |
 | `form_start` | First input in the form | |
 | `form_error` | Submit with missing or invalid fields | `fields` |
-| `form_submit` | Valid submit | `service_interest`: tailor, build, support, unsure, none |
+| `options_path` | A full path is chosen in the "Your options" tree | `path`: asis, ours or yours, plus ms or own (for example `ours+ms`) |
+| `form_submit` | Valid submit | `service_interest`: comma-separated as-is, custom-flieber, custom-own, managed-services, unsure, or none |
 
 Scheduling completions are not tracked: the book-a-demo page lives on HubSpot.
 
@@ -85,7 +86,8 @@ Every claim comes from Option 2's "Approved facts and claims" table unless marke
 | Planners: keep data accurate, S&OP, sounding board, carry out what is approved | Option 2 Managed Services (Full plan executes after approval) |
 | "with dashboards that keep the work visible" | Source brief, Fabricio's direction; open item 2 |
 | Security strip | Option 2, approved /security wording |
-| The Flieber app as a ready-made starting point | Sold today as Self-Serve; open item 1 |
+| "Flieber’s ready-made templates for planning views, reports and workflows" (use it as it is) | Fabricio's direction, Oct 14; the app is sold today as Self-Serve, but a template set is not described anywhere yet. Open item 1 |
+| "Managed Services" named as the ongoing support offer | Fabricio, Oct 14 (existing offer name on Option 2 and the live site); no plans or prices shown |
 | What happens after the form (reply by email, first conversation, scope and pricing proposal) | Written for Option 6; open item 4 |
 
 All product views (hero card, annotated view, three examples) are labeled "Concept · sample data" or "Illustration with sample data, not a product screenshot". No real screenshot is used yet.
@@ -94,7 +96,7 @@ All product views (hero card, annotated view, three examples) are labeled "Conce
 
 Raised in the source brief ("Resolve before public launch") or created by Option 6:
 
-1. Confirm what is available today: the Flieber app as a ready-made starting point, how customers build on the API and MCP server, and how far tailoring goes (the source brief's "recommended boundary for customization").
+1. Confirm what is available today: the "ready-made templates" behind "Use it as it is" (which views, reports and workflows exist as templates), how customers build on the API and MCP server, and how far tailoring goes (the source brief's "recommended boundary for customization").
 2. Confirm the ongoing support scope as written on the card, including "dashboards that keep the work visible" and "our planners carry out what you approve".
 3. Confirm the evidence: the 1,000+ brands wording and the four customer results under the source brief's stricter rule.
 4. Confirm the process after the form (who replies, how, what the customer gets after the first conversation) and where leads go. Then connect the form (HubSpot change, needs the go) and add consent handling for analytics.
@@ -109,6 +111,7 @@ Newest first.
 
 | Date | Decision |
 | --- | --- |
+| Oct 14 | "Your options" becomes a three-step decision tree (Fabricio): 1. use the templates as they are or customize; 2. if customizing, our team or yours; 3. in every case, add Managed Services or not. A summary shows what Flieber does, what the team does and what is paid for, and pre-ticks the form. The form's single choice becomes checkboxes matching the tree; FAQ answers name Managed Services |
 | Oct 14 | Review banner on top of every page names the version under review: "Review build · Option 6 · Oct 14 development brief on Option 2’s design" (Fabricio: always add it). Preview only |
 | Oct 14 | Railway service website-option-6 (2bd8097d-0023-4982-8d60-ffb12ad7ee8f) created for the preview at Fabricio's request, connected to claude/option-6 |
 | Oct 14 | Option 6 built on branch claude/option-6 from Option 2 (commit f4408ac). The source brief is the main direction and Option 2 is the structure and UI guideline where they don't conflict (Fabricio). Built as one focused homepage plus /security, following the source brief's recommended first release; the other Option 2 pages, machine-readable files and homepage variants are not part of Option 6 |

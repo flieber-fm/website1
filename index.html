@@ -20,7 +20,7 @@
 
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v=50">
+  <link rel="stylesheet" href="assets/css/site.css?v=51">
 
   <script>document.documentElement.classList.remove('no-js');</script>
   <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
@@ -64,7 +64,7 @@
       },
       {
         "@type": "FAQPage",
-        "mainEntity": [{"@type": "Question", "name": "What can Flieber help me do, and what will my team still handle?", "acceptedAnswer": {"@type": "Answer", "text": "Flieber connects and reconciles your data, forecasts demand, projects inventory and recommends what to buy or move, in views and workflows that fit how you plan. Your team sets the objectives, adds what no system knows and makes every decision that commits cash. If you add ongoing support, our planners help with the analysis and the planning routine; the decisions stay with you."}},{"@type": "Question", "name": "Can I use Flieber without ongoing services?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Ongoing planning support is a separate, optional engagement. Your team can use the Flieber app, and any system we tailor for you, on its own."}},{"@type": "Question", "name": "What can be tailored, and how do we agree on scope?", "acceptedAnswer": {"@type": "Answer", "text": "Views, reports, dashboards and workflows, built around your process and rules on top of Flieber’s shared data connections and planning logic. Before any work starts, we agree on what will be built, who maintains it and how it’s priced."}},{"@type": "Question", "name": "If my own team builds or runs the tools, what do I keep paying Flieber for?", "acceptedAnswer": {"@type": "Answer", "text": "Ongoing use of the Flieber platform: the data connections, business context and planning logic your tools run on. Tailoring work and ongoing planning support are charged separately, and only if you choose them."}},{"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your operation and on the help you choose. We share pricing in the first conversation, once we understand how you plan."}},{"@type": "Question", "name": "Does my team need to know AI to use Flieber?", "acceptedAnswer": {"@type": "Answer", "text": "No. Your team works in views built for how it plans. AI works in the background: it speeds up tailoring, takes repetitive work off your team and explains results in plain language."}},{"@type": "Question", "name": "Can Flieber change anything in our systems on its own?", "acceptedAnswer": {"@type": "Answer", "text": "Only within the approval rules you set. By default, every change Flieber makes to your systems requires approval."}}]
+        "mainEntity": [{"@type": "Question", "name": "What can Flieber help me do, and what will my team still handle?", "acceptedAnswer": {"@type": "Answer", "text": "Flieber connects and reconciles your data, forecasts demand, projects inventory and recommends what to buy or move, in views and workflows that fit how you plan. Your team sets the objectives, adds what no system knows and makes every decision that commits cash. If you add ongoing support, our planners help with the analysis and the planning routine; the decisions stay with you."}},{"@type": "Question", "name": "Can I use Flieber without ongoing services?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Ongoing planning support (Managed Services) is a separate, optional engagement. Your team can use Flieber as it is, or any system you customize, on its own."}},{"@type": "Question", "name": "What can be tailored, and how do we agree on scope?", "acceptedAnswer": {"@type": "Answer", "text": "Views, reports, dashboards and workflows, built around your process and rules on top of Flieber’s shared data connections and planning logic. Before any work starts, we agree on what will be built, who maintains it and how it’s priced."}},{"@type": "Question", "name": "If my own team builds or runs the tools, what do I keep paying Flieber for?", "acceptedAnswer": {"@type": "Answer", "text": "Ongoing use of the Flieber platform: the data connections, business context and planning logic your tools run on. Customization by our team and Managed Services are charged separately, and only if you choose them."}},{"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your operation and on the help you choose. We share pricing in the first conversation, once we understand how you plan."}},{"@type": "Question", "name": "Does my team need to know AI to use Flieber?", "acceptedAnswer": {"@type": "Answer", "text": "No. Your team works in views built for how it plans. AI works in the background: it speeds up tailoring, takes repetitive work off your team and explains results in plain language."}},{"@type": "Question", "name": "Can Flieber change anything in our systems on its own?", "acceptedAnswer": {"@type": "Answer", "text": "Only within the approval rules you set. By default, every change Flieber makes to your systems requires approval."}}]
       }
     ]
   }
@@ -306,48 +306,80 @@
         <div class="section-head reveal">
           <span class="kicker">Your options</span>
           <h2 class="h2" id="options-title" style="margin-top:20px">Choose how much help you need</h2>
-          <p class="lead">Every option runs on the same foundation. Start with the help you need now and change it later. Ongoing services are always optional.</p>
+          <p class="lead">Three decisions shape your system, and every path runs on the same foundation. Ongoing services are always optional, and you can change any decision later.</p>
         </div>
 
-        <div class="opt-start reveal">
-          <span class="opt-start-label">The starting point</span>
-          <p><b>The Flieber app, a ready-made planning workspace on that foundation.</b> Use it as it is, or tailor it in any of the ways below.</p>
-        </div>
+        <!-- Decision tree (Fabricio, Oct 14): 1. use the templates as they are or customize;
+             2. if customizing, our team or yours; 3. in every case, add Managed Services or not.
+             Every choice is readable without JS; with JS, picking a path fills the summary. -->
+        <div class="dt reveal" id="dt">
+          <fieldset class="dt-step" data-step="start">
+            <legend class="dt-q"><span class="dt-n">1</span><span><span class="dt-k">Step 1</span>How do you want to start?</span></legend>
+            <div class="dt-choices">
+              <label class="dt-choice">
+                <input type="radio" name="dt-start" value="asis">
+                <span class="dt-c-title">Use it as it is</span>
+                <span class="dt-c-body">Plan with Flieber’s ready-made templates for planning views, reports and workflows, in the Flieber app.</span>
+                <span class="dt-c-fit">Good fit if a standard planning routine works for your team.</span>
+              </label>
+              <label class="dt-choice">
+                <input type="radio" name="dt-start" value="custom">
+                <span class="dt-c-title">Customize it</span>
+                <span class="dt-c-body">Adapt the views, workflows and reports to how your team plans, your products and your rules, on the same foundation.</span>
+                <span class="dt-c-fit">Good fit if standard software has never matched how you plan.</span>
+              </label>
+            </div>
+          </fieldset>
 
-        <div class="opt-grid reveal-stagger">
-          <article class="opt-card">
-            <span class="opt-tag">With our specialists</span>
-            <h3 class="opt-name">Tailor it with our team</h3>
-            <p class="opt-body">We learn how you plan, then configure and build the views, workflows and reports your team needs on Flieber.</p>
-            <dl class="opt-who">
-              <div><dt>Flieber</dt><dd>Understands your process, agrees the scope with you and builds what was agreed.</dd></div>
-              <div><dt>Your team</dt><dd>Explains how it plans today, reviews what we build and runs the system day to day.</dd></div>
-            </dl>
-          </article>
-          <article class="opt-card">
-            <span class="opt-tag">With your own resources</span>
-            <h3 class="opt-name">Build it with your own team</h3>
-            <p class="opt-body">Your developers, or the AI tools your team already uses, build on Flieber’s data and planning logic through our API and MCP server. Claude, ChatGPT and Cursor connect directly.</p>
-            <dl class="opt-who">
-              <div><dt>Flieber</dt><dd>Keeps the data connected, mapped and current, and supplies the planning logic.</dd></div>
-              <div><dt>Your team</dt><dd>Builds and maintains its own views and tools.</dd></div>
-            </dl>
-          </article>
-          <article class="opt-card">
-            <span class="opt-tag opt-tag-opt">Optional</span>
-            <h3 class="opt-name">Add ongoing planning support</h3>
-            <p class="opt-body">Flieber’s planners work alongside your team on day-to-day planning, with dashboards that keep the work visible.</p>
-            <dl class="opt-who">
-              <div><dt>Flieber</dt><dd>Keeps the data accurate, prepares the analysis, joins your S&amp;OP meetings and acts as a sounding board.</dd></div>
-              <div><dt>Your team</dt><dd>Makes every decision. If you choose, our planners carry out what you approve.</dd></div>
-            </dl>
-          </article>
+          <fieldset class="dt-step" data-step="who">
+            <legend class="dt-q"><span class="dt-n">2</span><span><span class="dt-k">Step 2 · only if you customize</span>Who builds it?</span></legend>
+            <div class="dt-choices">
+              <label class="dt-choice">
+                <input type="radio" name="dt-who" value="ours">
+                <span class="dt-c-title">Our team</span>
+                <span class="dt-c-body">We learn how you plan, agree the scope with you and build the views, workflows and reports your team needs. Your team explains how it plans and reviews what we build.</span>
+              </label>
+              <label class="dt-choice">
+                <input type="radio" name="dt-who" value="yours">
+                <span class="dt-c-title">Your team</span>
+                <span class="dt-c-body">Your developers, or the AI tools your team already uses, build on Flieber’s data and planning logic through our API and MCP server. Claude, ChatGPT and Cursor connect directly.</span>
+              </label>
+            </div>
+            <p class="dt-skip" hidden>Skipped: you’re using Flieber as it is.</p>
+          </fieldset>
+
+          <fieldset class="dt-step" data-step="support">
+            <legend class="dt-q"><span class="dt-n">3</span><span><span class="dt-k">Step 3 · in every case</span>Do you want ongoing planning support?</span></legend>
+            <div class="dt-choices">
+              <label class="dt-choice">
+                <input type="radio" name="dt-support" value="ms">
+                <span class="dt-c-title">Add Managed Services <span class="dt-opt">Optional</span></span>
+                <span class="dt-c-body">Flieber’s planners work alongside your team on day-to-day planning, with dashboards that keep the work visible. They keep the data accurate, prepare the analysis, join your S&amp;OP meetings and act as a sounding board. Your team makes every decision.</span>
+              </label>
+              <label class="dt-choice">
+                <input type="radio" name="dt-support" value="own">
+                <span class="dt-c-title">Run it with your own team</span>
+                <span class="dt-c-body">Your team plans in Flieber on its own. You can add Managed Services later if you need more capacity.</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="dt-summary" aria-live="polite">
+            <p class="dt-sum-k">Your path</p>
+            <p class="dt-sum-path" data-dt-path>Choose an option in each step to see what your path includes.</p>
+            <div class="dt-sum-grid" data-dt-detail hidden>
+              <div><h3 class="dt-sum-h">Flieber</h3><ul data-dt-flieber></ul></div>
+              <div><h3 class="dt-sum-h">Your team</h3><ul data-dt-team></ul></div>
+              <div><h3 class="dt-sum-h">You pay for</h3><ul data-dt-pay></ul></div>
+            </div>
+            <a class="btn btn-primary" href="#talk" data-cta="options-path" data-dt-cta>Talk about your planning needs <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
         </div>
 
         <div class="opt-price reveal">
           <div>
             <h3 class="h3">How pricing works</h3>
-            <p>Using the Flieber platform, tailoring work and ongoing planning support are priced separately, and you only pay for what you choose. We share pricing in the first conversation, once we understand your operation.</p>
+            <p>Every path includes the Flieber platform. Customization by our team and Managed Services are priced separately, so you only pay for what you choose. We share pricing in the first conversation, once we understand your operation.</p>
           </div>
           <a class="btn btn-dark" href="#talk" data-cta="options">Talk about your planning needs <span class="arrow" aria-hidden="true">→</span></a>
         </div>
@@ -436,7 +468,7 @@
           </details>
           <details>
             <summary>Can I use Flieber without ongoing services?<span class="plus" aria-hidden="true"></span></summary>
-            <p>Yes. Ongoing planning support is a separate, optional engagement. Your team can use the Flieber app, and any system we tailor for you, on its own.</p>
+            <p>Yes. Ongoing planning support (Managed Services) is a separate, optional engagement. Your team can use Flieber as it is, or any system you customize, on its own.</p>
           </details>
           <details>
             <summary>What can be tailored, and how do we agree on scope?<span class="plus" aria-hidden="true"></span></summary>
@@ -444,7 +476,7 @@
           </details>
           <details>
             <summary>If my own team builds or runs the tools, what do I keep paying Flieber for?<span class="plus" aria-hidden="true"></span></summary>
-            <p>Ongoing use of the Flieber platform: the data connections, business context and planning logic your tools run on. Tailoring work and ongoing planning support are charged separately, and only if you choose them.</p>
+            <p>Ongoing use of the Flieber platform: the data connections, business context and planning logic your tools run on. Customization by our team and Managed Services are charged separately, and only if you choose them.</p>
           </details>
           <details>
             <summary>How much does it cost?<span class="plus" aria-hidden="true"></span></summary>
@@ -617,11 +649,12 @@
               <p class="field-err" id="e-problem" hidden>Please tell us a little about how you plan today.</p>
             </div>
             <fieldset class="field field-choice">
-              <legend>What kind of help are you interested in? <span>(optional)</span></legend>
-              <label><input type="radio" name="interest" value="tailor"> Tailoring a system with Flieber’s team</label>
-              <label><input type="radio" name="interest" value="build"> Building with our own team</label>
-              <label><input type="radio" name="interest" value="support"> Ongoing planning support</label>
-              <label><input type="radio" name="interest" value="unsure"> Not sure yet</label>
+              <legend>What are you interested in? <span>(optional, choose any)</span></legend>
+              <label><input type="checkbox" name="interest" value="as-is"> Using Flieber as it is</label>
+              <label><input type="checkbox" name="interest" value="custom-flieber"> Customizing it with Flieber’s team</label>
+              <label><input type="checkbox" name="interest" value="custom-own"> Customizing it with our own team</label>
+              <label><input type="checkbox" name="interest" value="managed-services"> Ongoing planning support (Managed Services)</label>
+              <label><input type="checkbox" name="interest" value="unsure"> Not sure yet</label>
             </fieldset>
             <!-- Spam trap: hidden from people, filled in by bots -->
             <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
@@ -681,6 +714,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/site.js?v=18" defer></script>
+  <script src="assets/js/site.js?v=19" defer></script>
 </body>
 </html>
