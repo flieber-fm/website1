@@ -68,6 +68,7 @@ def build(src_rel: str, site_path: str, label: str) -> str:
     src = ROOT / src_rel
     page_dir = src.parent
     html = src.read_text(encoding="utf-8")
+    html = re.sub(r'  <div class="review-bar".*?</div>\n', "", html, count=1, flags=re.S)  # preview-only banner
 
     # Drop tags HubSpot's standard_header_includes provides, plus preview-only bits.
     drops = [

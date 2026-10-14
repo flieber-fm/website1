@@ -155,11 +155,17 @@ def footer_html(p: str, mark: bool) -> str:
   </footer>"""
 
 
+# Review banner: tells the Option 2 preview apart from the other options open in the browser. Remove before launch.
+REVIEW_BAR = ('  <div class="review-bar" role="note">Review build · <b>Option 2</b> · '
+              'Agent positioning (Oct&nbsp;7) on Option&nbsp;2’s design</div>\n')
+
+
 def apply(root) -> None:
     for rel, (p, cur) in PAGE_FILES.items():
         f = root / rel
         s = f.read_text(encoding="utf-8")
-        s = re.sub(r'  <header class="nav" id="nav">.*?</header>', lambda m: nav_html(p, cur), s, count=1, flags=re.S)
+        s = re.sub(r'  <div class="review-bar".*?</div>\n', "", s, count=1, flags=re.S)
+        s = re.sub(r'  <header class="nav" id="nav">.*?</header>', lambda m: REVIEW_BAR + nav_html(p, cur), s, count=1, flags=re.S)
         mark = 'class="footer-mark"' in s
         s = re.sub(r'  <footer class="footer">.*?</footer>', lambda m: footer_html(p, mark), s, count=1, flags=re.S)
         f.write_text(s, encoding="utf-8")
