@@ -1329,6 +1329,9 @@ a.int-tile:hover { border-color: var(--black); }
 .inst-step::before { content: counter(inststep); position: absolute; left: -64px; top: 0; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--yellow); border: 1px solid var(--black); font-weight: 600; font-size: 18px; }
 @media (max-width: 860px) { .inst-steps { padding-left: 44px; } .inst-steps::before { left: 15px; } .inst-step::before { left: -44px; width: 32px; height: 32px; font-size: 15px; } }
 .inst-step .cmd code, .inst-card .cmd code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.qs-step { margin: 6px 0 0; font-weight: 600; color: var(--white); display: flex; align-items: center; gap: 10px; font-size: 15px; }
+.qs-step:first-child { margin-top: 0; }
+.qs-n { width: 22px; height: 22px; border-radius: 50%; background: var(--yellow); color: var(--black); display: inline-grid; place-items: center; font-size: 12.5px; flex: none; }
 
 </style>
 

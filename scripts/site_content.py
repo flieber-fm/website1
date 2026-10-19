@@ -700,7 +700,10 @@ HOME_CONNECT = {
              ("macos", "macOS and Linux", "Paste in Terminal. The installer creates your Flieber account or signs you in."),
              ("windows", "Windows", "Paste in PowerShell. The installer creates your Flieber account or signs you in."),
              ("oneclick", "Windows, one click", "Download the installer and open it. It creates your Flieber account or signs you in.")],
-    "then": "Then connect your agent:",
+    "step1": "Step 1: Install Flieber and sign in",
+    "step2": "Step 2: Connect your agent",
+    "step2_note": "Using Cursor or Claude Desktop? Replace claude-code with cursor or claude-desktop.",
+    "step2_win": "Then open PowerShell, paste this and press Enter.",
     "foot": "Works with Claude Desktop, Claude Code, Cursor and Muse. Claude in the browser: coming soon. For agents: /agents and /llms.txt.",
 }
 MCP_CONNECT = {

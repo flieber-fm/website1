@@ -24,7 +24,7 @@
 
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v=60">
+  <link rel="stylesheet" href="assets/css/site.css?v=61">
 
   <script>document.documentElement.classList.remove('no-js');</script>
   <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
@@ -327,19 +327,29 @@
           <div class="cmd cmd-prompt"><span class="cmd-label">Paste into your AI tool</span><pre><code>Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything.</code></pre><button class="cmd-copy" type="button" aria-label="Copy the prompt">Copy</button></div>
         </div>
         <div class="qs-panel" role="tabpanel" id="qs-panel-macos" aria-labelledby="qs-tab-macos" hidden>
+          <p class="qs-step"><span class="qs-n">1</span> Step 1: Install Flieber and sign in</p>
           <p class="qs-note">Paste in Terminal. The installer creates your Flieber account or signs you in.</p>
                     <div class="cmd"><span class="cmd-label">macOS and Linux</span><pre><code>curl -fsSL https://cli.flieber.com/install.sh | sh</code></pre><button class="cmd-copy" type="button" aria-label="Copy the macOS and Linux command">Copy</button></div>
-          <p class="qs-then">Then connect your agent: <code>flieber mcp register --client claude-code</code> (or <code>--client cursor</code>, <code>--client claude-desktop</code>)</p>
+          <p class="qs-step"><span class="qs-n">2</span> Step 2: Connect your agent</p>
+                    <div class="cmd"><span class="cmd-label">Claude Code</span><pre><code>flieber mcp register --client claude-code</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Claude Code command">Copy</button></div>
+          <p class="qs-then">Using Cursor or Claude Desktop? Replace <code>claude-code</code> with <code>cursor</code> or <code>claude-desktop</code>.</p>
         </div>
         <div class="qs-panel" role="tabpanel" id="qs-panel-windows" aria-labelledby="qs-tab-windows" hidden>
+          <p class="qs-step"><span class="qs-n">1</span> Step 1: Install Flieber and sign in</p>
           <p class="qs-note">Paste in PowerShell. The installer creates your Flieber account or signs you in.</p>
                     <div class="cmd"><span class="cmd-label">Windows (PowerShell)</span><pre><code>irm https://cli.flieber.com/install.ps1 | iex</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Windows (PowerShell) command">Copy</button></div>
-          <p class="qs-then">Then connect your agent: <code>flieber mcp register --client claude-code</code> (or <code>--client cursor</code>, <code>--client claude-desktop</code>)</p>
+          <p class="qs-step"><span class="qs-n">2</span> Step 2: Connect your agent</p>
+                    <div class="cmd"><span class="cmd-label">Claude Code</span><pre><code>flieber mcp register --client claude-code</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Claude Code command">Copy</button></div>
+          <p class="qs-then">Using Cursor or Claude Desktop? Replace <code>claude-code</code> with <code>cursor</code> or <code>claude-desktop</code>.</p>
         </div>
         <div class="qs-panel" role="tabpanel" id="qs-panel-oneclick" aria-labelledby="qs-tab-oneclick" hidden>
+          <p class="qs-step"><span class="qs-n">1</span> Step 1: Install Flieber and sign in</p>
           <p class="qs-note">Download the installer and open it. It creates your Flieber account or signs you in.</p>
           <a class="btn btn-primary qs-dl" href="https://cli.flieber.com/flieber-install.bat" download>Download the installer <span class="arrow" aria-hidden="true">→</span></a>
-          <p class="qs-then">Then connect your agent: <code>flieber mcp register --client claude-code</code> (or <code>--client cursor</code>, <code>--client claude-desktop</code>)</p>
+          <p class="qs-step"><span class="qs-n">2</span> Step 2: Connect your agent</p>
+          <p class="qs-then">Then open PowerShell, paste this and press Enter.</p>
+                    <div class="cmd"><span class="cmd-label">Claude Code</span><pre><code>flieber mcp register --client claude-code</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Claude Code command">Copy</button></div>
+          <p class="qs-then">Using Cursor or Claude Desktop? Replace <code>claude-code</code> with <code>cursor</code> or <code>claude-desktop</code>.</p>
         </div>
         <p class="qs-foot">Works with Claude Desktop, Claude Code, Cursor and Muse. Claude in the browser: coming soon. For agents: <a href="agents/">/agents</a> and <a href="llms.txt">/llms.txt</a>.</p>
       </div>
