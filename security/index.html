@@ -24,7 +24,7 @@
 
   <link rel="preload" href="../assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/css/site.css?v=49">
+  <link rel="stylesheet" href="../assets/css/site.css?v=52">
 
   <script>document.documentElement.classList.remove('no-js');</script>
   <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
@@ -150,6 +150,7 @@
           <dt>Encryption at rest</dt><dd>AES-256 through AWS KMS for all customer data, including databases, backups, cache and file storage.</dd>
           <dt>Marketplace connections</dt><dd>When you connect Amazon or Shopify, you authorize access through OAuth: Flieber never sees your marketplace passwords, only the access tokens you grant, which you can revoke at any time. Those tokens are encrypted with a dedicated AWS KMS key and stored in AWS Secrets Manager, isolated from the rest of the platform.</dd>
           <dt>Passwords and secrets</dt><dd>Sign-in is handled by Clerk, so Flieber stores no user passwords. API tokens are stored only as hashes, and application secrets are kept in AWS Secrets Manager, never in code.</dd>
+          <dt>AI agents and Flieber CLI</dt><dd>With Flieber CLI, you sign in once and the sign-in is stored on your computer in a file only you can read, so you never paste a key or token into a chat, and local MCP settings hold no secret. Flieber reads only what your sign-in or API key allows; an API key reads one organization, limited to the data you grant. Every change an agent makes is previewed first and applied only after you confirm.</dd>
           <dt>Access</dt><dd>Two roles: Admin, with access to admin tools, and Member, with access to operational tools only. Single sign-on with Google and Microsoft.</dd>
           <dt>AI models</dt><dd>Flieber uses models from several providers, including Anthropic, OpenAI and xAI. Calculations run inside Flieber; data reaches a language model only when a request requires it. Flieber does not use customer data to train models, and its AI providers are set up not to use it for training.</dd>
           <dt>Changes to your systems</dt><dd>Every change Flieber makes to your systems follows approval rules you set; by default, every change requires approval.</dd>
@@ -219,6 +220,6 @@
     </div>
   </footer>
 
-  <script src="../assets/js/site.js?v=17" defer></script>
+  <script src="../assets/js/site.js?v=18" defer></script>
 </body>
 </html>

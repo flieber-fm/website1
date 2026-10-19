@@ -328,3 +328,17 @@
   var y = document.getElementById('year');
   if (y) y.textContent = String(new Date().getFullYear());
 })();
+
+/* Copy buttons on command snippets (Flieber CLI) */
+(function () {
+  document.querySelectorAll('.cmd-copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var code = b.parentNode.querySelector('code');
+      if (!code || !navigator.clipboard) return;
+      navigator.clipboard.writeText(code.textContent).then(function () {
+        b.textContent = 'Copied'; b.classList.add('done');
+        setTimeout(function () { b.textContent = 'Copy'; b.classList.remove('done'); }, 1800);
+      });
+    });
+  });
+})();

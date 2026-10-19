@@ -1228,7 +1228,61 @@
       "Google Ads",
       "NetSuite"
     ],
-    "connects_to_any_mcp_server": true
+    "connects_to_any_mcp_server": true,
+    "flieber_studio": {
+      "what": "Flieber's own agent: plain-language questions and actions the Flieber app supports",
+      "clients": [
+        "Claude",
+        "ChatGPT",
+        "Cursor",
+        "any MCP-compatible agent"
+      ],
+      "setup_guide": "https://app.flieber.com/app/developers",
+      "setup_guide_requires_login": true
+    },
+    "flieber_cli": {
+      "status": "early access",
+      "package": "flieber",
+      "pypi": "https://pypi.org/project/flieber/",
+      "tools": 29,
+      "transport": "stdio (local MCP server and command line)",
+      "hosted_server": "coming soon",
+      "account_required": "yes; creating a Flieber account is the first step (the installer handles it, or flieber signup)",
+      "install": {
+        "macOS and Linux": "curl -fsSL https://build.flieber.com/install.sh | sh",
+        "Windows (PowerShell)": "irm https://build.flieber.com/install.ps1 | iex"
+      },
+      "register": {
+        "Claude Code": "flieber mcp register --client claude-code",
+        "Cursor": "flieber mcp register --client cursor",
+        "Claude Desktop": "flieber mcp register --client claude-desktop",
+        "Any other local MCP client": "uvx flieber@latest mcp"
+      },
+      "skills": [
+        {
+          "name": "flieber-install",
+          "purpose": "Sets Flieber up.",
+          "url": "https://build.flieber.com/skills/flieber-install/SKILL.md"
+        },
+        {
+          "name": "flieber",
+          "purpose": "Teaches your agent which tool to use, how to read results and how to preview changes.",
+          "url": "https://build.flieber.com/skills/flieber/SKILL.md"
+        }
+      ],
+      "skills_install": "flieber skills install --client claude-code",
+      "behavior": [
+        "Every result names its signal in meta.signal: actual sales, adjusted sales or forecast. Actual and adjusted sales end at yesterday (UTC); the last days of adjusted sales are approximate. Forecasts start today.",
+        "Results have columns, rows and meta, up to 2,000 data points each. Larger requests coarsen from days to weeks to months (meta.coarsened_to) and page by series (next_offset).",
+        "Writes take two calls: the first, with commit=false, previews without changing anything; the second commits with its preview_id. Commit only after the user confirms.",
+        "Each tool takes an optional tenant argument (tenant id or org_ id); call tenants to list the organizations the sign-in can reach.",
+        "Results use product and store ids, not names, because store names aren't unique.",
+        "Errors carry a stable code, a hint and a retryable flag; over MCP they set isError.",
+        "Set FLIEBER_OAUTH_WRITES=1 to let the agent make changes such as onboarding stores or mapping SKUs; every change is still previewed first.",
+        "The reference is in the terminal (flieber docs) and in the MCP resource flieber://docs/contract."
+      ],
+      "reference": "https://app.flieber.com/api/v1/public-api/docs/llms.txt"
+    }
   },
   "integrations": {
     "native": [
@@ -1359,5 +1413,5 @@
     "email": "hello@flieber.com",
     "booking": "https://www.flieber.com/book-a-demo"
   },
-  "last_updated": "2026-10-02"
+  "last_updated": "2026-10-19"
 }

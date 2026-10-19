@@ -429,6 +429,56 @@ ICON_YOU = ('<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke=
             '<circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg>')
 
 
+def cmd_html(label: str, command: str) -> str:
+    return (f'''          <div class="cmd"><span class="cmd-label">{esc(label)}</span>'''
+            f'''<pre><code>{esc(command)}</code></pre>'''
+            f'''<button class="cmd-copy" type="button" aria-label="Copy the {esc(label)} command">Copy</button></div>''')
+
+
+def cli_codes(s: str) -> str:
+    """Escape, then set inline commands in code font so the text font never merges -- into a dash."""
+    s = esc(s)
+    for c in ("flieber login --remote", "flieber signup", "--scope project"):
+        s = s.replace(c, f"<code>{c}</code>")
+    return s
+
+
+def cli_section(soft: bool) -> str:
+    X = C.CLI
+    inst = "\n".join(cmd_html(l, c) for l, c in X["install"])
+    clients = "\n".join(cmd_html(l, c) for l, c in X["clients"])
+    skills = "\n".join(f'              <li><a href="{u}"><code>{esc(n)}</code></a> {esc(d)}</li>' for n, d, u in X["skills"])
+    facts = "\n".join(f"          <dt>{esc(k)}</dt><dd>{cli_codes(v)}</dd>" for k, v in X["facts"])
+    note = esc(X["install_note"]) + f' Flieber CLI is the <a href="{X["pypi"]}"><code>flieber</code> package on PyPI</a>.'
+    body = f'''        <div class="cli-install">
+          <h3 class="h3">{esc(X["install_h3"])}</h3>
+          <div class="cli-pair">
+{inst}
+          </div>
+          <p class="cli-note">{note}</p>
+        </div>
+        <div class="cli-grid">
+          <div class="cli-col">
+            <h3 class="h3">{esc(X["clients_h3"])}</h3>
+{clients}
+            <p class="cli-note">{cli_codes(X["clients_note"])}</p>
+          </div>
+          <div class="cli-col">
+            <h3 class="h3">{esc(X["skills_h3"])}</h3>
+{cmd_html("Claude Code", X["skills_cmd"])}
+            <ul class="cli-skills">
+{skills}
+            </ul>
+            <p class="cli-note">{esc(X["skills_note"])}</p>
+          </div>
+        </div>
+        <dl class="kv sec-kv cli-facts">
+{facts}
+        </dl>
+        <p class="link-row"><a class="link-arrow" href="{X["docs"]}">{esc(X["docs_label"])} {ARROW}</a></p>'''
+    return section("flieber-cli", f'{X["kicker"]} · {X["status"]}', X["h2"], body, soft=soft, lead=X["lead"])
+
+
 def mcp_main() -> str:
     M, p = C.MCP_PAGE, "../"
     out = page_head(f"Product · {M['name']}", M["h1"], M["lead"])
@@ -470,17 +520,18 @@ def mcp_main() -> str:
         </div>
         <p class="mcp-note">{esc(M["do_note"])}</p>''', soft=False)
     steps = "\n".join(f'''          <li class="mcp-step"><span class="n">{i}</span><p><b>{esc(t)}</b> {esc(d)}</p></li>''' for i, (t, d) in enumerate(M["steps"], 1))
-    out += section("connect", "Setup", M["steps_h2"], f'''        <ol class="mcp-steps">
+    out += section("connect", M["steps_kicker"], M["steps_h2"], f'''        <ol class="mcp-steps">
 {steps}
         </ol>
-        <p class="link-row"><a class="link-arrow" href="{C.DEV_DOCS}">{esc(M["steps_link"])} {ARROW}</a></p>''', soft=True)
+        <p class="link-row"><a class="link-arrow" href="{C.DEV_DOCS}">{esc(M["steps_link"])} {ARROW}</a></p>''', soft=True, lead=M["steps_lead"])
+    out += cli_section(soft=False)
     out += section("build-your-own", "Data layer", M["build_h2"], f'''        <p class="feat-approval">{esc(M["build"])}</p>
-        <p class="link-row"><a class="link-arrow" href="{p}product/data-layer/">Data layer {ARROW}</a></p>''', soft=False)
+        <p class="link-row"><a class="link-arrow" href="{p}product/data-layer/">Data layer {ARROW}</a></p>''', soft=True)
     faq = "\n".join(f'''          <div class="feat-faq-item">
             <h3 class="h3">{esc(q)}</h3>
             <p>{esc(a)}</p>
           </div>''' for q, a in M["faq"])
-    out += section("questions", "Questions", M["faq_h2"], '        <div class="feat-faq">\n' + faq + "\n        </div>", soft=True)
+    out += section("questions", "Questions", M["faq_h2"], '        <div class="feat-faq">\n' + faq + "\n        </div>", soft=False)
     out += closing(h2=M["close_h2"], body=M["close_body"])
     return out
 
@@ -601,6 +652,12 @@ def bwa_main() -> str:
         <h3 class="h3 cz-sub">{esc(B["connect_h2"])}</h3>
 {steps_html()}
         <p class="link-row"><a class="link-arrow" href="{p}mcp/">{esc(B["connect_link"])} {ARROW}</a></p>
+        <p class="cz-cli">{esc(B["cli_line"])}</p>
+        <div class="cz-cli-cmds">
+{cmd_html(C.CLI["install"][0][0], C.CLI["install"][0][1])}
+{cmd_html(C.CLI["install"][1][0], C.CLI["install"][1][1])}
+        </div>
+        <p class="link-row"><a class="link-arrow" href="{p}mcp/#flieber-cli">{esc(B["cli_link"])} {ARROW}</a></p>
         <h3 class="h3 cz-sub">{esc(B["build_h2"])}</h3>
 {prompts(B["build"])}
         <h3 class="h3 cz-sub">{esc(B["why_h2"])}</h3>
@@ -1022,9 +1079,10 @@ def pages_text() -> list:
         L += [f"**{title}**", "", f'- You: "{you}"', f'- Flieber: "{fl}"' + (f" ({status})" if status else ""), ""]
     L += [f"### {M['ask_h2']}", ""]
     L += [f"- {MODULE_BY_SLUG[k]['name']} ({C.SITE}/product/{k}): " + " · ".join(f'"{q}"' for q in qs) for k, qs in M["ask"]]
-    L += ["", f"### {M['do_h2']}", ""] + [f"- {t} {d}" for t, d in M["do"]] + ["", M["do_note"], "", f"### {M['steps_h2']}", ""]
+    L += ["", f"### {M['do_h2']}", ""] + [f"- {t} {d}" for t, d in M["do"]] + ["", M["do_note"], "", f"### {M['steps_kicker']}: {M['steps_h2']}", "", M["steps_lead"], ""]
     L += [f"{i}. {t} {d}" for i, (t, d) in enumerate(M["steps"], 1)]
-    L += ["", f"{M['steps_link']}: {C.DEV_DOCS}", "", f"### {M['build_h2']}", "", M["build"] + f" {C.SITE}/product/data-layer", "",
+    L += ["", f"{M['steps_link']}: {C.DEV_DOCS}"] + [x.replace("## ", "### ", 1) if x.startswith("## ") else x for x in cli_md()]
+    L += ["", f"### {M['build_h2']}", "", M["build"] + f" {C.SITE}/product/data-layer", "",
           f"### {M['faq_h2']}", ""]
     for q, a in M["faq"]:
         L += [f"**{q}** {a}", ""]
@@ -1221,6 +1279,18 @@ def agents_main() -> str:
           </ul>
         </section>
 
+        <section id="flieber-cli" aria-labelledby="h-flieber-cli">
+          <h2 id="h-flieber-cli">Flieber CLI: install and use (early access)</h2>
+          <p>{esc(C.CLI["lead"])} Creating a Flieber account is the first step; the installer handles it, or run <code>flieber signup</code>.</p>
+          <ul class="bullets">
+{chr(10).join(f"            <li><b>{esc(l)}:</b> <code>{esc(c)}</code></li>" for l, c in C.CLI["install"])}
+{chr(10).join(f"            <li><b>Connect {esc(l)}:</b> <code>{esc(c)}</code></li>" for l, c in C.CLI["clients"])}
+            <li><b>Skills:</b> <code>{esc(C.CLI["skills_cmd"])}</code>, or read them directly: {", ".join(f'<a href="{u}">{esc(n)}</a> ({esc(d[0].lower() + d[1:-1])})' for n, d, u in C.CLI["skills"])}.</li>
+{chr(10).join(f"            <li>{esc(x)}</li>" for x in C.CLI["agent_facts"])}
+            <li><b>Reference:</b> <a href="{C.CLI["docs"]}">{esc(C.CLI["docs_label"])}</a> · <a href="{C.CLI["pypi"]}">flieber on PyPI</a></li>
+          </ul>
+        </section>
+
         <section id="integrations" aria-labelledby="h-integrations">
           <h2 id="h-integrations">Integrations</h2>
           <p>Flieber connects to pretty much any system through native and assisted integrations, plus MCP and API.</p>
@@ -1308,6 +1378,7 @@ def llms_txt() -> str:
     L += ["", "## Approval", "", C.APPROVAL_AGENTS, "", "## Connect and try", ""]
     for label, text, url in C.CONNECT:
         L.append(f"- {label}: " + " ".join(x for x in (text, url) if x))
+    L += cli_md()
     L += ["", "## Integrations", "", "Flieber connects to pretty much any system through native and assisted integrations, plus MCP and API.", "",
           "Native (one-click; free trial and paid plans): " + ", ".join(C.NATIVE) + ".", "",
           "Assisted (parametrized connections set up and customized by Flieber's team; paid plans only):"]
@@ -1322,8 +1393,20 @@ def llms_txt() -> str:
           f"- [{x['name']}]({C.SITE}/{x['slug']})" for x in C.SOLUTIONS] + [f"- [{C.BWA['name']}]({C.SITE}/{C.BWA['slug']})", f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']})",
           f"- [{C.MS['name']}]({C.SITE}/{C.MS['slug']})", f"- [{C.WHO['name']}]({C.SITE}/{C.WHO['slug']})"] + [ f"- [Flieber, for AI agents]({C.SITE}/agents)",
           f"- [Full text for LLMs]({C.SITE}/llms-full.txt)", f"- [Capabilities (JSON)]({C.SITE}/capabilities.json)",
-          f"- [MCP docs (customer login required)]({C.DEV_DOCS})", f"- [G2 reviews]({C.G2})", ""]
+          f"- [Flieber Studio setup guide (customer login required)]({C.DEV_DOCS})", f"- [{C.CLI['docs_label']}]({C.CLI['docs']})", f"- [G2 reviews]({C.G2})", ""]
     return "\n".join(L)
+
+
+def cli_md() -> list:
+    X = C.CLI
+    L = ["", f"## {X['name']} ({X['status'].lower()}): install and use", "", X["lead"],
+         "Creating a Flieber account is the first step; the installer handles it, or run `flieber signup`.", ""]
+    L += [f"- {l}: `{c}`" for l, c in X["install"]]
+    L += [f"- Connect {l}: `{c}`" for l, c in X["clients"]]
+    L += [f"- Skills: `{X['skills_cmd']}`"] + [f"  - [{n}]({u}): {d}" for n, d, u in X["skills"]]
+    L += [f"- {x}" for x in X["agent_facts"]]
+    L += [f"- [{X['docs_label']}]({X['docs']})", f"- [flieber on PyPI]({X['pypi']})"]
+    return L
 
 
 def llms_full_txt() -> str:
@@ -1399,7 +1482,18 @@ def capabilities() -> dict:
                      "scheduled_workflows": "customer can allow them to run without confirmation"},
         "mcp": {"server": True, "client": True, "server_handled_by": "Flieber Studio agent",
                 "typical_response_seconds": {"min": 30, "max": 300}, "connected_apps": C.CONNECTED_APPS,
-                "connects_to_any_mcp_server": True},
+                "connects_to_any_mcp_server": True,
+                "flieber_studio": {"what": "Flieber's own agent: plain-language questions and actions the Flieber app supports",
+                                   "clients": ["Claude", "ChatGPT", "Cursor", "any MCP-compatible agent"],
+                                   "setup_guide": C.DEV_DOCS, "setup_guide_requires_login": True},
+                "flieber_cli": {"status": "early access", "package": C.CLI["package"], "pypi": C.CLI["pypi"], "tools": 29,
+                                "transport": "stdio (local MCP server and command line)", "hosted_server": "coming soon",
+                                "account_required": "yes; creating a Flieber account is the first step (the installer handles it, or flieber signup)",
+                                "install": {l: c for l, c in C.CLI["install"]},
+                                "register": {l: c for l, c in C.CLI["clients"]},
+                                "skills": [{"name": n, "purpose": d, "url": u} for n, d, u in C.CLI["skills"]],
+                                "skills_install": C.CLI["skills_cmd"],
+                                "behavior": C.CLI["agent_facts"], "reference": C.CLI["docs"]}},
         "integrations": {"native": C.NATIVE, "assisted": {cat: items for cat, items in C.ASSISTED},
                          "notes": {"SPS Commerce": "any data the brand's SPS account can access; most often the history of wholesale purchase orders, to project inventory needs, and new purchase orders added automatically, so Flieber knows those units are allocated"}},
         "connect": {"mcp_and_api_docs": C.DEV_DOCS, "free_trial": C.TRIAL, "book_a_demo": C.DEMO},

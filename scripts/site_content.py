@@ -6,8 +6,8 @@ Option 2 (Collaborative AI). Copy comes verbatim from "26-10-02 Website - Conten
 Edit here, then run: python3 scripts/build-content.py
 """
 
-LAST_UPDATED = "2026-10-02"
-LAST_UPDATED_TEXT = "October 2, 2026"
+LAST_UPDATED = "2026-10-19"
+LAST_UPDATED_TEXT = "October 19, 2026"
 
 SITE = "https://www.flieber.com"
 DEV_DOCS = "https://app.flieber.com/app/developers"
@@ -232,8 +232,9 @@ CONNECTED_APPS = ["Gmail", "Outlook", "Slack", "Microsoft Teams", "Google Sheets
 
 CONNECT = [
     ("Free trial", "14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan.", TRIAL),
-    ("MCP server", "Claude, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required):", DEV_DOCS),
+    ("Flieber Studio (MCP server)", "Claude, ChatGPT, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required):", DEV_DOCS),
     ("MCP client", "Flieber connects to any system with an MCP server. Built-in connections: " + ", ".join(CONNECTED_APPS) + ".", None),
+    ("Flieber CLI (local MCP and command line, early access)", "29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://build.flieber.com/install.sh | sh. On Windows (PowerShell): irm https://build.flieber.com/install.ps1 | iex. Package:", "https://pypi.org/project/flieber/"),
     ("Public API", "Programmatic access to Flieber data. Details (customer login required):", DEV_DOCS),
     ("Demo", "", DEMO),
 ]
@@ -465,12 +466,12 @@ MCP_PAGE = {
     "h1": "Connect Claude and ChatGPT to your sales, inventory and cash-flow data",
     "lead": ("Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber "
              "works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under "
-             "the approval rules you set."),
+             "the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build."),
     "what_h2": "What MCP is",
     "what": ("The Model Context Protocol is an open standard that lets AI assistants connect securely to the tools and "
              "data a business runs on. Connect Flieber once, and your assistant can ask Flieber questions and request "
              "actions in plain language. Your data stays in Flieber; the assistant receives only what each request needs."),
-    "agents": ["Claude", "ChatGPT", "Cursor"], "agents_other": "Any MCP-compatible agent",
+    "agents": ["Claude", "ChatGPT", "Cursor", "Claude Code"], "agents_other": "Any MCP-compatible agent",
     "convo_h2": "What a conversation looks like",
     "convo_label": "Illustrative example with sample data",
     "convos": [
@@ -513,28 +514,79 @@ MCP_PAGE = {
         ("Run workflows on schedule", "across Flieber and your connected apps."),
     ],
     "do_note": "Every change follows the approval rules you set. By default, every change waits for your approval.",
-    "steps_h2": "Connect in three steps",
+    "steps_kicker": "Flieber Studio",
+    "steps_h2": "Ask Flieber from your AI assistant",
+    "steps_lead": ("Flieber Studio is Flieber's own agent. Your assistant asks in plain language; Studio runs the analysis "
+                   "on your data and answers, or carries out the actions the Flieber app supports. Connect in three steps."),
     # Brief 5.6: step 1 becomes "Copy Flieber's MCP server URL (shown on this page)" once engineering supplies the
     # public URL; until then it reads as below. Per-assistant setup steps are added when engineering confirms them.
     "steps": [("Copy your connection details", "from Connect Apps in Flieber."),
               ("Add Flieber as a connector", "in Claude, ChatGPT, Cursor or your own agent."),
               ("Sign in to Flieber and approve the connection,", "then start asking.")],
-    "steps_link": "Full setup guide in the MCP docs (customer login required)",
+    "steps_link": "Full setup guide for Flieber Studio (customer login required)",
     "build_h2": "Build your own tools on Flieber",
     "build": ("Building reports, dashboards or agents with AI? Connect them to Flieber's data layer and skip the plumbing: "
               "your tools start from data that's already joined, mapped and corrected, and keep working as you add "
               "channels, products or suppliers. The data layer can be bought on its own."),
     "faq_h2": "Questions",
     "faq": [
-        ("Which AI assistants work with Flieber?", "Claude, ChatGPT, Cursor and any agent that supports MCP."),
-        ("Do I need to be technical to connect?", "No. Connecting takes a few minutes and no code."),
+        ("Which AI assistants work with Flieber?", "Claude, ChatGPT, Cursor and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop and any other local MCP client."),
+        ("What's the difference between Flieber Studio and Flieber CLI?", "Flieber Studio is Flieber's own agent: your assistant asks a question in plain language and Studio answers or acts. Flieber CLI gives your own agents Flieber's data and tools directly, in the terminal or in local MCP clients, so they can build reports, dashboards and workflows on it."),
+        ("Do I need a Flieber account?", "Yes. Creating your Flieber account is the first step either way. With Flieber CLI, the installer walks you through it."),
+        ("Do I need to be technical to connect?", "Not for Flieber Studio: connecting takes a few minutes and no code. Flieber CLI is for people who work in a terminal or in tools like Claude Code and Cursor."),
         ("Can my AI change things in my systems?", "Only within the approval rules you set. By default, every change waits for your approval."),
-        ("How long do answers take?", "Answers typically take 30 seconds to 5 minutes, because Flieber's agent runs the analysis on your data before it responds."),
+        ("How long do answers take?", "With Flieber Studio, answers typically take 30 seconds to 5 minutes, because Flieber's agent runs the analysis on your data before it responds. Flieber CLI tools return data and results rather than a written analysis."),
         ("Is my data used to train AI models?", "No. Flieber does not train on customer data, and its AI providers are set up not to."),
         ("Does it work without an AI assistant?", "Yes. Everything here also works in the Flieber app and in Slack."),
     ],
     "close_h2": "Connect your AI to Flieber",
     "close_body": "Start a 14-day free trial on your own data, or book a demo and we'll connect it with you.",
+}
+
+# Flieber CLI (from the Flieber MCP & CLI page shared by the product team, Oct 2026)
+CLI = {
+    "name": "Flieber CLI", "status": "Early access", "package": "flieber", "pypi": "https://pypi.org/project/flieber/",
+    "kicker": "Flieber CLI",
+    "h2": "Give your agents Flieber's data and tools",
+    "lead": ("Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, "
+             "Cursor and Claude Desktop: sales, adjusted sales, forecasts, catalog and store onboarding, through the same "
+             "29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs "
+             "you in, and gets your agents ready."),
+    "install_h3": "Install and sign in",
+    "install": [("macOS and Linux", "curl -fsSL https://build.flieber.com/install.sh | sh"),
+                ("Windows (PowerShell)", "irm https://build.flieber.com/install.ps1 | iex")],
+    "install_note": ("The installer sets up Flieber CLI, opens your browser to create your Flieber account or sign in, "
+                     "and lists your organizations. Running it again is safe and upgrades it."),
+    "clients_h3": "Connect your agent",
+    "clients": [("Claude Code", "flieber mcp register --client claude-code"),
+                ("Cursor", "flieber mcp register --client cursor"),
+                ("Claude Desktop", "flieber mcp register --client claude-desktop"),
+                ("Any other local MCP client", "uvx flieber@latest mcp")],
+    "clients_note": "Add --scope project to write a project file your team can commit, so everyone connects the same way.",
+    "skills_h3": "Give your agent the skills",
+    "skills_cmd": "flieber skills install --client claude-code",
+    "skills": [("flieber-install", "Sets Flieber up.", "https://build.flieber.com/skills/flieber-install/SKILL.md"),
+               ("flieber", "Teaches your agent which tool to use, how to read results and how to preview changes.",
+                "https://build.flieber.com/skills/flieber/SKILL.md")],
+    "skills_note": "The installer adds both skills automatically when it finds Claude Code. Cursor reads them from the same place.",
+    "facts": [("Account first", "Creating your Flieber account is the first step. The installer walks you through it, or run flieber signup."),
+              ("Your sign-in stays on your computer", "You sign in once, and the sign-in is stored in a file only you can read. You never paste a key or token into a chat."),
+              ("Every change is previewed", "Changes such as onboarding a store or mapping SKUs are previewed first and applied only after you confirm."),
+              ("Only what you allow", "Flieber reads only what your sign-in or API key allows. API keys read one organization, limited to the data you grant."),
+              ("Remote machines and sandboxes", "flieber login --remote prints a link to open on another device and asks for a one-time code.")],
+    "docs_label": "Flieber API reference for LLMs",
+    "docs": "https://app.flieber.com/api/v1/public-api/docs/llms.txt",
+    # For agents (llms files, /agents, capabilities.json)
+    "agent_facts": [
+        "Every result names its signal in meta.signal: actual sales, adjusted sales or forecast. Actual and adjusted sales end at yesterday (UTC); the last days of adjusted sales are approximate. Forecasts start today.",
+        "Results have columns, rows and meta, up to 2,000 data points each. Larger requests coarsen from days to weeks to months (meta.coarsened_to) and page by series (next_offset).",
+        "Writes take two calls: the first, with commit=false, previews without changing anything; the second commits with its preview_id. Commit only after the user confirms.",
+        "Each tool takes an optional tenant argument (tenant id or org_ id); call tenants to list the organizations the sign-in can reach.",
+        "Results use product and store ids, not names, because store names aren't unique.",
+        "Errors carry a stable code, a hint and a retryable flag; over MCP they set isError.",
+        "Set FLIEBER_OAUTH_WRITES=1 to let the agent make changes such as onboarding stores or mapping SKUs; every change is still previewed first.",
+        "The reference is in the terminal (flieber docs) and in the MCP resource flieber://docs/contract.",
+    ],
 }
 
 # ---------------------------------------------------------------- Oct 3 brief additions
@@ -561,11 +613,13 @@ BWA = {
         ("Every source connected", "Marketplaces, DTC, wholesale, 3PLs and ERPs through native and assisted integrations."),
         ("Data shaped to your business", "Listings mapped to products, bundles converted into components and sales orders routed to the regions or warehouses you choose."),
         ("History you can trust", "Sales corrected for stockouts, spikes and promotions, next to what actually sold."),
-        ("Access your way", "Flieber's MCP server for Claude, ChatGPT, Cursor and any MCP-compatible agent, plus a public API for your own systems."),
+        ("Access your way", "Flieber Studio for Claude, ChatGPT, Cursor and any MCP-compatible agent, Flieber CLI for Claude Code, Cursor and Claude Desktop, plus a public API for your own systems."),
         ("Room to grow", "Add demand forecasting, inventory forecasting, replenishment, workflows or Flieber's planners whenever you need them."),
     ],
     "connect_h2": "Connect in minutes",
     "connect_link": "Full guide on /mcp",
+    "cli_line": "Building in Claude Code or Cursor? One command installs Flieber CLI, creates your Flieber account or signs you in, and gives your agent Flieber's data and tools.",
+    "cli_link": "Flieber CLI setup",
     "build_h2": "What you can build",
     "build": [
         "A morning dashboard of stockout risk by channel, refreshed every day.",

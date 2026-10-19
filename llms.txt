@@ -2,7 +2,7 @@
 
 > Flieber is the inventory intelligence layer for multichannel commerce brands, built for AI agents and the teams who run them: it prepares inventory, purchasing, pricing and allocation decisions, explains the reasoning, and carries them out once the brand's team approves.
 
-Generated from https://www.flieber.com/features and https://www.flieber.com/agents and never contradicts them. Last updated 2026-10-02.
+Generated from https://www.flieber.com/features and https://www.flieber.com/agents and never contradicts them. Last updated 2026-10-19.
 
 ## Offers
 
@@ -119,10 +119,36 @@ Every write follows approval rules the brand sets. By default every write requir
 ## Connect and try
 
 - Free trial: 14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan. https://www.flieber.com/free-trial
-- MCP server: Claude, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required): https://app.flieber.com/app/developers
+- Flieber Studio (MCP server): Claude, ChatGPT, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required): https://app.flieber.com/app/developers
 - MCP client: Flieber connects to any system with an MCP server. Built-in connections: Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads, NetSuite.
+- Flieber CLI (local MCP and command line, early access): 29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://build.flieber.com/install.sh | sh. On Windows (PowerShell): irm https://build.flieber.com/install.ps1 | iex. Package: https://pypi.org/project/flieber/
 - Public API: Programmatic access to Flieber data. Details (customer login required): https://app.flieber.com/app/developers
 - Demo: https://www.flieber.com/book-a-demo
+
+## Flieber CLI (early access): install and use
+
+Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, Cursor and Claude Desktop: sales, adjusted sales, forecasts, catalog and store onboarding, through the same 29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs you in, and gets your agents ready.
+Creating a Flieber account is the first step; the installer handles it, or run `flieber signup`.
+
+- macOS and Linux: `curl -fsSL https://build.flieber.com/install.sh | sh`
+- Windows (PowerShell): `irm https://build.flieber.com/install.ps1 | iex`
+- Connect Claude Code: `flieber mcp register --client claude-code`
+- Connect Cursor: `flieber mcp register --client cursor`
+- Connect Claude Desktop: `flieber mcp register --client claude-desktop`
+- Connect Any other local MCP client: `uvx flieber@latest mcp`
+- Skills: `flieber skills install --client claude-code`
+  - [flieber-install](https://build.flieber.com/skills/flieber-install/SKILL.md): Sets Flieber up.
+  - [flieber](https://build.flieber.com/skills/flieber/SKILL.md): Teaches your agent which tool to use, how to read results and how to preview changes.
+- Every result names its signal in meta.signal: actual sales, adjusted sales or forecast. Actual and adjusted sales end at yesterday (UTC); the last days of adjusted sales are approximate. Forecasts start today.
+- Results have columns, rows and meta, up to 2,000 data points each. Larger requests coarsen from days to weeks to months (meta.coarsened_to) and page by series (next_offset).
+- Writes take two calls: the first, with commit=false, previews without changing anything; the second commits with its preview_id. Commit only after the user confirms.
+- Each tool takes an optional tenant argument (tenant id or org_ id); call tenants to list the organizations the sign-in can reach.
+- Results use product and store ids, not names, because store names aren't unique.
+- Errors carry a stable code, a hint and a retryable flag; over MCP they set isError.
+- Set FLIEBER_OAUTH_WRITES=1 to let the agent make changes such as onboarding stores or mapping SKUs; every change is still previewed first.
+- The reference is in the terminal (flieber docs) and in the MCP resource flieber://docs/contract.
+- [Flieber API reference for LLMs](https://app.flieber.com/api/v1/public-api/docs/llms.txt)
+- [flieber on PyPI](https://pypi.org/project/flieber/)
 
 ## Integrations
 
@@ -201,5 +227,6 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 - [Flieber, for AI agents](https://www.flieber.com/agents)
 - [Full text for LLMs](https://www.flieber.com/llms-full.txt)
 - [Capabilities (JSON)](https://www.flieber.com/capabilities.json)
-- [MCP docs (customer login required)](https://app.flieber.com/app/developers)
+- [Flieber Studio setup guide (customer login required)](https://app.flieber.com/app/developers)
+- [Flieber API reference for LLMs](https://app.flieber.com/api/v1/public-api/docs/llms.txt)
 - [G2 reviews](https://www.g2.com/products/flieber/reviews)

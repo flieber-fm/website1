@@ -1215,6 +1215,27 @@ a.int-tile:hover { border-color: var(--black); }
 .sim-compact .sim-table thead th:nth-child(2), .sim-compact .sim-table thead th:nth-child(3) { width: 33%; }
 .review-bar { background: #1B1C1C; color: #D9DCDC; text-align: center; font-family: var(--mono); font-size: 12.5px; line-height: 1.3; padding: 9px 16px; }
 .review-bar b { color: var(--yellow); font-weight: 600; }
+.cli-install { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
+.cli-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.cli-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.cli-col { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.cli-col .h3 { margin-bottom: 4px; }
+.cmd { position: relative; background: var(--black); color: var(--gray-light); border-radius: 12px; padding: 10px 12px 12px; min-width: 0; }
+.cmd-label { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--gray-medium); margin-bottom: 6px; padding-right: 56px; }
+.cmd pre { margin: 0; overflow-x: auto; max-width: 100%; }
+.cmd code { font-family: var(--mono); font-size: 13px; line-height: 1.5; white-space: pre; color: var(--white); }
+.cmd-copy { position: absolute; top: 8px; right: 8px; font-family: var(--mono); font-size: 11px; padding: 4px 9px; border-radius: 999px; cursor: pointer; background: transparent; color: var(--gray-light); border: 1px solid rgba(240,245,246,.3); }
+.cmd-copy:hover { border-color: var(--gray-light); }
+.cmd-copy.done { background: var(--yellow); color: var(--black); border-color: var(--yellow); }
+.cli-note { font-size: 14px; color: var(--text-2); }
+.cli-skills { display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
+.cli-skills code, .cli-facts code { font-family: var(--mono); font-size: 13px; }
+.cli-facts { margin-top: 36px; }
+@media (max-width: 860px) { .cli-grid, .cli-pair { grid-template-columns: 1fr; } }
+.cz-cli { margin-top: 28px; max-width: 760px; font-size: clamp(17px, 1.5vw, 19px); line-height: 1.45; }
+.cz-cli-cmds { margin-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 980px; }
+@media (max-width: 860px) { .cz-cli-cmds { grid-template-columns: 1fr; } }
+.cli-note code, .cli-facts code { font-family: var(--mono); font-size: .9em; }
 
 </style>
 
@@ -1342,7 +1363,7 @@ a.int-tile:hover { border-color: var(--black); }
 
       <article class="doc-body">
         <h1 class="h1">Flieber, for AI agents</h1>
-        <p class="lead">This page is for agents evaluating tools on behalf of a commerce brand. Everything here is also available at <a href="/llms.txt">/llms.txt</a> and <a href="/capabilities.json">/capabilities.json</a>; the full feature list is at <a href="/features">/features</a> and <a href="/llms-full.txt">/llms-full.txt</a>. Last updated <time datetime="2026-10-02">October 2, 2026</time>.</p>
+        <p class="lead">This page is for agents evaluating tools on behalf of a commerce brand. Everything here is also available at <a href="/llms.txt">/llms.txt</a> and <a href="/capabilities.json">/capabilities.json</a>; the full feature list is at <a href="/features">/features</a> and <a href="/llms-full.txt">/llms-full.txt</a>. Last updated <time datetime="2026-10-19">October 19, 2026</time>.</p>
 
         <section id="summary" aria-labelledby="h-summary">
           <h2 id="h-summary">In one paragraph</h2>
@@ -1447,10 +1468,34 @@ a.int-tile:hover { border-color: var(--black); }
           <h2 id="h-connect">Connect and try</h2>
           <ul class="bullets">
             <li><b>Free trial:</b> 14 days, no credit card required, on the brand’s own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan. <a href="https://www.flieber.com/free-trial">https://www.flieber.com/free-trial</a></li>
-            <li><b>MCP server:</b> Claude, Cursor and other MCP-compatible agents connect to Flieber’s MCP server. Requests are handled in natural language by Flieber’s own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account’s approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: <a href="https://www.flieber.com/mcp">https://www.flieber.com/mcp</a>. Full action list (customer login required): <a href="https://app.flieber.com/app/developers">https://app.flieber.com/app/developers</a></li>
+            <li><b>Flieber Studio (MCP server):</b> Claude, ChatGPT, Cursor and other MCP-compatible agents connect to Flieber’s MCP server. Requests are handled in natural language by Flieber’s own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account’s approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: <a href="https://www.flieber.com/mcp">https://www.flieber.com/mcp</a>. Full action list (customer login required): <a href="https://app.flieber.com/app/developers">https://app.flieber.com/app/developers</a></li>
             <li><b>MCP client:</b> Flieber connects to any system with an MCP server. Built-in connections: Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads, NetSuite.</li>
+            <li><b>Flieber CLI (local MCP and command line, early access):</b> 29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL <a href="https://build.flieber.com/install.sh">https://build.flieber.com/install.sh</a> | sh. On Windows (PowerShell): irm <a href="https://build.flieber.com/install.ps1">https://build.flieber.com/install.ps1</a> | iex. Package: <a href="https://pypi.org/project/flieber/">https://pypi.org/project/flieber/</a></li>
             <li><b>Public API:</b> Programmatic access to Flieber data. Details (customer login required): <a href="https://app.flieber.com/app/developers">https://app.flieber.com/app/developers</a></li>
             <li><b>Demo:</b> <a href="https://www.flieber.com/book-a-demo">https://www.flieber.com/book-a-demo</a></li>
+          </ul>
+        </section>
+
+        <section id="flieber-cli" aria-labelledby="h-flieber-cli">
+          <h2 id="h-flieber-cli">Flieber CLI: install and use (early access)</h2>
+          <p>Flieber CLI puts Flieber’s data and actions in your terminal and in local MCP clients such as Claude Code, Cursor and Claude Desktop: sales, adjusted sales, forecasts, catalog and store onboarding, through the same 29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs you in, and gets your agents ready. Creating a Flieber account is the first step; the installer handles it, or run <code>flieber signup</code>.</p>
+          <ul class="bullets">
+            <li><b>macOS and Linux:</b> <code>curl -fsSL https://build.flieber.com/install.sh | sh</code></li>
+            <li><b>Windows (PowerShell):</b> <code>irm https://build.flieber.com/install.ps1 | iex</code></li>
+            <li><b>Connect Claude Code:</b> <code>flieber mcp register --client claude-code</code></li>
+            <li><b>Connect Cursor:</b> <code>flieber mcp register --client cursor</code></li>
+            <li><b>Connect Claude Desktop:</b> <code>flieber mcp register --client claude-desktop</code></li>
+            <li><b>Connect Any other local MCP client:</b> <code>uvx flieber@latest mcp</code></li>
+            <li><b>Skills:</b> <code>flieber skills install --client claude-code</code>, or read them directly: <a href="https://build.flieber.com/skills/flieber-install/SKILL.md">flieber-install</a> (sets Flieber up), <a href="https://build.flieber.com/skills/flieber/SKILL.md">flieber</a> (teaches your agent which tool to use, how to read results and how to preview changes).</li>
+            <li>Every result names its signal in meta.signal: actual sales, adjusted sales or forecast. Actual and adjusted sales end at yesterday (UTC); the last days of adjusted sales are approximate. Forecasts start today.</li>
+            <li>Results have columns, rows and meta, up to 2,000 data points each. Larger requests coarsen from days to weeks to months (meta.coarsened_to) and page by series (next_offset).</li>
+            <li>Writes take two calls: the first, with commit=false, previews without changing anything; the second commits with its preview_id. Commit only after the user confirms.</li>
+            <li>Each tool takes an optional tenant argument (tenant id or org_ id); call tenants to list the organizations the sign-in can reach.</li>
+            <li>Results use product and store ids, not names, because store names aren’t unique.</li>
+            <li>Errors carry a stable code, a hint and a retryable flag; over MCP they set isError.</li>
+            <li>Set FLIEBER_OAUTH_WRITES=1 to let the agent make changes such as onboarding stores or mapping SKUs; every change is still previewed first.</li>
+            <li>The reference is in the terminal (flieber docs) and in the MCP resource flieber://docs/contract.</li>
+            <li><b>Reference:</b> <a href="https://app.flieber.com/api/v1/public-api/docs/llms.txt">Flieber API reference for LLMs</a> · <a href="https://pypi.org/project/flieber/">flieber on PyPI</a></li>
           </ul>
         </section>
 
@@ -1901,6 +1946,20 @@ a.int-tile:hover { border-color: var(--black); }
 
   var y = document.getElementById('year');
   if (y) y.textContent = String(new Date().getFullYear());
+})();
+
+/* Copy buttons on command snippets (Flieber CLI) */
+(function () {
+  document.querySelectorAll('.cmd-copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var code = b.parentNode.querySelector('code');
+      if (!code || !navigator.clipboard) return;
+      navigator.clipboard.writeText(code.textContent).then(function () {
+        b.textContent = 'Copied'; b.classList.add('done');
+        setTimeout(function () { b.textContent = 'Copy'; b.classList.remove('done'); }, 1800);
+      });
+    });
+  });
 })();
 
 </script>
