@@ -16,6 +16,8 @@ COPY customize /srv/customize
 COPY use-cases /srv/use-cases
 COPY integrations /srv/integrations
 COPY managed-services /srv/managed-services
+COPY install /srv/install
+COPY developers /srv/developers
 COPY home-variants /srv/home-variants
 COPY who-we-are /srv/who-we-are
 COPY put-flieber-to-work /srv/put-flieber-to-work

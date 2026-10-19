@@ -216,7 +216,7 @@ How you work together:
 
 https://www.flieber.com/mcp
 
-Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build.
+Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Connect it in minutes with one prompt in your AI tool.
 
 **What MCP is** The Model Context Protocol is an open standard that lets AI assistants connect securely to the tools and data a business runs on. Connect Flieber once, and your assistant can ask Flieber questions and request actions in plain language. Your data stays in Flieber; the assistant receives only what each request needs.
 
@@ -278,9 +278,11 @@ Full setup guide for Flieber Studio (customer login required): https://app.flieb
 Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, Cursor, Claude Desktop and Muse: sales, adjusted sales, forecasts, catalog and store onboarding, through the same 29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs you in, and gets your agents ready.
 Creating a Flieber account is the first step; the installer handles it, or run `flieber signup`.
 
-- macOS and Linux: `curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh`
-- Windows (PowerShell): `irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex`
-- Windows one-click installer (download and double-click): https://flieber-cli-7d26bb.gitlab.io/flieber-install.bat
+For a person setting it up: https://www.flieber.com/install. Easiest path: paste this prompt into Claude Desktop, Claude Code, Cursor or Muse: "Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything." Technical reference: https://www.flieber.com/developers/cli
+
+- macOS and Linux: `curl -fsSL https://cli.flieber.com/install.sh | sh`
+- Windows (PowerShell): `irm https://cli.flieber.com/install.ps1 | iex`
+- Windows one-click installer (download and double-click): https://cli.flieber.com/flieber-install.bat
 - Connect Claude Code: `flieber mcp register --client claude-code`
 - Connect Cursor: `flieber mcp register --client cursor`
 - Connect Claude Desktop: `flieber mcp register --client claude-desktop`
@@ -313,7 +315,7 @@ Building reports, dashboards or agents with AI? Connect them to Flieber's data l
 
 **Do I need a Flieber account?** Yes. Creating your Flieber account is the first step either way. With Flieber CLI, the installer walks you through it.
 
-**Do I need to be technical to connect?** Not for Flieber Studio: connecting takes a few minutes and no code. Flieber CLI is for people who work in a terminal or in tools like Claude Code and Cursor.
+**Do I need to be technical to connect?** No. Paste one prompt into Claude Desktop, Claude Code, Cursor or Muse and it sets Flieber up for you, or follow three short steps on the install page.
 
 **Can my AI change things in my systems?** Only within the approval rules you set. By default, every change waits for your approval.
 
@@ -1176,7 +1178,7 @@ Every write follows approval rules the brand sets. By default every write requir
 - Free trial: 14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan. https://www.flieber.com/free-trial
 - Flieber Studio (MCP server): Claude, ChatGPT, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required): https://app.flieber.com/app/developers
 - MCP client: Flieber connects to any system with an MCP server. Built-in connections: Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads, NetSuite.
-- Flieber CLI (local MCP and command line, early access): 29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, Muse, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh. On Windows (PowerShell): irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex. Package: https://pypi.org/project/flieber/
+- Flieber CLI (local MCP and command line, early access): 29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, Muse, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows (PowerShell): irm https://cli.flieber.com/install.ps1 | iex. Package: https://pypi.org/project/flieber/
 - Public API: Programmatic access to Flieber data. Details (customer login required): https://app.flieber.com/app/developers
 - Demo: https://www.flieber.com/book-a-demo
 
@@ -1185,9 +1187,11 @@ Every write follows approval rules the brand sets. By default every write requir
 Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, Cursor, Claude Desktop and Muse: sales, adjusted sales, forecasts, catalog and store onboarding, through the same 29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs you in, and gets your agents ready.
 Creating a Flieber account is the first step; the installer handles it, or run `flieber signup`.
 
-- macOS and Linux: `curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh`
-- Windows (PowerShell): `irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex`
-- Windows one-click installer (download and double-click): https://flieber-cli-7d26bb.gitlab.io/flieber-install.bat
+For a person setting it up: https://www.flieber.com/install. Easiest path: paste this prompt into Claude Desktop, Claude Code, Cursor or Muse: "Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything." Technical reference: https://www.flieber.com/developers/cli
+
+- macOS and Linux: `curl -fsSL https://cli.flieber.com/install.sh | sh`
+- Windows (PowerShell): `irm https://cli.flieber.com/install.ps1 | iex`
+- Windows one-click installer (download and double-click): https://cli.flieber.com/flieber-install.bat
 - Connect Claude Code: `flieber mcp register --client claude-code`
 - Connect Cursor: `flieber mcp register --client cursor`
 - Connect Claude Desktop: `flieber mcp register --client claude-desktop`

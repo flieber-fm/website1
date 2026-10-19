@@ -1249,9 +1249,9 @@
       "hosted_server": "coming soon",
       "account_required": "yes; creating a Flieber account is the first step (the installer handles it, or flieber signup)",
       "install": {
-        "macOS and Linux": "curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh",
-        "Windows (PowerShell)": "irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex",
-        "Windows (one-click)": "https://flieber-cli-7d26bb.gitlab.io/flieber-install.bat"
+        "macOS and Linux": "curl -fsSL https://cli.flieber.com/install.sh | sh",
+        "Windows (PowerShell)": "irm https://cli.flieber.com/install.ps1 | iex",
+        "Windows (one-click)": "https://cli.flieber.com/flieber-install.bat"
       },
       "coming_soon": [
         "Hosted MCP server",

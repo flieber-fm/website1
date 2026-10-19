@@ -361,3 +361,33 @@
     });
   });
 })();
+
+/* Tab sets (/install): click or arrow keys; data-os-default opens the visitor's own system */
+(function () {
+  var os = (function () {
+    var p = ((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '').toLowerCase();
+    if (p.indexOf('win') > -1) return 'windows';
+    if (p.indexOf('mac') > -1) return 'mac';
+    if (p.indexOf('linux') > -1 || p.indexOf('x11') > -1) return 'linux';
+    return null;
+  })();
+  document.querySelectorAll('.tabset').forEach(function (set) {
+    var tabs = [].slice.call(set.querySelectorAll('.tab'));
+    function pick(t) {
+      tabs.forEach(function (x) {
+        var on = x === t; x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1;
+        document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+      });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { pick(t); });
+      t.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!d) return;
+        var n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); e.preventDefault();
+      });
+    });
+    if (set.hasAttribute('data-os-default') && os) {
+      var m = set.querySelector('.tab[data-os="' + os + '"]'); if (m) pick(m);
+    }
+  });
+})();

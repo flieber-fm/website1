@@ -37,6 +37,8 @@ for _u in C.USE_CASES:  # not in any menu (brief 7)
     PAGE_FILES[f"use-cases/{_u['slug']}/index.html"] = ("../../", None)
 PAGE_FILES[f"{C.MS['slug']}/index.html"] = ("../", None)
 PAGE_FILES[f"{C.WHO['slug']}/index.html"] = ("../", "who")
+PAGE_FILES[f"{C.INSTALL['slug']}/index.html"] = ("../", "product")
+PAGE_FILES[f"{C.DEVREF['slug']}/index.html"] = ("../../", "product")
 PAGE_FILES[f"{W.PAGE['slug']}/index.html"] = ("../", "product")
 
 CHEVRON = ('<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">'
@@ -65,6 +67,7 @@ def nav_html(p: str, cur) -> str:
     product += f'\n            <a href="{p}{W.PAGE["slug"]}/">{esc(W.PAGE["name"])}</a>'
     product += f'\n            <a href="{p}integrations/">Integrations</a>'
     product += f'\n            <a href="{p}{C.MCP_PAGE["slug"]}/">{esc(C.MCP_PAGE["name"])}</a>'
+    product += f'\n            <a href="{p}{C.INSTALL["slug"]}/">Install in your AI tool</a>'
     product += f'\n            <a href="{p}security/">Security &amp; data</a>'
     sol = "\n".join(f'            <a href="{p}{x["slug"]}/">{esc(x["name"])}</a>' for x in C.SOLUTIONS)
     sol += f'\n            <a href="{p}{C.BWA["slug"]}/">{esc(C.BWA["name"])}</a>'
@@ -132,7 +135,8 @@ def footer_html(p: str, mark: bool) -> str:
             <li><a href="{p}agents/"><code>/agents</code></a></li>
             <li><a href="{p}llms.txt"><code>/llms.txt</code></a></li>
             <li><a href="{p}capabilities.json"><code>/capabilities.json</code></a></li>
-            <li><a href="{C.DEV_DOCS}">MCP docs</a></li>
+            <li><a href="{p}install/">Install in your AI tool</a></li>
+            <li><a href="{p}developers/cli/">Developer reference</a></li>
           </ul>
         </div>
         <div>

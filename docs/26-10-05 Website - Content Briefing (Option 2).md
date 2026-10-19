@@ -136,24 +136,17 @@ Promoted on Oct 7 from homepage variant V6 ("Intelligence layer"): Flieber as th
 
 The 14 customer logos already uploaded to HubSpot, in one row (scrolling on mobile). Do not recreate them.
 
-### 4.2b Quick start box (Oct 19, replaces the Connect your agent section)
+### 4.2b Quick start box (prompt first, Oct 19)
 
-A compact dark box right after the logos, not a full section: a quick install guide, after the benchmark Fabricio shared. Generated from HOME_CONNECT and CLI in site_content.py.
+A compact dark box right after the logos. The first and only choice in the box is the install prompt; everything else is on /install.
 
-**Header:** "Quick start" (mono, yellow) · right: "All install options →" to /mcp
+**Header:** "Quick start" · right: "All install options →" to /install
 
-**Tabs, one panel each:**
+**Text:** Copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step.
 
-- **macOS and Linux:** One command installs Flieber CLI, creates your Flieber account or signs you in, and connects your agents.
-- **Windows:** Run in PowerShell. The installer creates your Flieber account or signs you in.
-- **Windows, one click:** Download the installer and double-click it. It creates your Flieber account or signs you in.
-- **AI assistant, no code:** Ask Flieber from Claude, ChatGPT or Cursor with Flieber Studio.
+**Prompt box (Copy button):** "Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything."
 
-Panels: macOS and Linux shows `curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh`; Windows shows `irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex`; Windows, one click shows a "Download flieber-install.bat" button; AI assistant, no code shows the three Flieber Studio steps. The two command panels add "Then connect your agent: `flieber mcp register --client claude-code` (or `--client cursor`, `--client claude-desktop`)".
-
-**Footer line:** Works with Claude Code, Cursor, Claude Desktop, Claude, ChatGPT, Muse and any MCP-compatible agent.
-
-Structured data: a Flieber CLI SoftwareApplication (macOS, Linux, Windows; install on /mcp#flieber-cli; download on PyPI) on the homepage and /mcp.
+**Footer line:** Prefer to do it yourself? The install page walks you through three short steps. Claude in the browser: coming soon.
 
 ### 4.3 Why inventory
 
@@ -1119,6 +1112,52 @@ The full founder statement from section 4.11 (all three paragraphs), signed Fabr
 - **Backorders and preorders card (changed from Option 1):** "Counts accumulated backorder demand in inventory and replenishment calculations, with settings at the product and store level, and plans for products sold before they arrive." The FAQ answer "Does Flieber handle backorders and preorders?" becomes "Yes, with settings at the product and store level."
 - **Use-case links:** each card a use-case page relies on links to it, as "Use case: [name] →".
 - **New FAQ question (added first):** **Can I buy only the data layer?** Yes. Teams building their own tools with AI can use Flieber's data layer on its own through MCP and API, and add the other modules any time.
+
+## 11b. /install and /developers/cli (Oct 19, from Fabricio's Install Page brief)
+
+Plain-language install page for non-technical users (operations and supply chain leads who use Claude but have never opened Terminal). The prompt comes first; installing by hand is second. Technical content lives on /developers/cli. All install links use cli.flieber.com. One setting, HOSTED_MCP_LIVE in site_content.py, switches "Coming soon" off for the hosted connection and Claude in the browser.
+
+### /install
+
+**Label:** Install · **H1:** Use Flieber from Claude · **Lead:** Ask about your sales, forecasts and catalog, or set up your Flieber account, in plain language from the AI tool you already use.
+
+**Three choices (hero):**
+
+1. **Let your AI tool set it up** (tag: Easiest; larger, first): Copy this prompt and paste it into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself. It asks before every step. Prompt with Copy: "Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything." · TODO: Engineering to confirm which AI tools can run this prompt (Claude Desktop chat, Claude Code, Cursor, Muse) and the final address of the setup guide the prompt points to.
+2. **Install it yourself** (tag: About 5 minutes): Three short steps. Works with Claude Desktop, Claude Code, Cursor and Muse. Button: Start → Step 1
+3. **Claude in your browser** (Coming soon): Add Flieber to Claude in your browser and sign in with your Flieber account. Nothing to install. No button until live.
+
+**Before you start:** A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything. · Claude Desktop, Claude Code, Cursor or Muse installed. · A Flieber account. No account yet? The installer helps you create one.
+
+**Step 1: Install Flieber and sign in** (Early access): This installs the Flieber app for your computer and signs you in. Tabs Windows, Mac, Linux; the visitor's system opens by default.
+- Windows: Download the installer, then open the file you downloaded. Button "Download the installer" (cli.flieber.com/flieber-install.bat). If Windows shows a blue “Windows protected your PC” box, click More info, then Run anyway. TODO: Engineering to confirm whether this Windows warning appears. Collapsed "Prefer PowerShell?": Open PowerShell: press the Start key, type PowerShell and press Enter. Paste this command and press Enter. `irm https://cli.flieber.com/install.ps1 | iex`
+- Mac: Open Terminal: press Cmd + Space, type Terminal and press Enter. Paste this command and press Enter. `curl -fsSL https://cli.flieber.com/install.sh | sh` · Linux: Open a terminal window, paste this command and press Enter. Same command.
+- Then: Your browser opens the Flieber sign-in page. Sign in. Back in the window, you'll see your Flieber organizations. No organization yet? The installer offers to create one with you. Success: You'll see your Flieber organization listed. Run the same installer again any time to update Flieber. Link: "Review the installer before running it" → cli.flieber.com
+
+**Step 2: Connect Flieber to your AI tool:** This adds the Flieber connection to your AI tool. (tooltip: Flieber connects through MCP, the open standard that lets AI tools use other software.) Tabs: Claude Desktop (first): In the same window, paste this command and press Enter. Then quit Claude Desktop completely and open it again. On Windows, use PowerShell for this, not another terminal. · Claude Code: In the same window, paste this command and press Enter. This adds Flieber to all your projects. The installer also teaches Claude Code how to use Flieber well. · Cursor: In the same window, paste this command and press Enter. · Muse and other tools (For technical teams): Point your tool at this command to run the Flieber connection on your computer. `uvx flieber@latest mcp`; To let your tool make changes, always after your approval, set FLIEBER_OAUTH_WRITES=1. If your tool can't find uvx, use its full path: run which uvx on Mac and Linux, or where uvx on Windows. · Claude in the browser (Coming soon): Add Flieber to Claude in your browser and sign in with your Flieber account. Nothing to install. Success: Open a new chat and ask: What can Flieber do?
+
+**Step 3: Try it:** "Which products sold the most units last month?" · "Show me the forecast for my top 10 products for the next 90 days." · "Which of my SKUs are not mapped to a product yet?" · "Help me connect my Shopify store to Flieber." (each with Copy)
+
+**What Claude can do with Flieber:** **Answer questions** Actual sales, sales adjusted for stockouts and price effects, forecasts, 30, 90 and 365-day trends, products, listings and SKU mapping. · **Set up your account** Create an organization, connect stores (Amazon, eBay, Etsy, Walmart, BigCommerce and Shopify), map SKUs, add inventory locations and go live. · **Adjust a forecast** Change the forecast for a product in a store for a given month. Link: See all 29 capabilities → /developers/cli#tools
+
+**Built to be safe:** Claude shows you every change first and waits for your OK before applying it. · Going live is permanent, so Claude always asks you to confirm it. · Your sign-in is saved on your computer. You never paste a password or key into a chat. · Claude sees only what your Flieber account is allowed to see. · Actual sales, adjusted sales and forecasts are kept separate, so numbers are never mixed.
+
+**If something goes wrong** (table): Flieber doesn't appear in Claude: Quit Claude Desktop completely and open it again. · “Command not found” after installing: Close the Terminal or PowerShell window, open a new one and try again. · Claude says you're not signed in: Paste `flieber login` into Terminal or PowerShell and press Enter. · Claude says changes are turned off: Repeat Step 2 using the command shown on this page. · Claude says your plan doesn't include something: Contact your Flieber account team. · “Your organization is being set up”: Wait a minute or two, then try again. Do not create it a second time. · “Too many requests” or a timeout: Wait a moment and ask again, or ask for a shorter date range. · Anything else: Contact Flieber support. Never share your sign-in or key.
+
+**For developers:** API keys, signing in on a remote machine or sandbox, manual setup, the result format, error codes and agent skills are all in the technical reference. → Technical reference (/developers/cli)
+
+### /developers/cli
+
+**Label:** Developers · Early access · flieber 0.1.4 · **H1:** Flieber CLI and MCP: technical reference · **Lead:** Flieber exposes sales, adjusted sales, forecasts, catalog and store onboarding as 29 tools for AI agents. The same tools run in the command line and over MCP, under one contract (flieber contract v1).
+
+Sections: Three ways in (command line, local MCP server, hosted MCP server: Coming soon) · the full Flieber CLI block (install, connect your agent, skills, facts, coming soon) · Other ways to sign in · Manual setup (Claude Code command, Cursor JSON, any stdio client, notes) · Tools (TODO: The full tool catalog (inputs, columns and API-key grants) is not in the engineering guide shared with the website team yet.) · Errors (TODO: The error code table was empty in the engineering guide; to add when engineering shares it.)
+
+### Elsewhere
+
+- /mcp: first section after the hero is now "Connect Flieber to your AI tool": The easiest way: copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step. Prompt with Copy, then "Install it yourself, step by step →" to /install. Flieber Studio follows. The full CLI block moved to /developers/cli.
+- Product menu and footer ("For agents"): "Install in your AI tool" (/install); the footer also links the developer reference.
+- /customize: the Flieber CLI line links to /install.
+- /agents, llms.txt, llms-full.txt: point people to /install and quote the prompt; the technical reference is /developers/cli.
 
 ## 12. /agents changes from Option 1
 

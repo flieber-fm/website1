@@ -1278,6 +1278,50 @@ a.int-tile:hover { border-color: var(--black); }
 .qs .cmd-label { display: none; }
 .qs .cmd { padding: 12px 70px 12px 14px; }
 .qs .cmd-copy { top: 50%; transform: translateY(-50%); }
+.todo { margin: 8px 0 0; padding: 8px 12px; border: 1px dashed #C9A400; border-radius: 8px; background: #FFF9D6; color: #1B1C1C; font-size: 13.5px; }
+.qs .todo, .cmd + .todo { font-size: 12.5px; }
+.cmd-prompt code { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13.5px; }
+.inst-choices { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 14px; }
+.inst-side { display: grid; gap: 14px; }
+.inst-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l); padding: clamp(20px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 10px; align-items: flex-start; min-width: 0; }
+.inst-card > * { max-width: 100%; }
+.inst-card .cmd { align-self: stretch; }
+.inst-main { border-color: var(--black); box-shadow: 0 18px 40px -30px rgba(27,28,28,.45); }
+.inst-card p { margin: 0; color: var(--text-2); }
+.inst-card .hc-tag { color: var(--text-2); min-height: 1em; }
+.inst-check { display: flex; flex-direction: column; gap: 10px; max-width: 760px; font-size: 17px; }
+.inst-check li { padding-left: 28px; position: relative; }
+.inst-check li::before { content: "✓"; position: absolute; left: 0; color: var(--black); font-weight: 600; }
+.inst-steps { display: flex; flex-direction: column; gap: clamp(48px, 6vw, 72px); }
+.inst-step { display: flex; flex-direction: column; gap: 14px; max-width: 860px; }
+.inst-step .lead { margin: 0; }
+.inst-h { margin: 0; font-size: clamp(28px, 3vw, 40px); }
+.inst-ok { font-weight: 600; }
+.inst-ok span { color: #2E7D32; margin-right: 4px; }
+.inst-note { font-size: 14.5px; color: var(--text-2); }
+.inst-note code, .inst-trouble code, .inst-notes code { font-family: var(--mono); font-size: .9em; }
+.inst-alt summary { cursor: pointer; font-weight: 600; margin-top: 6px; }
+.inst-alt[open] > * + * { margin-top: 10px; }
+.inst-try { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.cmd-try { list-style: none; padding-right: 70px; }
+.cmd-try code { white-space: pre-wrap; font-family: inherit; font-size: 15px; }
+.cmd-try .cmd-copy { top: 50%; transform: translateY(-50%); }
+.inst-safe { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.inst-safe .why-card p { color: var(--black); }
+.inst-trouble { width: 100%; max-width: 980px; border-collapse: collapse; font-size: 15.5px; }
+.inst-trouble th, .inst-trouble td { text-align: left; padding: 12px 14px; border-top: 1px solid var(--line); vertical-align: top; }
+.inst-trouble thead th { font-family: var(--mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; color: var(--text-2); border-top: 0; }
+.inst-trouble tbody th { font-weight: 600; width: 40%; }
+.tabset { display: flex; flex-direction: column; gap: 14px; }
+.tablist { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab { font: inherit; font-size: 14.5px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--white); color: var(--black); cursor: pointer; }
+.tab[aria-selected="true"] { background: var(--black); color: var(--white); border-color: var(--black); }
+.tabpanel { display: flex; flex-direction: column; gap: 12px; }
+.tabpanel[hidden] { display: none; }
+.tabpanel p { margin: 0; }
+.mcp-prompt { max-width: 860px; }
+@media (max-width: 1140px) { .inst-safe { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 860px) { .inst-choices, .inst-try, .inst-safe { grid-template-columns: 1fr; } .inst-trouble tbody th { width: auto; } .inst-trouble, .inst-trouble tbody, .inst-trouble tr, .inst-trouble th, .inst-trouble td { display: block; } .inst-trouble thead { display: none; } .inst-trouble td { border-top: 0; padding-top: 0; } }
 
 </style>
 
@@ -1299,7 +1343,7 @@ a.int-tile:hover { border-color: var(--black); }
       "@id": "https://www.flieber.com/mcp",
       "url": "https://www.flieber.com/mcp",
       "name": "Connect Claude and ChatGPT to your sales, inventory and cash-flow data",
-      "description": "Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build.",
+      "description": "Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Connect it in minutes with one prompt in your AI tool.",
       "isPartOf": {
         "@type": "WebSite",
         "url": "https://www.flieber.com"
@@ -1339,7 +1383,7 @@ a.int-tile:hover { border-color: var(--black); }
           "name": "Do I need to be technical to connect?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not for Flieber Studio: connecting takes a few minutes and no code. Flieber CLI is for people who work in a terminal or in tools like Claude Code and Cursor."
+            "text": "No. Paste one prompt into Claude Desktop, Claude Code, Cursor or Muse and it sets Flieber up for you, or follow three short steps on the install page."
           }
         },
         {
@@ -1419,6 +1463,7 @@ a.int-tile:hover { border-color: var(--black); }
             <a href="/put-flieber-to-work">Put Flieber to work</a>
             <a href="/integrations">Integrations</a>
             <a href="/mcp">MCP and AI agents</a>
+            <a href="/install">Install in your AI tool</a>
             <a href="/security">Security &amp; data</a>
           </div>
         </div>
@@ -1454,7 +1499,7 @@ a.int-tile:hover { border-color: var(--black); }
         <div class="section-head">
           <span class="kicker">Product · MCP and AI agents</span>
           <h1 class="h1" id="page-title">Connect Claude and ChatGPT to your sales, inventory and cash-flow data</h1>
-          <p class="lead">Ask your own AI about your business and get answers from Flieber’s current, contextualized data. Flieber works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build.</p>
+          <p class="lead">Ask your own AI about your business and get answers from Flieber’s current, contextualized data. Flieber works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Connect it in minutes with one prompt in your AI tool.</p>
         </div>
         <div class="sol-actions">
           <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
@@ -1466,8 +1511,22 @@ a.int-tile:hover { border-color: var(--black); }
     <section class="section" id="connect" aria-labelledby="connect-title">
       <div class="wrap">
         <div class="section-head">
+          <span class="kicker">Connect</span>
+          <h2 class="h2" id="connect-title" style="margin-top:20px">Connect Flieber to your AI tool</h2>
+          <p class="lead">The easiest way: copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step.</p>
+        </div>
+        <div class="mcp-prompt">
+          <div class="cmd cmd-prompt"><span class="cmd-label">Paste into your AI tool</span><pre><code>Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything.</code></pre><button class="cmd-copy" type="button" aria-label="Copy the prompt">Copy</button></div>
+        </div>
+        <p class="link-row"><a class="link-arrow" href="/install">Install it yourself, step by step <span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="flieber-studio" aria-labelledby="flieber-studio-title">
+      <div class="wrap">
+        <div class="section-head">
           <span class="kicker">Flieber Studio</span>
-          <h2 class="h2" id="connect-title" style="margin-top:20px">Ask Flieber from your AI assistant</h2>
+          <h2 class="h2" id="flieber-studio-title" style="margin-top:20px">Ask Flieber from your AI assistant</h2>
           <p class="lead">Flieber Studio is Flieber’s own agent. Your assistant asks in plain language; Studio runs the analysis on your data and answers, or carries out the actions the Flieber app supports. Connect in three steps.</p>
         </div>
         <ol class="mcp-steps">
@@ -1476,56 +1535,6 @@ a.int-tile:hover { border-color: var(--black); }
           <li class="mcp-step"><span class="n">3</span><p><b>Sign in to Flieber and approve the connection,</b> then start asking.</p></li>
         </ol>
         <p class="link-row"><a class="link-arrow" href="https://app.flieber.com/app/developers">Full setup guide for Flieber Studio (customer login required) <span class="arrow" aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="flieber-cli" aria-labelledby="flieber-cli-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Flieber CLI · Early access</span>
-          <h2 class="h2" id="flieber-cli-title" style="margin-top:20px">Give your agents Flieber’s data and tools</h2>
-          <p class="lead">Flieber CLI puts Flieber’s data and actions in your terminal and in local MCP clients such as Claude Code, Cursor, Claude Desktop and Muse: sales, adjusted sales, forecasts, catalog and store onboarding, through the same 29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs you in, and gets your agents ready.</p>
-        </div>
-        <div class="cli-install">
-          <h3 class="h3">Install and sign in</h3>
-          <div class="cli-pair">
-          <div class="cmd"><span class="cmd-label">macOS and Linux</span><pre><code>curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh</code></pre><button class="cmd-copy" type="button" aria-label="Copy the macOS and Linux command">Copy</button></div>
-          <div class="cmd"><span class="cmd-label">Windows (PowerShell)</span><pre><code>irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Windows (PowerShell) command">Copy</button></div>
-          </div>
-          <p class="cli-note">The installer sets up Flieber CLI, opens your browser to create your Flieber account or sign in, and lists your organizations. Running it again is safe and upgrades it. Flieber CLI is the <a href="https://pypi.org/project/flieber/"><code>flieber</code> package on PyPI</a>.</p>
-          <p class="cli-bat"><a class="link-arrow" href="https://flieber-cli-7d26bb.gitlab.io/flieber-install.bat" download>Prefer one click on Windows? Download flieber-install.bat and double-click it. <span class="arrow" aria-hidden="true">→</span></a></p>
-        </div>
-        <div class="cli-grid">
-          <div class="cli-col">
-            <h3 class="h3">Connect your agent</h3>
-          <div class="cmd"><span class="cmd-label">Claude Code</span><pre><code>flieber mcp register --client claude-code</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Claude Code command">Copy</button></div>
-          <div class="cmd"><span class="cmd-label">Cursor</span><pre><code>flieber mcp register --client cursor</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Cursor command">Copy</button></div>
-          <div class="cmd"><span class="cmd-label">Claude Desktop</span><pre><code>flieber mcp register --client claude-desktop</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Claude Desktop command">Copy</button></div>
-          <div class="cmd"><span class="cmd-label">Muse or any other local MCP client</span><pre><code>uvx flieber@latest mcp</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Muse or any other local MCP client command">Copy</button></div>
-            <p class="cli-note">Add <code>--scope project</code> to write a project file your team can commit, so everyone connects the same way.</p>
-            <ul class="cli-soon">
-              <li><span class="soon-tag">Coming soon</span> <b>Hosted MCP server.</b> Connect without installing anything; your sign-in passes through and nothing is stored.</li>
-              <li><span class="soon-tag">Coming soon</span> <b>Flieber in claude.ai.</b> Add Flieber under Settings, Connectors, sign in to Flieber and start asking, with nothing to install.</li>
-            </ul>
-          </div>
-          <div class="cli-col">
-            <h3 class="h3">Give your agent the skills</h3>
-          <div class="cmd"><span class="cmd-label">Claude Code</span><pre><code>flieber skills install --client claude-code</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Claude Code command">Copy</button></div>
-            <ul class="cli-skills">
-              <li><a href="https://cli.flieber.com/skills/flieber-install/SKILL.md"><code>flieber-install</code></a> Sets Flieber up.</li>
-              <li><a href="https://cli.flieber.com/skills/flieber/SKILL.md"><code>flieber</code></a> Teaches your agent which tool to use, how to read results and how to preview changes.</li>
-            </ul>
-            <p class="cli-note">The installer adds both skills automatically when it finds Claude Code. Cursor reads them from the same place.</p>
-          </div>
-        </div>
-        <dl class="kv sec-kv cli-facts">
-          <dt>Account first</dt><dd>Creating your Flieber account is the first step. The installer walks you through it, or run <code>flieber signup</code>.</dd>
-          <dt>Your sign-in stays on your computer</dt><dd>You sign in once, and the sign-in is stored in a file only you can read. You never paste a key or token into a chat.</dd>
-          <dt>Every change is previewed</dt><dd>Changes such as onboarding a store or mapping SKUs are previewed first and applied only after you confirm.</dd>
-          <dt>Only what you allow</dt><dd>Flieber reads only what your sign-in or API key allows. API keys read one organization, limited to the data you grant.</dd>
-          <dt>Remote machines and sandboxes</dt><dd><code>flieber login --remote</code> prints a link to open on another device and asks for a one-time code.</dd>
-        </dl>
-        <p class="link-row"><a class="link-arrow" href="https://app.flieber.com/api/v1/public-api/docs/llms.txt">Flieber API reference for LLMs <span class="arrow" aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
@@ -1704,7 +1713,7 @@ a.int-tile:hover { border-color: var(--black); }
           </div>
           <div class="feat-faq-item">
             <h3 class="h3">Do I need to be technical to connect?</h3>
-            <p>Not for Flieber Studio: connecting takes a few minutes and no code. Flieber CLI is for people who work in a terminal or in tools like Claude Code and Cursor.</p>
+            <p>No. Paste one prompt into Claude Desktop, Claude Code, Cursor or Muse and it sets Flieber up for you, or follow three short steps on the install page.</p>
           </div>
           <div class="feat-faq-item">
             <h3 class="h3">Can my AI change things in my systems?</h3>
@@ -1777,7 +1786,8 @@ a.int-tile:hover { border-color: var(--black); }
             <li><a href="/agents"><code>/agents</code></a></li>
             <li><a href="/llms.txt"><code>/llms.txt</code></a></li>
             <li><a href="/capabilities.json"><code>/capabilities.json</code></a></li>
-            <li><a href="https://app.flieber.com/app/developers">MCP docs</a></li>
+            <li><a href="/install">Install in your AI tool</a></li>
+            <li><a href="/developers/cli">Developer reference</a></li>
           </ul>
         </div>
         <div>
@@ -2162,6 +2172,36 @@ a.int-tile:hover { border-color: var(--black); }
       var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!d) return;
       var n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); e.preventDefault();
     });
+  });
+})();
+
+/* Tab sets (/install): click or arrow keys; data-os-default opens the visitor's own system */
+(function () {
+  var os = (function () {
+    var p = ((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '').toLowerCase();
+    if (p.indexOf('win') > -1) return 'windows';
+    if (p.indexOf('mac') > -1) return 'mac';
+    if (p.indexOf('linux') > -1 || p.indexOf('x11') > -1) return 'linux';
+    return null;
+  })();
+  document.querySelectorAll('.tabset').forEach(function (set) {
+    var tabs = [].slice.call(set.querySelectorAll('.tab'));
+    function pick(t) {
+      tabs.forEach(function (x) {
+        var on = x === t; x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1;
+        document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+      });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { pick(t); });
+      t.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!d) return;
+        var n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); e.preventDefault();
+      });
+    });
+    if (set.hasAttribute('data-os-default') && os) {
+      var m = set.querySelector('.tab[data-os="' + os + '"]'); if (m) pick(m);
+    }
   });
 })();
 
