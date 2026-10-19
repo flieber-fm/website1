@@ -1129,9 +1129,10 @@ def work_link(p: str) -> str:
 def home_connect_html() -> str:
     """Compact quick-start box after the logos: the install prompt first, then the commands, a link to /mcp for the rest."""
     H, X = C.HOME_CONNECT, C.CLI
-    body = {"prompt": prompt_box("Paste into your AI tool"), "macos": cmd_html(*X["install"][0]), "windows": cmd_html(*X["install"][1]),
-            "oneclick": (f'<a class="btn btn-primary qs-dl" href="{X["bat"]}" download>Download the installer '
-                         f'<span class="arrow" aria-hidden="true">→</span></a>')}
+    body = {"prompt": prompt_box("Paste into your AI tool"), "macos": cmd_html(*X["install"][0]),
+            "windows": (f'<a class="btn btn-primary qs-dl" href="{X["bat"]}" download>Download the installer '
+                        f'<span class="arrow" aria-hidden="true">→</span></a>\n'
+                        f'          <p class="qs-then">{esc(H["win_or"])}</p>\n          {cmd_html(*X["install"][1])}')}
     tabs, panels = [], []
     for i, (k, label, note) in enumerate(H["tabs"]):
         sel = "true" if i == 0 else "false"
@@ -1141,7 +1142,7 @@ def home_connect_html() -> str:
         if k == "prompt":
             inner = f'          <p class="qs-note">{esc(note)}</p>\n          {body[k]}'
         else:
-            n2 = ('          <p class="qs-then">' + esc(H["step2_win"]) + "</p>\n") if k == "oneclick" else ""
+            n2 = ('          <p class="qs-then">' + esc(H["step2_win"]) + "</p>\n") if k == "windows" else ""
             note2 = esc(H["step2_note"]).replace("claude-code", "<code>claude-code</code>").replace("cursor ", "<code>cursor</code> ").replace("claude-desktop.", "<code>claude-desktop</code>.")
             inner = (f'          <p class="qs-step"><span class="qs-n">1</span> {esc(H["step1"])}</p>\n'
                      f'          <p class="qs-note">{esc(note)}</p>\n          {body[k]}\n'
