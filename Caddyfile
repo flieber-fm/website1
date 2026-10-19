@@ -16,6 +16,8 @@
 	header @static Cache-Control "public, max-age=86400"
 	header @revalidate Cache-Control "no-cache"
 	# Option 2 redirects (brief section 10)
+	redir /install /mcp/ 301
+	redir /install/ /mcp/ 301
 	redir /omnichannel /multichannel/ 301
 	redir /ecommerce /multichannel/ 301
 	redir /flieber-vs-netsuite /before-you-choose/ 301

@@ -614,12 +614,19 @@ def install_main() -> str:
     safe = "\n".join(f'          <article class="why-card"><p>{esc(s)}</p></article>' for s in I["safe"])
     out += section("built-to-be-safe", "Safety", I["safe_h2"], f'        <div class="why-grid inst-safe">\n{safe}\n        </div>', soft=False)
     rows = "\n".join(f"            <tr><th scope=\"row\">{esc(a)}</th><td>{ticks(b)}</td></tr>" for a, b in I["trouble"])
+    M = C.MCP_PAGE
+    st = "\n".join(f'''          <li class="mcp-step"><span class="n">{i}</span><p><b>{esc(s_)}</b> {esc(d)}</p></li>''' for i, (s_, d) in enumerate(M["steps"], 1))
+    out += section("flieber-studio", I["studio_kicker"], I["studio_h2"], f'''        <ol class="mcp-steps">
+{st}
+        </ol>
+        <p class="link-row"><a class="link-arrow" href="{C.DEV_DOCS}">{esc(M["steps_link"])} {ARROW}</a></p>''', soft=True, lead=I["studio_lead"])
     out += section("troubleshooting", "Help", I["trouble_h2"], f'''        <table class="inst-trouble">
           <thead><tr><th scope="col">What you see</th><th scope="col">What to do</th></tr></thead>
           <tbody>
 {rows}
           </tbody>
-        </table>''', soft=True)
+        </table>''', soft=False)
+    out += section("questions", "Questions", I["faq_h2"], faq_details(I["faq"]), soft=True)
     out += section("for-developers", "Developers", I["dev_h2"], f'        <p class="feat-approval">{esc(I["dev"])}</p>\n        <p class="link-row"><a class="link-arrow" href="../developers/cli/">{esc(I["dev_link"])} {ARROW}</a></p>', soft=False)
     return out
 
@@ -648,64 +655,8 @@ def devref_main() -> str:
 
 
 def mcp_main() -> str:
-    M, p = C.MCP_PAGE, "../"
-    out = page_head(f"Product · {M['name']}", M["h1"], M["lead"])
-    steps = "\n".join(f'''          <li class="mcp-step"><span class="n">{i}</span><p><b>{esc(t)}</b> {esc(d)}</p></li>''' for i, (t, d) in enumerate(M["steps"], 1))
-    MC = C.MCP_CONNECT
-    out += section("connect", MC["kicker"], MC["h2"], f'''        <div class="mcp-prompt">
-          {prompt_box("Paste into your AI tool")}
-        </div>
-        <p class="link-row"><a class="link-arrow" href="{p}install/">{esc(MC["link"])} {ARROW}</a></p>''', soft=False, lead=MC["lead"])
-    out += section("flieber-studio", M["steps_kicker"], M["steps_h2"], f'''        <ol class="mcp-steps">
-{steps}
-        </ol>
-        <p class="link-row"><a class="link-arrow" href="{C.DEV_DOCS}">{esc(M["steps_link"])} {ARROW}</a></p>''', soft=True, lead=M["steps_lead"])
-    chips = "".join(f'<li class="mcp-agent">{esc(a)}</li>' for a in M["agents"])
-    chips += f'<li class="mcp-agent mcp-agent-any">{esc(M["agents_other"])}</li>'
-    out += section("what-mcp-is", "MCP", M["what_h2"], f'''        <p class="feat-approval">{esc(M["what"])}</p>
-        <ul class="mcp-agents" aria-label="Works with">{chips}</ul>''', soft=False)
-    convos = []
-    for title, you, flieber, status in M["convos"]:
-        status_html = f'\n              <p class="chat-status"><span aria-hidden="true"></span>{esc(status)}</p>' if status else ""
-        convos.append(f'''          <article class="chat">
-            <div class="chat-head">
-              <h3 class="h3">{esc(title)}</h3>
-              <p class="chat-label">{esc(M["convo_label"])}</p>
-            </div>
-            <div class="chat-msg chat-you"><span class="chat-who">{ICON_YOU} You</span><p>“{esc(you)}”</p></div>
-            <div class="chat-msg chat-flieber"><span class="chat-who"><img src="{p}assets/img/flieber-icon.svg" alt="" width="14" height="14"> Flieber</span><p>{esc(flieber)}</p>{status_html}
-            </div>
-          </article>''')
-    out += section("conversations", "Examples", M["convo_h2"], '        <div class="chat-grid">\n' + "\n".join(convos) + "\n        </div>", soft=True)
-    groups = []
-    for mslug, prompts in M["ask"]:
-        m = MODULE_BY_SLUG[mslug]
-        items = "\n".join(f'              <li>“{esc(q)}”</li>' for q in prompts)
-        groups.append(f'''          <article class="mcp-ask">
-            <h3 class="h3"><a href="{p}product/{mslug}/">{esc(m["name"])} {ARROW}</a></h3>
-            <ul>
-{items}
-            </ul>
-          </article>''')
-    out += section("what-you-can-ask", "Prompts", M["ask_h2"], '        <div class="mcp-ask-grid">\n' + "\n".join(groups) + "\n        </div>\n        " + work_link(p), soft=False)
-    dos = "\n".join(f'''          <article class="why-card">
-            <span class="n">{i:02d}</span>
-            <h3 class="h3">{esc(t)}</h3>
-            <p>{esc(d[0].upper() + d[1:])}</p>
-          </article>''' for i, (t, d) in enumerate(M["do"], 1))
-    out += section("through-mcp", "Capabilities", M["do_h2"], f'''        <div class="why-grid mcp-do">
-{dos}
-        </div>
-        <p class="mcp-note">{esc(M["do_note"])}</p>''', soft=True)
-    out += section("build-your-own", "Data layer", M["build_h2"], f'''        <p class="feat-approval">{esc(M["build"])}</p>
-        <p class="link-row"><a class="link-arrow" href="{p}product/data-layer/">Data layer {ARROW}</a></p>''', soft=False)
-    faq = "\n".join(f'''          <div class="feat-faq-item">
-            <h3 class="h3">{esc(q)}</h3>
-            <p>{esc(a)}</p>
-          </div>''' for q, a in M["faq"])
-    out += section("questions", "Questions", M["faq_h2"], '        <div class="feat-faq">\n' + faq + "\n        </div>", soft=True)
-    out += closing(h2=M["close_h2"], body=M["close_body"])
-    return out
+    """/mcp and /install are one page (Oct 19): the plain-language install page, at /mcp."""
+    return install_main()
 
 
 def cli_jsonld() -> dict:
@@ -721,10 +672,10 @@ def mcp_jsonld(url: str) -> str:
     graph = [
         {"@type": "Organization", "@id": "https://www.flieber.com/#organization", "name": "Flieber",
          "url": "https://www.flieber.com", "logo": "https://www.flieber.com/assets/img/flieber-logo.svg", "foundingDate": "2019"},
-        {"@type": "WebPage", "@id": url, "url": url, "name": M["h1"], "description": M["lead"],
+        {"@type": "WebPage", "@id": url, "url": url, "name": C.INSTALL["h1"], "description": M["seo_desc"],
          "isPartOf": {"@type": "WebSite", "url": "https://www.flieber.com"}},
         {"@type": "FAQPage", "@id": url + "#questions", "url": url,
-         "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in M["faq"]]},
+         "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in C.INSTALL["faq"]]},
         cli_jsonld(),
     ]
     return ('<script type="application/ld+json">\n'
@@ -838,7 +789,7 @@ def bwa_main() -> str:
 {cmd_html(C.CLI["install"][0][0], C.CLI["install"][0][1])}
 {cmd_html(C.CLI["install"][1][0], C.CLI["install"][1][1])}
         </div>
-        <p class="link-row"><a class="link-arrow" href="{p}install/">{esc(B["cli_link"])} {ARROW}</a></p>
+        <p class="link-row"><a class="link-arrow" href="{p}mcp/">{esc(B["cli_link"])} {ARROW}</a></p>
         <h3 class="h3 cz-sub">{esc(B["build_h2"])}</h3>
 {prompts(B["build"])}
         <h3 class="h3 cz-sub">{esc(B["why_h2"])}</h3>
@@ -1092,10 +1043,6 @@ def build_oct3_pages() -> None:
                "description": M["lead"], "provider": {"@id": ORG["@id"]}}
     write_page(f"{M['slug']}/index.html", 1, url, f"Managed Services: {M['h1'][0].lower() + M['h1'][1:]} | Flieber", M["lead"],
                ld([ORG, webpage(url, M["h1"], M["lead"]), service, faqpage(url, M["faq"])]), ms_main())
-    I = C.INSTALL
-    url = f"{C.SITE}/{I['slug']}"
-    write_page(f"{I['slug']}/index.html", 1, url, f"{I['h1']}: install Flieber in your AI tool | Flieber", I["lead"],
-               ld([ORG, webpage(url, I["h1"], I["lead"]), cli_jsonld()]), install_main())
     D = C.DEVREF
     url = f"{C.SITE}/{D['slug']}"
     write_page(f"{D['slug']}/index.html", 2, url, f"{D['h1']} | Flieber", D["lead"],
@@ -1180,21 +1127,31 @@ def work_link(p: str) -> str:
 
 
 def home_connect_html() -> str:
-    """Compact quick-start box after the logos: the install prompt first, a link to /install for everything else."""
-    H = C.HOME_CONNECT
-    soon = "" if C.HOSTED_MCP_LIVE else ""
-    return f'''    <!-- CONNECT:start (generated by scripts/build-content.py from HOME_CONNECT and INSTALL_PROMPT; do not edit by hand) -->
+    """Compact quick-start box after the logos: the install prompt first, then the commands, a link to /mcp for the rest."""
+    H, X = C.HOME_CONNECT, C.CLI
+    body = {"prompt": prompt_box("Paste into your AI tool"), "macos": cmd_html(*X["install"][0]), "windows": cmd_html(*X["install"][1]),
+            "oneclick": (f'<a class="btn btn-primary qs-dl" href="{X["bat"]}" download>Download the installer '
+                         f'<span class="arrow" aria-hidden="true">→</span></a>')}
+    tabs, panels = [], []
+    for i, (k, label, note) in enumerate(H["tabs"]):
+        sel = "true" if i == 0 else "false"
+        ti = "" if i == 0 else ' tabindex="-1"'
+        tabs.append(f'<button class="qs-tab" type="button" role="tab" id="qs-tab-{k}" aria-controls="qs-panel-{k}" aria-selected="{sel}"{ti}>{esc(label)}</button>')
+        then = (f'\n          <p class="qs-then">{esc(H["then"])} <code>{esc(X["clients"][0][1])}</code> (or <code>--client cursor</code>, <code>--client claude-desktop</code>)</p>'
+                if k != "prompt" else "")
+        hid = "" if i == 0 else " hidden"
+        panels.append(f'        <div class="qs-panel" role="tabpanel" id="qs-panel-{k}" aria-labelledby="qs-tab-{k}"{hid}>\n          <p class="qs-note">{esc(note)}</p>\n          {body[k]}{then}\n        </div>')
+    foot = esc(H["foot"]).replace("/agents", '<a href="agents/">/agents</a>').replace("/llms.txt", '<a href="llms.txt">/llms.txt</a>')
+    return f'''    <!-- CONNECT:start (generated by scripts/build-content.py from HOME_CONNECT, INSTALL_PROMPT and CLI; do not edit by hand) -->
     <div class="wrap qs-wrap" id="connect-your-agent">
       <div class="qs reveal" aria-labelledby="qs-label">
         <div class="qs-head">
           <h2 class="qs-label" id="qs-label">{esc(H["label"])}</h2>
-          <a class="qs-all" href="install/">{esc(H["link"])} <span aria-hidden="true">→</span></a>
+          <a class="qs-all" href="mcp/">{esc(H["link"])} <span aria-hidden="true">→</span></a>
         </div>
-        <div class="qs-panel">
-          <p class="qs-note">{esc(H["note"])}</p>
-          {prompt_box("Paste into your AI tool")}
-        </div>
-        <p class="qs-foot">{esc(H["foot"])}</p>
+        <div class="qs-tabs" role="tablist" aria-label="Install options">{"".join(tabs)}</div>
+{chr(10).join(panels)}
+        <p class="qs-foot">{foot}</p>
       </div>
     </div>
     <!-- CONNECT:end -->'''
@@ -1291,8 +1248,7 @@ def build_pages() -> None:
     build_oct3_pages()
     build_work()
     url = f"{C.SITE}/{C.MCP_PAGE['slug']}"
-    write_page(f"{C.MCP_PAGE['slug']}/index.html", 1, url, f"{C.MCP_PAGE['name']}: connect Claude and ChatGPT to Flieber | Flieber",
-               C.MCP_PAGE["lead"], mcp_jsonld(url), mcp_main())
+    write_page(f"{C.MCP_PAGE['slug']}/index.html", 1, url, C.MCP_PAGE["seo_title"], C.MCP_PAGE["seo_desc"], mcp_jsonld(url), mcp_main())
 
 
 def pages_text() -> list:
@@ -1304,21 +1260,21 @@ def pages_text() -> list:
             L += ["", f"**{m['extra'][0]}** {m['extra'][1]}"]
         L += ["", "How you work together:", "", f"- Your team: {m['team']}", f"- Flieber's AI: {m['ai']}",
               f"- Flieber's planners (Managed Services): {m['planners']}", ""]
-    M = C.MCP_PAGE
-    L += [f"## {M['name']}: {M['h1']}", "", f"{C.SITE}/{M['slug']}", "", M["lead"], "", f"**{M['what_h2']}** {M['what']}", "",
-          "Works with: " + ", ".join(M["agents"]) + " and any MCP-compatible agent.", "", f"### {M['convo_h2']}", "",
-          f"({M['convo_label']}; invented product names and numbers.)", ""]
-    for title, you, fl, status in M["convos"]:
-        L += [f"**{title}**", "", f'- You: "{you}"', f'- Flieber: "{fl}"' + (f" ({status})" if status else ""), ""]
-    L += [f"### {M['ask_h2']}", ""]
-    L += [f"- {MODULE_BY_SLUG[k]['name']} ({C.SITE}/product/{k}): " + " · ".join(f'"{q}"' for q in qs) for k, qs in M["ask"]]
-    L += ["", f"### {M['do_h2']}", ""] + [f"- {t} {d}" for t, d in M["do"]] + ["", M["do_note"], "", f"### {M['steps_kicker']}: {M['steps_h2']}", "", M["steps_lead"], ""]
-    L += [f"{i}. {t} {d}" for i, (t, d) in enumerate(M["steps"], 1)]
-    L += ["", f"{M['steps_link']}: {C.DEV_DOCS}"] + [x.replace("## ", "### ", 1) if x.startswith("## ") else x for x in cli_md()]
-    L += ["", f"### {M['build_h2']}", "", M["build"] + f" {C.SITE}/product/data-layer", "",
-          f"### {M['faq_h2']}", ""]
-    for q, a in M["faq"]:
+    M, I = C.MCP_PAGE, C.INSTALL
+    L += [f"## {M['name']}: {I['h1']}", "", f"{C.SITE}/{M['slug']} (also {C.SITE}/install)", "", I["lead"], "",
+          f"### {I['prompt_h']} (easiest)", "", I["prompt_body"], "", f'Prompt: "{C.INSTALL_PROMPT}"', "",
+          f"### {I['manual_h']} ({I['manual_tag'].lower()})", ""]
+    L += [f"- {x}" for x in I["before"]]
+    L += ["", f"1. {I['step1_h']}: macOS and Linux `{C.CLI['install'][0][1]}`; Windows one click {C.CLI['bat']}, or PowerShell `{C.CLI['install'][1][1]}`. {I['step1_next']}",
+          f"2. {I['step2_h']}: " + "; ".join(f"{l} `{c}`" for l, c in C.CLI["clients"]) + f". {I['step2_ok']}",
+          f"3. {I['step3_h']}: " + " · ".join(f'"{q}"' for q in I["prompts"]), "",
+          f"### {I['browser_h']}: " + ("live" if C.HOSTED_MCP_LIVE else "coming soon"), "", I["browser_body"], "",
+          f"### {I['can_h2']}", ""] + [f"- {a}: {b}" for a, b in I["can"]] + ["", f"### {I['safe_h2']}", ""] + [f"- {x}" for x in I["safe"]]
+    L += ["", f"### {I['studio_h2']}", "", I["studio_lead"], ""] + [f"{i}. {t_} {d}" for i, (t_, d) in enumerate(M["steps"], 1)]
+    L += ["", f"### {I['trouble_h2']}", ""] + [f"- {a}: {b}" for a, b in I["trouble"]] + ["", f"### {I['faq_h2']}", ""]
+    for q, a in I["faq"]:
         L += [f"**{q}** {a}", ""]
+    L += [f"Technical reference: {C.SITE}/developers/cli", ""]
     WP = W.PAGE
     L += [f"## {WP['name']}: {WP['h1']}", "", f"{C.SITE}/{WP['slug']}", "", WP["lead"], "", WP["note"], "", f"{WP['own_h']} {WP['own']}", ""]
     for g, gname in W.GROUPS:
@@ -1515,7 +1471,7 @@ def agents_main() -> str:
         <section id="flieber-cli" aria-labelledby="h-flieber-cli">
           <h2 id="h-flieber-cli">Flieber CLI: install and use (early access)</h2>
           <p>{esc(C.CLI["lead"])} Creating a Flieber account is the first step; the installer handles it, or run <code>flieber signup</code>.</p>
-          <p><b>For a person setting it up:</b> point them to <a href="{C.SITE}/install">{C.SITE}/install</a>. The easiest path is to paste this prompt into {esc(C.INSTALL_PROMPT_TOOLS)}: “{esc(C.INSTALL_PROMPT)}” Full technical reference: <a href="{C.SITE}/developers/cli">{C.SITE}/developers/cli</a>.</p>
+          <p><b>For a person setting it up:</b> point them to <a href="{C.SITE}/mcp">{C.SITE}/mcp</a>. The easiest path is to paste this prompt into {esc(C.INSTALL_PROMPT_TOOLS)}: “{esc(C.INSTALL_PROMPT)}” Full technical reference: <a href="{C.SITE}/developers/cli">{C.SITE}/developers/cli</a>.</p>
           <ul class="bullets">
 {chr(10).join(f"            <li><b>{esc(l)}:</b> <code>{esc(c)}</code></li>" for l, c in C.CLI["install"])}
             <li><b>Windows one-click installer:</b> <a href="{C.CLI["bat"]}">flieber-install.bat</a> (download and double-click)</li>
@@ -1637,7 +1593,7 @@ def cli_md() -> list:
     X = C.CLI
     L = ["", f"## {X['name']} ({X['status'].lower()}): install and use", "", X["lead"],
          "Creating a Flieber account is the first step; the installer handles it, or run `flieber signup`.", "",
-         f"For a person setting it up: {C.SITE}/install. Easiest path: paste this prompt into {C.INSTALL_PROMPT_TOOLS}: \"{C.INSTALL_PROMPT}\" Technical reference: {C.SITE}/developers/cli", ""]
+         f"For a person setting it up: {C.SITE}/mcp. Easiest path: paste this prompt into {C.INSTALL_PROMPT_TOOLS}: \"{C.INSTALL_PROMPT}\" Technical reference: {C.SITE}/developers/cli", ""]
     L += [f"- {l}: `{c}`" for l, c in X["install"]]
     L += [f"- Windows one-click installer (download and double-click): {X['bat']}"]
     L += [f"- Connect {l}: `{c}`" for l, c in X["clients"]]

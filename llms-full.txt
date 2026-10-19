@@ -212,118 +212,84 @@ How you work together:
 - Flieber's AI: Run it on schedule, across Flieber and your connected apps, and stop for approval where you asked it to.
 - Flieber's planners (Managed Services): Help design the workflows that save your team the most time.
 
-## MCP and AI agents: Connect Claude and ChatGPT to your sales, inventory and cash-flow data
+## MCP and AI agents: Use Flieber from Claude
 
-https://www.flieber.com/mcp
+https://www.flieber.com/mcp (also https://www.flieber.com/install)
 
-Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Connect it in minutes with one prompt in your AI tool.
+Ask about your sales, forecasts and catalog, or set up your Flieber account, in plain language from the AI tool you already use.
 
-**What MCP is** The Model Context Protocol is an open standard that lets AI assistants connect securely to the tools and data a business runs on. Connect Flieber once, and your assistant can ask Flieber questions and request actions in plain language. Your data stays in Flieber; the assistant receives only what each request needs.
+### Let your AI tool set it up (easiest)
 
-Works with: Claude, ChatGPT, Cursor, Claude Code, Muse and any MCP-compatible agent.
+Copy this prompt and paste it into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself. It asks before every step.
 
-### What a conversation looks like
+Prompt: "Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything."
 
-(Illustrative example with sample data; invented product names and numbers.)
+### Install it yourself (about 5 minutes)
 
-**Know the position**
+- A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.
+- Claude Desktop, Claude Code, Cursor or Muse installed.
+- A Flieber account. No account yet? The installer helps you create one.
 
-- You: "Which of our top SKUs run out on Amazon before their next purchase order lands?"
-- Flieber: "Three do. The 32 oz bottle in black stocks out on Amazon in 11 days; its next PO arrives in 26. The travel mug and the 20 oz lid follow. Moving 400 units from your New Jersey 3PL to FBA covers the bottle until the PO lands. Want me to prepare the transfer?"
+1. Step 1: Install Flieber and sign in: macOS and Linux `curl -fsSL https://cli.flieber.com/install.sh | sh`; Windows one click https://cli.flieber.com/flieber-install.bat, or PowerShell `irm https://cli.flieber.com/install.ps1 | iex`. Your browser opens the Flieber sign-in page. Sign in. Back in the window, you'll see your Flieber organizations. No organization yet? The installer offers to create one with you.
+2. Step 2: Connect Flieber to your AI tool: Claude Code `flieber mcp register --client claude-code`; Cursor `flieber mcp register --client cursor`; Claude Desktop `flieber mcp register --client claude-desktop`; Muse or any other local MCP client `uvx flieber@latest mcp`. Open a new chat and ask: What can Flieber do?
+3. Step 3: Try it: "Which products sold the most units last month?" · "Show me the forecast for my top 10 products for the next 90 days." · "Which of my SKUs are not mapped to a product yet?" · "Help me connect my Shopify store to Flieber."
 
-**Simulate a decision**
+### Claude in your browser: coming soon
 
-- You: "If we pause ads on the five SKUs most at risk of stocking out, what happens to cash in November?"
-- Flieber: "Projected November revenue drops about 4%, but you avoid two stockouts and free roughly $38,000 you'd otherwise spend on an expedited PO. Here's the projection by SKU."
+Add Flieber to Claude in your browser and sign in with your Flieber account. Nothing to install.
 
-**Draft purchase orders**
+### What Claude can do with Flieber
 
-- You: "Draft next month's purchase orders by supplier, with MOQs and container fill applied."
-- Flieber: "Done. Four draft POs for three suppliers, one 40-foot container at 92% fill. They're waiting for your approval before anything goes to NetSuite or your suppliers." (Waiting for your approval)
+- Answer questions: Actual sales, sales adjusted for stockouts and price effects, forecasts, 30, 90 and 365-day trends, products, listings and SKU mapping.
+- Set up your account: Create an organization, connect stores (Amazon, eBay, Etsy, Walmart, BigCommerce and Shopify), map SKUs, add inventory locations and go live.
+- Adjust a forecast: Change the forecast for a product in a store for a given month.
 
-**Shape the data to your business**
+### Built to be safe
 
-- You: "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days."
-- Flieber: "Using your routing rules: northern orders to Chicago, eastern orders to New Jersey. Chicago needs 1,200 more units across 14 SKUs; New Jersey is covered except for two SKUs."
+- Claude shows you every change first and waits for your OK before applying it.
+- Going live is permanent, so Claude always asks you to confirm it.
+- Your sign-in is saved on your computer. You never paste a password or key into a chat.
+- Claude sees only what your Flieber account is allowed to see.
+- Actual sales, adjusted sales and forecasts are kept separate, so numbers are never mixed.
 
-### What you can ask
+### Flieber Studio in Claude, ChatGPT or Cursor
 
-- Data layer (https://www.flieber.com/product/data-layer): "Review my catalog and inventory data weekly and tell me if anything looks wrong: missing product names, discontinued products with a forecast, active products with no sales, SKUs mapped incorrectly or inbound shipments not reflected correctly." · "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days." · "If inventory increases in a way that matches an open PO or inbound shipment, check whether the PO was marked as received. If it's still open, alert me before the same stock is counted twice."
-- Demand forecasting (https://www.flieber.com/product/demand-forecasting): "Review my forecast every week and flag products where it looks wrong: new products with little history, products affected by stockouts, sudden accelerations, discontinued products still showing demand and products where actual sales are consistently above or below forecast." · "How accurate was last quarter's forecast?" · "What will the holiday bundle sell in Q4 if we keep it in stock?"
-- Inventory forecasting (https://www.flieber.com/product/inventory-forecasting): "Which of our top SKUs run out on Amazon before their next purchase order lands?" · "What did stockouts cost us last month?" · "Review my overstocked products and recommend what to do with each one: keep, discount, bundle, transfer, pause replenishment or liquidate. Consider sales velocity, margin, product tier, seasonality and inventory value."
-- Replenishment (https://www.flieber.com/product/replenishment): "Every Monday, review the products that may need replenishment and recommend what to order. Consider current stock, forecast demand, on-order inventory, supplier lead time, MOQ and target coverage. Group the recommendations by supplier and explain the reasoning." · "Fit this order into two 40-foot containers." · "What if lead times slip by two weeks?"
-- Workflows (https://www.flieber.com/product/workflows): "Create the FBA inbound shipment for this plan." · "Email this PO to the supplier once I approve it." · "Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days."
-
-### What Flieber can do through MCP
-
-- Answer questions from your current data, with the reasoning behind each answer.
-- Change records in Flieber such as bundles, forecasts, shipments and simulations, always with a preview first.
-- Push decisions to other systems such as purchase orders to ERPs and suppliers and inbound shipments to Amazon and 3PLs.
-- Run workflows on schedule across Flieber and your connected apps.
-
-Every change follows the approval rules you set. By default, every change waits for your approval.
-
-### Flieber Studio: Ask Flieber from your AI assistant
-
-Flieber Studio is Flieber's own agent. Your assistant asks in plain language; Studio runs the analysis on your data and answers, or carries out the actions the Flieber app supports. Connect in three steps.
+Flieber AI customers can also connect Flieber Studio, Flieber's own analyst agent. Your AI tool asks in plain language, and Studio answers from your data. Ask your Flieber account team to turn it on, then:
 
 1. Copy your connection details from Connect Apps in Flieber.
 2. Add Flieber as a connector in Claude, ChatGPT, Cursor or your own agent.
 3. Sign in to Flieber and approve the connection, then start asking.
 
-Full setup guide for Flieber Studio (customer login required): https://app.flieber.com/app/developers
+### If something goes wrong
 
-### Flieber CLI (early access): install and use
-
-Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, Cursor, Claude Desktop and Muse: sales, adjusted sales, forecasts, catalog and store onboarding, through the same 29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs you in, and gets your agents ready.
-Creating a Flieber account is the first step; the installer handles it, or run `flieber signup`.
-
-For a person setting it up: https://www.flieber.com/install. Easiest path: paste this prompt into Claude Desktop, Claude Code, Cursor or Muse: "Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything." Technical reference: https://www.flieber.com/developers/cli
-
-- macOS and Linux: `curl -fsSL https://cli.flieber.com/install.sh | sh`
-- Windows (PowerShell): `irm https://cli.flieber.com/install.ps1 | iex`
-- Windows one-click installer (download and double-click): https://cli.flieber.com/flieber-install.bat
-- Connect Claude Code: `flieber mcp register --client claude-code`
-- Connect Cursor: `flieber mcp register --client cursor`
-- Connect Claude Desktop: `flieber mcp register --client claude-desktop`
-- Connect Muse or any other local MCP client: `uvx flieber@latest mcp`
-- Coming soon, hosted MCP server: Connect without installing anything; your sign-in passes through and nothing is stored.
-- Coming soon, flieber in claude.ai: Add Flieber under Settings, Connectors, sign in to Flieber and start asking, with nothing to install.
-- Skills: `flieber skills install --client claude-code`
-  - [flieber-install](https://cli.flieber.com/skills/flieber-install/SKILL.md): Sets Flieber up.
-  - [flieber](https://cli.flieber.com/skills/flieber/SKILL.md): Teaches your agent which tool to use, how to read results and how to preview changes.
-- Every result names its signal in meta.signal: actual sales, adjusted sales or forecast. Actual and adjusted sales end at yesterday (UTC); the last days of adjusted sales are approximate. Forecasts start today.
-- Results have columns, rows and meta, up to 2,000 data points each. Larger requests coarsen from days to weeks to months (meta.coarsened_to) and page by series (next_offset).
-- Writes take two calls: the first, with commit=false, previews without changing anything; the second commits with its preview_id. Commit only after the user confirms.
-- Each tool takes an optional tenant argument (tenant id or org_ id); call tenants to list the organizations the sign-in can reach.
-- Results use product and store ids, not names, because store names aren't unique.
-- Errors carry a stable code, a hint and a retryable flag; over MCP they set isError.
-- Set FLIEBER_OAUTH_WRITES=1 to let the agent make changes such as onboarding stores or mapping SKUs; every change is still previewed first.
-- The reference is in the terminal (flieber docs) and in the MCP resource flieber://docs/contract.
-- [Flieber API reference for LLMs](https://app.flieber.com/api/v1/public-api/docs/llms.txt)
-- [flieber on PyPI](https://pypi.org/project/flieber/)
-
-### Build your own tools on Flieber
-
-Building reports, dashboards or agents with AI? Connect them to Flieber's data layer and skip the plumbing: your tools start from data that's already joined, mapped and corrected, and keep working as you add channels, products or suppliers. The data layer can be bought on its own. https://www.flieber.com/product/data-layer
+- Flieber doesn't appear in Claude: Quit Claude Desktop completely and open it again.
+- “Command not found” after installing: Close the Terminal or PowerShell window, open a new one and try again.
+- Claude says you're not signed in: Paste `flieber login` into Terminal or PowerShell and press Enter.
+- Claude says changes are turned off: Repeat Step 2 using the command shown on this page.
+- Claude says your plan doesn't include something: Contact your Flieber account team.
+- “Your organization is being set up”: Wait a minute or two, then try again. Do not create it a second time.
+- “Too many requests” or a timeout: Wait a moment and ask again, or ask for a shorter date range.
+- Anything else: Contact Flieber support. Never share your sign-in or key.
 
 ### Questions
 
-**Which AI assistants work with Flieber?** Claude, ChatGPT, Cursor, Muse and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop, Muse and any other local MCP client.
+**Which AI tools work with Flieber?** Claude Desktop, Claude Code, Cursor and Muse today. Claude in the browser is coming soon. Flieber AI customers can also use Flieber Studio in Claude, ChatGPT and Cursor.
 
-**What's the difference between Flieber Studio and Flieber CLI?** Flieber Studio is Flieber's own agent: your assistant asks a question in plain language and Studio answers or acts. Flieber CLI gives your own agents Flieber's data and tools directly, in the terminal or in local MCP clients, so they can build reports, dashboards and workflows on it.
+**Do I need to be technical?** No. Paste one prompt into your AI tool and it sets Flieber up for you, or follow the three steps on this page.
 
-**Do I need a Flieber account?** Yes. Creating your Flieber account is the first step either way. With Flieber CLI, the installer walks you through it.
+**Do I need a Flieber account?** Yes. Creating your Flieber account is the first step. The installer walks you through it.
 
-**Do I need to be technical to connect?** No. Paste one prompt into Claude Desktop, Claude Code, Cursor or Muse and it sets Flieber up for you, or follow three short steps on the install page.
+**Can Claude change things in Flieber?** Only with your OK. Claude shows you every change first and waits for your approval.
 
-**Can my AI change things in my systems?** Only within the approval rules you set. By default, every change waits for your approval.
-
-**How long do answers take?** With Flieber Studio, answers typically take 30 seconds to 5 minutes, because Flieber's agent runs the analysis on your data before it responds. Flieber CLI tools return data and results rather than a written analysis.
+**What's the difference between installing Flieber and Flieber Studio?** Installing Flieber gives your AI tool Flieber's data and actions directly. Flieber Studio is Flieber's analyst agent: your AI tool asks it a question and it answers, typically in 30 seconds to 5 minutes.
 
 **Is my data used to train AI models?** No. Flieber does not train on customer data, and its AI providers are set up not to.
 
-**Does it work without an AI assistant?** Yes. Everything here also works in the Flieber app and in Slack.
+**Is this an MCP server?** Yes. Flieber connects through MCP, the open standard that lets AI tools use other software. The developer reference has the details.
+
+**Does it work without an AI tool?** Yes. Everything here also works in the Flieber app and in Slack.
+
+Technical reference: https://www.flieber.com/developers/cli
 
 ## Put Flieber to work: Put Flieber to work on your operation
 
@@ -1187,7 +1153,7 @@ Every write follows approval rules the brand sets. By default every write requir
 Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, Cursor, Claude Desktop and Muse: sales, adjusted sales, forecasts, catalog and store onboarding, through the same 29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs you in, and gets your agents ready.
 Creating a Flieber account is the first step; the installer handles it, or run `flieber signup`.
 
-For a person setting it up: https://www.flieber.com/install. Easiest path: paste this prompt into Claude Desktop, Claude Code, Cursor or Muse: "Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything." Technical reference: https://www.flieber.com/developers/cli
+For a person setting it up: https://www.flieber.com/mcp. Easiest path: paste this prompt into Claude Desktop, Claude Code, Cursor or Muse: "Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything." Technical reference: https://www.flieber.com/developers/cli
 
 - macOS and Linux: `curl -fsSL https://cli.flieber.com/install.sh | sh`
 - Windows (PowerShell): `irm https://cli.flieber.com/install.ps1 | iex`

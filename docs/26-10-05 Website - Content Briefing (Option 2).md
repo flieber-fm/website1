@@ -136,17 +136,17 @@ Promoted on Oct 7 from homepage variant V6 ("Intelligence layer"): Flieber as th
 
 The 14 customer logos already uploaded to HubSpot, in one row (scrolling on mobile). Do not recreate them.
 
-### 4.2b Quick start box (prompt first, Oct 19)
+### 4.2b Quick start box (Oct 19)
 
-A compact dark box right after the logos. The first and only choice in the box is the install prompt; everything else is on /install.
+A compact dark box right after the logos. The prompt comes first; the agent install commands are one click away, for people and for agents reading the page (all panels are in the HTML, so crawlers read the commands too).
 
-**Header:** "Quick start" · right: "All install options →" to /install
+**Header:** "Quick start" · right: "All install options →" to /mcp
 
-**Text:** Copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step.
+**Tabs:** **Ask your AI tool** (Copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step.) · **macOS and Linux** (Paste in Terminal. The installer creates your Flieber account or signs you in.) · **Windows** (Paste in PowerShell. The installer creates your Flieber account or signs you in.) · **Windows, one click** (Download the installer and open it. It creates your Flieber account or signs you in.)
 
-**Prompt box (Copy button):** "Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything."
+Panels: the prompt with Copy ("Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything."); `curl -fsSL https://cli.flieber.com/install.sh | sh`; `irm https://cli.flieber.com/install.ps1 | iex`; a "Download the installer" button. The command panels add "Then connect your agent: `flieber mcp register --client claude-code` (or `--client cursor`, `--client claude-desktop`)".
 
-**Footer line:** Prefer to do it yourself? The install page walks you through three short steps. Claude in the browser: coming soon.
+**Footer line:** Works with Claude Desktop, Claude Code, Cursor and Muse. Claude in the browser: coming soon. For agents: /agents and /llms.txt. (/agents and /llms.txt linked)
 
 ### 4.3 Why inventory
 
@@ -1113,11 +1113,13 @@ The full founder statement from section 4.11 (all three paragraphs), signed Fabr
 - **Use-case links:** each card a use-case page relies on links to it, as "Use case: [name] →".
 - **New FAQ question (added first):** **Can I buy only the data layer?** Yes. Teams building their own tools with AI can use Flieber's data layer on its own through MCP and API, and add the other modules any time.
 
-## 11b. /install and /developers/cli (Oct 19, from Fabricio's Install Page brief)
+## 11b. /mcp (unified install page) and /developers/cli (Oct 19, from Fabricio's Install Page brief)
 
 Plain-language install page for non-technical users (operations and supply chain leads who use Claude but have never opened Terminal). The prompt comes first; installing by hand is second. Technical content lives on /developers/cli. All install links use cli.flieber.com. One setting, HOSTED_MCP_LIVE in site_content.py, switches "Coming soon" off for the hosted connection and Claude in the browser.
 
-### /install
+### /mcp (was /install; /install redirects here)
+
+One page for connecting Flieber to AI tools, replacing both the old /mcp and /install (section 5.6 describes the old /mcp, kept for history). Page title: "Use Flieber from Claude, Cursor and other AI tools: connect the Flieber MCP | Flieber". Order: hero with three choices, Before you start, Steps 1 to 3, What Claude can do, Built to be safe, Flieber Studio (for Flieber AI customers), If something goes wrong, Questions, For developers. Dropped from the old /mcp: the four example conversations (they show Studio and app actions such as POs into NetSuite, which the installed tools don't do) and the What you can ask prompts (on Put Flieber to work).
 
 **Label:** Install · **H1:** Use Flieber from Claude · **Lead:** Ask about your sales, forecasts and catalog, or set up your Flieber account, in plain language from the AI tool you already use.
 
@@ -1146,6 +1148,10 @@ Plain-language install page for non-technical users (operations and supply chain
 
 **If something goes wrong** (table): Flieber doesn't appear in Claude: Quit Claude Desktop completely and open it again. · “Command not found” after installing: Close the Terminal or PowerShell window, open a new one and try again. · Claude says you're not signed in: Paste `flieber login` into Terminal or PowerShell and press Enter. · Claude says changes are turned off: Repeat Step 2 using the command shown on this page. · Claude says your plan doesn't include something: Contact your Flieber account team. · “Your organization is being set up”: Wait a minute or two, then try again. Do not create it a second time. · “Too many requests” or a timeout: Wait a moment and ask again, or ask for a shorter date range. · Anything else: Contact Flieber support. Never share your sign-in or key.
 
+**Flieber Studio in Claude, ChatGPT or Cursor** (label: For Flieber AI customers): Flieber AI customers can also connect Flieber Studio, Flieber's own analyst agent. Your AI tool asks in plain language, and Studio answers from your data. Ask your Flieber account team to turn it on, then: The three Studio steps from section 5.6, then the setup guide link.
+
+**Questions** (collapsible): **Which AI tools work with Flieber?** Claude Desktop, Claude Code, Cursor and Muse today. Claude in the browser is coming soon. Flieber AI customers can also use Flieber Studio in Claude, ChatGPT and Cursor. · **Do I need to be technical?** No. Paste one prompt into your AI tool and it sets Flieber up for you, or follow the three steps on this page. · **Do I need a Flieber account?** Yes. Creating your Flieber account is the first step. The installer walks you through it. · **Can Claude change things in Flieber?** Only with your OK. Claude shows you every change first and waits for your approval. · **What's the difference between installing Flieber and Flieber Studio?** Installing Flieber gives your AI tool Flieber's data and actions directly. Flieber Studio is Flieber's analyst agent: your AI tool asks it a question and it answers, typically in 30 seconds to 5 minutes. · **Is my data used to train AI models?** No. Flieber does not train on customer data, and its AI providers are set up not to. · **Is this an MCP server?** Yes. Flieber connects through MCP, the open standard that lets AI tools use other software. The developer reference has the details. · **Does it work without an AI tool?** Yes. Everything here also works in the Flieber app and in Slack.
+
 **For developers:** API keys, signing in on a remote machine or sandbox, manual setup, the result format, error codes and agent skills are all in the technical reference. → Technical reference (/developers/cli)
 
 ### /developers/cli
@@ -1156,8 +1162,8 @@ Sections: Three ways in (command line, local MCP server, hosted MCP server: Comi
 
 ### Elsewhere
 
-- /mcp: first section after the hero is now "Connect Flieber to your AI tool": The easiest way: copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step. Prompt with Copy, then "Install it yourself, step by step →" to /install. Flieber Studio follows. The full CLI block moved to /developers/cli.
-- Product menu and footer ("For agents"): "Install in your AI tool" (/install); the footer also links the developer reference.
+- (Superseded the same day by the unified /mcp.) /mcp: first section after the hero was "Connect Flieber to your AI tool": The easiest way: copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step. Prompt with Copy, then "Install it yourself, step by step →" to /install. Flieber Studio follows. The full CLI block moved to /developers/cli.
+- Product menu: "MCP and AI agents" (/mcp) only. Footer ("For agents"): "Install in your AI tool" (/mcp) and the developer reference.
 - /customize: the Flieber CLI line links to /install.
 - /agents, llms.txt, llms-full.txt: point people to /install and quote the prompt; the technical reference is /developers/cli.
 

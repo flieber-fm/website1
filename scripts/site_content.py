@@ -463,6 +463,9 @@ SOLUTIONS = [
 # ---------------------------------------------------------------- /mcp (brief section 5.6)
 MCP_PAGE = {
     "slug": "mcp", "name": "MCP and AI agents",
+    "seo_title": "Use Flieber from Claude, Cursor and other AI tools: connect the Flieber MCP | Flieber",
+    "seo_desc": ("Connect Flieber to Claude Desktop, Claude Code, Cursor or Muse with one prompt, or in three short steps. "
+                 "Ask about sales, forecasts and catalog, or set up your account, in plain language."),
     "h1": "Connect Claude and ChatGPT to your sales, inventory and cash-flow data",
     "lead": ("Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber "
              "works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under "
@@ -556,7 +559,7 @@ INSTALL_PROMPT_TOOLS = "Claude Desktop, Claude Code, Cursor or Muse"
 # /install (plain-language install page, from Fabricio's Install Page brief, Oct 19)
 INSTALL = {
     "slug": "install", "name": "Install",
-    "kicker": "Install",
+    "kicker": "Connect your AI tool",
     "h1": "Use Flieber from Claude",
     "lead": ("Ask about your sales, forecasts and catalog, or set up your Flieber account, in plain language from the "
              "AI tool you already use."),
@@ -637,6 +640,19 @@ INSTALL = {
                 ("“Your organization is being set up”", "Wait a minute or two, then try again. Do not create it a second time."),
                 ("“Too many requests” or a timeout", "Wait a moment and ask again, or ask for a shorter date range."),
                 ("Anything else", "Contact Flieber support. Never share your sign-in or key.")],
+    "studio_kicker": "For Flieber AI customers",
+    "studio_h2": "Flieber Studio in Claude, ChatGPT or Cursor",
+    "studio_lead": ("Flieber AI customers can also connect Flieber Studio, Flieber's own analyst agent. Your AI tool asks in "
+                    "plain language, and Studio answers from your data. Ask your Flieber account team to turn it on, then:"),
+    "faq_h2": "Questions",
+    "faq": [("Which AI tools work with Flieber?", "Claude Desktop, Claude Code, Cursor and Muse today. Claude in the browser is coming soon. Flieber AI customers can also use Flieber Studio in Claude, ChatGPT and Cursor."),
+            ("Do I need to be technical?", "No. Paste one prompt into your AI tool and it sets Flieber up for you, or follow the three steps on this page."),
+            ("Do I need a Flieber account?", "Yes. Creating your Flieber account is the first step. The installer walks you through it."),
+            ("Can Claude change things in Flieber?", "Only with your OK. Claude shows you every change first and waits for your approval."),
+            ("What's the difference between installing Flieber and Flieber Studio?", "Installing Flieber gives your AI tool Flieber's data and actions directly. Flieber Studio is Flieber's analyst agent: your AI tool asks it a question and it answers, typically in 30 seconds to 5 minutes."),
+            ("Is my data used to train AI models?", "No. Flieber does not train on customer data, and its AI providers are set up not to."),
+            ("Is this an MCP server?", "Yes. Flieber connects through MCP, the open standard that lets AI tools use other software. The developer reference has the details."),
+            ("Does it work without an AI tool?", "Yes. Everything here also works in the Flieber app and in Slack.")],
     "dev_h2": "For developers",
     "dev": ("API keys, signing in on a remote machine or sandbox, manual setup, the result format, error codes and agent "
             "skills are all in the technical reference."),
@@ -680,9 +696,12 @@ DEVREF = {
 HOME_CONNECT = {
     "label": "Quick start",
     "link": "All install options",
-    "note": ("Copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in "
-             "and connects itself, asking before every step."),
-    "foot": "Prefer to do it yourself? The install page walks you through three short steps. Claude in the browser: coming soon.",
+    "tabs": [("prompt", "Ask your AI tool", "Copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step."),
+             ("macos", "macOS and Linux", "Paste in Terminal. The installer creates your Flieber account or signs you in."),
+             ("windows", "Windows", "Paste in PowerShell. The installer creates your Flieber account or signs you in."),
+             ("oneclick", "Windows, one click", "Download the installer and open it. It creates your Flieber account or signs you in.")],
+    "then": "Then connect your agent:",
+    "foot": "Works with Claude Desktop, Claude Code, Cursor and Muse. Claude in the browser: coming soon. For agents: /agents and /llms.txt.",
 }
 MCP_CONNECT = {
     "kicker": "Connect",
