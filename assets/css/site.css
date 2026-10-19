@@ -1408,3 +1408,16 @@ a.int-tile:hover { border-color: var(--black); }
 .cli-soon { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; font-size: 15px; color: var(--text-2); }
 .cli-soon b { color: var(--black); font-weight: 600; }
 .soon-tag { display: inline-block; font-family: var(--mono); font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; background: var(--yellow); color: var(--black); margin-right: 4px; vertical-align: 1px; }
+/* Homepage "Connect your agent" */
+.home-connect .mcp-agents { margin-top: 0; margin-bottom: 22px; }
+.hc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.hc-card { display: flex; flex-direction: column; gap: 10px; min-width: 0; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l); padding: clamp(20px, 2.4vw, 28px); }
+.hc-tag { font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
+.hc-card .h3 { margin-bottom: 4px; }
+.hc-then { margin-top: 6px; font-size: 14px; font-weight: 600; }
+.hc-steps { grid-template-columns: 1fr; gap: 10px; }
+@media (max-width: 860px) { .hc-grid { grid-template-columns: 1fr; } }
+.hc-steps .mcp-step { padding: 0; border: 0; background: transparent; box-shadow: none; display: flex; gap: 12px; align-items: flex-start; }
+.hc-steps .mcp-step .n { flex: none; margin: 0; }
+.hc-steps .mcp-step p { margin: 3px 0 0; }
+.hc-card .cmd code { white-space: pre-wrap; overflow-wrap: anywhere; }

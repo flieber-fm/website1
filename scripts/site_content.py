@@ -543,6 +543,21 @@ MCP_PAGE = {
     "close_body": "Start a 14-day free trial on your own data, or book a demo and we'll connect it with you.",
 }
 
+# Homepage "Connect your agent" block (synced into index.html by build-content.py)
+HOME_CONNECT = {
+    "kicker": "Connect your agent",
+    "h2": "Connect your agents to Flieber in one command",
+    "lead": ("Flieber works with Claude, ChatGPT, Cursor, Claude Code, Claude Desktop and any MCP-compatible agent. "
+             "Install Flieber CLI to give the agents you build Flieber's data and tools, or connect Flieber Studio to "
+             "ask Flieber from your AI assistant, with no code."),
+    "cli_h3": "Flieber CLI", "cli_tag": "For the agents you build",
+    "cli_then": "Then connect your agent",
+    "cli_note": "The installer creates your Flieber account or signs you in. Early access, open to everyone.",
+    "studio_h3": "Flieber Studio", "studio_tag": "For your AI assistant, no code",
+    "studio_note": "Works today in Claude, ChatGPT and Cursor.",
+    "link": "Full setup for every agent",
+}
+
 # Flieber CLI (from the Flieber MCP & CLI page shared by the product team, Oct 2026)
 CLI = {
     "name": "Flieber CLI", "status": "Early access", "package": "flieber", "pypi": "https://pypi.org/project/flieber/",

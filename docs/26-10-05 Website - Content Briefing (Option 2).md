@@ -136,6 +136,27 @@ Promoted on Oct 7 from homepage variant V6 ("Intelligence layer"): Flieber as th
 
 The 14 customer logos already uploaded to HubSpot, in one row (scrolling on mobile). Do not recreate them.
 
+### 4.2b Connect your agent (new, Oct 19)
+
+Right after the logos. Makes connecting Flieber to agents explicit on the homepage, for people and for agent search. Generated from the same data as /mcp (HOME_CONNECT and CLI in site_content.py), so commands stay in sync.
+
+**Section label:** Connect your agent
+
+**H2:** Connect your agents to Flieber in one command
+
+**Lead:** Flieber works with Claude, ChatGPT, Cursor, Claude Code, Claude Desktop and any MCP-compatible agent. Install Flieber CLI to give the agents you build Flieber's data and tools, or connect Flieber Studio to ask Flieber from your AI assistant, with no code.
+
+**Chips:** Claude · ChatGPT · Cursor · Claude Code · Claude Desktop · "Any MCP-compatible agent"
+
+**Two cards:**
+
+1. **Flieber CLI** (tag: For the agents you build): the two install commands (macOS and Linux: `curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh`; Windows (PowerShell): `irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex`), then "Then connect your agent" with `flieber mcp register --client claude-code`. Note: The installer creates your Flieber account or signs you in. Early access, open to everyone.
+2. **Flieber Studio** (tag: For your AI assistant, no code): the three connect steps from /mcp. Note: Works today in Claude, ChatGPT and Cursor.
+
+**Link:** Full setup for every agent → /mcp
+
+Structured data: a Flieber CLI SoftwareApplication (macOS, Linux, Windows; install on /mcp#flieber-cli; download on PyPI) is added to the homepage and /mcp.
+
 ### 4.3 Why inventory
 
 As in Option 1, section 3.2 (H2 "Purchases, promotions, ads, financing: every one is ultimately an inventory decision", body and four cards unchanged).
@@ -426,6 +447,9 @@ Connect Claude, Cursor or your own agents to the data layer through MCP or the p
 ### 5.6 /mcp
 
 The page that makes MCP tangible: what it is, what a conversation looks like, what Flieber can do through it and how to connect. Written for operators and builders deciding whether to connect their AI; /agents remains the factual page for AI agents. Structured data: WebPage plus FAQPage. No prices. The MCP URL and setup steps are public on this page.
+
+
+**Order (Oct 19):** hero, then the connect sections first (Flieber Studio, then Flieber CLI), then What MCP is, conversations, What you can ask, capabilities, Build your own tools and Questions. The blocks below are described in their original order.
 
 **Label:** Product · MCP and AI agents
 

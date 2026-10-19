@@ -487,10 +487,16 @@ def cli_section(soft: bool) -> str:
 def mcp_main() -> str:
     M, p = C.MCP_PAGE, "../"
     out = page_head(f"Product · {M['name']}", M["h1"], M["lead"])
+    steps = "\n".join(f'''          <li class="mcp-step"><span class="n">{i}</span><p><b>{esc(t)}</b> {esc(d)}</p></li>''' for i, (t, d) in enumerate(M["steps"], 1))
+    out += section("connect", M["steps_kicker"], M["steps_h2"], f'''        <ol class="mcp-steps">
+{steps}
+        </ol>
+        <p class="link-row"><a class="link-arrow" href="{C.DEV_DOCS}">{esc(M["steps_link"])} {ARROW}</a></p>''', soft=False, lead=M["steps_lead"])
+    out += cli_section(soft=True)
     chips = "".join(f'<li class="mcp-agent">{esc(a)}</li>' for a in M["agents"])
     chips += f'<li class="mcp-agent mcp-agent-any">{esc(M["agents_other"])}</li>'
     out += section("what-mcp-is", "MCP", M["what_h2"], f'''        <p class="feat-approval">{esc(M["what"])}</p>
-        <ul class="mcp-agents" aria-label="Works with">{chips}</ul>''', soft=True)
+        <ul class="mcp-agents" aria-label="Works with">{chips}</ul>''', soft=False)
     convos = []
     for title, you, flieber, status in M["convos"]:
         status_html = f'\n              <p class="chat-status"><span aria-hidden="true"></span>{esc(status)}</p>' if status else ""
@@ -503,7 +509,7 @@ def mcp_main() -> str:
             <div class="chat-msg chat-flieber"><span class="chat-who"><img src="{p}assets/img/flieber-icon.svg" alt="" width="14" height="14"> Flieber</span><p>{esc(flieber)}</p>{status_html}
             </div>
           </article>''')
-    out += section("conversations", "Examples", M["convo_h2"], '        <div class="chat-grid">\n' + "\n".join(convos) + "\n        </div>", soft=False)
+    out += section("conversations", "Examples", M["convo_h2"], '        <div class="chat-grid">\n' + "\n".join(convos) + "\n        </div>", soft=True)
     groups = []
     for mslug, prompts in M["ask"]:
         m = MODULE_BY_SLUG[mslug]
@@ -514,7 +520,7 @@ def mcp_main() -> str:
 {items}
             </ul>
           </article>''')
-    out += section("what-you-can-ask", "Prompts", M["ask_h2"], '        <div class="mcp-ask-grid">\n' + "\n".join(groups) + "\n        </div>\n        " + work_link(p), soft=True)
+    out += section("what-you-can-ask", "Prompts", M["ask_h2"], '        <div class="mcp-ask-grid">\n' + "\n".join(groups) + "\n        </div>\n        " + work_link(p), soft=False)
     dos = "\n".join(f'''          <article class="why-card">
             <span class="n">{i:02d}</span>
             <h3 class="h3">{esc(t)}</h3>
@@ -523,22 +529,24 @@ def mcp_main() -> str:
     out += section("through-mcp", "Capabilities", M["do_h2"], f'''        <div class="why-grid mcp-do">
 {dos}
         </div>
-        <p class="mcp-note">{esc(M["do_note"])}</p>''', soft=False)
-    steps = "\n".join(f'''          <li class="mcp-step"><span class="n">{i}</span><p><b>{esc(t)}</b> {esc(d)}</p></li>''' for i, (t, d) in enumerate(M["steps"], 1))
-    out += section("connect", M["steps_kicker"], M["steps_h2"], f'''        <ol class="mcp-steps">
-{steps}
-        </ol>
-        <p class="link-row"><a class="link-arrow" href="{C.DEV_DOCS}">{esc(M["steps_link"])} {ARROW}</a></p>''', soft=True, lead=M["steps_lead"])
-    out += cli_section(soft=False)
+        <p class="mcp-note">{esc(M["do_note"])}</p>''', soft=True)
     out += section("build-your-own", "Data layer", M["build_h2"], f'''        <p class="feat-approval">{esc(M["build"])}</p>
-        <p class="link-row"><a class="link-arrow" href="{p}product/data-layer/">Data layer {ARROW}</a></p>''', soft=True)
+        <p class="link-row"><a class="link-arrow" href="{p}product/data-layer/">Data layer {ARROW}</a></p>''', soft=False)
     faq = "\n".join(f'''          <div class="feat-faq-item">
             <h3 class="h3">{esc(q)}</h3>
             <p>{esc(a)}</p>
           </div>''' for q, a in M["faq"])
-    out += section("questions", "Questions", M["faq_h2"], '        <div class="feat-faq">\n' + faq + "\n        </div>", soft=False)
+    out += section("questions", "Questions", M["faq_h2"], '        <div class="feat-faq">\n' + faq + "\n        </div>", soft=True)
     out += closing(h2=M["close_h2"], body=M["close_body"])
     return out
+
+
+def cli_jsonld() -> dict:
+    X = C.CLI
+    return {"@type": "SoftwareApplication", "@id": "https://www.flieber.com/mcp#flieber-cli", "name": X["name"],
+            "applicationCategory": "DeveloperApplication", "operatingSystem": "macOS, Linux, Windows",
+            "description": X["lead"], "installUrl": "https://www.flieber.com/mcp#flieber-cli", "downloadUrl": X["pypi"],
+            "publisher": {"@id": "https://www.flieber.com/#organization"}}
 
 
 def mcp_jsonld(url: str) -> str:
@@ -550,6 +558,7 @@ def mcp_jsonld(url: str) -> str:
          "isPartOf": {"@type": "WebSite", "url": "https://www.flieber.com"}},
         {"@type": "FAQPage", "@id": url + "#questions", "url": url,
          "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in M["faq"]]},
+        cli_jsonld(),
     ]
     return ('<script type="application/ld+json">\n'
             + json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2, ensure_ascii=False) + "\n  </script>")
@@ -995,6 +1004,67 @@ def work_link(p: str) -> str:
     return f'<p class="link-row"><a class="link-arrow" href="{p}{W.PAGE["slug"]}/">{esc(W.PAGE["more"])} {ARROW}</a></p>'
 
 
+def home_connect_html() -> str:
+    H, X, M = C.HOME_CONNECT, C.CLI, C.MCP_PAGE
+    inst = "\n".join(cmd_html(l, c) for l, c in X["install"])
+    steps = "\n".join(f'          <li class="mcp-step"><span class="n">{i}</span><p><b>{esc(s)}</b> {esc(d)}</p></li>' for i, (s, d) in enumerate(M["steps"], 1))
+    chips = "".join(f'<li class="mcp-agent">{esc(a)}</li>' for a in M["agents"] + ["Claude Desktop"])
+    chips += f'<li class="mcp-agent mcp-agent-any">{esc(M["agents_other"])}</li>'
+    return f'''    <!-- CONNECT:start (generated by scripts/build-content.py from HOME_CONNECT and CLI; do not edit by hand) -->
+    <section class="section home-connect" id="connect-your-agent" aria-labelledby="connect-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">{esc(H["kicker"])}</span>
+          <h2 class="h2" id="connect-title" style="margin-top:20px">{esc(H["h2"])}</h2>
+          <p class="lead">{esc(H["lead"])}</p>
+        </div>
+        <ul class="mcp-agents reveal" aria-label="Works with">{chips}</ul>
+        <div class="hc-grid reveal-stagger">
+          <article class="hc-card">
+            <p class="hc-tag">{esc(H["cli_tag"])}</p>
+            <h3 class="h3">{esc(H["cli_h3"])}</h3>
+{inst}
+            <p class="hc-then">{esc(H["cli_then"])}</p>
+{cmd_html(X["clients"][0][0], X["clients"][0][1])}
+            <p class="cli-note">{esc(H["cli_note"])}</p>
+          </article>
+          <article class="hc-card">
+            <p class="hc-tag">{esc(H["studio_tag"])}</p>
+            <h3 class="h3">{esc(H["studio_h3"])}</h3>
+            <ol class="mcp-steps hc-steps">
+{steps}
+            </ol>
+            <p class="cli-note">{esc(H["studio_note"])}</p>
+          </article>
+        </div>
+        <p class="link-row reveal"><a class="link-arrow" href="mcp/">{esc(H["link"])} <span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+    <!-- CONNECT:end -->'''
+
+
+def sync_home_connect() -> None:
+    """Homepage "Connect your agent" block, after the logos band."""
+    f = ROOT / "index.html"
+    s = f.read_text(encoding="utf-8")
+    block = home_connect_html()
+    if "<!-- CONNECT:start" in s:
+        s = re.sub(r"    <!-- CONNECT:start.*?<!-- CONNECT:end -->", lambda m: block, s, count=1, flags=re.S)
+    else:
+        anchor = "    <!-- ================= 3. WHY INVENTORY ================= -->"
+        assert s.count(anchor) == 1
+        s = s.replace(anchor, block + "\n\n" + anchor, 1)
+    obj = json.dumps(cli_jsonld(), indent=2, ensure_ascii=False).replace("\n", "\n      ")
+    obj = "      " + obj + ","
+    if '"@id": "https://www.flieber.com/mcp#flieber-cli"' in s:
+        s = re.sub(r'      \{\n        "@type": "SoftwareApplication",\n        "@id": "https://www.flieber.com/mcp#flieber-cli".*?\n      \},', lambda m: obj, s, count=1, flags=re.S)
+    else:
+        anchor = '      {\n        "@type": "SoftwareApplication",\n        "name": "Flieber",'
+        assert s.count(anchor) == 1
+        s = s.replace(anchor, obj + "\n" + anchor, 1)
+    f.write_text(s, encoding="utf-8")
+
+
 def sync_home_asks() -> None:
     """The six homepage prompt cards come from the library (draft 15.5)."""
     f = ROOT / "index.html"
@@ -1029,6 +1099,7 @@ def build_work() -> None:
     write_page(f"{P['slug']}/index.html", 1, url, f"{P['name']}: {P['h1'][0].lower() + P['h1'][1:]} | Flieber", P["lead"],
                work_jsonld(url), work_main())
     sync_home_asks()
+    sync_home_connect()
 
 
 def write_page(rel: str, depth: int, url: str, title: str, desc: str, jsonld: str, main: str) -> None:
