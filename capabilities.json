@@ -1261,7 +1261,7 @@
         "Claude Code": "flieber mcp register --client claude-code",
         "Cursor": "flieber mcp register --client cursor",
         "Claude Desktop": "flieber mcp register --client claude-desktop",
-        "Any other local MCP client": "uvx flieber@latest mcp"
+        "Muse or any other local MCP client": "uvx flieber@latest mcp"
       },
       "skills": [
         {

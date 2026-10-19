@@ -234,7 +234,7 @@ CONNECT = [
     ("Free trial", "14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan.", TRIAL),
     ("Flieber Studio (MCP server)", "Claude, ChatGPT, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required):", DEV_DOCS),
     ("MCP client", "Flieber connects to any system with an MCP server. Built-in connections: " + ", ".join(CONNECTED_APPS) + ".", None),
-    ("Flieber CLI (local MCP and command line, early access)", "29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh. On Windows (PowerShell): irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex. Package:", "https://pypi.org/project/flieber/"),
+    ("Flieber CLI (local MCP and command line, early access)", "29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, Muse, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh. On Windows (PowerShell): irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex. Package:", "https://pypi.org/project/flieber/"),
     ("Public API", "Programmatic access to Flieber data. Details (customer login required):", DEV_DOCS),
     ("Demo", "", DEMO),
 ]
@@ -530,7 +530,7 @@ MCP_PAGE = {
               "channels, products or suppliers. The data layer can be bought on its own."),
     "faq_h2": "Questions",
     "faq": [
-        ("Which AI assistants work with Flieber?", "Claude, ChatGPT, Cursor, Muse and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop and any other local MCP client."),
+        ("Which AI assistants work with Flieber?", "Claude, ChatGPT, Cursor, Muse and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop, Muse and any other local MCP client."),
         ("What's the difference between Flieber Studio and Flieber CLI?", "Flieber Studio is Flieber's own agent: your assistant asks a question in plain language and Studio answers or acts. Flieber CLI gives your own agents Flieber's data and tools directly, in the terminal or in local MCP clients, so they can build reports, dashboards and workflows on it."),
         ("Do I need a Flieber account?", "Yes. Creating your Flieber account is the first step either way. With Flieber CLI, the installer walks you through it."),
         ("Do I need to be technical to connect?", "Not for Flieber Studio: connecting takes a few minutes and no code. Flieber CLI is for people who work in a terminal or in tools like Claude Code and Cursor."),
@@ -563,7 +563,7 @@ CLI = {
     "kicker": "Flieber CLI",
     "h2": "Give your agents Flieber's data and tools",
     "lead": ("Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, "
-             "Cursor and Claude Desktop: sales, adjusted sales, forecasts, catalog and store onboarding, through the same "
+             "Cursor, Claude Desktop and Muse: sales, adjusted sales, forecasts, catalog and store onboarding, through the same "
              "29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs "
              "you in, and gets your agents ready."),
     "install_h3": "Install and sign in",
@@ -579,7 +579,7 @@ CLI = {
     "clients": [("Claude Code", "flieber mcp register --client claude-code"),
                 ("Cursor", "flieber mcp register --client cursor"),
                 ("Claude Desktop", "flieber mcp register --client claude-desktop"),
-                ("Any other local MCP client", "uvx flieber@latest mcp")],
+                ("Muse or any other local MCP client", "uvx flieber@latest mcp")],
     "clients_note": "Add --scope project to write a project file your team can commit, so everyone connects the same way.",
     "skills_h3": "Give your agent the skills",
     "skills_cmd": "flieber skills install --client claude-code",
@@ -631,7 +631,7 @@ BWA = {
         ("Every source connected", "Marketplaces, DTC, wholesale, 3PLs and ERPs through native and assisted integrations."),
         ("Data shaped to your business", "Listings mapped to products, bundles converted into components and sales orders routed to the regions or warehouses you choose."),
         ("History you can trust", "Sales corrected for stockouts, spikes and promotions, next to what actually sold."),
-        ("Access your way", "Flieber Studio for Claude, ChatGPT, Cursor and any MCP-compatible agent, Flieber CLI for Claude Code, Cursor and Claude Desktop, plus a public API for your own systems."),
+        ("Access your way", "Flieber Studio for Claude, ChatGPT, Cursor and any MCP-compatible agent, Flieber CLI for Claude Code, Cursor, Claude Desktop and Muse, plus a public API for your own systems."),
         ("Room to grow", "Add demand forecasting, inventory forecasting, replenishment, workflows or Flieber's planners whenever you need them."),
     ],
     "connect_h2": "Connect in minutes",
