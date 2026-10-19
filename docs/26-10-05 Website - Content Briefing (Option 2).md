@@ -1129,6 +1129,8 @@ Plain-language install page for non-technical users (operations and supply chain
 
 **Before you start:** A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything. · Claude Desktop, Claude Code, Cursor or Muse installed. · A Flieber account. No account yet? The installer helps you create one.
 
+**Above the steps:** "Early access" tag and "Two steps, in order, then try it. About 5 minutes." The three steps sit on a numbered rail (1, 2, 3) so they read as one path. Step 2's tool texts open with "After Step 1, in the same window…".
+
 **Step 1: Install Flieber and sign in** (Early access): This installs the Flieber app for your computer and signs you in. Tabs Windows, Mac, Linux; the visitor's system opens by default.
 - Windows: Download the installer, then open the file you downloaded. Button "Download the installer" (cli.flieber.com/flieber-install.bat). If Windows shows a blue “Windows protected your PC” box, click More info, then Run anyway. TODO: Engineering to confirm whether this Windows warning appears. Collapsed "Prefer PowerShell?": Open PowerShell: press the Start key, type PowerShell and press Enter. Paste this command and press Enter. `irm https://cli.flieber.com/install.ps1 | iex`
 - Mac: Open Terminal: press Cmd + Space, type Terminal and press Enter. Paste this command and press Enter. `curl -fsSL https://cli.flieber.com/install.sh | sh` · Linux: Open a terminal window, paste this command and press Enter. Same command.

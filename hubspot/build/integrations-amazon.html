@@ -1322,6 +1322,13 @@ a.int-tile:hover { border-color: var(--black); }
 .mcp-prompt { max-width: 860px; }
 @media (max-width: 1140px) { .inst-safe { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 860px) { .inst-choices, .inst-try, .inst-safe { grid-template-columns: 1fr; } .inst-trouble tbody th { width: auto; } .inst-trouble, .inst-trouble tbody, .inst-trouble tr, .inst-trouble th, .inst-trouble td { display: block; } .inst-trouble thead { display: none; } .inst-trouble td { border-top: 0; padding-top: 0; } }
+.inst-intro { font-size: clamp(18px, 1.6vw, 21px); margin: 0 0 36px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.inst-steps { counter-reset: inststep; position: relative; padding-left: 64px; }
+.inst-steps::before { content: ""; position: absolute; left: 21px; top: 22px; bottom: 22px; width: 2px; background: var(--line-strong); }
+.inst-step { counter-increment: inststep; position: relative; }
+.inst-step::before { content: counter(inststep); position: absolute; left: -64px; top: 0; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--yellow); border: 1px solid var(--black); font-weight: 600; font-size: 18px; }
+@media (max-width: 860px) { .inst-steps { padding-left: 44px; } .inst-steps::before { left: 15px; } .inst-step::before { left: -44px; width: 32px; height: 32px; font-size: 15px; } }
+.inst-step .cmd code, .inst-card .cmd code { white-space: pre-wrap; overflow-wrap: anywhere; }
 
 </style>
 

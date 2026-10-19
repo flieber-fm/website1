@@ -581,9 +581,11 @@ def install_main() -> str:
     out += section("before-you-start", "Install it yourself", I["before_h2"], f'        <ul class="inst-check">\n{before}\n        </ul>', soft=True)
     out += f'''
     <section class="section" id="step-1" aria-labelledby="step-1-title">
+      <div class="wrap">
+        <p class="inst-intro"><span class="hc-tag">{esc(I["early"])}</span> {esc(I["steps_intro"])}</p>
+      </div>
       <div class="wrap inst-steps">
         <div class="inst-step">
-          <p class="hc-tag">{esc(I["early"])}</p>
           <h2 class="h2 inst-h" id="step-1-title">{esc(I["step1_h"])}</h2>
           <p class="lead">{esc(I["step1_lead"])}</p>
 {step1}
