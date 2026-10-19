@@ -342,3 +342,22 @@
     });
   });
 })();
+
+/* Homepage quick start tabs */
+(function () {
+  var box = document.querySelector('.qs'); if (!box) return;
+  var tabs = [].slice.call(box.querySelectorAll('.qs-tab'));
+  function pick(t) {
+    tabs.forEach(function (x) {
+      var on = x === t; x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { pick(t); });
+    t.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!d) return;
+      var n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); e.preventDefault();
+    });
+  });
+})();

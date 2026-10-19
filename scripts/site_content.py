@@ -465,13 +465,13 @@ MCP_PAGE = {
     "slug": "mcp", "name": "MCP and AI agents",
     "h1": "Connect Claude and ChatGPT to your sales, inventory and cash-flow data",
     "lead": ("Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber "
-             "works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under "
+             "works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under "
              "the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build."),
     "what_h2": "What MCP is",
     "what": ("The Model Context Protocol is an open standard that lets AI assistants connect securely to the tools and "
              "data a business runs on. Connect Flieber once, and your assistant can ask Flieber questions and request "
              "actions in plain language. Your data stays in Flieber; the assistant receives only what each request needs."),
-    "agents": ["Claude", "ChatGPT", "Cursor", "Claude Code"], "agents_other": "Any MCP-compatible agent",
+    "agents": ["Claude", "ChatGPT", "Cursor", "Claude Code", "Muse"], "agents_other": "Any MCP-compatible agent",
     "convo_h2": "What a conversation looks like",
     "convo_label": "Illustrative example with sample data",
     "convos": [
@@ -530,7 +530,7 @@ MCP_PAGE = {
               "channels, products or suppliers. The data layer can be bought on its own."),
     "faq_h2": "Questions",
     "faq": [
-        ("Which AI assistants work with Flieber?", "Claude, ChatGPT, Cursor and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop and any other local MCP client."),
+        ("Which AI assistants work with Flieber?", "Claude, ChatGPT, Cursor, Muse and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop and any other local MCP client."),
         ("What's the difference between Flieber Studio and Flieber CLI?", "Flieber Studio is Flieber's own agent: your assistant asks a question in plain language and Studio answers or acts. Flieber CLI gives your own agents Flieber's data and tools directly, in the terminal or in local MCP clients, so they can build reports, dashboards and workflows on it."),
         ("Do I need a Flieber account?", "Yes. Creating your Flieber account is the first step either way. With Flieber CLI, the installer walks you through it."),
         ("Do I need to be technical to connect?", "Not for Flieber Studio: connecting takes a few minutes and no code. Flieber CLI is for people who work in a terminal or in tools like Claude Code and Cursor."),
@@ -545,17 +545,16 @@ MCP_PAGE = {
 
 # Homepage "Connect your agent" block (synced into index.html by build-content.py)
 HOME_CONNECT = {
-    "kicker": "Connect your agent",
-    "h2": "Connect your agents to Flieber in one command",
-    "lead": ("Flieber works with Claude, ChatGPT, Cursor, Claude Code, Claude Desktop and any MCP-compatible agent. "
-             "Install Flieber CLI to give the agents you build Flieber's data and tools, or connect Flieber Studio to "
-             "ask Flieber from your AI assistant, with no code."),
-    "cli_h3": "Flieber CLI", "cli_tag": "For the agents you build",
-    "cli_then": "Then connect your agent",
-    "cli_note": "The installer creates your Flieber account or signs you in. Early access, open to everyone.",
-    "studio_h3": "Flieber Studio", "studio_tag": "For your AI assistant, no code",
-    "studio_note": "Works today in Claude, ChatGPT and Cursor.",
-    "link": "Full setup for every agent",
+    "label": "Quick start",
+    "link": "All install options",
+    "tabs": [
+        ("macos", "macOS and Linux", "One command installs Flieber CLI, creates your Flieber account or signs you in, and connects your agents."),
+        ("windows", "Windows", "Run in PowerShell. The installer creates your Flieber account or signs you in."),
+        ("oneclick", "Windows, one click", "Download the installer and double-click it. It creates your Flieber account or signs you in."),
+        ("studio", "AI assistant, no code", "Ask Flieber from Claude, ChatGPT or Cursor with Flieber Studio."),
+    ],
+    "then": "Then connect your agent:",
+    "foot": "Works with Claude Code, Cursor, Claude Desktop, Claude, ChatGPT, Muse and any MCP-compatible agent.",
 }
 
 # Flieber CLI (from the Flieber MCP & CLI page shared by the product team, Oct 2026)
@@ -704,7 +703,7 @@ USE_CASES = [
                 ("Claude works from unified, mapped data instead of raw exports from each channel", "cross-channel-sku-mapping"),
                 ("Request actions such as purchase orders or FBA shipments, under your approval rules", "control-and-approval")],
      "ask": ["Which Amazon SKUs stock out in the next 30 days?", "Compare Shopify and Amazon sell-through for the holiday bundle."],
-     "faq": [("Which AI assistants work with Flieber?", "Claude, ChatGPT, Cursor and any agent that supports MCP."),
+     "faq": [("Which AI assistants work with Flieber?", "Claude, ChatGPT, Cursor, Muse and any agent that supports MCP."),
              ("How long does it take to connect?", "A few minutes. The steps are on /mcp.")],
      "modules": ["data-layer", "mcp"], "features": ["mcp-server"]},
     {"slug": "shopify-inventory-forecasting", "name": "Shopify inventory forecasting",

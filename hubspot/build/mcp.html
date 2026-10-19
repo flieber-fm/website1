@@ -1253,6 +1253,31 @@ a.int-tile:hover { border-color: var(--black); }
 .hc-steps .mcp-step .n { flex: none; margin: 0; }
 .hc-steps .mcp-step p { margin: 3px 0 0; }
 .hc-card .cmd code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.qs-wrap { padding-top: clamp(8px, 2vw, 24px); padding-bottom: clamp(32px, 5vw, 64px); }
+.qs { background: var(--black); color: var(--gray-light); border-radius: var(--radius-l); padding: clamp(18px, 2.2vw, 26px); max-width: 980px; margin: 0 auto; }
+.qs-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.qs-label { font-family: var(--mono); font-size: 12.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--yellow); margin: 0; }
+.qs-all { font-family: var(--mono); font-size: 12.5px; color: var(--gray-light); text-decoration: none; white-space: nowrap; }
+.qs-all:hover { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.qs-tabs { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 16px; border-bottom: 1px solid rgba(240,245,246,.14); }
+.qs-tab { font-family: var(--mono); font-size: 12.5px; padding: 8px 0 10px; background: none; border: 0; border-bottom: 2px solid transparent; color: var(--gray-medium); cursor: pointer; margin-bottom: -1px; }
+.qs-tab:hover { color: var(--white); }
+.qs-tab[aria-selected="true"] { color: var(--yellow); border-bottom-color: var(--yellow); }
+.qs-panel { padding-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+.qs-panel[hidden] { display: none; }
+.qs-note { font-size: 15px; color: var(--gray-light); margin: 0; }
+.qs .cmd { background: #2A2C2C; }
+.qs .cmd code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.qs-then { font-size: 13.5px; color: var(--gray-medium); margin: 0; }
+.qs-then code, .qs-foot code { font-family: var(--mono); font-size: 12.5px; color: var(--gray-light); }
+.qs-dl { align-self: flex-start; }
+.qs-steps { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
+.qs-steps b { color: var(--white); font-weight: 600; }
+.qs-foot { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid rgba(240,245,246,.14); font-size: 13.5px; color: var(--gray-medium); }
+.qs-then code { white-space: nowrap; }
+.qs .cmd-label { display: none; }
+.qs .cmd { padding: 12px 70px 12px 14px; }
+.qs .cmd-copy { top: 50%; transform: translateY(-50%); }
 
 </style>
 
@@ -1274,7 +1299,7 @@ a.int-tile:hover { border-color: var(--black); }
       "@id": "https://www.flieber.com/mcp",
       "url": "https://www.flieber.com/mcp",
       "name": "Connect Claude and ChatGPT to your sales, inventory and cash-flow data",
-      "description": "Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build.",
+      "description": "Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build.",
       "isPartOf": {
         "@type": "WebSite",
         "url": "https://www.flieber.com"
@@ -1290,7 +1315,7 @@ a.int-tile:hover { border-color: var(--black); }
           "name": "Which AI assistants work with Flieber?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Claude, ChatGPT, Cursor and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop and any other local MCP client."
+            "text": "Claude, ChatGPT, Cursor, Muse and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop and any other local MCP client."
           }
         },
         {
@@ -1429,7 +1454,7 @@ a.int-tile:hover { border-color: var(--black); }
         <div class="section-head">
           <span class="kicker">Product · MCP and AI agents</span>
           <h1 class="h1" id="page-title">Connect Claude and ChatGPT to your sales, inventory and cash-flow data</h1>
-          <p class="lead">Ask your own AI about your business and get answers from Flieber’s current, contextualized data. Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build.</p>
+          <p class="lead">Ask your own AI about your business and get answers from Flieber’s current, contextualized data. Flieber works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build.</p>
         </div>
         <div class="sol-actions">
           <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
@@ -1511,7 +1536,7 @@ a.int-tile:hover { border-color: var(--black); }
           <h2 class="h2" id="what-mcp-is-title" style="margin-top:20px">What MCP is</h2>
         </div>
         <p class="feat-approval">The Model Context Protocol is an open standard that lets AI assistants connect securely to the tools and data a business runs on. Connect Flieber once, and your assistant can ask Flieber questions and request actions in plain language. Your data stays in Flieber; the assistant receives only what each request needs.</p>
-        <ul class="mcp-agents" aria-label="Works with"><li class="mcp-agent">Claude</li><li class="mcp-agent">ChatGPT</li><li class="mcp-agent">Cursor</li><li class="mcp-agent">Claude Code</li><li class="mcp-agent mcp-agent-any">Any MCP-compatible agent</li></ul>
+        <ul class="mcp-agents" aria-label="Works with"><li class="mcp-agent">Claude</li><li class="mcp-agent">ChatGPT</li><li class="mcp-agent">Cursor</li><li class="mcp-agent">Claude Code</li><li class="mcp-agent">Muse</li><li class="mcp-agent mcp-agent-any">Any MCP-compatible agent</li></ul>
       </div>
     </section>
 
@@ -1667,7 +1692,7 @@ a.int-tile:hover { border-color: var(--black); }
         <div class="feat-faq">
           <div class="feat-faq-item">
             <h3 class="h3">Which AI assistants work with Flieber?</h3>
-            <p>Claude, ChatGPT, Cursor and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop and any other local MCP client.</p>
+            <p>Claude, ChatGPT, Cursor, Muse and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop and any other local MCP client.</p>
           </div>
           <div class="feat-faq-item">
             <h3 class="h3">What’s the difference between Flieber Studio and Flieber CLI?</h3>
@@ -2117,6 +2142,25 @@ a.int-tile:hover { border-color: var(--black); }
         b.textContent = 'Copied'; b.classList.add('done');
         setTimeout(function () { b.textContent = 'Copy'; b.classList.remove('done'); }, 1800);
       });
+    });
+  });
+})();
+
+/* Homepage quick start tabs */
+(function () {
+  var box = document.querySelector('.qs'); if (!box) return;
+  var tabs = [].slice.call(box.querySelectorAll('.qs-tab'));
+  function pick(t) {
+    tabs.forEach(function (x) {
+      var on = x === t; x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { pick(t); });
+    t.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!d) return;
+      var n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); e.preventDefault();
     });
   });
 })();

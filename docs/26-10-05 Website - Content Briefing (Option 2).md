@@ -136,26 +136,24 @@ Promoted on Oct 7 from homepage variant V6 ("Intelligence layer"): Flieber as th
 
 The 14 customer logos already uploaded to HubSpot, in one row (scrolling on mobile). Do not recreate them.
 
-### 4.2b Connect your agent (new, Oct 19)
+### 4.2b Quick start box (Oct 19, replaces the Connect your agent section)
 
-Right after the logos. Makes connecting Flieber to agents explicit on the homepage, for people and for agent search. Generated from the same data as /mcp (HOME_CONNECT and CLI in site_content.py), so commands stay in sync.
+A compact dark box right after the logos, not a full section: a quick install guide, after the benchmark Fabricio shared. Generated from HOME_CONNECT and CLI in site_content.py.
 
-**Section label:** Connect your agent
+**Header:** "Quick start" (mono, yellow) · right: "All install options →" to /mcp
 
-**H2:** Connect your agents to Flieber in one command
+**Tabs, one panel each:**
 
-**Lead:** Flieber works with Claude, ChatGPT, Cursor, Claude Code, Claude Desktop and any MCP-compatible agent. Install Flieber CLI to give the agents you build Flieber's data and tools, or connect Flieber Studio to ask Flieber from your AI assistant, with no code.
+- **macOS and Linux:** One command installs Flieber CLI, creates your Flieber account or signs you in, and connects your agents.
+- **Windows:** Run in PowerShell. The installer creates your Flieber account or signs you in.
+- **Windows, one click:** Download the installer and double-click it. It creates your Flieber account or signs you in.
+- **AI assistant, no code:** Ask Flieber from Claude, ChatGPT or Cursor with Flieber Studio.
 
-**Chips:** Claude · ChatGPT · Cursor · Claude Code · Claude Desktop · "Any MCP-compatible agent"
+Panels: macOS and Linux shows `curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh`; Windows shows `irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex`; Windows, one click shows a "Download flieber-install.bat" button; AI assistant, no code shows the three Flieber Studio steps. The two command panels add "Then connect your agent: `flieber mcp register --client claude-code` (or `--client cursor`, `--client claude-desktop`)".
 
-**Two cards:**
+**Footer line:** Works with Claude Code, Cursor, Claude Desktop, Claude, ChatGPT, Muse and any MCP-compatible agent.
 
-1. **Flieber CLI** (tag: For the agents you build): the two install commands (macOS and Linux: `curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh`; Windows (PowerShell): `irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex`), then "Then connect your agent" with `flieber mcp register --client claude-code`. Note: The installer creates your Flieber account or signs you in. Early access, open to everyone.
-2. **Flieber Studio** (tag: For your AI assistant, no code): the three connect steps from /mcp. Note: Works today in Claude, ChatGPT and Cursor.
-
-**Link:** Full setup for every agent → /mcp
-
-Structured data: a Flieber CLI SoftwareApplication (macOS, Linux, Windows; install on /mcp#flieber-cli; download on PyPI) is added to the homepage and /mcp.
+Structured data: a Flieber CLI SoftwareApplication (macOS, Linux, Windows; install on /mcp#flieber-cli; download on PyPI) on the homepage and /mcp.
 
 ### 4.3 Why inventory
 

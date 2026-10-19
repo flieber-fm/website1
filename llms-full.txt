@@ -216,11 +216,11 @@ How you work together:
 
 https://www.flieber.com/mcp
 
-Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build.
+Ask your own AI about your business and get answers from Flieber's current, contextualized data. Flieber works with Claude, ChatGPT, Cursor, Muse and any MCP-compatible agent, and can act on what you decide, under the approval rules you set. Two ways in: Flieber Studio for your AI assistant, and Flieber CLI for the agents you build.
 
 **What MCP is** The Model Context Protocol is an open standard that lets AI assistants connect securely to the tools and data a business runs on. Connect Flieber once, and your assistant can ask Flieber questions and request actions in plain language. Your data stays in Flieber; the assistant receives only what each request needs.
 
-Works with: Claude, ChatGPT, Cursor, Claude Code and any MCP-compatible agent.
+Works with: Claude, ChatGPT, Cursor, Claude Code, Muse and any MCP-compatible agent.
 
 ### What a conversation looks like
 
@@ -307,7 +307,7 @@ Building reports, dashboards or agents with AI? Connect them to Flieber's data l
 
 ### Questions
 
-**Which AI assistants work with Flieber?** Claude, ChatGPT, Cursor and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop and any other local MCP client.
+**Which AI assistants work with Flieber?** Claude, ChatGPT, Cursor, Muse and any agent that supports MCP. Flieber CLI also works with Claude Code, Cursor, Claude Desktop and any other local MCP client.
 
 **What's the difference between Flieber Studio and Flieber CLI?** Flieber Studio is Flieber's own agent: your assistant asks a question in plain language and Studio answers or acts. Flieber CLI gives your own agents Flieber's data and tools directly, in the terminal or in local MCP clients, so they can build reports, dashboards and workflows on it.
 
@@ -672,7 +672,7 @@ How Flieber handles it:
 
 Ask Flieber: "Which of our top SKUs run out on Amazon before their next purchase order lands?" · "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days."
 
-**Which AI assistants work with Flieber?** Claude, ChatGPT, Cursor and any agent that supports MCP.
+**Which AI assistants work with Flieber?** Claude, ChatGPT, Cursor, Muse and any agent that supports MCP.
 
 **How long does it take to connect?** A few minutes. The steps are on /mcp.
 
