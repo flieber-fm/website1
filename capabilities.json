@@ -1249,9 +1249,14 @@
       "hosted_server": "coming soon",
       "account_required": "yes; creating a Flieber account is the first step (the installer handles it, or flieber signup)",
       "install": {
-        "macOS and Linux": "curl -fsSL https://build.flieber.com/install.sh | sh",
-        "Windows (PowerShell)": "irm https://build.flieber.com/install.ps1 | iex"
+        "macOS and Linux": "curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh",
+        "Windows (PowerShell)": "irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex",
+        "Windows (one-click)": "https://flieber-cli-7d26bb.gitlab.io/flieber-install.bat"
       },
+      "coming_soon": [
+        "Hosted MCP server",
+        "Flieber in claude.ai"
+      ],
       "register": {
         "Claude Code": "flieber mcp register --client claude-code",
         "Cursor": "flieber mcp register --client cursor",
@@ -1262,12 +1267,12 @@
         {
           "name": "flieber-install",
           "purpose": "Sets Flieber up.",
-          "url": "https://build.flieber.com/skills/flieber-install/SKILL.md"
+          "url": "https://cli.flieber.com/skills/flieber-install/SKILL.md"
         },
         {
           "name": "flieber",
           "purpose": "Teaches your agent which tool to use, how to read results and how to preview changes.",
-          "url": "https://build.flieber.com/skills/flieber/SKILL.md"
+          "url": "https://cli.flieber.com/skills/flieber/SKILL.md"
         }
       ],
       "skills_install": "flieber skills install --client claude-code",

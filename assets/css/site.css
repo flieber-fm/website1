@@ -1404,3 +1404,7 @@ a.int-tile:hover { border-color: var(--black); }
 .cz-cli-cmds { margin-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 980px; }
 @media (max-width: 860px) { .cz-cli-cmds { grid-template-columns: 1fr; } }
 .cli-note code, .cli-facts code { font-family: var(--mono); font-size: .9em; }
+.cli-bat { margin-top: 2px; }
+.cli-soon { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; font-size: 15px; color: var(--text-2); }
+.cli-soon b { color: var(--black); font-weight: 600; }
+.soon-tag { display: inline-block; font-family: var(--mono); font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; background: var(--yellow); color: var(--black); margin-right: 4px; vertical-align: 1px; }

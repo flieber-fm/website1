@@ -450,18 +450,23 @@ def cli_section(soft: bool) -> str:
     skills = "\n".join(f'              <li><a href="{u}"><code>{esc(n)}</code></a> {esc(d)}</li>' for n, d, u in X["skills"])
     facts = "\n".join(f"          <dt>{esc(k)}</dt><dd>{cli_codes(v)}</dd>" for k, v in X["facts"])
     note = esc(X["install_note"]) + f' Flieber CLI is the <a href="{X["pypi"]}"><code>flieber</code> package on PyPI</a>.'
+    soon = "\n".join(f'              <li><span class="soon-tag">Coming soon</span> <b>{esc(n)}.</b> {esc(d)}</li>' for n, d in X["soon"])
     body = f'''        <div class="cli-install">
           <h3 class="h3">{esc(X["install_h3"])}</h3>
           <div class="cli-pair">
 {inst}
           </div>
           <p class="cli-note">{note}</p>
+          <p class="cli-bat"><a class="link-arrow" href="{X["bat"]}" download>{esc(X["bat_label"])} {ARROW}</a></p>
         </div>
         <div class="cli-grid">
           <div class="cli-col">
             <h3 class="h3">{esc(X["clients_h3"])}</h3>
 {clients}
             <p class="cli-note">{cli_codes(X["clients_note"])}</p>
+            <ul class="cli-soon">
+{soon}
+            </ul>
           </div>
           <div class="cli-col">
             <h3 class="h3">{esc(X["skills_h3"])}</h3>
@@ -1284,7 +1289,9 @@ def agents_main() -> str:
           <p>{esc(C.CLI["lead"])} Creating a Flieber account is the first step; the installer handles it, or run <code>flieber signup</code>.</p>
           <ul class="bullets">
 {chr(10).join(f"            <li><b>{esc(l)}:</b> <code>{esc(c)}</code></li>" for l, c in C.CLI["install"])}
+            <li><b>Windows one-click installer:</b> <a href="{C.CLI["bat"]}">flieber-install.bat</a> (download and double-click)</li>
 {chr(10).join(f"            <li><b>Connect {esc(l)}:</b> <code>{esc(c)}</code></li>" for l, c in C.CLI["clients"])}
+{chr(10).join(f"            <li><b>Coming soon, {esc(n[0].lower() + n[1:])}:</b> {esc(d)}</li>" for n, d in C.CLI["soon"])}
             <li><b>Skills:</b> <code>{esc(C.CLI["skills_cmd"])}</code>, or read them directly: {", ".join(f'<a href="{u}">{esc(n)}</a> ({esc(d[0].lower() + d[1:-1])})' for n, d, u in C.CLI["skills"])}.</li>
 {chr(10).join(f"            <li>{esc(x)}</li>" for x in C.CLI["agent_facts"])}
             <li><b>Reference:</b> <a href="{C.CLI["docs"]}">{esc(C.CLI["docs_label"])}</a> · <a href="{C.CLI["pypi"]}">flieber on PyPI</a></li>
@@ -1402,7 +1409,9 @@ def cli_md() -> list:
     L = ["", f"## {X['name']} ({X['status'].lower()}): install and use", "", X["lead"],
          "Creating a Flieber account is the first step; the installer handles it, or run `flieber signup`.", ""]
     L += [f"- {l}: `{c}`" for l, c in X["install"]]
+    L += [f"- Windows one-click installer (download and double-click): {X['bat']}"]
     L += [f"- Connect {l}: `{c}`" for l, c in X["clients"]]
+    L += [f"- Coming soon, {n[0].lower() + n[1:]}: {d}" for n, d in X["soon"]]
     L += [f"- Skills: `{X['skills_cmd']}`"] + [f"  - [{n}]({u}): {d}" for n, d, u in X["skills"]]
     L += [f"- {x}" for x in X["agent_facts"]]
     L += [f"- [{X['docs_label']}]({X['docs']})", f"- [flieber on PyPI]({X['pypi']})"]
@@ -1489,7 +1498,8 @@ def capabilities() -> dict:
                 "flieber_cli": {"status": "early access", "package": C.CLI["package"], "pypi": C.CLI["pypi"], "tools": 29,
                                 "transport": "stdio (local MCP server and command line)", "hosted_server": "coming soon",
                                 "account_required": "yes; creating a Flieber account is the first step (the installer handles it, or flieber signup)",
-                                "install": {l: c for l, c in C.CLI["install"]},
+                                "install": {**{l: c for l, c in C.CLI["install"]}, "Windows (one-click)": C.CLI["bat"]},
+                                "coming_soon": [n for n, _ in C.CLI["soon"]],
                                 "register": {l: c for l, c in C.CLI["clients"]},
                                 "skills": [{"name": n, "purpose": d, "url": u} for n, d, u in C.CLI["skills"]],
                                 "skills_install": C.CLI["skills_cmd"],

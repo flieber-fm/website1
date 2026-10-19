@@ -1237,6 +1237,10 @@ a.int-tile:hover { border-color: var(--black); }
 .cz-cli-cmds { margin-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 980px; }
 @media (max-width: 860px) { .cz-cli-cmds { grid-template-columns: 1fr; } }
 .cli-note code, .cli-facts code { font-family: var(--mono); font-size: .9em; }
+.cli-bat { margin-top: 2px; }
+.cli-soon { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; font-size: 15px; color: var(--text-2); }
+.cli-soon b { color: var(--black); font-weight: 600; }
+.soon-tag { display: inline-block; font-family: var(--mono); font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; background: var(--yellow); color: var(--black); margin-right: 4px; vertical-align: 1px; }
 
 </style>
 
@@ -1401,8 +1405,8 @@ a.int-tile:hover { border-color: var(--black); }
         <p class="link-row"><a class="link-arrow" href="/mcp">Full guide on /mcp <span class="arrow" aria-hidden="true">→</span></a></p>
         <p class="cz-cli">Building in Claude Code or Cursor? One command installs Flieber CLI, creates your Flieber account or signs you in, and gives your agent Flieber’s data and tools.</p>
         <div class="cz-cli-cmds">
-          <div class="cmd"><span class="cmd-label">macOS and Linux</span><pre><code>curl -fsSL https://build.flieber.com/install.sh | sh</code></pre><button class="cmd-copy" type="button" aria-label="Copy the macOS and Linux command">Copy</button></div>
-          <div class="cmd"><span class="cmd-label">Windows (PowerShell)</span><pre><code>irm https://build.flieber.com/install.ps1 | iex</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Windows (PowerShell) command">Copy</button></div>
+          <div class="cmd"><span class="cmd-label">macOS and Linux</span><pre><code>curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh</code></pre><button class="cmd-copy" type="button" aria-label="Copy the macOS and Linux command">Copy</button></div>
+          <div class="cmd"><span class="cmd-label">Windows (PowerShell)</span><pre><code>irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Windows (PowerShell) command">Copy</button></div>
         </div>
         <p class="link-row"><a class="link-arrow" href="/mcp#flieber-cli">Flieber CLI setup <span class="arrow" aria-hidden="true">→</span></a></p>
         <h3 class="h3 cz-sub">What you can build</h3>

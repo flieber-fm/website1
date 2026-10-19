@@ -494,10 +494,12 @@ Every change follows the approval rules you set. By default, every change waits 
 
 **Install and sign in** (two copyable commands side by side, each with a Copy button):
 
-- macOS and Linux: `curl -fsSL https://build.flieber.com/install.sh | sh`
-- Windows (PowerShell): `irm https://build.flieber.com/install.ps1 | iex`
+- macOS and Linux: `curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh`
+- Windows (PowerShell): `irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex`
 
 *Note:* The installer sets up Flieber CLI, opens your browser to create your Flieber account or sign in, and lists your organizations. Running it again is safe and upgrades it. Flieber CLI is the `flieber` package on PyPI (linked).
+
+**Link under the commands:** "Prefer one click on Windows? Download flieber-install.bat and double-click it." → https://flieber-cli-7d26bb.gitlab.io/flieber-install.bat (download)
 
 **Connect your agent** (copyable commands):
 
@@ -508,10 +510,15 @@ Every change follows the approval rules you set. By default, every change waits 
 
 *Note:* Add --scope project to write a project file your team can commit, so everyone connects the same way.
 
+**Coming soon** (yellow tag, under the client commands):
+
+- **Hosted MCP server.** Connect without installing anything; your sign-in passes through and nothing is stored.
+- **Flieber in claude.ai.** Add Flieber under Settings, Connectors, sign in to Flieber and start asking, with nothing to install.
+
 **Give your agent the skills:** `flieber skills install --client claude-code`
 
-- `flieber-install` (https://build.flieber.com/skills/flieber-install/SKILL.md): Sets Flieber up.
-- `flieber` (https://build.flieber.com/skills/flieber/SKILL.md): Teaches your agent which tool to use, how to read results and how to preview changes.
+- `flieber-install` (https://cli.flieber.com/skills/flieber-install/SKILL.md): Sets Flieber up.
+- `flieber` (https://cli.flieber.com/skills/flieber/SKILL.md): Teaches your agent which tool to use, how to read results and how to preview changes.
 
 *Note:* The installer adds both skills automatically when it finds Claude Code. Cursor reads them from the same place.
 
@@ -525,7 +532,7 @@ Every change follows the approval rules you set. By default, every change waits 
 
 **Link:** Flieber API reference for LLMs → https://app.flieber.com/api/v1/public-api/docs/llms.txt
 
-Source: the Flieber MCP & CLI page shared by the product team (Oct 2026). Not on the page yet: the Windows double-click installer (flieber-install.bat), which has no public URL; the hosted MCP server and claude.ai connector, both "coming soon".
+Source: the Flieber MCP & CLI page shared by the product team (Oct 2026). Install scripts are served from flieber-cli-7d26bb.gitlab.io and the skills from cli.flieber.com (Fabricio, Oct 19). The hosted MCP server and claude.ai are shown as coming soon, due within days.
 
 **H2:** Build your own tools on Flieber
 

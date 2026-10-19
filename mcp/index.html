@@ -24,7 +24,7 @@
 
   <link rel="preload" href="../assets/fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/open-sauce-one-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/css/site.css?v=52">
+  <link rel="stylesheet" href="../assets/css/site.css?v=53">
 
   <script>document.documentElement.classList.remove('no-js');</script>
   <!-- Google Tag Manager (GTM-5FS8NPG) and HubSpot tracking (portal 5767502).
@@ -374,10 +374,11 @@
         <div class="cli-install">
           <h3 class="h3">Install and sign in</h3>
           <div class="cli-pair">
-          <div class="cmd"><span class="cmd-label">macOS and Linux</span><pre><code>curl -fsSL https://build.flieber.com/install.sh | sh</code></pre><button class="cmd-copy" type="button" aria-label="Copy the macOS and Linux command">Copy</button></div>
-          <div class="cmd"><span class="cmd-label">Windows (PowerShell)</span><pre><code>irm https://build.flieber.com/install.ps1 | iex</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Windows (PowerShell) command">Copy</button></div>
+          <div class="cmd"><span class="cmd-label">macOS and Linux</span><pre><code>curl -fsSL https://flieber-cli-7d26bb.gitlab.io/install.sh | sh</code></pre><button class="cmd-copy" type="button" aria-label="Copy the macOS and Linux command">Copy</button></div>
+          <div class="cmd"><span class="cmd-label">Windows (PowerShell)</span><pre><code>irm https://flieber-cli-7d26bb.gitlab.io/install.ps1 | iex</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Windows (PowerShell) command">Copy</button></div>
           </div>
           <p class="cli-note">The installer sets up Flieber CLI, opens your browser to create your Flieber account or sign in, and lists your organizations. Running it again is safe and upgrades it. Flieber CLI is the <a href="https://pypi.org/project/flieber/"><code>flieber</code> package on PyPI</a>.</p>
+          <p class="cli-bat"><a class="link-arrow" href="https://flieber-cli-7d26bb.gitlab.io/flieber-install.bat" download>Prefer one click on Windows? Download flieber-install.bat and double-click it. <span class="arrow" aria-hidden="true">→</span></a></p>
         </div>
         <div class="cli-grid">
           <div class="cli-col">
@@ -387,13 +388,17 @@
           <div class="cmd"><span class="cmd-label">Claude Desktop</span><pre><code>flieber mcp register --client claude-desktop</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Claude Desktop command">Copy</button></div>
           <div class="cmd"><span class="cmd-label">Any other local MCP client</span><pre><code>uvx flieber@latest mcp</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Any other local MCP client command">Copy</button></div>
             <p class="cli-note">Add <code>--scope project</code> to write a project file your team can commit, so everyone connects the same way.</p>
+            <ul class="cli-soon">
+              <li><span class="soon-tag">Coming soon</span> <b>Hosted MCP server.</b> Connect without installing anything; your sign-in passes through and nothing is stored.</li>
+              <li><span class="soon-tag">Coming soon</span> <b>Flieber in claude.ai.</b> Add Flieber under Settings, Connectors, sign in to Flieber and start asking, with nothing to install.</li>
+            </ul>
           </div>
           <div class="cli-col">
             <h3 class="h3">Give your agent the skills</h3>
           <div class="cmd"><span class="cmd-label">Claude Code</span><pre><code>flieber skills install --client claude-code</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Claude Code command">Copy</button></div>
             <ul class="cli-skills">
-              <li><a href="https://build.flieber.com/skills/flieber-install/SKILL.md"><code>flieber-install</code></a> Sets Flieber up.</li>
-              <li><a href="https://build.flieber.com/skills/flieber/SKILL.md"><code>flieber</code></a> Teaches your agent which tool to use, how to read results and how to preview changes.</li>
+              <li><a href="https://cli.flieber.com/skills/flieber-install/SKILL.md"><code>flieber-install</code></a> Sets Flieber up.</li>
+              <li><a href="https://cli.flieber.com/skills/flieber/SKILL.md"><code>flieber</code></a> Teaches your agent which tool to use, how to read results and how to preview changes.</li>
             </ul>
             <p class="cli-note">The installer adds both skills automatically when it finds Claude Code. Cursor reads them from the same place.</p>
           </div>
