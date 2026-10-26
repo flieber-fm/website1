@@ -1,6 +1,49 @@
 # Switching www.flieber.com to the new site (HubSpot)
 
-> **Option 2 branch.** Nothing below has been done for Option 2: no files, templates or drafts exist in HubSpot for it. If Option 2 is elected, its 36 drafts go under `/new-site-2026-b/` and the lists below apply (see `docs/26-10-05 Website - Technical Briefing (Option 2).md`). The "Current state" section describes Option 1's drafts.
+> **Option 2 (elected Oct 26).** Phase 1 is done: files in File Manager `flieber-2026`, templates in Design Manager `flieber-2026-b/templates`, and the 37 unpublished drafts below under `/new-site-2026-b/`. Option 1's drafts and templates (listed further down) are left as they were.
+
+## Option 2 drafts (Oct 26)
+
+| Draft page | HubSpot ID | Temporary URL | Final URL |
+| --- | --- | --- | --- |
+| \[New site 2026 B\] Home | 225535036207 | /new-site-2026-b/home | / |
+| \[New site 2026 B\] Features | 225535036209 | /new-site-2026-b/features | /features |
+| \[New site 2026 B\] Agents | 225535036211 | /new-site-2026-b/agents | /agents |
+| \[New site 2026 B\] Pricing | 225535036214 | /new-site-2026-b/pricing | /pricing |
+| \[New site 2026 B\] Security | 225535035280 | /new-site-2026-b/security | /security |
+| \[New site 2026 B\] Contact | 225535035282 | /new-site-2026-b/contact | /contact |
+| \[New site 2026 B\] Product - data-layer | 225535035284 | /new-site-2026-b/product/data-layer | /product/data-layer |
+| \[New site 2026 B\] Product - demand-forecasting | 225535036216 | /new-site-2026-b/product/demand-forecasting | /product/demand-forecasting |
+| \[New site 2026 B\] Product - inventory-forecasting | 225535035287 | /new-site-2026-b/product/inventory-forecasting | /product/inventory-forecasting |
+| \[New site 2026 B\] Product - replenishment | 225535036218 | /new-site-2026-b/product/replenishment | /product/replenishment |
+| \[New site 2026 B\] Product - workflows | 225535036220 | /new-site-2026-b/product/workflows | /product/workflows |
+| \[New site 2026 B\] Multichannel | 225535035289 | /new-site-2026-b/multichannel | /multichannel |
+| \[New site 2026 B\] Agencies | 225535035291 | /new-site-2026-b/agencies | /agencies |
+| \[New site 2026 B\] Before you choose | 225535035294 | /new-site-2026-b/before-you-choose | /before-you-choose |
+| \[New site 2026 B\] MCP and AI agents | 225535036222 | /new-site-2026-b/mcp | /mcp |
+| \[New site 2026 B\] Customize Flieber | 225535035296 | /new-site-2026-b/customize | /customize |
+| \[New site 2026 B\] Integrations | 225535035298 | /new-site-2026-b/integrations | /integrations |
+| \[New site 2026 B\] Integrations - amazon | 225535035300 | /new-site-2026-b/integrations/amazon | /integrations/amazon |
+| \[New site 2026 B\] Integrations - shopify | 225535035302 | /new-site-2026-b/integrations/shopify | /integrations/shopify |
+| \[New site 2026 B\] Integrations - walmart | 225535035304 | /new-site-2026-b/integrations/walmart | /integrations/walmart |
+| \[New site 2026 B\] Integrations - tiktok-shop | 225535036224 | /new-site-2026-b/integrations/tiktok-shop | /integrations/tiktok-shop |
+| \[New site 2026 B\] Integrations - netsuite | 225535036226 | /new-site-2026-b/integrations/netsuite | /integrations/netsuite |
+| \[New site 2026 B\] Integrations - sps-commerce | 225535036228 | /new-site-2026-b/integrations/sps-commerce | /integrations/sps-commerce |
+| \[New site 2026 B\] Use case - amazon-fba-replenishment | 225535035306 | /new-site-2026-b/use-cases/amazon-fba-replenishment | /use-cases/amazon-fba-replenishment |
+| \[New site 2026 B\] Use case - claude-amazon-shopify-inventory | 225535035308 | /new-site-2026-b/use-cases/claude-amazon-shopify-inventory | /use-cases/claude-amazon-shopify-inventory |
+| \[New site 2026 B\] Use case - shopify-inventory-forecasting | 225535035310 | /new-site-2026-b/use-cases/shopify-inventory-forecasting | /use-cases/shopify-inventory-forecasting |
+| \[New site 2026 B\] Use case - kits-and-bundles | 225535035313 | /new-site-2026-b/use-cases/kits-and-bundles | /use-cases/kits-and-bundles |
+| \[New site 2026 B\] Use case - wholesale-edi-demand-planning | 225535035315 | /new-site-2026-b/use-cases/wholesale-edi-demand-planning | /use-cases/wholesale-edi-demand-planning |
+| \[New site 2026 B\] Use case - multi-warehouse-3pl-inventory | 225535036230 | /new-site-2026-b/use-cases/multi-warehouse-3pl-inventory | /use-cases/multi-warehouse-3pl-inventory |
+| \[New site 2026 B\] Use case - purchase-order-automation | 225535035317 | /new-site-2026-b/use-cases/purchase-order-automation | /use-cases/purchase-order-automation |
+| \[New site 2026 B\] Use case - ai-demand-forecasting | 225535036232 | /new-site-2026-b/use-cases/ai-demand-forecasting | /use-cases/ai-demand-forecasting |
+| \[New site 2026 B\] Use case - moq-container-planning | 225535035319 | /new-site-2026-b/use-cases/moq-container-planning | /use-cases/moq-container-planning |
+| \[New site 2026 B\] Use case - backorders-preorders | 225535035321 | /new-site-2026-b/use-cases/backorders-preorders | /use-cases/backorders-preorders |
+| \[New site 2026 B\] Managed Services | 225535035393 | /new-site-2026-b/managed-services | /managed-services |
+| \[New site 2026 B\] Who we are | 225535036234 | /new-site-2026-b/who-we-are | /who-we-are |
+| \[New site 2026 B\] Prompt ideas | 225535035395 | /new-site-2026-b/prompt-ideas | /prompt-ideas |
+| \[New site 2026 B\] Developers - CLI | 225535035398 | /new-site-2026-b/developers/cli | /developers/cli |
+
 
 Nothing is deleted or overwritten. The new site is built as **new** pages, templates and modules in HubSpot. Old pages are only **unpublished**: they stay in the account as drafts, with their full revision history, and can be republished at any time.
 

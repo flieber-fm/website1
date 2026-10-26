@@ -274,7 +274,7 @@ Buttons as in Option 1: Start free trial, Book a demo, Log in, MCP docs. No sand
 
 ## HubSpot build and switch plan
 
-Nothing is built in HubSpot for Option 2 until Fabricio elects it and gives the go. If Option 2 is elected, its drafts replace Option 1's in this plan. As in Option 1, pages are built with a fixed design, nothing old is deleted or overwritten, and old pages are only unpublished at the switch. Click-by-click steps are in `hubspot/CUTOVER.md` on the Option 2 branch.
+Phase 1 done on Oct 26 with Fabricio's go: files uploaded to `flieber-2026`, 37 templates in Design Manager `flieber-2026-b/templates`, 37 unpublished drafts below. Nothing live was changed. If Option 2 is elected, its drafts replace Option 1's in this plan. As in Option 1, pages are built with a fixed design, nothing old is deleted or overwritten, and old pages are only unpublished at the switch. Click-by-click steps are in `hubspot/CUTOVER.md` on the Option 2 branch.
 
 Templates are generated locally with `python3 scripts/build-hubspot.py` (output in `hubspot/build/`, one file per page). The copy for /pricing, /security and /contact is shared with Option 1 (with the data layer line on /pricing), but those pages need Option 2 templates because the header and footer differ.
 
@@ -282,27 +282,43 @@ Files: fonts, logos, icons and the 14 customer logos are shared with Option 1 in
 
 | Draft page | HubSpot ID | Temporary URL | Final URL |
 | --- | --- | --- | --- |
-| \[New site 2026 B\] Home | Not created | /new-site-2026-b/home | / |
-| \[New site 2026 B\] Features | Not created | /new-site-2026-b/features | /features |
-| \[New site 2026 B\] Data layer | Not created | /new-site-2026-b/product/data-layer | /product/data-layer |
-| \[New site 2026 B\] Demand forecasting | Not created | /new-site-2026-b/product/demand-forecasting | /product/demand-forecasting |
-| \[New site 2026 B\] Inventory forecasting | Not created | /new-site-2026-b/product/inventory-forecasting | /product/inventory-forecasting |
-| \[New site 2026 B\] Replenishment | Not created | /new-site-2026-b/product/replenishment | /product/replenishment |
-| \[New site 2026 B\] Workflows | Not created | /new-site-2026-b/product/workflows | /product/workflows |
-| \[New site 2026 B\] Multichannel | Not created | /new-site-2026-b/multichannel | /multichannel |
-| \[New site 2026 B\] Agencies | Not created | /new-site-2026-b/agencies | /agencies |
-| \[New site 2026 B\] Before you choose | Not created | /new-site-2026-b/before-you-choose | /before-you-choose |
-| \[New site 2026 B\] MCP and AI agents | Not created | /new-site-2026-b/mcp | /mcp |
-| \[New site 2026 B\] Agents | Not created | /new-site-2026-b/agents | /agents |
-| \[New site 2026 B\] Pricing | Not created | /new-site-2026-b/pricing | /pricing |
-| \[New site 2026 B\] Security | Not created | /new-site-2026-b/security | /security |
-| \[New site 2026 B\] Contact | Not created | /new-site-2026-b/contact | /contact |
-| \[New site 2026 B\] Customize Flieber | Not created | /new-site-2026-b/customize | /customize |
-| \[New site 2026 B\] Integrations, plus one per system (6) | Not created | /new-site-2026-b/integrations/… | /integrations, /integrations/amazon, shopify, walmart, tiktok-shop, netsuite, sps-commerce |
-| \[New site 2026 B\] Use case, one per page (10) | Not created | /new-site-2026-b/use-cases/… | /use-cases/… |
-| \[New site 2026 B\] Managed Services | Not created | /new-site-2026-b/managed-services | /managed-services |
-| \[New site 2026 B\] Put Flieber to work | Not created | /new-site-2026-b/put-flieber-to-work | /put-flieber-to-work |
-| \[New site 2026 B\] Who we are | Not created | /new-site-2026-b/who-we-are | /who-we-are |
+| \[New site 2026 B\] Home | 225535036207 | /new-site-2026-b/home | / |
+| \[New site 2026 B\] Features | 225535036209 | /new-site-2026-b/features | /features |
+| \[New site 2026 B\] Agents | 225535036211 | /new-site-2026-b/agents | /agents |
+| \[New site 2026 B\] Pricing | 225535036214 | /new-site-2026-b/pricing | /pricing |
+| \[New site 2026 B\] Security | 225535035280 | /new-site-2026-b/security | /security |
+| \[New site 2026 B\] Contact | 225535035282 | /new-site-2026-b/contact | /contact |
+| \[New site 2026 B\] Product - data-layer | 225535035284 | /new-site-2026-b/product/data-layer | /product/data-layer |
+| \[New site 2026 B\] Product - demand-forecasting | 225535036216 | /new-site-2026-b/product/demand-forecasting | /product/demand-forecasting |
+| \[New site 2026 B\] Product - inventory-forecasting | 225535035287 | /new-site-2026-b/product/inventory-forecasting | /product/inventory-forecasting |
+| \[New site 2026 B\] Product - replenishment | 225535036218 | /new-site-2026-b/product/replenishment | /product/replenishment |
+| \[New site 2026 B\] Product - workflows | 225535036220 | /new-site-2026-b/product/workflows | /product/workflows |
+| \[New site 2026 B\] Multichannel | 225535035289 | /new-site-2026-b/multichannel | /multichannel |
+| \[New site 2026 B\] Agencies | 225535035291 | /new-site-2026-b/agencies | /agencies |
+| \[New site 2026 B\] Before you choose | 225535035294 | /new-site-2026-b/before-you-choose | /before-you-choose |
+| \[New site 2026 B\] MCP and AI agents | 225535036222 | /new-site-2026-b/mcp | /mcp |
+| \[New site 2026 B\] Customize Flieber | 225535035296 | /new-site-2026-b/customize | /customize |
+| \[New site 2026 B\] Integrations | 225535035298 | /new-site-2026-b/integrations | /integrations |
+| \[New site 2026 B\] Integrations - amazon | 225535035300 | /new-site-2026-b/integrations/amazon | /integrations/amazon |
+| \[New site 2026 B\] Integrations - shopify | 225535035302 | /new-site-2026-b/integrations/shopify | /integrations/shopify |
+| \[New site 2026 B\] Integrations - walmart | 225535035304 | /new-site-2026-b/integrations/walmart | /integrations/walmart |
+| \[New site 2026 B\] Integrations - tiktok-shop | 225535036224 | /new-site-2026-b/integrations/tiktok-shop | /integrations/tiktok-shop |
+| \[New site 2026 B\] Integrations - netsuite | 225535036226 | /new-site-2026-b/integrations/netsuite | /integrations/netsuite |
+| \[New site 2026 B\] Integrations - sps-commerce | 225535036228 | /new-site-2026-b/integrations/sps-commerce | /integrations/sps-commerce |
+| \[New site 2026 B\] Use case - amazon-fba-replenishment | 225535035306 | /new-site-2026-b/use-cases/amazon-fba-replenishment | /use-cases/amazon-fba-replenishment |
+| \[New site 2026 B\] Use case - claude-amazon-shopify-inventory | 225535035308 | /new-site-2026-b/use-cases/claude-amazon-shopify-inventory | /use-cases/claude-amazon-shopify-inventory |
+| \[New site 2026 B\] Use case - shopify-inventory-forecasting | 225535035310 | /new-site-2026-b/use-cases/shopify-inventory-forecasting | /use-cases/shopify-inventory-forecasting |
+| \[New site 2026 B\] Use case - kits-and-bundles | 225535035313 | /new-site-2026-b/use-cases/kits-and-bundles | /use-cases/kits-and-bundles |
+| \[New site 2026 B\] Use case - wholesale-edi-demand-planning | 225535035315 | /new-site-2026-b/use-cases/wholesale-edi-demand-planning | /use-cases/wholesale-edi-demand-planning |
+| \[New site 2026 B\] Use case - multi-warehouse-3pl-inventory | 225535036230 | /new-site-2026-b/use-cases/multi-warehouse-3pl-inventory | /use-cases/multi-warehouse-3pl-inventory |
+| \[New site 2026 B\] Use case - purchase-order-automation | 225535035317 | /new-site-2026-b/use-cases/purchase-order-automation | /use-cases/purchase-order-automation |
+| \[New site 2026 B\] Use case - ai-demand-forecasting | 225535036232 | /new-site-2026-b/use-cases/ai-demand-forecasting | /use-cases/ai-demand-forecasting |
+| \[New site 2026 B\] Use case - moq-container-planning | 225535035319 | /new-site-2026-b/use-cases/moq-container-planning | /use-cases/moq-container-planning |
+| \[New site 2026 B\] Use case - backorders-preorders | 225535035321 | /new-site-2026-b/use-cases/backorders-preorders | /use-cases/backorders-preorders |
+| \[New site 2026 B\] Managed Services | 225535035393 | /new-site-2026-b/managed-services | /managed-services |
+| \[New site 2026 B\] Who we are | 225535036234 | /new-site-2026-b/who-we-are | /who-we-are |
+| \[New site 2026 B\] Prompt ideas | 225535035395 | /new-site-2026-b/prompt-ideas | /prompt-ideas |
+| \[New site 2026 B\] Developers - CLI | 225535035398 | /new-site-2026-b/developers/cli | /developers/cli |
 
 Redirects (`hubspot/url-redirects.csv`, 301):
 
@@ -341,6 +357,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 26 | HubSpot Phase 1 (Fabricio's go): 51 images (integration logos and the founder photo) uploaded to File Manager `flieber-2026`; llms.txt and capabilities.json replaced there with Option 2's (nothing live points to them; the live /llms.txt redirect points to another file) and llms-full.txt added; 37 templates uploaded to Design Manager `flieber-2026-b/templates` (Option 1's `flieber-2026/templates` untouched) and validated; 37 unpublished drafts created under /new-site-2026-b/ (IDs in the HubSpot section). /developers/cli added to the HubSpot build (it was missing). Labels are now all "Flieber 2026 B - …". HubSpot's firewall rejects uploads containing "curl -" with flags or a URL, so the HubSpot build writes it as c&#117;rl (shown and copied as curl). File Manager saves .jpg as .jpeg, so templates point to .jpeg. Three text files first saved with a wrong ".unknown" extension were deleted and redone |
 | Oct 26 | Tool counts removed (Fabricio: they go stale): no "29 tools", "27 tools" or "See all 29 capabilities" on /mcp, /developers/cli, the llms files or capabilities.json (its tools field now says to run flieber docs). The CLI version number (flieber 0.1.4) also removed from the /developers/cli kicker for the same reason |
 | Oct 26 | Claims confirmed by Fabricio: the planning engine card now reads "Proprietary algorithms do the math" (no mention of language models); "more than 1,000 commerce brands since 2019" is right; "For most brands" becomes "For many brands" on /multichannel and the wholesale use case; sales order routing into regional markets works today |
 | Oct 26 | Fabricio's answers to the pre-launch list. All visible TODO boxes removed: the install prompt works in any AI tool that can run commands on the computer (INSTALL_PROMPT_TOOLS now says so, with Claude Desktop, Claude Code, Cursor and Muse as examples); the Windows warning does appear; the installer connects the AI tool on its own; the browser steps carry "*Subject to the rules of your Claude or ChatGPT plan." instead of a plan list. /developers/cli no longer lists tools or error codes (they change too often): it gives `flieber docs` and two copyable prompts to get the current lists from the AI tool. Founder photo added (assets/img/fabricio-miranda.jpg, homepage and /who-we-are; upload to `flieber-2026` with the other images). Publishing the MCP address is allowed: the old "behind the customer login" line was a limitation, now lifted. Trial copy: "Your free trial starts when you create your account in Flieber." Nixtla is always "custom forecasting models developed in partnership with Nixtla" (the TimeGPT reference removed, so the cheap Nixtla product is never implied). "Flieber in numbers" removed from /who-we-are. Every "more than 1,000 brands" now says "since 2019" (historical); the logo strip keeps "hundreds of brands" (today). /put-flieber-to-work renamed Prompt ideas at /prompt-ideas (Caddy 301 from the old path; never live on HubSpot, so no HubSpot redirect needed) |
@@ -447,11 +464,11 @@ Before an option is elected:
 
 If Option 2 is elected:
 
-- [ ] Upload the Option 2 templates to HubSpot and create the 37 drafts under /new-site-2026-b/
-- [ ] Upload Option 2's llms.txt, llms-full.txt and capabilities.json to `flieber-2026`, replacing Option 1's
-- [ ] Upload `assets/integrations/` (50 logos) to `flieber-2026`; they are copies of the logos on the live /integrations page and in Flieber's HubSpot file library (NetSuite and GoFlow), not taken from the brands' own press kits
+- [x] Upload the Option 2 templates to HubSpot and create the 37 drafts under /new-site-2026-b/ (Oct 26)
+- [x] Upload Option 2's llms.txt, llms-full.txt and capabilities.json to `flieber-2026`, replacing Option 1's (Oct 26)
+- [x] (Oct 26) Upload `assets/integrations/` (50 logos) to `flieber-2026`; they are copies of the logos on the live /integrations page and in Flieber's HubSpot file library (NetSuite and GoFlow), not taken from the brands' own press kits
 - [ ] SPS Commerce and Apparel Magic have no logo; add one if a file becomes available
-- [ ] Update `hubspot/CUTOVER.md` with the draft IDs
+- [x] Update `hubspot/CUTOVER.md` with the draft IDs (Oct 26)
 - [ ] Fabricio reviews the drafts in HubSpot Preview (fonts, logos, the six-layer animation, the Product and Solutions menus, phone menu, any HubSpot banner or chat widget)
 - [ ] Check whether ads point to /old-home-page before it is redirected
 - [ ] Fabricio gives the go; run the switch steps above
