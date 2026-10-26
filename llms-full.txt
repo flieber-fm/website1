@@ -675,7 +675,7 @@ Ask Flieber: "What will the holiday bundle sell in Q4 if we keep it in stock?" Â
 
 https://www.flieber.com/use-cases/wholesale-edi-demand-planning
 
-Wholesale orders arrive in large, irregular batches that can drain the stock your DTC and marketplace channels depend on. For most brands, Flieber is the first place they see the combined demand and inventory consumption of both their retail and wholesale channels.
+Wholesale orders arrive in large, irregular batches that can drain the stock your DTC and marketplace channels depend on. For many brands, Flieber is the first place they see the combined demand and inventory consumption of both their retail and wholesale channels.
 
 How Flieber handles it:
 
@@ -915,7 +915,7 @@ Fabricio Miranda, Founder and CEO
 
 https://www.flieber.com/multichannel
 
-DTC, marketplaces and wholesale each sell differently, yet they all draw on the same inventory. Flieber brings them into one plan. For most brands, Flieber is the first place they see the combined demand and inventory consumption of both their retail and wholesale channels.
+DTC, marketplaces and wholesale each sell differently, yet they all draw on the same inventory. Flieber brings them into one plan. For many brands, Flieber is the first place they see the combined demand and inventory consumption of both their retail and wholesale channels.
 
 **Why channels drift apart**
 
