@@ -1,6 +1,6 @@
 # Switching www.flieber.com to the new site (HubSpot)
 
-> **Option 2 (elected Oct 26).** Phase 1 is done: files in File Manager `flieber-2026`, templates in Design Manager `flieber-2026-b/templates`, and the 37 unpublished drafts below under `/new-site-2026-b/`. Option 1's drafts and templates (listed further down) are left as they were.
+> **Option 2 is live since Oct 26.** The switch is done (see the decision log in the Technical Briefing). Phase 1 was: files in File Manager `flieber-2026`, templates in Design Manager `flieber-2026-b/templates`, and the 37 unpublished drafts below under `/new-site-2026-b/`. Option 1's drafts and templates (listed further down) are left as they were.
 
 ## Option 2 drafts (Oct 26)
 

@@ -357,6 +357,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 26 | **Switch done (Fabricio's go; drafts reviewed and approved; no ads on /old-home-page).** All 37 new pages published at their final URLs on www.flieber.com and checked (status 200, titles match the build). The five URLs held by old pages (/, /pricing, /agencies, /integrations, /managed-services) were swapped one at a time, home last; the old pages are unpublished and moved to /archive/<slug> (home: /archive/home), never deleted. HubSpot's cache served a 404 on those five for about a minute and a half. Redirects: 20 created as in url-redirects.csv (they take priority over old pages), /llms.txt repointed to the Option 2 file, /book-a-demo-old already existed, /install to /mcp added (it existed only on the preview), /frequently-asked-questions points to /pricing (HubSpot encodes #faq and breaks it). Removed three old redirects (recorded below for restore): /pricing to /pricing-plans and / to /old-home-page (both "only when not found", would loop), and /flieber-vs-inventory-planner to /product (302), so that URL now returns not found as the brief requires. Old pages behind the redirects unpublished (12 site pages and 3 comparison landing pages, including the /old-home-page A/B master); /best-inventory-software and its three child pages and /standardize-vs-pages are not reachable through the pages API, so the redirects cover them. robots.txt left as is: it already allows all crawlers and also blocks HubSpot preview and sample URLs, which robots.production.txt would drop |
 | Oct 26 | SPS Commerce and Apparel Magic logos added (files from Fabricio, trimmed and resized to 400 px wide like the other logos) on /integrations, in the HubSpot File Manager `flieber-2026` and in the integrations template |
 | Oct 26 | HubSpot Phase 1 (Fabricio's go): 51 images (integration logos and the founder photo) uploaded to File Manager `flieber-2026`; llms.txt and capabilities.json replaced there with Option 2's (nothing live points to them; the live /llms.txt redirect points to another file) and llms-full.txt added; 37 templates uploaded to Design Manager `flieber-2026-b/templates` (Option 1's `flieber-2026/templates` untouched) and validated; 37 unpublished drafts created under /new-site-2026-b/ (IDs in the HubSpot section). /developers/cli added to the HubSpot build (it was missing). Labels are now all "Flieber 2026 B - …". HubSpot's firewall rejects uploads containing "curl -" with flags or a URL, so the HubSpot build writes it as c&#117;rl (shown and copied as curl). File Manager saves .jpg as .jpeg, so templates point to .jpeg. Three text files first saved with a wrong ".unknown" extension were deleted and redone |
 | Oct 26 | Tool counts removed (Fabricio: they go stale): no "29 tools", "27 tools" or "See all 29 capabilities" on /mcp, /developers/cli, the llms files or capabilities.json (its tools field now says to run flieber docs). The CLI version number (flieber 0.1.4) also removed from the /developers/cli kicker for the same reason |
@@ -470,9 +471,9 @@ If Option 2 is elected:
 - [x] (Oct 26) Upload `assets/integrations/` (50 logos) to `flieber-2026`; they are copies of the logos on the live /integrations page and in Flieber's HubSpot file library (NetSuite and GoFlow), not taken from the brands' own press kits
 - [x] SPS Commerce and Apparel Magic logos added (Oct 26)
 - [x] Update `hubspot/CUTOVER.md` with the draft IDs (Oct 26)
-- [ ] Fabricio reviews the drafts in HubSpot Preview (fonts, logos, the six-layer animation, the Product and Solutions menus, phone menu, any HubSpot banner or chat widget)
-- [ ] Check whether ads point to /old-home-page before it is redirected
-- [ ] Fabricio gives the go; run the switch steps above
+- [x] (Oct 26) Fabricio reviews the drafts in HubSpot Preview (fonts, logos, the six-layer animation, the Product and Solutions menus, phone menu, any HubSpot banner or chat widget)
+- [x] Check whether ads point to /old-home-page before it is redirected (Oct 26: none)
+- [x] Fabricio gives the go; run the switch steps above (Oct 26: done)
 - [ ] Update the Technical Briefing for the winning option only
 
 Product and engineering, outside the site (as in Option 1):
@@ -501,3 +502,13 @@ Maintenance rules after launch (not open items):
 - Tool lists, tool counts, CLI version numbers and error codes are not published on the site; the site points to `flieber docs` and to prompts that ask the AI tool for the current lists
 - "On request" tags come off /features and capabilities.json as features become generally available
 - /flieber-vs-inventory-planner stays unpublished and is never redirected
+
+
+## Redirects removed or changed at the switch (Oct 26), for restore
+
+| ID | From | To | Notes |
+| --- | --- | --- | --- |
+| 212882399298 (removed) | /pricing | /pricing-plans | 301, only when not found |
+| 214778120078 (removed) | / | /old-home-page | 301, only when not found |
+| 212390855321 (removed) | /flieber-vs-inventory-planner | https://www.flieber.com/product | 302 |
+| 208592007758 (changed) | /llms.txt | was hubfs/5767502/llms.txt, now /hubfs/flieber-2026/llms.txt | 301 |
