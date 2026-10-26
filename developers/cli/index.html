@@ -174,17 +174,17 @@
           <div class="cmd"><span class="cmd-label">macOS and Linux</span><pre><code>curl -fsSL https://cli.flieber.com/install.sh | sh</code></pre><button class="cmd-copy" type="button" aria-label="Copy the macOS and Linux command">Copy</button></div>
           <div class="cmd"><span class="cmd-label">Windows (PowerShell)</span><pre><code>irm https://cli.flieber.com/install.ps1 | iex</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Windows (PowerShell) command">Copy</button></div>
           </div>
-          <p class="cli-note">The installer sets up Flieber CLI, opens your browser to create your Flieber account or sign in, and lists your organizations. Running it again is safe and upgrades it. Flieber CLI is the <a href="https://pypi.org/project/flieber/"><code>flieber</code> package on PyPI</a>.</p>
+          <p class="cli-note">The installer sets up Flieber CLI, opens your browser to create your Flieber account or sign in, lists your organizations and connects Flieber to your AI tool. Running it again is safe and upgrades it. Flieber CLI is the <a href="https://pypi.org/project/flieber/"><code>flieber</code> package on PyPI</a>.</p>
           <p class="cli-bat"><a class="link-arrow" href="https://cli.flieber.com/flieber-install.bat" download>Prefer one click on Windows? Download flieber-install.bat and double-click it. <span class="arrow" aria-hidden="true">→</span></a></p>
         </div>
         <div class="cli-grid">
           <div class="cli-col">
-            <h3 class="h3">Connect your agent</h3>
+            <h3 class="h3">Connect another tool</h3>
           <div class="cmd"><span class="cmd-label">Claude Code</span><pre><code>flieber mcp register --client claude-code</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Claude Code command">Copy</button></div>
           <div class="cmd"><span class="cmd-label">Cursor</span><pre><code>flieber mcp register --client cursor</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Cursor command">Copy</button></div>
           <div class="cmd"><span class="cmd-label">Claude Desktop</span><pre><code>flieber mcp register --client claude-desktop</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Claude Desktop command">Copy</button></div>
           <div class="cmd"><span class="cmd-label">Muse or any other local MCP client</span><pre><code>uvx flieber@latest mcp</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Muse or any other local MCP client command">Copy</button></div>
-            <p class="cli-note">Add <code>--scope project</code> to write a project file your team can commit, so everyone connects the same way.</p>
+            <p class="cli-note">The installer connects your AI tool. Use these to connect another tool or to connect again. Add <code>--scope project</code> to write a project file your team can commit, so everyone connects the same way.</p>
             <ul class="cli-soon">
               <li><span class="soon-tag">Coming soon</span> <b>Hosted MCP server.</b> Connect without installing anything; your sign-in passes through and nothing is stored.</li>
               <li><span class="soon-tag">Coming soon</span> <b>Flieber in claude.ai.</b> Add Flieber under Settings, Connectors, sign in to Flieber and start asking, with nothing to install.</li>
@@ -201,7 +201,7 @@
           </div>
         </div>
         <dl class="kv sec-kv cli-facts">
-          <dt>Account first</dt><dd>Creating your Flieber account is the first step. The installer walks you through it, or run <code>flieber signup</code>.</dd>
+          <dt>Account first</dt><dd>Creating your Flieber account is the first step. The installer walks you through it, or run <code>flieber signup</code>. You accept Flieber’s terms and the AI early access terms on the sign-in page. Your free trial starts the first time you use your account.</dd>
           <dt>Your sign-in stays on your computer</dt><dd>You sign in once, and the sign-in is stored in a file only you can read. You never paste a key or token into a chat.</dd>
           <dt>Every change is previewed</dt><dd>Changes such as onboarding a store or mapping SKUs are previewed first and applied only after you confirm.</dd>
           <dt>Only what you allow</dt><dd>Flieber reads only what your sign-in or API key allows. API keys read one organization, limited to the data you grant.</dd>
@@ -223,7 +223,7 @@
           <div class="cmd"><span class="cmd-label">Command</span><pre><code>flieber login</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Command command">Copy</button></div>
           <div class="cmd"><span class="cmd-label">Command</span><pre><code>flieber tenants</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Command command">Copy</button></div>
           </div>
-          <div class="cli-col"><h3 class="h3">New organization (requires accepting Flieber’s terms)</h3>
+          <div class="cli-col"><h3 class="h3">New organization (you accept Flieber’s terms and the AI early access terms)</h3>
           <div class="cmd"><span class="cmd-label">Command</span><pre><code>flieber signup</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Command command">Copy</button></div>
           </div>
           <div class="cli-col"><h3 class="h3">API key (hidden prompt). Keys read one organization, limited to granted data; create them on the API keys page of the Flieber portal</h3>

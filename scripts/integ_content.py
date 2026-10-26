@@ -81,7 +81,7 @@ DATA_BODY = ("Flieber pulls all three from the systems you already use, so it ca
 ASSISTED_BODY = ("For systems without a native integration, Flieber's team sets up the connection using data modeling and "
                  "AI-based mapping.")
 SEARCH_PLACEHOLDER = 'Search for your channel, ERP, 3PL or app'
-API_BODY = ("Agents such as Claude, ChatGPT and Cursor connect to Flieber through its MCP server, and your own systems can use "
+API_BODY = ("Agents such as Claude, Cursor and Muse connect to Flieber through its MCP server, and your own systems can use "
             "the public API.")
 
 NO_LOGO = set()  # names to show without a logo

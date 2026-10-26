@@ -35,7 +35,7 @@ Full list: https://www.flieber.com/features (every feature has its own anchor) a
 
 ## Put Flieber to work
 
-- [Put Flieber to work](https://www.flieber.com/put-flieber-to-work): Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, ChatGPT or any MCP-compatible agent. Below are ideas to start from: examples of jobs operators give Flieber, what Flieber does with each one and what comes back. They're not a complete list. Not on the list? Describe the job in your own words. If it runs on your sales, inventory and supply chain data or your connected apps, Flieber can probably take it on.
+- [Put Flieber to work](https://www.flieber.com/put-flieber-to-work): Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, Cursor, Muse or any MCP-compatible agent. Below are ideas to start from: examples of jobs operators give Flieber, what Flieber does with each one and what comes back. They're not a complete list. Not on the list? Describe the job in your own words. If it runs on your sales, inventory and supply chain data or your connected apps, Flieber can probably take it on.
 
 ## Solutions
 
@@ -119,7 +119,7 @@ Every write follows approval rules the brand sets. By default every write requir
 ## Connect and try
 
 - Free trial: 14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan. https://www.flieber.com/free-trial
-- Flieber Studio (MCP server): Claude, ChatGPT, Cursor and other MCP-compatible agents connect to Flieber's MCP server. Requests are handled in natural language by Flieber's own agent (Flieber Studio), which answers questions and carries out the actions the Flieber app supports, under the account's approval rules. Answers typically take 30 seconds to 5 minutes; a conversation can continue across calls. How it works, with example conversations: https://www.flieber.com/mcp. Full action list (customer login required): https://app.flieber.com/app/developers
+- Flieber MCP (through Flieber CLI): Claude Desktop, Claude Code, Cursor, Muse and other local MCP clients connect to Flieber's MCP server, which Flieber CLI runs on the user's computer, with the same 29 tools as the command line. The installer creates the Flieber account or signs in, and connects the AI tool. Every change is previewed first. Hosted MCP server and Claude in the browser: coming soon. Setup: https://www.flieber.com/mcp. Technical reference: https://www.flieber.com/developers/cli
 - MCP client: Flieber connects to any system with an MCP server. Built-in connections: Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads, NetSuite.
 - Flieber CLI (local MCP and command line, early access): 29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, Muse, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows (PowerShell): irm https://cli.flieber.com/install.ps1 | iex. Package: https://pypi.org/project/flieber/
 - Public API: Programmatic access to Flieber data. Details (customer login required): https://app.flieber.com/app/developers
@@ -232,6 +232,5 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 - [Flieber, for AI agents](https://www.flieber.com/agents)
 - [Full text for LLMs](https://www.flieber.com/llms-full.txt)
 - [Capabilities (JSON)](https://www.flieber.com/capabilities.json)
-- [Flieber Studio setup guide (customer login required)](https://app.flieber.com/app/developers)
 - [Flieber API reference for LLMs](https://app.flieber.com/api/v1/public-api/docs/llms.txt)
 - [G2 reviews](https://www.g2.com/products/flieber/reviews)

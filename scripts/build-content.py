@@ -521,7 +521,7 @@ def install_main() -> str:
     sh, ps1 = X["install"][0][1], X["install"][1][1]
     reg = {l: c for l, c in X["clients"]}
     # hero: three choices, the prompt first
-    browser_foot = (f'<a class="btn btn-ghost" href="#step-2">{esc(I["browser_btn"])}</a>' if live else "")
+    browser_foot = (f'<a class="btn btn-ghost" href="#claude-in-browser">{esc(I["browser_btn"])}</a>' if live else "")
     out = f'''
     <section class="page-head sol-head inst-head" aria-labelledby="page-title">
       <div class="wrap">
@@ -568,15 +568,6 @@ def install_main() -> str:
     mac = f'            <p>{esc(I["mac_body"])}</p>\n            {cmd_html("Terminal", sh)}'
     lin = f'            <p>{esc(I["linux_body"])}</p>\n            {cmd_html("Terminal", sh)}'
     step1 = tabset("os", [("windows", "Windows", win, "windows"), ("mac", "Mac", mac, "mac"), ("linux", "Linux", lin, "linux")], os_default=True)
-    cd = f'            <p>{esc(I["cd_body"])}</p>\n            {cmd_html("Claude Desktop", reg["Claude Desktop"])}\n            <p class="inst-note">{esc(I["cd_note"])}</p>'
-    cc = f'            <p>{esc(I["cc_body"])}</p>\n            {cmd_html("Claude Code", reg["Claude Code"])}\n            <p class="inst-note">{esc(I["cc_note"])}</p>'
-    cu = f'            <p>{esc(I["cu_body"])}</p>\n            {cmd_html("Cursor", reg["Cursor"])}'
-    other = (f'            <p class="hc-tag">{esc(I["other_tag"])}</p>\n            <p>{esc(I["other_body"])}</p>\n'
-             f'            {cmd_html("Local connection", "uvx flieber@latest mcp")}\n            <p class="inst-note">{ticks(I["other_writes"].replace("FLIEBER_OAUTH_WRITES=1", "`FLIEBER_OAUTH_WRITES=1`"))}</p>\n'
-             f'            <p class="inst-note">{ticks(I["other_path"].replace("which uvx", "`which uvx`").replace("where uvx", "`where uvx`"))}</p>')
-    br = (f'            <p>{esc(I["browser_body"])}</p>\n            ' + (todo(I["browser_todo"]) if live else f'<p>{soon}</p>'))
-    step2 = tabset("tool", [("claude-desktop", "Claude Desktop", cd, None), ("claude-code", "Claude Code", cc, None), ("cursor", "Cursor", cu, None),
-                            ("other", esc(I["other_label"]), other, None), ("browser", "Claude in the browser" + ("" if live else " · Coming soon"), br, None)])
     tries = "\n".join(f'          <li class="cmd cmd-try"><pre><code>{esc(q)}</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>' for q in I["prompts"])
     out += section("before-you-start", "Install it yourself", I["before_h2"], f'        <ul class="inst-check">\n{before}\n        </ul>', soft=True)
     out += f'''
@@ -591,15 +582,11 @@ def install_main() -> str:
 {step1}
           <p>{esc(I["step1_next"])}</p>
           <p class="inst-ok"><span aria-hidden="true">✓</span> {esc(I["step1_ok"])}</p>
+          <p class="inst-note">{esc(I["step1_restart"])}</p>
+          {todo(I["step1_connect_todo"])}
           <p class="inst-note">{esc(I["step1_update"])} <a href="{I["review_url"]}">{esc(I["review"])}</a></p>
         </div>
         <div class="inst-step" id="step-2">
-          <h2 class="h2 inst-h">{esc(I["step2_h"])}</h2>
-          <p class="lead">{esc(I["step2_lead"])} <abbr title="{esc(I["step2_mcp_tip"])}">What's this?</abbr></p>
-{step2}
-          <p class="inst-ok"><span aria-hidden="true">✓</span> {esc(I["step2_ok"])}</p>
-        </div>
-        <div class="inst-step" id="step-3">
           <h2 class="h2 inst-h">{esc(I["step3_h"])}</h2>
           <p class="lead">{esc(I["step3_lead"])}</p>
           <ul class="inst-try">
@@ -614,12 +601,8 @@ def install_main() -> str:
     safe = "\n".join(f'          <article class="why-card"><p>{esc(s)}</p></article>' for s in I["safe"])
     out += section("built-to-be-safe", "Safety", I["safe_h2"], f'        <div class="why-grid inst-safe">\n{safe}\n        </div>', soft=False)
     rows = "\n".join(f"            <tr><th scope=\"row\">{esc(a)}</th><td>{ticks(b)}</td></tr>" for a, b in I["trouble"])
-    M = C.MCP_PAGE
-    st = "\n".join(f'''          <li class="mcp-step"><span class="n">{i}</span><p><b>{esc(s_)}</b> {esc(d)}</p></li>''' for i, (s_, d) in enumerate(M["steps"], 1))
-    out += section("flieber-studio", I["studio_kicker"], I["studio_h2"], f'''        <ol class="mcp-steps">
-{st}
-        </ol>
-        <p class="link-row"><a class="link-arrow" href="{C.DEV_DOCS}">{esc(M["steps_link"])} {ARROW}</a></p>''', soft=True, lead=I["studio_lead"])
+    if live:
+        out += section("claude-in-browser", "Claude in the browser", I["browser_h"], f'        <p class="feat-approval">{esc(I["browser_body"])}</p>\n        {todo(I["browser_todo"])}', soft=True)
     out += section("troubleshooting", "Help", I["trouble_h2"], f'''        <table class="inst-trouble">
           <thead><tr><th scope="col">What you see</th><th scope="col">What to do</th></tr></thead>
           <tbody>
@@ -1142,13 +1125,8 @@ def home_connect_html() -> str:
         if k == "prompt":
             inner = f'          <p class="qs-note">{esc(note)}</p>\n          {body[k]}'
         else:
-            n2 = ('          <p class="qs-then">' + esc(H["step2_win"]) + "</p>\n") if k == "windows" else ""
-            note2 = esc(H["step2_note"]).replace("claude-code", "<code>claude-code</code>").replace("cursor ", "<code>cursor</code> ").replace("claude-desktop.", "<code>claude-desktop</code>.")
-            inner = (f'          <p class="qs-step"><span class="qs-n">1</span> {esc(H["step1"])}</p>\n'
-                     f'          <p class="qs-note">{esc(note)}</p>\n          {body[k]}\n'
-                     f'          <p class="qs-step"><span class="qs-n">2</span> {esc(H["step2"])}</p>\n{n2}'
-                     f'          {cmd_html(X["clients"][0][0], X["clients"][0][1])}\n'
-                     f'          <p class="qs-then">{note2}</p>')
+            inner = (f'          <p class="qs-note">{esc(note)}</p>\n          {body[k]}\n'
+                     f'          <p class="qs-then">{esc(H["then"])}</p>')
         panels.append(f'        <div class="qs-panel" role="tabpanel" id="qs-panel-{k}" aria-labelledby="qs-tab-{k}"{hid}>\n{inner}\n        </div>')
     foot = esc(H["foot"]).replace("/agents", '<a href="agents/">/agents</a>').replace("/llms.txt", '<a href="llms.txt">/llms.txt</a>')
     return f'''    <!-- CONNECT:start (generated by scripts/build-content.py from HOME_CONNECT, INSTALL_PROMPT and CLI; do not edit by hand) -->
@@ -1275,11 +1253,10 @@ def pages_text() -> list:
           f"### {I['manual_h']} ({I['manual_tag'].lower()})", ""]
     L += [f"- {x}" for x in I["before"]]
     L += ["", f"1. {I['step1_h']}: macOS and Linux `{C.CLI['install'][0][1]}`; Windows one click {C.CLI['bat']}, or PowerShell `{C.CLI['install'][1][1]}`. {I['step1_next']}",
-          f"2. {I['step2_h']}: " + "; ".join(f"{l} `{c}`" for l, c in C.CLI["clients"]) + f". {I['step2_ok']}",
-          f"3. {I['step3_h']}: " + " · ".join(f'"{q}"' for q in I["prompts"]), "",
+          f"   {I['step1_ok']} {I['step1_restart']}",
+          f"2. {I['step3_h']}: " + " · ".join(f'"{q}"' for q in I["prompts"]), "",
           f"### {I['browser_h']}: " + ("live" if C.HOSTED_MCP_LIVE else "coming soon"), "", I["browser_body"], "",
           f"### {I['can_h2']}", ""] + [f"- {a}: {b}" for a, b in I["can"]] + ["", f"### {I['safe_h2']}", ""] + [f"- {x}" for x in I["safe"]]
-    L += ["", f"### {I['studio_h2']}", "", I["studio_lead"], ""] + [f"{i}. {t_} {d}" for i, (t_, d) in enumerate(M["steps"], 1)]
     L += ["", f"### {I['trouble_h2']}", ""] + [f"- {a}: {b}" for a, b in I["trouble"]] + ["", f"### {I['faq_h2']}", ""]
     for q, a in I["faq"]:
         L += [f"**{q}** {a}", ""]
@@ -1594,7 +1571,7 @@ def llms_txt() -> str:
           f"- [{x['name']}]({C.SITE}/{x['slug']})" for x in C.SOLUTIONS] + [f"- [{C.BWA['name']}]({C.SITE}/{C.BWA['slug']})", f"- [{C.BYC['name']}]({C.SITE}/{C.BYC['slug']})",
           f"- [{C.MS['name']}]({C.SITE}/{C.MS['slug']})", f"- [{C.WHO['name']}]({C.SITE}/{C.WHO['slug']})"] + [ f"- [Flieber, for AI agents]({C.SITE}/agents)",
           f"- [Full text for LLMs]({C.SITE}/llms-full.txt)", f"- [Capabilities (JSON)]({C.SITE}/capabilities.json)",
-          f"- [Flieber Studio setup guide (customer login required)]({C.DEV_DOCS})", f"- [{C.CLI['docs_label']}]({C.CLI['docs']})", f"- [G2 reviews]({C.G2})", ""]
+          f"- [{C.CLI['docs_label']}]({C.CLI['docs']})", f"- [G2 reviews]({C.G2})", ""]
     return "\n".join(L)
 
 
@@ -1684,12 +1661,8 @@ def capabilities() -> dict:
         "approval": {"default": "required", "configurable_by_customer": True,
                      "conversation_writes": "always preview then confirm",
                      "scheduled_workflows": "customer can allow them to run without confirmation"},
-        "mcp": {"server": True, "client": True, "server_handled_by": "Flieber Studio agent",
-                "typical_response_seconds": {"min": 30, "max": 300}, "connected_apps": C.CONNECTED_APPS,
-                "connects_to_any_mcp_server": True,
-                "flieber_studio": {"what": "Flieber's own agent: plain-language questions and actions the Flieber app supports",
-                                   "clients": ["Claude", "ChatGPT", "Cursor", "any MCP-compatible agent"],
-                                   "setup_guide": C.DEV_DOCS, "setup_guide_requires_login": True},
+        "mcp": {"server": True, "client": True, "server_runs_through": "Flieber CLI (local MCP server, stdio); hosted server coming soon",
+                "connected_apps": C.CONNECTED_APPS, "connects_to_any_mcp_server": True,
                 "flieber_cli": {"status": "early access", "package": C.CLI["package"], "pypi": C.CLI["pypi"], "tools": 29,
                                 "transport": "stdio (local MCP server and command line)", "hosted_server": "coming soon",
                                 "account_required": "yes; creating a Flieber account is the first step (the installer handles it, or flieber signup)",
