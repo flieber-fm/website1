@@ -1,7 +1,7 @@
 """Integrations page data (/integrations), restructured after the live flieber.com/integrations (Oct 5).
 
 Logos and data types (Sales, Inventory, Shipments) come from the live page; names follow the approved lists in
-site_content (NATIVE, ASSISTED). SPS Commerce and Apparel Magic were not on the live page: no logo; data types from Fabricio (Oct 5).
+site_content (NATIVE, ASSISTED). SPS Commerce and Apparel Magic were not on the live page: data types from Fabricio (Oct 5), logos from Fabricio (Oct 26).
 """
 
 LOGOS = {  # name: (logo path, data types)
@@ -55,8 +55,8 @@ LOGOS = {  # name: (logo path, data types)
     'World Depot Inc.': ('assets/integrations/world-depot-inc.png', ['Inventory', 'Shipments']),
     'ZhenHub': ('assets/integrations/zhenhub.png', ['Inventory', 'Shipments']),
     'NetSuite': ('assets/integrations/netsuite.png', ['Sales', 'Inventory']),
-    'SPS Commerce': (None, ['Purchase orders']),  # Fabricio, Oct 5
-    'Apparel Magic': (None, ['Sales']),  # Fabricio, Oct 5
+    'SPS Commerce': ('assets/integrations/sps-commerce.png', ['Purchase orders']),  # Fabricio, Oct 5; logo Oct 26
+    'Apparel Magic': ('assets/integrations/apparel-magic.png', ['Sales']),  # Fabricio, Oct 5; logo Oct 26
 }
 
 NATIVE_DESC = {

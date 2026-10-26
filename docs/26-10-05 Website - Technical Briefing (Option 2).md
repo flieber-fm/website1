@@ -357,6 +357,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 26 | SPS Commerce and Apparel Magic logos added (files from Fabricio, trimmed and resized to 400 px wide like the other logos) on /integrations, in the HubSpot File Manager `flieber-2026` and in the integrations template |
 | Oct 26 | HubSpot Phase 1 (Fabricio's go): 51 images (integration logos and the founder photo) uploaded to File Manager `flieber-2026`; llms.txt and capabilities.json replaced there with Option 2's (nothing live points to them; the live /llms.txt redirect points to another file) and llms-full.txt added; 37 templates uploaded to Design Manager `flieber-2026-b/templates` (Option 1's `flieber-2026/templates` untouched) and validated; 37 unpublished drafts created under /new-site-2026-b/ (IDs in the HubSpot section). /developers/cli added to the HubSpot build (it was missing). Labels are now all "Flieber 2026 B - …". HubSpot's firewall rejects uploads containing "curl -" with flags or a URL, so the HubSpot build writes it as c&#117;rl (shown and copied as curl). File Manager saves .jpg as .jpeg, so templates point to .jpeg. Three text files first saved with a wrong ".unknown" extension were deleted and redone |
 | Oct 26 | Tool counts removed (Fabricio: they go stale): no "29 tools", "27 tools" or "See all 29 capabilities" on /mcp, /developers/cli, the llms files or capabilities.json (its tools field now says to run flieber docs). The CLI version number (flieber 0.1.4) also removed from the /developers/cli kicker for the same reason |
 | Oct 26 | Claims confirmed by Fabricio: the planning engine card now reads "Proprietary algorithms do the math" (no mention of language models); "more than 1,000 commerce brands since 2019" is right; "For most brands" becomes "For many brands" on /multichannel and the wholesale use case; sales order routing into regional markets works today |
@@ -467,7 +468,7 @@ If Option 2 is elected:
 - [x] Upload the Option 2 templates to HubSpot and create the 37 drafts under /new-site-2026-b/ (Oct 26)
 - [x] Upload Option 2's llms.txt, llms-full.txt and capabilities.json to `flieber-2026`, replacing Option 1's (Oct 26)
 - [x] (Oct 26) Upload `assets/integrations/` (50 logos) to `flieber-2026`; they are copies of the logos on the live /integrations page and in Flieber's HubSpot file library (NetSuite and GoFlow), not taken from the brands' own press kits
-- [ ] SPS Commerce and Apparel Magic have no logo; add one if a file becomes available
+- [x] SPS Commerce and Apparel Magic logos added (Oct 26)
 - [x] Update `hubspot/CUTOVER.md` with the draft IDs (Oct 26)
 - [ ] Fabricio reviews the drafts in HubSpot Preview (fonts, logos, the six-layer animation, the Product and Solutions menus, phone menu, any HubSpot banner or chat widget)
 - [ ] Check whether ads point to /old-home-page before it is redirected
