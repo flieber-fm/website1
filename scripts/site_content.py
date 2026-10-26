@@ -542,9 +542,14 @@ MCP_PAGE = {
 HOSTED_MCP_LIVE = False
 
 # The prompt people paste into their AI tool so it installs Flieber for them (first choice on /install and the homepage)
-INSTALL_PROMPT = ("Set up Flieber on this computer and connect it to you. Follow the setup guide at "
-                  "https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me "
-                  "before you run anything.")
+# One source for the install commands (the prompt, /mcp, the homepage box, /developers/cli and the agent files)
+INSTALL_SH = "curl -fsSL https://cli.flieber.com/install.sh | sh"
+INSTALL_PS1 = "irm https://cli.flieber.com/install.ps1 | iex"
+# Engineering's suggestion (Oct 26): the prompt carries the install commands, so the AI tool runs them itself
+INSTALL_PROMPT = ("Install Flieber on this computer. On macOS or Linux, run: " + INSTALL_SH + ". On Windows, run this "
+                  "in PowerShell: " + INSTALL_PS1 + ". The installer opens my browser so I can sign in or create my "
+                  "account, then connects Flieber to you. Explain each step in plain language and ask me before you run "
+                  "anything. When it's done, tell me if I need to restart you.")
 INSTALL_PROMPT_TOOLS = "Claude Desktop, Claude Code, Cursor or Muse"
 
 # /install (plain-language install page, from Fabricio's Install Page brief, Oct 19)
@@ -559,7 +564,7 @@ INSTALL = {
     "prompt_body": ("Copy this prompt and paste it into " + "Claude Desktop, Claude Code, Cursor or Muse" + ". It installs Flieber, "
                     "helps you sign in and connects itself. It asks before every step."),
     "prompt_todo": ("Engineering to confirm which AI tools can run this prompt (Claude Desktop chat, Claude Code, Cursor, "
-                    "Muse) and the final address of the setup guide the prompt points to."),
+                    "Muse)."),
     "manual_tag": "About 5 minutes",
     "manual_h": "Install it yourself",
     "manual_body": "Install Flieber, then try it. Works with Claude Desktop, Claude Code, Cursor and Muse.",
@@ -697,8 +702,8 @@ CLI = {
              "29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs "
              "you in, and gets your agents ready."),
     "install_h3": "Install and sign in",
-    "install": [("macOS and Linux", "curl -fsSL https://cli.flieber.com/install.sh | sh"),
-                ("Windows (PowerShell)", "irm https://cli.flieber.com/install.ps1 | iex")],
+    "install": [("macOS and Linux", INSTALL_SH),
+                ("Windows (PowerShell)", INSTALL_PS1)],
     "install_note": ("The installer sets up Flieber CLI, opens your browser to create your Flieber account or sign in, "
                      "lists your organizations and connects Flieber to your AI tool. Running it again is safe and upgrades it."),
     "bat_label": "Prefer one click on Windows? Download flieber-install.bat and double-click it.",

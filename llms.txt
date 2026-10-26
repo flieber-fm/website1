@@ -130,7 +130,7 @@ Every write follows approval rules the brand sets. By default every write requir
 Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, Cursor, Claude Desktop and Muse: sales, adjusted sales, forecasts, catalog and store onboarding, through the same 29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs you in, and gets your agents ready.
 Creating a Flieber account is the first step; the installer handles it, or run `flieber signup`.
 
-For a person setting it up: https://www.flieber.com/mcp. Easiest path: paste this prompt into Claude Desktop, Claude Code, Cursor or Muse: "Set up Flieber on this computer and connect it to you. Follow the setup guide at https://cli.flieber.com/skills/flieber-install/SKILL.md. Explain each step in plain language and ask me before you run anything." Technical reference: https://www.flieber.com/developers/cli
+For a person setting it up: https://www.flieber.com/mcp. Easiest path: paste this prompt into Claude Desktop, Claude Code, Cursor or Muse: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows, run this in PowerShell: irm https://cli.flieber.com/install.ps1 | iex. The installer opens my browser so I can sign in or create my account, then connects Flieber to you. Explain each step in plain language and ask me before you run anything. When it's done, tell me if I need to restart you." Technical reference: https://www.flieber.com/developers/cli
 
 - macOS and Linux: `curl -fsSL https://cli.flieber.com/install.sh | sh`
 - Windows (PowerShell): `irm https://cli.flieber.com/install.ps1 | iex`
