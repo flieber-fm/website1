@@ -138,6 +138,8 @@ The 14 customer logos already uploaded to HubSpot, in one row (scrolling on mobi
 
 ### 4.2b Quick start box (Oct 19)
 
+**Oct 26: position and heading.** The box now comes right after the hero, before the logos (4.2), on its own full-width soft background band. Above the box: kicker **Flieber MCP**; H2 **Connect Flieber to your AI tool**; lead: Claude, ChatGPT, Cursor and your own agents get Flieber's data and actions through Flieber's MCP server. Install it with Flieber CLI, or add it as a connector in Claude or ChatGPT in the browser.
+
 A compact dark box right after the logos. The prompt comes first; the agent install commands are one click away, for people and for agents reading the page (all panels are in the HTML, so crawlers read the commands too).
 
 **Header:** "Quick start" · right: "All install options →" to /mcp

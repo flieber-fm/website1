@@ -682,6 +682,10 @@ DEVREF = {
 
 # Homepage "Connect your agent" block (synced into index.html by build-content.py)
 HOME_CONNECT = {
+    "kicker": "Flieber MCP",
+    "h2": "Connect Flieber to your AI tool",
+    "lead": ("Claude, ChatGPT, Cursor and your own agents get Flieber's data and actions through Flieber's MCP server. "
+             "Install it with Flieber CLI, or add it as a connector in Claude or ChatGPT in the browser."),
     "label": "Quick start",
     "link": "All install options",
     "tabs": [("prompt", "Ask your AI tool", "Copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step."),
