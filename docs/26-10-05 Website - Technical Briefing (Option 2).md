@@ -341,6 +341,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Oct 26 | Fabricio's answers to the pre-launch list. All visible TODO boxes removed: the install prompt works in any AI tool that can run commands on the computer (INSTALL_PROMPT_TOOLS now says so, with Claude Desktop, Claude Code, Cursor and Muse as examples); the Windows warning does appear; the installer connects the AI tool on its own; the browser steps carry "*Subject to the rules of your Claude or ChatGPT plan." instead of a plan list. /developers/cli no longer lists tools or error codes (they change too often): it gives `flieber docs` and two copyable prompts to get the current lists from the AI tool. Founder photo added (assets/img/fabricio-miranda.jpg, homepage and /who-we-are; upload to `flieber-2026` with the other images). Publishing the MCP address is allowed: the old "behind the customer login" line was a limitation, now lifted. Trial copy: "Your free trial starts when you create your account in Flieber." Nixtla is always "custom forecasting models developed in partnership with Nixtla" (the TimeGPT reference removed, so the cheap Nixtla product is never implied). "Flieber in numbers" removed from /who-we-are. Every "more than 1,000 brands" now says "since 2019" (historical); the logo strip keeps "hundreds of brands" (today). /put-flieber-to-work renamed Prompt ideas at /prompt-ideas (Caddy 301 from the old path; never live on HubSpot, so no HubSpot redirect needed) |
 | Oct 26 | Homepage Quick start moved up and given its own section (Fabricio: it read as hidden behind the moving logo strip and did not say it was the MCP/CLI setup). It now sits right after the hero, before the logos, on a full-width soft background band, with a section heading above the dark box: kicker Flieber MCP, H2 Connect Flieber to your AI tool, and a lead naming the MCP server, Flieber CLI and the browser connector. Box content unchanged. HOME_CONNECT gains kicker, h2 and lead; the logos band loses its top rule |
 | Oct 26 | Hosted Flieber MCP is live for Claude and ChatGPT in the browser (Felipe Infante tested claude.ai, Claude Desktop, Claude Code and ChatGPT; the hosted server runs the CLI in the cloud, OAuth through the Flieber account). HOSTED_MCP_LIVE = True and HOSTED_MCP_URL = https://mcp.flieber.com/mcp in site_content.py. /mcp: the browser card is live (tag Nothing to install, button Show me how) and a new section gives four steps (add a custom connector in Settings, paste the address, sign in, try it) with a TODO for engineering on which Claude and ChatGPT plans allow custom connectors and whether ChatGPT needs developer mode. "Coming soon" removed from the FAQs, the homepage Quick start footer (now links to the browser steps), /features, the use case page, /developers/cli (hosted server now listed as available), llms files and capabilities.json (hosted_server with url, auth and clients). Safety line changed from "Your sign-in is saved on your computer" to "You sign in on Flieber's own page", since the browser route stores nothing locally. ChatGPT stays in the homepage subhead, meta description and agent card (true again). Not published: running the CLI inside a ChatGPT or claude.ai session (works per Felipe and André, but ephemeral and sign-in unclear), and Codex or Grok Build (not tested). Hosted endpoint and installer not reachable from the build sandbox, so not tested here |
 | Oct 26 | Install prompt replaced (engineering's suggestion, Fabricio's go): it now carries the install commands for macOS/Linux and Windows instead of pointing to the setup guide, so the AI tool runs the installer itself and nobody picks a tool. Used on /mcp, the homepage Quick start, /agents and the llms files; the commands come from one source (INSTALL_SH, INSTALL_PS1). Prompt TODO now only asks which AI tools can run it |
@@ -434,13 +435,13 @@ No specification decisions are open. This checklist tracks what remains before O
 
 Before an option is elected:
 
-- [ ] Fabricio's photo for the founder section (a monogram marked `[FOUNDER PHOTO]` stands in on the preview)
+- [x] Fabricio's photo for the founder section (Oct 26)
 - [ ] Fabricio confirms the claims first used in Option 2: "Proprietary algorithms, not language models", "more than 1,000 commerce brands" in the planning engine and planner copy, the /multichannel "For most brands" line and the regional markets example for sales order routing
-- [ ] Fabricio reviews "What we believe" on /who-we-are (drawn from the May 2026 strategy document)
-- [ ] Fabricio (with engineering) makes the MCP URL, sign-in flow and per-assistant setup steps public for /mcp and /customize
+- [x] Fabricio reviews "What we believe" on /who-we-are (Oct 26: Nixtla wording fixed, "Flieber in numbers" removed)
+- [x] Fabricio (with engineering) makes the MCP URL, sign-in flow and per-assistant setup steps public for /mcp and /customize (Oct 26)
 - [ ] Fabricio expands the use-case pages, which are short for pages meant to rank (lead, three or four points, two requests, two questions)
-- [ ] Fabricio reviews /put-flieber-to-work on the preview
-- [ ] Fabricio and the team compare both previews and elect one option
+- [x] Fabricio reviews /put-flieber-to-work on the preview (Oct 26: renamed Prompt ideas, /prompt-ideas)
+- [x] Fabricio and the team compare both previews and elect one option (Oct 26: Option 2 elected)
 
 If Option 2 is elected:
 
@@ -473,8 +474,10 @@ After the switch:
 
 Maintenance rules after launch (not open items):
 
-- MCP endpoint and auth method stay behind the customer login
+- The MCP address and sign-in method are public since Oct 26 (the earlier restriction was a limitation, now lifted)
 - The direct-to-API MCP client goes on /features and /agents only once it ships
 - A Nixtla accuracy report, if delivered, is linked as "measured with Nixtla"
+- Nixtla is always named as "custom forecasting models developed in partnership with Nixtla", never as a product Flieber uses
+- Tool lists and error codes are not published on the site; the site points to `flieber docs` and to prompts that ask the AI tool for the current lists
 - "On request" tags come off /features and capabilities.json as features become generally available
 - /flieber-vs-inventory-planner stays unpublished and is never redirected

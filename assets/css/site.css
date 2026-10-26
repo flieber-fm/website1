@@ -1260,7 +1260,7 @@ a.sol-feat:hover .arrow { transform: translateX(3px); }
 .sol-vibe { margin-top: 24px; color: var(--text-2); }
 .sol-vibe .link-arrow { color: var(--black); }
 
-/* Put Flieber to work */
+/* Prompt ideas */
 .work { padding-top: clamp(40px, 5vw, 64px); }
 .work-filters { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
 .work-filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }

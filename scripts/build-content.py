@@ -438,7 +438,7 @@ def cmd_html(label: str, command: str) -> str:
 def cli_codes(s: str) -> str:
     """Escape, then set inline commands in code font so the text font never merges -- into a dash."""
     s = esc(s)
-    for c in ("flieber login --remote", "flieber signup", "--scope project"):
+    for c in ("flieber login --remote", "flieber signup", "flieber docs", "--scope project"):
         s = s.replace(c, f"<code>{c}</code>")
     return s
 
@@ -485,7 +485,7 @@ def cli_section(soft: bool) -> str:
 
 
 def todo(text: str) -> str:
-    return f'<p class="todo"><b>TODO:</b> {esc(text)}</p>'
+    return f'<p class="todo"><b>TODO:</b> {esc(text)}</p>' if text else ""
 
 
 def ticks(s: str) -> str:
@@ -605,7 +605,7 @@ def install_main() -> str:
         bsteps = I["browser_steps"]
         blist = "\n".join(f"          <li>{esc(t)}" + (f"\n{cmd_html('Connector address', C.HOSTED_MCP_URL)}" if i == 1 else "") + "</li>" for i, t in enumerate(bsteps))
         out += section("claude-in-browser", I["browser_tag"], I["browser_h"],
-                       f'        <p class="feat-approval">{esc(I["browser_lead"])}</p>\n        <ol class="inst-steps-list">\n{blist}\n        </ol>\n        {todo(I["browser_todo"])}', soft=True)
+                       f'        <p class="feat-approval">{esc(I["browser_lead"])}</p>\n        <ol class="inst-steps-list">\n{blist}\n        </ol>\n        <p class="inst-note">{esc(I["browser_note"])}</p>\n        {todo(I["browser_todo"])}', soft=True)
     out += section("troubleshooting", "Help", I["trouble_h2"], f'''        <table class="inst-trouble">
           <thead><tr><th scope="col">What you see</th><th scope="col">What to do</th></tr></thead>
           <tbody>
@@ -631,12 +631,16 @@ def devref_main() -> str:
     notes = "\n".join(f"          <li>{cli_codes(n)}</li>" for n in D["manual_notes"])
     out += section("manual-setup", "Setup", D["manual_h2"], f'        <div class="cli-col">\n{man}\n        </div>\n        <ul class="bullets inst-notes">\n{notes}\n        </ul>', soft=False)
     facts = "\n".join(f"          <li>{esc(x)}</li>" for x in X["agent_facts"])
-    out += section("tools", "Reference", D["tools_h2"], f'''        <p class="feat-approval">{esc(D["tools"])}</p>
+    out += section("tools", "Reference", D["tools_h2"], f'''        <p class="feat-approval">{cli_codes(D["tools"])}</p>
+        <div class="cli-pair" style="margin:16px 0 28px">
+{cmd_html("Terminal or PowerShell", "flieber docs")}
+{cmd_html("Prompt", D["tools_prompt"]).replace('class="cmd"', 'class="cmd cmd-prompt"', 1)}
+        </div>
         {todo(D["tools_todo"])}
         <ul class="bullets inst-notes">
 {facts}
         </ul>''', soft=True)
-    out += section("errors", "Reference", D["errors_h2"], f'        <p class="feat-approval">{esc(D["errors"])}</p>\n        {todo(D["errors_todo"])}', soft=False)
+    out += section("errors", "Reference", D["errors_h2"], f'        <p class="feat-approval">{esc(D["errors"])}</p>\n<div style="margin-top:16px">{cmd_html("Prompt", D["errors_prompt"]).replace('class="cmd"', 'class="cmd cmd-prompt"', 1)}</div>\n        {todo(D["errors_todo"])}', soft=False)
     return out
 
 
@@ -995,8 +999,6 @@ def who_main() -> str:
     </section>
 '''
     out += section("beliefs", "Beliefs", WH["believe_h2"], f'        <div class="why-grid">\n{cards(WH["believe"])}\n        </div>', soft=False)
-    nums = "\n".join(f'          <li>{esc(x)}</li>' for x in WH["numbers"])
-    out += section("numbers", "Numbers", WH["numbers_h2"], f'        <ul class="who-numbers">\n{nums}\n        </ul>', soft=True)
     out += section("customers", "Customers", WH["quotes_h2"], "        " + quotes.rstrip("\n"), soft=False)
     out += section("find-us", "Contact", WH["find_h2"], f'''        <ul class="who-find">
           <li>169 Madison Avenue, New York, NY 10016</li>
@@ -1042,7 +1044,7 @@ def build_oct3_pages() -> None:
                ld([org, dict(webpage(url, WH["h1"], WH["lead"], "AboutPage"), about={"@id": ORG["@id"]})]), who_main())
 
 
-# ------------------------------------------------------------------ /put-flieber-to-work (prompt source for the site)
+# ------------------------------------------------------------------ /prompt-ideas (prompt source for the site)
 MOD_NAME = {m["slug"]: m["name"] for m in C.MODULES}
 
 
@@ -1316,7 +1318,6 @@ def pages_text() -> list:
     L += [f"## {WH['name']}: {WH['h1']}", "", f"{C.SITE}/{WH['slug']}", "", WH["lead"], "", f"### {WH['why_h2']}", ""]
     L += [x for p_ in paras for x in (p_, "")] + ["Fabricio Miranda, Founder and CEO", "", f"### {WH['believe_h2']}", ""]
     L += [f"- {t}: {d}" for t, d in WH["believe"]]
-    L += ["", f"### {WH['numbers_h2']}", ""] + [f"- {x}" for x in WH["numbers"]]
     L += ["", f"### {WH['find_h2']}", "", "169 Madison Avenue, New York, NY 10016 · hello@flieber.com", ""]
     L += ["## Solutions by type of business", ""]
     for x in C.SOLUTIONS:
@@ -1604,7 +1605,7 @@ def cli_md() -> list:
 
 def llms_full_txt() -> str:
     L = ["# Flieber: full text for LLMs", "",
-         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/mcp, {C.SITE}/put-flieber-to-work, {C.SITE}/customize, the ten use-case pages, {C.SITE}/managed-services, {C.SITE}/who-we-are, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
+         f"The complete text of {C.SITE}/features, the five module pages, {C.SITE}/mcp, {C.SITE}/prompt-ideas, {C.SITE}/customize, the ten use-case pages, {C.SITE}/managed-services, {C.SITE}/who-we-are, {C.SITE}/multichannel, {C.SITE}/agencies, {C.SITE}/before-you-choose and {C.SITE}/agents. Last updated {C.LAST_UPDATED}.", "",
          f"## {C.FEATURES_H1}", "", C.FEATURES_INTRO, "", C.FEATURES_NOTE, ""]
     for g in C.GROUPS:
         lead = MODULE_BY_SLUG[g["id"]]["tab"] if g["id"] in MODULE_BY_SLUG else g["lead"]

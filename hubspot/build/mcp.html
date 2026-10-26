@@ -1394,7 +1394,7 @@ a.int-tile:hover { border-color: var(--black); }
           "name": "Do I need a Flieber account?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The installer walks you through creating one. Your free trial starts the first time you use your account, not when you create it."
+            "text": "Yes. The installer walks you through creating one. Your free trial starts when you create your account in Flieber."
           }
         },
         {
@@ -1471,7 +1471,7 @@ a.int-tile:hover { border-color: var(--black); }
               <a href="/product/workflows">Workflows</a>
             </div>
             <hr class="nav-menu-sep">
-            <a href="/put-flieber-to-work">Put Flieber to work</a>
+            <a href="/prompt-ideas">Prompt ideas</a>
             <a href="/integrations">Integrations</a>
             <a href="/mcp">MCP and AI agents</a>
             <a href="/security">Security &amp; data</a>
@@ -1515,9 +1515,9 @@ a.int-tile:hover { border-color: var(--black); }
           <article class="inst-card inst-main" id="prompt">
             <p class="hc-tag">Easiest</p>
             <h2 class="h3">Let your AI tool set it up</h2>
-            <p>Copy this prompt and paste it into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself. It asks before every step.</p>
+            <p>Copy this prompt and paste it into any AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself. It asks before every step.</p>
             <div class="cmd cmd-prompt"><span class="cmd-label">Prompt</span><pre><code>Install Flieber on this computer. On macOS or Linux, run: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows, run this in PowerShell: irm https://cli.flieber.com/install.ps1 | iex. The installer opens my browser so I can sign in or create my account, then connects Flieber to you. Explain each step in plain language and ask me before you run anything. When it’s done, tell me if I need to restart you.</code></pre><button class="cmd-copy" type="button" aria-label="Copy the prompt">Copy</button></div>
-            <p class="todo"><b>TODO:</b> Engineering to confirm which AI tools can run this prompt (Claude Desktop chat, Claude Code, Cursor, Muse).</p>
+            
           </article>
           <div class="inst-side">
             <article class="inst-card">
@@ -1565,7 +1565,7 @@ a.int-tile:hover { border-color: var(--black); }
             <p>Download the installer, then open the file you downloaded.</p>
             <p><a class="btn btn-primary" href="https://cli.flieber.com/flieber-install.bat" download>Download the installer <span class="arrow" aria-hidden="true">→</span></a></p>
             <p class="inst-note">If Windows shows a blue “Windows protected your PC” box, click More info, then Run anyway.</p>
-            <p class="todo"><b>TODO:</b> Engineering to confirm whether this Windows warning appears.</p>
+            
             <details class="inst-alt"><summary>Prefer PowerShell?</summary>
               <p>Open PowerShell: press the Start key, type PowerShell and press Enter. Paste this command and press Enter.</p>
                         <div class="cmd"><span class="cmd-label">PowerShell</span><pre><code>irm https://cli.flieber.com/install.ps1 | iex</code></pre><button class="cmd-copy" type="button" aria-label="Copy the PowerShell command">Copy</button></div>
@@ -1583,7 +1583,7 @@ a.int-tile:hover { border-color: var(--black); }
           <p>Your browser opens the Flieber sign-in page. Sign in, or create your account: on the same page you accept Flieber’s terms and the terms of the AI early access. Back in the window, you’ll see your Flieber organizations. No organization yet? The installer offers to create one with you.</p>
           <p class="inst-ok"><span aria-hidden="true">✓</span> You’ll see your Flieber organization listed. Flieber is now connected to your AI tool.</p>
           <p class="inst-note">Using Claude Desktop? Quit it completely and open it again.</p>
-          <p class="todo"><b>TODO:</b> Engineering to confirm the installer connects Claude Desktop, Claude Code, Cursor and Muse on its own, with no separate connect step.</p>
+          
           <p class="inst-note">Run the same installer again any time to update Flieber. <a href="https://cli.flieber.com">Review the installer before running it</a></p>
         </div>
         <div class="inst-step" id="step-2">
@@ -1650,13 +1650,14 @@ a.int-tile:hover { border-color: var(--black); }
         </div>
         <p class="feat-approval">Add Flieber as a custom connector in Claude or ChatGPT, then sign in with your Flieber account.</p>
         <ol class="inst-steps-list">
-          <li>In Claude or ChatGPT, open Settings and add a custom connector.</li>
+          <li>In Claude or ChatGPT, open Settings and add a custom connector.*</li>
           <li>Name it Flieber and paste this address:
           <div class="cmd"><span class="cmd-label">Connector address</span><pre><code>https://mcp.flieber.com/mcp</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Connector address command">Copy</button></div></li>
           <li>Sign in with your Flieber account, or create one. On the same page you accept Flieber’s terms and the terms of the AI early access.</li>
           <li>Open a new chat and ask: What can Flieber do?</li>
         </ol>
-        <p class="todo"><b>TODO:</b> Engineering to confirm which Claude and ChatGPT plans allow custom connectors, and whether ChatGPT needs developer mode turned on.</p>
+        <p class="inst-note">*Subject to the rules of your Claude or ChatGPT plan.</p>
+        
       </div>
     </section>
 
@@ -1699,7 +1700,7 @@ a.int-tile:hover { border-color: var(--black); }
           </details>
           <details>
             <summary>Do I need a Flieber account?<span class="plus" aria-hidden="true"></span></summary>
-            <p>Yes. The installer walks you through creating one. Your free trial starts the first time you use your account, not when you create it.</p>
+            <p>Yes. The installer walks you through creating one. Your free trial starts when you create your account in Flieber.</p>
           </details>
           <details>
             <summary>Can Claude change things in Flieber?<span class="plus" aria-hidden="true"></span></summary>
@@ -1746,7 +1747,7 @@ a.int-tile:hover { border-color: var(--black); }
           <h2 class="footer-h">Product</h2>
           <ul>
             <li><a href="/features">Features</a></li>
-            <li><a href="/put-flieber-to-work">Put Flieber to work</a></li>
+            <li><a href="/prompt-ideas">Prompt ideas</a></li>
             <li><a href="/integrations">Integrations</a></li>
             <li><a href="/mcp">MCP and AI agents</a></li>
             <li><a href="/pricing">Pricing</a></li>
@@ -2025,7 +2026,7 @@ a.int-tile:hover { border-color: var(--black); }
     else img.addEventListener('error', drop);
   });
 
-  /* ---------- Put Flieber to work: filters ---------- */
+  /* ---------- Prompt ideas: filters ---------- */
   var work = document.querySelector('.work');
   if (work) {
     var filters = work.querySelector('.work-filters');

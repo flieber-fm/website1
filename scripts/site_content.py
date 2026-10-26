@@ -19,7 +19,7 @@ SERVICE = "https://www.flieber.com/service-agreement"
 EMAIL = "hello@flieber.com"
 
 ACCURACY = ("36% more accurate than our previous portfolio of 16 forecasting models, tested on a random "
-            "sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.")
+            "sample of 46,000 products. Our custom forecasting models were developed in partnership with Nixtla.")
 
 POSITIONING = "The inventory intelligence layer your agents run on"
 
@@ -62,7 +62,7 @@ GROUPS = [
         "id": 'demand-forecasting', "label": 'Demand forecasting', "h2": 'Forecast what would have sold, not just what did',
         "lead": None, "module": True,
         "features": [
-            ('AI demand forecasts', 'Product and channel level forecasts across marketplaces, DTC and wholesale, built from adjusted history and seasonality. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.', 'read', 'general'),
+            ('AI demand forecasts', 'Product and channel level forecasts across marketplaces, DTC and wholesale, built from adjusted history and seasonality. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Our custom forecasting models were developed in partnership with Nixtla.', 'read', 'general'),
             ('Forecast overrides and uploads', 'Import your own forecasts, or adjust at SKU, store, channel or group level, including planned promotions and events.', 'write', 'general'),
             ('Targets and new products', 'Apply growth percentages, unit targets or revenue targets across selected products. Forecast new products from similar ones or from a manual curve.', 'write', 'general'),
             ('Forecast accuracy and bias', 'Error and bias metrics, with monthly forecast versions saved so past predictions can be compared with what actually sold. Forecast value added reports on request.', 'read', 'general'),
@@ -275,7 +275,7 @@ DATA_HANDLING = [
 ]
 
 EVIDENCE = [
-    ("Forecast accuracy", ACCURACY, "Flieber; built with Nixtla"),
+    ("Forecast accuracy", ACCURACY, "Flieber; custom forecasting models developed in partnership with Nixtla"),
     ("Adoption", "100+ commerce brands today; more than 1,000 commerce brands since 2019.", "Flieber"),
     ("Reviews", "G2, " + G2 + ". Customer references available on request.", G2),
 ]
@@ -530,7 +530,7 @@ MCP_PAGE = {
     "faq_h2": "Questions",
     "faq": [
         ("Which AI assistants work with Flieber?", "Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector."),
-        ("Do I need a Flieber account?", "Yes. The installer walks you through creating one. Your free trial starts the first time you use your account, not when you create it."),
+        ("Do I need a Flieber account?", "Yes. The installer walks you through creating one. Your free trial starts when you create your account in Flieber."),
         ("Do I need to be technical to connect?", "No. Paste one prompt into Claude Desktop, Claude Code, Cursor or Muse and it sets Flieber up for you, or install it yourself in about 5 minutes."),
         ("Can my AI change things in my systems?", "Only within the approval rules you set. By default, every change waits for your approval."),
         ("Is my data used to train AI models?", "No. Flieber does not train on customer data, and its AI providers are set up not to."),
@@ -553,7 +553,7 @@ INSTALL_PROMPT = ("Install Flieber on this computer. On macOS or Linux, run: " +
                   "in PowerShell: " + INSTALL_PS1 + ". The installer opens my browser so I can sign in or create my "
                   "account, then connects Flieber to you. Explain each step in plain language and ask me before you run "
                   "anything. When it's done, tell me if I need to restart you.")
-INSTALL_PROMPT_TOOLS = "Claude Desktop, Claude Code, Cursor or Muse"
+INSTALL_PROMPT_TOOLS = "any AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse"
 
 # /install (plain-language install page, from Fabricio's Install Page brief, Oct 19)
 INSTALL = {
@@ -564,10 +564,9 @@ INSTALL = {
              "AI tool you already use."),
     "prompt_tag": "Easiest",
     "prompt_h": "Let your AI tool set it up",
-    "prompt_body": ("Copy this prompt and paste it into " + "Claude Desktop, Claude Code, Cursor or Muse" + ". It installs Flieber, "
+    "prompt_body": ("Copy this prompt and paste it into " + INSTALL_PROMPT_TOOLS + ". It installs Flieber, "
                     "helps you sign in and connects itself. It asks before every step."),
-    "prompt_todo": ("Engineering to confirm which AI tools can run this prompt (Claude Desktop chat, Claude Code, Cursor, "
-                    "Muse)."),
+    "prompt_todo": "",
     "manual_tag": "About 5 minutes",
     "manual_h": "Install it yourself",
     "manual_body": "Install Flieber, then try it. Works with Claude Desktop, Claude Code, Cursor and Muse.",
@@ -577,11 +576,12 @@ INSTALL = {
     "browser_body": "Add Flieber as a custom connector and sign in with your Flieber account. Nothing to install.",
     "browser_btn": "Show me how",
     "browser_lead": "Add Flieber as a custom connector in Claude or ChatGPT, then sign in with your Flieber account.",
-    "browser_steps": ["In Claude or ChatGPT, open Settings and add a custom connector.",
+    "browser_steps": ["In Claude or ChatGPT, open Settings and add a custom connector.*",
                       "Name it Flieber and paste this address:",
                       "Sign in with your Flieber account, or create one. On the same page you accept Flieber's terms and the terms of the AI early access.",
                       "Open a new chat and ask: What can Flieber do?"],
-    "browser_todo": "Engineering to confirm which Claude and ChatGPT plans allow custom connectors, and whether ChatGPT needs developer mode turned on.",
+    "browser_todo": "",
+    "browser_note": "*Subject to the rules of your Claude or ChatGPT plan.",
     "before_h2": "Before you start",
     "before": ["A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.",
                "Claude Desktop, Claude Code, Cursor or Muse installed.",
@@ -593,7 +593,7 @@ INSTALL = {
     "win_body": "Download the installer, then open the file you downloaded.",
     "win_btn": "Download the installer",
     "win_warn": "If Windows shows a blue “Windows protected your PC” box, click More info, then Run anyway.",
-    "win_todo": "Engineering to confirm whether this Windows warning appears.",
+    "win_todo": "",
     "win_alt": "Prefer PowerShell?",
     "win_alt_body": "Open PowerShell: press the Start key, type PowerShell and press Enter. Paste this command and press Enter.",
     "mac_body": "Open Terminal: press Cmd + Space, type Terminal and press Enter. Paste this command and press Enter.",
@@ -603,7 +603,7 @@ INSTALL = {
                    "organizations. No organization yet? The installer offers to create one with you."),
     "step1_ok": "You'll see your Flieber organization listed. Flieber is now connected to your AI tool.",
     "step1_restart": "Using Claude Desktop? Quit it completely and open it again.",
-    "step1_connect_todo": "Engineering to confirm the installer connects Claude Desktop, Claude Code, Cursor and Muse on its own, with no separate connect step.",
+    "step1_connect_todo": "",
     "step1_update": "Run the same installer again any time to update Flieber.",
     "review": "Review the installer before running it",
     "review_url": "https://cli.flieber.com",
@@ -636,7 +636,7 @@ INSTALL = {
     "faq_h2": "Questions",
     "faq": [("Which AI tools work with Flieber?", "Claude Desktop, Claude Code, Cursor and Muse, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector."),
             ("Do I need to be technical?", "No. Paste one prompt into your AI tool and it sets Flieber up for you, or install it yourself with the steps on this page."),
-            ("Do I need a Flieber account?", "Yes. The installer walks you through creating one. Your free trial starts the first time you use your account, not when you create it."),
+            ("Do I need a Flieber account?", "Yes. The installer walks you through creating one. Your free trial starts when you create your account in Flieber."),
             ("Can Claude change things in Flieber?", "Only with your OK. Claude shows you every change first and waits for your approval."),
             ("Is my data used to train AI models?", "No. Flieber does not train on customer data, and its AI providers are set up not to."),
             ("Is this an MCP server?", "Yes. Flieber connects through MCP, the open standard that lets AI tools use other software. The developer reference has the details."),
@@ -673,11 +673,13 @@ DEVREF = {
                      "On Windows, run flieber mcp register --client claude-desktop from PowerShell, not WSL.",
                      "Multiple organizations: every tool takes an optional tenant argument (tenant id or org_ id); call tenants to list them."],
     "tools_h2": "Tools",
-    "tools": "29 tools in total. Named in the source: sales, tenants, listings and products, plus store onboarding and SKU mapping as write operations.",
-    "tools_todo": "The full tool catalog (inputs, columns and API-key grants) is not in the engineering guide shared with the website team yet.",
+    "tools": "The list of tools grows as Flieber adds them, so get the current list from Flieber itself. Run flieber docs in Terminal or PowerShell, or ask your AI tool connected to Flieber:",
+    "tools_prompt": "List all the Flieber tools available to you, with a brief description of each.",
+    "tools_todo": "",
     "errors_h2": "Errors",
-    "errors": "Every error carries a stable code, a hint and a retryable flag. Over MCP, errors set isError.",
-    "errors_todo": "The error code table was empty in the engineering guide; to add when engineering shares it.",
+    "errors": "Every error carries a stable code, a hint and a retryable flag. Over MCP, errors set isError. For the current list of error codes, ask your AI tool connected to Flieber:",
+    "errors_prompt": "Find Flieber's documented error codes and explain what each means. Distinguish a complete documented catalog from errors you can identify in the available tool descriptions.",
+    "errors_todo": "",
 }
 
 # Homepage "Connect your agent" block (synced into index.html by build-content.py)
@@ -688,7 +690,7 @@ HOME_CONNECT = {
              "Install it with Flieber CLI, or add it as a connector in Claude or ChatGPT in the browser."),
     "label": "Quick start",
     "link": "All install options",
-    "tabs": [("prompt", "Ask your AI tool", "Copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step."),
+    "tabs": [("prompt", "Ask your AI tool", "Copy this prompt into any AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step."),
              ("macos", "macOS and Linux", "Open Terminal (on a Mac: press Cmd + Space, type Terminal, press Enter), paste this and press Enter. The installer creates your Flieber account or signs you in, and connects Flieber to your AI tool."),
              ("windows", "Windows", "Download the installer and open it. It creates your Flieber account or signs you in, and connects Flieber to your AI tool.")],
     "win_or": "Or paste this in PowerShell, a built-in Windows app (press the Start key, type PowerShell, press Enter):",
@@ -698,7 +700,7 @@ HOME_CONNECT = {
 MCP_CONNECT = {
     "kicker": "Connect",
     "h2": "Connect Flieber to your AI tool",
-    "lead": ("The easiest way: copy this prompt into Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, "
+    "lead": ("The easiest way: copy this prompt into any AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, "
              "helps you sign in and connects itself, asking before every step."),
     "link": "Install it yourself, step by step",
     "dev_link": "Technical reference",
@@ -733,7 +735,7 @@ CLI = {
                ("flieber", "Teaches your agent which tool to use, how to read results and how to preview changes.",
                 "https://cli.flieber.com/skills/flieber/SKILL.md")],
     "skills_note": "The installer adds both skills automatically when it finds Claude Code. Cursor reads them from the same place.",
-    "facts": [("Account first", "Creating your Flieber account is the first step. The installer walks you through it, or run flieber signup. You accept Flieber's terms and the AI early access terms on the sign-in page. Your free trial starts the first time you use your account."),
+    "facts": [("Account first", "Creating your Flieber account is the first step. The installer walks you through it, or run flieber signup. You accept Flieber's terms and the AI early access terms on the sign-in page. Your free trial starts when you create your account in Flieber."),
               ("Your sign-in stays on your computer", "You sign in once, and the sign-in is stored in a file only you can read. You never paste a key or token into a chat."),
               ("Every change is previewed", "Changes such as onboarding a store or mapping SKUs are previewed first and applied only after you confirm."),
               ("Only what you allow", "Flieber reads only what your sign-in or API key allows. API keys read one organization, limited to the data you grant."),
@@ -907,7 +909,7 @@ USE_CASES = [
      "modules": ["replenishment", "workflows"], "features": ["purchase-orders-to-suppliers", "purchase-orders-to-erps", "saved-plans-and-purchase-orders"]},
     {"slug": "ai-demand-forecasting", "name": "AI demand forecasting",
      "h1": "AI demand forecasting that corrects for stockouts and promotions",
-     "lead": "When a product stocks out, its sales history shows what you sold, not what you could have sold. Flieber corrects history for stockouts, spikes and promotions before forecasting each product on each channel. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.",
+     "lead": "When a product stocks out, its sales history shows what you sold, not what you could have sold. Flieber corrects history for stockouts, spikes and promotions before forecasting each product on each channel. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Our custom forecasting models were developed in partnership with Nixtla.",
      "points": [("Adjusted history shown next to actual sales", "sales-history-adjusted-for-anomalies"),
                 ("Forecasts by product and channel across marketplaces, DTC and wholesale", "ai-demand-forecasts"),
                 ("Accuracy and bias tracked against saved forecast versions", "forecast-accuracy-and-bias"),
@@ -990,7 +992,7 @@ MS = {
     "do": [("Take part in your S&OP meetings", "Get the full context on everything that affects your decisions, from new channels to supplier changes."),
            ("Keep Flieber accurate", "Maintain mappings, parameters and the supply chain map as your business changes, so every forecast and recommendation starts from the truth."),
            ("Act as a sounding board", "Review the big decisions with you before they go out: purchase orders, transfers, promotions and launches."),
-           ("Help run your planning practice", "Bring a proven way of working, drawing on experience from more than 1,000 brands.")],
+           ("Help run your planning practice", "Bring a proven way of working, drawing on experience from more than 1,000 brands since 2019.")],
     "plans_h2": "Two plans, two scopes",
     "plans_lead": "Lite covers the planning. Full adds the execution that follows your approval.",
     "plans": [
@@ -1018,7 +1020,7 @@ MS = {
     "for": ["You sell across many channels, warehouses or regions", "You run kits, bundles, backorders, long lead times or high MOQs",
             "Your team is buried in spreadsheets, with no time to build or maintain an internal tool",
             "You're growing fast but don't want to hire more people",
-            "You want to draw on the experience of more than 1,000 other brands to grow your business"],
+            "You want to draw on the experience of more than 1,000 other brands since 2019 to grow your business"],
     "with_h2": "How it works with the rest of Flieber",
     "with": ("Managed Services adds to any way you use Flieber: the app, your own agents through MCP or API, or the data "
              "layer on its own. Your planners and your team see the same data and context in real time. Switch or "
@@ -1029,7 +1031,7 @@ MS = {
     "faq": [("Do your planners make decisions for us?", "No. Your team makes the calls; our planners help you make them with the best data and context. On the Full plan, our team carries out the orders and follow-ups you approve."),
             ("What's the difference between Lite and Full?", "Lite covers planning: keeping Flieber accurate, forecasts, anomalies, replenishment recommendations and reports. Full adds execution after your approval: purchase and transfer orders, supplier follow-up, freight and inbound shipments."),
             ("Can we switch between Lite and Full?", "Yes, at the end of any billing cycle."),
-            ("Who are Flieber's planners?", "Specialists in demand and inventory planning who master the Flieber platform and draw on experience from more than 1,000 brands."),
+            ("Who are Flieber's planners?", "Specialists in demand and inventory planning who master the Flieber platform and draw on experience from more than 1,000 brands since 2019."),
             ("Do we get a dedicated planner?", "Yes. A dedicated planner works with your team, backed by a wider team at Flieber that helps with most of the tasks behind the scenes."),
             ("What hours and time zones do your planners work in?", "As a rule, 8am to 6pm Eastern Time. We can adjust for customers in very different time zones, such as Europe and Australia."),
             ("Which languages do your planners speak?", "English is the team's main language, and the team includes native speakers of other languages, such as Spanish and Portuguese."),
@@ -1058,9 +1060,6 @@ WHO = {
     "believe": [("Decisions stay with people", "The people accountable for a decision should make it, with the best data and reasoning in front of them."),
                 ("Execution should be automatic", "Once a decision is made, everything downstream should happen without manual work."),
                 ("Context is the hard part", "Data is easy to collect. Keeping it current and connected to how a business actually works is what makes AI useful.")],
-    "numbers_h2": "Flieber in numbers",
-    "numbers": ["More than 1,000 commerce brands since 2019", "Thousands of users",
-                "Forecasts 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products, built with Nixtla"],
     "quotes_h2": "What customers say",
     "find_h2": "Where to find us",
 }

@@ -1,6 +1,6 @@
 """Navigation and footer shared by every page (Option 2 brief, sections 3 and 4).
 
-Navigation: Product (menu: All features with the five modules nested under it, then Put Flieber to work, Integrations, MCP and AI agents and Security & data) · Solutions (menu: the three pages by type of
+Navigation: Product (menu: All features with the five modules nested under it, then Prompt ideas, Integrations, MCP and AI agents and Security & data) · Solutions (menu: the three pages by type of
 business and goal, then a divider and Before you choose) · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
 build-content.py writes these into every page listed in PAGE_FILES.
 """

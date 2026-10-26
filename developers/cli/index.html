@@ -100,7 +100,7 @@
               <a href="../../product/workflows/">Workflows</a>
             </div>
             <hr class="nav-menu-sep">
-            <a href="../../put-flieber-to-work/">Put Flieber to work</a>
+            <a href="../../prompt-ideas/">Prompt ideas</a>
             <a href="../../integrations/">Integrations</a>
             <a href="../../mcp/">MCP and AI agents</a>
             <a href="../../security/">Security &amp; data</a>
@@ -198,7 +198,7 @@
           </div>
         </div>
         <dl class="kv sec-kv cli-facts">
-          <dt>Account first</dt><dd>Creating your Flieber account is the first step. The installer walks you through it, or run <code>flieber signup</code>. You accept Flieber’s terms and the AI early access terms on the sign-in page. Your free trial starts the first time you use your account.</dd>
+          <dt>Account first</dt><dd>Creating your Flieber account is the first step. The installer walks you through it, or run <code>flieber signup</code>. You accept Flieber’s terms and the AI early access terms on the sign-in page. Your free trial starts when you create your account in Flieber.</dd>
           <dt>Your sign-in stays on your computer</dt><dd>You sign in once, and the sign-in is stored in a file only you can read. You never paste a key or token into a chat.</dd>
           <dt>Every change is previewed</dt><dd>Changes such as onboarding a store or mapping SKUs are previewed first and applied only after you confirm.</dd>
           <dt>Only what you allow</dt><dd>Flieber reads only what your sign-in or API key allows. API keys read one organization, limited to the data you grant.</dd>
@@ -268,8 +268,12 @@
           <span class="kicker">Reference</span>
           <h2 class="h2" id="tools-title" style="margin-top:20px">Tools</h2>
         </div>
-        <p class="feat-approval">29 tools in total. Named in the source: sales, tenants, listings and products, plus store onboarding and SKU mapping as write operations.</p>
-        <p class="todo"><b>TODO:</b> The full tool catalog (inputs, columns and API-key grants) is not in the engineering guide shared with the website team yet.</p>
+        <p class="feat-approval">The list of tools grows as Flieber adds them, so get the current list from Flieber itself. Run <code>flieber docs</code> in Terminal or PowerShell, or ask your AI tool connected to Flieber:</p>
+        <div class="cli-pair" style="margin:16px 0 28px">
+          <div class="cmd"><span class="cmd-label">Terminal or PowerShell</span><pre><code>flieber docs</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Terminal or PowerShell command">Copy</button></div>
+          <div class="cmd cmd-prompt"><span class="cmd-label">Prompt</span><pre><code>List all the Flieber tools available to you, with a brief description of each.</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Prompt command">Copy</button></div>
+        </div>
+        
         <ul class="bullets inst-notes">
           <li>Every result names its signal in meta.signal: actual sales, adjusted sales or forecast. Actual and adjusted sales end at yesterday (UTC); the last days of adjusted sales are approximate. Forecasts start today.</li>
           <li>Results have columns, rows and meta, up to 2,000 data points each. Larger requests coarsen from days to weeks to months (meta.coarsened_to) and page by series (next_offset).</li>
@@ -289,8 +293,9 @@
           <span class="kicker">Reference</span>
           <h2 class="h2" id="errors-title" style="margin-top:20px">Errors</h2>
         </div>
-        <p class="feat-approval">Every error carries a stable code, a hint and a retryable flag. Over MCP, errors set isError.</p>
-        <p class="todo"><b>TODO:</b> The error code table was empty in the engineering guide; to add when engineering shares it.</p>
+        <p class="feat-approval">Every error carries a stable code, a hint and a retryable flag. Over MCP, errors set isError. For the current list of error codes, ask your AI tool connected to Flieber:</p>
+<div style="margin-top:16px">          <div class="cmd cmd-prompt"><span class="cmd-label">Prompt</span><pre><code>Find Flieber’s documented error codes and explain what each means. Distinguish a complete documented catalog from errors you can identify in the available tool descriptions.</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Prompt command">Copy</button></div></div>
+        
       </div>
     </section>
 
@@ -308,7 +313,7 @@
           <h2 class="footer-h">Product</h2>
           <ul>
             <li><a href="../../features/">Features</a></li>
-            <li><a href="../../put-flieber-to-work/">Put Flieber to work</a></li>
+            <li><a href="../../prompt-ideas/">Prompt ideas</a></li>
             <li><a href="../../integrations/">Integrations</a></li>
             <li><a href="../../mcp/">MCP and AI agents</a></li>
             <li><a href="../../pricing/">Pricing</a></li>

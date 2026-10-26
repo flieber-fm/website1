@@ -229,7 +229,7 @@
     else img.addEventListener('error', drop);
   });
 
-  /* ---------- Put Flieber to work: filters ---------- */
+  /* ---------- Prompt ideas: filters ---------- */
   var work = document.querySelector('.work');
   if (work) {
     var filters = work.querySelector('.work-filters');

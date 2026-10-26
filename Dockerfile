@@ -19,5 +19,5 @@ COPY managed-services /srv/managed-services
 COPY developers /srv/developers
 COPY home-variants /srv/home-variants
 COPY who-we-are /srv/who-we-are
-COPY put-flieber-to-work /srv/put-flieber-to-work
+COPY prompt-ideas /srv/prompt-ideas
 COPY assets /srv/assets

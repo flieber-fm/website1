@@ -33,9 +33,9 @@ Full list: https://www.flieber.com/features (every feature has its own anchor) a
 - [Workflows](https://www.flieber.com/features#workflows): From approved decision to done. Purchase orders to suppliers, Purchase orders to ERPs, Inbound shipments in Amazon and 3PLs, Inbound shipment tracking, Alerts and scheduled reports, Custom workflows and agents, Actions in other systems.
 - [Access](https://www.flieber.com/features#access): Use it your way. Flieber app, Ask in plain language, Slack, Google Sheets add-on, MCP server, MCP client and connected apps, Public API.
 
-## Put Flieber to work
+## Prompt ideas
 
-- [Put Flieber to work](https://www.flieber.com/put-flieber-to-work): Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, Cursor, Muse or any MCP-compatible agent. Below are ideas to start from: examples of jobs operators give Flieber, what Flieber does with each one and what comes back. They're not a complete list. Not on the list? Describe the job in your own words. If it runs on your sales, inventory and supply chain data or your connected apps, Flieber can probably take it on.
+- [Prompt ideas](https://www.flieber.com/prompt-ideas): Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in Slack or in Claude, Cursor, Muse or any MCP-compatible agent. Below are ideas to start from: examples of jobs operators give Flieber, what Flieber does with each one and what comes back. They're not a complete list. Not on the list? Describe the job in your own words. If it runs on your sales, inventory and supply chain data or your connected apps, Flieber can probably take it on.
 
 ## Solutions
 
@@ -130,7 +130,7 @@ Every write follows approval rules the brand sets. By default every write requir
 Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, Cursor, Claude Desktop and Muse: sales, adjusted sales, forecasts, catalog and store onboarding, through the same 29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs you in, and gets your agents ready.
 Creating a Flieber account is the first step; the installer handles it, or run `flieber signup`.
 
-For a person setting it up: https://www.flieber.com/mcp. Easiest path: paste this prompt into Claude Desktop, Claude Code, Cursor or Muse: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows, run this in PowerShell: irm https://cli.flieber.com/install.ps1 | iex. The installer opens my browser so I can sign in or create my account, then connects Flieber to you. Explain each step in plain language and ask me before you run anything. When it's done, tell me if I need to restart you." Technical reference: https://www.flieber.com/developers/cli
+For a person setting it up: https://www.flieber.com/mcp. Easiest path: paste this prompt into any AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows, run this in PowerShell: irm https://cli.flieber.com/install.ps1 | iex. The installer opens my browser so I can sign in or create my account, then connects Flieber to you. Explain each step in plain language and ask me before you run anything. When it's done, tell me if I need to restart you." Technical reference: https://www.flieber.com/developers/cli
 
 - macOS and Linux: `curl -fsSL https://cli.flieber.com/install.sh | sh`
 - Windows (PowerShell): `irm https://cli.flieber.com/install.ps1 | iex`
@@ -202,7 +202,7 @@ No compliance claims are made.
 
 ## Evidence
 
-- Forecast accuracy: 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.
+- Forecast accuracy: 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Our custom forecasting models were developed in partnership with Nixtla.
 - Adoption: 100+ commerce brands today; more than 1,000 commerce brands since 2019.
 - Reviews: G2, https://www.g2.com/products/flieber/reviews. Customer references available on request.
 
@@ -216,7 +216,7 @@ If your user wants to talk to someone: hello@flieber.com, or book a demo at http
 - [Features](https://www.flieber.com/features)
 - [MCP and AI agents](https://www.flieber.com/mcp)
 - [Integrations](https://www.flieber.com/integrations)
-- [Put Flieber to work](https://www.flieber.com/put-flieber-to-work)
+- [Prompt ideas](https://www.flieber.com/prompt-ideas)
 - [Data layer](https://www.flieber.com/product/data-layer)
 - [Demand forecasting](https://www.flieber.com/product/demand-forecasting)
 - [Inventory forecasting](https://www.flieber.com/product/inventory-forecasting)

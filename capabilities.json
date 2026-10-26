@@ -203,7 +203,7 @@
       "id": "ai_demand_forecasts",
       "group": "demand-forecasting",
       "name": "AI demand forecasts",
-      "description": "Product and channel level forecasts across marketplaces, DTC and wholesale, built from adjusted history and seasonality. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.",
+      "description": "Product and channel level forecasts across marketplaces, DTC and wholesale, built from adjusted history and seasonality. 36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Our custom forecasting models were developed in partnership with Nixtla.",
       "access": "read",
       "availability": "general",
       "url": "https://www.flieber.com/features#ai-demand-forecasts"
@@ -554,7 +554,7 @@
       "id": "p1",
       "title": "Morning risk review",
       "prompt": "Every morning, review my inventory position and tell me the biggest risks I need to act on. Prioritize by stockout risk, sales velocity, product tier, inbound shipments and revenue impact, and explain why each one matters.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p1",
+      "url": "https://www.flieber.com/prompt-ideas#p1",
       "modules": [
         "inventory-forecasting",
         "workflows"
@@ -568,7 +568,7 @@
       "id": "p2",
       "title": "Weekly operations memo",
       "prompt": "Every Monday, prepare an inventory operations memo. Combine Flieber data with supplier emails, freight updates and major forecast exceptions. Tell me the top risks, what changed and what decisions need to be made.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p2",
+      "url": "https://www.flieber.com/prompt-ideas#p2",
       "modules": [
         "data-layer",
         "demand-forecasting",
@@ -587,7 +587,7 @@
       "id": "p3",
       "title": "Monthly inventory health",
       "prompt": "Every month, review our overall inventory health and explain what changed. Tell me whether we are carrying too much or too little inventory, where the biggest working capital issues are and what we should prioritize.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p3",
+      "url": "https://www.flieber.com/prompt-ideas#p3",
       "modules": [
         "inventory-forecasting",
         "data-layer"
@@ -601,7 +601,7 @@
       "id": "p4",
       "title": "Amazon stockouts before the next PO",
       "prompt": "Which of our top SKUs run out on Amazon before their next purchase order lands?",
-      "url": "https://www.flieber.com/put-flieber-to-work#p4",
+      "url": "https://www.flieber.com/prompt-ideas#p4",
       "modules": [
         "inventory-forecasting"
       ],
@@ -614,7 +614,7 @@
       "id": "p5",
       "title": "Weekly replenishment",
       "prompt": "Every Monday, review the products that may need replenishment and recommend what to order. Consider current stock, forecast demand, on-order inventory, supplier lead time, MOQ and target coverage. Group the recommendations by supplier and explain the reasoning.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p5",
+      "url": "https://www.flieber.com/prompt-ideas#p5",
       "modules": [
         "replenishment"
       ],
@@ -627,7 +627,7 @@
       "id": "p6",
       "title": "Draft POs and send them to your ERP",
       "prompt": "Every Monday, draft POs by supplier and send them to NetSuite for approval.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p6",
+      "url": "https://www.flieber.com/prompt-ideas#p6",
       "modules": [
         "replenishment",
         "workflows"
@@ -643,7 +643,7 @@
       "id": "p7",
       "title": "Container fill",
       "prompt": "Fit this order into two 40-foot containers.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p7",
+      "url": "https://www.flieber.com/prompt-ideas#p7",
       "modules": [
         "replenishment"
       ],
@@ -656,7 +656,7 @@
       "id": "p8",
       "title": "Six months of buying within budget",
       "prompt": "Plan the next six months of orders from this supplier within our budget.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p8",
+      "url": "https://www.flieber.com/prompt-ideas#p8",
       "modules": [
         "replenishment"
       ],
@@ -669,7 +669,7 @@
       "id": "p9",
       "title": "Lead time scenario",
       "prompt": "What if lead times slip by two weeks?",
-      "url": "https://www.flieber.com/put-flieber-to-work#p9",
+      "url": "https://www.flieber.com/prompt-ideas#p9",
       "modules": [
         "replenishment"
       ],
@@ -682,7 +682,7 @@
       "id": "p10",
       "title": "Send a PO to the supplier",
       "prompt": "Email this PO to the supplier once I approve it.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p10",
+      "url": "https://www.flieber.com/prompt-ideas#p10",
       "modules": [
         "workflows"
       ],
@@ -695,7 +695,7 @@
       "id": "p11",
       "title": "Forecasts that look wrong",
       "prompt": "Review my forecast every week and flag products where it looks wrong: new products with little history, products affected by stockouts, sudden accelerations, discontinued products still showing demand and products where actual sales are consistently above or below forecast.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p11",
+      "url": "https://www.flieber.com/prompt-ideas#p11",
       "modules": [
         "demand-forecasting"
       ],
@@ -708,7 +708,7 @@
       "id": "p12",
       "title": "Why actuals and forecast differ",
       "prompt": "When actual sales and forecast are far apart, investigate why. Check recent stockouts, promotions, ad spend changes, new product status and seasonality before recommending whether the forecast should change.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p12",
+      "url": "https://www.flieber.com/prompt-ideas#p12",
       "modules": [
         "demand-forecasting"
       ],
@@ -721,7 +721,7 @@
       "id": "p13",
       "title": "New launches",
       "prompt": "Compare new launches with similar past launches at 7, 14 and 30 days and tell me whether to reorder earlier.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p13",
+      "url": "https://www.flieber.com/prompt-ideas#p13",
       "modules": [
         "demand-forecasting",
         "replenishment"
@@ -735,7 +735,7 @@
       "id": "p14",
       "title": "Bundle demand",
       "prompt": "What will the holiday bundle sell in Q4 if we keep it in stock?",
-      "url": "https://www.flieber.com/put-flieber-to-work#p14",
+      "url": "https://www.flieber.com/prompt-ideas#p14",
       "modules": [
         "demand-forecasting",
         "data-layer"
@@ -749,7 +749,7 @@
       "id": "p15",
       "title": "Forecast accuracy",
       "prompt": "How accurate was last quarter's forecast?",
-      "url": "https://www.flieber.com/put-flieber-to-work#p15",
+      "url": "https://www.flieber.com/prompt-ideas#p15",
       "modules": [
         "demand-forecasting"
       ],
@@ -762,7 +762,7 @@
       "id": "p16",
       "title": "Transfers between locations",
       "prompt": "Recommend transfers when one location is about to stock out and another has excess, without creating a new risk at the origin.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p16",
+      "url": "https://www.flieber.com/prompt-ideas#p16",
       "modules": [
         "replenishment"
       ],
@@ -775,7 +775,7 @@
       "id": "p17",
       "title": "FBA inbound shipment",
       "prompt": "Create the FBA inbound shipment for this plan.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p17",
+      "url": "https://www.flieber.com/prompt-ideas#p17",
       "modules": [
         "workflows"
       ],
@@ -788,7 +788,7 @@
       "id": "p18",
       "title": "Regional demand from one store",
       "prompt": "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p18",
+      "url": "https://www.flieber.com/prompt-ideas#p18",
       "modules": [
         "data-layer",
         "inventory-forecasting"
@@ -802,7 +802,7 @@
       "id": "p19",
       "title": "Inventory that doesn't match",
       "prompt": "Compare inventory levels between Flieber, Shopify, Amazon and our 3PL every morning. If numbers don't match, investigate the likely reason and tell me which system to trust.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p19",
+      "url": "https://www.flieber.com/prompt-ideas#p19",
       "modules": [
         "data-layer"
       ],
@@ -815,7 +815,7 @@
       "id": "p20",
       "title": "Stock check before a promotion",
       "prompt": "Before every promotion, check whether the promoted products have enough stock for the expected lift. If not, recommend whether to transfer inventory, reduce ad spend, delay the campaign or place an urgent PO.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p20",
+      "url": "https://www.flieber.com/prompt-ideas#p20",
       "modules": [
         "inventory-forecasting"
       ],
@@ -828,7 +828,7 @@
       "id": "p21",
       "title": "Ad spend on products about to run out",
       "prompt": "Alert the marketing team in Slack when ad spend rises on a SKU projected to stock out within 30 days.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p21",
+      "url": "https://www.flieber.com/prompt-ideas#p21",
       "modules": [
         "workflows"
       ],
@@ -843,7 +843,7 @@
       "id": "p22",
       "title": "Ads and cash",
       "prompt": "If we pause ads on the five SKUs most at risk of stocking out, what happens to cash in November?",
-      "url": "https://www.flieber.com/put-flieber-to-work#p22",
+      "url": "https://www.flieber.com/prompt-ideas#p22",
       "modules": [
         "replenishment"
       ],
@@ -856,7 +856,7 @@
       "id": "p23",
       "title": "Act on forecasted stockouts",
       "prompt": "When a product has a forecasted stockout, adjust price and ad campaigns accordingly.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p23",
+      "url": "https://www.flieber.com/prompt-ideas#p23",
       "modules": [
         "workflows"
       ],
@@ -871,7 +871,7 @@
       "id": "p24",
       "title": "Supplier emails update POs",
       "prompt": "Watch supplier emails about open POs. When a supplier confirms a new delivery date, quantity or split shipment, compare it with the PO in Flieber and ask me before updating it.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p24",
+      "url": "https://www.flieber.com/prompt-ideas#p24",
       "modules": [
         "workflows"
       ],
@@ -886,7 +886,7 @@
       "id": "p25",
       "title": "Late POs that cause stockouts",
       "prompt": "Tell me when any open PO is at risk of arriving late. If the delay may cause a stockout, show the affected SKUs, the expected stockout date and the recommended action.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p25",
+      "url": "https://www.flieber.com/prompt-ideas#p25",
       "modules": [
         "workflows",
         "inventory-forecasting"
@@ -902,7 +902,7 @@
       "id": "p26",
       "title": "Supplier behavior",
       "prompt": "Track which suppliers are repeatedly late, short-shipping or changing quantities.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p26",
+      "url": "https://www.flieber.com/prompt-ideas#p26",
       "modules": [
         "workflows"
       ],
@@ -917,7 +917,7 @@
       "id": "p27",
       "title": "Freight ETA changes",
       "prompt": "When a freight forwarder or carrier updates an ETA, update the shipment in Flieber and recalculate whether any destination will stock out before arrival.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p27",
+      "url": "https://www.flieber.com/prompt-ideas#p27",
       "modules": [
         "workflows"
       ],
@@ -930,7 +930,7 @@
       "id": "p28",
       "title": "3PL receiving check",
       "prompt": "Every day, compare our 3PL receiving reports with expected inbound shipments. If fewer units arrived than expected, flag it and update the received quantity only after my approval.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p28",
+      "url": "https://www.flieber.com/prompt-ideas#p28",
       "modules": [
         "workflows"
       ],
@@ -943,7 +943,7 @@
       "id": "p29",
       "title": "Landed cost changes",
       "prompt": "Compare supplier and freight invoices with PO costs and tell me which SKUs had landed cost changes that materially affect margin.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p29",
+      "url": "https://www.flieber.com/prompt-ideas#p29",
       "modules": [
         "workflows"
       ],
@@ -956,7 +956,7 @@
       "id": "p30",
       "title": "What to do with overstock",
       "prompt": "Review my overstocked products and recommend what to do with each one: keep, discount, bundle, transfer, pause replenishment or liquidate. Consider sales velocity, margin, product tier, seasonality and inventory value.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p30",
+      "url": "https://www.flieber.com/prompt-ideas#p30",
       "modules": [
         "inventory-forecasting"
       ],
@@ -969,7 +969,7 @@
       "id": "p31",
       "title": "The cost of stockouts",
       "prompt": "What did stockouts cost us last month?",
-      "url": "https://www.flieber.com/put-flieber-to-work#p31",
+      "url": "https://www.flieber.com/prompt-ideas#p31",
       "modules": [
         "inventory-forecasting"
       ],
@@ -982,7 +982,7 @@
       "id": "p32",
       "title": "Large wholesale orders",
       "prompt": "When a large wholesale order comes in, check whether fulfilling it puts DTC or Amazon stock at risk and recommend whether to accept, split, delay or replenish.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p32",
+      "url": "https://www.flieber.com/prompt-ideas#p32",
       "modules": [
         "inventory-forecasting",
         "replenishment"
@@ -998,7 +998,7 @@
       "id": "p33",
       "title": "Components that block bundles",
       "prompt": "Tell me if any component will stop us from assembling finished goods or bundles in the next 60 days.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p33",
+      "url": "https://www.flieber.com/prompt-ideas#p33",
       "modules": [
         "data-layer",
         "replenishment"
@@ -1012,7 +1012,7 @@
       "id": "p34",
       "title": "Weekly data check",
       "prompt": "Review my catalog and inventory data weekly and tell me if anything looks wrong: missing product names, discontinued products with a forecast, active products with no sales, SKUs mapped incorrectly or inbound shipments not reflected correctly.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p34",
+      "url": "https://www.flieber.com/prompt-ideas#p34",
       "modules": [
         "data-layer"
       ],
@@ -1025,7 +1025,7 @@
       "id": "p35",
       "title": "Stock counted twice",
       "prompt": "If inventory increases in a way that matches an open PO or inbound shipment, check whether the PO was marked as received. If it's still open, alert me before the same stock is counted twice.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p35",
+      "url": "https://www.flieber.com/prompt-ideas#p35",
       "modules": [
         "data-layer",
         "workflows"
@@ -1039,7 +1039,7 @@
       "id": "p36",
       "title": "Amazon availability issues",
       "prompt": "Watch Seller Central for stranded inventory, suppressed listings, FBA receiving delays and restock limits, and tell me which problems are Amazon availability issues rather than real stock shortages.",
-      "url": "https://www.flieber.com/put-flieber-to-work#p36",
+      "url": "https://www.flieber.com/prompt-ideas#p36",
       "modules": [
         "data-layer"
       ],
@@ -1389,8 +1389,8 @@
   },
   "evidence": [
     {
-      "claim": "36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Built with Nixtla, the team behind the TimeGPT forecasting model.",
-      "source": "Flieber; built with Nixtla"
+      "claim": "36% more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products. Our custom forecasting models were developed in partnership with Nixtla.",
+      "source": "Flieber; custom forecasting models developed in partnership with Nixtla"
     },
     {
       "claim": "100+ commerce brands today; more than 1,000 commerce brands since 2019.",

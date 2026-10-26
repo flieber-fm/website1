@@ -1,4 +1,4 @@
-"""Put Flieber to work (/put-flieber-to-work): the single source of example prompts for the site.
+"""Prompt ideas (/prompt-ideas): the single source of example prompts for the site.
 
 Built from the "Prompt Examples" in 26-05-29 AI Lab - Product Strategy and the prompts already on the site
 (Content Briefing section 15). Entries with custom=True are not out of the box: they work once the customer
@@ -7,8 +7,8 @@ configuration" note.
 """
 
 PAGE = {
-    "slug": "put-flieber-to-work", "name": "Put Flieber to work",
-    "h1": "Put Flieber to work on your operation",
+    "slug": "prompt-ideas", "name": "Prompt ideas",
+    "h1": "Prompt ideas for your operation",
     "lead": ("Ask a question, test a decision or hand off a recurring job, in plain language, in the Flieber app, in "
              "Slack or in Claude, Cursor, Muse or any MCP-compatible agent. Below are ideas to start from: examples of jobs "
              "operators give Flieber, what Flieber does with each one and what comes back. They're not a complete list."),
@@ -21,7 +21,7 @@ PAGE = {
              "on your setup today."),
     "close_h2": "Try it on your own data",
     "close_body": "Start a 14-day free trial, connect your channels and ask your first question in minutes.",
-    "more": "More ways to put Flieber to work",
+    "more": "More prompt ideas",
     "custom_label": "Requires custom configuration",
     "custom_note": "Connect the right sources through Flieber's MCP client; not available out of the box.",
 }
