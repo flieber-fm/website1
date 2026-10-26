@@ -1,0 +1,411 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 4,
+ "createdAt": "2025-07-16T16:55:20.514Z",
+ "createdById": "4752608",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "headHtml": "<script>(function(w){w.fpr=w.fpr||function(){w.fpr.q = w.fpr.q||[];w.fpr.q[arguments[0]=='set'?'unshift':'push'](arguments);};})(window);\nfpr(\"init\", {cid:\"3sh91e6y\"}); \nfpr(\"click\");\n</script>\n<script src=\"https://cdn.firstpromoter.com/fpr.js\" async></script>",
+ "htmlTitle": "Flieber | Frequently Asked Questions",
+ "id": "192779241818",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section"
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "label": "Faq-Section",
+      "name": "widget_1752129340015",
+      "params": {
+       "accordion": [
+        {
+         "accordion_item": [
+          {
+           "content": "<p><span style=\"font-size: 14px; color: #000000;\">Flieber is a technology platform that helps modern commerce brands make smarter inventory decisions by connecting demand forecasting with supply chain execution. It is designed primarily for multi-channel brands selling primarily on marketplaces like Amazon or e-commerce platforms like Shopify. </span></p>\n<p><span style=\"font-size: 14px; color: #000000;\">Flieber uses AI-powered algorithms to generate accurate sales and inventory forecasts, identify potential stockouts or overstock situations, and recommend optimal replenishment strategies, including for multi-warehouse setups. The platform also provides financial insights, customizable planning rules, and a visual supply chain map that allows users to model their operations in a simple, intuitive interface. Flieber is used by retail and operations teams to improve inventory efficiency, reduce costs, and drive profitable growth.<br></span></p>",
+           "faq": "What is Flieber?"
+          },
+          {
+           "content": "<p>Flieber works by first connecting the sales, inventory and supply chain data for all your channels and inventory locations through native integrations, assisted integrations, or manual input (in rare cases). It then ingests that data, consolidates it, and auto-generates AI-powered demand forecasts for each product in each sales channel. These forecasts are then translated into inventory projections by warehouse, showing where and when stockouts or overstock situations may occur \u2014 the configuration that enables this calculation is done through a visual supply chain map that allows users to model their operations with boxes and arrows, making the logic behind inventory flows transparent and easy to manage.</p>\n<p>Flieber\u2019s replenishment engine then makes all intricate future inventory calculations and recommends when to reorder and how much to order, factoring in lead times, safety stock, MOQs, among other parameters. All of this is delivered through a user-friendly interface designed to simplify complexity, improve data visibility and empower teams to take fast, confident action.</p>",
+           "faq": "How does Flieber work?"
+          },
+          {
+           "content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Yes. Flieber allows you to customize key planning parameters like days of coverage, safety stock buffers, replenishment frequency, and aggregation levels. You can work at the SKU, product, or category level depending on your planning preferences. Also, every page allows you to choose what you want to see and save different views, making the management of the data much faster, easier, and adapted to the specific way you want to operate your business.</span></p>",
+           "faq": "Can I customize the platform?"
+          },
+          {
+           "content": "<p>Yes. Flieber is designed for brands selling across multiple channels (Amazon, Shopify, DTC, wholesale, etc.) and managing inventory in multiple warehouses or fulfillment centers. The platform consolidates inventory data and demand signals from all sources, giving you a unified view and enabling accurate planning across locations and channels, all based on your specific supply chain map.</p>",
+           "faq": "Does Flieber support multiple warehouses and sales channels?"
+          },
+          {
+           "content": "<p>Flieber natively supports advanced use cases such as product bundles, kits, and SKUs that share inventory pools. The system automatically calculates demand for the bundles and consolidates this demand into each specific component when calculating replenishment recommendations. Our inventory consumption algorithms are the most advanced in the market and are able to handle the most intricate product configurations.</p>",
+           "faq": "How does Flieber handle bundled products, kits, and shared components?"
+          },
+          {
+           "content": "<p>Flieber offers real-time dashboards and customizable reports covering sales analytics, sales forecasts, inventory positions, replenishment needs, stockout risks, overstock alerts, among others. Users can drill down by channel, warehouse, SKU, or any specific attribute (such as categories, colors etc.),, and can export data from any report for further analysis. Users can also choose which columns to show in each page, and save different page views considering table columns, filters, sorting etc. for quick access to the most relevant information needed at any time. Automated alerts and proactive recommendations help you take action before issues arise.</p>",
+           "faq": "What kind of reporting and analytics does Flieber provide?"
+          },
+          {
+           "content": "<p>As of today (July 7, 2025), Flieber does not have support for products with expiration date or lot tracking. We do have this feature in the roadmap and it should be implemented soon.</p>",
+           "faq": "Can Flieber help manage inventory for products with expiration dates or lot tracking?"
+          },
+          {
+           "content": "<p>IMS's are made to serve as a source of truth of inventory positions\u2014they're a control system, focused on gathering information from the past and organizing it to come up with the current positions in the present. Flieber is made to project what will happen in the future\u2014it's a decision system, focused on gathering your historical sales, your current inventory balances, and your future inventory arrivals to calculate sales forecasts and future inventory needs. In other words, Flieber sits on top of systems like IMS's to give them an extra layer of intelligence for better and more accurate decision making.</p>",
+           "faq": "What are the main differences between Flieber and inventory management systems (IMS)?"
+          },
+          {
+           "content": "<p>Due to the amount of data and the complex visualization charts provided by Flieber, our platform is fully cloud-based and optimized for desktop browsers. We currently (as of July 7, 2025) do not have plans to build a mobile app.</p>",
+           "faq": "Does Flieber provide mobile access or an app?"
+          },
+          {
+           "content": "<p>Flieber wasn\u2019t built to substitute ERPs. Instead, we sit on top of your ERPs (if you have one implemented) to add an extra layer of intelligence for better and more accurate decision making.</p>",
+           "faq": "Can I set up approval workflows or user permissions in Flieber?"
+          }
+         ],
+         "header": "Product & Features"
+        },
+        {
+         "accordion_item": [
+          {
+           "content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Yes. Flieber integrates with Amazon, Shopify, and many 3PLs, ERPs, and WMS platforms. We combine native integrations with assisted integrations, where we use Google Sheets as a middleware to seamlessly integrate to any type of system. Our pages also support manual data inputs using Google Sheet as the interface. So, as long as your data is sitting anywhere, being a spreadsheet or any system, we\u2019re able to pull it into Flieber.</span></p>",
+           "faq": "Does Flieber integrate with my existing systems?"
+          },
+          {
+           "content": "<p>Flieber provides tools and support for importing data from legacy systems, spreadsheets, or other platforms. If your data source has either an API, a portal or the capability of sending scheduled reports, we can fully automate the data sync between your systems and Flieber. And if your data source doesn\u2019t offer any of data, we have a very robust Google Sheets integration that connects any spreadsheets to Flieber to load sales history, inventory balances, POs/TOs, and even custom forecasts.</p>",
+           "faq": "How does Flieber handle data migration from legacy systems or spreadsheets?"
+          },
+          {
+           "content": "<p>Flieber does have a private API that can be configured in certain cases, but we suggest that data is integrated through either our native or assisted integrations. Our team can fully support your team to do any integration setup.</p>",
+           "faq": "Is there an API for custom integrations with Flieber?"
+          }
+         ],
+         "header": "Integrations"
+        },
+        {
+         "accordion_item": [
+          {
+           "content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Absolutely. Our algorithms are built to detect and respond to seasonal trends and fast-changing sales velocity. Whether you\u2019re launching new seasonal SKUs or managing daily top sellers, Flieber adapts to the volatility of your catalog.</span></p>",
+           "faq": "Is Flieber suitable for seasonal or high-velocity products?"
+          },
+          {
+           "content": "<p>Yes. Although forecasting the sales of new products or products with low sales history is very hard due to the lack of data needed for algorithms to excel, Flieber\u2019s focus on visibility and very easy data adjustments (all done through an spreadsheet-like interface that allows for quick copying and pasting) allow for users to leverage similar product data, market trends, and configurable parameters to generate initial forecasts for new SKUs. As real sales data accumulates, the system automatically adjusts its predictions to improve accuracy over time.</p>",
+           "faq": "Can Flieber help with inventory planning for new product launches or products with little sales history?"
+          },
+          {
+           "content": "<p>Flieber enables you to manage multiple brands, business units, or product lines within a single account. As a matter of fact, we do have many agencies, accelerators and aggregators as customers. With Flieber, you can quickly switch between brands within a single account to segment data, forecasts, and reports by brand or business unit, making it easy to plan and optimize inventory across your portfolio.</p>",
+           "faq": "How does Flieber support demand planning for multiple brands or business units?"
+          },
+          {
+           "content": "<p>As of today (July 7, 2025), Flieber doesn\u2019t have any functionality related to supplier management or smart lead time calculations. We do support intricate lead time configurations, but they\u2019re static within the platform and must be manually adjusted by the user if they suffer any change in real life. We do have in the roadmap a feature to transform the lead time calculations into a dynamic process and to measure performance of suppliers, but, due to other pressing urgencies, this shouldn\u2019t be prioritized any time soon.</p>",
+           "faq": "Can Flieber help with supplier management and lead time variability?"
+          }
+         ],
+         "header": "Use Cases"
+        },
+        {
+         "accordion_item": [
+          {
+           "content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Our pricing is designed to adjust to the needs of brands at each stage of the growth journey. Our objective is that one only stockout avoided pays for the full annual cost of our platform. We offer three types of plans: Essentials (for growing Shopify &amp; Amazon brands with simple supply chains and increasingly complex spreadsheets), Pro (for growing brands with multiple sales channels, an evolving supply chain, and complex spreadsheets), and Max (for leading brands with diverse sales channels, complex supply chains, and centralized data management). Whenever anyone asks about pricing, please direct them to our pricing page at </span><span style=\"font-size: 14px;\"><a href=\"https://www.flieber.com/pricing\">https://www.flieber.com/pricing</a><span style=\"color: #000000;\">.</span></span></p>",
+           "faq": "How much does Flieber cost?"
+          }
+         ],
+         "header": "Pricing & Plans"
+        },
+        {
+         "accordion_item": [
+          {
+           "content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Not at all. Flieber was built to allow operations professionals to make smarter decisions without the need of expensive internal data teams. You set up the parameters; we do all the hard work and complex calculations. The interface is designed to be intuitive and self-explanatory, and the platform guides users with clear recommendations and visualizations.</span></p>",
+           "faq": "Do I need a data science team to use Flieber?"
+          },
+          {
+           "content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Knowing how burdensome the onboarding of any complex system like inventory planning can be, we invested a lot of time and money into developing the easiest onboarding process in the industry (by far!). Onboarding Flieber takes literally minutes and most customers are live within 1-2 days (including all data loading and setup process). Our Customer Success team holds hands with you and walks you through setup, configuration, and training. You\u2019ll begin seeing value almost immediately after connecting your data.</span></p>",
+           "faq": "How long does it take to get started?"
+          },
+          {
+           "content": "<p>Flieber offers comprehensive onboarding, including guided setup, live training sessions, detailed documentation, video tutorials, and a stellar customer success team, that is available to answer questions and ensure a smooth transition for your team. Our onboarding is known as the easiest and fastest in the industry, with new customers going live in 1-2 days (including all setup, integrations, data loading, and parametrization).</p>",
+           "faq": "What onboarding resources and training does Flieber provide?"
+          },
+          {
+           "content": "<p>While Flieber is powerful and feature-rich, its interface is designed for ease of use. Most users become proficient quickly, aided by onboarding support, tutorials, and a responsive customer success team. That said, as with any software that solves complex problems, users do have to dedicate some time in the beginning to grasp how Flieber operates. But after this initial phase (that can last anywhere from one week to a couple of months, depending on the dedication of the user), users usually don't have any issues related to comprehension of the platform.</p>",
+           "faq": "What is the typical learning curve for new users?"
+          }
+         ],
+         "header": "Getting Started"
+        },
+        {
+         "accordion_item": [
+          {
+           "content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Flieber uses a wide range of data points, including historical sales, active listings, channel-specific trends, inventory positions, in-transit quantities, purchase orders, vendor lead times, seasonality curves, promotional schedules, among others. The more data we have, the better the forecast\u2014but even with minimal data, our algorithms can start delivering value quickly, and are on average 40% more accurate than the moving average brands usually use in their spreadsheets.</span></p>",
+           "faq": "What data does Flieber use to generate forecasts?"
+          },
+          {
+           "content": "<p>Flieber follows industry-standard security protocols to protect your data, including encrypted connections, secure authentication, and regular audits (we\u2019ve been audited by Deloitte, Amazon and Shopify). Data privacy and compliance are prioritized, and Flieber does not share any identifiable information with third parties.</p>",
+           "faq": "What security and data privacy measures does Flieber have in place?"
+          },
+          {
+           "content": "<p>You retain full ownership of your source data. Flieber acts as a processor, ensuring your information is secure and accessible only to authorized users within your organization. If you opt to cancel your subscription at the end of your billing cycle (monthly or annual, depending on your subscription choice), Flieber has a process in place to disconnect any integrations to stop ingesting your data, and to fully anonymize any data used to train our algorithms.</p>",
+           "faq": "Who owns the inventory data in Flieber?"
+          }
+         ],
+         "header": "Data & Security"
+        },
+        {
+         "accordion_item": [
+          {
+           "content": "<p style=\"font-size: 14px;\">Spreadsheets might feel flexible, but they fall short in all the areas that matter when managing inventory at scale. Here\u2019s why Flieber doesn\u2019t even compare with spreadsheets:</p>\n<ol style=\"font-size: 14px; line-height: 1.25;\">\n<li aria-level=\"1\"><strong>You don\u2019t need to update anything manually.<br></strong>Spreadsheets always start with, \u201cWait, let me update the file.\u201d Flieber automatically pulls the data from your sources for you, keeps it current, and reduces the chance of human error.</li>\n<li aria-level=\"1\"><strong>It doesn\u2019t break when the data gets big.</strong><strong><br></strong>Spreadsheets slow down or crash with too much data. Many brands even split things into multiple files just to make it work. Flieber handles as much data as you throw at it\u2014no drama.</li>\n<li aria-level=\"1\"><strong>No more oversimplifying.</strong><strong><br></strong>In a spreadsheet, you usually use a basic formula\u2014like average sales velocity\u2014to guess future demand. But that doesn\u2019t work when sales are seasonal, irregular, or affected by stockouts. Flieber uses data strings, and not formulas, to build forecasts from actual sales behavior, day by day, with none of the shortcuts.&nbsp;</li>\n<li aria-level=\"1\"><strong>It fixes bad sales history before forecasting.</strong><strong><br></strong>If you had a stockout last month, spreadsheets treat it as if no one wanted the product. If you had a promotion, spreadsheets treat it as if demand for your products had been reduced. If you had an influencer campaign, spreadsheets treat it as if demand had skyrocketed. Bringing any of those anomalies into your forecasts generates costly mistakes. Flieber knows better. It uses specialized algorithms to automatically clean and adjust your sales history before running any forecast, so those mistakes don\u2019t snowball.</li>\n<li aria-level=\"1\"><strong>It uses real forecasting models, not moving averages.</strong><strong><br></strong>Spreadsheets can\u2019t run advanced algorithms. Flieber does. Its state-of-the-art AI transformer models are 40% more accurate than basic spreadsheet methods on average.</li>\n<li aria-level=\"1\"><strong>You can actually see what\u2019s happening.</strong><strong><br></strong>Charts in spreadsheets are limited and usually need manual work to make them useful. Flieber gives you clean, interactive visuals built specifically for the data you need to make inventory decisions.</li>\n<li aria-level=\"1\"><strong>You can test scenarios instantly.</strong><strong><br></strong>Want to see what happens if you increase ad spend or your supplier gets delayed? In a spreadsheet, that\u2019s a manual project. In Flieber, it\u2019s just a couple clicks.</li>\n</ol>\n<p style=\"font-size: 14px;\">In short, Flieber turns the fragmented, error-prone world of spreadsheet planning into a unified, intelligent, and scalable system\u2014purpose-built for modern commerce brands that need speed, accuracy, and clarity to grow.</p>",
+           "faq": "Why is Flieber better than my forecasting spreadsheets?"
+          },
+          {
+           "content": "<p>We didn\u2019t get it right from day one.</p>\n<p>Like most tools, Flieber started with good intentions\u2014but also with a lot of complexity. Over time, we realized that the real challenge wasn\u2019t just about building powerful tech. It was making that power simple to use.</p>\n<p>So, in 2024, after five years and hundreds of brands on the platform, we completely rebuilt the system from the ground up. What we launched wasn\u2019t just an upgrade\u2014it was a complete rethink based on everything we had learned.</p>\n<p>Here\u2019s what changed and what differentiates us from other tools:</p>\n<ul style=\"font-size: 14px;\">\n<li aria-level=\"1\"><strong>Setup is visual.</strong> You draw your supply chain with boxes and arrows. That\u2019s it. No more painful onboarding processes full of tables and antiquated spreadsheets.</li>\n<li aria-level=\"1\"><strong>Integrations are flexible. </strong>We aren\u2019t bound to specific integrations\u2014we can integrate with pretty much any system. Being through our one-click native integrations or through our assisted integrations (that use Google Sheets as a middleware), your data will always flow into Flieber without the need of manual uploads.</li>\n<li aria-level=\"1\"><strong>Data mapping is automatic.</strong> Our platform is able to automatically make sense of the data (product catalog, sales history, inventory balances, purchase orders etc.) from all your heterogeneous sources through our exclusive product mapping system.</li>\n<li aria-level=\"1\"><strong>Forecasts are smarter.</strong> Our transformer-based AI model (the most advanced in the industry) understands context like seasonality, stockouts, and channel mix, and adapts to the intricacies of each product in each channel.</li>\n<li aria-level=\"1\"><strong>Inventory logic is built for reality.</strong> Our inventory consumption algorithms are the most advanced in the industry and support the most complex use cases, such as shared inventory pools across multiple channels, SKUs feeding from the same stock, and bundled products with shared components.</li>\n</ul>\n<p>But here\u2019s what really sets us apart: <strong>it\u2019s actually easy to use.</strong></p>\n<p>While most tools reflect operational complexity in their interface, Flieber was designed the opposite way\u2014our UI/UX removes friction, making even sophisticated planning feel simple and intuitive for everyday users. So while other platforms bury you in complexity, we give you clarity\u2014and peace of mind.</p>\n<p>As a brand, what you want is a software that deeply simplifies your operations, while handling all complexities of your use cases. This is what Flieber was built for.</p>",
+           "faq": "How is Flieber different from other inventory tools?"
+          },
+          {
+           "content": "<p>The platform automates data gathering, data consolidation, forecasting, and replenishment calculations, all based on each brand\u2019s specific parameters, eliminating the need for spreadsheets and manual data entry. Flieber\u2019s integrations and algorithms reduce human error, streamline processes, and free up your team to focus on strategic decisions rather than repetitive tasks.</p>",
+           "faq": "How does Flieber help reduce manual work and errors?"
+          },
+          {
+           "content": "<p>Flieber\u2019s advanced AI transformer algorithms are designed to detect and adjust for seasonality, promotional events, demand spikes, and any other specific patterns to each product. Our platform doesn\u2019t use averages in any of its calculations\u2014it always considers the specific sales of the period being analyzed, helping you prepare for high-velocity periods by recommending optimal replenishment quantities and alerting you to potential risks well in advance.</p>",
+           "faq": "How does Flieber handle peak seasons and demand spikes?"
+          }
+         ],
+         "header": "Tech & Methodology"
+        },
+        {
+         "accordion_item": [
+          {
+           "content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">We provide a combination of onboarding, live chat support, and access to experienced inventory and supply chain professionals. Our help center includes documentation, videos, and FAQs. Our customer support team is recognized as one of the top in the industry (just check our </span><a href=\"https://www.g2.com/products/flieber/reviews\" style=\"font-size: 11px;\"><span><span style=\"font-size: 14px;\">G2 reviews</span></span></a><span style=\"color: #000000;\"> and badges).</span></p>",
+           "faq": "What kind of support does Flieber offer?"
+          },
+          {
+           "content": "<p>Flieber\u2019s team is known for being responsive to customer feedback and frequently adds new features based on user requests. Many enhancements and integrations have been implemented in response to specific customer needs, making Flieber a true partner in your growth. Our customer success team is always available to hear your suggestions and pass them along to our engineering team. We don't only say that\u2014we mean it (just talk to any of our customers or read our customer reviews on G2).</p>",
+           "faq": "What happens if I need a feature that Flieber doesn\u2019t currently offer?"
+          }
+         ],
+         "header": "Customer Support"
+        },
+        {
+         "accordion_item": [
+          {
+           "content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">While results vary, customers see on average 38% increase in sales, 62% reduction in stockouts, 17% reduction in excess inventory, and 88% reduction in time needed to make replenishment decisions after 12 months operating in Flieber (these are real numbers from real customers). Usually, one only stockout avoided already pays for the whole annual cost of the subscription. And that doesn\u2019t even consider all the other benefits listed above.</span></p>",
+           "faq": "What results can I expect?"
+          },
+          {
+           "content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Since we use historical data to generate insights, brands with at least two years of operations tend to perform better in Flieber. That said, our insights are built one day after the other, and starting brands with high growth aspirations might benefit of the real-time data and full sales and inventory visibility that Flieber offers.</span></p>",
+           "faq": "Is Flieber better suited for startups or mature brands?"
+          },
+          {
+           "content": "<p>Flieber\u2019s main value proposition is to allow brands to have the just-right inventory at any given time. Our dream is that not only brands avoid costly stockouts, but also that the usual overstocks that we see in the industry become a thing of the past. By aligning inventory levels with real demand, brands can reduce waste, operate more sustainably and improve their environmental impact.</p>",
+           "faq": "How does Flieber support sustainability or inventory waste reduction initiatives?"
+          }
+         ],
+         "header": "Results & ROI"
+        }
+       ],
+       "css_class": "dnd-module",
+       "module_id": 192447030199,
+       "schema_version": 2
+      },
+      "rowMetaData": [],
+      "rows": [],
+      "type": "custom_widget",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17326016887752",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Book A Demo Module",
+         "name": "widget_1732601688413",
+         "params": {
+          "add_content": "<h2>Stop guessing. Start Fliebing.</h2>\n<p>Use Flieber for free for 14 days. No credit card required.</p>",
+          "bg_color": {
+           "color": "#FFFFFF",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           },
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           }
+          ],
+          "module_id": 183216575611,
+          "schema_version": 2,
+          "style": {
+           "box_background_color": {
+            "color": "#186DFF",
+            "opacity": 100
+           },
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 100
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           },
+           "second_button": {
+            "default_state": {
+             "background_color": {
+              "color": "#ffffff",
+              "opacity": 100
+             },
+             "text_color": {
+              "color": "#1b1c1c",
+              "opacity": 100
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17477142772342",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Subscribe Popup Form",
+         "name": "widget_1747714276714",
+         "params": {
+          "add_content": "<h2>Your inbox just got <span>smarter.</span></h2>\n<p>Sign up for Flieber emails and get the inside scoop on exclusive offers, newsletters, blog posts, and updates that'll keep you ahead of the game.</p>\n<p>Thousands of ecommerce brands already trust Flieber- now it's your turn to crush stockouts and overstocks!</p>\n<p>Let's start Fliebing!</p>",
+          "css_class": "dnd-module",
+          "module_id": 190170417457,
+          "schema_version": 2
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Get answers to your most common questions about Flieber\u2019s AI-first platform. Learn how we simplify inventory planning, integrations, & demand forecasting.",
+ "name": "FAQ Page New",
+ "pageExpiryEnabled": false,
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2025-07-31T15:18:49Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "frequently-asked-questions",
+ "state": "DRAFT",
+ "subcategory": "site_page",
+ "templatePath": "flieber/templates/product-page.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:08:25.763Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/frequently-asked-questions",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

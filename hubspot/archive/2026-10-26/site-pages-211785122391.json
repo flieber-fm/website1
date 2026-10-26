@@ -1,0 +1,847 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [
+  {
+   "id": 211782058024,
+   "path": "flieber/css/Price_new.css",
+   "type": "cos_extension_resource"
+  }
+ ],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 4,
+ "createdAt": "2026-04-27T12:19:18.336Z",
+ "createdById": "27522147",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "headHtml": "<script>(function(w){w.fpr=w.fpr||function(){w.fpr.q = w.fpr.q||[];w.fpr.q[arguments[0]=='set'?'unshift':'push'](arguments);};})(window);\nfpr(\"init\", {cid:\"3sh91e6y\"}); \nfpr(\"click\");\n</script>\n<script src=\"https://cdn.firstpromoter.com/fpr.js\" async></script>",
+ "htmlTitle": "Flieber | Pricing",
+ "id": "211785122391",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17772957576312",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Hero Price Page",
+         "name": "widget_1777295757265",
+         "params": {
+          "banner_partners_": [
+           "ZUGU",
+           "Paperlike",
+           "primal harvest",
+           "unybrands",
+           "MANNATECH",
+           "piccalio.",
+           "JAEGER",
+           "lifepro"
+          ],
+          "css_class": "dnd-module",
+          "heading": "<h1>Pricing that fits your business,<strong> not the other way around.</strong></h1>",
+          "hero_content": "<p>Pricing that scales with your business. The more sales, channels, and SKUs you manage, the more Flieber works for you \u2014 and you only pay for the complexity you actually solve.</p>",
+          "main_image": {
+           "alt": "UPDATED File New",
+           "height": 566,
+           "loading": "lazy",
+           "max_height": 566,
+           "max_width": 612,
+           "size_type": "auto",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/UPDATED%20File%20New.svg",
+           "width": 612
+          },
+          "module_id": 211782058890,
+          "partners_text": "Trusted by 500+ brands",
+          "rating_stat": [
+           "<p><strong>4.7 on G2</strong></p>",
+           "<p><strong>3M+</strong> SKUs managed</p>",
+           "<strong>50K+</strong> POs / yr"
+          ],
+          "schema_version": 2,
+          "transparent_button": {
+           "button_link": {
+            "no_follow": false,
+            "open_in_new_tab": true,
+            "url": {
+             "href": "https://www.flieber.com/free-trial?hsLang=en",
+             "type": "EXTERNAL"
+            }
+           },
+           "button_text": "Start Free Trial"
+          },
+          "yellow_button": {
+           "button_link": {
+            "no_follow": false,
+            "open_in_new_tab": true,
+            "url": {
+             "href": "https://www.flieber.com/book-a-demo?hsCtaTracking=9f07650d-be41-4392-a318-21adff2a9103%7Cc9dd9958-92d2-46ec-ae3d-681e3ee37f0a&hsLang=en",
+             "type": "EXTERNAL"
+            }
+           },
+           "button_text": "book A demo"
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17773081677952",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Outcome Price",
+         "name": "widget_1777308167457",
+         "params": {
+          "css_class": "dnd-module",
+          "module_id": 211798718855,
+          "outcome_spec_card": [
+           {
+            "outcome_image": {
+             "alt": "brands-1",
+             "height": 96,
+             "loading": "lazy",
+             "max_height": 96,
+             "max_width": 260,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/brands-1.svg",
+             "width": 260
+            },
+            "outcome_stat": "62%",
+            "outcome_type": "fewer stockouts"
+           },
+           {
+            "outcome_image": {
+             "alt": "brands-2",
+             "height": 96,
+             "loading": "lazy",
+             "max_height": 96,
+             "max_width": 260,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/brands-2.svg",
+             "width": 260
+            },
+            "outcome_stat": "88%",
+            "outcome_type": "less time forecasting"
+           },
+           {
+            "outcome_image": {
+             "alt": "brands-3",
+             "height": 96,
+             "loading": "lazy",
+             "max_height": 96,
+             "max_width": 260,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/brands-3.svg",
+             "width": 260
+            },
+            "outcome_stat": "38%",
+            "outcome_type": "increase in sales"
+           },
+           {
+            "outcome_image": {
+             "alt": "brands-4",
+             "height": 96,
+             "loading": "lazy",
+             "max_height": 96,
+             "max_width": 260,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/brands-4.svg",
+             "width": 260
+            },
+            "outcome_stat": "40 min",
+            "outcome_type": "to set up"
+           }
+          ],
+          "schema_version": 2,
+          "sec_title": "Real outcomes. Real brands. Twelve months in.",
+          "subtitle": "What Flieber customers see in year one"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17773092659022",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "How Pricing Works",
+         "name": "widget_1777309265552",
+         "params": {
+          "css_class": "dnd-module",
+          "module_id": 211798581074,
+          "outcome_spec_card": [
+           {
+            "card_context": "<p>Hop on a demo. We'll go over your channels, SKU count, warehouse setup, and where your process&nbsp;breaks down today.</p>",
+            "outcome_stat": "01",
+            "outcome_type": "We learn"
+           },
+           {
+            "card_context": "<p>At the end of your demo, you'll know exactly what Flieber will cost \u2014 calculated from your sales volume, channels, and SKU count. No fine print to decode, no surprise add-ons.</p>",
+            "outcome_stat": "02",
+            "outcome_type": "We price"
+           },
+           {
+            "card_context": "<p>Start a 14-day free trial \u2014 no credit card required. Our onboarding team helps you connect your data and configure your setup, so you can see Flieber work on your real operation from day one.</p>",
+            "outcome_stat": "03",
+            "outcome_type": "You try"
+           },
+           {
+            "card_context": "<p>If Flieber's the right fit, continuing is simple. Add your card, review your setup, and keep going \u2014 your onboarding is already done from the trial.</p>",
+            "outcome_stat": "04",
+            "outcome_type": "You decide"
+           }
+          ],
+          "schema_version": 2,
+          "sec_title": "We learn. We price. You try. You decide.",
+          "side_text": "No pressure. You can walk away at any step.",
+          "subtitle": "How pricing works"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17773106757462",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "What you get - price",
+         "name": "widget_1777310675376",
+         "params": {
+          "black_button": {
+           "button_link": {
+            "no_follow": false,
+            "open_in_new_tab": true,
+            "url": {
+             "href": "https://www.flieber.com/book-a-demo?hsCtaTracking=9f07650d-be41-4392-a318-21adff2a9103%7Cc9dd9958-92d2-46ec-ae3d-681e3ee37f0a&hsLang=en",
+             "type": "EXTERNAL"
+            }
+           },
+           "button_text": "Book a Demo"
+          },
+          "css_class": "dnd-module",
+          "module_id": 211806539810,
+          "schema_version": 2,
+          "sec_head_para": "The more complexity you manage, the more Flieber delivers. Which is exactly how pricing should work, too.",
+          "sec_title": "Built to pay for itself.",
+          "subtitle": "What you get",
+          "what_you_get_tiles": [
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Real-time inventory visibility across every location & channel"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "AI-powered demand forecasting"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Native integrations with Shopify, Amazon, 3PLs, ERPs"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Scenario analysis for POs and transfer orders"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Stockout, overstock & replenishment alerts"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Google Sheets bridge \u2014 automate your spreadsheets"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Works on top of your existing ERP or IMS"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Free onboarding. No implementation fees."
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Real-time inventory visibility across every location & channel"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "AI-powered demand forecasting"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Native integrations with Shopify, Amazon, 3PLs, ERPs"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Scenario analysis for POs and transfer orders"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Stockout, overstock & replenishment alerts"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Google Sheets bridge \u2014 automate your spreadsheets"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Works on top of your existing ERP or IMS"
+           },
+           {
+            "check_img": {
+             "alt": "check.html",
+             "height": 8,
+             "loading": "lazy",
+             "max_height": 8,
+             "max_width": 10,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.html.svg",
+             "width": 10
+            },
+            "text_field": "Free onboarding. No implementation fees."
+           }
+          ]
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17773120403142",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "In there words",
+         "name": "widget_1777312039924",
+         "params": {
+          "css_class": "dnd-module",
+          "module_id": 211806540603,
+          "quote_box": {
+           "brand_image": {
+            "alt": "zugu",
+            "height": 47,
+            "loading": "lazy",
+            "max_height": 47,
+            "max_width": 144,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/zugu.png",
+            "width": 144
+           },
+           "context": "<p>\"We sell on 8 marketplaces and Flieber lets us quickly forecast, replenish stock, and place more accurate POs. It's adapted to our specific needs and customizable in calculating suggestions. The staff and service is top notch \u2014 Flieber is not just a software to us but a true trusted partner.\"</p>"
+          },
+          "quote_box_grey": {
+           "brand_image": {
+            "alt": "vaer",
+            "height": 43,
+            "loading": "lazy",
+            "max_height": 43,
+            "max_width": 170,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/vaer.png",
+            "width": 170
+           },
+           "context": "<p>\"Flieber\u2019s support has been phenomenal. We have quite a complex inventory planning structure, where many components are shared by different items. Andre and the rest of the team have helped us come up with custom solutions every step of the way. We are excited to use Flieber in the future for our inventory planning needs.\"</p>"
+          },
+          "quote_box_grey_2": {
+           "brand_image": {
+            "alt": "contour",
+            "height": 143,
+            "loading": "lazy",
+            "max_height": 143,
+            "max_width": 380,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/contour.png",
+            "width": 380
+           },
+           "context": "\"The tool makes inventory management easier, and more reliable than manual forecasts sheets (its 2025, why do people still insist on Excel when there are awesome tools like this). For us, a big thing was the ability to roll up skus/alias into one forecast - for our use case this was a HUGE time saver.\""
+          },
+          "schema_version": 2,
+          "sec_title": "From brands scaling with Flieber.",
+          "subtitle": "In their words"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17773128460242",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "FAQ price new",
+         "name": "widget_1777312845698",
+         "params": {
+          "css_class": "dnd-module",
+          "faq_tile": [
+           {
+            "answer_text": "<p><span style=\"color: #757f82; background-color: #ffffff;\">Yes. You can start free for 14 days with no credit card required. Explore the platform, connect your data, and see it work for your business before any payment.</span></p>",
+            "question_text": "Is there a free trial?"
+           },
+           {
+            "answer_text": "<p>Pricing is calculated from a few key inputs about your business \u2014 sales volume, channels, and SKU count. We don't publish a public rate card because we want to walk you through the platform first, then show you exactly what it'll cost. No surprise add-ons, no fine print.</p>",
+            "question_text": "How does pricing work?"
+           },
+           {
+            "answer_text": "<p><span style=\"color: #757f82; background-color: #ffffff;\">Free, and fast. Most brands are fully set up in under an hour. Connect your sales channels, configure your key parameters, and Flieber starts working. No implementation fees, no consultants required.</span></p>",
+            "question_text": "What does onboarding look like?"
+           },
+           {
+            "answer_text": "<p><span style=\"color: #757f82; background-color: #ffffff;\">No. Flieber sits on top of whatever you already use and makes it smarter. If you don't have an ERP or IMS, Flieber can connect directly to your data source of preference.</span></p>",
+            "question_text": "Do I need to replace my ERP or IMS?"
+           },
+           {
+            "answer_text": "<p style=\"background-color: #ffffff; color: #757f82; line-height: 1.6;\">That works too. Flieber's Google Sheets integration lets you automate data input so you're not maintaining the same information in two places. Think of it as giving your spreadsheets a serious upgrade.</p>",
+            "question_text": "What if I only use spreadsheets?"
+           }
+          ],
+          "module_id": 211798788702,
+          "schema_version": 2,
+          "sec_title": "The usual ones, answered plainly.",
+          "subtitle": "Questions"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17773137282602",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Yellow CTA Banner",
+         "name": "widget_1777313727890",
+         "params": {
+          "black_button": {
+           "link_field": {
+            "no_follow": false,
+            "open_in_new_tab": true,
+            "url": {
+             "href": "https://www.flieber.com/book-a-demo?hsLang=en",
+             "type": "EXTERNAL"
+            }
+           },
+           "text_field": "Book A Demo"
+          },
+          "css_class": "dnd-module",
+          "module_id": 211806686602,
+          "schema_version": 2,
+          "sec_title": "Book a demo with our team. We'll go over your operations, show you the platform, and share your exact price by the end of the call. No proposals to wait on, no back-and-forth.",
+          "smaller_text": "14-day free trial \u00b7 No credit card required",
+          "subtitle": "Let's figure out if Flieber is the right fit.",
+          "transparent_button": {
+           "link_field_1": {
+            "no_follow": false,
+            "open_in_new_tab": true,
+            "url": {
+             "href": "https://www.flieber.com/free-trial?hsLang=en",
+             "type": "EXTERNAL"
+            }
+           },
+           "text_field_1": "Start Free Trial"
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Flieber connects to your sales, inventory, and supply chain data to give you full visibility and precise recommendations. With Flieber, inventory decisions become smarter, faster, and easier.",
+ "name": "Pricing New",
+ "pageExpiryEnabled": false,
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2026-04-27T12:20:52Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "archive/pricing",
+ "state": "DRAFT",
+ "subcategory": "site_page",
+ "templatePath": "flieber/templates/home-page.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:05:33.097Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/archive/pricing",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

@@ -1,0 +1,105 @@
+<!--
+templateType: blog_post
+isAvailableForNewContent: true
+label: Blog Delta Single
+-->
+{% include './header.html' %}
+
+{{ require_css(get_asset_url('../css/blog-delta.css'), { async: true }) }}
+
+<body class="blog blog-single" data-spy="scroll" data-target=".pin-nav" data-offset="50">
+
+  {% block header %}
+  {% boolean "enabled_site_header" label='Enable Global Site Header', value=true, export_to_template_context=True %}
+  {% if widget_data.enabled_site_header.value %}
+  {% global_partial path="../templates/partials/site_header.html" %}
+  {% endif %}
+  {% endblock header %}
+  
+  {% block body %}
+  <div class="blog-content-wrap">
+    <div class="container">
+      <div class="row colunas"> 
+        <div class="col-md-8 blog-col">
+          <article>
+            {% if content.featured_image %}
+            <img class="featured-image" src="{{ content.featured_image }}" alt="{{ page_meta.name }}">
+            {% endif %}
+            <h1 class="article-name">{{ page_meta.name }}</h1>
+            <div class="article-meta">
+<!--              <span class="posted-on">Posted on <a href="{{ content.absolute_url }}" rel="bookmark"><time class="entry-date published">{{ content.publish_date_local_time|datetimeformat('%B %e, %Y') }}</time></a></span> --->
+              <!-- This is a comment 
+<span class="posted-on">Updated on <a href="{{ content.absolute_url }}" rel="bookmark"><time class="entry-date published">{{ content.update_date_local_time|datetimeformat('%B %e, %Y') }}</time></a></span>-->
+              <span class="label-category">Category: </span>{% if content.tag_list %}{% for tag in content.tag_list %}<a href="{{ blog_tag_url(group.id, tag.slug) }}" alt="View all posts in {{ tag.name }}">{{ tag.name }}</a> {% endfor %}{% endif %}
+            </div>
+            <div class="entry-content">
+              <div class="author-section">
+                <div class="author_tab_content">
+                  <section class="author_about_tab">
+                    {% if content.blog_post_author.avatar %}
+                    <div class="author_image">
+                      <a href="{% if content.blog_post_author.linkedin %}{{ content.blog_author.linkedin }}{% elif content.blog_author.website %}{{ content.blog_author.website }}{% else %}{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}{% endif %}"{% if content.blog_post_author.linkedin || content.blog_author.website %} target="_blank"{% endif %} class="url" title="{{ content.blog_post_author.display_name }}">
+                        <img src="{{ content.blog_post_author.avatar }}" alt="{{ content.blog_post_author.full_name }}" class="photo" width="250" />
+                      </a> 
+                    </div>
+                    {% endif %}
+                    <div class="author_text{% if not content.blog_post_author.avatar %} no_image{% endif %}">
+                      <div class="author_name fn name" itemprop="name"><a href="{% if content.blog_post_author.linkedin %}{{ content.blog_author.linkedin }}{% elif content.blog_author.website %}{{ content.blog_author.website }}{% else %}{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}{% endif %}"{% if content.blog_post_author.linkedin || content.blog_author.website %} target="_blank"{% endif %} class="url">{{ content.blog_post_author.display_name }}</a> </div>
+                      {% if content.blog_post_author.bio %}
+                      <div class="description note author_description">{{content.blog_post_author.bio}}</div>
+                      {% endif %}
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="blog-content">
+                {{ content.post_body }}
+                {% module "get_started" path='../custom-modules/FB Blog Get Started', label="FB Blog Get Started" %}
+              </div>
+            </div>
+          </article>
+
+          {% if group.allow_comments %}
+          <div class="blog-comments btn-wrapper btn-primary-wrapper">
+            <h3>Comments</h3>
+            <div class="blog-comments-wrapper">
+              {% blog_comments "blog_comments" overrideable=False, label='Blog Comments' %}
+            </div>
+          </div>
+          {% endif %}
+          <nav class="navigation post-navigation" aria-label="Posts">
+            <div class="nav-links">
+              {% if content.previous_post_slug %}
+              <div class="nav-previous">
+                <a href="/{{ content.previous_post_slug }}" rel="prev"><span class="nav-subtitle">Previous:</span>
+                  <span class="nav-title">{{ content.previous_post_name }}</span></a>
+              </div>
+              {% endif %}
+              {% if content.next_post_slug %}
+              <div class="nav-next">
+                <a href="/{{ content.next_post_slug }}" rel="next"><span class="nav-subtitle">Next:</span>
+                  <span class="nav-title">{{ content.next_post_name }}</span></a>
+              </div>
+              {% endif %}
+            </div>
+          </nav>
+        </div>
+        <div class="col-md-4 col-sidebar">
+          {% module "blog_sidebar" path="../custom-modules/Blog Delta Sidebar", label="Blog Sidebar" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock body %}
+
+
+  {% block footer %}
+  {% boolean "enabled_site_footer" label='Enable Global Site Footer', value=true, export_to_template_context=True %}
+  {% if widget_data.enabled_site_footer.value %}
+  {% global_partial path="../templates/partials/site_footer.html" %}
+  {% endif %}
+  {% endblock footer %}
+
+  {% include './footer-includes.html' %}
+</body>
+</html>

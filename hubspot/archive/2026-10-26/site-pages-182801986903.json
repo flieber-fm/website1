@@ -1,0 +1,2191 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 4,
+ "createdAt": "2024-11-14T13:08:00.865Z",
+ "createdById": "69768445",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "htmlTitle": "Pricing",
+ "id": "182801986903",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1732079813358",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Pricing",
+         "name": "widget_1732079812461",
+         "params": {
+          "anchor_id": "pricing",
+          "bottom_text": {
+           "content": "No credit card required for free trial. <span>This offer is valid for a limited time only. Flieber reserves the right to modify or discontinue this promotion, including adjusting pricing and terms, at any time without prior notice.</span>"
+          },
+          "button": {
+           "button_link": {
+            "no_follow": false,
+            "open_in_new_tab": true,
+            "url": {
+             "href": "https://www.flieber.com/free-trial",
+             "type": "EXTERNAL"
+            }
+           },
+           "button_sub_text": "No credit card required",
+           "button_text": "Start my 14-day free trial"
+          },
+          "css_class": "dnd-module",
+          "enable_new_style": true,
+          "filter": {
+           "products": {
+            "info_text": "Total count of active products available in all stores. For example, 20 unique products being sold in 5 stores means a 100 products (20 multiplied by 5).",
+            "title": "Total # of products ",
+            "values": [
+             {
+              "text": "500"
+             },
+             {
+              "text": "1,250"
+             },
+             {
+              "text": "2,500"
+             },
+             {
+              "text": "5,000"
+             },
+             {
+              "text": "8,750"
+             },
+             {
+              "text": "15,000"
+             },
+             {
+              "text": "Greater than 15,000"
+             }
+            ]
+           },
+           "sales": {
+            "info_text": "Total sales in all your stores in the last 12 months",
+            "title": "Total sales ",
+            "values": [
+             {
+              "text": "Up to $2M"
+             },
+             {
+              "text": "Up to $5M"
+             },
+             {
+              "text": "Up to $10M"
+             },
+             {
+              "text": "Up to $20M"
+             },
+             {
+              "text": "Up to $35M"
+             },
+             {
+              "text": "Up to $60M"
+             },
+             {
+              "text": "More than $60M"
+             }
+            ]
+           },
+           "stores": {
+            "info_text": "Stores are single locations where you sell your products. For example, Amazon US and Amazon Canada are considered two different stores.",
+            "title": "Total # of stores ",
+            "values": [
+             {
+              "text": "Up to 12"
+             },
+             {
+              "text": "13 or more"
+             }
+            ]
+           },
+           "title": "Fill in the parameters to check our pricing:",
+           "units": {
+            "info_text": "Total units sold in all your stores in the last 12 months",
+            "title": "Total units sold",
+            "values": [
+             {
+              "text": "Up to 100K"
+             },
+             {
+              "text": "Up to 240K"
+             },
+             {
+              "text": "Up to 500K"
+             },
+             {
+              "text": "Up to 1M"
+             },
+             {
+              "text": "Up to 1.9M"
+             },
+             {
+              "text": "Up to 2.7M"
+             },
+             {
+              "text": "More than 2.7M"
+             }
+            ]
+           }
+          },
+          "heading": {
+           "gradient_text": "",
+           "text": "Flexible plans tailored to you."
+          },
+          "heading_tag": "h1",
+          "module_id": 169845207576,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 50
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 160
+             }
+            }
+           },
+           "mobile_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 40
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           },
+           "tablet_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 50
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 120
+             }
+            }
+           }
+          },
+          "tab_content": {
+           "annual": {
+            "packages": [
+             {
+              "actual_price": "https://app.hubspot.com/design-manager/5767502/code/169837325391",
+              "demo_button": {
+               "demo_button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "content_id": 194312997949,
+                 "type": "CONTENT"
+                }
+               },
+               "demo_button_text": "Book a Demo"
+              },
+              "discount": "",
+              "features_list": [
+               {
+                "features_availability": "available",
+                "text": "Native sales integrations"
+               },
+               {
+                "features_availability": "available",
+                "text": "Native inventory integrations "
+               },
+               {
+                "features_availability": "not_available",
+                "text": "Google Sheets integration"
+               },
+               {
+                "features_availability": "not_available",
+                "text": "API access"
+               },
+               {
+                "features_availability": "available",
+                "text": "Advanced SKU mapping"
+               },
+               {
+                "features_availability": "available",
+                "text": "Support to kits / bundles"
+               },
+               {
+                "features_availability": "available",
+                "text": "Forecast | basic models"
+               },
+               {
+                "features_availability": "not_available",
+                "text": "Forecast | AI models"
+               },
+               {
+                "features_availability": "available",
+                "text": "Updates in real time"
+               }
+              ],
+              "info": {
+               "sub_title": "Up to 3 free seats",
+               "text": "($10 per additional seat)"
+              },
+              "quote_button": {
+               "button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/request-for-quote",
+                 "type": "EXTERNAL"
+                }
+               },
+               "button_text": "Request a quote"
+              },
+              "text": "Essential tools for emerging Shopify & Amazon brands with simple supply chains and increasingly complex spreadsheets.",
+              "title": "Essentials",
+              "title_text": "Features",
+              "trial_button": {
+               "trial_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/free-trial",
+                 "type": "EXTERNAL"
+                }
+               },
+               "trial_text": "Start Free Trial"
+              }
+             },
+             {
+              "actual_price": "https://app.hubspot.com/design-manager/5767502/code/169837325391",
+              "demo_button": {
+               "demo_button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "content_id": 194312997949,
+                 "type": "CONTENT"
+                }
+               },
+               "demo_button_text": "Book a Demo"
+              },
+              "discount": "",
+              "features_list": [
+               {
+                "features_availability": "available",
+                "text": "Native sales integrations"
+               },
+               {
+                "features_availability": "available",
+                "text": "Native inventory integrations "
+               },
+               {
+                "features_availability": "available",
+                "text": "Google Sheets integration"
+               },
+               {
+                "features_availability": "not_available",
+                "text": "API access"
+               },
+               {
+                "features_availability": "available",
+                "text": "Advanced SKU mapping"
+               },
+               {
+                "features_availability": "available",
+                "text": "Support to kits / bundles"
+               },
+               {
+                "features_availability": "available",
+                "text": "Forecast | basic models"
+               },
+               {
+                "features_availability": "available",
+                "text": "Forecast | AI models"
+               },
+               {
+                "features_availability": "available",
+                "text": "Updates in real time"
+               }
+              ],
+              "info": {
+               "sub_title": "Up to 10 free seats ",
+               "text": "($10 per additional seat)"
+              },
+              "quote_button": {
+               "button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/request-for-quote",
+                 "type": "EXTERNAL"
+                }
+               },
+               "button_text": "Request a quote"
+              },
+              "text": "Advanced tools for growing brands with multiple sales channels, an evolving supply chain, and complex spreadsheets. ",
+              "title": "Pro",
+              "title_text": "Features",
+              "trial_button": {
+               "trial_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/free-trial",
+                 "type": "EXTERNAL"
+                }
+               },
+               "trial_text": "Start Free Trial"
+              }
+             },
+             {
+              "actual_price": "https://app.hubspot.com/design-manager/5767502/code/169837325391",
+              "demo_button": {
+               "demo_button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "content_id": 194312997949,
+                 "type": "CONTENT"
+                }
+               },
+               "demo_button_text": "Book a Demo"
+              },
+              "discount": "",
+              "features_list": [
+               {
+                "features_availability": "available",
+                "text": "Native sales integrations"
+               },
+               {
+                "features_availability": "available",
+                "text": "Native inventory integrations "
+               },
+               {
+                "features_availability": "available",
+                "text": "Google Sheets integration"
+               },
+               {
+                "features_availability": "just_info",
+                "text": "API access"
+               },
+               {
+                "features_availability": "available",
+                "text": "Advanced SKU mapping"
+               },
+               {
+                "features_availability": "available",
+                "text": "Support to kits / bundles"
+               },
+               {
+                "features_availability": "available",
+                "text": "Forecast | basic models"
+               },
+               {
+                "features_availability": "available",
+                "text": "Forecast | AI models"
+               },
+               {
+                "features_availability": "available",
+                "text": "Updates in real time"
+               }
+              ],
+              "info": {
+               "sub_title": "Up to 20 free seats ",
+               "text": "($10 per additional seat)"
+              },
+              "quote_button": {
+               "button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/request-for-quote",
+                 "type": "EXTERNAL"
+                }
+               },
+               "button_text": "Request a quote"
+              },
+              "text": "Full suite of tools for leading brands with diverse sales channels, complex supply chains, and centralized data management. ",
+              "title": "Max",
+              "title_text": "Features",
+              "trial_button": {
+               "trial_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/free-trial",
+                 "type": "EXTERNAL"
+                }
+               },
+               "trial_text": "Start Free Trial"
+              }
+             }
+            ]
+           },
+           "monthly": {
+            "packages": [
+             {
+              "actual_price": "https://app.hubspot.com/design-manager/5767502/code/169837325391",
+              "demo_button": {
+               "demo_button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "content_id": 194312997949,
+                 "type": "CONTENT"
+                }
+               },
+               "demo_button_text": "Book a Demo"
+              },
+              "discount": "30",
+              "features_list": [
+               {
+                "features_availability": "available",
+                "text": "2 Seats ($10 per additional)"
+               },
+               {
+                "features_availability": "available",
+                "text": "Native sales integrations"
+               },
+               {
+                "features_availability": "not_available",
+                "text": "Google Sheets integration"
+               },
+               {
+                "features_availability": "not_available",
+                "text": "API access"
+               },
+               {
+                "features_availability": "available",
+                "text": "Advanced SKU mapping"
+               },
+               {
+                "features_availability": "available",
+                "text": "Support to kits / bundles"
+               },
+               {
+                "features_availability": "available",
+                "text": "Forecast | basic models"
+               },
+               {
+                "features_availability": "not_available",
+                "text": "Forecast | AI models"
+               },
+               {
+                "features_availability": "available",
+                "text": "Updates in real time"
+               }
+              ],
+              "info": {
+               "sub_title": "Up to 3 free seats ",
+               "text": "($10 per additional seat) "
+              },
+              "quote_button": {
+               "button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/request-for-quote",
+                 "type": "EXTERNAL"
+                }
+               },
+               "button_text": "Request a quote"
+              },
+              "text": "Essential tools for emerging Shopify and Amazon brands.",
+              "title": "Essentials",
+              "title_text": "Features",
+              "trial_button": {
+               "trial_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/free-trial",
+                 "type": "EXTERNAL"
+                }
+               },
+               "trial_text": "Start Free Trial"
+              }
+             },
+             {
+              "actual_price": "https://app.hubspot.com/design-manager/5767502/code/169837325391",
+              "demo_button": {
+               "demo_button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "content_id": 194312997949,
+                 "type": "CONTENT"
+                }
+               },
+               "demo_button_text": "Book a Demo"
+              },
+              "discount": "30",
+              "features_list": [
+               {
+                "features_availability": "available",
+                "text": "Native sales integrations"
+               },
+               {
+                "features_availability": "available",
+                "text": "Native inventory integrations "
+               },
+               {
+                "features_availability": "available",
+                "text": "Google Sheets integration"
+               },
+               {
+                "features_availability": "not_available",
+                "text": "API access "
+               },
+               {
+                "features_availability": "available",
+                "text": "Advanced SKU mapping"
+               },
+               {
+                "features_availability": "available",
+                "text": "Support to kits / bundles"
+               },
+               {
+                "features_availability": "available",
+                "text": "Forecast | basic models"
+               },
+               {
+                "features_availability": "available",
+                "text": "Forecast | AI models"
+               },
+               {
+                "features_availability": "available",
+                "text": "Updates in real time "
+               }
+              ],
+              "info": {
+               "sub_title": "Up to 10 free seats ",
+               "text": "($10 per additional seat) "
+              },
+              "quote_button": {
+               "button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/request-for-quote",
+                 "type": "EXTERNAL"
+                }
+               },
+               "button_text": "Request a quote"
+              },
+              "text": "Advanced tools for growing \u2028and evolving brands.",
+              "title": "Pro",
+              "title_text": "Features",
+              "trial_button": {
+               "trial_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/free-trial",
+                 "type": "EXTERNAL"
+                }
+               },
+               "trial_text": "Start Free Trial"
+              }
+             },
+             {
+              "actual_price": "https://app.hubspot.com/design-manager/5767502/code/169837325391",
+              "demo_button": {
+               "demo_button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "content_id": 194312997949,
+                 "type": "CONTENT"
+                }
+               },
+               "demo_button_text": "Book a Demo"
+              },
+              "discount": "30",
+              "features_list": [
+               {
+                "features_availability": "available",
+                "text": "Native sales integrations"
+               },
+               {
+                "features_availability": "available",
+                "text": "Native inventory integrations "
+               },
+               {
+                "features_availability": "available",
+                "text": "Google Sheets integration"
+               },
+               {
+                "features_availability": "just_info",
+                "text": "API access "
+               },
+               {
+                "features_availability": "available",
+                "text": "Advanced SKU mapping"
+               },
+               {
+                "features_availability": "available",
+                "text": "Support to kits / bundles"
+               },
+               {
+                "features_availability": "available",
+                "text": "Forecast | basic models"
+               },
+               {
+                "features_availability": "available",
+                "text": "Forecast | AI models"
+               },
+               {
+                "features_availability": "available",
+                "text": "Updates in real time "
+               }
+              ],
+              "info": {
+               "sub_title": "Up to 20 free seats ",
+               "text": "($10 per additional seat) "
+              },
+              "quote_button": {
+               "button_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/request-for-quote",
+                 "type": "EXTERNAL"
+                }
+               },
+               "button_text": "Request a quote"
+              },
+              "text": "Full suite of tools for large \u2028leading brands.",
+              "title": "Max",
+              "title_text": "Features",
+              "trial_button": {
+               "trial_link": {
+                "no_follow": false,
+                "open_in_new_tab": false,
+                "url": {
+                 "href": "https://www.flieber.com/free-trial",
+                 "type": "EXTERNAL"
+                }
+               },
+               "trial_text": "Start Free Trial"
+              }
+             }
+            ]
+           },
+           "tabs_nav": [
+            {
+             "text": "Billed Monthly"
+            },
+            {
+             "text": "Billed Annually <span>save 20%</span>"
+            }
+           ]
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "styles": {
+       "backgroundColor": {
+        "a": 1.0,
+        "b": 107,
+        "g": 178,
+        "r": 246
+       },
+       "breakpointStyles": {
+        "default": {}
+       }
+      },
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-5",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Compare Features Module",
+         "name": "dnd_area-module-6",
+         "params": {
+          "child_css": {},
+          "css": {},
+          "css_class": "dnd-module",
+          "heading_text": "<h2 class=\"animate_show\">Compare features</h2>",
+          "path": "../modules/custom-module/Compare Features Module",
+          "schema_version": 2,
+          "smart_type": "NOT_SMART",
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           },
+           "mobile_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 90
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 40
+             }
+            }
+           },
+           "tablet_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 120
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 70
+             }
+            }
+           }
+          },
+          "table_row_content_group": [
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_heading_style": true,
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Essentials",
+              "enable_heading_style": true,
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Pro",
+              "enable_heading_style": true,
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Max",
+              "enable_heading_style": true,
+              "enable_image": false
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Seats included ($10 per additional)",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "2",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "5",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "10",
+              "enable_image": false
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Native sales integrations",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Native inventory integrations",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Google Sheets integration",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "wrong-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/wrong-icon.svg",
+               "width": 24
+              },
+              "add_text": "",
+              "enable_heading_style": false,
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "API access",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "wrong-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/wrong-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_heading_style": false,
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "wrong-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/wrong-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Advanced SKU mapping",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Support to kits / bundles",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Support to kits / bundles",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Forecast (basic models)",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_heading_style": false,
+              "enable_image": true
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Forecast (AI models)",
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "wrong-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/wrong-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_image": true
+             }
+            ]
+           },
+           {
+            "single_column_content": [
+             {
+              "add_icon_image": {
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Updates in real time",
+              "enable_heading_style": false,
+              "enable_image": false
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_heading_style": false,
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_heading_style": false,
+              "enable_image": true
+             },
+             {
+              "add_icon_image": {
+               "alt": "right-icon",
+               "height": 24,
+               "loading": "lazy",
+               "max_height": 24,
+               "max_width": 24,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/right-icon.svg",
+               "width": 24
+              },
+              "add_text": "Feature",
+              "enable_heading_style": false,
+              "enable_image": true
+             }
+            ]
+           }
+          ],
+          "wrap_field_tag": "div"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-7",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Customers Review Module",
+         "name": "dnd_area-module-8",
+         "params": {
+          "child_css": {},
+          "css": {},
+          "css_class": "dnd-module",
+          "heading_text": "<h2 class=\"animate_show\">What our customers say</h2>",
+          "path": "../modules/custom-module/Customers Review Module",
+          "repeater_group": [
+           {
+            "add_content": "<p>\"With Flieber, I could integrate the inventory position in different locations and also have an accurate sales forecast for multiple channels. As a result, it is much easier to plan and replenish inventory. And stockouts are no more a problem. I love the real-time view of the entire supply chain operation: what is transit, when will it arrive, and what to order or transfer. It completely changed my replenishment process.\"</p>",
+            "client_name_and_job_title": {
+             "client_name": "JP SantAnna",
+             "company_job_title": "CEO at SellersFlow"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "jp",
+             "height": 350,
+             "loading": "lazy",
+             "max_height": 350,
+             "max_width": 251,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Box-1.png",
+             "width": 251
+            }
+           },
+           {
+            "add_content": "<p><span dir=\"ltr\" role=\"presentation\">\"Flieber is helping us effectively manage stock across all of our </span><span dir=\"ltr\" role=\"presentation\">sales channels by customizing our calculations to the data </span><span dir=\"ltr\" role=\"presentation\">points that are important to us, which ultimately allows us to </span><span dir=\"ltr\" role=\"presentation\">stay lean on stock. It also allows us to keep an eye on sales </span><span dir=\"ltr\" role=\"presentation\">trends to be able to respond quickly to them when needed and </span><span dir=\"ltr\" role=\"presentation\">alerts us to potential stock issues so they can be corrected </span><span dir=\"ltr\" role=\"presentation\">immediately. The way it simplifies the data into screens that </span><span dir=\"ltr\" role=\"presentation\">give you a full grasp of the situation within seconds, is </span><span dir=\"ltr\" role=\"presentation\">invaluable.\"</span></p>",
+            "client_name_and_job_title": {
+             "client_name": "Jenn Angel",
+             "company_job_title": "COO at Zugu Case"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "jenn",
+             "height": 350,
+             "loading": "lazy",
+             "max_height": 350,
+             "max_width": 250,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Box.png",
+             "width": 250
+            }
+           },
+           {
+            "add_content": "<p style=\"font-size: 14px;\">\"Flieber's team is very helpful in improving the user experience and hearing your feedback. Their platform allows us to improve the supply chain indicators of our e-commerce brands.\"</p>",
+            "client_name_and_job_title": {
+             "client_name": "Haseeb Ahsan",
+             "company_job_title": "Founder and CEO at Brankit"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "wesley-1",
+             "height": 376,
+             "loading": "lazy",
+             "max_height": 376,
+             "max_width": 251,
+             "size_type": "auto_custom_max",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/wesley-1.jpg",
+             "width": 251
+            }
+           },
+           {
+            "add_content": "<p><span dir=\"ltr\" role=\"presentation\">\"We have always been challenged with out of stock inventory </span><span dir=\"ltr\" role=\"presentation\">and long lead times. Flieber was a game changer for us. The i</span><span dir=\"ltr\" role=\"presentation\">nterface is easy to with a bunch of critical information, and </span><span dir=\"ltr\" role=\"presentation\">their algorithms that provide recommendations are top notch.\"</span></p>",
+            "client_name_and_job_title": {
+             "client_name": "Stephanie Buchholtz",
+             "company_job_title": "VP of Merchandise Planning at Modloft"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "stephanie",
+             "height": 225,
+             "loading": "lazy",
+             "max_height": 225,
+             "max_width": 226,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/users.png",
+             "width": 226
+            }
+           },
+           {
+            "add_content": "<p>\"Flieber brings standardization and organization to our business, which are crucial to scale our operations. Their team pays attention to your needs and always finds a workaround, no matter where you sit. The platform keeps adding cases to cover most of your exception cases: forecast modifications, product bundle options, improved and customized reports, and the list continues. They are great partners.\"</p>",
+            "client_name_and_job_title": {
+             "client_name": "Santiago Valent\u00edn Brun",
+             "company_job_title": "Senior Supply Chain Planner at Unybrands"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "santiago",
+             "height": 460,
+             "loading": "lazy",
+             "max_height": 460,
+             "max_width": 460,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/logo-images/Operator%20Card-2.png",
+             "width": 460
+            }
+           },
+           {
+            "add_content": "<p><span data-sheets-root=\"1\">\"Flieber is a powerful and customizable tool with native integration for the most relevant marketplaces. But what I like most about them is their customer support approach: they are genuinely interested in learning how you operate to support you better. Flieber has allowed me to reduce manual work while planning and forecasting products, and to handle different regions and sales channels in a single place.\"</span></p>",
+            "client_name_and_job_title": {
+             "client_name": "Leonardo Escalona",
+             "company_job_title": "Inventory Planner at Primal Harvest"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "leonardo",
+             "height": 238,
+             "loading": "lazy",
+             "max_height": 238,
+             "max_width": 251,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/bryan.png",
+             "width": 251
+            }
+           }
+          ],
+          "schema_version": 2,
+          "smart_type": "NOT_SMART",
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           },
+           "mobile_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 90
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 40
+             }
+            }
+           },
+           "tablet_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 120
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 70
+             }
+            }
+           }
+          },
+          "wrap_field_tag": "div"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-9",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "FAQ Module",
+         "name": "dnd_area-module-10",
+         "params": {
+          "bg_color": {
+           "color": "#CCD9DB",
+           "opacity": 100
+          },
+          "child_css": {},
+          "css": {},
+          "css_class": "dnd-module",
+          "faq_repeater_group": [
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Flieber is an inventory planning platform. But what does that mean? It means that our system combines the sales, inventory and supply chain data of your commerce brand to help you make better decisions in a fraction of the time.</span></p>",
+            "question_text": "What does Flieber do?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Inventory management is about control (past)\u2013it's main objective is to gather all your historical data to calculate your inventory positions today. Inventory planning is about decision (future)\u2013it's main objective is to project your future inventory to trigger every action that you might have to take at any given time. While inventory management allows you to have control of what you have today, inventory planning is what really allows you to reach the results that will impact the future of your business. After all, if you project the wrong inventory, you'll end up either stockout, hurting your sales, or overstocked, hurting your margins and capital availability.</span></p>",
+            "question_text": "What is the difference between inventory planning and inventory management?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Flieber collects from integrations the historical sales, current inventory positions, open purchase and transfer orders, among other inputs from each of your SKUs to project the future sales, calculate inventory forecasts, and trigger the main actions that you need to take.</span></p>",
+            "question_text": "What kind of data does Flieber need?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">We currently integrate (either natively or through middlewares) with the main sales platforms and marketplaces (Amazon, Shopify, Walmart, eBay, Etsy etc.) and the main inventory systems (Shiphero, Shipbob, Extensiv, SKUVault, Luminous etc.). We also have a robust native integration with Google Sheets, that allows for a series of automations using reports generated from any system. We like to say that integrations are never an issue for Flieber.</span></p>",
+            "question_text": "What are Flieber\u2019s main integrations?"
+           },
+           {
+            "answer_text": "<p><span style=\"font-size: 14px; color: #000000;\">Yes. We have been using a mix of industry and proprietary AI-based forecasting models for over 5 years, with proven results over more than 3 million SKUs. We also have a series of initiatives to embed AI in many of our processes to make the lives of our customers even simpler. </span></p>",
+            "question_text": "Does Flieber use AI?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Zero! We do not charge for implementation. Our platform is extremely flexible, adjusting to pretty much any use case, and we have by far the simplest onboarding process that takes literally minutes to be completed. You can do the onboarding by yourself or have a free consultation with our team, who will help you with every step of the process.</span></p>",
+            "question_text": "How much does it cost to implement Flieber?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">During onboarding, you will integrate your sources of data (e.g. Amazon, Shopify, 3PLs etc.), configure the main parameters (safety stock, target days of coverage, MOQs, lead times etc.), and follow a couple more prompts. Everything should be done in less than 20 minutes. After that, Flieber will start consuming the data from the integrations and will send you a notification as soon as the system is ready to be used (the time here can vary from a few minutes to up to 24 hours, depending on the number of sales channels and the quantity of sales).</span></p>",
+            "question_text": "What is the onboarding process and how long does it take? (what does implementation look like?)"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Yes. ERPs are control systems that aim at calculating what you have available today. They're not made for decision-making (which is about the future), as they don't have robust forecasting capabilities\u2013and will never have, since complex data modeling, data scientists and AI algorithms are not in their DNA. That's why their demand-planning modules are known to be terrible. This is where Flieber comes in. We sit on top of your ERP data, make historical corrections to eliminate anomalies that might negatively affect the result of our algorithms, run AI-based forecasting models, make the robust calculations needed to take into consideration your main parameters and use cases, and provide you with a very clear map for each of your products, showing which ones you need to replenish, how much to replenish, which ones you don\u2019t have time to replenish anymore and, therefore, have to reduce sales pace, which ones are overstocked etc. All in real time and at the click of a button. Life of an operations professional has never been so easy.</span></p>",
+            "question_text": "I use an ERP. Do I need Flieber?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Yes. As with ERPs, IMS's are also about control and will not help you much when it comes to making smarter decisions about the future. Flieber also sits on top of IMS's, gathering raw inventory data as one of the most basic inputs for our calculations. We then combine this data with sales and supply chain data coming from other systems to generate our alerts and recommendations. But if you don't have an IMS, no problem either\u2013we can consume data from various sources and even have a Google Sheets integration that automates the consumption of data manually inputted in any of your spreadsheets.</span></p>",
+            "question_text": "I use an IMS. Do I need Flieber?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">No, you don't. At Flieber, we know that spreadsheets are here to stay and will always be a very important part of your operations. So, instead of substituting them, we incorporate them in our flow. With Flieber, all data can be exported to or imported from spreadsheets. See Flieber as the steroids to your spreadsheets, the system that will bring your data to a whole new level of accuracy and sophistication, so that you can make much better decisions in a fraction of the time. Independently of whether these decisions will be made in Flieber or in your beloved spreadsheet.</span></p>",
+            "question_text": "Do I have to replace my spreadsheets?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Yes, sure. We have made it extremely easy to input data from manual sources, such as spreadsheets. Our Google Sheets integration even allows you to automate this input, so that you don\u2019t have to enter the same information in two locations. Simply enter the data in your spreadsheets and Flieber will automatically read from it. We also allow you to have any combination of sources\u2013for example, you may have a natively-integrated sales channel (e.g. Amazon), a natively-integrated fulfillment (e.g. Amazon FBA), a warehouse receiving data from a CSV report from your 3PL, and POs/TOs being fed by a spreadsheet that you maintain. Any combination works with Flieber.</span></p>",
+            "question_text": "I don\u2019t have any systems and only use spreadsheets. Can I use Flieber?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">We have native integrations with the most important tools in the market, but we can also consume data from any other source through middlewares such as Google Sheets. Data integration shouldn't be an issue\u2013just talk to one of our team members about your specific use case and we\u2019ll have an easy solution to automatically input your data into Flieber.</span></p>",
+            "question_text": "I use multiple tools in my operations. How does Flieber connect with them?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">It all depends on the capabilities of the data source. For Shopify, for example, we can have real time updates, since their webhook technology pushes changes in seconds to Flieber. For Amazon, it depends on the data\u2013whatever is available through webhooks is updated in real time, but most of the data depends on scheduled reports that are made available by Amazon in different time frames (some every 15 minutes, others in up to two hours). For other integrations, we have other limitations. But rest assured that Flieber is always syncing data in the shortest possible interval offered by the integrations.</span></p>",
+            "question_text": "Does Flieber update the data in real time?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">No. Any configuration that you do in Flieber, including discontinuing or archiving SKUs, only impacts Flieber. We are not a PIM (Product Information Management) system and, therefore, have no control over your listings. Feel free to make any changes in Flieber without worrying about your listing.</span></p>",
+            "question_text": "Is there any risk that any of my changes in Flieber are pushed to my stores, impacting on my listing on Amazon, Shopify, etc.? "
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Yes. Flieber has gone through multiple audits (such as from Amazon, Deloitte and Shopify) to guarantee that the data stored in Flieber is safe and we haven't had any issues whatsoever since our launch in 2019. Our customers are also covered by the most strict confidentiality clauses, which guarantees that we will not make your identifiable data available to anyone under any circumstances. Click </span><a href=\"https://www.flieber.com/service-agreement\" style=\"font-size: 11px;\"><span>here</span></a><span style=\"color: #000000;\"> to read our service agreement.</span></p>",
+            "question_text": "Is it safe to connect my data to Flieber?"
+           },
+           {
+            "answer_text": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Yes. Flieber has the most advanced data model in the industry, which means that we have a fully flexible system, able to adapt to pretty much any use case. Lead times and every other parameter can be configured at any level, from the most general (by sales channel) to the most granular (by SKU); kits/bundles are automatically incorporated into the replenishment calculations, impacting on the consumption of inventory of each component; backorders can be turned on/off by product, meaning that we will continue consumption inventory even if the product is out of stock, making calculations a lot more accurate; among many other use cases. If you self-onboard into Flieber and don't find a solution for some use case, please contact our team immediately\u2013it's very likely that we will have that solved.</span></p>",
+            "question_text": "My product catalog is complex, including different lead times by product, kits/bundles, backorders for some channels, among others. Is Flieber able to support that?"
+           }
+          ],
+          "heading_text": "<h2 class=\"animate_show\">Frequently Asked Questions</h2>",
+          "path": "../modules/custom-module/FAQ Module",
+          "read_more_button_text": "Read more",
+          "schema_version": 2,
+          "smart_type": "NOT_SMART",
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           },
+           "mobile_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 90
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 40
+             }
+            }
+           },
+           "tablet_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 120
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 70
+             }
+            }
+           }
+          },
+          "wrap_field_tag": "div"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17316485800422",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Solution Module",
+         "name": "widget_1731648579450",
+         "params": {
+          "css_class": "dnd-module",
+          "module_id": 182829735242,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 100
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           },
+           "mobile_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 40
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 40
+             }
+            }
+           },
+           "tablet_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 70
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 70
+             }
+            }
+           }
+          },
+          "two_cta_group": [
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           },
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           }
+          ]
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Check out our flexible pricing plans that are designed to grow alongside your brand.",
+ "name": "Pricing",
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2024-12-06T22:14:20Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "pricing-plans",
+ "state": "DRAFT",
+ "subcategory": "site_page",
+ "templatePath": "flieber/templates/pricing.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:08:24.668Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/pricing-plans",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

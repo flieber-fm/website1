@@ -1,0 +1,88 @@
+<!--
+templateType: blog_listing
+isAvailableForNewContent: true
+label: Blog Delta Listing
+-->
+{% include './header.html' %}
+
+{{ require_css(get_asset_url('../css/blog-delta.css'), { async: true }) }}
+
+<body class="blog">
+
+  {% block header %}
+  {% boolean "enabled_site_header" label='Enable Global Site Header', value=true, export_to_template_context=True %}
+  {% if widget_data.enabled_site_header.value %}
+  {% global_partial path="../templates/partials/site_header.html" %}
+  {% endif %}
+  {% endblock header %}
+
+  {% block body %}
+  <div class="articles-list blog-content-wrap">
+    <div class="container">
+      <div class="row colunas">
+        <div class="col-md-8 blog-col">
+          {% if tag %}
+          <h1 class="page-title tag_title">Category: <span>{{topic|capitalize|replace('-', ' ')}}</span></h1>
+          {% elif blog_author %}
+          <h1 class="page-title tag_title">Author: <span>{{ blog_author.full_name }}</span></h1>
+          {% else %}          
+          <h1 class="page-title">{{ group.public_title }}</h1>
+          {% endif %}
+
+
+          <div class="posts">
+            {% for content in contents %}
+            <div class="article-panel">
+              {% if content.featured_image %}
+              <a href="{{ content.absolute_url }}"><img class="featured-image" src="{{ content.featured_image }}" alt="{{ content.name }}"></a>
+              {% endif %}
+              <h2 class="article-name"><a href="{{ content.absolute_url }}">{{ content.name }}</a></h2>
+              <div class="article-meta">
+                <span class="posted-on">Posted on <a href="{{ content.absolute_url }}" rel="bookmark"><time class="entry-date published">{{ content.publish_date_local_time|datetimeformat('%B %e, %Y') }}</time></a></span>
+                <span class="label-category">Category: </span>{% if content.tag_list %}{% for tag in content.tag_list %}<a href="{{ blog_tag_url(group.id, tag.slug) }}" alt="View all posts in {{ tag.name }}">{{ tag.name }}</a> {% endfor %}{% endif %}
+              </div>
+              <div class="entry-content">
+                {{ content.post_list_content|truncatehtml(560, "..." , false) }}
+              </div>
+              <div class="btn-wrapper btn-primary-wrapper">
+                <a class="more-link" href="{{ content.absolute_url }}">
+                  Read More
+                </a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          {% if not simple_list_page %}
+          <div class="navigation blog-pagination">
+            <div class="nav-links">
+              {% if next_page_num %}
+              <div class="nav-previous"><a href="{{ blog_page_link(next_page_num) }}">Older posts</a></div>              
+              {% endif %}
+              {% if last_page_num %}
+              <div class="nav-next"><a href="{{ blog_page_link(last_page_num) }}">Newer posts</a></div>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-md-4 col-sidebar">
+          {% module "blog_sidebar" path="../custom-modules/Blog Delta Sidebar", label="Blog Sidebar" no_wrapper=true %}
+        </div>
+      </div>
+    </div>
+  </div>
+ {# {% module "module_17478323482002" path="/sr/custom-modules/Subscribe Popup Form V1", label="Subscribe Popup Form V1" %} #}
+  {% endblock body %}
+
+
+  {% block footer %}
+  {% boolean "enabled_site_footer" label='Enable Global Site Footer', value=true, export_to_template_context=True %}
+  {% if widget_data.enabled_site_footer.value %}
+  {% global_partial path="../templates/partials/site_footer.html" %}
+  {% endif %}
+  {% endblock footer %}
+
+  {% include './footer-includes.html' %}
+</body>
+</html>

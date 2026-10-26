@@ -1,0 +1,1940 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 4,
+ "createdAt": "2025-02-11T06:07:07.535Z",
+ "createdById": "69768445",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "headHtml": "<script>(function(w){w.fpr=w.fpr||function(){w.fpr.q = w.fpr.q||[];w.fpr.q[arguments[0]=='set'?'unshift':'push'](arguments);};})(window);\nfpr(\"init\", {cid:\"3sh91e6y\"}); \nfpr(\"click\");\n</script>\n<script src=\"https://cdn.firstpromoter.com/fpr.js\" async></script>",
+ "htmlTitle": "Flieber | The Decision Making Tool For Modern Commerce",
+ "id": "186011106071",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {
+        "hidden": false
+       }
+      },
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17392543631982",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Integrations Banner Module",
+         "name": "widget_1739254362771",
+         "params": {
+          "add_content": "<h1>Easily<br>integrate Flieber</h1>\n<h2>with <span>everything</span> you use</h2>\n<p>Using a mix of native and assisted integrations, Flieber connects to any system, allowing you to pull the exact data you need to make smarter decisions faster.&nbsp; &nbsp;</p>",
+          "bg_color": {
+           "color": "#CCD9DB",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "left_bg_image": {
+           "alt": "integrations-banner-left-2x",
+           "height": 1151,
+           "loading": "lazy",
+           "max_height": 1151,
+           "max_width": 555,
+           "size_type": "auto",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/integrations-banner-left-2x.png",
+           "width": 555
+          },
+          "module_id": 183844415249,
+          "right_bg_image": {
+           "alt": "integrations-banner-right-2x",
+           "height": 1104,
+           "loading": "lazy",
+           "max_height": 1104,
+           "max_width": 504,
+           "size_type": "auto",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/integrations-banner-right-2x.png",
+           "width": 504
+          },
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 187
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 231
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17392546986682",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Video Content Module",
+         "name": "widget_1739254698296",
+         "params": {
+          "add_content": "<ul>\n<li><span>Sales</span>Any successful inventory planning process starts with an accurate sales forecast. Flieber integrates with all your sales channels (website, marketplaces, wholesale etc.) to generate highly accurate AI-based forecasts that will serve as the foundation to your planning process.</li>\n<li><span>Inventory</span>Your current inventory position is critical information to understand how many days of stock each product has left. Even if you use a small 3PL with no APIs, you can still automatically feed all your inventory balances into Flieber to get an accurate picture of where each product stands.</li>\n<li><span>Shipments</span>Knowing the units that are in production or in transit and when they will arrive in stock is critical for making the right sales decisions. Flieber not only integrates with your spreadsheets or systems, but also allows you to manage purchase and transfer orders in-app.&nbsp;</li>\n</ul>\n<p>Flieber makes it easy to integrate with these crucial systems. You\u2019ll be pulling the real-time data you need for forecasting sales and inventory across all channels and inventory locations, planning cost-effective replenishment, and keeping the right amount of stock on hand.</p>",
+          "add_video": {
+           "height": 2880,
+           "player_id": 156725704372,
+           "player_type": "hsvideo2",
+           "width": 2880
+          },
+          "add_video_thumbnail": {
+           "alt": "integrations-image (2)",
+           "height": 1873,
+           "max_height": 1873,
+           "max_width": 1911,
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/integrations-image%20(2).png",
+           "width": 1911
+          },
+          "choose_video_or_image": "image",
+          "css_class": "dnd-module",
+          "heading_content": "<h2>Inventory forecasts require three basic types of data:</h2>",
+          "module_id": 186011530622,
+          "schema_version": 2,
+          "select_image": {
+           "alt": "integrations-image (6)1",
+           "height": 1873,
+           "loading": "lazy",
+           "max_height": 1873,
+           "max_width": 1911,
+           "size_type": "auto",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/integrations-image%20(6)1.png",
+           "width": 1911
+          },
+          "select_video_position": "",
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17392564985542",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Image Content Module",
+         "name": "widget_1739256498144",
+         "params": {
+          "add_content": "<h2>Flieber works with your tools (even the less common ones)</h2>\n<p>Modern commerce demands endless tools and connecting with all of them is impossible. Well\u2026 Not with Flieber! With a mix of innovative data modeling and AI-based mapping, Flieber is able to connect with ANY system through both our native and assisted integrations. No more need to manually update information across multiple systems.&nbsp;</p>",
+          "add_image": {
+           "alt": "works-with-tools",
+           "height": 1482,
+           "loading": "lazy",
+           "max_height": 1482,
+           "max_width": 1515,
+           "size_type": "auto",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/works-with-tools.png",
+           "width": 1515
+          },
+          "bg_color": {
+           "color": "#186DFF",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "module_id": 183216011821,
+          "schema_version": 2,
+          "select_image_position": "right",
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          },
+          "text_color": {
+           "color": "#ffffff",
+           "opacity": 100
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17392581511242",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Two Col Integrations Module",
+         "name": "widget_1739258150720",
+         "params": {
+          "css_class": "dnd-module",
+          "heading_content": "<h2><span>Native Integrations</span></h2>\n<p>Flieber offers native one-click integrations with your main sales platforms and marketplaces.&nbsp;</p>",
+          "integration_columns": [
+           {
+            "add_content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Easily connect one or multiple Amazon stores from any marketplace into one Flieber account to receive recommendations for both purchases from suppliers and transfers to FBA.<br><br></span><span style=\"color: #000000;\"></span></p>",
+            "add_logo": {
+             "alt": "logo-amazon-2x",
+             "height": 120,
+             "loading": "lazy",
+             "max_height": 120,
+             "max_width": 426,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-amazon-2x.png",
+             "width": 426
+            },
+            "add_title": "Amazon Seller Central",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Easily connect one or multiple Shopify stores into one Flieber account and set your specific use cases, including kits/bundles, backorders, and wholesale channels, to receive purchase recommendations for all your products in all your inventory locations.</span></p>",
+            "add_logo": {
+             "alt": "logo-shopify-2x",
+             "height": 120,
+             "loading": "lazy",
+             "max_height": 120,
+             "max_width": 466,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-shopify-2x.png",
+             "width": 466
+            },
+            "add_title": "Shopify",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Easily connect one or multiple Walmart stores into one Flieber account to receive recommendations for both purchases from suppliers and transfers to WMS.<br><br></span></p>",
+            "add_logo": {
+             "alt": "logo-walmart-2x",
+             "height": 120,
+             "loading": "lazy",
+             "max_height": 120,
+             "max_width": 527,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-walmart-2x.png",
+             "width": 527
+            },
+            "add_title": "Walmart",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Easily connect one or multiple eBay stores into one Flieber account to receive purchase recommendations for all your products in all your inventory locations.<br><br></span></p>",
+            "add_logo": {
+             "alt": "logo-ebay-2x",
+             "height": 120,
+             "loading": "lazy",
+             "max_height": 120,
+             "max_width": 283,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-ebay-2x.png",
+             "width": 283
+            },
+            "add_title": "ebay",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             }
+            ]
+           },
+           {
+            "add_content": "<p style=\"font-size: 14px;\"><span style=\"color: #000000;\">Easily connect one or multiple Etsy stores into one Flieber account to receive purchase recommendations for all your products in all your inventory locations.<br><br></span></p>",
+            "add_logo": {
+             "alt": "logo-etsy-2x",
+             "height": 120,
+             "loading": "lazy",
+             "max_height": 120,
+             "max_width": 253,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-etsy-2x.png",
+             "width": 253
+            },
+            "add_title": "Etsy",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             }
+            ]
+           },
+           {
+            "add_content": "<span style=\"font-size: 14px; color: #000000;\">Easily connect one or multiple BigCommerce stores into one Flieber account to receive purchase recommendations for all your products in all your inventory locations.<br><br></span>",
+            "add_logo": {
+             "alt": "logo-bigcommerce-2x",
+             "height": 60,
+             "loading": "lazy",
+             "max_height": 60,
+             "max_width": 267,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-bigcommerce-2x.png",
+             "width": 267
+            },
+            "add_title": "Bigcommerce",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_content": "If you want to keep using your spreadsheets, no problem\u2014any sales, inventory or shipment data can be directly connected and synced with Flieber. We can even help you automate the data flow so that you don\u2019t have to worry about manual changes.",
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Google-Sheets",
+             "height": 430,
+             "loading": "lazy",
+             "max_height": 344.275420336269,
+             "max_width": 2000,
+             "size_type": "auto_custom_max",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/Google-Sheets.png",
+             "width": 2498
+            },
+            "add_title": "Google Sheets",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           }
+          ],
+          "module_id": 186011831736,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           },
+           "mobile_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 90
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 40
+             }
+            }
+           },
+           "tablet_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 120
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 70
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17392593886772",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Integrations with Search Module",
+         "name": "widget_1739259388253",
+         "params": {
+          "bg_color": {
+           "color": "#F0F5F6",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "heading_content": "<h2><span>Assisted Integrations</span></h2>\n<p>Flieber uses a combination of advanced data modeling and AI-based mapping to connect to any system, even the ones not natively integrated with our platform.</p>",
+          "integration_columns": [
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Shopify-Plus",
+             "height": 85,
+             "max_height": 85,
+             "max_width": 407,
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Shopify-Plus.png",
+             "width": 407
+            },
+            "add_title": "Shopifyplus",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "download-1",
+             "height": 114,
+             "loading": "lazy",
+             "max_height": 114,
+             "max_width": 443,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/download-1.jpg",
+             "width": 443
+            },
+            "add_title": "Amazon Vendor Central",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Tiktok-Shop",
+             "height": 713,
+             "loading": "lazy",
+             "max_height": 1426,
+             "max_width": 1400,
+             "size_type": "auto_custom_max",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Tiktok-Shop.png",
+             "width": 700
+            },
+            "add_title": "Tiktok Shop",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-magento-2x",
+             "height": 97,
+             "loading": "lazy",
+             "max_height": 97,
+             "max_width": 331,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-magento-2x.png",
+             "width": 331
+            },
+            "add_title": "magento",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-woocommerce-2x",
+             "height": 94,
+             "loading": "lazy",
+             "max_height": 94,
+             "max_width": 466,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-woocommerce-2x.png",
+             "width": 466
+            },
+            "add_title": "woocommerce",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-mercadoLibre-2x",
+             "height": 100,
+             "loading": "lazy",
+             "max_height": 100,
+             "max_width": 394,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-mercadoLibre-2x.png",
+             "width": 394
+            },
+            "add_title": "mercadoLibre",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-bol-dot-com-2x",
+             "height": 85,
+             "loading": "lazy",
+             "max_height": 85,
+             "max_width": 351,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-bol-dot-com-2x.png",
+             "width": 351
+            },
+            "add_title": "bol.com",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "download-2-2",
+             "height": 112,
+             "loading": "lazy",
+             "max_height": 112,
+             "max_width": 450,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/download-2-2.png",
+             "width": 450
+            },
+            "add_title": "Presta Shop",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Quickbooks",
+             "height": 197,
+             "loading": "lazy",
+             "max_height": 197,
+             "max_width": 1021,
+             "size_type": "auto_custom_max",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Quickbooks.png",
+             "width": 1021
+            },
+            "add_title": "Quickbooks",
+            "tags": [
+             {
+              "add_tag": "Shipments"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Xero",
+             "height": 1574,
+             "loading": "lazy",
+             "max_height": 1574,
+             "max_width": 1574,
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Xero.png",
+             "width": 1574
+            },
+            "add_title": "Xero",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Zoho",
+             "height": 1087,
+             "loading": "lazy",
+             "max_height": 860.6492478226445,
+             "max_width": 2000,
+             "size_type": "auto_custom_max",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Zoho.png",
+             "width": 2526
+            },
+            "add_title": "Zoho",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-CIN7-2x",
+             "height": 109,
+             "loading": "lazy",
+             "max_height": 109,
+             "max_width": 334,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-CIN7-2x.png",
+             "width": 334
+            },
+            "add_title": "CIN7",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "sage",
+             "height": 267,
+             "loading": "lazy",
+             "max_height": 267,
+             "max_width": 700,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/sage.png",
+             "width": 700
+            },
+            "add_title": "Sage",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Linworks",
+             "height": 134,
+             "loading": "lazy",
+             "max_height": 134,
+             "max_width": 700,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Linworks.png",
+             "width": 700
+            },
+            "add_title": "Linnworks",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-brightpeart-2x",
+             "height": 93,
+             "loading": "lazy",
+             "max_height": 93,
+             "max_width": 373,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-brightpeart-2x.png",
+             "width": 373
+            },
+            "add_title": "brightpeart",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-luminous-2x",
+             "height": 91,
+             "loading": "lazy",
+             "max_height": 91,
+             "max_width": 430,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-luminous-2x.png",
+             "width": 430
+            },
+            "add_title": "luminous",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Finale",
+             "height": 236,
+             "loading": "lazy",
+             "max_height": 236,
+             "max_width": 600,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Finale.png",
+             "width": 600
+            },
+            "add_title": "Finale",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "dear systems image",
+             "height": 349,
+             "loading": "lazy",
+             "max_height": 349,
+             "max_width": 1081,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/image%20(11).png",
+             "width": 1081
+            },
+            "add_title": "Dear Systems",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Fishbowl",
+             "height": 104,
+             "loading": "lazy",
+             "max_height": 104,
+             "max_width": 600,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Fishbowl.png",
+             "width": 600
+            },
+            "add_title": "Fishbowl",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-skuvault-2x",
+             "height": 53,
+             "loading": "lazy",
+             "max_height": 53,
+             "max_width": 221,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-skuvault-2x.png",
+             "width": 221
+            },
+            "add_title": "skuvault",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-shipstation",
+             "height": 42,
+             "loading": "lazy",
+             "max_height": 42,
+             "max_width": 197,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-shipstation.png",
+             "width": 197
+            },
+            "add_title": "shipstation",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-anvyl-2x",
+             "height": 69,
+             "loading": "lazy",
+             "max_height": 44,
+             "max_width": 250,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-anvyl-2x.png",
+             "width": 394
+            },
+            "add_title": "anvyl",
+            "tags": [
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-flexport-2x",
+             "height": 82,
+             "loading": "lazy",
+             "max_height": 82,
+             "max_width": 346,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-flexport-2x.png",
+             "width": 346
+            },
+            "add_title": "Flexport/Deliverr",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Shipbob",
+             "height": 106,
+             "loading": "lazy",
+             "max_height": 106,
+             "max_width": 406,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Shipbob.png",
+             "width": 406
+            },
+            "add_title": "Shipbob",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-shiphero-2x",
+             "height": 100,
+             "loading": "lazy",
+             "max_height": 100,
+             "max_width": 341,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-shiphero-2x.png",
+             "width": 341
+            },
+            "add_title": "shiphero",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-extensiv-2x",
+             "height": 87,
+             "loading": "lazy",
+             "max_height": 87,
+             "max_width": 312,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-extensiv-2x.png",
+             "width": 312
+            },
+            "add_title": "extensiv",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Stord",
+             "height": 149,
+             "loading": "lazy",
+             "max_height": 149,
+             "max_width": 700,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Stord.png",
+             "width": 700
+            },
+            "add_title": "Stord",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Veerqo",
+             "height": 109,
+             "loading": "lazy",
+             "max_height": 109,
+             "max_width": 461,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Veerqo.png",
+             "width": 461
+            },
+            "add_title": "Veeqo",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-flowspace-2x",
+             "height": 94,
+             "loading": "lazy",
+             "max_height": 94,
+             "max_width": 451,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-flowspace-2x.png",
+             "width": 451
+            },
+            "add_title": "flowspace",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-everstox-2x",
+             "height": 70,
+             "loading": "lazy",
+             "max_height": 70,
+             "max_width": 410,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-everstox-2x.png",
+             "width": 410
+            },
+            "add_title": "everstox",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-goflow-2x",
+             "height": 79,
+             "loading": "lazy",
+             "max_height": 79,
+             "max_width": 505,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-goflow-2x.png",
+             "width": 505
+            },
+            "add_title": "goflow",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "fulfil",
+             "height": 206,
+             "loading": "lazy",
+             "max_height": 206,
+             "max_width": 782,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/fulfil.png",
+             "width": 782
+            },
+            "add_title": "Fulfil",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "amzprep",
+             "height": 145,
+             "loading": "lazy",
+             "max_height": 145,
+             "max_width": 800,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/amzprep.png",
+             "width": 800
+            },
+            "add_title": "AMZ Prep",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Logiwa",
+             "height": 497,
+             "loading": "lazy",
+             "max_height": 497,
+             "max_width": 1511,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Logiwa.png",
+             "width": 1511
+            },
+            "add_title": "Logiwa",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Unleashed",
+             "height": 101,
+             "loading": "lazy",
+             "max_height": 101,
+             "max_width": 445,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Unleased.png",
+             "width": 445
+            },
+            "add_title": "Unleashed",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "Shipmonk",
+             "height": 236,
+             "loading": "lazy",
+             "max_height": 236,
+             "max_width": 1056,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Shipmonk.png",
+             "width": 1056
+            },
+            "add_title": "shipmonk",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "unleashed-dark",
+             "height": 115,
+             "loading": "lazy",
+             "max_height": 115,
+             "max_width": 455,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/unleashed-dark.png",
+             "width": 455
+            },
+            "add_title": "Unleashed inventory",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-3plguys-2x",
+             "height": 127,
+             "loading": "lazy",
+             "max_height": 127,
+             "max_width": 237,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-3plguys-2x.png",
+             "width": 237
+            },
+            "add_title": "3plguys",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-shipout-2x",
+             "height": 101,
+             "loading": "lazy",
+             "max_height": 101,
+             "max_width": 351,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-shipout-2x.png",
+             "width": 351
+            },
+            "add_title": "shipout",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-easy-fulfillment-2x",
+             "height": 77,
+             "loading": "lazy",
+             "max_height": 77,
+             "max_width": 532,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-easy-fulfillment-2x.png",
+             "width": 532
+            },
+            "add_title": "easyfulfillment",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-ceva-2x",
+             "height": 89,
+             "loading": "lazy",
+             "max_height": 89,
+             "max_width": 287,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-ceva-2x.png",
+             "width": 287
+            },
+            "add_title": "cevalogistics",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-world-depot-inc-2x",
+             "height": 88,
+             "loading": "lazy",
+             "max_height": 88,
+             "max_width": 426,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-world-depot-inc-2x.png",
+             "width": 426
+            },
+            "add_title": "worlddepotinc",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_logo": {
+             "alt": "logo-zhenhub-2x",
+             "height": 91,
+             "loading": "lazy",
+             "max_height": 91,
+             "max_width": 388,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/integrations/logo-zhenhub-2x.png",
+             "width": 388
+            },
+            "add_title": "zhenhub",
+            "tags": [
+             {
+              "add_tag": "Inventory"
+             },
+             {
+              "add_tag": "Shipments"
+             }
+            ]
+           },
+           {
+            "add_link": {
+             "no_follow": false,
+             "open_in_new_tab": false,
+             "url": {
+              "href": "www.flieber.com/flieber-vs-netsuite",
+              "type": "EXTERNAL"
+             }
+            },
+            "add_logo": {
+             "alt": "NetSuite",
+             "height": 211,
+             "loading": "lazy",
+             "max_height": 211,
+             "max_width": 800,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/NetSuite.png",
+             "width": 800
+            },
+            "add_title": "Netsuite",
+            "tags": [
+             {
+              "add_tag": "Sales"
+             },
+             {
+              "add_tag": "Inventory"
+             }
+            ]
+           }
+          ],
+          "module_id": 186014079289,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           },
+           "mobile_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 90
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 40
+             }
+            }
+           },
+           "tablet_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 120
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 70
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17326016887752",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Book A Demo Module",
+         "name": "widget_1732601688413",
+         "params": {
+          "add_content": "<h2>Stop guessing. Start <span>Fliebing</span>.</h2>\n<p>Use Flieber for free for 14 days. No credit card required.</p>",
+          "bg_color": {
+           "color": "#ffffff",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           },
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           }
+          ],
+          "module_id": 183216575611,
+          "schema_version": 2,
+          "style": {
+           "box_background_color": {
+            "color": "#186DFF",
+            "opacity": 100
+           },
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 100
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           },
+           "highlight_color_in_text": {
+            "color": "#ffffff",
+            "opacity": 100
+           },
+           "second_button": {
+            "default_state": {
+             "background_color": {
+              "color": "#ffffff",
+              "opacity": 100
+             },
+             "text_color": {
+              "color": "#1B1C1C",
+              "opacity": 100
+             }
+            },
+            "hover_state": {
+             "background_color": {
+              "color": "#ffffff",
+              "opacity": 0
+             },
+             "text_color": {
+              "color": "#ffffff",
+              "opacity": 100
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Connect Flieber to Amazon, Shopify, Walmart, and your 3PL. Sync all your sales and supply chain data for full inventory visibility and smarter forecasting.",
+ "name": "Integrations",
+ "pageExpiryEnabled": false,
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2025-02-26T05:30:45Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "archive/integrations",
+ "state": "DRAFT",
+ "subcategory": "site_page",
+ "templatePath": "flieber/templates/product-page.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:05:31.467Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/archive/integrations",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

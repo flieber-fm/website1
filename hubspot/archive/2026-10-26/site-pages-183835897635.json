@@ -1,0 +1,1506 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 4,
+ "createdAt": "2024-12-13T05:39:05.847Z",
+ "createdById": "69768445",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "htmlTitle": "Flieber | The Decision Making Tool For Modern Commerce",
+ "id": "183835897635",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1732538444450",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Product Banner Module",
+         "name": "widget_1734071178287",
+         "params": {
+          "add_content": "<h1>Make inventory <br>decisions faster than you can say <span>spreadsheet</span></h1>\n<p>Flieber pulls and cleans data from all your systems to help you manage or push POs/TOs, get advanced restocking suggestions, and perform custom inventory forecasting and planning. Quickly make smart replenishment decisions across all channels without clunky spreadsheets or an overpriced enterprise solution.</p>",
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           },
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           }
+          ],
+          "module_id": 183842063672,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 196
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1732599030498",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Logo Module",
+         "name": "widget_1732599030147",
+         "params": {
+          "bg_color": {
+           "color": "#FFFFFF",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "first_row_group": [
+           {
+            "add_logo_image": {
+             "alt": "zugu",
+             "height": 24,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/zugu.png",
+             "width": 72
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "paperlike",
+             "height": 25,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/paperlike.png",
+             "width": 103
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "primalharvest",
+             "height": 28,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/primalharvest.png",
+             "width": 125
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "unybrands",
+             "height": 20,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/unybrands.png",
+             "width": 95
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "mannatech",
+             "height": 25,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/mannatech.png",
+             "width": 148
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "piccalio",
+             "height": 27,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/piccalio.png",
+             "width": 90
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "jaeger",
+             "height": 46,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/jaeger.png",
+             "width": 63
+            }
+           }
+          ],
+          "module_id": 183209679378,
+          "schema_version": 2,
+          "second_row_group": [
+           {
+            "add_logo_image": {
+             "alt": "lifepro",
+             "height": 34,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/lifepro.png",
+             "width": 89
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "wargames",
+             "height": 39,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/wargames.png",
+             "width": 52
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "qualico",
+             "height": 21,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/qualico.png",
+             "width": 79
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "southshore",
+             "height": 22,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/southshore.png",
+             "width": 145
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "bearaby",
+             "height": 29,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/bearaby.png",
+             "width": 93
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "alt",
+             "height": 27,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/alt.png",
+             "width": 64
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "waterglider",
+             "height": 43,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/waterglide.png",
+             "width": 43
+            }
+           }
+          ],
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 110
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 60
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1734072003202",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Case Module",
+         "name": "widget_1734072002810",
+         "params": {
+          "add_cta": [
+           "ca2b9a11-1e49-4867-a09e-2ff3688a89b4",
+           "9f07650d-be41-4392-a318-21adff2a9103"
+          ],
+          "case_list_group": [
+           {
+            "icon_image": {
+             "alt": "layer",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 38,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/layer.svg",
+             "width": 38
+            },
+            "sub_text": "Unify data from multiple sources into a single, actionable view.",
+            "title_text": "Heterogenous data"
+           },
+           {
+            "icon_image": {
+             "alt": "sound",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/sound.svg",
+             "width": 39
+            },
+            "sub_text": "Accurately predict demand across various sales channels.",
+            "title_text": "Omnichannel forecasting"
+           },
+           {
+            "icon_image": {
+             "alt": "layout",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/layout.svg",
+             "width": 39
+            },
+            "sub_text": "Implement different replenishment paths at a product level.",
+            "title_text": "Intricate supply chains"
+           },
+           {
+            "icon_image": {
+             "alt": "direction",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/direction.svg",
+             "width": 39
+            },
+            "sub_text": "Calculate the combined inventory needs at the warehouse level.",
+            "title_text": "Multi-channel inventory"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-delivery",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 38,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-delivery.svg",
+             "width": 38
+            },
+            "sub_text": "Define SKU-specific replenishment parameters.",
+            "title_text": "Diverse replenishment strategies"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-drawer",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 38,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-drawer.svg",
+             "width": 38
+            },
+            "sub_text": "Easily identify inventory issues across your whole portfolio.",
+            "title_text": "Large number of SKUs"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-pie-graph",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-pie-graph.svg",
+             "width": 39
+            },
+            "sub_text": "Auto-correct historical data anomalies to improve forecasts.",
+            "title_text": "Faulty historical data"
+           },
+           {
+            "icon_image": {
+             "alt": "truck",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/truck.svg",
+             "width": 39
+            },
+            "sub_text": "Simulate different inventory strategies before execution.",
+            "title_text": "Various restocking scenarios"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-warning",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-warning.svg",
+             "width": 39
+            },
+            "sub_text": "Optimize replenishment planning to reach the just right inventory.",
+            "title_text": "Stockouts and overstocks"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-switch",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 38,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-switch.svg",
+             "width": 38
+            },
+            "sub_text": "Optimize replenishment planning to reach the just right inventory.",
+            "title_text": "Intricate supply chains"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-charts",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-charts.svg",
+             "width": 39
+            },
+            "sub_text": "Leverage advanced AI algorithms that adapt to any type of product.",
+            "title_text": "Forecasting complexity"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-storage-box",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-storage-box.svg",
+             "width": 39
+            },
+            "sub_text": "Build forecasts for products with limited historical data.",
+            "title_text": "New products with no history"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-shopping-cart",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-shopping-cart.svg",
+             "width": 39
+            },
+            "sub_text": "Interact with forecasts to make corrections or add events.",
+            "title_text": "Inaccurate sales forecasts"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-grid",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-grid-1515385.svg",
+             "width": 39
+            },
+            "sub_text": "Handle kits, bundles, backorders, and other advanced cases.",
+            "title_text": "Complex inventory scenarios"
+           },
+           {
+            "icon_image": {
+             "alt": "plane",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/plane.svg",
+             "width": 39
+            },
+            "sub_text": "Monitor all purchase and transfer orders in a central location.",
+            "title_text": "Shipments from various sources"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-pie-graph",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-pie-graph.svg",
+             "width": 39
+            },
+            "sub_text": "Gain a holistic view of inventory across all your channels and locations.",
+            "title_text": "No inventory visibility"
+           }
+          ],
+          "css_class": "dnd-module",
+          "module_id": 183836568683,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "styles": {
+          "breakpointStyles": {
+           "default": {
+            "hidden": true
+           },
+           "mobile": {
+            "hidden": true
+           }
+          }
+         },
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Case Module V2",
+         "name": "widget_1734756887218",
+         "params": {
+          "add_cta": [
+           "ca2b9a11-1e49-4867-a09e-2ff3688a89b4",
+           "9f07650d-be41-4392-a318-21adff2a9103"
+          ],
+          "case_list_group": [
+           {
+            "icon_image": {
+             "alt": "noun-switch",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 38,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-switch.svg",
+             "width": 38
+            },
+            "sub_text": "Optimize replenishment planning to reach the just right inventory.",
+            "title_text": "Intricate supply chains"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-charts",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-charts.svg",
+             "width": 39
+            },
+            "sub_text": "Leverage advanced AI algorithms that adapt to any type of product.",
+            "title_text": "Forecasting complexity"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-storage-box",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-storage-box.svg",
+             "width": 39
+            },
+            "sub_text": "Build forecasts for products with limited historical data.",
+            "title_text": "New products with no history"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-shopping-cart",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-shopping-cart.svg",
+             "width": 39
+            },
+            "sub_text": "Interact with forecasts to make corrections or add events.",
+            "title_text": "Inaccurate sales forecasts"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-grid",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-grid.svg",
+             "width": 39
+            },
+            "sub_text": "Handle kits, bundles, backorders, and other advanced cases.",
+            "title_text": "Complex inventory scenarios"
+           },
+           {
+            "icon_image": {
+             "alt": "plane",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/plane.svg",
+             "width": 39
+            },
+            "sub_text": "Monitor all purchase and transfer orders in a central location.",
+            "title_text": "Shipments from various sources"
+           },
+           {
+            "icon_image": {
+             "alt": "Blog",
+             "height": 24,
+             "loading": "lazy",
+             "max_height": 24,
+             "max_width": 24,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/icon/Blog.svg",
+             "width": 24
+            },
+            "sub_text": "Gain a holistic view of inventory across all your channels and locations.",
+            "title_text": "No inventory visibility"
+           }
+          ],
+          "css_class": "dnd-module",
+          "left_case_list_group": [
+           {
+            "icon_image": {
+             "alt": "layer",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 38,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/layer.svg",
+             "width": 38
+            },
+            "sub_text": "Unify data from multiple sources into a single, actionable view.",
+            "title_text": "Heterogenous data"
+           },
+           {
+            "icon_image": {
+             "alt": "sound",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/sound.svg",
+             "width": 39
+            },
+            "sub_text": "Accurately predict demand across various sales channels.",
+            "title_text": "Omnichannel forecasting"
+           },
+           {
+            "icon_image": {
+             "alt": "layout",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/layout.svg",
+             "width": 39
+            },
+            "sub_text": "Implement different replenishment paths at a product level.",
+            "title_text": "Intricate supply chains"
+           },
+           {
+            "icon_image": {
+             "alt": "direction",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/direction.svg",
+             "width": 39
+            },
+            "sub_text": "Calculate the combined inventory needs at the warehouse level.",
+            "title_text": "Multi-channel inventory"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-drawer",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 38,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-drawer.svg",
+             "width": 38
+            },
+            "sub_text": "Easily identify inventory issues across your whole portfolio.",
+            "title_text": "Large number of SKUs"
+           },
+           {
+            "icon_image": {
+             "alt": "Vector (4)",
+             "height": 17,
+             "loading": "lazy",
+             "max_height": 17,
+             "max_width": 18,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/Vector%20(4).svg",
+             "width": 18
+            },
+            "sub_text": "Auto-correct historical data anomalies to improve forecasts.",
+            "title_text": "Faulty historical data"
+           },
+           {
+            "icon_image": {
+             "alt": "truck",
+             "height": 39,
+             "loading": "lazy",
+             "max_height": 39,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/truck.svg",
+             "width": 39
+            },
+            "sub_text": "Simulate different inventory strategies before execution.",
+            "title_text": "Various restocking scenarios"
+           },
+           {
+            "icon_image": {
+             "alt": "noun-warning",
+             "height": 38,
+             "loading": "lazy",
+             "max_height": 38,
+             "max_width": 39,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/noun-warning.svg",
+             "width": 39
+            },
+            "sub_text": "Optimize replenishment planning to reach the just right inventory.",
+            "title_text": "Stockouts and overstocks"
+           }
+          ],
+          "module_id": 184148901411,
+          "schema_version": 2
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17340728477062",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Left Right Image Module",
+         "name": "widget_1734072847364",
+         "params": {
+          "css_class": "dnd-module",
+          "image_content_row_group": [
+           {
+            "add_content": "<h3>Sales channels</h3>\n<p>Natively integrated with the most important channels and platforms (Amazon, Shopify, Walmart, eBay, etc.) and able to integrate through middlewares with any other system.</p>",
+            "add_image": {
+             "alt": "flieber_product_saleschannels",
+             "height": 733,
+             "loading": "lazy",
+             "max_height": 733,
+             "max_width": 1200,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/flieber_product_saleschannels.png",
+             "width": 1200
+            },
+            "select_image_position": "right"
+           },
+           {
+            "add_content": "<h3>Inventory</h3>\n<p>Seamlessly connected to leading fulfillment platforms like Amazon FBA, Walmart WFS, and 3PL systems, with the flexibility to integrate any other system through middlewares. Stay in control of your inventory, no matter where it lives.</p>",
+            "add_image": {
+             "alt": "Inventory",
+             "height": 489,
+             "loading": "lazy",
+             "max_height": 489,
+             "max_width": 800,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/Inventory.png",
+             "width": 800
+            },
+            "select_image_position": "left"
+           },
+           {
+            "add_content": "<h3>Google Sheets</h3>\n<p>Flieber is able to consume sales, inventory, and PO/TO data directly from Google Sheets, making it very easy to automate sources of data that aren\u2019t connected to systems.</p>",
+            "add_image": {
+             "alt": "Google-sheets",
+             "height": 489,
+             "loading": "lazy",
+             "max_height": 489,
+             "max_width": 800,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/Google-sheets.png",
+             "width": 800
+            },
+            "select_image_position": "right"
+           }
+          ],
+          "module_id": 183842415178,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17326004409302",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Image Content Module",
+         "name": "module_17326004409304",
+         "params": {
+          "add_content": "<h2>Simple frontend, advanced backend</h2>\n<p>Flieber provides a clear, user-friendly interface that gives you complete visibility over your sales and inventory with real-time accuracy. On the backend, it uses advanced data contextualization, inventory consumption calculations, and supply chain mapping to deliver the most accurate forecasting and recommendations possible.</p>",
+          "add_image": {
+           "alt": "Inventory_decisions",
+           "height": 2075,
+           "loading": "lazy",
+           "max_height": 1976.1904761904764,
+           "max_width": 2000,
+           "size_type": "auto_custom_max",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/logo-images/Inventory_decisions.png",
+           "width": 2100
+          },
+          "bg_color": {
+           "color": "#186DFF",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "add_cta": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           },
+           {
+            "add_cta": "9f07650d-be41-4392-a318-21adff2a9103"
+           }
+          ],
+          "enable_cta": true,
+          "module_id": 183216011821,
+          "schema_version": 2,
+          "select_image_position": "left",
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          },
+          "text_color": {
+           "color": "#ffffff",
+           "opacity": 100
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17340737734922",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Three Column Module",
+         "name": "widget_1734073773145",
+         "params": {
+          "css_class": "dnd-module",
+          "module_id": 183842690605,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          },
+          "three_column_group": [
+           {
+            "add_image": {
+             "alt": "ebay-amazon",
+             "height": 445,
+             "loading": "lazy",
+             "max_height": 445,
+             "max_width": 627,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/ebay-amazon.jpg",
+             "width": 627
+            },
+            "add_text": "Connect your data sources, such as sales channels, Amazon FBA, and 3PLs, and auto-map your integrations."
+           },
+           {
+            "add_image": {
+             "alt": "calendars",
+             "height": 445,
+             "loading": "lazy",
+             "max_height": 445,
+             "max_width": 627,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/calendars.jpg",
+             "width": 627
+            },
+            "add_text": "Configure the most important parameters, such as safety stock levels, target days of coverage, MOQs, etc., and watch accurate forecasting and restocking suggestions start flowing in.\u00a0"
+           },
+           {
+            "add_image": {
+             "alt": "camera-bag",
+             "height": 445,
+             "loading": "lazy",
+             "max_height": 445,
+             "max_width": 628,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/camera-bag.png",
+             "width": 628
+            },
+            "add_text": "Go live! Start saving time and cutting costs right away. Set up can take as little as 20 minutes to complete."
+           }
+          ]
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1734074611517",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Customers Review Module",
+         "name": "widget_1734074611481",
+         "params": {
+          "css_class": "dnd-module",
+          "heading_text": "<h2 class=\"animate_show\">What our customers say</h2>",
+          "module_id": 182704064162,
+          "repeater_group": [
+           {
+            "add_content": "<p><span dir=\"ltr\" role=\"presentation\">\"Flieber allows us to leverage technology to make demand </span><span dir=\"ltr\" role=\"presentation\">planning and forecasting more streamlined and efficient. As a </span><span dir=\"ltr\" role=\"presentation\">result, we have a less error prone process and have more time </span><span dir=\"ltr\" role=\"presentation\">to spend making strategic decisions vs. data clean-</span><br role=\"presentation\"><span dir=\"ltr\" role=\"presentation\">up/analysis.\"</span></p>",
+            "client_name_and_job_title": {
+             "client_name": "Wesley Way",
+             "company_job_title": "VP of Operations"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "Box-1",
+             "height": 350,
+             "loading": "lazy",
+             "max_height": 350,
+             "max_width": 251,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Box-1.png",
+             "width": 251
+            }
+           },
+           {
+            "add_content": "<p><span dir=\"ltr\" role=\"presentation\">\"Flieber is a game-changer for supply chain planning in e-</span><span dir=\"ltr\" role=\"presentation\">commerce companies. Its efficient consolidation of sales data </span><span dir=\"ltr\" role=\"presentation\">through its integrations not only simplifies decision-making but </span><span dir=\"ltr\" role=\"presentation\">also saves significant time. Their user-friendly interface </span><span dir=\"ltr\" role=\"presentation\">ensures easy navigation, making it a valuable tool for </span><span dir=\"ltr\" role=\"presentation\">streamlining operations and boosting productivity. Flieber is a </span><span dir=\"ltr\" role=\"presentation\">must-have for businesses looking to optimize their supply </span><span dir=\"ltr\" role=\"presentation\">chain processes.\"</span></p>",
+            "client_name_and_job_title": {
+             "client_name": "Sara Maya",
+             "company_job_title": "Supply Chain Manager"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "Box",
+             "height": 350,
+             "loading": "lazy",
+             "max_height": 350,
+             "max_width": 250,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Box.png",
+             "width": 250
+            }
+           },
+           {
+            "add_content": "<p><span dir=\"ltr\" role=\"presentation\">With Flieber, I could integrate the inventory position in </span><span dir=\"ltr\" role=\"presentation\">different locations and also have an accurate sales forecast </span><span dir=\"ltr\" role=\"presentation\">for multiple channels. As a result, it is much easier to plan and </span><span dir=\"ltr\" role=\"presentation\">replenish inventory. And stockouts are no more a problem. I </span><br role=\"presentation\"><span dir=\"ltr\" role=\"presentation\">love the real-time view of the entire supply chain operation: </span><span dir=\"ltr\" role=\"presentation\">what is transit, when will it arrive, and what to order or transfer. I</span><span dir=\"ltr\" role=\"presentation\">t completely changed my replenishment process.\"</span></p>",
+            "client_name_and_job_title": {
+             "client_name": "JP SantAnna",
+             "company_job_title": "CEO"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "wesley-1",
+             "height": 376,
+             "loading": "lazy",
+             "max_height": 376,
+             "max_width": 251,
+             "size_type": "auto_custom_max",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/wesley-1.jpg",
+             "width": 251
+            }
+           },
+           {
+            "add_content": "<p><span dir=\"ltr\" role=\"presentation\">\"I had problems replenishing our inventories and Flieber is </span><span dir=\"ltr\" role=\"presentation\">helping me plan when and how many to order to avoid </span><span dir=\"ltr\" role=\"presentation\">stockout. I love how the team is very hands-on. Every time I </span><span dir=\"ltr\" role=\"presentation\">had an issue, they are always there to help. Also, the </span><span dir=\"ltr\" role=\"presentation\">forecasting is accurate making my inventory planning easier.\"</span></p>",
+            "client_name_and_job_title": {
+             "client_name": "Criselda S",
+             "company_job_title": "Supply Chain Manager"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "users",
+             "height": 225,
+             "loading": "lazy",
+             "max_height": 225,
+             "max_width": 226,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/users.png",
+             "width": 226
+            }
+           },
+           {
+            "add_content": "<p>\"Before Flieber, we manually analyzed sales and guessed purchase quantities, which took days. Now, we efficiently forecast and order only what's needed, avoiding excess inventory.\"</p>",
+            "client_name_and_job_title": {
+             "client_name": "Sohail L",
+             "company_job_title": "CEO"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "Operator Card-2",
+             "height": 460,
+             "loading": "lazy",
+             "max_height": 460,
+             "max_width": 460,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/logo-images/Operator%20Card-2.png",
+             "width": 460
+            }
+           },
+           {
+            "add_content": "<p><span dir=\"ltr\" role=\"presentation\">\"Flieber has replaced an extremely time intensive piece of our </span><span dir=\"ltr\" role=\"presentation\">work with better results. It helps me predict my mid to long </span><span dir=\"ltr\" role=\"presentation\">term demand and inventory replenishment needs. This is </span><span dir=\"ltr\" role=\"presentation\">immensely important due to my long lead times and complex </span><span dir=\"ltr\" role=\"presentation\">product portfolio due to multi-channel variation. It's great to </span><span dir=\"ltr\" role=\"presentation\">have a tool that automates so much of this process.\"</span></p>",
+            "client_name_and_job_title": {
+             "client_name": "James Kelly",
+             "company_job_title": "Co-Founder"
+            },
+            "enable_client_detail": true,
+            "logo_image": {
+             "src": ""
+            },
+            "user_image": {
+             "alt": "bryan",
+             "height": 238,
+             "loading": "lazy",
+             "max_height": 238,
+             "max_width": 251,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/bryan.png",
+             "width": 251
+            }
+           }
+          ],
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 100
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17326016887752",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Book A Demo Module",
+         "name": "widget_1732601688413",
+         "params": {
+          "add_content": "<h2>Stop guessing. Start <span>Fliebing</span>.</h2>\n<p>Use Flieber for free for 14 days. No credit card required.</p>",
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           },
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           }
+          ],
+          "module_id": 183216575611,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 100
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Discover Flieber\u2019s AI-first platform. Connect your sales & supply chain data for full visibility, smarter forecasting, & precise inventory recommendations",
+ "name": "Product",
+ "pageExpiryEnabled": false,
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2024-12-19T20:20:51Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "product",
+ "state": "DRAFT",
+ "subcategory": "site_page",
+ "templatePath": "flieber/templates/product-page.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:08:26.785Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/product",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

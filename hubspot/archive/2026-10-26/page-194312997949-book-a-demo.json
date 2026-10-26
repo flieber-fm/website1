@@ -1,0 +1,731 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [],
+ "authorName": "Karyna Accioly",
+ "categoryId": 1,
+ "contentTypeCategory": 4,
+ "createdAt": "2025-08-12T08:23:54.706Z",
+ "createdById": "4752608",
+ "currentState": "PUBLISHED",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "footerHtml": "<script>\ndocument.querySelectorAll('.video-card').forEach(card => {\n  const video = card.querySelector('video');\n  // Click = open lightbox\n  card.addEventListener('click', () => {\n    const src = video.getAttribute('src');\n    openVideoLightbox(src);\n  });\n});\n\nfunction openVideoLightbox(src) {\n  const lightbox = document.createElement('div');\n  lightbox.className = 'video-lightbox';\n  lightbox.innerHTML = `\n    <button class=\"close-btn\" aria-label=\"Close\">&times;</button>\n    <video src=\"${src}\" autoplay controls playsinline></video>\n  `;\n  document.body.appendChild(lightbox);\n\n  // Close on click or escape\n  lightbox.querySelector('.close-btn').addEventListener('click', () => lightbox.remove());\n  lightbox.addEventListener('click', e => {\n    if (e.target === lightbox) lightbox.remove();\n  });\n  document.addEventListener('keydown', e => {\n    if (e.key === 'Escape') lightbox.remove();\n  });\n}\n</script>\n",
+ "headHtml": "<style>\n.explainer-videos-new .carousel .video-card {\n    box-shadow: none;\n}\n.carousel .video-card .play-toggle {\n    left: 0;\n    transform: none;\n    top: 0;\n}\n.video-card {\n  position: relative;\n  overflow: hidden;\n  cursor: pointer;\n}\n\n/* No shadow, center icon */\n.video-card .play-toggle {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  border: none;\n  color: white;\n  font-size: 64px;\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  z-index: 3;\n  pointer-events: none;\n}\n\n/* Hover effect */\n.video-card:hover .play-toggle {\n  opacity: 1;\n}\n\n/* When playing, hide icon (still shows on hover) */\n.video-card.playing .play-toggle {\n  opacity: 0;\n}\n.video-card.playing:hover .play-toggle {\n  opacity: 1;\n}\n\n/* Lightbox overlay */\n.video-lightbox {\n  position: fixed;\n  inset: 0;\n  background: rgba(0,0,0,0.85);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 9999;\n}\n.video-lightbox video {\n  max-width: 90%;\n  max-height: 80vh;\n}\n.video-lightbox .close-btn {\n  position: absolute;\n  top: 20px;\n  right: 30px;\n  background: none;\n  color: white;\n  border: none;\n  font-size: 32px;\n  cursor: pointer;\n}\n.content-logo-form-wrap > .right-form {\n  flex: 0 0 600px!important;\n}\n@media (max-width: 1390px) {\n    .content-logo-form-wrap > .right-form {\n       flex: 0 0 500px!important; \n    }\n  }\n  @media (max-width: 1074px) {\n    .content-logo-form-wrap > .right-form {\n       flex: 1!important; \n    }\n  }\n  @media (max-width: 767px) {\n    .content-logo-form-wrap {\n       display: block!important;\n  \t}\n  \t.content-logo-form-wrap > .right-form {\n       width: 500px;\n   \t   max-width: 100%;\n       margin: 50px auto;\n  \t}\n  }  \n</style>",
+ "htmlTitle": "Book A Demo",
+ "id": "194312997949",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {
+        "padding": {
+         "bottom": {
+          "units": "px",
+          "value": 0
+         },
+         "left": {
+          "units": "px",
+          "value": 0
+         },
+         "right": {
+          "units": "px",
+          "value": 0
+         }
+        }
+       }
+      },
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section"
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {
+        "padding": {
+         "bottom": {
+          "units": "px",
+          "value": 0
+         },
+         "left": {
+          "units": "px",
+          "value": 0
+         },
+         "right": {
+          "units": "px",
+          "value": 0
+         },
+         "top": {
+          "units": "px",
+          "value": 0
+         }
+        }
+       }
+      },
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {
+        "padding": {
+         "bottom": {
+          "units": "px",
+          "value": 0
+         },
+         "left": {
+          "units": "px",
+          "value": 0
+         },
+         "right": {
+          "units": "px",
+          "value": 0
+         },
+         "top": {
+          "units": "px",
+          "value": 0
+         }
+        }
+       }
+      },
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17538918465322",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Content Logo Form Module V3",
+         "name": "widget_1755350802469",
+         "params": {
+          "css_class": "dnd-module",
+          "form_field": {
+           "form_id": "4abdd695-1946-4918-8bc1-981e883767f0",
+           "form_type": "HUBSPOT",
+           "message": "Thanks for submitting the form.",
+           "response_type": "inline"
+          },
+          "logo_slider": {
+           "heading": "Trusted by <span>hundreds</span> of brands",
+           "logo": [
+            {
+             "alt": "logo-1-1",
+             "height": 25,
+             "loading": "lazy",
+             "max_height": 25,
+             "max_width": 71,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/logo-1-1.svg",
+             "width": 71
+            },
+            {
+             "alt": "logo-2",
+             "height": 24,
+             "loading": "lazy",
+             "max_height": 24,
+             "max_width": 123,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/logo-2.svg",
+             "width": 123
+            },
+            {
+             "alt": "logo-3",
+             "height": 32,
+             "loading": "lazy",
+             "max_height": 32,
+             "max_width": 87,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/logo-3.svg",
+             "width": 87
+            },
+            {
+             "alt": "logo-4",
+             "height": 29,
+             "loading": "lazy",
+             "max_height": 29,
+             "max_width": 116,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/logo-4.svg",
+             "width": 116
+            },
+            {
+             "alt": "logo-5",
+             "height": 20,
+             "loading": "lazy",
+             "max_height": 20,
+             "max_width": 118,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/logo-5.svg",
+             "width": 118
+            },
+            {
+             "alt": "logo-6",
+             "height": 26,
+             "loading": "lazy",
+             "max_height": 26,
+             "max_width": 107,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/logo-6.svg",
+             "width": 107
+            },
+            {
+             "alt": "logo-7",
+             "height": 25,
+             "loading": "lazy",
+             "max_height": 25,
+             "max_width": 115,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/logo-7.svg",
+             "width": 115
+            },
+            {
+             "alt": "logo-8",
+             "height": 34,
+             "loading": "lazy",
+             "max_height": 34,
+             "max_width": 123,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/logo-8.svg",
+             "width": 123
+            },
+            {
+             "alt": "logo-9",
+             "height": 24,
+             "loading": "lazy",
+             "max_height": 24,
+             "max_width": 29,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/logo-9.svg",
+             "width": 29
+            }
+           ]
+          },
+          "module_id": 194608097541,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -40
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 100
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Explainer-Videos",
+         "name": "widget_1755429770690",
+         "params": {
+          "awards_logos": {
+           "logos": [
+            {
+             "alt": "MultichannelRetail_EasiestSetup_EaseOfSetup",
+             "height": 1000,
+             "loading": "lazy",
+             "max_height": 391,
+             "max_width": 340,
+             "size_type": "auto_custom_max",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/MultichannelRetail_EasiestSetup_EaseOfSetup.png",
+             "width": 869
+            },
+            {
+             "alt": "DemandPlanning_HighPerformer_HighPerformer (1)",
+             "height": 391,
+             "loading": "lazy",
+             "max_height": 1000,
+             "max_width": 869,
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/DemandPlanning_HighPerformer_HighPerformer%20(1).png",
+             "width": 340
+            },
+            {
+             "alt": "users-love-us 3",
+             "height": 395,
+             "loading": "lazy",
+             "max_height": 129,
+             "max_width": 111,
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/users-love-us%203.svg",
+             "width": 340
+            },
+            {
+             "alt": "E-Commerce_BestSupport_QualityOfSupport (1)",
+             "height": 391,
+             "loading": "lazy",
+             "max_height": 1000,
+             "max_width": 869,
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/E-Commerce_BestSupport_QualityOfSupport%20(1).png",
+             "width": 340
+            },
+            {
+             "alt": "[Collateral] Email signature 2025 (300 x 300 px) (200 x 200 px)",
+             "height": 400,
+             "loading": "lazy",
+             "max_height": 200,
+             "max_width": 200,
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/%5BCollateral%5D%20Email%20signature%202025%20(300%20x%20300%20px)%20(200%20x%20200%20px).png",
+             "width": 400
+            }
+           ]
+          },
+          "css_class": "dnd-module",
+          "module_id": 194561455545,
+          "schema_version": 2,
+          "video_slides": [
+           {
+            "heading": "What kind of support does Flieber offer?",
+            "video_duration": "1:06",
+            "video_link": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/What%20kind%20of%20support%20does%20Flieber%20offer_v3.mp4",
+            "video_poster": {
+             "alt": "what kind of support does flieber offer rectangle v1.1 (3)",
+             "height": 720,
+             "loading": "lazy",
+             "max_height": 720,
+             "max_width": 1280,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/what%20kind%20of%20support%20does%20flieber%20offer%20rectangle%20v1.1%20(3).png",
+             "width": 1280
+            }
+           },
+           {
+            "heading": "Flieber Wall of Love",
+            "video_duration": "1:26",
+            "video_link": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Wall%20Of%20Love_v7.mp4",
+            "video_poster": {
+             "alt": "Wall of love rectangle v1.3",
+             "height": 720,
+             "loading": "lazy",
+             "max_height": 720,
+             "max_width": 1280,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Wall%20of%20love%20rectangle%20v1.3.png",
+             "width": 1280
+            }
+           },
+           {
+            "heading": "Flieber Promo",
+            "video_duration": "2:52",
+            "video_link": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20AI_1%2030%20Minute%20Video%20OPTION%20A%20V4.mp4",
+            "video_poster": {
+             "alt": "Flieber Explainer v1.1 (2)",
+             "height": 720,
+             "loading": "lazy",
+             "max_height": 720,
+             "max_width": 1280,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20Explainer%20v1.1%20(2).png",
+             "width": 1280
+            }
+           }
+          ]
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Testimonial Swiper",
+         "name": "widget_1755429213350",
+         "params": {
+          "card_2": [
+           {
+            "content": "<p>\"I have nothing but GREAT things to say about Flieber. We sell on 8 marketplaces and this software allows us to quickly and accurately forecast, replenish stock, and place more accurate POs to our supplier. I LOVE that it\u2019s adapted so well to our specific needs and is customizable in calculating suggestions based on what we as a company like to focus on. The staff and service is top notch. Extremely responsive, knowledgeable, and they truly listen to their merchants. Flieber is not just a software to us but a true trusted partner that feels like an extension of our team. We are forever grateful for finding them.\"</p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "",
+            "role_field": ""
+           },
+           {
+            "content": "<p>\"Flieber is a powerful and customizable tool with native integration for the most relevant marketplaces. Yet, what I like most about Flieber is their customer support approach: they are genuinely interested in learning how you operate to support you better.\"</p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "",
+            "role_field": ""
+           },
+           {
+            "content": "<p>\"We sell on 8 marketplaces and this software allows us to quickly and accurately forecast, replenish stock, and place more accurate POs to our supplier. I love that it\u2019s adapted so well to our specific needs and is customizable in calculating suggestions based on what we as a company like to focus on. It allows us to stay lean on stock and keep an eye on sales trends to be able to respond quickly when needed. The staff and service is top notch. Extremely responsive, knowledgeable, passionate about continual growth and adding value to their clients, and they truly listen to their merchants. Flieber is not just a software to us but a true trusted partner that feels like an extension of our team. We are forever grateful for finding them.\"</p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "",
+            "role_field": ""
+           },
+           {
+            "content": "<p>\"Flieber creates a \u201cone stop shop\u201d where I can view demand level data across all my brands and then make educated choices about replenishment based on inventory positions. Now with their ability to sync with Amazon in inbound deliveries, we can action these choices without leaving the environment.\"</p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "",
+            "role_field": ""
+           },
+           {
+            "content": "<p>\"Flieber allows us to leverage technology to make demand planning and forecasting more streamlined and efficient. As a result, we have a less error prone process and have more time to spend making strategic decisions vs. data clean-up/analysis.\"</p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "",
+            "role_field": ""
+           },
+           {
+            "content": "<p>\"With Flieber, I could integrate the inventory position in different locations and also have an accurate sales forecast for multiple channels. As a result, it is much easier to plan and replenish inventory. And stockouts are no more a problem. I love the real-time view of the entire supply chain operation: what is in transit, when will it arrive, and what to order or transfer. It completely changed my replenishment process.\"</p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "",
+            "role_field": ""
+           }
+          ],
+          "css_class": "dnd-module",
+          "module_id": 194564655731,
+          "schema_version": 2,
+          "swiper_card": [
+           {
+            "content": "<p>\"<span>Finally an inventory forecasting tool that works how our brains do. Flieber is so simple and straight forward. 10/10 would recommend\"</span></p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "Zipstring",
+            "role_field": ""
+           },
+           {
+            "content": "<p>\"We have always been challenged with out of stock inventory and long lead times. Flieber was a game changer for us. The interface is easy to use, with a bunch of critical information, and their algorithms that provide recommendations are top notch.\"</p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "Stephanie Buchholtz",
+            "role_field": "VP of Merchandise Planning at Modloft"
+           },
+           {
+            "content": "<p><span>\"Flieber's support has been phenomenal. We have quite a complex inventory planning structure, where many components are shared by different items. Andre and the rest of the team have helped us come up with custom solutions every step of the way. We are excited to use Flieber in the future for our inventory planning needs.\"</span></p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "Vaer Watches",
+            "role_field": ""
+           },
+           {
+            "content": "<p><span>\"First, I didnt get this for Shopify intially, really it was to make inventory management easier for Amazon. But then I found it it connected to all our DTC channels! The tool makes inventory management easier, and more reliable than manual forecasts sheets (its 2025, why do people still insist on Excel when there are awesome tools like this). For us, a big thing was the ability to roll up skus/alias into one forecast - for our use case this was a HUGE time saver.\"</span></p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "Contour Living",
+            "role_field": ""
+           },
+           {
+            "content": "<p>\"Comprehensive Inventory Forecasting Solution That Fulfills Its Promises\"</p>",
+            "image_field": {
+             "src": ""
+            },
+            "name_field": "",
+            "role_field": ""
+           }
+          ]
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "styles": {
+       "breakpointStyles": {
+        "default": {
+         "padding": {
+          "bottom": {
+           "units": "px",
+           "value": 0
+          },
+          "left": {
+           "units": "px",
+           "value": 0
+          },
+          "right": {
+           "units": "px",
+           "value": 0
+          },
+          "top": {
+           "units": "px",
+           "value": 0
+          }
+         }
+        }
+       }
+      },
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17552759549372",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Testimonial Swiper copy",
+         "name": "widget_1755343845827",
+         "params": {
+          "css_class": "dnd-module",
+          "module_id": 194606647130,
+          "schema_version": 2
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "styles": {
+       "verticalAlignment": "MIDDLE"
+      },
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17552757405822",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Book A Demo Module V2",
+         "name": "widget_1755275739981",
+         "params": {
+          "add_content": "<h2>Ready to get off your spreadsheets?</h2>\n<p>Use Flieber for free for 14 days. No credit card required.</p>",
+          "bg_color": {
+           "color": "#353839",
+           "opacity": 100
+          },
+          "border_color": "#1B1C1C",
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           },
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           }
+          ],
+          "enable_heightlight_text_style": false,
+          "module_id": 191309097780,
+          "schema_version": 2,
+          "style": {
+           "box_background_color": {
+            "color": "#CCD9DB",
+            "opacity": 100
+           },
+           "second_button": {
+            "default_state": {
+             "background_color": {
+              "color": "#1B1C1C",
+              "opacity": 100
+             }
+            }
+           },
+           "text_color": {
+            "color": "#1B1C1C",
+            "opacity": 100
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17552751685872",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Book A Demo Module V3",
+         "name": "widget_1755275168207",
+         "params": {
+          "css_class": "dnd-module",
+          "module_id": 194557513839,
+          "schema_version": 2
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Book a demo with Flieber!",
+ "name": "Book A Demo New",
+ "pageExpiryEnabled": false,
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2025-08-25T21:52:00Z",
+ "publishImmediately": true,
+ "published": true,
+ "slug": "book-a-demo",
+ "state": "PUBLISHED_OR_SCHEDULED",
+ "subcategory": "site_page",
+ "templatePath": "flieber/templates/book-a-demo.html",
+ "translations": {},
+ "updatedAt": "2025-12-16T20:39:51.379Z",
+ "updatedById": "84287621",
+ "url": "https://www.flieber.com/book-a-demo",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

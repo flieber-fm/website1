@@ -1,0 +1,192 @@
+<!--
+  templateType: none
+-->
+<style>.fz{font-family:var(--font,'Open Sauce One',system-ui,sans-serif);font-size:16px;line-height:1.5;color:#1B1C1C;-webkit-font-smoothing:antialiased;text-align:left}.fz :where(*:not(svg):not(svg *)){all:revert;box-sizing:border-box;font-family:inherit;letter-spacing:inherit}.fz a{color:inherit;text-decoration:none}.fz ul{list-style:none;margin:0;padding:0}.fz p{margin:0}.fz img{max-width:100%;height:auto;display:block}.fz button{font:inherit;cursor:pointer}@font-face{
+  font-family: "Open Sauce One";
+  src: url("https://www.flieber.com/hubfs/flieber-2026/open-sauce-one-latin-400-normal.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}@font-face{
+  font-family: "Open Sauce One";
+  src: url("https://www.flieber.com/hubfs/flieber-2026/open-sauce-one-latin-500-normal.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}@font-face{
+  font-family: "Open Sauce One";
+  src: url("https://www.flieber.com/hubfs/flieber-2026/open-sauce-one-latin-600-normal.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}.fz{
+  
+  --white: #FFFFFF;
+  --gray-light: #F0F5F6;
+  --gray-medium: #CCD9DB;
+  --gray-dark: #757F82;
+  --charcoal: #353839;
+  --black: #1B1C1C;
+  --yellow: #F5ED61;
+  --yellow-light: #F8F398;
+  --blue: #244AE3;
+  --blue-light: #186DFF;
+
+  
+  --bg: var(--white);
+  --bg-soft: var(--gray-light);
+  --text: var(--black);
+  --text-2: var(--charcoal);
+  --line: #DCE5E7;
+  --line-strong: var(--gray-medium);
+
+  --font: "Open Sauce One", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+  --radius-s: 8px;
+  --radius-m: 14px;
+  --radius-l: 22px;
+  --wrap: 1200px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --section: clamp(80px, 11vw, 144px);
+  --ease: cubic-bezier(.2, .7, .1, 1);
+}.fz .fz-wrap{ width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }.fz .fz-btn{
+  --h: 48px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  height: var(--h); padding: 0 20px;
+  border-radius: var(--radius-s);
+  font-size: 16px; font-weight: 600; letter-spacing: -0.02em;
+  text-decoration: none; white-space: nowrap; cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform .2s var(--ease), background-color .2s, border-color .2s, box-shadow .2s;
+}.fz .fz-btn:active{ transform: translateY(1px); }.fz .fz-btn .arrow{ transition: transform .25s var(--ease); }.fz .fz-btn:hover .arrow{ transform: translateX(3px); }.fz .fz-btn-primary{ background: var(--yellow); color: var(--black); border-color: var(--black); box-shadow: 0 2px 0 var(--black); }.fz .fz-btn-primary:hover{ background: var(--yellow-light); }.fz .fz-btn-ghost{ background: transparent; color: var(--black); border-color: var(--line-strong); }.fz .fz-btn-ghost:hover{ border-color: var(--black); }.fz .fz-btn-sm{ --h: 40px; padding: 0 16px; font-size: 15px; }.fz .on-dark .fz-btn-ghost{ color: var(--gray-light); border-color: rgba(240,245,246,.25); }.fz .on-dark .fz-btn-ghost:hover{ border-color: var(--gray-light); }.fz .fz-nav{
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.78);
+  backdrop-filter: saturate(1.6) blur(16px);
+  -webkit-backdrop-filter: saturate(1.6) blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s;
+}.fz .fz-nav.scrolled{ border-bottom-color: var(--line); }.fz .fz-nav .fz-wrap{ display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }.fz .fz-nav-logo{ display: block; flex: none; padding: 6px 0; }.fz .fz-nav-logo img{ width: 116px; height: auto; }.fz .fz-nav-links{ display: flex; align-items: center; gap: 4px; }.fz .fz-nav-links a{
+  white-space: nowrap;
+  font-size: 15px; font-weight: 500; text-decoration: none; color: var(--text-2);
+  padding: 8px 12px; border-radius: var(--radius-s);
+  transition: background-color .2s, color .2s;
+}.fz .fz-nav-links a:hover{ background: var(--gray-light); color: var(--black); }.fz .fz-nav-links a[aria-current="page"]:not(.fz-agents-link){ color: var(--black); background: var(--gray-light); }.fz .fz-nav-links .fz-agents-link{ display: inline-flex; align-items: center; gap: 6px; }.fz .fz-nav-links .fz-agents-link code{
+  font-size: 13px; line-height: 1; padding: 5px 9px; border-radius: 6px; background: var(--black); color: var(--yellow);
+}.fz .fz-nav-links .fz-agents-link:hover{ background: transparent; }.fz .fz-nav-links .fz-agents-link:hover code{ background: var(--charcoal); }.fz .fz-nav-cta{ display: flex; align-items: center; gap: 8px; }.fz .fz-nav-login{
+  font-size: 15px; font-weight: 500; text-decoration: none; color: var(--text-2); white-space: nowrap;
+  padding: 8px 10px; margin-right: 4px; border-radius: var(--radius-s);
+}.fz .fz-nav-login:hover{ color: var(--black); text-decoration: underline; text-underline-offset: 4px; }.fz .fz-nav-links .fz-menu-only{ display: none; }.fz .fz-nav-toggle{
+  display: none; width: 44px; height: 44px; border: 1px solid var(--line-strong);
+  border-radius: var(--radius-s); background: var(--white); cursor: pointer;
+  align-items: center; justify-content: center;
+}.fz .fz-nav-toggle span, .fz .fz-nav-toggle span::before, .fz .fz-nav-toggle span::after{
+  display: block; width: 18px; height: 1.5px; background: var(--black); position: relative;
+  transition: transform .25s var(--ease), background-color .2s;
+}.fz .fz-nav-toggle span::before, .fz .fz-nav-toggle span::after{ content: ""; position: absolute; left: 0; }.fz .fz-nav-toggle span::before{ top: -6px; }.fz .fz-nav-toggle span::after{ top: 6px; }.fz .fz-nav.open .fz-nav-toggle span{ background: transparent; }.fz .fz-nav.open .fz-nav-toggle span::before{ transform: translateY(6px) rotate(45deg); }.fz .fz-nav.open .fz-nav-toggle span::after{ transform: translateY(-6px) rotate(-45deg); }@media (max-width: 1140px){.fz .fz-nav-links, .fz .fz-nav-cta .fz-btn-ghost, .fz .fz-nav-cta .fz-nav-login{ display: none; }.fz .fz-nav.open .fz-nav-links .fz-menu-only{ display: block; }.fz .fz-nav-toggle{ display: inline-flex; }.fz .fz-nav.open .fz-nav-links{
+    display: flex; flex-direction: column; align-items: stretch; gap: 0;
+    position: absolute; top: 72px; left: 0; right: 0;
+    background: var(--white); border-bottom: 1px solid var(--line);
+    padding: 8px var(--gutter) 20px;
+  }.fz .fz-nav.open .fz-nav-links a{ padding: 14px 4px; border-bottom: 1px solid var(--line); border-radius: 0; font-size: 17px; }}@media (max-width: 420px){.fz .fz-nav-cta .fz-btn-primary{ padding: 0 14px; }}@media (max-width: 359px){.fz .fz-nav-cta{ gap: 6px; }.fz .fz-nav-cta .fz-btn-primary{ padding: 0 10px; font-size: 14px; }.fz .fz-nav-logo img{ width: 100px; height: auto; }}.fz .try-actions .fz-btn-primary{ background: var(--black); color: var(--white); box-shadow: none; }.fz .try-actions .fz-btn-primary:hover{ background: var(--charcoal); }.fz .try-actions .fz-btn-ghost{ border-color: var(--black); background: rgba(255,255,255,.35); }.fz .try-actions .fz-btn-ghost:hover{ background: var(--white); }.fz .fz-footer{ background: var(--black); color: var(--gray-light); padding: clamp(64px, 8vw, 104px) 0 36px; }.fz .fz-footer-top{ display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 40px; }.fz .fz-footer-brand img{ width: 132px; height: auto; }.fz .fz-footer-brand .fz-tagline{ margin-top: 22px; font-size: clamp(24px, 2.6vw, 34px); letter-spacing: -0.04em; line-height: 1.1; max-width: 320px; }.fz .fz-footer-brand .fz-tagline em{ font-style: normal; color: var(--yellow); }.fz .fz-footer h4, .fz .fz-footer-h{ font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #A3AEB1; margin-bottom: 16px; }.fz .fz-footer li + li{ margin-top: 10px; }.fz .fz-footer a{ text-decoration: none; color: var(--gray-light); transition: color .2s; }.fz .fz-footer a:hover{ color: var(--yellow); }.fz .fz-footer code{ font-size: 14px; }.fz .fz-footer-bottom{
+  margin-top: clamp(56px, 7vw, 88px); padding-top: 24px; border-top: 1px solid rgba(240,245,246,.1);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 14px; color: var(--gray-medium);
+}.fz .fz-footer-mark{ margin-top: clamp(48px, 7vw, 88px); opacity: .07; }.fz .fz-footer-mark img{ width: 100%; height: auto; }@media (max-width: 860px){.fz .fz-footer-top{ grid-template-columns: 1fr 1fr; }.fz .fz-footer-brand{ grid-column: 1 / -1; }}.fz .contact-card .fz-btn{ margin-top: auto; }.fz .feat-jump .fz-wrap{ display: flex; gap: 4px; overflow-x: auto; padding-top: 10px; padding-bottom: 10px; scrollbar-width: none; }.fz .feat-jump .fz-wrap::-webkit-scrollbar{ display: none; }.fz .fz-nav-drop{ position: relative; }.fz .fz-nav-drop-btn{
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; cursor: pointer;
+  font-size: 15px; font-weight: 500; color: var(--text-2); background: transparent; border: 0;
+  padding: 8px 12px; border-radius: var(--radius-s); transition: background-color .2s, color .2s;
+}.fz .fz-nav-drop-btn svg{ transition: transform .2s var(--ease); }.fz .fz-nav-drop-btn:hover, .fz .fz-nav-drop.open .fz-nav-drop-btn{ background: var(--gray-light); color: var(--black); }.fz .fz-nav-drop.is-current .fz-nav-drop-btn{ color: var(--black); background: var(--gray-light); }.fz .fz-nav-drop.open .fz-nav-drop-btn svg{ transform: rotate(180deg); }.fz .fz-nav-menu{
+  position: absolute; top: calc(100% + 8px); left: -8px; min-width: 260px; z-index: 120;
+  display: none; flex-direction: column; padding: 8px;
+  background: var(--white); border: 1px solid var(--line-strong); border-radius: var(--radius-m);
+  box-shadow: 0 24px 48px -28px rgba(27,28,28,.45);
+}.fz .fz-nav-drop.open .fz-nav-menu{ display: flex; }.fz .fz-nav-links .fz-nav-menu a{ padding: 10px 12px; }@media (max-width: 1140px){.fz .fz-nav-links, .fz .fz-nav-cta .fz-btn-ghost, .fz .fz-nav-cta .fz-nav-login{ display: none; }.fz .fz-nav.open .fz-nav-links .fz-menu-only{ display: block; }.fz .fz-nav-toggle{ display: inline-flex; }.fz .fz-nav.open .fz-nav-links{
+    display: flex; flex-direction: column; align-items: stretch; gap: 0;
+    position: absolute; top: 72px; left: 0; right: 0; max-height: calc(100vh - 72px); overflow-y: auto;
+    background: var(--white); border-bottom: 1px solid var(--line);
+    padding: 8px var(--gutter) 20px;
+  }.fz .fz-nav.open .fz-nav-links a{ padding: 14px 4px; border-bottom: 1px solid var(--line); border-radius: 0; font-size: 17px; }.fz .fz-nav.open .fz-nav-drop-btn{ width: 100%; padding: 14px 4px; font-size: 17px; border-radius: 0; background: transparent; border-bottom: 1px solid var(--line); pointer-events: none; color: var(--black); }.fz .fz-nav.open .fz-nav-drop-btn svg{ display: none; }.fz .fz-nav.open .fz-nav-menu{ display: flex; position: static; box-shadow: none; border: 0; border-radius: 0; padding: 0 0 0 16px; min-width: 0; }.fz .fz-nav.open .fz-nav-links .fz-nav-menu a{ font-size: 16px; padding: 12px 4px; }}.fz .fz-nav-links .fz-nav-menu a.fz-nav-menu-all{ font-weight: 600; color: var(--black); }.fz .fz-nav-sub{ display: flex; flex-direction: column; margin: 2px 0 4px 20px; padding-left: 4px; border-left: 1px solid var(--line-strong); }.fz .fz-nav-menu-sep{ border: 0; border-top: 1px solid var(--line); margin: 6px 4px; }@media (max-width: 1140px){.fz .fz-nav.open .nav-menu-label{ padding: 14px 4px 6px; border-top: 0; }.fz .fz-nav.open .fz-nav-sub{ margin: 0 0 0 4px; padding-left: 14px; border-left: 2px solid var(--line-strong); }.fz .fz-nav.open .fz-nav-menu-sep{ display: block; border: 0; height: 14px; margin: 0; }}.fz .fz-footer-top{ grid-template-columns: 1.3fr repeat(4, 1fr); gap: 32px; }@media (max-width: 980px){.fz .fz-footer-top{ grid-template-columns: 1fr 1fr; }.fz .fz-footer-brand{ grid-column: 1 / -1; }}.body-wrapper:has(#fz-nav){padding-top:0!important}.fz header.fz-nav{background:#fff}</style>
+<div class="fz"><header class="fz-nav" id="fz-nav">
+    <div class="fz-wrap">
+      <a class="fz-nav-logo" href="/" aria-label="Flieber home">
+        <img src="https://www.flieber.com/hubfs/flieber-2026/flieber-logo.svg" alt="Flieber" width="116" height="20">
+      </a>
+      <nav class="fz-nav-links" aria-label="Primary">
+        <div class="fz-nav-drop">
+          <button class="fz-nav-drop-btn" type="button" aria-expanded="false" aria-controls="fz-nav-product">Product <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="fz-nav-menu" id="fz-nav-product">
+            <a class="fz-nav-menu-all" href="/features">All features <span aria-hidden="true">→</span></a>
+            <div class="fz-nav-sub">
+              <a href="/product/data-layer">Data layer</a>
+              <a href="/product/demand-forecasting">Demand forecasting</a>
+              <a href="/product/inventory-forecasting">Inventory forecasting</a>
+              <a href="/product/replenishment">Replenishment</a>
+              <a href="/product/workflows">Workflows</a>
+            </div>
+            <hr class="fz-nav-menu-sep">
+            <a href="/prompt-ideas">Prompt ideas</a>
+            <a href="/integrations">Integrations</a>
+            <a href="/mcp">MCP and AI agents</a>
+            <a href="/security">Security &amp; data</a>
+          </div>
+        </div>
+        <div class="fz-nav-drop">
+          <button class="fz-nav-drop-btn" type="button" aria-expanded="false" aria-controls="fz-nav-solutions">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="fz-nav-menu" id="fz-nav-solutions">
+            <a href="/multichannel">Multichannel brands</a>
+            <a href="/agencies">Agencies and aggregators</a>
+            <a href="/customize">Customize Flieber</a>
+            <hr class="fz-nav-menu-sep">
+            <a href="/before-you-choose">Before you choose</a>
+          </div>
+        </div>
+        <a href="/pricing">Pricing</a>
+        <a href="/who-we-are">Who we are</a>
+        <a class="fz-agents-link" href="/agents" aria-label="For AI agents"><code>/agents</code></a>
+        <a class="fz-menu-only" href="https://app.flieber.com">Log in</a>
+        <a class="fz-menu-only" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+      </nav>
+      <div class="fz-nav-cta">
+        <a class="fz-nav-login" href="https://app.flieber.com">Log in</a>
+        <a class="fz-btn fz-btn-ghost fz-btn-sm" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        <a class="fz-btn fz-btn-primary fz-btn-sm" href="https://www.flieber.com/free-trial">Start free trial</a>
+        <button class="fz-nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+      </div>
+    </div>
+  </header></div>
+<script>(function(){
+  /* ---------- Nav: scrolled state + mobile menu ---------- */
+  var nav = document.getElementById('fz-nav');
+  if (nav) {
+    var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 8); };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    var toggle = nav.querySelector('.fz-nav-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      nav.querySelectorAll('.fz-nav-links a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  }
+
+  /* ---------- Nav: Solutions menu (Option 2) ---------- */
+  // Click or Enter opens it; Escape, a click outside or focus leaving closes it.
+  // In the collapsed phone menu the list is always shown (CSS), so the button does nothing there.
+  document.querySelectorAll('.fz-nav-drop').forEach(function (drop) {
+    var btn = drop.querySelector('.fz-nav-drop-btn');
+    var set = function (open) {
+      drop.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    };
+    btn.addEventListener('click', function () { set(!drop.classList.contains('open')); });
+    drop.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drop.classList.contains('open')) { set(false); btn.focus(); }
+    });
+    drop.addEventListener('focusout', function (e) { if (!drop.contains(e.relatedTarget)) set(false); });
+    document.addEventListener('click', function (e) { if (!drop.contains(e.target)) set(false); });
+  });
+
+})();</script>

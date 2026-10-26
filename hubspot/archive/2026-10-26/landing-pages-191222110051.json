@@ -1,0 +1,758 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [
+  {
+   "id": 195248806311,
+   "path": "flieber/templates/Product New/product-page-new.css",
+   "type": "cos_extension_resource"
+  }
+ ],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 1,
+ "createdAt": "2025-06-10T18:11:28.715Z",
+ "createdById": "4752608",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "headHtml": "",
+ "htmlTitle": "Flieber vs Foresight AI",
+ "id": "191222110051",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {
+        "padding": {
+         "bottom": {
+          "units": "px",
+          "value": 0
+         },
+         "left": {
+          "units": "px",
+          "value": 0
+         },
+         "right": {
+          "units": "px",
+          "value": 0
+         },
+         "top": {
+          "units": "px",
+          "value": 0
+         }
+        }
+       }
+      },
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-3",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "name": "cell_17497068970062",
+         "params": {
+          "css_class": "dnd-column"
+         },
+         "rowMetaData": [
+          {
+           "cssClass": "dnd-row"
+          }
+         ],
+         "rows": [
+          {
+           "0": {
+            "cells": [],
+            "cssClass": "",
+            "cssId": "",
+            "cssStyle": "",
+            "label": "Hero",
+            "name": "widget_1749579245790",
+            "params": {
+             "banner_image_group": {
+              "alt": "Frame 427321061",
+              "height": 114,
+              "loading": "lazy",
+              "max_height": 114,
+              "max_width": 1200,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Frame%20427321061.png",
+              "width": 1200
+             },
+             "button": {
+              "button_1": {
+               "link": "https://www.flieber.com/book-a-demo",
+               "text_field": "Book a Demo"
+              },
+              "button_2": {
+               "link": "https://www.flieber.com/free-trial"
+              }
+             },
+             "css_class": "dnd-module",
+             "image_field": {
+              "alt": "fleiber-vs-foresight",
+              "height": 351,
+              "loading": "lazy",
+              "max_height": 702,
+              "max_width": 702,
+              "size_type": "exact",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/fleiber-vs-foresight.png",
+              "width": 351
+             },
+             "logo": [
+              {
+               "alt": "unybrands 1",
+               "height": 21,
+               "loading": "lazy",
+               "max_height": 21,
+               "max_width": 96,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/unybrands%201.svg",
+               "width": 96
+              },
+              {
+               "alt": "mannatech",
+               "height": 25,
+               "loading": "lazy",
+               "max_height": 25,
+               "max_width": 149,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/mannatech.svg",
+               "width": 149
+              },
+              {
+               "alt": "picca",
+               "height": 27,
+               "loading": "lazy",
+               "max_height": 27,
+               "max_width": 90,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/picca.svg",
+               "width": 90
+              },
+              {
+               "alt": "jaeger",
+               "height": 46,
+               "loading": "lazy",
+               "max_height": 46,
+               "max_width": 63,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/jaeger.svg",
+               "width": 63
+              },
+              {
+               "alt": "lifepro",
+               "height": 34,
+               "loading": "lazy",
+               "max_height": 34,
+               "max_width": 90,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/lifepro.svg",
+               "width": 90
+              },
+              {
+               "alt": "wargames",
+               "height": 39,
+               "loading": "lazy",
+               "max_height": 39,
+               "max_width": 52,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/wargames.svg",
+               "width": 52
+              },
+              {
+               "alt": "qualico",
+               "height": 21,
+               "loading": "lazy",
+               "max_height": 21,
+               "max_width": 80,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/qualico.svg",
+               "width": 80
+              },
+              {
+               "alt": "southshore 1",
+               "height": 23,
+               "loading": "lazy",
+               "max_height": 23,
+               "max_width": 146,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/southshore%201.svg",
+               "width": 146
+              }
+             ],
+             "module_id": 191221974305,
+             "schema_version": 2,
+             "videoplayer_field": {
+              "height": 1080,
+              "player_id": 196083335065,
+              "player_type": "hsvideo2",
+              "width": 1920
+             }
+            },
+            "rowMetaData": [],
+            "rows": [],
+            "type": "custom_widget",
+            "w": 12,
+            "x": 0
+           }
+          }
+         ],
+         "styles": {
+          "verticalAlignment": "MIDDLE"
+         },
+         "type": "cell",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Two-Col-Content-Img",
+         "name": "widget_1749723887648",
+         "params": {
+          "css_class": "dnd-module",
+          "image_field": {
+           "alt": "easy-to-use-1",
+           "height": 429,
+           "loading": "lazy",
+           "max_height": 429,
+           "max_width": 434,
+           "size_type": "auto_custom_max",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/easy-to-use-1.png",
+           "width": 434
+          },
+          "module_id": 191281957771,
+          "schema_version": 2
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Two-Col-Content-Img",
+         "name": "widget_1749706917812",
+         "params": {
+          "background_color": "#186DFF",
+          "content": "<p>Flieber integrates with Amazon, Shopify, Walmart, 3PLs, wholesale partners, and more\u2014giving operators full control across regions, channels, and fulfillment models. Foresight AI (previously Inventoro) started as a basic DTC tool and now operates as a limited forecasting add-on inside Cin7, making it hard to grow with confidence as complexity increases.</p>",
+          "css_class": "dnd-module",
+          "heading": "Designed for focus, not bundled in bloat",
+          "image_field": {
+           "alt": "designed-for-focus",
+           "height": 901,
+           "loading": "lazy",
+           "max_height": 451,
+           "max_width": 485,
+           "size_type": "auto_custom_max",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/designed-for-focus.png",
+           "width": 970
+          },
+          "layout": "image-left",
+          "main_background_color": "#FFF",
+          "module_id": 191281957771,
+          "schema_version": 2,
+          "subheading": "Flieber connects every part of your ops\u2014from DTC to wholesale",
+          "text_color": "#FFF"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Two-Col-Content-Img",
+         "name": "widget_1749724825893",
+         "params": {
+          "background_color": "#F0F5F6",
+          "button": {
+           "text_field": "Book a Demo"
+          },
+          "content": "<p>Flieber uses the most modern AI transformer models to forecast demand with precision\u2014factoring in promotions, stockouts, seasonality, and more. Its transformer architecture improves continuously as your business evolves. Foresight AI ( previously Inventoro ) relies on outdated statistical models with basic ML layers, often requiring manual tweaks and falling short in dynamic environments.</p>",
+          "content_width": "470px",
+          "css_class": "dnd-module",
+          "heading": "AI Demand forecasting tailored to modern commerce",
+          "image_field": {
+           "alt": "ai-demand",
+           "height": 450,
+           "loading": "lazy",
+           "max_height": 901,
+           "max_width": 924,
+           "size_type": "exact",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/ai-demand.png",
+           "width": 462
+          },
+          "main_background_color": "#186DFF",
+          "module_id": 191281957771,
+          "schema_version": 2,
+          "subheading": "Smarter forecasts, sharper decisions\u2014\u2028and it gets better every cycle"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Features-Table",
+         "name": "widget_1749727213193",
+         "params": {
+          "css_class": "dnd-module",
+          "module_id": 191295539565,
+          "schema_version": 2,
+          "table": {
+           "table_heading": [
+            "Feature",
+            "Flieber",
+            "Foresignt AI"
+           ],
+           "table_row": [
+            {
+             "table_data": [
+              {
+               "data": "Compatible with modern AI technologies",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Highly accurate, AI transformer forecasting model",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Fast setup (in hours, instead of weeks)",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Flexible configuration to cover most use cases",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Modern, intuitive user interface designed for operators",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Independent platform with various weekly releases, fast iterations and dedicated support",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Integrates with any tech stack, through either native or assisted integrations",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            }
+           ]
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17497469160082",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Book A Demo Module V2",
+         "name": "widget_1749746915492",
+         "params": {
+          "add_content": "<h2>You\u2019ve seen the side-by-side. Now see it in <span>action.</span></h2>\n<p>If you\u2019re comparing Flieber to tools like Foresight AI, don\u2019t just take our word for it\u2014see why brands choose a platform built for accuracy, speed, and scale. Get a live walkthrough tailored to your ops.</p>",
+          "bg_color": {
+           "color": "#F5ED61",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           },
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           }
+          ],
+          "module_id": 191309097780,
+          "schema_version": 2
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "styles": {
+       "breakpointStyles": {
+        "default": {
+         "padding": {
+          "bottom": {
+           "units": "px",
+           "value": 0
+          },
+          "left": {
+           "units": "px",
+           "value": 0
+          },
+          "right": {
+           "units": "px",
+           "value": 0
+          },
+          "top": {
+           "units": "px",
+           "value": 0
+          }
+         }
+        }
+       }
+      },
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Flieber vs. ForeSight AI: Why data context matters. Flieber tags stockouts and promos to boost forecast accuracy by up to 40%. Compare and switch today.",
+ "name": "Flieber vs Foresight AI",
+ "pageExpiryEnabled": false,
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2025-06-13T16:44:26Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "flieber-vs-foresight-ai",
+ "state": "DRAFT",
+ "subcategory": "landing_page",
+ "templatePath": "flieber/templates/ecommerce.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:11:46.238Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/flieber-vs-foresight-ai",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

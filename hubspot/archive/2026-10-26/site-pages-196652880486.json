@@ -1,0 +1,689 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [
+  {
+   "id": 195248806311,
+   "path": "flieber/templates/Product New/product-page-new.css",
+   "type": "cos_extension_resource"
+  }
+ ],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 4,
+ "createdAt": "2025-09-26T05:54:55.370Z",
+ "createdById": "27522147",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "footerHtml": "<script>\n// Check if the .class exists in the document\nif (document.querySelector('.box-image-banner')) {\n  // Add a new class to the body\n  document.body.classList.add('product-new-page');\n}\n\n</script>",
+ "headHtml": "",
+ "htmlTitle": "Flieber | The Decision Making Tool For Modern Commerce",
+ "id": "196652880486",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {
+        "padding": {
+         "bottom": {
+          "units": "px",
+          "value": 0
+         },
+         "top": {
+          "units": "px",
+          "value": 0
+         }
+        }
+       }
+      },
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {}
+      },
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {}
+      },
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {}
+      },
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {}
+      },
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {},
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17588702451982",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Managed-banner",
+         "name": "widget_1758870244695",
+         "params": {
+          "add_content": "<h1>Flieber Managed Services</h1>\n<h3>Inventory planning, simplified\u2014 without the hassle.</h3>\n<p>Running demand and inventory planning in-house takes time, focus, and expertise. With Flieber Managed Services, you get the best of both worlds: our centralized software solution paired with a dedicated team that co-leads the demand planning process alongside you.</p>\n<p>The result? Lower costs, fewer stockouts and overstocks, and the confidence that your forecasts are as accurate as they can be.</p>",
+          "add_image": {
+           "alt": "easy-to-use-1",
+           "height": 692,
+           "loading": "lazy",
+           "max_height": 692,
+           "max_width": 700,
+           "size_type": "auto",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/easy-to-use-1.png",
+           "width": 700
+          },
+          "bg_color": {
+           "color": "#000000",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "add_cta": "f8379ae1-e1fc-4477-8831-165e23b3d65f"
+           },
+           {
+            "add_cta": "8af485d6-3811-43ce-add6-314c90d6200f"
+           }
+          ],
+          "enable_cta": true,
+          "module_id": 196660449559,
+          "schema_version": 2,
+          "select_image_position": "right",
+          "style": {
+           "desktop_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px"
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px"
+             }
+            }
+           },
+           "mobile_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px"
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px"
+             }
+            }
+           },
+           "tablet_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px"
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px"
+             }
+            }
+           }
+          },
+          "text_color": {
+           "color": "#FFFFFF",
+           "opacity": 100
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17588746241032",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "manage-service-box",
+         "name": "module_17588746241044",
+         "params": {
+          "add_content": "<h2>What is Managed Services?</h2>\n<p>Flieber\u2019s Managed Services combines the power of our AI-driven platform with hands-on operational support. While our software automates forecasting, replenishment, and reporting, our team ensures every detail runs smoothly \u2014 from system setup to supplier follow-ups.</p>\n<p>Think of us as an extension of your operations team, taking complexity off your plate so you can focus on what matters most: the growth of your brand.</p>",
+          "add_image": {
+           "alt": "services-img-1",
+           "height": 741,
+           "loading": "lazy",
+           "max_height": 741,
+           "max_width": 700,
+           "size_type": "auto",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/services-img-1.png",
+           "width": 700
+          },
+          "bg_color": {
+           "color": "#FFFFFF",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "module_id": 196660687899,
+          "schema_version": 2
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17588874930372",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "manage-work-module",
+         "name": "widget_1758887492651",
+         "params": {
+          "css_class": "dnd-module",
+          "left_panel": {
+           "tile": [
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>Configurations &amp; Parameters</h4>\n<p>Commerce never stands still. New products, discontinued products, new channels, change of warehouses \u2014 our team keeps all your configurations and parameters always up to date.</p>"
+            },
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>Data Loading</h4>\n<p>Flieber connects natively with many data sources, but even if you rely on spreadsheets or disconnected systems, our team makes sure all sales, inventory, and purchase order data is synced.</p>"
+            },
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>Advanced Forecasting</h4>\n<p>Our AI transformer forecasting models deliver a strong baseline. But reality is rarely perfect \u2014 so our team stays on top of forecasts, ensuring accuracy and incorporating future plans like promotions.</p>"
+            },
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>Anomaly Detection</h4>\n<p>Retail is unpredictable. The key is spotting risks early \u2014 stockouts, overstocks, sudden demand shifts. We flag anomalies and help you take quick action.</p>"
+            },
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>Replenishment Needs</h4>\n<p>We deliver replenishment recommendations on your schedule and in your preferred format, so you can approve purchases and transfers with confidence.</p>"
+            },
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>Reporting</h4>\n<p>Different teams need different insights. We create tailored recurring reports in your preferred format and frequency.</p>"
+            }
+           ],
+           "tile_heading": "<h3>LITE Plan</h3>\n<p>The LITE Plan includes:</p>"
+          },
+          "manage_work_top_content": "<h2>How It Works</h2>\n<p>Flieber\u2019s Managed Services cover the full demand planning and inventory management workflow.</p>",
+          "module_id": 196663980851,
+          "right_panel": {
+           "tile": [
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>POs &amp; TOs</h4>\n<p>Extracting, adjusting, and sending purchase/transfer orders is tedious and low-value. Our team does it for you.</p>"
+            },
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>Production Management</h4>\n<p>Consistent supplier follow-up is one of the most underrated drivers of success. We keep close contact at the cadence you want \u2014 so we\u2019re always proactive, instead of reactive.</p>"
+            },
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>Freight Management</h4>\n<p>From engaging freight forwarders to checking customs docs to coordinating trucking, our team handles the details so yours doesn\u2019t have to.</p>"
+            },
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>Inbound Shipments</h4>\n<p>For many brands, creating and managing FBA or 3PL shipments is a full-time job. For us, it\u2019s just part of daily operations.</p>"
+            },
+            {
+             "check_icon": {
+              "alt": "icon",
+              "height": 34,
+              "loading": "lazy",
+              "max_height": 34,
+              "max_width": 34,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon.svg",
+              "width": 34
+             },
+             "tile_description": "<h4>Other Specific Needs</h4>\n<p>Most times, our team can also help with other special projects or specific needs. Just talk to us about your use cases.</p>"
+            }
+           ],
+           "tile_heading": "<h3>FULL Plan</h3>\n<p>The FULL Plan goes further, including:</p>"
+          },
+          "schema_version": 2
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17588746503752",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "manage-service-box",
+         "name": "module_17588746503754",
+         "params": {
+          "add_content": "<h2>Why Choose Managed Services?</h2>\n<p>Flieber Managed Services delivers superior value to your business:</p>\n<h4>Increase Sales</h4>\n<p>Meet demand without losing revenue to stockouts.</p>\n<h4>Optimize Capital</h4>\n<p>Free up cash by avoiding unnecessary inventory.</p>\n<h4>Boost Margins</h4>\n<p>Reduce mistakes, cut storage costs, and improve efficiency.</p>\n<h4>Reduce Work</h4>\n<p>No more spreadsheets or firefighting. We handle the heavy lifting.</p>",
+          "add_image": {
+           "alt": "choose-img",
+           "height": 850,
+           "loading": "lazy",
+           "max_height": 850,
+           "max_width": 970,
+           "size_type": "auto",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/choose-img.png",
+           "width": 970
+          },
+          "bg_color": {
+           "color": "#186DFF",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "module_id": 196660687899,
+          "schema_version": 2,
+          "select_image_position": "right",
+          "text_color": {
+           "color": "#FFFFFF",
+           "opacity": 100
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17588750695902",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "manage-service-box",
+         "name": "module_17588750695904",
+         "params": {
+          "add_content": "<h2>The Flieber Advantage</h2>\n<p>By pairing advanced technology with real human expertise, Managed Services gives you:</p>\n<ul>\n<li>The most modern forecasting models in the market.</li>\n<li>Full visibility into sales and inventory in real time through Flieber\u2019s celebrated interface.</li>\n<li>A partner who co-leads your planning and execution process.</li>\n</ul>\n<p>That\u2019s how we help brands scale with confidence.</p>",
+          "add_image": {
+           "alt": "Box-Sep-26-2025-08-29-57-8921-AM",
+           "height": 820,
+           "loading": "lazy",
+           "max_height": 820,
+           "max_width": 1036,
+           "size_type": "auto",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Box-Sep-26-2025-08-29-57-8921-AM.png",
+           "width": 1036
+          },
+          "bg_color": {
+           "color": "#f0f5f6",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "add_cta": "f8379ae1-e1fc-4477-8831-165e23b3d65f"
+           },
+           {}
+          ],
+          "enable_cta": true,
+          "module_id": 196660687899,
+          "schema_version": 2,
+          "select_image_position": "left",
+          "text_color": {
+           "color": "#000000",
+           "opacity": 100
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1756382340106",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Product Book A Demo Module",
+         "name": "widget_1756382339757",
+         "params": {
+          "add_content": "<h2>Ready to simplify your operations?</h2>\n<p>Flieber Managed Services is the easiest way to build a leaner, smarter supply chain. Schedule a demo to see how Managed Services can transform your inventory planning.</p>",
+          "bg_color": {
+           "color": "#F5ED61",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           },
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           }
+          ],
+          "module_id": 195238194735,
+          "schema_version": 2,
+          "style": {
+           "box_background_color": {
+            "color": "#353839",
+            "opacity": 100
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "styles": {
+       "verticalAlignment": "MIDDLE"
+      },
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Let our experts handle your inventory. Flieber\u2019s Managed Services combine our AI-first platform with pro demand planning to scale your brand faster.",
+ "name": "Managed Services",
+ "pageExpiryEnabled": false,
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2025-10-06T16:47:09Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "archive/managed-services",
+ "state": "DRAFT",
+ "subcategory": "site_page",
+ "templatePath": "flieber/templates/product-page.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:05:27.657Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/archive/managed-services",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

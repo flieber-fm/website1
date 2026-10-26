@@ -1,0 +1,900 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [
+  {
+   "id": 195248806311,
+   "path": "flieber/templates/Product New/product-page-new.css",
+   "type": "cos_extension_resource"
+  }
+ ],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 4,
+ "createdAt": "2025-05-16T05:42:01.663Z",
+ "createdById": "69768445",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "htmlTitle": "Omnichannel",
+ "id": "190214598735",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1732538444450",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Product Banner Module",
+         "name": "widget_1734071178287",
+         "params": {
+          "add_content": "<h1>Unified inventory planning and decision making for <span>ecommerce + wholesale</span></h1>\n<p>Omnichannel brands that sell on DTC and wholesale channels must manage completely separate inventory planning processes for each\u2014creating two siloed areas and frequent planning breakdowns. Flieber enables brands to make decisions that support the combined needs of all channels by consolidating data from every channel, inventory system, and fulfillment partner into a clean, unified view.&nbsp;</p>\n<p>Reduce stockouts, free up your capital, and gain more confidence in your forecasting.</p>",
+          "bg_color": {
+           "color": "#CCD9DB",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           },
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           }
+          ],
+          "enable_top_bg_image": true,
+          "module_id": 183842063672,
+          "schema_version": 2,
+          "style": {
+           "content_max_width": 925,
+           "desktop_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 50
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 130
+             }
+            }
+           },
+           "mobile_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 70
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 120
+             }
+            }
+           },
+           "tablet_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 50
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 130
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1732599030498",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Logo Module",
+         "name": "widget_1732599030147",
+         "params": {
+          "bg_color": {
+           "color": "#CCD9DB",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "first_row_group": [
+           {
+            "add_logo_image": {
+             "alt": "zugu",
+             "height": 24,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/zugu.png",
+             "width": 72
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "paperlike",
+             "height": 25,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/paperlike.png",
+             "width": 103
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "primalharvest",
+             "height": 28,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/primalharvest.png",
+             "width": 125
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "unybrands",
+             "height": 20,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/unybrands.png",
+             "width": 95
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "mannatech",
+             "height": 25,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/mannatech.png",
+             "width": 148
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "piccalio",
+             "height": 27,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/piccalio.png",
+             "width": 90
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "jaeger",
+             "height": 46,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/jaeger.png",
+             "width": 63
+            }
+           }
+          ],
+          "module_id": 183209679378,
+          "schema_version": 2,
+          "second_row_group": [
+           {
+            "add_logo_image": {
+             "alt": "lifepro",
+             "height": 34,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/lifepro.png",
+             "width": 89
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "wargames",
+             "height": 39,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/wargames.png",
+             "width": 52
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "qualico",
+             "height": 21,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/qualico.png",
+             "width": 79
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "southshore",
+             "height": 22,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/southshore.png",
+             "width": 145
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "bearaby",
+             "height": 29,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/bearaby.png",
+             "width": 93
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "alt",
+             "height": 27,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/alt.png",
+             "width": 64
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "waterglider",
+             "height": 43,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/waterglide.png",
+             "width": 43
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "modloft",
+             "height": 14,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber%20(New)/2x_logos/modloft.png",
+             "width": 125
+            }
+           }
+          ],
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 110
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 60
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17576748469342",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Product Hero Video Section",
+         "name": "widget_1757674846437",
+         "params": {
+          "css_class": "dnd-module",
+          "module_id": 195928879146,
+          "schema_version": 2,
+          "videoplayer_field": {
+           "height": 1080,
+           "player_id": 196074369169,
+           "player_type": "hsvideo2",
+           "width": 1920
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17473753617482",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Two Col Row Module",
+         "name": "widget_1747375361325",
+         "params": {
+          "css_class": "dnd-module",
+          "image_content_group": [
+           {
+            "add_image": {
+             "alt": "logistic-1-1",
+             "height": 373,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Omnichannel/logistic-1-1.png",
+             "width": 500
+            },
+            "description": "DTC vs. wholesale channel sales behavior is drastically different, which makes planning for both at the same time challenging. You end up with two siloes, causing unbalanced operations and channel competition that frustrates customers.",
+            "heading": "Multi-channel logistics"
+           },
+           {
+            "add_image": {
+             "alt": "overstock",
+             "height": 348,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Omnichannel/overstock.png",
+             "width": 550
+            },
+            "description": "Your systems don\u2019t talk to each other, so you end up ordering too much stock \u201cjust to be safe\u201d and can\u2019t make fast decisions during spikes and lulls. Worse, you sometimes end up making decisions based on bad data.\u00a0",
+            "heading": "Overstock and slow decision-making"
+           },
+           {
+            "add_image": {
+             "alt": "manual-entry-1-1",
+             "height": 324,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Omnichannel/manual-entry-1-1.png",
+             "width": 500
+            },
+            "description": "Flieber is a powerful and customizable tool with native integration for the most relevant marketplaces. ",
+            "heading": "Fragmented data and manual entry"
+           },
+           {
+            "add_image": {
+             "alt": "forcasting-1",
+             "height": 315,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Omnichannel/forcasting-1.png",
+             "width": 550
+            },
+            "description": "Understanding demand across DTC, marketplaces, and wholesale is a complex struggle. Each channel has different sales behaviors and replenishment timelines.\u00a0",
+            "heading": "Complex demand forecasting"
+           }
+          ],
+          "module_id": 190169509042,
+          "schema_version": 2,
+          "style": {
+           "section_background_color": {
+            "color": "#fff",
+            "opacity": 100
+           }
+          },
+          "sub_title_text": "As omnichannel specialists who understand your unique headaches, we built Flieber to help you overcome real problems and complexities. If you\u2019re suffering from one or all of the following issues, Flieber can help.\u00a0",
+          "title_text": "We understand the challenges <span>omnichannel</span> brands face."
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17473743523232",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Case Module V1",
+         "name": "widget_1747374351908",
+         "params": {
+          "bg_color": {
+           "color": "#333333",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "left_case_list_group": [
+           {
+            "icon_image": {
+             "alt": "ai-powered",
+             "height": 40,
+             "loading": "lazy",
+             "max_height": 40,
+             "max_width": 41,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Omnichannel/ai-powered.svg",
+             "width": 41
+            },
+            "sub_text": "Accurate, channel-specific sales forecasts that consider the unique factors of DTC, marketplaces, and wholesale.",
+            "title_text": "AI-powered forecasting by channel and SKU"
+           },
+           {
+            "icon_image": {
+             "alt": "inventory",
+             "height": 40,
+             "loading": "lazy",
+             "max_height": 40,
+             "max_width": 41,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Omnichannel/inventory.svg",
+             "width": 41
+            },
+            "sub_text": "Visual, omnichannel inventory forecasts showing future stockouts, PO/TO arrivals, and consumption across all locations and SKUs.",
+            "title_text": "Inventory visualizations and insights"
+           },
+           {
+            "icon_image": {
+             "alt": "smart-recommandation",
+             "height": 36,
+             "loading": "lazy",
+             "max_height": 36,
+             "max_width": 51,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Omnichannel/smart-recommandation.svg",
+             "width": 51
+            },
+            "sub_text": "Tailored recommendations for reordering or transferring inventory by location or sales channel to ensure you maximize efficiency and don\u2019t tie up capital in overstock.",
+            "title_text": "Smart replenishment recommendations"
+           },
+           {
+            "icon_image": {
+             "alt": "scenario",
+             "height": 45,
+             "loading": "lazy",
+             "max_height": 45,
+             "max_width": 46,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Omnichannel/scenario.svg",
+             "width": 46
+            },
+            "sub_text": "Simulate promotions, shipping changes, or other strategies to make confident decisions before committing to new ways of doing business.",
+            "title_text": "Scenario testing for confident decision-making"
+           },
+           {
+            "icon_image": {
+             "alt": "ERP",
+             "height": 40,
+             "loading": "lazy",
+             "max_height": 40,
+             "max_width": 41,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Omnichannel/ERP.svg",
+             "width": 41
+            },
+            "sub_text": "Flieber can integrate with ERPs like NetSuite without any changes to the ERP. You don\u2019t need an ERP to run Flieber, but if you do, it sits alongside it and makes it smarter.\u00a0",
+            "title_text": "No ERP overhaul required"
+           },
+           {
+            "icon_image": {
+             "alt": "integrate",
+             "height": 40,
+             "loading": "lazy",
+             "max_height": 40,
+             "max_width": 41,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/Omnichannel/integrate.svg",
+             "width": 41
+            },
+            "sub_text": "Flieber has pre-built integrations with the most common sales channels, inventory systems, shipping solutions, and ERPs. However, AI-based mapping makes it easy to integrate with less common systems\u2014and it even integrates with your spreadsheets.\u00a0",
+            "title_text": "Easily integrate everything you need"
+           }
+          ],
+          "module_id": 190214730291,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17473750981732",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Counter Module V1",
+         "name": "widget_1747375097785",
+         "params": {
+          "counter_group": [
+           {
+            "counter_number": "38%",
+            "description_text": "Optimized replenishment ensures best-sellers stay in stock and keeps the sales flowing.\u00a0",
+            "title_text": "Sales Increase"
+           },
+           {
+            "counter_number": "17%",
+            "description_text": "Smarter replenishment frees up capital tied to low-volume SKUs.\u2028",
+            "title_text": "Less Overstock"
+           },
+           {
+            "counter_number": "62%",
+            "description_text": "Accurate forecasting prevents disruptions during promos or seasonal surges.",
+            "title_text": "Fewer Stockouts"
+           },
+           {
+            "counter_number": "88%",
+            "description_text": "Automation slashes time spent on manual inventory planning and spreadsheet hell.",
+            "title_text": "Time Savings"
+           }
+          ],
+          "css_class": "dnd-module",
+          "module_id": 190214731093,
+          "schema_version": 2,
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17326016887752",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Book A Demo Module",
+         "name": "widget_1732601688413",
+         "params": {
+          "add_content": "<h2>Ready to overcome omnichannel<br>complexity and <span>boost your growth?</span></h2>\n<p>Flieber can help you make smarter decisions, free up your time, and help you finally overcome complexity at scale.&nbsp;</p>",
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           },
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           }
+          ],
+          "enable_heightlight_text_style": true,
+          "module_id": 183216575611,
+          "schema_version": 2,
+          "style": {
+           "box_background_color": {
+            "color": "#CCD9DB",
+            "opacity": 100
+           },
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 100
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           },
+           "text_color": {
+            "color": "#000000",
+            "opacity": 100
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Master omnichannel inventory with Flieber. Sync sales and supply chain data for smarter forecasting and full visibility across DTC, Amazon, and wholesale.",
+ "name": "Omnichannel",
+ "pageExpiryEnabled": false,
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2025-05-21T04:35:49Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "omnichannel",
+ "state": "DRAFT",
+ "subcategory": "site_page",
+ "templatePath": "flieber/templates/product-page.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:08:29.625Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/omnichannel",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

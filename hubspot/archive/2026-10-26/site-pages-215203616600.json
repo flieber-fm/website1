@@ -1,0 +1,1142 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [
+  {
+   "id": 214345817103,
+   "path": "flieber/modules/Commerce Operations/Commerce Op Stylesheet.css",
+   "type": "cos_extension_resource"
+  },
+  {
+   "id": 214406903379,
+   "path": "flieber/modules/Commerce Operations/second_css_comm_op.css",
+   "type": "cos_extension_resource"
+  },
+  {
+   "id": 214608458756,
+   "path": "flieber/modules/Commerce Operations/Slick/slick.css",
+   "type": "cos_extension_resource"
+  },
+  {
+   "id": 214412680554,
+   "path": "flieber/modules/Commerce Operations/fonts/stylesheet.css",
+   "type": "cos_extension_resource"
+  },
+  {
+   "id": 214611122819,
+   "path": "flieber/modules/Commerce Operations/Slick/slick-theme.css",
+   "type": "cos_extension_resource"
+  },
+  {
+   "id": 214778183308,
+   "path": "flieber/modules/Flieber Inventory/Inventory_css_one.css",
+   "type": "cos_extension_resource"
+  },
+  {
+   "id": 214778443596,
+   "path": "flieber/modules/Flieber Inventory/Inventory_css_two.css",
+   "type": "cos_extension_resource"
+  },
+  {
+   "id": 215209873262,
+   "path": "flieber/modules/Flieber Studio/flieber-studio-css.css",
+   "type": "cos_extension_resource"
+  }
+ ],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 4,
+ "createdAt": "2026-06-17T04:29:11.854Z",
+ "createdById": "27522147",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "footerHtml": "<script type=\"text/javascript\" src=\"//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js\"></script>\n\n<script>\n    $(document).ready(function() {\n        var $slider = $('.results_list');\n        var slickInitialized = false;\n\n        function manageSlider() {\n            var windowWidth = $(window).width();\n\n            if (windowWidth < 1200) {\n                if (!slickInitialized) {\n                    // 1. Mark original items so we know what to keep\n                    $slider.children('.result_list_item').addClass('original-item');\n\n                    // 2. Clone only the original items and append them\n                    $slider.children('.original-item').clone().removeClass('original-item').addClass('cloned-item').appendTo($slider);\n\n                    // 3. Initialize Slick\n                    $slider.slick({\n                        slidesToShow: 4, \n                       autoplay: true,\n                      autoplaySpeed: 6000,\n                        slidesToScroll: 1,\n                        infinite: true,\n                        dots: false,          \n                        arrows: true,\n                        responsive: [\n                            { breakpoint: 992, settings: { slidesToShow: 3 } },\n                            { breakpoint: 768, settings: { slidesToShow: 2 } },\n                            { breakpoint: 600, settings: { slidesToShow: 1 } }\n                        ]\n                    });\n                    slickInitialized = true;\n                }\n            } else {\n                if (slickInitialized) {\n                    // 1. Completely destroy Slick slider\n                    $slider.slick('unslick');\n\n                    // 2. Wipe out the mobile cloned items from the DOM\n                    $slider.children('.cloned-item').remove();\n                    $slider.children('.original-item').removeClass('original-item');\n\n                    slickInitialized = false;\n                }\n            }\n        }\n\n        manageSlider();\n\n        var resizeTimer;\n        $(window).on('resize', function() {\n            clearTimeout(resizeTimer);\n            resizeTimer = setTimeout(manageSlider, 100);\n        });\n    });\n</script>\n <script>\nlet lineMoveAdded = false;\nlet timer = null;\n\nsetInterval(function () {\n\n    const $section = $('.platform-ecomm-op-main-two');\n\n    // Active-1\n    if ($section.hasClass('active-1') && !lineMoveAdded) {\n\n        lineMoveAdded = true;\n\n        timer = setTimeout(function () {\n            $section.addClass('line-move');\n        }, 1000);\n    }\n\n    // Active-2\n    if ($section.hasClass('active-2')) {\n\n        $section.removeClass('line-move');\n\n        clearTimeout(timer);\n\n        // Allow next cycle\n        lineMoveAdded = false;\n    }\n\n    // Active-3\n    if ($section.hasClass('active-3')) {\n\n        $section.removeClass('line-move');\n\n        clearTimeout(timer);\n\n        // Allow next cycle\n        lineMoveAdded = false;\n    }\n\n}, 100);\n </script>\n\n<script>\n$(document).ready(function () {\n\n    $('.feature-btn:first').addClass('active');\n\n    $('.feature-image').hide();\n    $('.feature-image:first').show();\n\n    $('.feature-btn').on('click', function () {\n\n        let index = $(this).index();\n\n        $('.feature-btn').removeClass('active');\n        $(this).addClass('active');\n\n        $('.feature-image:visible').fadeOut(200, function () {\n            $('.feature-image').eq(index).fadeIn(300);\n        });\n\n    });\n\n});\n \n</script>",
+ "htmlTitle": "AI-Powered Commerce Operations | Automate Workflows and Agents | Flieber Studio",
+ "id": "215203616600",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17816717169742",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Flieber-studio-banner",
+         "name": "widget_1781671716568",
+         "params": {
+          "bullet_points": [
+           "14 days free \u00b7 No credit card",
+           "Built on Commerce-Ready AI",
+           "Live in minutes",
+           "Agents act, you approve"
+          ],
+          "css_class": "dnd-module",
+          "hero_pill": {
+           "blue_text": "ALPHA",
+           "normal_text": "Flieber Studio"
+          },
+          "main_image": {
+           "alt": "studio-builds-img",
+           "height": 948,
+           "loading": "lazy",
+           "max_height": 474,
+           "max_width": 481,
+           "size_type": "auto_custom_max",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Optimized%202026%20v2/studio-builds-img.webp",
+           "width": 962
+          },
+          "module_id": 215209895605,
+          "schema_version": 2,
+          "section_head": "<h1>Describe it. <strong>Studio builds it.</strong></h1>\n<p>Flieber Studio is the AI layer for commerce operations. Type what you need in plain natural language and Studio builds the app, workflow, or agent that does the work. It speaks commerce: the use cases, the math, the way ops actually runs.&nbsp;</p>",
+          "transparent_button": {
+           "button_link": {
+            "no_follow": false,
+            "open_in_new_tab": false,
+            "url": {
+             "content_id": 202046647439,
+             "type": "CONTENT"
+            }
+           },
+           "button_text": "Start free trial"
+          },
+          "yellow_button": {
+           "button_link": {
+            "no_follow": false,
+            "open_in_new_tab": false,
+            "url": {
+             "content_id": 194312997949,
+             "type": "CONTENT"
+            }
+           },
+           "button_text": "Book Demo"
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17816746939752",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "brands logos commerce op studio",
+         "name": "widget_1781674693575",
+         "params": {
+          "css_class": "dnd-module",
+          "logos_ecomm_op": [
+           {
+            "alt": "trust-icon-1",
+            "height": 23,
+            "loading": "lazy",
+            "max_height": 23,
+            "max_width": 72,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-1.svg",
+            "width": 72
+           },
+           {
+            "alt": "Logo-gh",
+            "height": 24,
+            "loading": "lazy",
+            "max_height": 24,
+            "max_width": 104,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Logo-gh.svg",
+            "width": 104
+           },
+           {
+            "alt": "Primal-logo",
+            "height": 28,
+            "loading": "lazy",
+            "max_height": 28,
+            "max_width": 125,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Primal-logo.svg",
+            "width": 125
+           },
+           {
+            "alt": "trust-icon-4",
+            "height": 20,
+            "loading": "lazy",
+            "max_height": 20,
+            "max_width": 95,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-4.svg",
+            "width": 95
+           },
+           {
+            "alt": "trust-icon-5",
+            "height": 25,
+            "loading": "lazy",
+            "max_height": 25,
+            "max_width": 148,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-5.svg",
+            "width": 148
+           },
+           {
+            "alt": "trust-icon-6",
+            "height": 27,
+            "loading": "lazy",
+            "max_height": 27,
+            "max_width": 90,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-6.svg",
+            "width": 90
+           },
+           {
+            "alt": "trust-icon-7",
+            "height": 46,
+            "loading": "lazy",
+            "max_height": 46,
+            "max_width": 63,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-7.svg",
+            "width": 63
+           },
+           {
+            "alt": "trust-icon-6",
+            "height": 27,
+            "loading": "lazy",
+            "max_height": 27,
+            "max_width": 90,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-6.svg",
+            "width": 90
+           },
+           {
+            "alt": "trust-icon-9",
+            "height": 39,
+            "loading": "lazy",
+            "max_height": 39,
+            "max_width": 52,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-9.svg",
+            "width": 52
+           },
+           {
+            "alt": "trust-icon-10",
+            "height": 20,
+            "loading": "lazy",
+            "max_height": 20,
+            "max_width": 79,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-10.svg",
+            "width": 79
+           },
+           {
+            "alt": "trust-icon-11",
+            "height": 22,
+            "loading": "lazy",
+            "max_height": 22,
+            "max_width": 145,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-11.svg",
+            "width": 145
+           },
+           {
+            "alt": "trust-icon-12",
+            "height": 29,
+            "loading": "lazy",
+            "max_height": 29,
+            "max_width": 93,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-12.svg",
+            "width": 93
+           },
+           {
+            "alt": "trust-icon-13",
+            "height": 27,
+            "loading": "lazy",
+            "max_height": 27,
+            "max_width": 64,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-13.svg",
+            "width": 64
+           },
+           {
+            "alt": "trust-icon-14",
+            "height": 43,
+            "loading": "lazy",
+            "max_height": 43,
+            "max_width": 43,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-14.svg",
+            "width": 43
+           },
+           {
+            "alt": "trust-icon-15",
+            "height": 13,
+            "loading": "lazy",
+            "max_height": 13,
+            "max_width": 125,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/trust-icon-15.svg",
+            "width": 125
+           }
+          ],
+          "module_id": 215216411703,
+          "partner_logo_heading": "<h2>Trusted by 100+ commerce brands</h2>",
+          "schema_version": 2
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "label": "channel-system-studio",
+      "name": "widget_1781676594816",
+      "params": {
+       "css_class": "dnd-module",
+       "img_grup": {
+        "ryt_img_col": {
+         "alt": "need-attention-img",
+         "height": 890,
+         "loading": "lazy",
+         "max_height": 445,
+         "max_width": 481,
+         "size_type": "auto_custom_max",
+         "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Optimized%202026%20v2/need-attention-img.webp",
+         "width": 962
+        }
+       },
+       "main_head": "<h2>The work doesn\u2019t just slow you down. <strong><em>It hides</em> <em>what needs attention.</em></strong></h2>\n<p>The Monday reorder review. The reconciliation between your sales channels. The spreadsheet nobody else can rebuild. The supplier confirmation that triggers four downstream tasks. The follow-up with your supply chain operators.</p>\n<p>Flieber Studio builds agents that don\u2019t just automate the work. They detect risks, surface opportunities, and recommend what to do next, so your team can act before problems hit the numbers.</p>",
+       "module_id": 215209921832,
+       "schema_version": 2,
+       "thick_text": "<p>Less busywork. Fewer missed signals. Faster action.</p>",
+       "transparent_button": {
+        "button_link": {
+         "no_follow": false,
+         "open_in_new_tab": false,
+         "url": {
+          "href": "https://www.flieber.com/free-trial",
+          "type": "EXTERNAL"
+         }
+        },
+        "button_text": "Start Free Trial"
+       },
+       "yellow_button": {
+        "button_link": {
+         "no_follow": false,
+         "open_in_new_tab": false,
+         "url": {
+          "href": "https://www.flieber.com/book-a-demo",
+          "type": "EXTERNAL"
+         }
+        },
+        "button_text": "Book Demo"
+       }
+      },
+      "rowMetaData": [],
+      "rows": [],
+      "type": "custom_widget",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1781678223634",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "slide-studio-to-studio",
+         "name": "widget_1781678260927",
+         "params": {
+          "batch_col": "<p>Studio</p>",
+          "blue_box_content": "<p>Every Monday, send a report of the products with stockout risk to my #operations and #marketing channels on Slack.</p>",
+          "css_class": "dnd-module",
+          "dynamic_left_content": [
+           {
+            "blue_box_content": "<p>Every Monday, send a report of the products with stockout risk to my #operations and #marketing channels on Slack.</p>",
+            "grey_box_content": "<p><strong><em>\u2192</em></strong> A live dashboard tailored to your operation, used every day.</p>",
+            "studio_work_title": "<h3>&nbsp;<span>A live app, built once.</span>&nbsp;</h3>"
+           },
+           {
+            "blue_box_content": "<p>Every Tuesday, check what needs replenishment, round to carton and CBM, draft POs by supplier, send to NetSuite for approval, then send each PO to the right supplier.</p>",
+            "grey_box_content": "<p><strong><em>\u2192 </em></strong>A scheduled workflow that delivers with no manual work behind it.</p>",
+            "studio_work_title": "<h3>A workflow that runs on schedule.</h3>"
+           },
+           {
+            "blue_box_content": "<p>Monitor Gmail for supplier emails on open POs. If a delivery date changes, update Flieber and alert #operations. If it creates a new stockout, pause Google &amp; Meta campaigns and alert #marketing.</p>",
+            "grey_box_content": "<p><strong><em>\u2192&nbsp;</em></strong> An always-on agent that watches your data and acts on rules you define.</p>",
+            "studio_work_title": "<h3>An always-on agent.</h3>"
+           }
+          ],
+          "grey_box_content": "<p><em>\u2192</em>A live dashboard tailored to your operation, used every day.</p>",
+          "image_repeat": [
+           {
+            "alt": "live-img-1",
+            "height": 462,
+            "loading": "lazy",
+            "max_height": 462,
+            "max_width": 458,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/live-img-1.svg",
+            "width": 458
+           },
+           {
+            "alt": "live-img-3",
+            "height": 462,
+            "loading": "lazy",
+            "max_height": 462,
+            "max_width": 456,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/live-img-3.svg",
+            "width": 456
+           },
+           {
+            "alt": "live-img-2",
+            "height": 926,
+            "loading": "lazy",
+            "max_height": 463,
+            "max_width": 451,
+            "size_type": "auto_custom_max",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Optimized%202026%20TO%20DELETE/live-img-2.webp",
+            "width": 902
+           }
+          ],
+          "li_step_counter": [
+           "<p>Apps</p>",
+           "<p><span>Workflows</span></p>",
+           "<p><span>Agents</span></p>"
+          ],
+          "module_id": 215209934595,
+          "schema_version": 2,
+          "studio_platform_heading": "<h2>Three ways to put <strong><em>Studio to work.</em></strong></h2>\n<p>Every example here is something Studio does today.</p>",
+          "studio_work_bottom_content": "<p>Shipped today: ask \u2192 app, ask \u2192 workflow, and basic agents. More advanced inbound-monitoring agents <strong>in development </strong>.</p>",
+          "studio_work_title": "<h3><span>A live app, built once.</span></h3>"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17816847350603",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "prompt-running-studio",
+         "name": "widget_1781684739796",
+         "params": {
+          "batch_dis": "<p>Describe \u2192 ship, in four steps.</p>",
+          "bottom_line": "<p>Onboarding is free. Our team gets you live.</p>",
+          "css_class": "dnd-module",
+          "module_id": 215209979776,
+          "process_blk": [
+           {
+            "count": "<p>01</p>",
+            "count_icon_box": "01",
+            "count_img": {
+             "alt": "icon-1",
+             "height": 21,
+             "loading": "lazy",
+             "max_height": 21,
+             "max_width": 21,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon-1.svg",
+             "width": 21
+            },
+            "process_box_content": "<h3>Describe it.</h3>\n<p>Plain language. Reference your SKUs, channels, suppliers, margins, lead times. Studio already speaks commerce.</p>"
+           },
+           {
+            "count": "<p>02</p>",
+            "count_img": {
+             "alt": "icon-2",
+             "height": 21,
+             "loading": "lazy",
+             "max_height": 21,
+             "max_width": 21,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon-2.svg",
+             "width": 21
+            },
+            "process_box_content": "<h3>Studio drafts it.</h3>\n<p>You see exactly what Studio built and the logic behind it before anything ships.</p>"
+           },
+           {
+            "count": "<p>03</p>",
+            "count_img": {
+             "alt": "icon-3",
+             "height": 21,
+             "loading": "lazy",
+             "max_height": 21,
+             "max_width": 21,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon-3.svg",
+             "width": 21
+            },
+            "process_box_content": "<h3>Review, refine, ship.</h3>\n<p>Adjust the rules, change the thresholds, edit the output format. Then turn it on.</p>"
+           },
+           {
+            "count": "<p>04</p>",
+            "count_img": {
+             "alt": "icon-4",
+             "height": 21,
+             "loading": "lazy",
+             "max_height": 21,
+             "max_width": 21,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/icon-4.svg",
+             "width": 21
+            },
+            "process_box_content": "<h3>Edit anytime.</h3>\n<p>Studio remembers what you built. Change the prompt; it rebuilds.</p>"
+           }
+          ],
+          "run_batch": "<p><strong>Build it</strong> <em>Run it</em></p>",
+          "schema_version": 2,
+          "top_head": "<h2>From prompt to <strong>running ops.</strong></h2>\n<p>Describe what you need. Flieber Studio builds it \u2014 then keeps it running, on its own.</p>"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1781691320771",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "approved-actions-md-studio",
+         "name": "widget_1781691325607",
+         "params": {
+          "css_class": "dnd-module",
+          "img_list_count": [
+           {
+            "count_col": "01",
+            "count_dis": "<h4>Explicit approval steps.</h4>\n<p>Every action surfaces exactly what will happen before you approve \u2014 the data it touches, the systems it writes to, the message it sends. Nothing irreversible happens without your sign-off.</p>"
+           },
+           {
+            "count_col": "02",
+            "count_dis": "<h4>Traceable decisions.</h4>\n<p>Every recommendation shows its reasoning: the data it used, the rules it followed, the alternatives it considered. You always know why Studio did what it did.</p>"
+           },
+           {
+            "count_col": "03",
+            "count_dis": "<h4>Full audit trail.</h4>\n<p>Every action is logged \u2014 what ran, when, who approved it, on what data. The complete record, always.</p>"
+           }
+          ],
+          "left_grif_img": {
+           "alt": "agents-act-img",
+           "height": 830,
+           "loading": "lazy",
+           "max_height": 415,
+           "max_width": 449,
+           "size_type": "auto_custom_max",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Optimized%202026%20v2/agents-act-img.webp",
+           "width": 898
+          },
+          "module_id": 215234721330,
+          "schema_version": 2,
+          "top_heading_main": {
+           "top_head": "<h2>Agents act. <strong>You define the boundaries.</strong></h2>\n<p>Autonomous,&nbsp;not unaccountable.</p>"
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "work automation studio",
+         "name": "widget_1783610807275",
+         "params": {
+          "bottom_text": "<p><strong>What is an MCP?</strong> A secure link between your Flieber account and assistants like Claude. Set up once, with no technical work on your side.</p>",
+          "css_class": "dnd-module",
+          "img_grup": {
+           "ryt_img_col": {
+            "alt": "Frame 10 (5)",
+            "height": 380,
+            "loading": "lazy",
+            "max_height": 380,
+            "max_width": 481,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Frame%2010%20(5).png",
+            "width": 481
+           }
+          },
+          "main_head": "<h2><span>Bring Flieber into Claude</span> <strong><em>agent to agent.</em></strong></h2>\n<p>Ask Claude what to reorder. You don\u2019t have to teach it your business. Your Flieber agent already knows your cover, margins, MOQs,&nbsp;lead times.</p>\n<p>Claude does the asking. Flieber does the commerce thinking. So instead of 150 raw rows to interpret, you get the answer in context: what to order, how much, ready to approve.</p>",
+          "module_id": 216775787866,
+          "schema_version": 2,
+          "sec_head_images": {
+           "flieber_image": {
+            "alt": "Frame 427321141 (1)",
+            "height": 61,
+            "loading": "lazy",
+            "max_height": 61,
+            "max_width": 61,
+            "size_type": "auto",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Frame%20427321141%20(1).svg",
+            "width": 61
+           },
+           "integrate_claude_image": {
+            "alt": "Frame_427321140",
+            "height": 122,
+            "loading": "lazy",
+            "max_height": 61,
+            "max_width": 61,
+            "size_type": "auto_custom_max",
+            "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Optimized%202026%20v2/Frame_427321140.webp",
+            "width": 122
+           }
+          },
+          "thick_text": "<p>You ask Claude. Flieber answers.</p>",
+          "transparent_button": {
+           "button_link": {
+            "no_follow": false,
+            "open_in_new_tab": true,
+            "url": {
+             "href": "https://www.flieber.com/free-trial?hsLang=en",
+             "type": "EXTERNAL"
+            }
+           },
+           "button_text": "Start free trial"
+          },
+          "yellow_button": {
+           "button_link": {
+            "no_follow": false,
+            "open_in_new_tab": true,
+            "url": {
+             "href": "https://www.flieber.com/book-a-demo?hsLang=en",
+             "type": "EXTERNAL"
+            }
+           },
+           "button_text": "Book a demo"
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17816932289983",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "generic-ai-studio",
+         "name": "widget_1781693236852",
+         "params": {
+          "ai_box": {
+           "list": [
+            {
+             "icon": {
+              "alt": "cross-1",
+              "height": 8,
+              "loading": "lazy",
+              "max_height": 8,
+              "max_width": 8,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross-1.svg",
+              "width": 8
+             },
+             "icon_text": "<p>Builds whatever you describe \u2014 fine for general apps</p>"
+            },
+            {
+             "icon": {
+              "alt": "cross-1",
+              "height": 8,
+              "loading": "lazy",
+              "max_height": 8,
+              "max_width": 8,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross-1.svg",
+              "width": 8
+             },
+             "icon_text": "<p>Doesn\u2019t know what cover days or lead times mean</p>"
+            },
+            {
+             "icon": {
+              "alt": "cross-1",
+              "height": 8,
+              "loading": "lazy",
+              "max_height": 8,
+              "max_width": 8,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross-1.svg",
+              "width": 8
+             },
+             "icon_text": "<p>Treats reorder logic as something to execute, not understand</p>"
+            },
+            {
+             "icon": {
+              "alt": "cross-1",
+              "height": 8,
+              "loading": "lazy",
+              "max_height": 8,
+              "max_width": 8,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross-1.svg",
+              "width": 8
+             },
+             "icon_text": "<p>Breaks on commerce-specific math and jargon</p>"
+            }
+           ],
+           "tag_batch": "<p>Generic AI</p>"
+          },
+          "bottom_disc": "<p>You describe ops the way you\u2019d describe them to a very knowledgeable colleague who already knows commerce,&nbsp;because that\u2019s what Flieber Studio is.</p>",
+          "css_class": "dnd-module",
+          "fab_studio_bx": {
+           "list": [
+            {
+             "icon": {
+              "alt": "check-1",
+              "height": 8,
+              "loading": "lazy",
+              "max_height": 8,
+              "max_width": 9,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check-1.svg",
+              "width": 9
+             },
+             "icon_text": "<p>Knows what cover days and lead times mean</p>"
+            },
+            {
+             "icon": {
+              "alt": "check-1",
+              "height": 8,
+              "loading": "lazy",
+              "max_height": 8,
+              "max_width": 9,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check-1.svg",
+              "width": 9
+             },
+             "icon_text": "<p>Understands what FBA fees do to margin</p>"
+            },
+            {
+             "icon": {
+              "alt": "check-1",
+              "height": 8,
+              "loading": "lazy",
+              "max_height": 8,
+              "max_width": 9,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check-1.svg",
+              "width": 9
+             },
+             "icon_text": "<p>Knows how reorder logic actually works</p>"
+            },
+            {
+             "icon": {
+              "alt": "check-1",
+              "height": 8,
+              "loading": "lazy",
+              "max_height": 8,
+              "max_width": 9,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check-1.svg",
+              "width": 9
+             },
+             "icon_text": "<p>Knows why a stockout costs more than the missed sale</p>"
+            }
+           ],
+           "tag_batch": "<p>Flieber Studio</p>"
+          },
+          "module_id": 215239955986,
+          "schema_version": 2,
+          "top_head": "<h2>Why not a <strong>generic AI?</strong></h2>\n<p>Generic tools build whatever you describe. That works... until the work depends on commerce- specific calculations, jargon, and processes that need to be understood, not just executed.</p>"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17836181355942",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "pair-fliber-sec-studio",
+         "name": "widget_1781696071202",
+         "params": {
+          "button_link": {
+           "no_follow": false,
+           "open_in_new_tab": false,
+           "url": {
+            "content_id": 214778394192,
+            "type": "CONTENT"
+           }
+          },
+          "css_class": "dnd-module",
+          "main_head": "<h2>Pair it with <strong>Flieber Inventory.</strong></h2>\n<p>Inventory is the planning depth Flieber Studio works on top of. Its forecasts and recommendations feed Studio\u2019s workflows and agents,&nbsp;so the automation is grounded in real planning, not guesswork.</p>",
+          "module_id": 215237795977,
+          "pair_img": {
+           "alt": "Background_Border_Shadow",
+           "height": 1072,
+           "loading": "lazy",
+           "max_height": 536,
+           "max_width": 578,
+           "size_type": "auto_custom_max",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Optimized%202026%20v2/Background_Border_Shadow.webp",
+           "width": 1156
+          },
+          "schema_version": 2,
+          "top_batch": "<p><span>Better together</span></p>",
+          "transparent_button": {
+           "button_link": {
+            "no_follow": false,
+            "open_in_new_tab": false,
+            "url": {
+             "href": "https://www.flieber.com/flieber-inventory",
+             "type": "EXTERNAL"
+            }
+           },
+           "button_text": "Explore Flieber Inventory"
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_1781697498485",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Cta-inv-studio",
+         "name": "widget_1781697503132",
+         "params": {
+          "btm_disc": "<p>Flieber Studio is currently in Alpha \u00b7 14 days free \u00b7 No credit card needed</p>",
+          "css_class": "dnd-module",
+          "module_id": 215243468636,
+          "richtext_field": "<h2>Stop guessing. <strong>Start Fliebing.</strong></h2>\n<p>Type what you need in plain text. Flieber Studio builds the app, workflow, or agent that does the work, and keeps it running.</p>",
+          "schema_version": 2,
+          "transparent_button": {
+           "button_text": "Start free trial",
+           "cta_btn_2": {
+            "no_follow": false,
+            "open_in_new_tab": false,
+            "url": {
+             "href": "https://www.flieber.com/flieber-studio",
+             "type": "EXTERNAL"
+            }
+           }
+          },
+          "yellow_button": {
+           "button_text": "Book demo",
+           "cta_btn": {
+            "no_follow": false,
+            "open_in_new_tab": false,
+            "url": {
+             "href": "https://www.flieber.com/flieber-studio",
+             "type": "EXTERNAL"
+            }
+           }
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Describe it. Studio builds it. Flieber Studio turns plain language into the apps, workflows, and agents that help run your commerce operations end to end.",
+ "name": "Flieber Studio",
+ "pageExpiryEnabled": false,
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2026-06-17T04:31:26Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "flieber-studio",
+ "state": "DRAFT",
+ "subcategory": "site_page",
+ "templatePath": "flieber/templates/Flieber-Inventory_template.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:08:28.705Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/flieber-studio",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

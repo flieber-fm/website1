@@ -1,0 +1,869 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [
+  {
+   "id": 195248806311,
+   "path": "flieber/templates/Product New/product-page-new.css",
+   "type": "cos_extension_resource"
+  }
+ ],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 4,
+ "createdAt": "2025-05-15T05:29:58.593Z",
+ "createdById": "69768445",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "htmlTitle": "Ecommerce",
+ "id": "190169555462",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-1",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Banner Module",
+         "name": "dnd_area-module-2",
+         "params": {
+          "add_content": "<h1><strong data-stringify-type=\"bold\">Make faster, smarter decisions for your ecommerce brand</strong></h1>\n<p>Selling on marketplaces like Amazon and platforms like Shopify has never been easier, but operations are just as complex as they were in the 90s. Spreadsheets can\u2019t keep up with the speed, complexity, and multi-channel demands of modern commerce. Old tools don\u2019t work in the new era. Flieber brings modern, AI-driven forecasts to ecommerce brands like yours.&nbsp;</p>\n<p>Smarter replenishment, faster growth, no more spreadsheets.</p>",
+          "add_image": {
+           "alt": "banner-left1 (1)",
+           "height": 682,
+           "loading": "lazy",
+           "max_height": 682,
+           "max_width": 795,
+           "size_type": "auto",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/banner-left1%20(1).png",
+           "width": 795
+          },
+          "child_css": {},
+          "css": {},
+          "css_class": "dnd-module",
+          "cta_field": [
+           "ca2b9a11-1e49-4867-a09e-2ff3688a89b4",
+           "9f07650d-be41-4392-a318-21adff2a9103"
+          ],
+          "path": "/flieber/modules/custom-module/Banner Module",
+          "schema_version": 2,
+          "smart_type": "NOT_SMART",
+          "style": {
+           "desktop_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 90
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 196
+             }
+            }
+           },
+           "mobile_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 70
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 140
+             }
+            }
+           },
+           "tablet_spacing": {
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 70
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 150
+             }
+            }
+           }
+          },
+          "wrap_field_tag": "div"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-3",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Logo Module",
+         "name": "dnd_area-module-4",
+         "params": {
+          "bg_color": {
+           "color": "#186DFF",
+           "opacity": 100
+          },
+          "child_css": {},
+          "css": {},
+          "css_class": "dnd-module",
+          "first_row_group": [
+           {
+            "add_logo_image": {
+             "alt": "Zugu",
+             "height": 24,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/white-logo/Zugu.png",
+             "width": 75
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "paperlike",
+             "height": 25,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/white-logo/paperlike.png",
+             "width": 107
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "primal-harvest",
+             "height": 28,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/white-logo/primal-harvest.png",
+             "width": 125
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "unybrands",
+             "height": 21,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/white-logo/unybrands.svg",
+             "width": 95
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "mannatech",
+             "height": 25,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/white-logo/mannatech.png",
+             "width": 148
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "piccalio",
+             "height": 27,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/white-logo/piccalio.png",
+             "width": 90
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "jaeger",
+             "height": 46,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/white-logo/jaeger.png",
+             "width": 63
+            }
+           }
+          ],
+          "path": "../modules/custom-module/Logo Module",
+          "schema_version": 2,
+          "second_row_group": [
+           {
+            "add_logo_image": {
+             "alt": "lifepro",
+             "height": 33,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/white-logo/lifepro.png",
+             "width": 89
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "wargames",
+             "height": 39,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/white-logo/wargames.png",
+             "width": 52
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "qualico",
+             "height": 20,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/white-logo/qualico.png",
+             "width": 79
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "southshore",
+             "height": 23,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/white-logo/southshore.svg",
+             "width": 145
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "bearaby",
+             "height": 29,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/new-image/white-logo/bearaby.png",
+             "width": 93
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "alt",
+             "height": 28,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/white-logo/alt.svg",
+             "width": 63
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "waterglider",
+             "height": 43,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/white-logo/waterglider.png",
+             "width": 43
+            }
+           },
+           {
+            "add_logo_image": {
+             "alt": "modloft",
+             "height": 14,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/white-logo/modloft.svg",
+             "width": 125
+            }
+           }
+          ],
+          "smart_type": "NOT_SMART",
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 110
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 60
+             }
+            }
+           }
+          },
+          "wrap_field_tag": "div"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17576755463432",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Product Hero Video Section",
+         "name": "widget_1757675545892",
+         "params": {
+          "bg_color": {
+           "color": "#186DFF",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "module_id": 195928879146,
+          "schema_version": 2,
+          "videoplayer_field": {
+           "height": 1080,
+           "player_id": 196141294975,
+           "player_type": "hsvideo2",
+           "width": 1920
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-5",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Two Col Row Module",
+         "name": "dnd_area-module-6",
+         "params": {
+          "child_css": {},
+          "css": {},
+          "css_class": "dnd-module",
+          "image_content_group": [
+           {
+            "add_image": {
+             "alt": "fragmented-data1-1",
+             "height": 200,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/fragmented-data1-1.png",
+             "width": 341
+            },
+            "description": "You endlessly copy/paste data from Shopify, Amazon, and 3PL systems into various spreadsheets, and sometimes make mistakes.",
+            "heading": "Fragmented data"
+           },
+           {
+            "add_image": {
+             "alt": "inacurate-forecasting",
+             "height": 385,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/inacurate-forecasting.png",
+             "width": 701
+            },
+            "description": "Your forecasting technique fails to account for outliers (e.g., stockouts), promotions, product launches, and seasonality, leading to stockouts or overstocking during spikes and lulls.\u00a0",
+            "heading": "Inaccurate forecasting"
+           },
+           {
+            "add_image": {
+             "alt": "complex-product1-1",
+             "height": 200,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/complex-product1-1.png",
+             "width": 390
+            },
+            "description": "Kits, bundles, and backorders make your setup more complex than your spreadsheet can handle, leading to oversimplified calculations that don\u2019t reflect reality.\u00a0",
+            "heading": "Complex product categories"
+           },
+           {
+            "add_image": {
+             "alt": "limited-visiblity",
+             "height": 348,
+             "loading": "lazy",
+             "size_type": "exact",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/limited-visiblity.png",
+             "width": 442
+            },
+            "description": "You can\u2019t easily determine how much to reorder or when for each sales channel and inventory location, resulting in excessive spending on overstock or lost sales due to stockouts.\u00a0",
+            "heading": "Limited visibility"
+           }
+          ],
+          "path": "/flieber/modules/custom-module/Two Col Row Module",
+          "schema_version": 2,
+          "smart_type": "NOT_SMART",
+          "wrap_field_tag": "div"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-7",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Icon Content Module",
+         "name": "dnd_area-module-8",
+         "params": {
+          "child_css": {},
+          "css": {},
+          "css_class": "dnd-module",
+          "image_content_group": [
+           {
+            "add_image": {
+             "alt": "ai-powered",
+             "height": 50,
+             "loading": "lazy",
+             "max_height": 50,
+             "max_width": 50,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/ai-powered.svg",
+             "width": 50
+            },
+            "description": "Get accurate sales forecasts for Amazon and Shopify at the SKU level, automatically adjusting for anomalies to ensure precision during spikes and lulls.",
+            "heading": "Use AI-powered forecasting that handles complexity"
+           },
+           {
+            "add_image": {
+             "alt": "visualize",
+             "height": 50,
+             "loading": "lazy",
+             "max_height": 50,
+             "max_width": 49,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/visualize.svg",
+             "width": 49
+            },
+            "description": "Always-on dashboards and reports provide real-time visibility into days of stock, stockout warnings, consumption levels, and many more across FBA, 3PLs, and in-house locations.",
+            "heading": "Visualize your inventory in real time"
+           },
+           {
+            "add_image": {
+             "alt": "recommendation",
+             "height": 44,
+             "loading": "lazy",
+             "max_height": 44,
+             "max_width": 62,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/recommendation.svg",
+             "width": 62
+            },
+            "description": "Get automated recommendations for what to reorder or transfer across locations, optimizing cash flow and preventing stockouts and overstock.",
+            "heading": "Get smart replenishment recommendations"
+           },
+           {
+            "add_image": {
+             "alt": "simulate",
+             "height": 50,
+             "loading": "lazy",
+             "max_height": 50,
+             "max_width": 49,
+             "size_type": "auto",
+             "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Flieber/images/product/simulate.svg",
+             "width": 49
+            },
+            "description": "Test different replenishment strategies before committing based on various sales scenarios, and become more confident that you\u2019re making the right decision.\u00a0",
+            "heading": "Simulate strategies before going all in"
+           }
+          ],
+          "path": "/flieber/modules/custom-module/Icon Content Module",
+          "schema_version": 2,
+          "smart_type": "NOT_SMART",
+          "wrap_field_tag": "div"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-9",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Counter Module",
+         "name": "dnd_area-module-10",
+         "params": {
+          "add_heading": "<h2>A track record of helping ecommerce brands grow</h2>\n<p>Brands that use Flieber for 12 months transform the way they make inventory decisions and prime themselves for growth.</p>",
+          "bg_color": {
+           "color": "#F5ED61",
+           "opacity": 100
+          },
+          "child_css": {},
+          "counter_group": [
+           {
+            "counter_number": "38%",
+            "description_text": "Optimized replenishment ensures best-sellers stay in stock and keeps the sales flowing.\u00a0",
+            "title_text": "Sales Increase"
+           },
+           {
+            "counter_number": "62%",
+            "description_text": "Accurate forecasting prevents disruptions during promos or seasonal surges.",
+            "title_text": "Fewer Stockouts"
+           },
+           {
+            "counter_number": "17%",
+            "description_text": "Smarter replenishment frees up capital tied to low-volume SKUs.\u2028",
+            "title_text": "Less Overstock"
+           },
+           {
+            "counter_number": "38%",
+            "description_text": "Automation slashes time spent on manual inventory planning and spreadsheet hell.",
+            "title_text": "Time Savings"
+           }
+          ],
+          "css": {},
+          "css_class": "dnd-module",
+          "enable_updated_style": true,
+          "path": "/flieber/modules/custom-module/Counter Module",
+          "schema_version": 2,
+          "smart_type": "NOT_SMART",
+          "style": {
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 150
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          },
+          "wrap_field_tag": "div"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-11",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Book A Demo Module",
+         "name": "dnd_area-module-12",
+         "params": {
+          "add_content": "<h2>Ready to scale your ecommerce brand?</h2>\n<p>Flieber can help you take control of your inventory, free up your time, and finally give you the ability to scale.&nbsp;</p>",
+          "bg_color": {
+           "color": "#FFFFFF",
+           "opacity": 100
+          },
+          "child_css": {},
+          "css": {},
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           },
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           }
+          ],
+          "path": "../modules/custom-module/Book A Demo Module",
+          "schema_version": 2,
+          "smart_type": "NOT_SMART",
+          "style": {
+           "box_background_color": {
+            "color": "#186DFF",
+            "opacity": 100
+           },
+           "desktop_spacing": {
+            "margin": {
+             "bottom": {},
+             "top": {
+              "units": "px",
+              "value": -50
+             }
+            },
+            "padding": {
+             "bottom": {
+              "units": "px",
+              "value": 100
+             },
+             "left": {},
+             "right": {},
+             "top": {
+              "units": "px",
+              "value": 100
+             }
+            }
+           }
+          },
+          "wrap_field_tag": "div"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Stop the inventory guesswork. Flieber\u2019s AI forecasting ensures accurate sales predictions and smarter replenishment for fast-growing ecommerce brands.",
+ "name": "Ecommerce",
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2025-05-21T04:36:48Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "ecommerce",
+ "state": "DRAFT",
+ "subcategory": "site_page",
+ "templatePath": "flieber/templates/ecommerce.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:08:30.568Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/ecommerce",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}

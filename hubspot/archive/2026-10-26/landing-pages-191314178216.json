@@ -1,0 +1,774 @@
+{
+ "archivedAt": "1970-01-01T00:00:00Z",
+ "archivedInDashboard": false,
+ "attachedStylesheets": [
+  {
+   "id": 195248806311,
+   "path": "flieber/templates/Product New/product-page-new.css",
+   "type": "cos_extension_resource"
+  }
+ ],
+ "authorName": "App 55374858 (Claude website build) for Portal 5767502",
+ "categoryId": 1,
+ "contentTypeCategory": 1,
+ "createdAt": "2025-06-12T18:23:13.737Z",
+ "createdById": "4752608",
+ "currentState": "DRAFT",
+ "domain": "",
+ "featuredImage": "",
+ "featuredImageAltText": "",
+ "headHtml": "",
+ "htmlTitle": "Flieber vs Netstock",
+ "id": "191314178216",
+ "layoutSections": {
+  "dnd_area": {
+   "cells": [],
+   "cssClass": "",
+   "cssId": "",
+   "cssStyle": "",
+   "label": "Main section",
+   "name": "dnd_area",
+   "params": {},
+   "rowMetaData": [
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "forceFullWidthSection": true
+     }
+    },
+    {
+     "cssClass": "dnd-section",
+     "styles": {
+      "breakpointStyles": {
+       "default": {
+        "padding": {
+         "bottom": {
+          "units": "px",
+          "value": 0
+         },
+         "left": {
+          "units": "px",
+          "value": 0
+         },
+         "right": {
+          "units": "px",
+          "value": 0
+         },
+         "top": {
+          "units": "px",
+          "value": 0
+         }
+        }
+       }
+      },
+      "forceFullWidthSection": true
+     }
+    }
+   ],
+   "rows": [
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "dnd_area-column-3",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       },
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "name": "cell_17497068970062",
+         "params": {
+          "css_class": "dnd-column"
+         },
+         "rowMetaData": [
+          {
+           "cssClass": "dnd-row"
+          }
+         ],
+         "rows": [
+          {
+           "0": {
+            "cells": [],
+            "cssClass": "",
+            "cssId": "",
+            "cssStyle": "",
+            "label": "Hero",
+            "name": "widget_1749579245790",
+            "params": {
+             "banner_image_group": {
+              "alt": "Frame 427321061",
+              "height": 114,
+              "loading": "lazy",
+              "max_height": 114,
+              "max_width": 1200,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/Frame%20427321061.png",
+              "width": 1200
+             },
+             "button": {
+              "button_1": {
+               "link": "https://www.flieber.com/book-a-demo",
+               "text_field": "Book a Demo"
+              },
+              "button_2": {
+               "link": "https://www.flieber.com/free-trial"
+              }
+             },
+             "content": "<p>Flieber is an AI-powered demand planning and inventory forecasting platform built to solve the complex challenges of modern multichannel brands. It's delivered through a clean, intuitive interface that operators can actually use.</p>\n<p>Netstock is an older inventory planning add-on built for legacy ERPs. Its outdated technology and rigid interface make it hard to keep up with the pace of modern commerce.</p>",
+             "css_class": "dnd-module",
+             "heading": "<span>Flieber</span> vs. Netstock",
+             "image_field": {
+              "alt": "netstock-logo",
+              "height": 351,
+              "loading": "lazy",
+              "max_height": 351,
+              "max_width": 351,
+              "size_type": "auto",
+              "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/netstock-logo.svg",
+              "width": 351
+             },
+             "logo": [
+              {
+               "alt": "unybrands 1",
+               "height": 21,
+               "loading": "lazy",
+               "max_height": 21,
+               "max_width": 96,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/unybrands%201.svg",
+               "width": 96
+              },
+              {
+               "alt": "mannatech",
+               "height": 25,
+               "loading": "lazy",
+               "max_height": 25,
+               "max_width": 149,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/mannatech.svg",
+               "width": 149
+              },
+              {
+               "alt": "picca",
+               "height": 27,
+               "loading": "lazy",
+               "max_height": 27,
+               "max_width": 90,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/picca.svg",
+               "width": 90
+              },
+              {
+               "alt": "jaeger",
+               "height": 46,
+               "loading": "lazy",
+               "max_height": 46,
+               "max_width": 63,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/jaeger.svg",
+               "width": 63
+              },
+              {
+               "alt": "lifepro",
+               "height": 34,
+               "loading": "lazy",
+               "max_height": 34,
+               "max_width": 90,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/lifepro.svg",
+               "width": 90
+              },
+              {
+               "alt": "wargames",
+               "height": 39,
+               "loading": "lazy",
+               "max_height": 39,
+               "max_width": 52,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/wargames.svg",
+               "width": 52
+              },
+              {
+               "alt": "qualico",
+               "height": 21,
+               "loading": "lazy",
+               "max_height": 21,
+               "max_width": 80,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/qualico.svg",
+               "width": 80
+              },
+              {
+               "alt": "southshore 1",
+               "height": 23,
+               "loading": "lazy",
+               "max_height": 23,
+               "max_width": 146,
+               "size_type": "auto",
+               "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/southshore%201.svg",
+               "width": 146
+              }
+             ],
+             "module_id": 191221974305,
+             "schema_version": 2,
+             "subheading": "",
+             "videoplayer_field": {
+              "height": 1080,
+              "player_id": 196075824680,
+              "player_type": "hsvideo2",
+              "width": 1920
+             }
+            },
+            "rowMetaData": [],
+            "rows": [],
+            "type": "custom_widget",
+            "w": 12,
+            "x": 0
+           }
+          }
+         ],
+         "styles": {
+          "verticalAlignment": "MIDDLE"
+         },
+         "type": "cell",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Two-Col-Content-Img",
+         "name": "widget_1749723887648",
+         "params": {
+          "background_color": "#186DFF",
+          "button": {
+           "link": ""
+          },
+          "content": "<p>Flieber was designed from the start for multichannel operators. It supports brands selling on Shopify, Amazon, Walmart, wholesale, and more.</p>\n<p>Netstock was built as an ERP add-on for traditional retail brands. Its system breaks down under the complexity of marketplaces, bundles, and can\u2019t keep up with the pace of high-volume brands.</p>",
+          "content_width": "435px",
+          "css_class": "dnd-module",
+          "heading": "Made for the way modern commerce actually works",
+          "image_field": {
+           "alt": "modern-commerce",
+           "height": 451,
+           "loading": "lazy",
+           "max_height": 901,
+           "max_width": 970,
+           "size_type": "exact",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/modern-commerce.png",
+           "width": 485
+          },
+          "module_id": 191281957771,
+          "schema_version": 2,
+          "subheading": "",
+          "text_color": "#FFF"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Two-Col-Content-Img",
+         "name": "widget_1749706917812",
+         "params": {
+          "background_color": "#FFF",
+          "button": {
+           "link": ""
+          },
+          "content": "<p>Flieber delivers clear insights through a modern interface. Operators can act quickly without digging through spreadsheets or outdated dashboards.</p>\n<p>Netstock\u2019s interface inherits the clutter and friction of the ERPs it connects to, slowing down decision-making.</p>",
+          "content_width": "340px",
+          "css_class": "dnd-module",
+          "heading": "Insightful, usable, fast",
+          "image_field": {
+           "alt": "insightful",
+           "height": 519,
+           "loading": "lazy",
+           "max_height": 1038,
+           "max_width": 1050,
+           "size_type": "exact",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/insightful.png",
+           "width": 525
+          },
+          "layout": "image-left",
+          "main_background_color": "#186DFF",
+          "module_id": 191281957771,
+          "schema_version": 2,
+          "subheading": "",
+          "text_color": "#1B1C1C"
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Two-Col-Content-Img",
+         "name": "widget_1749724825893",
+         "params": {
+          "background_color": "#CCD9DB",
+          "button": {
+           "text_field": "Book a Demo"
+          },
+          "content": "<p>You can start the same day and see real forecasts without needing a consultant.</p>\n<p>Netstock requires a sales call just to get a quote and takes weeks to implement with no trial option.</p>",
+          "content_width": "415px",
+          "css_class": "dnd-module",
+          "heading": "Flieber offers a free trial, transparent pricing, and fast setup",
+          "image_field": {
+           "alt": "free-trial-1",
+           "height": 411,
+           "loading": "lazy",
+           "max_height": 411,
+           "max_width": 518,
+           "size_type": "exact",
+           "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/free-trial-1.svg",
+           "width": 518
+          },
+          "main_background_color": "#FFF",
+          "module_id": 191281957771,
+          "schema_version": 2,
+          "subheading": ""
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       },
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Features-Table",
+         "name": "widget_1749727213193",
+         "params": {
+          "css_class": "dnd-module",
+          "module_id": 191295539565,
+          "schema_version": 2,
+          "table": {
+           "table_heading": [
+            "Feature",
+            "Flieber",
+            "Netstock"
+           ],
+           "table_row": [
+            {
+             "table_data": [
+              {
+               "data": "Compatible with modern AI technologies",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Highly accurate, AI transformer forecasting model",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Fast setup (in hours, instead of weeks)",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Flexible configuration to cover most use cases",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Modern, intuitive user interface designed for operators",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Independent platform with various weekly releases, fast iterations and dedicated support",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            },
+            {
+             "table_data": [
+              {
+               "data": "Integrates with any tech stack, through either native or assisted integrations",
+               "icon": {
+                "src": ""
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "check",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/check.svg",
+                "width": 25
+               }
+              },
+              {
+               "data": "",
+               "icon": {
+                "alt": "cross",
+                "height": 25,
+                "loading": "lazy",
+                "max_height": 25,
+                "max_width": 25,
+                "size_type": "auto",
+                "src": "https://5767502.fs1.hubspotusercontent-na1.net/hubfs/5767502/cross.svg",
+                "width": 25
+               }
+              }
+             ]
+            }
+           ]
+          }
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    },
+    {
+     "0": {
+      "cells": [],
+      "cssClass": "",
+      "cssId": "",
+      "cssStyle": "",
+      "name": "cell_17497469160082",
+      "params": {
+       "css_class": "dnd-column"
+      },
+      "rowMetaData": [
+       {
+        "cssClass": "dnd-row"
+       }
+      ],
+      "rows": [
+       {
+        "0": {
+         "cells": [],
+         "cssClass": "",
+         "cssId": "",
+         "cssStyle": "",
+         "label": "Book A Demo Module V2",
+         "name": "widget_1749746915492",
+         "params": {
+          "add_content": "<h2>You\u2019ve seen the side-by-side. Now see it in <span>action.</span></h2>\n<p>If you\u2019re comparing Flieber to tools like Foresight AI, don\u2019t just take our word for it\u2014see why brands choose a platform built for accuracy, speed, and scale. Get a live walkthrough tailored to your ops.</p>",
+          "bg_color": {
+           "color": "#F5ED61",
+           "opacity": 100
+          },
+          "css_class": "dnd-module",
+          "cta_group": [
+           {
+            "cta_field": "9f07650d-be41-4392-a318-21adff2a9103"
+           },
+           {
+            "cta_field": "ca2b9a11-1e49-4867-a09e-2ff3688a89b4"
+           }
+          ],
+          "module_id": 191309097780,
+          "schema_version": 2
+         },
+         "rowMetaData": [],
+         "rows": [],
+         "type": "custom_widget",
+         "w": 12,
+         "x": 0
+        }
+       }
+      ],
+      "styles": {
+       "breakpointStyles": {
+        "default": {
+         "padding": {
+          "bottom": {
+           "units": "px",
+           "value": 0
+          },
+          "left": {
+           "units": "px",
+           "value": 0
+          },
+          "right": {
+           "units": "px",
+           "value": 0
+          },
+          "top": {
+           "units": "px",
+           "value": 0
+          }
+         }
+        }
+       }
+      },
+      "type": "cell",
+      "w": 12,
+      "x": 0
+     }
+    }
+   ],
+   "type": "cell",
+   "w": 12,
+   "x": 0
+  }
+ },
+ "linkRelCanonicalUrl": "",
+ "metaDescription": "Flieber vs. Netstock: Why scaling brands switch to Flieber for faster setup, better data context, & precise AI forecasting.",
+ "name": "Flieber vs Netstock",
+ "pageExpiryEnabled": false,
+ "pageRedirected": false,
+ "publicAccessRules": [],
+ "publicAccessRulesEnabled": false,
+ "publishDate": "2025-06-13T16:43:25Z",
+ "publishImmediately": true,
+ "published": false,
+ "slug": "flieber-vs-netstock",
+ "state": "DRAFT",
+ "subcategory": "landing_page",
+ "templatePath": "flieber/templates/ecommerce.html",
+ "translations": {},
+ "updatedAt": "2026-10-26T21:11:44.367Z",
+ "updatedById": "100234537",
+ "url": "https://www.flieber.com/flieber-vs-netstock",
+ "useFeaturedImage": false,
+ "widgetContainers": {},
+ "widgets": {}
+}
