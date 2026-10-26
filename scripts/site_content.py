@@ -112,7 +112,7 @@ GROUPS = [
             ('Ask in plain language', 'Ask questions about your data and get answers, tables, charts and dashboards. Save reports, refresh them and keep the conversation going.', None, 'general'),
             ('Slack', 'Ask questions and receive alerts in Slack.', None, 'general'),
             ('Google Sheets add-on', 'Pulls Flieber data into your own sheets and refreshes it on a schedule.', None, 'general'),
-            ('MCP server', "Connect Claude Desktop, Claude Code, Cursor, Muse or your own agents through Flieber CLI. They get Flieber's data and actions directly, and every change is previewed first, following your approval rules. Claude in the browser: coming soon. Details in the developer reference.", None, 'general'),
+            ('MCP server', "Connect Claude Desktop, Claude Code, Cursor, Muse or your own agents through Flieber CLI, or Claude and ChatGPT in the browser through a custom connector. They get Flieber's data and actions directly, and every change is previewed first, following your approval rules. Details in the developer reference.", None, 'general'),
             ('MCP client and connected apps', 'Flieber connects out to Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads and NetSuite, and to any other system with an MCP server.', None, 'general'),
             ('Public API', 'Programmatic access to Flieber data for your own systems. Details in the MCP docs (customer login required).', None, 'general'),
         ],
@@ -230,9 +230,12 @@ APPROVAL_AGENTS = ("Every write follows approval rules the brand sets. By defaul
 CONNECTED_APPS = ["Gmail", "Outlook", "Slack", "Microsoft Teams", "Google Sheets", "OneDrive", "Notion", "Airtable",
                   "Meta Ads", "Google Ads", "NetSuite"]
 
+# Hosted Flieber MCP address (Felipe Infante, Oct 26). Used by CONNECT, /mcp and the developer reference.
+HOSTED_MCP_URL = "https://mcp.flieber.com/mcp"
+
 CONNECT = [
     ("Free trial", "14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan.", TRIAL),
-    ("Flieber MCP (through Flieber CLI)", "Claude Desktop, Claude Code, Cursor, Muse and other local MCP clients connect to Flieber's MCP server, which Flieber CLI runs on the user's computer, with the same 29 tools as the command line. The installer creates the Flieber account or signs in, and connects the AI tool. Every change is previewed first. Hosted MCP server and Claude in the browser: coming soon. Setup: https://www.flieber.com/mcp. Technical reference:", SITE + "/developers/cli"),
+    ("Flieber MCP (through Flieber CLI, or hosted)", "Claude Desktop, Claude Code, Cursor, Muse and other local MCP clients connect to Flieber's MCP server, which Flieber CLI runs on the user's computer, with the same 29 tools as the command line. The installer creates the Flieber account or signs in, and connects the AI tool. Every change is previewed first. Claude and ChatGPT in the browser connect to the hosted Flieber MCP server at " + HOSTED_MCP_URL + " as a custom connector and sign in with the Flieber account. Setup: https://www.flieber.com/mcp. Technical reference:", SITE + "/developers/cli"),
     ("MCP client", "Flieber connects to any system with an MCP server. Built-in connections: " + ", ".join(CONNECTED_APPS) + ".", None),
     ("Flieber CLI (local MCP and command line, early access)", "29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, Muse, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows (PowerShell): irm https://cli.flieber.com/install.ps1 | iex. Package:", "https://pypi.org/project/flieber/"),
     ("Public API", "Programmatic access to Flieber data. Details (customer login required):", DEV_DOCS),
@@ -526,7 +529,7 @@ MCP_PAGE = {
               "channels, products or suppliers. The data layer can be bought on its own."),
     "faq_h2": "Questions",
     "faq": [
-        ("Which AI assistants work with Flieber?", "Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude in the browser is coming soon."),
+        ("Which AI assistants work with Flieber?", "Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector."),
         ("Do I need a Flieber account?", "Yes. The installer walks you through creating one. Your free trial starts the first time you use your account, not when you create it."),
         ("Do I need to be technical to connect?", "No. Paste one prompt into Claude Desktop, Claude Code, Cursor or Muse and it sets Flieber up for you, or install it yourself in about 5 minutes."),
         ("Can my AI change things in my systems?", "Only within the approval rules you set. By default, every change waits for your approval."),
@@ -537,9 +540,9 @@ MCP_PAGE = {
     "close_body": "Start a 14-day free trial on your own data, or book a demo and we'll connect it with you.",
 }
 
-# Hosted Flieber connection and Claude in the browser: flip to True when engineering ships them.
-# True removes the "Coming soon" labels, gives the browser card a button and shows the browser steps on /install.
-HOSTED_MCP_LIVE = False
+# Hosted Flieber MCP for Claude and ChatGPT in the browser. Live since Oct 26 (Felipe Infante: tested in claude.ai and ChatGPT).
+# True removes the "Coming soon" labels, gives the browser card a button and shows the browser steps on /mcp.
+HOSTED_MCP_LIVE = True
 
 # The prompt people paste into their AI tool so it installs Flieber for them (first choice on /install and the homepage)
 # One source for the install commands (the prompt, /mcp, the homepage box, /developers/cli and the agent files)
@@ -569,11 +572,16 @@ INSTALL = {
     "manual_h": "Install it yourself",
     "manual_body": "Install Flieber, then try it. Works with Claude Desktop, Claude Code, Cursor and Muse.",
     "manual_btn": "Start",
-    "browser_tag": "Coming soon",
-    "browser_h": "Claude in your browser",
-    "browser_body": "Add Flieber to Claude in your browser and sign in with your Flieber account. Nothing to install.",
-    "browser_btn": "Add to Claude",
-    "browser_todo": "Steps and the connector address to come from engineering when the hosted connection ships.",
+    "browser_tag": "Nothing to install",
+    "browser_h": "Claude or ChatGPT in your browser",
+    "browser_body": "Add Flieber as a custom connector and sign in with your Flieber account. Nothing to install.",
+    "browser_btn": "Show me how",
+    "browser_lead": "Add Flieber as a custom connector in Claude or ChatGPT, then sign in with your Flieber account.",
+    "browser_steps": ["In Claude or ChatGPT, open Settings and add a custom connector.",
+                      "Name it Flieber and paste this address:",
+                      "Sign in with your Flieber account, or create one. On the same page you accept Flieber's terms and the terms of the AI early access.",
+                      "Open a new chat and ask: What can Flieber do?"],
+    "browser_todo": "Engineering to confirm which Claude and ChatGPT plans allow custom connectors, and whether ChatGPT needs developer mode turned on.",
     "before_h2": "Before you start",
     "before": ["A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.",
                "Claude Desktop, Claude Code, Cursor or Muse installed.",
@@ -613,7 +621,7 @@ INSTALL = {
     "safe_h2": "Built to be safe",
     "safe": ["Claude shows you every change first and waits for your OK before applying it.",
              "Going live is permanent, so Claude always asks you to confirm it.",
-             "Your sign-in is saved on your computer. You never paste a password or key into a chat.",
+             "You sign in on Flieber's own page. You never paste a password or key into a chat.",
              "Claude sees only what your Flieber account is allowed to see.",
              "Actual sales, adjusted sales and forecasts are kept separate, so numbers are never mixed."],
     "trouble_h2": "If something goes wrong",
@@ -626,7 +634,7 @@ INSTALL = {
                 ("“Too many requests” or a timeout", "Wait a moment and ask again, or ask for a shorter date range."),
                 ("Anything else", "Contact Flieber support. Never share your sign-in or key.")],
     "faq_h2": "Questions",
-    "faq": [("Which AI tools work with Flieber?", "Claude Desktop, Claude Code, Cursor and Muse today. Claude in the browser is coming soon."),
+    "faq": [("Which AI tools work with Flieber?", "Claude Desktop, Claude Code, Cursor and Muse, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector."),
             ("Do I need to be technical?", "No. Paste one prompt into your AI tool and it sets Flieber up for you, or install it yourself with the steps on this page."),
             ("Do I need a Flieber account?", "Yes. The installer walks you through creating one. Your free trial starts the first time you use your account, not when you create it."),
             ("Can Claude change things in Flieber?", "Only with your OK. Claude shows you every change first and waits for your approval."),
@@ -649,7 +657,7 @@ DEVREF = {
     "ways_h2": "Three ways in",
     "ways": [("Command line", "The flieber command, in your terminal.", None),
              ("Local MCP server", "uvx flieber@latest mcp, over stdio. Available now; includes the sign-in tools sign_in_start and sign_in_finish.", None),
-             ("Hosted MCP server", "Passes your sign-in through and stores nothing; offers the other 27 tools.", "soon")],
+             ("Hosted MCP server", HOSTED_MCP_URL + ", for Claude and ChatGPT in the browser as a custom connector. Signs in with your Flieber account (OAuth), passes your sign-in through and stores nothing; offers the other 27 tools.", None)],
     "signin_h2": "Other ways to sign in",
     "signin": [("By hand, with uv installed", ["uv tool install flieber", "flieber login", "flieber tenants"]),
                ("New organization (you accept Flieber's terms and the AI early access terms)", ["flieber signup"]),
@@ -681,7 +689,7 @@ HOME_CONNECT = {
              ("windows", "Windows", "Download the installer and open it. It creates your Flieber account or signs you in, and connects Flieber to your AI tool.")],
     "win_or": "Or paste this in PowerShell, a built-in Windows app (press the Start key, type PowerShell, press Enter):",
     "then": "Then open a new chat and ask: What can Flieber do? Using Claude Desktop? Quit it and open it again first.",
-    "foot": "Works with Claude Desktop, Claude Code, Cursor and Muse. Claude in the browser: coming soon. For agents: /agents and /llms.txt.",
+    "foot": "Works with Claude Desktop, Claude Code, Cursor and Muse. Using Claude or ChatGPT in the browser? Add Flieber as a connector. For agents: /agents and /llms.txt.",
 }
 MCP_CONNECT = {
     "kicker": "Connect",
@@ -708,8 +716,7 @@ CLI = {
                      "lists your organizations and connects Flieber to your AI tool. Running it again is safe and upgrades it."),
     "bat_label": "Prefer one click on Windows? Download flieber-install.bat and double-click it.",
     "bat": "https://cli.flieber.com/flieber-install.bat",
-    "soon": [("Hosted MCP server", "Connect without installing anything; your sign-in passes through and nothing is stored."),
-             ("Flieber in claude.ai", "Add Flieber under Settings, Connectors, sign in to Flieber and start asking, with nothing to install.")],
+    "soon": [],
     "clients_h3": "Connect another tool",
     "clients": [("Claude Code", "flieber mcp register --client claude-code"),
                 ("Cursor", "flieber mcp register --client cursor"),
@@ -838,7 +845,7 @@ USE_CASES = [
                 ("Claude works from unified, mapped data instead of raw exports from each channel", "cross-channel-sku-mapping"),
                 ("Request actions such as purchase orders or FBA shipments, under your approval rules", "control-and-approval")],
      "ask": ["Which Amazon SKUs stock out in the next 30 days?", "Compare Shopify and Amazon sell-through for the holiday bundle."],
-     "faq": [("Which AI assistants work with Flieber?", "Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude in the browser is coming soon."),
+     "faq": [("Which AI assistants work with Flieber?", "Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector."),
              ("How long does it take to connect?", "A few minutes. The steps are on /mcp.")],
      "modules": ["data-layer", "mcp"], "features": ["mcp-server"]},
     {"slug": "shopify-inventory-forecasting", "name": "Shopify inventory forecasting",

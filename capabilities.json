@@ -433,7 +433,7 @@
       "id": "mcp_server",
       "group": "access",
       "name": "MCP server",
-      "description": "Connect Claude Desktop, Claude Code, Cursor, Muse or your own agents through Flieber CLI. They get Flieber's data and actions directly, and every change is previewed first, following your approval rules. Claude in the browser: coming soon. Details in the developer reference.",
+      "description": "Connect Claude Desktop, Claude Code, Cursor, Muse or your own agents through Flieber CLI, or Claude and ChatGPT in the browser through a custom connector. They get Flieber's data and actions directly, and every change is previewed first, following your approval rules. Details in the developer reference.",
       "availability": "general",
       "url": "https://www.flieber.com/features#mcp-server"
     },
@@ -1210,7 +1210,12 @@
   "mcp": {
     "server": true,
     "client": true,
-    "server_runs_through": "Flieber CLI (local MCP server, stdio); hosted server coming soon",
+    "server_runs_through": "Flieber CLI (local MCP server, stdio), or the hosted Flieber MCP server for browser clients",
+    "hosted_server": {
+      "url": "https://mcp.flieber.com/mcp",
+      "auth": "OAuth (Flieber account)",
+      "clients": "Claude and ChatGPT in the browser, as a custom connector"
+    },
     "connected_apps": [
       "Gmail",
       "Outlook",
@@ -1231,17 +1236,14 @@
       "pypi": "https://pypi.org/project/flieber/",
       "tools": 29,
       "transport": "stdio (local MCP server and command line)",
-      "hosted_server": "coming soon",
+      "hosted_server": "https://mcp.flieber.com/mcp",
       "account_required": "yes; creating a Flieber account is the first step (the installer handles it, or flieber signup)",
       "install": {
         "macOS and Linux": "curl -fsSL https://cli.flieber.com/install.sh | sh",
         "Windows (PowerShell)": "irm https://cli.flieber.com/install.ps1 | iex",
         "Windows (one-click)": "https://cli.flieber.com/flieber-install.bat"
       },
-      "coming_soon": [
-        "Hosted MCP server",
-        "Flieber in claude.ai"
-      ],
+      "coming_soon": [],
       "register": {
         "Claude Code": "flieber mcp register --client claude-code",
         "Cursor": "flieber mcp register --client cursor",

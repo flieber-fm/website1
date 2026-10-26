@@ -1292,6 +1292,10 @@ a.int-tile:hover { border-color: var(--black); }
 .inst-check { display: flex; flex-direction: column; gap: 10px; max-width: 760px; font-size: 17px; }
 .inst-check li { padding-left: 28px; position: relative; }
 .inst-check li::before { content: "✓"; position: absolute; left: 0; color: var(--black); font-weight: 600; }
+.inst-steps-list { counter-reset: s; display: flex; flex-direction: column; gap: 14px; max-width: 760px; margin-top: 20px; font-size: 17px; }
+.inst-steps-list > li { counter-increment: s; position: relative; padding-left: 36px; }
+.inst-steps-list > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--yellow); border: 1px solid var(--black); font-size: 13px; font-weight: 600; display: grid; place-items: center; }
+.inst-steps-list .cmd { margin-top: 10px; }
 .inst-steps { display: flex; flex-direction: column; gap: clamp(48px, 6vw, 72px); }
 .inst-step { display: flex; flex-direction: column; gap: 14px; max-width: 860px; }
 .inst-step .lead { margin: 0; }
@@ -1369,7 +1373,7 @@ a.int-tile:hover { border-color: var(--black); }
           "name": "Which AI assistants work with Flieber?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude in the browser is coming soon."
+            "text": "Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector."
           }
         },
         {
@@ -1499,7 +1503,7 @@ a.int-tile:hover { border-color: var(--black); }
         <div class="feat-faq">
           <div class="feat-faq-item">
             <h3 class="h3">Which AI assistants work with Flieber?</h3>
-            <p>Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude in the browser is coming soon.</p>
+            <p>Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector.</p>
           </div>
           <div class="feat-faq-item">
             <h3 class="h3">How long does it take to connect?</h3>

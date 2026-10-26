@@ -1292,6 +1292,10 @@ a.int-tile:hover { border-color: var(--black); }
 .inst-check { display: flex; flex-direction: column; gap: 10px; max-width: 760px; font-size: 17px; }
 .inst-check li { padding-left: 28px; position: relative; }
 .inst-check li::before { content: "✓"; position: absolute; left: 0; color: var(--black); font-weight: 600; }
+.inst-steps-list { counter-reset: s; display: flex; flex-direction: column; gap: 14px; max-width: 760px; margin-top: 20px; font-size: 17px; }
+.inst-steps-list > li { counter-increment: s; position: relative; padding-left: 36px; }
+.inst-steps-list > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--yellow); border: 1px solid var(--black); font-size: 13px; font-weight: 600; display: grid; place-items: center; }
+.inst-steps-list .cmd { margin-top: 10px; }
 .inst-steps { display: flex; flex-direction: column; gap: clamp(48px, 6vw, 72px); }
 .inst-step { display: flex; flex-direction: column; gap: 14px; max-width: 860px; }
 .inst-step .lead { margin: 0; }
@@ -1369,7 +1373,7 @@ a.int-tile:hover { border-color: var(--black); }
           "name": "Which AI tools work with Flieber?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Claude Desktop, Claude Code, Cursor and Muse today. Claude in the browser is coming soon."
+            "text": "Claude Desktop, Claude Code, Cursor and Muse, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector."
           }
         },
         {
@@ -1518,10 +1522,10 @@ a.int-tile:hover { border-color: var(--black); }
               <a class="btn btn-ghost" href="#step-1">Start <span class="arrow" aria-hidden="true">→</span></a>
             </article>
             <article class="inst-card">
-              <p class="hc-tag"><span class="soon-tag">Coming soon</span></p>
-              <h2 class="h3">Claude in your browser</h2>
-              <p>Add Flieber to Claude in your browser and sign in with your Flieber account. Nothing to install.</p>
-              
+              <p class="hc-tag">Nothing to install</p>
+              <h2 class="h3">Claude or ChatGPT in your browser</h2>
+              <p>Add Flieber as a custom connector and sign in with your Flieber account. Nothing to install.</p>
+              <a class="btn btn-ghost" href="#claude-in-browser">Show me how</a>
             </article>
           </div>
         </div>
@@ -1626,10 +1630,28 @@ a.int-tile:hover { border-color: var(--black); }
         <div class="why-grid inst-safe">
           <article class="why-card"><p>Claude shows you every change first and waits for your OK before applying it.</p></article>
           <article class="why-card"><p>Going live is permanent, so Claude always asks you to confirm it.</p></article>
-          <article class="why-card"><p>Your sign-in is saved on your computer. You never paste a password or key into a chat.</p></article>
+          <article class="why-card"><p>You sign in on Flieber’s own page. You never paste a password or key into a chat.</p></article>
           <article class="why-card"><p>Claude sees only what your Flieber account is allowed to see.</p></article>
           <article class="why-card"><p>Actual sales, adjusted sales and forecasts are kept separate, so numbers are never mixed.</p></article>
         </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="claude-in-browser" aria-labelledby="claude-in-browser-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Nothing to install</span>
+          <h2 class="h2" id="claude-in-browser-title" style="margin-top:20px">Claude or ChatGPT in your browser</h2>
+        </div>
+        <p class="feat-approval">Add Flieber as a custom connector in Claude or ChatGPT, then sign in with your Flieber account.</p>
+        <ol class="inst-steps-list">
+          <li>In Claude or ChatGPT, open Settings and add a custom connector.</li>
+          <li>Name it Flieber and paste this address:
+          <div class="cmd"><span class="cmd-label">Connector address</span><pre><code>https://mcp.flieber.com/mcp</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Connector address command">Copy</button></div></li>
+          <li>Sign in with your Flieber account, or create one. On the same page you accept Flieber’s terms and the terms of the AI early access.</li>
+          <li>Open a new chat and ask: What can Flieber do?</li>
+        </ol>
+        <p class="todo"><b>TODO:</b> Engineering to confirm which Claude and ChatGPT plans allow custom connectors, and whether ChatGPT needs developer mode turned on.</p>
       </div>
     </section>
 
@@ -1664,7 +1686,7 @@ a.int-tile:hover { border-color: var(--black); }
         <div class="faq">
           <details>
             <summary>Which AI tools work with Flieber?<span class="plus" aria-hidden="true"></span></summary>
-            <p>Claude Desktop, Claude Code, Cursor and Muse today. Claude in the browser is coming soon.</p>
+            <p>Claude Desktop, Claude Code, Cursor and Muse, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector.</p>
           </details>
           <details>
             <summary>Do I need to be technical?<span class="plus" aria-hidden="true"></span></summary>

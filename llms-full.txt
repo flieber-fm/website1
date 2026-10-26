@@ -75,7 +75,7 @@ Collaborative AI across all five modules, wherever you work
 - **Ask in plain language** (https://www.flieber.com/features#ask-in-plain-language): Ask questions about your data and get answers, tables, charts and dashboards. Save reports, refresh them and keep the conversation going.
 - **Slack** (https://www.flieber.com/features#slack): Ask questions and receive alerts in Slack.
 - **Google Sheets add-on** (https://www.flieber.com/features#google-sheets-add-on): Pulls Flieber data into your own sheets and refreshes it on a schedule.
-- **MCP server** (https://www.flieber.com/features#mcp-server): Connect Claude Desktop, Claude Code, Cursor, Muse or your own agents through Flieber CLI. They get Flieber's data and actions directly, and every change is previewed first, following your approval rules. Claude in the browser: coming soon. Details in the developer reference.
+- **MCP server** (https://www.flieber.com/features#mcp-server): Connect Claude Desktop, Claude Code, Cursor, Muse or your own agents through Flieber CLI, or Claude and ChatGPT in the browser through a custom connector. They get Flieber's data and actions directly, and every change is previewed first, following your approval rules. Details in the developer reference.
 - **MCP client and connected apps** (https://www.flieber.com/features#mcp-client-and-connected-apps): Flieber connects out to Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads and NetSuite, and to any other system with an MCP server.
 - **Public API** (https://www.flieber.com/features#public-api): Programmatic access to Flieber data for your own systems. Details in the MCP docs (customer login required).
 
@@ -234,9 +234,9 @@ Prompt: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL ht
    You'll see your Flieber organization listed. Flieber is now connected to your AI tool. Using Claude Desktop? Quit it completely and open it again.
 2. Step 2: Try it: "Which products sold the most units last month?" · "Show me the forecast for my top 10 products for the next 90 days." · "Which of my SKUs are not mapped to a product yet?" · "Help me connect my Shopify store to Flieber."
 
-### Claude in your browser: coming soon
+### Claude or ChatGPT in your browser: live
 
-Add Flieber to Claude in your browser and sign in with your Flieber account. Nothing to install.
+Add Flieber as a custom connector in Claude or ChatGPT, then sign in with your Flieber account. Connector address: https://mcp.flieber.com/mcp
 
 ### What Claude can do with Flieber
 
@@ -248,7 +248,7 @@ Add Flieber to Claude in your browser and sign in with your Flieber account. Not
 
 - Claude shows you every change first and waits for your OK before applying it.
 - Going live is permanent, so Claude always asks you to confirm it.
-- Your sign-in is saved on your computer. You never paste a password or key into a chat.
+- You sign in on Flieber's own page. You never paste a password or key into a chat.
 - Claude sees only what your Flieber account is allowed to see.
 - Actual sales, adjusted sales and forecasts are kept separate, so numbers are never mixed.
 
@@ -265,7 +265,7 @@ Add Flieber to Claude in your browser and sign in with your Flieber account. Not
 
 ### Questions
 
-**Which AI tools work with Flieber?** Claude Desktop, Claude Code, Cursor and Muse today. Claude in the browser is coming soon.
+**Which AI tools work with Flieber?** Claude Desktop, Claude Code, Cursor and Muse, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector.
 
 **Do I need to be technical?** No. Paste one prompt into your AI tool and it sets Flieber up for you, or install it yourself with the steps on this page.
 
@@ -630,7 +630,7 @@ How Flieber handles it:
 
 Ask Flieber: "Which of our top SKUs run out on Amazon before their next purchase order lands?" · "Split last week's Shopify orders by region and show what each warehouse needs to cover the next 30 days."
 
-**Which AI assistants work with Flieber?** Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude in the browser is coming soon.
+**Which AI assistants work with Flieber?** Claude Desktop, Claude Code, Cursor, Muse and any other local MCP client, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector.
 
 **How long does it take to connect?** A few minutes. The steps are on /mcp.
 
@@ -1132,7 +1132,7 @@ Every write follows approval rules the brand sets. By default every write requir
 ### Connect and try
 
 - Free trial: 14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan. https://www.flieber.com/free-trial
-- Flieber MCP (through Flieber CLI): Claude Desktop, Claude Code, Cursor, Muse and other local MCP clients connect to Flieber's MCP server, which Flieber CLI runs on the user's computer, with the same 29 tools as the command line. The installer creates the Flieber account or signs in, and connects the AI tool. Every change is previewed first. Hosted MCP server and Claude in the browser: coming soon. Setup: https://www.flieber.com/mcp. Technical reference: https://www.flieber.com/developers/cli
+- Flieber MCP (through Flieber CLI, or hosted): Claude Desktop, Claude Code, Cursor, Muse and other local MCP clients connect to Flieber's MCP server, which Flieber CLI runs on the user's computer, with the same 29 tools as the command line. The installer creates the Flieber account or signs in, and connects the AI tool. Every change is previewed first. Claude and ChatGPT in the browser connect to the hosted Flieber MCP server at https://mcp.flieber.com/mcp as a custom connector and sign in with the Flieber account. Setup: https://www.flieber.com/mcp. Technical reference: https://www.flieber.com/developers/cli
 - MCP client: Flieber connects to any system with an MCP server. Built-in connections: Gmail, Outlook, Slack, Microsoft Teams, Google Sheets, OneDrive, Notion, Airtable, Meta Ads, Google Ads, NetSuite.
 - Flieber CLI (local MCP and command line, early access): 29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, Muse, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows (PowerShell): irm https://cli.flieber.com/install.ps1 | iex. Package: https://pypi.org/project/flieber/
 - Public API: Programmatic access to Flieber data. Details (customer login required): https://app.flieber.com/app/developers
@@ -1152,8 +1152,7 @@ For a person setting it up: https://www.flieber.com/mcp. Easiest path: paste thi
 - Connect Cursor: `flieber mcp register --client cursor`
 - Connect Claude Desktop: `flieber mcp register --client claude-desktop`
 - Connect Muse or any other local MCP client: `uvx flieber@latest mcp`
-- Coming soon, hosted MCP server: Connect without installing anything; your sign-in passes through and nothing is stored.
-- Coming soon, flieber in claude.ai: Add Flieber under Settings, Connectors, sign in to Flieber and start asking, with nothing to install.
+- Claude or ChatGPT in the browser: add a custom connector with the address `https://mcp.flieber.com/mcp` and sign in with the Flieber account.
 - Skills: `flieber skills install --client claude-code`
   - [flieber-install](https://cli.flieber.com/skills/flieber-install/SKILL.md): Sets Flieber up.
   - [flieber](https://cli.flieber.com/skills/flieber/SKILL.md): Teaches your agent which tool to use, how to read results and how to preview changes.
