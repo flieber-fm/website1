@@ -1677,7 +1677,7 @@ def capabilities() -> dict:
         "mcp": {"server": True, "client": True, "server_runs_through": "Flieber CLI (local MCP server, stdio), or the hosted Flieber MCP server for browser clients",
                 "hosted_server": {"url": C.HOSTED_MCP_URL, "auth": "OAuth (Flieber account)", "clients": "Claude and ChatGPT in the browser, as a custom connector"},
                 "connected_apps": C.CONNECTED_APPS, "connects_to_any_mcp_server": True,
-                "flieber_cli": {"status": "early access", "package": C.CLI["package"], "pypi": C.CLI["pypi"], "tools": 29,
+                "flieber_cli": {"status": "early access", "package": C.CLI["package"], "pypi": C.CLI["pypi"], "tools": "run flieber docs for the current list",
                                 "transport": "stdio (local MCP server and command line)", "hosted_server": C.HOSTED_MCP_URL,
                                 "account_required": "yes; creating a Flieber account is the first step (the installer handles it, or flieber signup)",
                                 "install": {**{l: c for l, c in C.CLI["install"]}, "Windows (one-click)": C.CLI["bat"]},

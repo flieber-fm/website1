@@ -235,9 +235,9 @@ HOSTED_MCP_URL = "https://mcp.flieber.com/mcp"
 
 CONNECT = [
     ("Free trial", "14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan.", TRIAL),
-    ("Flieber MCP (through Flieber CLI, or hosted)", "Claude Desktop, Claude Code, Cursor, Muse and other local MCP clients connect to Flieber's MCP server, which Flieber CLI runs on the user's computer, with the same 29 tools as the command line. The installer creates the Flieber account or signs in, and connects the AI tool. Every change is previewed first. Claude and ChatGPT in the browser connect to the hosted Flieber MCP server at " + HOSTED_MCP_URL + " as a custom connector and sign in with the Flieber account. Setup: https://www.flieber.com/mcp. Technical reference:", SITE + "/developers/cli"),
+    ("Flieber MCP (through Flieber CLI, or hosted)", "Claude Desktop, Claude Code, Cursor, Muse and other local MCP clients connect to Flieber's MCP server, which Flieber CLI runs on the user's computer, with the same tools as the command line. The installer creates the Flieber account or signs in, and connects the AI tool. Every change is previewed first. Claude and ChatGPT in the browser connect to the hosted Flieber MCP server at " + HOSTED_MCP_URL + " as a custom connector and sign in with the Flieber account. Setup: https://www.flieber.com/mcp. Technical reference:", SITE + "/developers/cli"),
     ("MCP client", "Flieber connects to any system with an MCP server. Built-in connections: " + ", ".join(CONNECTED_APPS) + ".", None),
-    ("Flieber CLI (local MCP and command line, early access)", "29 tools over the same contract in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, Muse, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows (PowerShell): irm https://cli.flieber.com/install.ps1 | iex. Package:", "https://pypi.org/project/flieber/"),
+    ("Flieber CLI (local MCP and command line, early access)", "The same tools, under one contract, in the terminal and in local MCP clients (Claude Code, Cursor, Claude Desktop, Muse, any stdio client): sales, adjusted sales, forecasts, catalog and store onboarding. Creating a Flieber account is the first step; the installer handles it. Install and sign in on macOS or Linux: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows (PowerShell): irm https://cli.flieber.com/install.ps1 | iex. Package:", "https://pypi.org/project/flieber/"),
     ("Public API", "Programmatic access to Flieber data. Details (customer login required):", DEV_DOCS),
     ("Demo", "", DEMO),
 ]
@@ -617,7 +617,7 @@ INSTALL = {
     "can": [("Answer questions", "Actual sales, sales adjusted for stockouts and price effects, forecasts, 30, 90 and 365-day trends, products, listings and SKU mapping."),
             ("Set up your account", "Create an organization, connect stores (Amazon, eBay, Etsy, Walmart, BigCommerce and Shopify), map SKUs, add inventory locations and go live."),
             ("Adjust a forecast", "Change the forecast for a product in a store for a given month.")],
-    "can_link": "See all 29 capabilities",
+    "can_link": "See all capabilities",
     "safe_h2": "Built to be safe",
     "safe": ["Claude shows you every change first and waits for your OK before applying it.",
              "Going live is permanent, so Claude always asks you to confirm it.",
@@ -650,14 +650,14 @@ INSTALL = {
 # /developers/cli (technical reference: everything the plain /install page leaves out)
 DEVREF = {
     "slug": "developers/cli", "name": "Flieber CLI and MCP: technical reference",
-    "kicker": "Developers · Early access · flieber 0.1.4",
+    "kicker": "Developers · Early access",
     "h1": "Flieber CLI and MCP: technical reference",
-    "lead": ("Flieber exposes sales, adjusted sales, forecasts, catalog and store onboarding as 29 tools for AI agents. "
+    "lead": ("Flieber exposes sales, adjusted sales, forecasts, catalog and store onboarding as tools for AI agents. "
              "The same tools run in the command line and over MCP, under one contract (flieber contract v1)."),
     "ways_h2": "Three ways in",
     "ways": [("Command line", "The flieber command, in your terminal.", None),
              ("Local MCP server", "uvx flieber@latest mcp, over stdio. Available now; includes the sign-in tools sign_in_start and sign_in_finish.", None),
-             ("Hosted MCP server", HOSTED_MCP_URL + ", for Claude and ChatGPT in the browser as a custom connector. Signs in with your Flieber account (OAuth), passes your sign-in through and stores nothing; offers the other 27 tools.", None)],
+             ("Hosted MCP server", HOSTED_MCP_URL + ", for Claude and ChatGPT in the browser as a custom connector. Signs in with your Flieber account (OAuth), passes your sign-in through and stores nothing; offers the same tools except the two sign-in tools.", None)],
     "signin_h2": "Other ways to sign in",
     "signin": [("By hand, with uv installed", ["uv tool install flieber", "flieber login", "flieber tenants"]),
                ("New organization (you accept Flieber's terms and the AI early access terms)", ["flieber signup"]),
@@ -713,7 +713,7 @@ CLI = {
     "h2": "Give your agents Flieber's data and tools",
     "lead": ("Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, "
              "Cursor, Claude Desktop and Muse: sales, adjusted sales, forecasts, catalog and store onboarding, through the same "
-             "29 tools in the command line and over MCP. One command installs it, creates your Flieber account or signs "
+             "tools in the command line and over MCP. One command installs it, creates your Flieber account or signs "
              "you in, and gets your agents ready."),
     "install_h3": "Install and sign in",
     "install": [("macOS and Linux", INSTALL_SH),

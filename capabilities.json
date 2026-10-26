@@ -1234,7 +1234,7 @@
       "status": "early access",
       "package": "flieber",
       "pypi": "https://pypi.org/project/flieber/",
-      "tools": 29,
+      "tools": "run flieber docs for the current list",
       "transport": "stdio (local MCP server and command line)",
       "hosted_server": "https://mcp.flieber.com/mcp",
       "account_required": "yes; creating a Flieber account is the first step (the installer handles it, or flieber signup)",
