@@ -1448,6 +1448,12 @@ a.int-tile:hover { border-color: var(--black); }
   .ladder-three .ladder-stop[aria-selected="true"] { border-bottom-color: transparent !important; }
   .ladder-three .ladder-ms { flex-direction: column; align-items: flex-start; }
 }
+.ladder-three .ladder-stop { display: grid; grid-template-columns: 14px 1fr; column-gap: 10px; row-gap: 4px; align-items: center; justify-items: start; }
+.ladder-three .ladder-stop .ladder-dot { grid-column: 1; grid-row: 1; margin: 0; }
+.ladder-three .ladder-stop .ladder-name { grid-column: 2; grid-row: 1; margin: 0; }
+.ladder-three .ladder-stop .ladder-sub { grid-column: 2; grid-row: 2; }
+.ladder-three .ladder-cols { margin-top: 0; }
+.ladder-three .ladder-stop { align-content: start; }
 
 </style>
 

@@ -1449,6 +1449,12 @@ a.int-tile:hover { border-color: var(--black); }
   .ladder-three .ladder-stop[aria-selected="true"] { border-bottom-color: transparent !important; }
   .ladder-three .ladder-ms { flex-direction: column; align-items: flex-start; }
 }
+.ladder-three .ladder-stop { display: grid; grid-template-columns: 14px 1fr; column-gap: 10px; row-gap: 4px; align-items: center; justify-items: start; }
+.ladder-three .ladder-stop .ladder-dot { grid-column: 1; grid-row: 1; margin: 0; }
+.ladder-three .ladder-stop .ladder-name { grid-column: 2; grid-row: 1; margin: 0; }
+.ladder-three .ladder-stop .ladder-sub { grid-column: 2; grid-row: 2; }
+.ladder-three .ladder-cols { margin-top: 0; }
+.ladder-three .ladder-stop { align-content: start; }
 
 </style>
 
@@ -1668,7 +1674,6 @@ a.int-tile:hover { border-color: var(--black); }
               <button class="tab ladder-stop" type="button" role="tab" id="ladder-tab-built" aria-controls="ladder-built" aria-selected="false" tabindex="-1"><span class="ladder-dot" aria-hidden="true"></span><span class="ladder-name">Have it built</span><span class="ladder-sub">When you need specialists to build it</span></button>
             </div>
             <div class="ladder-panel" role="tabpanel" id="ladder-use" aria-labelledby="ladder-tab-use">
-              <p class="ladder-lead">Flieber’s AI prepares every decision in an app that’s ready to use. You make the call.</p>
               <div class="ladder-cols">
                 <div>
                   <p class="ladder-label">Choose this when</p>
@@ -1689,7 +1694,6 @@ a.int-tile:hover { border-color: var(--black); }
               </div>
             </div>
             <div class="ladder-panel" role="tabpanel" id="ladder-build" aria-labelledby="ladder-tab-build" hidden>
-              <p class="ladder-lead">The full engine, through MCP and the CLI</p>
               <div class="ladder-cols">
                 <div>
                   <p class="ladder-label">Choose this when</p>
@@ -1710,7 +1714,6 @@ a.int-tile:hover { border-color: var(--black); }
               </div>
             </div>
             <div class="ladder-panel" role="tabpanel" id="ladder-built" aria-labelledby="ladder-tab-built" hidden>
-              <p class="ladder-lead">Specialists who’ve seen how more than 1,000 brands operate build the tool your process needs.</p>
               <div class="ladder-cols">
                 <div>
                   <p class="ladder-label">Choose this when</p>
