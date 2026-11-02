@@ -1,0 +1,75 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: Boilerplate - blog listing
+  screenshotPath: ../images/template-previews/blog-index.png
+-->
+{% set template_css = "../../css/templates/blog.css" %}
+{#{% extends "./layouts/base.html" %}#}
+{% extends "./layouts/flieber-base.html" %}
+{% block header %}
+{% global_partial path="../templates/partials/black-header-2025.html" %}
+{% endblock header %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--blog-index"
+%}
+
+{# Hero banner #}
+{% dnd_section full_width="true" %}
+  {% dnd_column %}
+    {% dnd_row %} 
+      {% dnd_module "module_17395087873341" path="/flieber/modules/custom-module/Videos - Banner 2024", label="Videos - Banner 2024", 
+        bg_color={ color: "F5ED61" }, popup_option="true" %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Blog listings and pagination #}
+{% blog_listing "contents" %}
+{% dnd_section full_width="true" %}
+  {% dnd_column %}
+
+    {# Blog listing module #}
+    {% dnd_row %}
+      {% dnd_module "module_17395094156103" path="/flieber/modules/custom-module/blog-listings", label="blog-listings" %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {# Optional default pagination module (no longer needed) #}
+    {# {% dnd_row %}
+      {% dnd_module path="@hubspot/pagination" %}
+      {% end_dnd_module %}
+    {% end_dnd_row %} #}
+
+    {# Custom Next button using contents object #}
+    {% dnd_row %}
+      {% if contents.has_more %}
+        <div class="blog-pagination" style="text-align: center; margin-top: 30px;">
+          <a href="{{ contents.next_url }}" class="button blog-pagination__next">Next</a>
+        </div>
+      {% endif %}
+    {% end_dnd_row %}
+
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section full_width="true" %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module "module_173951047347813" path="/flieber/modules/custom-module/Book A Demo Module", label="Book A Demo Module", 
+        bg_color={ color: "ffffff" } %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% end_dnd_area %}
+{% endblock body %}
+
+{% block footer %}
+{% global_partial path="../templates/partials/fliebing-footer.html" %}
+{% endblock footer %}
