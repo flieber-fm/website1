@@ -1424,6 +1424,13 @@ a.int-tile:hover { border-color: var(--black); }
 .ladder-hero .ladder-points li { position: relative; padding-left: 30px; font-size: 16px; line-height: 1.45; color: var(--black); }
 .ladder-hero .ladder-points .ico { position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; background: var(--white); border: 1px solid var(--black); }
 @media (max-width: 900px) { .ladder-hero .ladder-points { grid-template-columns: 1fr; } }
+.ladder-hero .ladder-cols { margin-top: 20px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 16px 40px; }
+.ladder-hero .ladder-label { margin: 0 0 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+.ladder-hero .ladder-cols .ladder-points { margin: 0; grid-template-columns: 1fr; gap: 10px; }
+.ladder-hero .ladder-get { margin: 0; font-size: 16px; line-height: 1.55; color: var(--black); }
+.ladder-hero .ladder-base { margin: 0; padding: 14px clamp(20px, 3vw, 36px); background: var(--black); color: var(--white); font-size: 15px; line-height: 1.45; }
+.ladder-hero .ladder-base-tag { display: inline-block; margin-right: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--yellow); }
+@media (max-width: 720px) { .ladder-hero .ladder-cols { grid-template-columns: 1fr; } .ladder-hero .ladder-base-tag { display: block; margin: 0 0 4px; } }
 
 </style>
 
