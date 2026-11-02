@@ -242,7 +242,16 @@ As in Option 1, section 3.5 (H2 "Ask anything your operation depends on", six ca
 3. **Use it** (selected by default) · Ready to use · Plan in the Flieber app with your team: forecasts, purchase plans and workflows are ready to use, with shared plans and approval rules. Setup is included. · Priced to your operation · Start free trial · See every feature
 4. **Plan with us** · Our planners join your team · Everything in the Flieber app, plus Flieber's specialized planners: they keep the data behind your decisions accurate, take part in your S&OP meetings and help run your planning practice. · Quoted per brand · Book a demo · About Managed Services
 
-**Panel copy, value-led (Nov 2, replaces the sentences above):**
+**Panel copy, agentic (Nov 2, latest; replaces the value-led copy below).** Sublines: Your agents, on our data / Agents built for you / Flieber's AI, ready to use / Flieber's AI and our planners.
+
+- **Build on it:** Give your own agents inventory data they can act on. Points: Connect Claude, ChatGPT, Cursor or your own agents through MCP and API / They work from every channel, warehouse, 3PL and supplier, already connected, mapped and kept current, with no pipelines or APIs for you to maintain / Add Flieber's planning engine when you want your agents to do the math, not guess it.
+- **Have it built:** Agents and workflows built around your process, without an engineering team. Points: Custom agents and recurring workflows for the jobs your team repeats, under your approval rules / Built on Flieber's data and planning engine, so they start from data that's already joined, mapped and corrected / Flieber's engineers build them with you, reviewing with your team as they go. For qualified accounts.
+- **Use it:** Flieber's AI watches every SKU and prepares every decision. You make the call. Points: It keeps your data current and watches every SKU and every signal across your channels / Each decision comes with the reasoning behind it, and is carried out once you approve / Work in the Flieber app or in Slack. Setup included, and a 14-day free trial with no credit card.
+- **Plan with us:** Flieber's AI prepares every decision. Our planners help you judge the ones that matter. Points: Specialists in inventory planning and in Flieber, as a sounding board for your decisions / They keep the data your team and your agents rely on accurate, and join your S&OP meetings / Experience from more than 1,000 brands since 2019.
+
+Note under the card: Every option covers the modules you choose, and you can switch any time.
+
+**Panel copy, value-led (Nov 2, superseded; kept as V10):**
 
 - **Build on it:** Skip the plumbing: build on data that's already connected, mapped and kept current. Points: Every channel, warehouse, 3PL and supplier already connected, with no pipelines or APIs for you to maintain / Data mapped to how you run the business and checked continuously for gaps and anomalies / Your tools and AI agents reach it through API and MCP, and keep working as you add channels, products or suppliers.
 - **Have it built:** Get the tool your team needs, without building a team to make it. Points: A tailored app, dashboards, reports or agents, shaped around how your team plans / Built on Flieber's data and planning engine, so it starts from data that's already joined, mapped and corrected / Flieber's engineers build it with you, reviewing with your team as they go. For qualified accounts.
