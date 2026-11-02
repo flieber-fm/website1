@@ -1679,3 +1679,13 @@ a.int-tile:hover { border-color: var(--black); }
 .ways-cards .ways-addon-go { grid-column: 2; font-size: 14.5px; }
 .ways-cards .ways-either { margin: 14px 0 0; }
 .ways-cards .ways-addons { margin-top: 0; }
+/* Ways to use Flieber (Nov 2): same look as the published homepage cards (white, thin border, icon chip, benefit as heading) */
+.ways-cards .ways-card, .ways-cards .ways-full { background: var(--white); border: 1px solid var(--line-strong); border-top: 1px solid var(--line-strong); padding: clamp(24px, 3vw, 36px); transition: border-color .25s; }
+.ways-cards .ways-card:hover { border-color: var(--black); }
+.ways-cards .door-num { margin: 0 0 18px; }
+.ways-cards .ways-h { margin: 0; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.1; letter-spacing: -0.035em; }
+.ways-cards .ways-p { margin-top: 12px; color: var(--text-2); max-width: 520px; font-size: 16px; }
+.ways-cards .ways-addons-label { border-top-color: var(--line); }
+.ways-cards .ways-addon { background: var(--gray-light); border-color: var(--line); }
+.ways-cards .ways-addon:hover { border-color: var(--black); }
+.ways-cards .ways-addon .ways-dot { background: var(--gray-dark); box-shadow: none; }

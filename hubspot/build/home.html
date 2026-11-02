@@ -1492,6 +1492,15 @@ a.int-tile:hover { border-color: var(--black); }
 .ways-cards .ways-addon-go { grid-column: 2; font-size: 14.5px; }
 .ways-cards .ways-either { margin: 14px 0 0; }
 .ways-cards .ways-addons { margin-top: 0; }
+.ways-cards .ways-card, .ways-cards .ways-full { background: var(--white); border: 1px solid var(--line-strong); border-top: 1px solid var(--line-strong); padding: clamp(24px, 3vw, 36px); transition: border-color .25s; }
+.ways-cards .ways-card:hover { border-color: var(--black); }
+.ways-cards .door-num { margin: 0 0 18px; }
+.ways-cards .ways-h { margin: 0; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.1; letter-spacing: -0.035em; }
+.ways-cards .ways-p { margin-top: 12px; color: var(--text-2); max-width: 520px; font-size: 16px; }
+.ways-cards .ways-addons-label { border-top-color: var(--line); }
+.ways-cards .ways-addon { background: var(--gray-light); border-color: var(--line); }
+.ways-cards .ways-addon:hover { border-color: var(--black); }
+.ways-cards .ways-addon .ways-dot { background: var(--gray-dark); box-shadow: none; }
 
 </style>
 
@@ -1702,8 +1711,8 @@ a.int-tile:hover { border-color: var(--black); }
           <h2 class="sr-only" id="how-you-work-title">Ways to use Flieber</h2>
           <div class="ways-base">
             <article class="ways-card ways-data" aria-labelledby="ways-data-h">
-              <p class="ways-tag"><span class="ways-dot" aria-hidden="true"></span>Build your own logic</p>
-              <h3 class="ways-h" id="ways-data-h">Data layer</h3>
+              <p class="door-num"><span class="ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4"><ellipse cx="8" cy="3.8" rx="5" ry="1.8"/><path d="M3 3.8v8.4c0 1 2.2 1.8 5 1.8s5-.8 5-1.8V3.8M3 8c0 1 2.2 1.8 5 1.8s5-.8 5-1.8"/></svg></span>Flieber Data layer</p>
+              <h3 class="ways-h" id="ways-data-h">Build your own logic</h3>
               <p class="ways-p">Every channel, warehouse, 3PL and supplier connected, mapped to how you run the business and kept current, with no pipelines or APIs for you to maintain. Build your own forecasting and planning on top.</p>
               <div class="ways-foot">
                 <span class="which-price">Priced to your operation</span>
@@ -1713,14 +1722,14 @@ a.int-tile:hover { border-color: var(--black); }
                 <p class="ways-addons-label">Add-on</p>
                 <a class="ways-addon ways-custom" href="/customize#engineers">
                   <span class="ways-dot" aria-hidden="true"></span>
-                  <span class="ways-addon-body"><b>Customization</b> A custom interface, built by Flieber’s engineers around how your team operates. For qualified accounts, quoted per project.</span>
+                  <span class="ways-addon-body"><b>Customization</b> Custom agents and workflows, dashboards and reports, tailored interfaces, integrations and features, built by Flieber’s engineers around how your team operates. For qualified accounts, quoted per project.</span>
                   <span class="ways-addon-go">Check if you qualify <span class="arrow" aria-hidden="true">→</span></span>
                 </a>
               </div>
             </article>
             <article class="ways-card ways-full" aria-labelledby="ways-full-h">
-              <p class="ways-tag"><span class="ways-dot" aria-hidden="true"></span>Use Flieber’s planning engine</p>
-              <h3 class="ways-h" id="ways-full-h">Full platform</h3>
+              <p class="door-num"><span class="ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4"><path d="M2 13.5h12M4 11V7.5M7 11V4.5M10 11V6M13 11V2.8"/></svg></span>Flieber Full platform</p>
+              <h3 class="ways-h" id="ways-full-h">Use Flieber’s planning engine</h3>
               <p class="ways-p">The data layer plus demand forecasting, inventory forecasting, replenishment and workflows. Flieber’s AI prepares every decision with the reasoning behind it, and you make the call.</p>
               <div class="ways-foot">
                 <span class="which-price">Priced to your operation</span>
@@ -1731,7 +1740,7 @@ a.int-tile:hover { border-color: var(--black); }
                 <p class="ways-addons-label">Add-ons</p>
                 <a class="ways-addon ways-custom" href="/customize#engineers">
                   <span class="ways-dot" aria-hidden="true"></span>
-                  <span class="ways-addon-body"><b>Customization</b> A custom interface, built by Flieber’s engineers around how your team operates. For qualified accounts, quoted per project.</span>
+                  <span class="ways-addon-body"><b>Customization</b> Custom agents and workflows, dashboards and reports, tailored interfaces, integrations and features, built by Flieber’s engineers around how your team operates. For qualified accounts, quoted per project.</span>
                   <span class="ways-addon-go">Check if you qualify <span class="arrow" aria-hidden="true">→</span></span>
                 </a>
                 <a class="ways-addon ways-ms" href="/managed-services">
