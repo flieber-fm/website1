@@ -54,6 +54,11 @@ VARIANTS = [
      "sub": ("Your business changes every day: a stockout, a promotion, an influencer post, a late container, a new product "
              "launch. And every change rewrites what your numbers mean. Flieber connects your data with the context behind it "
              "and turns it into forecasts and recommendations your team, your agents and your systems can act on with confidence.")},
+    {"name": "Before the offer matrix", "file": "scripts/home-snapshots/2026-11-02-before-offer-matrix.html",
+     "eyebrow": "Main homepage as it stood until Nov 2, 2026 (Self-Serve or Managed Services)",
+     "h1": "The inventory intelligence layer your agents run on",
+     "sub": ("Frozen copy of the main page before the offer and module matrix: Quick start after the hero, "
+             "Solutions with Customize Flieber and the Two ways to work with Flieber section.")},
 ]
 
 # Hero card: the six sample scenarios, shown as requests from agents and people.
@@ -124,6 +129,8 @@ def bar(current: int, up: str) -> str:
 
 def variant(base: str, i: int, v: dict) -> str:
     t = base
+    if v.get("file"):  # a frozen copy of the main homepage, shown unchanged
+        return finish((ROOT / v["file"]).read_text(encoding="utf-8"), i, v)
     if v.get("raw"):
         return finish(t, i, v)
     for a, b in SHARED + ([] if v.get("main_doors") else DOORS):
@@ -171,7 +178,7 @@ p.lead{{color:var(--muted);margin:0 0 32px;max-width:680px}}
 .vh-sub{{display:block;margin-top:10px;color:var(--muted);font-size:15px}}
 </style></head><body><main>
 <h1>Homepage variants</h1>
-<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it. V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
+<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it; V7 is the main page as it stood until Nov 2, before the offer and module matrix. V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
         <a class="vh-card main" href="../"><span class="vh-n">Main · live preview today</span><span class="vh-h1">{main_h1}</span></a>
 {rows}
 </main></body></html>

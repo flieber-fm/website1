@@ -1341,6 +1341,14 @@ a.int-tile:hover { border-color: var(--black); }
 .qs-intro { max-width: 980px; margin: 0 auto clamp(20px, 3vw, 32px); }
 .qs-intro .h2 { margin-top: 14px; }
 .logos-band .logos-block { border-top: 0; }
+.which-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 960px) { .which-three { grid-template-columns: 1fr; } }
+.which-three .which-list { margin-top: 18px; }
+.hw-addon { margin-top: 16px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(20px, 3vw, 28px); border: 1px dashed var(--line-strong); border-radius: var(--radius-l); background: var(--bg-soft); }
+.hw-addon .h3 { margin: 4px 0 8px; } .hw-addon .h3 a { color: inherit; text-decoration: none; }
+.hw-addon p { margin: 0; color: var(--text-2); max-width: 760px; }
+.hw-addon .hw-addon-tag { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+@media (max-width: 720px) { .hw-addon { flex-direction: column; align-items: flex-start; } }
 
 </style>
 
@@ -1889,7 +1897,7 @@ a.int-tile:hover { border-color: var(--black); }
         <div class="section-head reveal">
           <span class="kicker">Modules</span>
           <h2 class="h2" id="modules-title" style="margin-top:20px">Five modules, one product</h2>
-          <p class="lead">Each module answers one of the questions every inventory planner asks. Flieber comes with all five; teams building their own tools with AI can start with the data layer alone.</p>
+          <p class="lead">Each module answers one of the questions every inventory planner asks. Take all five or only the ones you need: the data layer works on its own, and if you keep your own data, the forecasting and planning modules can work from it.</p>
         </div>
         <div class="mq-grid reveal-stagger">
           <a class="mq-card" href="/product/data-layer">
@@ -1927,16 +1935,92 @@ a.int-tile:hover { border-color: var(--black); }
       </div>
     </section>
 
+    <!-- ================= 6b. HOW YOU WORK WITH FLIEBER (offer x module matrix, Nov 2) ================= -->
+    <section class="section" id="how-you-work" aria-labelledby="how-you-work-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">How you work with Flieber</span>
+          <h2 class="h2" id="how-you-work-title" style="margin-top:20px">Any module, any way of working</h2>
+          <p class="lead">Choose the modules you need, then how you want to use them. Any combination works, and you can change it as your operation grows.</p>
+        </div>
+
+        <div class="which which-three reveal-stagger">
+          <article class="which-card" aria-labelledby="hw-app">
+            <h3 class="which-name" id="hw-app">The Flieber app</h3>
+            <p class="which-tag">Plan in a ready-made app</p>
+            <ul class="which-list">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Your team plans together in one place, with shared plans and approval rules</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Nothing to build: forecasts, purchase plans and workflows are ready to use</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Setup included</li>
+            </ul>
+            <div class="which-foot">
+              <span class="which-price">Priced to your operation</span>
+              <a class="btn btn-dark" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="which-card" aria-labelledby="hw-built">
+            <h3 class="which-name" id="hw-built"><a href="/customize#engineers">An app built for you</a></h3>
+            <p class="which-tag">Our engineers build it on your data</p>
+            <ul class="which-list">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>A tailored app, dashboards, reports or agents, shaped around how your team plans</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Built on Flieber’s data and planning engine, with your team reviewing as they go</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>For qualified accounts</li>
+            </ul>
+            <div class="which-foot">
+              <span class="which-price">Quoted per project</span>
+              <a class="btn btn-dark" href="/customize#engineers">Check if you qualify <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="which-card" aria-labelledby="hw-own">
+            <h3 class="which-name" id="hw-own"><a href="/customize#yourself">Your own tools</a></h3>
+            <p class="which-tag">Build on Flieber’s data yourself</p>
+            <ul class="which-list">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Connect your reports, dashboards and internal tools through API and MCP</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Start from data that’s already unified, mapped and corrected</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Add the forecasting and planning modules when you need them</li>
+            </ul>
+            <div class="which-foot">
+              <span class="which-price">Priced to your operation</span>
+              <a class="btn btn-dark" href="/developers/cli">Developer reference <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="hw-addon reveal">
+          <div>
+            <p class="hw-addon-tag">Add-on</p>
+            <h3 class="h3"><a href="/managed-services">Managed Services: our planners on your team</a></h3>
+            <p>Flieber’s specialized planners keep the data behind your decisions accurate, take part in your S&amp;OP meetings and help run your planning practice, drawing on experience from more than 1,000 brands since 2019. Quoted per brand.</p>
+          </div>
+          <a class="btn btn-ghost" href="/managed-services">See Managed Services <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="which-after reveal">
+          <p class="which-under">Whatever you choose, work from the Flieber app, in Slack or with your own AI agents through MCP. Not sure what fits? Book a demo and we’ll tell you honestly, even if the answer is neither.</p>
+            <div class="fit-col fit-no">
+            <h3 class="h3">Probably not for you if:</h3>
+            <ul>
+              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You sell on one channel and a spreadsheet still works</li>
+              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You’re looking for a warehouse management system or a full ERP</li>
+              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You plan manufacturing runs (MRP) rather than buying finished goods</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= 7. SOLUTIONS ================= -->
     <section class="section" id="solutions" aria-labelledby="solutions-title">
       <div class="wrap">
         <div class="section-head reveal">
           <span class="kicker">Solutions</span>
           <h2 class="h2" id="solutions-title" style="margin-top:20px">Built for the way your business is organized</h2>
-          <p class="lead">Whether you run one brand across many channels, many brands at once or build your own tools with AI, Flieber covers the whole operation.</p>
+          <p class="lead">Whether you run one brand across many channels or many brands at once, Flieber covers the whole operation.</p>
           <p class="link-row"><a class="link-arrow" href="/features">See every feature <span class="arrow" aria-hidden="true">→</span></a></p>
         </div>
-        <div class="sol-two sol-three reveal-stagger">
+        <div class="sol-two reveal-stagger">
           <a class="sol-card" href="/multichannel">
             <span class="n">01</span>
             <h3 class="h3">Multichannel brands</h3>
@@ -1948,12 +2032,6 @@ a.int-tile:hover { border-color: var(--black); }
             <h3 class="h3">Agencies and aggregators</h3>
             <p>Every brand in one place, planned individually or consolidated.</p>
             <span class="sol-go">Agencies and aggregators <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-          <a class="sol-card" href="/customize">
-            <span class="n">03</span>
-            <h3 class="h3">Customize Flieber</h3>
-            <p>Vibe code your own reports, dashboards and agents on Flieber’s data, or have our engineers build them for you.</p>
-            <span class="sol-go">Customize Flieber <span class="arrow" aria-hidden="true">→</span></span>
           </a>
         </div>
         <p class="sol-compare reveal"><span>Comparing platforms?</span> <a href="/before-you-choose">Before you choose, ask these questions</a> <span class="arrow" aria-hidden="true">→</span></p>
@@ -2007,65 +2085,6 @@ a.int-tile:hover { border-color: var(--black); }
           </a>
         </div>
         <p class="link-row reveal"><a class="link-arrow" href="/prompt-ideas">More prompt ideas <span class="arrow" aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <!-- ================= 9. TWO WAYS TO WORK WITH FLIEBER ================= -->
-    <section class="section" id="which-flieber" aria-labelledby="which-title">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="kicker">Two ways to work with Flieber</span>
-          <h2 class="h2" id="which-title" style="margin-top:20px">Which Flieber is right for you?</h2>
-          <p class="lead">It depends less on your size than on how complex your operation is.</p>
-        </div>
-
-        <div class="which reveal-stagger">
-          <article class="which-card" aria-labelledby="which-ss">
-            <h3 class="which-name" id="which-ss">Flieber Self-Serve</h3>
-            <p class="which-tag">Run it yourself</p>
-            <h4 class="which-sub">You’re probably here if:</h4>
-            <ul class="which-list">
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>You sell on a few channels from one or two warehouses</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Your catalog is mostly one SKU per product, with few bundles</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>You want a ready-made app, or someone on your team builds with AI tools</li>
-            </ul>
-            <p class="which-body">For you, the hard part isn’t the planning logic. It’s the plumbing: data that flows correctly and carries the right context, so every report, workflow or agent works from the truth.</p>
-            <p class="which-body"><b>What you get:</b> The Flieber app, plus Flieber’s data and context modules through MCP and API. Build the reports and workflows you need on top, and they keep working as you add channels, products or suppliers. <a href="/product/data-layer">Building everything yourself? Start with the data layer alone.</a></p>
-            <div class="which-foot">
-              <span class="which-price">Priced to your operation</span>
-              <a class="btn btn-dark" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="which-card" aria-labelledby="which-ms">
-            <h3 class="which-name" id="which-ms"><a href="/managed-services">Flieber Managed Services</a></h3>
-            <p class="which-tag">Let our planners help you run it</p>
-            <h4 class="which-sub">You’re probably here if:</h4>
-            <ul class="which-list">
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>You sell across many channels, warehouses or regions</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>You run kits, bundles, backorders, long lead times or high MOQs</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Your team is buried in spreadsheets, with no time to build or maintain an internal tool</li>
-            </ul>
-            <p class="which-body">For you, the hard part is the decisions themselves. There are more edge cases than an in-house tool will cover, and a mistake ties up cash for months.</p>
-            <p class="which-body"><b>What you get:</b> Everything in Self-Serve, plus Flieber’s specialized planners as a sounding board for your decisions. They master the platform, keep the data behind your decisions accurate, take part in your S&amp;OP meetings and help run your planning practice, drawing on experience from more than 1,000 brands.</p>
-            <div class="which-foot">
-              <span class="which-price">Quoted per brand</span>
-              <a class="btn btn-dark" href="https://www.flieber.com/book-a-demo">Book a demo <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </article>
-        </div>
-
-        <div class="which-after reveal">
-          <p class="which-under">Same platform either way. Switch or combine any time. Not sure which fits? Book a demo and we’ll tell you honestly, even if the answer is neither.</p>
-          <div class="fit-col fit-no">
-            <h3 class="h3">Probably not for you if:</h3>
-            <ul>
-              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You sell on one channel and a spreadsheet still works</li>
-              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You’re looking for a warehouse management system or a full ERP</li>
-              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You plan manufacturing runs (MRP) rather than buying finished goods</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
 

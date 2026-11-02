@@ -231,7 +231,17 @@ Three equal cards:
 
 As in Option 1, section 3.5 (H2 "Ask anything your operation depends on", six cards), except that the six prompts are entries P4, P14, P22, P6, P32 and P23 of /put-flieber-to-work (section 15), each card links to its entry, and the section ends with "More ways to put Flieber to work →" only ("See every feature" stays in the other sections of the page).
 
-### 4.9 Two ways to work with Flieber
+### 4.9 How you work with Flieber (Nov 2; replaces Two ways to work with Flieber)
+
+After the modules. Kicker: How you work with Flieber. H2: Any module, any way of working. Lead: Choose the modules you need, then how you want to use them. Any combination works, and you can change it as your operation grows.
+
+Cards: **The Flieber app** (Plan in a ready-made app; Your team plans together in one place, with shared plans and approval rules / Nothing to build: forecasts, purchase plans and workflows are ready to use / Setup included; Priced to your operation; Start free trial). **An app built for you** (Our engineers build it on your data; A tailored app, dashboards, reports or agents, shaped around how your team plans / Built on Flieber's data and planning engine, with your team reviewing as they go / For qualified accounts; Quoted per project; Check if you qualify). **Your own tools** (Build on Flieber's data yourself; Connect your reports, dashboards and internal tools through API and MCP / Start from data that's already unified, mapped and corrected / Add the forecasting and planning modules when you need them; Priced to your operation; Developer reference).
+
+Add-on: **Managed Services: our planners on your team**, with the approved planner description and Quoted per brand. Closing: Whatever you choose, work from the Flieber app, in Slack or with your own AI agents through MCP. Not sure what fits? Book a demo and we'll tell you honestly, even if the answer is neither. Then Probably not for you if (unchanged).
+
+Modules lead (4.6) now ends: Take all five or only the ones you need: the data layer works on its own, and if you keep your own data, the forecasting and planning modules can work from it. Solutions (4.7) covers business types only (multichannel brands, agencies and aggregators).
+
+### Superseded: Two ways to work with Flieber
 
 **Section label:** Two ways to work with Flieber
 
