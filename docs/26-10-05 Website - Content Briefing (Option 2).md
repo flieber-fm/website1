@@ -242,6 +242,13 @@ As in Option 1, section 3.5 (H2 "Ask anything your operation depends on", six ca
 3. **Use it** (selected by default) · Ready to use · Plan in the Flieber app with your team: forecasts, purchase plans and workflows are ready to use, with shared plans and approval rules. Setup is included. · Priced to your operation · Start free trial · See every feature
 4. **Plan with us** · Our planners join your team · Everything in the Flieber app, plus Flieber's specialized planners: they keep the data behind your decisions accurate, take part in your S&OP meetings and help run your planning practice. · Quoted per brand · Book a demo · About Managed Services
 
+**Panel copy, value-led (Nov 2, replaces the sentences above):**
+
+- **Build on it:** Skip the plumbing: build on data that's already connected, mapped and kept current. Points: Every channel, warehouse, 3PL and supplier already connected, with no pipelines or APIs for you to maintain / Data mapped to how you run the business and checked continuously for gaps and anomalies / Your tools and AI agents reach it through API and MCP, and keep working as you add channels, products or suppliers.
+- **Have it built:** Get the tool your team needs, without building a team to make it. Points: A tailored app, dashboards, reports or agents, shaped around how your team plans / Built on Flieber's data and planning engine, so it starts from data that's already joined, mapped and corrected / Flieber's engineers build it with you, reviewing with your team as they go. For qualified accounts.
+- **Use it:** Plan on your own data without building anything. Points: Forecasts, purchase plans and workflows, ready to use / Your whole team works from one plan, with shared views and approval rules / Setup included, and a 14-day free trial with no credit card.
+- **Plan with us:** Put planning specialists behind every decision. Points: A sounding board for every decision, from specialists who master Flieber / The data behind your decisions kept accurate, and your S&OP meetings supported / Experience from more than 1,000 brands since 2019, in the Flieber app your team already uses.
+
 Then the closing line and Probably not for you if, as below. The card version described below is superseded (kept as V8).
 
 After the modules. Kicker: How you work with Flieber. H2: Any module, any way of working. Lead: Choose the modules you need, then how you want to use them. Any combination works, and you can change it as your operation grows.

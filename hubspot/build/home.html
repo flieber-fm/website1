@@ -1419,6 +1419,11 @@ a.int-tile:hover { border-color: var(--black); }
 }
 .ladder-hero .ladder-stop .ladder-dot, .ladder-hero .ladder-stop[aria-selected="true"] .ladder-dot { background: var(--c); border: 0; width: 14px; height: 14px; }
 .ladder-hero #ladder-tab-use .ladder-dot { box-shadow: inset 0 0 0 1.5px var(--black); }
+.ladder-hero .ladder-lead { margin: 0; font-size: clamp(20px, 2.1vw, 26px); line-height: 1.3; font-weight: 500; letter-spacing: -0.02em; color: var(--black); max-width: 860px; }
+.ladder-hero .ladder-points { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 28px; }
+.ladder-hero .ladder-points li { position: relative; padding-left: 30px; font-size: 16px; line-height: 1.45; color: var(--black); }
+.ladder-hero .ladder-points .ico { position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; background: var(--white); border: 1px solid var(--black); }
+@media (max-width: 900px) { .ladder-hero .ladder-points { grid-template-columns: 1fr; } }
 
 </style>
 
@@ -1638,7 +1643,12 @@ a.int-tile:hover { border-color: var(--black); }
               <button class="tab ladder-stop" type="button" role="tab" id="ladder-tab-plan" aria-controls="ladder-plan" aria-selected="false" tabindex="-1"><span class="ladder-dot" aria-hidden="true"></span><span class="ladder-name">Plan with us</span><span class="ladder-sub">Our planners join your team</span></button>
             </div>
             <div class="ladder-panel" role="tabpanel" id="ladder-build" aria-labelledby="ladder-tab-build" hidden>
-              <p class="ladder-text">Connect your own reports, dashboards and internal tools to Flieber’s data and planning engine through API and MCP, and add the forecasting and planning modules when you need them.</p>
+              <p class="ladder-lead">Skip the plumbing: build on data that’s already connected, mapped and kept current.</p>
+            <ul class="ladder-points">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Every channel, warehouse, 3PL and supplier already connected, with no pipelines or APIs for you to maintain</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Data mapped to how you run the business and checked continuously for gaps and anomalies</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Your tools and AI agents reach it through API and MCP, and keep working as you add channels, products or suppliers</li>
+            </ul>
               <div class="ladder-foot">
                 <span class="which-price">Priced to your operation</span>
                 <a class="btn btn-dark" href="/developers/cli">Developer reference <span class="arrow" aria-hidden="true">→</span></a>
@@ -1646,14 +1656,24 @@ a.int-tile:hover { border-color: var(--black); }
               </div>
             </div>
             <div class="ladder-panel" role="tabpanel" id="ladder-built" aria-labelledby="ladder-tab-built" hidden>
-              <p class="ladder-text">Flieber’s engineers build a tailored app, dashboards, reports or agents on your data, shaped around how your team plans. For qualified accounts.</p>
+              <p class="ladder-lead">Get the tool your team needs, without building a team to make it.</p>
+            <ul class="ladder-points">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>A tailored app, dashboards, reports or agents, shaped around how your team plans</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Built on Flieber’s data and planning engine, so it starts from data that’s already joined, mapped and corrected</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Flieber’s engineers build it with you, reviewing with your team as they go. For qualified accounts</li>
+            </ul>
               <div class="ladder-foot">
                 <span class="which-price">Quoted per project</span>
                 <a class="btn btn-dark" href="/customize#engineers">Check if you qualify <span class="arrow" aria-hidden="true">→</span></a>
               </div>
             </div>
             <div class="ladder-panel" role="tabpanel" id="ladder-use" aria-labelledby="ladder-tab-use">
-              <p class="ladder-text">Plan in the Flieber app with your team: forecasts, purchase plans and workflows are ready to use, with shared plans and approval rules. Setup is included.</p>
+              <p class="ladder-lead">Plan on your own data without building anything.</p>
+            <ul class="ladder-points">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Forecasts, purchase plans and workflows, ready to use</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Your whole team works from one plan, with shared views and approval rules</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Setup included, and a 14-day free trial with no credit card</li>
+            </ul>
               <div class="ladder-foot">
                 <span class="which-price">Priced to your operation</span>
                 <a class="btn btn-dark" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
@@ -1661,7 +1681,12 @@ a.int-tile:hover { border-color: var(--black); }
               </div>
             </div>
             <div class="ladder-panel" role="tabpanel" id="ladder-plan" aria-labelledby="ladder-tab-plan" hidden>
-              <p class="ladder-text">Everything in the Flieber app, plus Flieber’s specialized planners: they keep the data behind your decisions accurate, take part in your S&amp;OP meetings and help run your planning practice.</p>
+              <p class="ladder-lead">Put planning specialists behind every decision.</p>
+            <ul class="ladder-points">
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>A sounding board for every decision, from specialists who master Flieber</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>The data behind your decisions kept accurate, and your S&amp;OP meetings supported</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Experience from more than 1,000 brands since 2019, in the Flieber app your team already uses</li>
+            </ul>
               <div class="ladder-foot">
                 <span class="which-price">Quoted per brand</span>
                 <a class="btn btn-dark" href="https://www.flieber.com/book-a-demo">Book a demo <span class="arrow" aria-hidden="true">→</span></a>
