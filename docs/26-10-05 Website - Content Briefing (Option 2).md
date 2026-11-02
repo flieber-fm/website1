@@ -233,6 +233,15 @@ As in Option 1, section 3.5 (H2 "Ask anything your operation depends on", six ca
 
 ### 4.9 How you work with Flieber (Nov 2; replaces Two ways to work with Flieber)
 
+**Current version (Nov 2, track).** Kicker: How you work with Flieber. H2: How much do you want to do yourself? Lead: Every option covers the modules you choose. Pick your place on the line and switch any time. Track ends: You do more / We do more. Stops (name, subline, sentence, price, button, link):
+
+1. **Build on it** · You build, on our data · Connect your own reports, dashboards and internal tools to Flieber's data and planning engine through API and MCP, and add the forecasting and planning modules when you need them. · Priced to your operation · Developer reference · Building with AI tools? See how
+2. **Have it built** · Our engineers build it · Flieber's engineers build a tailored app, dashboards, reports or agents on your data, shaped around how your team plans. For qualified accounts. · Quoted per project · Check if you qualify
+3. **Use it** (selected by default) · Ready to use · Plan in the Flieber app with your team: forecasts, purchase plans and workflows are ready to use, with shared plans and approval rules. Setup is included. · Priced to your operation · Start free trial · See every feature
+4. **Plan with us** · Our planners join your team · Everything in the Flieber app, plus Flieber's specialized planners: they keep the data behind your decisions accurate, take part in your S&OP meetings and help run your planning practice. · Quoted per brand · Book a demo · About Managed Services
+
+Then the closing line and Probably not for you if, as below. The card version described below is superseded (kept as V8).
+
 After the modules. Kicker: How you work with Flieber. H2: Any module, any way of working. Lead: Choose the modules you need, then how you want to use them. Any combination works, and you can change it as your operation grows.
 
 Cards: **The Flieber app** (Plan in a ready-made app; Your team plans together in one place, with shared plans and approval rules / Nothing to build: forecasts, purchase plans and workflows are ready to use / Setup included; Priced to your operation; Start free trial). **An app built for you** (Our engineers build it on your data; A tailored app, dashboards, reports or agents, shaped around how your team plans / Built on Flieber's data and planning engine, with your team reviewing as they go / For qualified accounts; Quoted per project; Check if you qualify). **Your own tools** (Build on Flieber's data yourself; Connect your reports, dashboards and internal tools through API and MCP / Start from data that's already unified, mapped and corrected / Add the forecasting and planning modules when you need them; Priced to your operation; Developer reference).

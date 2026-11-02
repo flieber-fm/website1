@@ -1515,7 +1515,30 @@ a.int-tile:hover { border-color: var(--black); }
 .qs-intro .h2 { margin-top: 14px; }
 .logos-band .logos-block { border-top: 0; }
 
-/* How you work with Flieber (Nov 2): three ways of working, Managed Services as an add-on */
+/* How you work with Flieber (Nov 2): one track from "you do more" to "we do more" */
+.ladder { margin-top: 8px; }
+.ladder-ends { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); margin-bottom: 10px; }
+.ladder-ends span:last-child::before { content: ""; }
+.ladder-track { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border: 0; padding: 0; }
+.ladder-track::before { content: ""; position: absolute; left: 12.5%; right: 12.5%; top: 21px; height: 2px; background: linear-gradient(90deg, var(--line-strong), var(--black)); }
+.ladder .ladder-stop { position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 8px 18px; margin: 0; background: none; border: 0; border-radius: 14px; cursor: pointer; text-align: center; color: var(--text-2); font: inherit; }
+.ladder .ladder-stop:hover { background: var(--gray-light); }
+.ladder .ladder-stop[aria-selected="true"] { color: var(--black); }
+.ladder-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--white); border: 2px solid var(--line-strong); position: relative; z-index: 1; transition: transform .2s; }
+.ladder-stop[aria-selected="true"] .ladder-dot { background: var(--yellow); border-color: var(--black); transform: scale(1.25); }
+.ladder-name { font-size: clamp(18px, 2vw, 22px); font-weight: 500; letter-spacing: -0.02em; margin-top: 4px; }
+.ladder-sub { font-size: 14px; color: var(--text-2); }
+.ladder-panel { margin-top: 12px; padding: clamp(22px, 3vw, 32px); border: 1px solid var(--black); border-radius: var(--radius-l); background: var(--white); }
+.ladder-text { margin: 0; font-size: clamp(18px, 1.8vw, 21px); line-height: 1.45; max-width: 820px; }
+.ladder-foot { margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+@media (max-width: 720px) {
+  .ladder-track { grid-template-columns: 1fr 1fr; row-gap: 4px; }
+  .ladder-track::before { display: none; }
+  .ladder .ladder-stop { border: 1px solid var(--line); background: var(--white); padding: 12px 8px; }
+  .ladder .ladder-stop[aria-selected="true"] { border-color: var(--black); }
+}
+
+/* Kept for the V8 snapshot in /home-variants (offer cards, Nov 2) */
 .which-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 960px) { .which-three { grid-template-columns: 1fr; } }
 .which-three .which-list { margin-top: 18px; }

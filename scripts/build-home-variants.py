@@ -59,6 +59,12 @@ VARIANTS = [
      "h1": "The inventory intelligence layer your agents run on",
      "sub": ("Frozen copy of the main page before the offer and module matrix: Quick start after the hero, "
              "Solutions with Customize Flieber and the Two ways to work with Flieber section.")},
+    {"name": "Offer cards", "file": "scripts/home-snapshots/2026-11-02-offer-cards.html",
+     "eyebrow": "Main homepage on Nov 2, 2026 (three ways of working as cards, Managed Services as add-on)",
+     "h1": "The inventory intelligence layer your agents run on",
+     "sub": ("Frozen copy of the main page with the first offer and module matrix: The Flieber app, An app built for you "
+             "and Your own tools as cards, Managed Services as an add-on. Judged too complex; replaced by the How much "
+             "do you want to do yourself track.")},
 ]
 
 # Hero card: the six sample scenarios, shown as requests from agents and people.
@@ -178,7 +184,7 @@ p.lead{{color:var(--muted);margin:0 0 32px;max-width:680px}}
 .vh-sub{{display:block;margin-top:10px;color:var(--muted);font-size:15px}}
 </style></head><body><main>
 <h1>Homepage variants</h1>
-<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it; V7 is the main page as it stood until Nov 2, before the offer and module matrix. V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
+<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it; V7 is the main page as it stood until Nov 2, before the offer and module matrix; V8 is the first matrix version (cards), replaced the same day by the track. V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
         <a class="vh-card main" href="../"><span class="vh-n">Main · live preview today</span><span class="vh-h1">{main_h1}</span></a>
 {rows}
 </main></body></html>

@@ -1341,6 +1341,27 @@ a.int-tile:hover { border-color: var(--black); }
 .qs-intro { max-width: 980px; margin: 0 auto clamp(20px, 3vw, 32px); }
 .qs-intro .h2 { margin-top: 14px; }
 .logos-band .logos-block { border-top: 0; }
+.ladder { margin-top: 8px; }
+.ladder-ends { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); margin-bottom: 10px; }
+.ladder-ends span:last-child::before { content: ""; }
+.ladder-track { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border: 0; padding: 0; }
+.ladder-track::before { content: ""; position: absolute; left: 12.5%; right: 12.5%; top: 21px; height: 2px; background: linear-gradient(90deg, var(--line-strong), var(--black)); }
+.ladder .ladder-stop { position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 8px 18px; margin: 0; background: none; border: 0; border-radius: 14px; cursor: pointer; text-align: center; color: var(--text-2); font: inherit; }
+.ladder .ladder-stop:hover { background: var(--gray-light); }
+.ladder .ladder-stop[aria-selected="true"] { color: var(--black); }
+.ladder-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--white); border: 2px solid var(--line-strong); position: relative; z-index: 1; transition: transform .2s; }
+.ladder-stop[aria-selected="true"] .ladder-dot { background: var(--yellow); border-color: var(--black); transform: scale(1.25); }
+.ladder-name { font-size: clamp(18px, 2vw, 22px); font-weight: 500; letter-spacing: -0.02em; margin-top: 4px; }
+.ladder-sub { font-size: 14px; color: var(--text-2); }
+.ladder-panel { margin-top: 12px; padding: clamp(22px, 3vw, 32px); border: 1px solid var(--black); border-radius: var(--radius-l); background: var(--white); }
+.ladder-text { margin: 0; font-size: clamp(18px, 1.8vw, 21px); line-height: 1.45; max-width: 820px; }
+.ladder-foot { margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+@media (max-width: 720px) {
+  .ladder-track { grid-template-columns: 1fr 1fr; row-gap: 4px; }
+  .ladder-track::before { display: none; }
+  .ladder .ladder-stop { border: 1px solid var(--line); background: var(--white); padding: 12px 8px; }
+  .ladder .ladder-stop[aria-selected="true"] { border-color: var(--black); }
+}
 .which-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 960px) { .which-three { grid-template-columns: 1fr; } }
 .which-three .which-list { margin-top: 18px; }
@@ -1935,71 +1956,59 @@ a.int-tile:hover { border-color: var(--black); }
       </div>
     </section>
 
-    <!-- ================= 6b. HOW YOU WORK WITH FLIEBER (offer x module matrix, Nov 2) ================= -->
+    <!-- ================= 6b. HOW YOU WORK WITH FLIEBER (one track, Nov 2) ================= -->
     <section class="section" id="how-you-work" aria-labelledby="how-you-work-title">
       <div class="wrap">
         <div class="section-head reveal">
           <span class="kicker">How you work with Flieber</span>
-          <h2 class="h2" id="how-you-work-title" style="margin-top:20px">Any module, any way of working</h2>
-          <p class="lead">Choose the modules you need, then how you want to use them. Any combination works, and you can change it as your operation grows.</p>
+          <h2 class="h2" id="how-you-work-title" style="margin-top:20px">How much do you want to do yourself?</h2>
+          <p class="lead">Every option covers the modules you choose. Pick your place on the line and switch any time.</p>
         </div>
 
-        <div class="which which-three reveal-stagger">
-          <article class="which-card" aria-labelledby="hw-app">
-            <h3 class="which-name" id="hw-app">The Flieber app</h3>
-            <p class="which-tag">Plan in a ready-made app</p>
-            <ul class="which-list">
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Your team plans together in one place, with shared plans and approval rules</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Nothing to build: forecasts, purchase plans and workflows are ready to use</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Setup included</li>
-            </ul>
-            <div class="which-foot">
+        <div class="tabset ladder reveal">
+          <div class="ladder-ends" aria-hidden="true"><span>You do more</span><span>We do more</span></div>
+          <div class="tablist ladder-track" role="tablist" aria-label="How much you want to do yourself">
+            <button class="tab ladder-stop" type="button" role="tab" id="ladder-tab-build" aria-controls="ladder-build" aria-selected="false" tabindex="-1"><span class="ladder-dot" aria-hidden="true"></span><span class="ladder-name">Build on it</span><span class="ladder-sub">You build, on our data</span></button>
+            <button class="tab ladder-stop" type="button" role="tab" id="ladder-tab-built" aria-controls="ladder-built" aria-selected="false" tabindex="-1"><span class="ladder-dot" aria-hidden="true"></span><span class="ladder-name">Have it built</span><span class="ladder-sub">Our engineers build it</span></button>
+            <button class="tab ladder-stop" type="button" role="tab" id="ladder-tab-use" aria-controls="ladder-use" aria-selected="true"><span class="ladder-dot" aria-hidden="true"></span><span class="ladder-name">Use it</span><span class="ladder-sub">Ready to use</span></button>
+            <button class="tab ladder-stop" type="button" role="tab" id="ladder-tab-plan" aria-controls="ladder-plan" aria-selected="false" tabindex="-1"><span class="ladder-dot" aria-hidden="true"></span><span class="ladder-name">Plan with us</span><span class="ladder-sub">Our planners join your team</span></button>
+          </div>
+          <div class="ladder-panel" role="tabpanel" id="ladder-build" aria-labelledby="ladder-tab-build" hidden>
+            <p class="ladder-text">Connect your own reports, dashboards and internal tools to Flieber’s data and planning engine through API and MCP, and add the forecasting and planning modules when you need them.</p>
+            <div class="ladder-foot">
               <span class="which-price">Priced to your operation</span>
-              <a class="btn btn-dark" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn-dark" href="/developers/cli">Developer reference <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="link-arrow" href="/customize#yourself">Building with AI tools? See how <span class="arrow" aria-hidden="true">→</span></a>
             </div>
-          </article>
-
-          <article class="which-card" aria-labelledby="hw-built">
-            <h3 class="which-name" id="hw-built"><a href="/customize#engineers">An app built for you</a></h3>
-            <p class="which-tag">Our engineers build it on your data</p>
-            <ul class="which-list">
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>A tailored app, dashboards, reports or agents, shaped around how your team plans</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Built on Flieber’s data and planning engine, with your team reviewing as they go</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>For qualified accounts</li>
-            </ul>
-            <div class="which-foot">
+          </div>
+          <div class="ladder-panel" role="tabpanel" id="ladder-built" aria-labelledby="ladder-tab-built" hidden>
+            <p class="ladder-text">Flieber’s engineers build a tailored app, dashboards, reports or agents on your data, shaped around how your team plans. For qualified accounts.</p>
+            <div class="ladder-foot">
               <span class="which-price">Quoted per project</span>
               <a class="btn btn-dark" href="/customize#engineers">Check if you qualify <span class="arrow" aria-hidden="true">→</span></a>
             </div>
-          </article>
-
-          <article class="which-card" aria-labelledby="hw-own">
-            <h3 class="which-name" id="hw-own"><a href="/customize#yourself">Your own tools</a></h3>
-            <p class="which-tag">Build on Flieber’s data yourself</p>
-            <ul class="which-list">
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Connect your reports, dashboards and internal tools through API and MCP</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Start from data that’s already unified, mapped and corrected</li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Add the forecasting and planning modules when you need them</li>
-            </ul>
-            <div class="which-foot">
-              <span class="which-price">Priced to your operation</span>
-              <a class="btn btn-dark" href="/developers/cli">Developer reference <span class="arrow" aria-hidden="true">→</span></a>
-            </div>
-          </article>
-        </div>
-
-        <div class="hw-addon reveal">
-          <div>
-            <p class="hw-addon-tag">Add-on</p>
-            <h3 class="h3"><a href="/managed-services">Managed Services: our planners on your team</a></h3>
-            <p>Flieber’s specialized planners keep the data behind your decisions accurate, take part in your S&amp;OP meetings and help run your planning practice, drawing on experience from more than 1,000 brands since 2019. Quoted per brand.</p>
           </div>
-          <a class="btn btn-ghost" href="/managed-services">See Managed Services <span class="arrow" aria-hidden="true">→</span></a>
+          <div class="ladder-panel" role="tabpanel" id="ladder-use" aria-labelledby="ladder-tab-use">
+            <p class="ladder-text">Plan in the Flieber app with your team: forecasts, purchase plans and workflows are ready to use, with shared plans and approval rules. Setup is included.</p>
+            <div class="ladder-foot">
+              <span class="which-price">Priced to your operation</span>
+              <a class="btn btn-dark" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="link-arrow" href="/features">See every feature <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="ladder-panel" role="tabpanel" id="ladder-plan" aria-labelledby="ladder-tab-plan" hidden>
+            <p class="ladder-text">Everything in the Flieber app, plus Flieber’s specialized planners: they keep the data behind your decisions accurate, take part in your S&amp;OP meetings and help run your planning practice.</p>
+            <div class="ladder-foot">
+              <span class="which-price">Quoted per brand</span>
+              <a class="btn btn-dark" href="https://www.flieber.com/book-a-demo">Book a demo <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="link-arrow" href="/managed-services">About Managed Services <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </div>
         </div>
 
         <div class="which-after reveal">
           <p class="which-under">Whatever you choose, work from the Flieber app, in Slack or with your own AI agents through MCP. Not sure what fits? Book a demo and we’ll tell you honestly, even if the answer is neither.</p>
-            <div class="fit-col fit-no">
+          <div class="fit-col fit-no">
             <h3 class="h3">Probably not for you if:</h3>
             <ul>
               <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You sell on one channel and a spreadsheet still works</li>
