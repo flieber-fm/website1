@@ -242,7 +242,9 @@ As in Option 1, section 3.5 (H2 "Ask anything your operation depends on", six ca
 3. **Use it** (selected by default) · Ready to use · Plan in the Flieber app with your team: forecasts, purchase plans and workflows are ready to use, with shared plans and approval rules. Setup is included. · Priced to your operation · Start free trial · See every feature
 4. **Plan with us** · Our planners join your team · Everything in the Flieber app, plus Flieber's specialized planners: they keep the data behind your decisions accurate, take part in your S&OP meetings and help run your planning practice. · Quoted per brand · Book a demo · About Managed Services
 
-**Base plus add-ons (Nov 2, latest; replaces the three-tab card below, kept as V13).** In the hero. H2: Ways to use Flieber.
+**Two cards with their add-ons (Nov 2, latest; replaces the two-step layout below, kept as V14).** In the hero, under the H1 and the simulation, with no visible title (Ways to use Flieber is a screen-reader-only H2) and no step numbers. Data layer card: copy as below, then Add-on: Customization. Full platform card: copy as below, then Add-ons: Customization and Managed Services (same wording as below). Under the cards: Use either one in the Flieber app, in Slack or with your own AI agents through MCP and API.
+
+**Base plus add-ons (Nov 2, superseded; kept as V14).** In the hero. H2: Ways to use Flieber.
 
 Step 1, **Start with** (two cards side by side):
 - **Data layer** · tag: Build your own logic · Every channel, warehouse, 3PL and supplier connected, mapped to how you run the business and kept current, with no pipelines or APIs for you to maintain. Build your own forecasting and planning on top. · Priced to your operation · See the data layer

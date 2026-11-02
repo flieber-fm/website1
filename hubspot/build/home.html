@@ -1482,6 +1482,16 @@ a.int-tile:hover { border-color: var(--black); }
   .ways-addon-go { grid-column: 2; }
 }
 @media (max-width: 860px) { .ways-addon { align-items: start; } .ways-addon .ways-dot { margin-top: 6px; } }
+.ways-cards .ways-card { display: flex; flex-direction: column; }
+.ways-cards .ways-foot { margin-top: 0; padding-top: 20px; }
+.ways-cards .ways-addons { margin-top: auto; padding-top: 22px; display: grid; gap: 8px; }
+.ways-cards .ways-addons-label { margin: 0 0 2px; padding-top: 18px; border-top: 1px solid rgba(27, 28, 28, .18); font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+.ways-cards .ways-addon { grid-template-columns: 12px 1fr; align-items: start; padding: 12px 14px; background: rgba(255, 255, 255, .7); }
+.ways-cards .ways-addon .ways-dot { margin-top: 6px; }
+.ways-cards .ways-addon-body { font-size: 14.5px; }
+.ways-cards .ways-addon-go { grid-column: 2; font-size: 14.5px; }
+.ways-cards .ways-either { margin: 14px 0 0; }
+.ways-cards .ways-addons { margin-top: 0; }
 
 </style>
 
@@ -1687,11 +1697,9 @@ a.int-tile:hover { border-color: var(--black); }
           </figure>
         </div>
 
-        <!-- Ways to use Flieber (Nov 2): start with the data layer or the full platform, add customization or Managed Services -->
-        <div class="ways reveal" id="how-you-work">
-          <h2 class="ways-title" id="how-you-work-title">Ways to use Flieber</h2>
-
-          <p class="ways-step"><span class="ways-n">1</span>Start with</p>
+        <!-- Ways to use Flieber (Nov 2): two options in the hero, each with its own add-ons -->
+        <div class="ways ways-cards reveal" id="how-you-work">
+          <h2 class="sr-only" id="how-you-work-title">Ways to use Flieber</h2>
           <div class="ways-base">
             <article class="ways-card ways-data" aria-labelledby="ways-data-h">
               <p class="ways-tag"><span class="ways-dot" aria-hidden="true"></span>Build your own logic</p>
@@ -1700,6 +1708,14 @@ a.int-tile:hover { border-color: var(--black); }
               <div class="ways-foot">
                 <span class="which-price">Priced to your operation</span>
                 <a class="btn btn-dark" href="/product/data-layer">See the data layer <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="ways-addons">
+                <p class="ways-addons-label">Add-on</p>
+                <a class="ways-addon ways-custom" href="/customize#engineers">
+                  <span class="ways-dot" aria-hidden="true"></span>
+                  <span class="ways-addon-body"><b>Customization</b> A custom interface, built by Flieber’s engineers around how your team operates. For qualified accounts, quoted per project.</span>
+                  <span class="ways-addon-go">Check if you qualify <span class="arrow" aria-hidden="true">→</span></span>
+                </a>
               </div>
             </article>
             <article class="ways-card ways-full" aria-labelledby="ways-full-h">
@@ -1711,23 +1727,22 @@ a.int-tile:hover { border-color: var(--black); }
                 <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
                 <a class="link-arrow" href="/features">See every feature <span class="arrow" aria-hidden="true">→</span></a>
               </div>
+              <div class="ways-addons">
+                <p class="ways-addons-label">Add-ons</p>
+                <a class="ways-addon ways-custom" href="/customize#engineers">
+                  <span class="ways-dot" aria-hidden="true"></span>
+                  <span class="ways-addon-body"><b>Customization</b> A custom interface, built by Flieber’s engineers around how your team operates. For qualified accounts, quoted per project.</span>
+                  <span class="ways-addon-go">Check if you qualify <span class="arrow" aria-hidden="true">→</span></span>
+                </a>
+                <a class="ways-addon ways-ms" href="/managed-services">
+                  <span class="ways-dot" aria-hidden="true"></span>
+                  <span class="ways-addon-body"><b>Managed Services</b> Flieber’s planners bring their supply chain and Flieber know-how to your team, to help you get better results, faster. Quoted per brand.</span>
+                  <span class="ways-addon-go">About Managed Services <span class="arrow" aria-hidden="true">→</span></span>
+                </a>
+              </div>
             </article>
           </div>
           <p class="ways-either">Use either one in the Flieber app, in Slack or with your own AI agents through MCP and API.</p>
-
-          <p class="ways-step"><span class="ways-n">2</span>Add if you need it</p>
-          <div class="ways-addons">
-            <a class="ways-addon ways-custom" href="/customize#engineers">
-              <span class="ways-dot" aria-hidden="true"></span>
-              <span class="ways-addon-body"><b>Customization</b> A custom interface, built by Flieber’s engineers around how your team operates, on either option. For qualified accounts. Quoted per project.</span>
-              <span class="ways-addon-go">Check if you qualify <span class="arrow" aria-hidden="true">→</span></span>
-            </a>
-            <a class="ways-addon ways-ms" href="/managed-services">
-              <span class="ways-dot" aria-hidden="true"></span>
-              <span class="ways-addon-body"><b>Managed Services</b> Flieber’s planners bring their supply chain and Flieber know-how to your team, to help you get better results, faster. Quoted per brand.</span>
-              <span class="ways-addon-go">About Managed Services <span class="arrow" aria-hidden="true">→</span></span>
-            </a>
-          </div>
         </div>
 
         <ul class="under-doors">
