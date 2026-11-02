@@ -242,7 +242,19 @@ As in Option 1, section 3.5 (H2 "Ask anything your operation depends on", six ca
 3. **Use it** (selected by default) · Ready to use · Plan in the Flieber app with your team: forecasts, purchase plans and workflows are ready to use, with shared plans and approval rules. Setup is included. · Priced to your operation · Start free trial · See every feature
 4. **Plan with us** · Our planners join your team · Everything in the Flieber app, plus Flieber's specialized planners: they keep the data behind your decisions accurate, take part in your S&OP meetings and help run your planning practice. · Quoted per brand · Book a demo · About Managed Services
 
-**Three tabs and Managed Services layer (Nov 2, latest; replaces the four-tab copy below, kept as V12).** Since Nov 2 (later) the panels have no value line: each opens on Choose this when, so the value lines listed below are no longer shown. Arrow: Ready-made to Fully custom. Card top: **One engine powering however you choose to operate** (Nov 2; replaces One engine behind all three, with its line on the modules).
+**Base plus add-ons (Nov 2, latest; replaces the three-tab card below, kept as V13).** In the hero. H2: Ways to use Flieber.
+
+Step 1, **Start with** (two cards side by side):
+- **Data layer** · tag: Build your own logic · Every channel, warehouse, 3PL and supplier connected, mapped to how you run the business and kept current, with no pipelines or APIs for you to maintain. Build your own forecasting and planning on top. · Priced to your operation · See the data layer
+- **Full platform** · tag: Use Flieber's planning engine · The data layer plus demand forecasting, inventory forecasting, replenishment and workflows. Flieber's AI prepares every decision with the reasoning behind it, and you make the call. · Priced to your operation · Start free trial · See every feature
+
+Under both: Use either one in the Flieber app, in Slack or with your own AI agents through MCP and API.
+
+Step 2, **Add if you need it**:
+- **Customization** · A custom interface, built by Flieber's engineers around how your team operates, on either option. For qualified accounts. Quoted per project. · Check if you qualify
+- **Managed Services** · Flieber's planners bring their supply chain and Flieber know-how to your team, to help you get better results, faster. Quoted per brand. · About Managed Services
+
+**Three tabs and Managed Services layer (Nov 2, superseded; kept as V13).** Since Nov 2 (later) the panels have no value line: each opens on Choose this when, so the value lines listed below are no longer shown. Arrow: Ready-made to Fully custom. Card top: **One engine powering however you choose to operate** (Nov 2; replaces One engine behind all three, with its line on the modules).
 
 - **Use it** (default) · When you'd rather operate than build · Flieber's AI prepares every decision in an app that's ready to use. You make the call. · Choose this when: You don't have the time or the know-how to build and maintain an internal system / You want to start operating now, and maybe customize later · What you get: The Flieber app, with forecasts, purchase plans and workflows ready to use, in the app or in Slack. Setup included, and a 14-day free trial with no credit card. · Priced to your operation · Start free trial · See every feature
 - **Build on it** · When you'll build your interface, or need none · The full engine, through MCP and the CLI · Choose this when: You want to operate through your agents, with no interface at all / You want to build your own interface, including by vibe-coding it · What you get: Data that's connected, mapped and kept current, plus Flieber's demand forecasts, reachable from Claude, ChatGPT or your own agents, with no pipelines or APIs for you to maintain. · Priced to your operation · Developer reference · Building with AI tools? See how

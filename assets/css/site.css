@@ -1639,3 +1639,32 @@ a.int-tile:hover { border-color: var(--black); }
 .ladder-three .ladder-stop .ladder-sub { grid-column: 2; grid-row: 2; }
 .ladder-three .ladder-cols { margin-top: 0; }
 .ladder-three .ladder-stop { align-content: start; }
+
+/* Ways to use Flieber (Nov 2, base plus add-ons): start with the data layer or the full platform, then add customization or Managed Services */
+.ways { margin-top: clamp(40px, 6vw, 64px); text-align: left; }
+.ways-title { margin: 0 0 22px; font-size: clamp(28px, 3.4vw, 40px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; }
+.ways-step { display: flex; align-items: center; gap: 10px; margin: 0 0 12px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+.ways-n { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--black); color: var(--white); font-size: 12px; letter-spacing: 0; }
+.ways-base { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.ways-card { --c: var(--blue-light); --t: #E7F0FF; display: flex; flex-direction: column; padding: clamp(22px, 3vw, 30px); border: 1.5px solid var(--black); border-radius: var(--radius-l); background: var(--t); border-top: 8px solid var(--c); }
+.ways-full { --c: var(--yellow); --t: #FCF9D2; }
+.ways-tag { display: flex; align-items: center; gap: 8px; margin: 0; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+.ways-dot { flex: none; width: 12px; height: 12px; border-radius: 50%; background: var(--c); }
+.ways-full .ways-dot { box-shadow: inset 0 0 0 1.5px var(--black); }
+.ways-h { margin: 10px 0 10px; font-size: clamp(24px, 2.6vw, 30px); font-weight: 500; letter-spacing: -0.03em; }
+.ways-p { margin: 0; font-size: 16.5px; line-height: 1.55; color: var(--black); }
+.ways-foot { margin-top: auto; padding-top: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.ways-either { margin: 14px 0 34px; font-size: 15px; color: var(--text-2); }
+.ways-addons { display: grid; gap: 10px; }
+.ways-addon { --c: var(--blue); display: grid; grid-template-columns: 12px 1fr auto; align-items: center; gap: 14px; padding: 16px 20px; border: 1px solid var(--line-strong); border-radius: var(--radius-m); background: var(--white); color: var(--black); text-decoration: none; transition: border-color .2s; }
+.ways-ms { --c: var(--black); }
+.ways-addon:hover { border-color: var(--black); }
+.ways-addon-body { font-size: 15.5px; line-height: 1.5; color: var(--text-2); }
+.ways-addon-body b { color: var(--black); font-weight: 600; margin-right: 6px; }
+.ways-addon-go { font-weight: 500; white-space: nowrap; }
+@media (max-width: 860px) {
+  .ways-base { grid-template-columns: 1fr; }
+  .ways-addon { grid-template-columns: 12px 1fr; }
+  .ways-addon-go { grid-column: 2; }
+}
+@media (max-width: 860px) { .ways-addon { align-items: start; } .ways-addon .ways-dot { margin-top: 6px; } }
