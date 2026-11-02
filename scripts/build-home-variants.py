@@ -80,6 +80,11 @@ VARIANTS = [
      "h1": "The inventory intelligence layer your agents run on",
      "sub": ("Frozen copy of the main page with the agentic Ways to use Flieber copy, before Karyna's feedback: "
              "sublines said who does the work, panels had a value line and three points.")},
+    {"name": "Four tabs, when to choose", "file": "scripts/home-snapshots/2026-11-02-four-tabs.html",
+     "eyebrow": "Main homepage on Nov 2, 2026 (four tabs with Plan with us, after Karyna's feedback)",
+     "h1": "The inventory intelligence layer your agents run on",
+     "sub": ("Frozen copy of the main page with four tabs on one line (Build on it, Have it built, Use it, Plan with us), "
+             "Choose this when and What you get, and the engine strip at the bottom; before Managed Services became a separate layer.")},
 ]
 
 # Hero card: the six sample scenarios, shown as requests from agents and people.
@@ -199,7 +204,7 @@ p.lead{{color:var(--muted);margin:0 0 32px;max-width:680px}}
 .vh-sub{{display:block;margin-top:10px;color:var(--muted);font-size:15px}}
 </style></head><body><main>
 <h1>Homepage variants</h1>
-<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it; V7 is the main page as it stood until Nov 2, before the offer and module matrix; V8 is the first matrix version (cards), replaced the same day by the track; V9 is the first track, before it moved into the hero; V10 is the hero card with value copy, before the agentic copy; V11 is the agentic copy, before Karyna's feedback (when to choose each, shared engine). V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
+<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it; V7 is the main page as it stood until Nov 2, before the offer and module matrix; V8 is the first matrix version (cards), replaced the same day by the track; V9 is the first track, before it moved into the hero; V10 is the hero card with value copy, before the agentic copy; V11 is the agentic copy, before Karyna's feedback (when to choose each, shared engine); V12 is the four-tab version, before Managed Services became its own layer. V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
         <a class="vh-card main" href="../"><span class="vh-n">Main · live preview today</span><span class="vh-h1">{main_h1}</span></a>
 {rows}
 </main></body></html>

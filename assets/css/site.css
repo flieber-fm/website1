@@ -1613,3 +1613,22 @@ a.int-tile:hover { border-color: var(--black); }
 .ladder-hero .ladder-base { margin: 0; padding: 14px clamp(20px, 3vw, 36px); background: var(--black); color: var(--white); font-size: 15px; line-height: 1.45; }
 .ladder-hero .ladder-base-tag { display: inline-block; margin-right: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--yellow); }
 @media (max-width: 720px) { .ladder-hero .ladder-cols { grid-template-columns: 1fr; } .ladder-hero .ladder-base-tag { display: block; margin: 0 0 4px; } }
+/* Ways to use Flieber, three tabs (Nov 2): engine on top, Use it / Build on it / Have it built, Managed Services at the bottom */
+.ladder-three .ladder-track { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ladder-three .ladder-arrow { background: linear-gradient(90deg, var(--yellow), var(--blue-light), var(--blue)); }
+.ladder-three .ladder-arrow::after { border-left-color: var(--blue); }
+.ladder-three .ladder-base-top { border-bottom: 1.5px solid var(--black); }
+.ladder-three .ladder-ms { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px 32px; padding: clamp(20px, 3vw, 30px) clamp(20px, 3vw, 36px); border-top: 1.5px dashed var(--black); background: var(--white); }
+.ladder-three .ladder-ms .ladder-label { color: var(--text-2); }
+.ladder-three .ladder-ms-h { margin: 0 0 8px; font-size: clamp(19px, 2vw, 23px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.25; }
+.ladder-three .ladder-ms-h a { color: var(--black); text-decoration: none; }
+.ladder-three .ladder-ms-h a:hover { text-decoration: underline; }
+.ladder-three .ladder-ms-p { margin: 0; max-width: 780px; font-size: 16px; line-height: 1.55; color: var(--text-2); }
+.ladder-three .ladder-ms-foot { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; flex: none; }
+@media (max-width: 720px) {
+  .ladder-three .ladder-track { grid-template-columns: 1fr; }
+  .ladder-three .ladder-stop { border-right: 0 !important; border-bottom: 1px solid var(--line) !important; }
+  .ladder-three .ladder-stop:last-child { border-bottom: 1.5px solid var(--black) !important; }
+  .ladder-three .ladder-stop[aria-selected="true"] { border-bottom-color: transparent !important; }
+  .ladder-three .ladder-ms { flex-direction: column; align-items: flex-start; }
+}
