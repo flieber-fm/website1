@@ -1419,9 +1419,6 @@ a.int-tile:hover { border-color: var(--black); }
 }
 .ladder-hero .ladder-stop .ladder-dot, .ladder-hero .ladder-stop[aria-selected="true"] .ladder-dot { background: var(--c); border: 0; width: 14px; height: 14px; }
 .ladder-hero #ladder-tab-use .ladder-dot { box-shadow: inset 0 0 0 1.5px var(--black); }
-.ladder-hero .ladder-title { margin: 0 0 18px; font-size: clamp(28px, 3.4vw, 40px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; }
-.ladder-hero .ladder-box > .ladder-head { margin: 0; padding: 18px 20px 14px; border-bottom: 1px solid var(--line); }
-.ladder-hero .ladder-box > .ladder-head .ladder-q { font-size: clamp(18px, 1.9vw, 22px); font-weight: 500; letter-spacing: -0.02em; }
 
 </style>
 
@@ -1627,14 +1624,13 @@ a.int-tile:hover { border-color: var(--black); }
           </figure>
         </div>
 
-        <!-- How much do you want to do yourself? (Nov 2: replaces the two doors) -->
+        <!-- Ways to use Flieber (Nov 2: replaces the two doors) -->
         <div class="tabset ladder ladder-hero reveal" id="how-you-work">
-          <h2 class="ladder-title" id="how-you-work-title">Ways to use Flieber</h2>
+          <div class="ladder-head">
+            <h2 class="ladder-q" id="how-you-work-title">Ways to use Flieber</h2>
+            <p class="ladder-ends" aria-hidden="true"><span>You do more</span><span class="ladder-arrow"></span><span>We do more</span></p>
+          </div>
           <div class="ladder-box">
-            <div class="ladder-head">
-              <h3 class="ladder-q">How much do you want to do yourself?</h3>
-              <p class="ladder-ends" aria-hidden="true"><span>You do more</span><span class="ladder-arrow"></span><span>We do more</span></p>
-            </div>
           <div class="tablist ladder-track" role="tablist" aria-label="How much you want to do yourself">
               <button class="tab ladder-stop" type="button" role="tab" id="ladder-tab-build" aria-controls="ladder-build" aria-selected="false" tabindex="-1"><span class="ladder-dot" aria-hidden="true"></span><span class="ladder-name">Build on it</span><span class="ladder-sub">You build, on our data</span></button>
               <button class="tab ladder-stop" type="button" role="tab" id="ladder-tab-built" aria-controls="ladder-built" aria-selected="false" tabindex="-1"><span class="ladder-dot" aria-hidden="true"></span><span class="ladder-name">Have it built</span><span class="ladder-sub">Our engineers build it</span></button>
