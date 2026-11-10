@@ -236,7 +236,7 @@ Prompt: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL ht
 
 ### Claude or ChatGPT in your browser: live
 
-Add Flieber as a custom connector in Claude or ChatGPT, then sign in with your Flieber account. Connector address: https://mcp.flieber.com/mcp
+Add Flieber as a custom connector in Claude or ChatGPT, then sign in with your Flieber account. Connector address: https://mcp.flieber.com/mcp. If asked for an OAuth client, use your own OAuth client with client ID LK4yVcCMOjgiwSsK and no client secret.
 
 ### What Claude can do with Flieber
 
@@ -1146,7 +1146,7 @@ For a person setting it up: https://www.flieber.com/mcp. Easiest path: paste thi
 - Connect Cursor: `flieber mcp register --client cursor`
 - Connect Claude Desktop: `flieber mcp register --client claude-desktop`
 - Connect Muse or any other local MCP client: `uvx flieber@latest mcp`
-- Claude or ChatGPT in the browser: add a custom connector with the address `https://mcp.flieber.com/mcp` and sign in with the Flieber account.
+- Claude or ChatGPT in the browser: add a custom connector with the address `https://mcp.flieber.com/mcp` (if asked for an OAuth client: your own, client ID `LK4yVcCMOjgiwSsK`, no secret) and sign in with the Flieber account.
 - Skills: `flieber skills install --client claude-code`
   - [flieber-install](https://cli.flieber.com/skills/flieber-install/SKILL.md): Sets Flieber up.
   - [flieber](https://cli.flieber.com/skills/flieber/SKILL.md): Teaches your agent which tool to use, how to read results and how to preview changes.

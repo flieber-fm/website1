@@ -603,7 +603,8 @@ def install_main() -> str:
     rows = "\n".join(f"            <tr><th scope=\"row\">{esc(a)}</th><td>{ticks(b)}</td></tr>" for a, b in I["trouble"])
     if live:
         bsteps = I["browser_steps"]
-        blist = "\n".join(f"          <li>{esc(t)}" + (f"\n{cmd_html('Connector address', C.HOSTED_MCP_URL)}" if i == 1 else "") + "</li>" for i, t in enumerate(bsteps))
+        bcmd = {1: ("Connector address", C.HOSTED_MCP_URL), 2: ("OAuth client ID", C.HOSTED_MCP_CLIENT_ID)}
+        blist = "\n".join(f"          <li>{esc(t)}" + (f"\n{cmd_html(*bcmd[i])}" if i in bcmd else "") + "</li>" for i, t in enumerate(bsteps))
         out += section("claude-in-browser", I["browser_tag"], I["browser_h"],
                        f'        <p class="feat-approval">{esc(I["browser_lead"])}</p>\n        <ol class="inst-steps-list">\n{blist}\n        </ol>\n        <p class="inst-note">{esc(I["browser_note"])}</p>\n        {todo(I["browser_todo"])}', soft=True)
     out += section("troubleshooting", "Help", I["trouble_h2"], f'''        <table class="inst-trouble">
@@ -640,7 +641,8 @@ def devref_main() -> str:
         <ul class="bullets inst-notes">
 {facts}
         </ul>''', soft=True)
-    out += section("errors", "Reference", D["errors_h2"], f'        <p class="feat-approval">{esc(D["errors"])}</p>\n<div style="margin-top:16px">{cmd_html("Prompt", D["errors_prompt"]).replace('class="cmd"', 'class="cmd cmd-prompt"', 1)}</div>\n        {todo(D["errors_todo"])}', soft=False)
+    err_prompt = cmd_html("Prompt", D["errors_prompt"]).replace('class="cmd"', 'class="cmd cmd-prompt"', 1)
+    out += section("errors", "Reference", D["errors_h2"], f'        <p class="feat-approval">{esc(D["errors"])}</p>\n<div style="margin-top:16px">{err_prompt}</div>\n        {todo(D["errors_todo"])}', soft=False)
     return out
 
 
@@ -1267,7 +1269,7 @@ def pages_text() -> list:
     L += ["", f"1. {I['step1_h']}: macOS and Linux `{C.CLI['install'][0][1]}`; Windows one click {C.CLI['bat']}, or PowerShell `{C.CLI['install'][1][1]}`. {I['step1_next']}",
           f"   {I['step1_ok']} {I['step1_restart']}",
           f"2. {I['step3_h']}: " + " · ".join(f'"{q}"' for q in I["prompts"]), "",
-          f"### {I['browser_h']}: " + ("live" if C.HOSTED_MCP_LIVE else "coming soon"), "", (I["browser_lead"] + " Connector address: " + C.HOSTED_MCP_URL) if C.HOSTED_MCP_LIVE else I["browser_body"], "",
+          f"### {I['browser_h']}: " + ("live" if C.HOSTED_MCP_LIVE else "coming soon"), "", (I["browser_lead"] + " Connector address: " + C.HOSTED_MCP_URL + ". If asked for an OAuth client, use your own OAuth client with client ID " + C.HOSTED_MCP_CLIENT_ID + " and no client secret.") if C.HOSTED_MCP_LIVE else I["browser_body"], "",
           f"### {I['can_h2']}", ""] + [f"- {a}: {b}" for a, b in I["can"]] + ["", f"### {I['safe_h2']}", ""] + [f"- {x}" for x in I["safe"]]
     L += ["", f"### {I['trouble_h2']}", ""] + [f"- {a}: {b}" for a, b in I["trouble"]] + ["", f"### {I['faq_h2']}", ""]
     for q, a in I["faq"]:
@@ -1473,7 +1475,7 @@ def agents_main() -> str:
 {chr(10).join(f"            <li><b>{esc(l)}:</b> <code>{esc(c)}</code></li>" for l, c in C.CLI["install"])}
             <li><b>Windows one-click installer:</b> <a href="{C.CLI["bat"]}">flieber-install.bat</a> (download and double-click)</li>
 {chr(10).join(f"            <li><b>Connect {esc(l)}:</b> <code>{esc(c)}</code></li>" for l, c in C.CLI["clients"])}
-            <li><b>Claude or ChatGPT in the browser:</b> add a custom connector with the address <code>{esc(C.HOSTED_MCP_URL)}</code> and sign in with the Flieber account.</li>
+            <li><b>Claude or ChatGPT in the browser:</b> add a custom connector with the address <code>{esc(C.HOSTED_MCP_URL)}</code> (if asked for an OAuth client: your own, client ID <code>{esc(C.HOSTED_MCP_CLIENT_ID)}</code>, no secret) and sign in with the Flieber account.</li>
 {chr(10).join(f"            <li><b>Coming soon, {esc(n[0].lower() + n[1:])}:</b> {esc(d)}</li>" for n, d in C.CLI["soon"])}
             <li><b>Skills:</b> <code>{esc(C.CLI["skills_cmd"])}</code>, or read them directly: {", ".join(f'<a href="{u}">{esc(n)}</a> ({esc(d[0].lower() + d[1:-1])})' for n, d, u in C.CLI["skills"])}.</li>
 {chr(10).join(f"            <li>{esc(x)}</li>" for x in C.CLI["agent_facts"])}
@@ -1595,7 +1597,7 @@ def cli_md() -> list:
     L += [f"- {l}: `{c}`" for l, c in X["install"]]
     L += [f"- Windows one-click installer (download and double-click): {X['bat']}"]
     L += [f"- Connect {l}: `{c}`" for l, c in X["clients"]]
-    L += [f"- Claude or ChatGPT in the browser: add a custom connector with the address `{C.HOSTED_MCP_URL}` and sign in with the Flieber account."]
+    L += [f"- Claude or ChatGPT in the browser: add a custom connector with the address `{C.HOSTED_MCP_URL}` (if asked for an OAuth client: your own, client ID `{C.HOSTED_MCP_CLIENT_ID}`, no secret) and sign in with the Flieber account."]
     L += [f"- Coming soon, {n[0].lower() + n[1:]}: {d}" for n, d in X["soon"]]
     L += [f"- Skills: `{X['skills_cmd']}`"] + [f"  - [{n}]({u}): {d}" for n, d, u in X["skills"]]
     L += [f"- {x}" for x in X["agent_facts"]]
@@ -1675,7 +1677,7 @@ def capabilities() -> dict:
                      "conversation_writes": "always preview then confirm",
                      "scheduled_workflows": "customer can allow them to run without confirmation"},
         "mcp": {"server": True, "client": True, "server_runs_through": "Flieber CLI (local MCP server, stdio), or the hosted Flieber MCP server for browser clients",
-                "hosted_server": {"url": C.HOSTED_MCP_URL, "auth": "OAuth (Flieber account)", "clients": "Claude and ChatGPT in the browser, as a custom connector"},
+                "hosted_server": {"url": C.HOSTED_MCP_URL, "auth": "OAuth (Flieber account)", "oauth_client_id": C.HOSTED_MCP_CLIENT_ID, "oauth_client_secret": None, "clients": "Claude and ChatGPT in the browser, as a custom connector"},
                 "connected_apps": C.CONNECTED_APPS, "connects_to_any_mcp_server": True,
                 "flieber_cli": {"status": "early access", "package": C.CLI["package"], "pypi": C.CLI["pypi"], "tools": "run flieber docs for the current list",
                                 "transport": "stdio (local MCP server and command line)", "hosted_server": C.HOSTED_MCP_URL,

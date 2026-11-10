@@ -232,6 +232,8 @@ CONNECTED_APPS = ["Gmail", "Outlook", "Slack", "Microsoft Teams", "Google Sheets
 
 # Hosted Flieber MCP address (Felipe Infante, Oct 26). Used by CONNECT, /mcp and the developer reference.
 HOSTED_MCP_URL = "https://mcp.flieber.com/mcp"
+# Public OAuth client ID for the custom connector (Fabricio, Nov 10: Claude asks for it; not a secret)
+HOSTED_MCP_CLIENT_ID = "LK4yVcCMOjgiwSsK"
 
 CONNECT = [
     ("Free trial", "14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan.", TRIAL),
@@ -578,6 +580,7 @@ INSTALL = {
     "browser_lead": "Add Flieber as a custom connector in Claude or ChatGPT, then sign in with your Flieber account.",
     "browser_steps": ["In Claude or ChatGPT, open Settings and add a custom connector.*",
                       "Name it Flieber and paste this address:",
+                      "If it asks for an OAuth client, choose Use your own OAuth client and paste this client ID. Leave the client secret blank.",
                       "Sign in with your Flieber account, or create one. On the same page you accept Flieber's terms and the terms of the AI early access.",
                       "Open a new chat and ask: What can Flieber do?"],
     "browser_todo": "",
@@ -657,7 +660,7 @@ DEVREF = {
     "ways_h2": "Three ways in",
     "ways": [("Command line", "The flieber command, in your terminal.", None),
              ("Local MCP server", "uvx flieber@latest mcp, over stdio. Available now; includes the sign-in tools sign_in_start and sign_in_finish.", None),
-             ("Hosted MCP server", HOSTED_MCP_URL + ", for Claude and ChatGPT in the browser as a custom connector. Signs in with your Flieber account (OAuth), passes your sign-in through and stores nothing; offers the same tools except the two sign-in tools.", None)],
+             ("Hosted MCP server", HOSTED_MCP_URL + ", for Claude and ChatGPT in the browser as a custom connector (OAuth client ID " + HOSTED_MCP_CLIENT_ID + ", no client secret). Signs in with your Flieber account (OAuth), passes your sign-in through and stores nothing; offers the same tools except the two sign-in tools.", None)],
     "signin_h2": "Other ways to sign in",
     "signin": [("By hand, with uv installed", ["uv tool install flieber", "flieber login", "flieber tenants"]),
                ("New organization (you accept Flieber's terms and the AI early access terms)", ["flieber signup"]),

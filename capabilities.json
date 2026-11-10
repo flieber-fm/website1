@@ -1214,6 +1214,8 @@
     "hosted_server": {
       "url": "https://mcp.flieber.com/mcp",
       "auth": "OAuth (Flieber account)",
+      "oauth_client_id": "LK4yVcCMOjgiwSsK",
+      "oauth_client_secret": null,
       "clients": "Claude and ChatGPT in the browser, as a custom connector"
     },
     "connected_apps": [
