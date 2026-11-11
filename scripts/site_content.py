@@ -234,6 +234,14 @@ CONNECTED_APPS = ["Gmail", "Outlook", "Slack", "Microsoft Teams", "Google Sheets
 HOSTED_MCP_URL = "https://mcp.flieber.com/mcp"
 # Public OAuth client ID for the custom connector (Fabricio, Nov 10: Claude asks for it; not a secret)
 HOSTED_MCP_CLIENT_ID = "LK4yVcCMOjgiwSsK"
+# Prompt for a fresh claude.ai or chatgpt.com chat (Felipe, Nov 11). A chat can't change its own settings, so it guides the user
+CONNECTOR_PROMPT = ("Help me add Flieber as a custom connector in this app. You can't change my settings yourself, so guide me "
+                    "one step at a time and wait for me after each step. 1. Open Settings, then Connectors, and add a custom "
+                    "connector. 2. Name it Flieber and use this address: " + HOSTED_MCP_URL + ". 3. If it asks for an OAuth "
+                    "client, choose Use your own OAuth client, enter the client ID " + HOSTED_MCP_CLIENT_ID + " and leave the "
+                    "client secret blank. 4. Connect and sign in with my Flieber account, or create one; on the same page I "
+                    "accept Flieber's terms and the terms of the AI early access. If my plan or workspace doesn't allow custom "
+                    "connectors, tell me. When Flieber is connected, turn it on for this chat and show me what Flieber can do.")
 
 CONNECT = [
     ("Free trial", "14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan.", TRIAL),
@@ -560,11 +568,11 @@ INSTALL_PROMPT_TOOLS = "any AI tool that can run commands on your computer, such
 # /install (plain-language install page, from Fabricio's Install Page brief, Oct 19)
 INSTALL = {
     "slug": "install", "name": "Install",
-    "kicker": "Connect your AI tool",
-    "h1": "Use Flieber from Claude",
+    "kicker": "Or use our CLI tool",
+    "h1": "Use Flieber from your terminal",
     "lead": ("Ask about your sales, forecasts and catalog, or set up your Flieber account, in plain language from the "
              "AI tool you already use."),
-    "prompt_tag": "Easiest",
+    "prompt_tag": "One prompt",
     "prompt_h": "Let your AI tool set it up",
     "prompt_body": ("Copy this prompt and paste it into " + INSTALL_PROMPT_TOOLS + ". It installs Flieber, "
                     "helps you sign in and connects itself. It asks before every step."),
@@ -585,6 +593,8 @@ INSTALL = {
                       "Open a new chat and ask: What can Flieber do?"],
     "browser_todo": "",
     "browser_note": "*Subject to the rules of your Claude or ChatGPT plan.",
+    "browser_prompt_h": "Or let Claude or ChatGPT guide you",
+    "browser_prompt_body": "Paste this into a new chat on claude.ai or chatgpt.com. A chat can't add a connector by itself, so it walks you through each step and checks the connection at the end.",
     "before_h2": "Before you start",
     "before": ["A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.",
                "Claude Desktop, Claude Code, Cursor or Muse installed.",

@@ -212,7 +212,7 @@ How you work together:
 - Flieber's AI: Run it on schedule, across Flieber and your connected apps, and stop for approval where you asked it to.
 - Flieber's planners (Managed Services): Help design the workflows that save your team the most time.
 
-## MCP and AI agents: Use Flieber from Claude
+## MCP and AI agents: Use Flieber from your terminal
 
 https://www.flieber.com/mcp (also https://www.flieber.com/install)
 

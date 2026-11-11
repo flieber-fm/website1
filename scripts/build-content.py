@@ -520,20 +520,45 @@ def install_main() -> str:
     soon = '<span class="soon-tag">Coming soon</span>'
     sh, ps1 = X["install"][0][1], X["install"][1][1]
     reg = {l: c for l, c in X["clients"]}
-    # hero: three choices, the prompt first
-    browser_foot = (f'<a class="btn btn-ghost" href="#claude-in-browser">{esc(I["browser_btn"])}</a>' if live else "")
+    # page head: the hosted connector first (Felipe, Nov 11), then the CLI
+    bcmd = {1: ("Connector address", C.HOSTED_MCP_URL), 2: ("OAuth client ID", C.HOSTED_MCP_CLIENT_ID)}
+    blist = "\n".join(f"          <li>{esc(t)}" + (f"\n{cmd_html(*bcmd[i])}" if i in bcmd else "") + "</li>" for i, t in enumerate(I["browser_steps"]))
+    cprompt = (f'<div class="cmd cmd-prompt"><span class="cmd-label">Prompt</span><pre><code>{esc(C.CONNECTOR_PROMPT)}</code></pre>'
+               f'<button class="cmd-copy" type="button" aria-label="Copy the prompt">Copy</button></div>')
     out = f'''
-    <section class="page-head sol-head inst-head" aria-labelledby="page-title">
+    <section class="page-head sol-head inst-head" id="claude-in-browser" aria-labelledby="page-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">{esc(I["browser_tag"])}</span>
+          <h1 class="h1" id="page-title">{esc(I["browser_h"])}</h1>
+          <p class="lead">{esc(I["browser_lead"])}</p>
+        </div>
+        <div class="inst-choices">
+          <article class="inst-card inst-main">
+            <ol class="inst-steps-list">
+{blist}
+            </ol>
+            <p class="inst-note">{esc(I["browser_note"])}</p>
+          </article>
+          <article class="inst-card" id="connector-prompt">
+            <h2 class="h3">{esc(I["browser_prompt_h"])}</h2>
+            <p>{esc(I["browser_prompt_body"])}</p>
+            {cprompt}
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="cli" aria-labelledby="cli-title">
       <div class="wrap">
         <div class="section-head">
           <span class="kicker">{esc(I["kicker"])}</span>
-          <h1 class="h1" id="page-title">{esc(I["h1"])}</h1>
+          <h2 class="h2" id="cli-title" style="margin-top:20px">{esc(I["h1"])}</h2>
           <p class="lead">{esc(I["lead"])}</p>
         </div>
         <div class="inst-choices">
           <article class="inst-card inst-main" id="prompt">
             <p class="hc-tag">{esc(I["prompt_tag"])}</p>
-            <h2 class="h3">{esc(I["prompt_h"])}</h2>
+            <h3 class="h3">{esc(I["prompt_h"])}</h3>
             <p>{esc(I["prompt_body"])}</p>
             {prompt_box()}
             {todo(I["prompt_todo"])}
@@ -541,15 +566,9 @@ def install_main() -> str:
           <div class="inst-side">
             <article class="inst-card">
               <p class="hc-tag">{esc(I["manual_tag"])}</p>
-              <h2 class="h3">{esc(I["manual_h"])}</h2>
+              <h3 class="h3">{esc(I["manual_h"])}</h3>
               <p>{esc(I["manual_body"])}</p>
               <a class="btn btn-ghost" href="#step-1">{esc(I["manual_btn"])} {ARROW}</a>
-            </article>
-            <article class="inst-card">
-              <p class="hc-tag">{esc(I["browser_tag"]) if live else soon}</p>
-              <h2 class="h3">{esc(I["browser_h"])}</h2>
-              <p>{esc(I["browser_body"])}</p>
-              {browser_foot}
             </article>
           </div>
         </div>
@@ -601,12 +620,6 @@ def install_main() -> str:
     safe = "\n".join(f'          <article class="why-card"><p>{esc(s)}</p></article>' for s in I["safe"])
     out += section("built-to-be-safe", "Safety", I["safe_h2"], f'        <div class="why-grid inst-safe">\n{safe}\n        </div>', soft=False)
     rows = "\n".join(f"            <tr><th scope=\"row\">{esc(a)}</th><td>{ticks(b)}</td></tr>" for a, b in I["trouble"])
-    if live:
-        bsteps = I["browser_steps"]
-        bcmd = {1: ("Connector address", C.HOSTED_MCP_URL), 2: ("OAuth client ID", C.HOSTED_MCP_CLIENT_ID)}
-        blist = "\n".join(f"          <li>{esc(t)}" + (f"\n{cmd_html(*bcmd[i])}" if i in bcmd else "") + "</li>" for i, t in enumerate(bsteps))
-        out += section("claude-in-browser", I["browser_tag"], I["browser_h"],
-                       f'        <p class="feat-approval">{esc(I["browser_lead"])}</p>\n        <ol class="inst-steps-list">\n{blist}\n        </ol>\n        <p class="inst-note">{esc(I["browser_note"])}</p>\n        {todo(I["browser_todo"])}', soft=True)
     out += section("troubleshooting", "Help", I["trouble_h2"], f'''        <table class="inst-trouble">
           <thead><tr><th scope="col">What you see</th><th scope="col">What to do</th></tr></thead>
           <tbody>
