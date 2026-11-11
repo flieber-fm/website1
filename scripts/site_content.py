@@ -235,13 +235,15 @@ HOSTED_MCP_URL = "https://mcp.flieber.com/mcp"
 # Public OAuth client ID for the custom connector (Fabricio, Nov 10: Claude asks for it; not a secret)
 HOSTED_MCP_CLIENT_ID = "LK4yVcCMOjgiwSsK"
 # Prompt for a fresh claude.ai or chatgpt.com chat (Felipe, Nov 11). A chat can't change its own settings, so it guides the user
-CONNECTOR_PROMPT = ("Help me add Flieber as a custom connector in this app. You can't change my settings yourself, so guide me "
-                    "one step at a time and wait for me after each step. 1. Open Settings, then Connectors, and add a custom "
-                    "connector. 2. Name it Flieber and use this address: " + HOSTED_MCP_URL + ". 3. If it asks for an OAuth "
-                    "client, choose Use your own OAuth client, enter the client ID " + HOSTED_MCP_CLIENT_ID + " and leave the "
-                    "client secret blank. 4. Connect and sign in with my Flieber account, or create one; on the same page I "
-                    "accept Flieber's terms and the terms of the AI early access. If my plan or workspace doesn't allow custom "
-                    "connectors, tell me. When Flieber is connected, turn it on for this chat and show me what Flieber can do.")
+CONNECTOR_PROMPT = ("Help me connect Flieber to you as an MCP connector. Server address: " + HOSTED_MCP_URL + ". It signs in "
+                    "with OAuth; if an OAuth client ID is needed, use " + HOSTED_MCP_CLIENT_ID + " and leave the client secret "
+                    "blank. If you can add MCP servers yourself, ask me before you change anything, add it and tell me what "
+                    "you did. If you can't, guide me one step at a time and wait for me after each step: open the settings "
+                    "where connectors or MCP servers are added (in Claude and ChatGPT: Settings, then Connectors), add a custom "
+                    "connector named Flieber with the address above, and if it asks for an OAuth client, choose Use your own "
+                    "OAuth client with the client ID above. Then I sign in with my Flieber account, or create one; on the same "
+                    "page I accept Flieber's terms and the terms of the AI early access. If my plan or workspace doesn't allow "
+                    "custom connectors, tell me. When Flieber is connected, show me what Flieber can do.")
 
 CONNECT = [
     ("Free trial", "14 days, no credit card required, on the brand's own data. Native integrations only during the trial; standard setup included. Assisted integrations and simple customizations require a paid plan.", TRIAL),
@@ -582,20 +584,21 @@ INSTALL = {
     "manual_body": "Install Flieber, then try it. Works with any agent: Claude Desktop, Claude Code, Cursor, Muse, Grok Bot and more.",
     "manual_btn": "Start",
     "browser_tag": "Nothing to install",
-    "browser_h": "Use Flieber in Claude/ChatGPT",
-    "browser_body": "Add Flieber as a custom connector and sign in with your Flieber account. Nothing to install.",
+    "browser_h": "Use Flieber in any AI agent",
+    "browser_body": "Add Flieber as a connector in any AI agent that supports MCP and sign in with your Flieber account. Nothing to install.",
     "browser_btn": "Show me how",
-    "browser_lead": "Add Flieber as a custom connector in Claude or ChatGPT, then sign in with your Flieber account.",
-    "browser_steps": ["In Claude or ChatGPT, open Settings and add a custom connector.*",
+    "browser_lead": ("Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. Add "
+                     "Flieber as a connector, then sign in with your Flieber account."),
+    "browser_steps": ["In your AI agent, open the settings where connectors or MCP servers are added and add a custom one (in Claude and ChatGPT: Settings, then Connectors).*",
                       "Name it Flieber and paste this address:",
                       "If it asks for an OAuth client, choose Use your own OAuth client and paste this client ID. Leave the client secret blank.",
                       "Sign in with your Flieber account, or create one. On the same page you accept Flieber's terms and the terms of the AI early access.",
                       "Open a new chat and ask: What can Flieber do?"],
     "browser_todo": "",
-    "browser_note": "*Subject to the rules of your Claude or ChatGPT plan.",
-    "browser_prompt_h": "Let Claude or ChatGPT guide you",
+    "browser_note": "*Subject to the rules of your AI agent's plan.",
+    "browser_prompt_h": "Let your AI agent guide you",
     "browser_self_h": "Or do it yourself",
-    "browser_prompt_body": "Paste this into a new chat on claude.ai or chatgpt.com. A chat can't add a connector by itself, so it walks you through each step and checks the connection at the end.",
+    "browser_prompt_body": "Paste this into a new chat in your agent. Agents that can add MCP servers themselves, such as Claude Code or Codex, connect it after asking you; in Claude, ChatGPT and other chat apps, it walks you through each step.",
     "before_h2": "Before you start",
     "before": ["A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.",
                "Claude Desktop, Claude Code, Cursor or Muse installed.",

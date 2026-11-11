@@ -234,9 +234,9 @@ Prompt: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL ht
    You'll see your Flieber organization listed. Flieber is now connected to your AI tool. Using Claude Desktop? Quit it completely and open it again.
 2. Step 2: Try it: "Which products sold the most units last month?" · "Show me the forecast for my top 10 products for the next 90 days." · "Which of my SKUs are not mapped to a product yet?" · "Help me connect my Shopify store to Flieber."
 
-### Use Flieber in Claude/ChatGPT: live
+### Use Flieber in any AI agent: live
 
-Add Flieber as a custom connector in Claude or ChatGPT, then sign in with your Flieber account. Connector address: https://mcp.flieber.com/mcp. If asked for an OAuth client, use your own OAuth client with client ID LK4yVcCMOjgiwSsK and no client secret.
+Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. Add Flieber as a connector, then sign in with your Flieber account. Connector address: https://mcp.flieber.com/mcp. If asked for an OAuth client, use your own OAuth client with client ID LK4yVcCMOjgiwSsK and no client secret.
 
 ### What Claude can do with Flieber
 
