@@ -1501,6 +1501,20 @@ a.int-tile:hover { border-color: var(--black); }
 .ways-cards .ways-addon { background: var(--gray-light); border-color: var(--line); }
 .ways-cards .ways-addon:hover { border-color: var(--black); }
 .ways-cards .ways-addon .ways-dot { background: var(--gray-dark); box-shadow: none; }
+.inst-stack { margin-top: 32px; display: flex; flex-direction: column; max-width: 980px; }
+.inst-stack > .inst-card { width: 100%; }
+.inst-or { display: flex; align-items: center; gap: 16px; margin: 18px 0; font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+.inst-or::before, .inst-or::after { content: ""; flex: 1; height: 1px; background: var(--line-strong); }
+.inst-manual { gap: 14px; }
+.inst-manual > .inst-check, .inst-manual > .inst-steps { align-self: stretch; }
+.inst-sub { margin: 18px 0 0; font-size: 20px; font-weight: 500; letter-spacing: -0.01em; }
+.inst-manual .inst-steps { margin-top: 24px; }
+.inst-manual .inst-h { font-size: clamp(22px, 2.2vw, 28px); font-weight: 500; letter-spacing: -0.02em; }
+.inst-manual .inst-step > p { color: var(--text-2); }
+.inst-manual .inst-step > p.lead, .inst-manual .inst-step > p.inst-ok { color: var(--black); }
+.inst-or { margin: 22px 0; }
+.inst-or span { padding: 6px 18px; border: 1px solid var(--black); border-radius: 999px; background: var(--yellow); color: var(--black); font-size: 14px; font-weight: 600; letter-spacing: .1em; }
+.inst-or::before, .inst-or::after { background: var(--black); }
 
 </style>
 
@@ -1671,12 +1685,13 @@ a.int-tile:hover { border-color: var(--black); }
           <h1 class="h1" id="page-title">Use Flieber in any AI agent</h1>
           <p class="lead">Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. Add Flieber as a connector, then sign in with your Flieber account.</p>
         </div>
-        <div class="inst-choices">
+        <div class="inst-stack">
           <article class="inst-card inst-main" id="connector-prompt">
             <h2 class="h3">Let your AI agent guide you</h2>
             <p>Paste this into a new chat in your agent. Agents that can add MCP servers themselves, such as Claude Code or Codex, connect it after asking you; in Claude, ChatGPT and other chat apps, it walks you through each step.</p>
             <div class="cmd cmd-prompt"><span class="cmd-label">Prompt</span><pre><code>Help me connect Flieber to you as an MCP connector. Server address: https://mcp.flieber.com/mcp. It signs in with OAuth; if an OAuth client ID is needed, use LK4yVcCMOjgiwSsK and leave the client secret blank. If you can add MCP servers yourself, ask me before you change anything, add it and tell me what you did. If you can’t, guide me one step at a time and wait for me after each step: open the settings where connectors or MCP servers are added (in Claude and ChatGPT: Settings, then Connectors), add a custom connector named Flieber with the address above, and if it asks for an OAuth client, choose Use your own OAuth client with the client ID above. Then I sign in with my Flieber account, or create one; on the same page I accept Flieber’s terms and the terms of the AI early access. If my plan or workspace doesn’t allow custom connectors, tell me. When Flieber is connected, show me what Flieber can do.</code></pre><button class="cmd-copy" type="button" aria-label="Copy the prompt">Copy</button></div>
           </article>
+        <p class="inst-or"><span>or</span></p>
           <article class="inst-card" id="connector-steps">
             <h2 class="h3">Or do it yourself</h2>
             <ol class="inst-steps-list">
@@ -1700,7 +1715,7 @@ a.int-tile:hover { border-color: var(--black); }
           <h2 class="h2" id="cli-title" style="margin-top:20px">Use Flieber from your terminal</h2>
           <p class="lead">Ask about your sales, forecasts and catalog, or set up your Flieber account, in plain language from the AI tool you already use.</p>
         </div>
-        <div class="inst-choices">
+        <div class="inst-stack">
           <article class="inst-card inst-main" id="prompt">
             <p class="hc-tag">One prompt</p>
             <h3 class="h3">Let your AI tool set it up</h3>
@@ -1708,40 +1723,21 @@ a.int-tile:hover { border-color: var(--black); }
             <div class="cmd cmd-prompt"><span class="cmd-label">Prompt</span><pre><code>Install Flieber on this computer. On macOS or Linux, run: c&#117;rl -fsSL https://cli.flieber.com/install.sh | sh. On Windows, run this in PowerShell: irm https://cli.flieber.com/install.ps1 | iex. The installer opens my browser so I can sign in or create my account, then connects Flieber to you. Explain each step in plain language and ask me before you run anything. When it’s done, tell me if I need to restart you.</code></pre><button class="cmd-copy" type="button" aria-label="Copy the prompt">Copy</button></div>
             
           </article>
-          <div class="inst-side">
-            <article class="inst-card">
-              <p class="hc-tag">About 5 minutes</p>
-              <h3 class="h3">Or install it yourself</h3>
-              <p>Install Flieber, then try it. Works with any agent: Claude Desktop, Claude Code, Cursor, Muse, Grok Bot and more.</p>
-              <a class="btn btn-ghost" href="#step-1">Start <span class="arrow" aria-hidden="true">→</span></a>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="before-you-start" aria-labelledby="before-you-start-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Install it yourself</span>
-          <h2 class="h2" id="before-you-start-title" style="margin-top:20px">Before you start</h2>
-        </div>
-        <ul class="inst-check">
-          <li>A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.</li>
-          <li>Claude Desktop, Claude Code, Cursor or Muse installed.</li>
-          <li>A Flieber account. No account yet? The installer helps you create one.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="step-1" aria-labelledby="step-1-title">
-      <div class="wrap">
-        <p class="inst-intro"><span class="hc-tag">Early access</span> Install Flieber, then try it. About 5 minutes.</p>
-      </div>
-      <div class="wrap inst-steps">
-        <div class="inst-step">
-          <h2 class="h2 inst-h" id="step-1-title">Step 1: Install Flieber and sign in</h2>
-          <p class="lead">This installs Flieber on your computer, signs you in and connects Flieber to your AI tool.</p>
+        <p class="inst-or"><span>or</span></p>
+          <article class="inst-card inst-manual" id="install-yourself">
+            <p class="hc-tag">Early access · About 5 minutes</p>
+            <h3 class="h3">Or install it yourself</h3>
+            <p>Install Flieber, then try it. Works with any agent: Claude Desktop, Claude Code, Cursor, Muse, Grok Bot and more.</p>
+            <h4 class="inst-sub" id="before-you-start">Before you start</h4>
+            <ul class="inst-check">
+              <li>A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.</li>
+              <li>An AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse.</li>
+              <li>A Flieber account. No account yet? The installer helps you create one.</li>
+            </ul>
+            <div class="inst-steps">
+              <div class="inst-step" id="step-1">
+                <h4 class="inst-h">Step 1: Install Flieber and sign in</h4>
+                <p class="lead">This installs Flieber on your computer, signs you in and connects Flieber to your AI tool.</p>
         <div class="tabset" data-os-default>
           <div class="tablist" role="tablist"><button class="tab" type="button" role="tab" id="os-tab-windows" aria-controls="os-windows" aria-selected="true" data-os="windows">Windows</button><button class="tab" type="button" role="tab" id="os-tab-mac" aria-controls="os-mac" aria-selected="false" tabindex="-1" data-os="mac">Mac</button><button class="tab" type="button" role="tab" id="os-tab-linux" aria-controls="os-linux" aria-selected="false" tabindex="-1" data-os="linux">Linux</button></div>
           <div class="tabpanel" role="tabpanel" id="os-windows" aria-labelledby="os-tab-windows">
@@ -1763,21 +1759,24 @@ a.int-tile:hover { border-color: var(--black); }
                       <div class="cmd"><span class="cmd-label">Terminal</span><pre><code>c&#117;rl -fsSL https://cli.flieber.com/install.sh | sh</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Terminal command">Copy</button></div>
           </div>
         </div>
-          <p>Your browser opens the Flieber sign-in page. Sign in, or create your account: on the same page you accept Flieber’s terms and the terms of the AI early access. Back in the window, you’ll see your Flieber organizations. No organization yet? The installer offers to create one with you.</p>
-          <p class="inst-ok"><span aria-hidden="true">✓</span> You’ll see your Flieber organization listed. Flieber is now connected to your AI tool.</p>
-          <p class="inst-note">Using Claude Desktop? Quit it completely and open it again.</p>
-          
-          <p class="inst-note">Run the same installer again any time to update Flieber. <a href="https://cli.flieber.com">Review the installer before running it</a></p>
-        </div>
-        <div class="inst-step" id="step-2">
-          <h2 class="h2 inst-h">Step 2: Try it</h2>
-          <p class="lead">Open a new chat in your AI tool and paste a prompt.</p>
-          <ul class="inst-try">
-          <li class="cmd cmd-try"><pre><code>Which products sold the most units last month?</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>
-          <li class="cmd cmd-try"><pre><code>Show me the forecast for my top 10 products for the next 90 days.</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>
-          <li class="cmd cmd-try"><pre><code>Which of my SKUs are not mapped to a product yet?</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>
-          <li class="cmd cmd-try"><pre><code>Help me connect my Shopify store to Flieber.</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>
-          </ul>
+                <p>Your browser opens the Flieber sign-in page. Sign in, or create your account: on the same page you accept Flieber’s terms and the terms of the AI early access. Back in the window, you’ll see your Flieber organizations. No organization yet? The installer offers to create one with you.</p>
+                <p class="inst-ok"><span aria-hidden="true">✓</span> You’ll see your Flieber organization listed. Flieber is now connected to your AI tool.</p>
+                <p class="inst-note">Using Claude Desktop? Quit it completely and open it again.</p>
+                
+                <p class="inst-note">Run the same installer again any time to update Flieber. <a href="https://cli.flieber.com">Review the installer before running it</a></p>
+              </div>
+              <div class="inst-step" id="step-2">
+                <h4 class="inst-h">Step 2: Try it</h4>
+                <p class="lead">Open a new chat in your AI tool and paste a prompt.</p>
+                <ul class="inst-try">
+              <li class="cmd cmd-try"><pre><code>Which products sold the most units last month?</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>
+              <li class="cmd cmd-try"><pre><code>Show me the forecast for my top 10 products for the next 90 days.</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>
+              <li class="cmd cmd-try"><pre><code>Which of my SKUs are not mapped to a product yet?</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>
+              <li class="cmd cmd-try"><pre><code>Help me connect my Shopify store to Flieber.</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>
+                </ul>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>

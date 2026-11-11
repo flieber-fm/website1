@@ -601,7 +601,7 @@ INSTALL = {
     "browser_prompt_body": "Paste this into a new chat in your agent. Agents that can add MCP servers themselves, such as Claude Code or Codex, connect it after asking you; in Claude, ChatGPT and other chat apps, it walks you through each step.",
     "before_h2": "Before you start",
     "before": ["A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.",
-               "Claude Desktop, Claude Code, Cursor or Muse installed.",
+               "An AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse.",
                "A Flieber account. No account yet? The installer helps you create one."],
     "early": "Early access",
     "steps_intro": "Install Flieber, then try it. About 5 minutes.",

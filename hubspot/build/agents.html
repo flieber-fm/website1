@@ -1500,6 +1500,20 @@ a.int-tile:hover { border-color: var(--black); }
 .ways-cards .ways-addon { background: var(--gray-light); border-color: var(--line); }
 .ways-cards .ways-addon:hover { border-color: var(--black); }
 .ways-cards .ways-addon .ways-dot { background: var(--gray-dark); box-shadow: none; }
+.inst-stack { margin-top: 32px; display: flex; flex-direction: column; max-width: 980px; }
+.inst-stack > .inst-card { width: 100%; }
+.inst-or { display: flex; align-items: center; gap: 16px; margin: 18px 0; font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+.inst-or::before, .inst-or::after { content: ""; flex: 1; height: 1px; background: var(--line-strong); }
+.inst-manual { gap: 14px; }
+.inst-manual > .inst-check, .inst-manual > .inst-steps { align-self: stretch; }
+.inst-sub { margin: 18px 0 0; font-size: 20px; font-weight: 500; letter-spacing: -0.01em; }
+.inst-manual .inst-steps { margin-top: 24px; }
+.inst-manual .inst-h { font-size: clamp(22px, 2.2vw, 28px); font-weight: 500; letter-spacing: -0.02em; }
+.inst-manual .inst-step > p { color: var(--text-2); }
+.inst-manual .inst-step > p.lead, .inst-manual .inst-step > p.inst-ok { color: var(--black); }
+.inst-or { margin: 22px 0; }
+.inst-or span { padding: 6px 18px; border: 1px solid var(--black); border-radius: 999px; background: var(--yellow); color: var(--black); font-size: 14px; font-weight: 600; letter-spacing: .1em; }
+.inst-or::before, .inst-or::after { background: var(--black); }
 
 </style>
 

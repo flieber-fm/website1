@@ -525,6 +525,21 @@ def install_main() -> str:
     blist = "\n".join(f"          <li>{esc(t)}" + (f"\n{cmd_html(*bcmd[i])}" if i in bcmd else "") + "</li>" for i, t in enumerate(I["browser_steps"]))
     cprompt = (f'<div class="cmd cmd-prompt"><span class="cmd-label">Prompt</span><pre><code>{esc(C.CONNECTOR_PROMPT)}</code></pre>'
                f'<button class="cmd-copy" type="button" aria-label="Copy the prompt">Copy</button></div>')
+    before = "\n".join(f"              <li>{esc(x)}</li>" for x in I["before"])
+    win = f"""            <p>{esc(I["win_body"])}</p>
+            <p><a class="btn btn-primary" href="{X["bat"]}" download>{esc(I["win_btn"])} {ARROW}</a></p>
+            <p class="inst-note">{esc(I["win_warn"])}</p>
+            {todo(I["win_todo"])}
+            <details class="inst-alt"><summary>{esc(I["win_alt"])}</summary>
+              <p>{esc(I["win_alt_body"])}</p>
+              {cmd_html("PowerShell", ps1)}
+            </details>"""
+    mac = f'            <p>{esc(I["mac_body"])}</p>\n            {cmd_html("Terminal", sh)}'
+    lin = f'            <p>{esc(I["linux_body"])}</p>\n            {cmd_html("Terminal", sh)}'
+    step1 = tabset("os", [("windows", "Windows", win, "windows"), ("mac", "Mac", mac, "mac"), ("linux", "Linux", lin, "linux")], os_default=True)
+    tries = "\n".join(f'              <li class="cmd cmd-try"><pre><code>{esc(q)}</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>' for q in I["prompts"])
+    orline = '        <p class="inst-or"><span>or</span></p>'
+    # Nov 11 (Fabricio): each part is one choice OR the other, stacked; the manual install lives inside its own box
     out = f'''
     <section class="page-head sol-head inst-head" id="claude-in-browser" aria-labelledby="page-title">
       <div class="wrap">
@@ -533,12 +548,13 @@ def install_main() -> str:
           <h1 class="h1" id="page-title">{esc(I["browser_h"])}</h1>
           <p class="lead">{esc(I["browser_lead"])}</p>
         </div>
-        <div class="inst-choices">
+        <div class="inst-stack">
           <article class="inst-card inst-main" id="connector-prompt">
             <h2 class="h3">{esc(I["browser_prompt_h"])}</h2>
             <p>{esc(I["browser_prompt_body"])}</p>
             {cprompt}
           </article>
+{orline}
           <article class="inst-card" id="connector-steps">
             <h2 class="h3">{esc(I["browser_self_h"])}</h2>
             <ol class="inst-steps-list">
@@ -556,7 +572,7 @@ def install_main() -> str:
           <h2 class="h2" id="cli-title" style="margin-top:20px">{esc(I["h1"])}</h2>
           <p class="lead">{esc(I["lead"])}</p>
         </div>
-        <div class="inst-choices">
+        <div class="inst-stack">
           <article class="inst-card inst-main" id="prompt">
             <p class="hc-tag">{esc(I["prompt_tag"])}</p>
             <h3 class="h3">{esc(I["prompt_h"])}</h3>
@@ -564,54 +580,35 @@ def install_main() -> str:
             {prompt_box()}
             {todo(I["prompt_todo"])}
           </article>
-          <div class="inst-side">
-            <article class="inst-card">
-              <p class="hc-tag">{esc(I["manual_tag"])}</p>
-              <h3 class="h3">{esc(I["manual_h"])}</h3>
-              <p>{esc(I["manual_body"])}</p>
-              <a class="btn btn-ghost" href="#step-1">{esc(I["manual_btn"])} {ARROW}</a>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-'''
-    before = "\n".join(f"          <li>{esc(x)}</li>" for x in I["before"])
-    win = f'''            <p>{esc(I["win_body"])}</p>
-            <p><a class="btn btn-primary" href="{X["bat"]}" download>{esc(I["win_btn"])} {ARROW}</a></p>
-            <p class="inst-note">{esc(I["win_warn"])}</p>
-            {todo(I["win_todo"])}
-            <details class="inst-alt"><summary>{esc(I["win_alt"])}</summary>
-              <p>{esc(I["win_alt_body"])}</p>
-              {cmd_html("PowerShell", ps1)}
-            </details>'''
-    mac = f'            <p>{esc(I["mac_body"])}</p>\n            {cmd_html("Terminal", sh)}'
-    lin = f'            <p>{esc(I["linux_body"])}</p>\n            {cmd_html("Terminal", sh)}'
-    step1 = tabset("os", [("windows", "Windows", win, "windows"), ("mac", "Mac", mac, "mac"), ("linux", "Linux", lin, "linux")], os_default=True)
-    tries = "\n".join(f'          <li class="cmd cmd-try"><pre><code>{esc(q)}</code></pre><button class="cmd-copy" type="button" aria-label="Copy this prompt">Copy</button></li>' for q in I["prompts"])
-    out += section("before-you-start", "Install it yourself", I["before_h2"], f'        <ul class="inst-check">\n{before}\n        </ul>', soft=True)
-    out += f'''
-    <section class="section" id="step-1" aria-labelledby="step-1-title">
-      <div class="wrap">
-        <p class="inst-intro"><span class="hc-tag">{esc(I["early"])}</span> {esc(I["steps_intro"])}</p>
-      </div>
-      <div class="wrap inst-steps">
-        <div class="inst-step">
-          <h2 class="h2 inst-h" id="step-1-title">{esc(I["step1_h"])}</h2>
-          <p class="lead">{esc(I["step1_lead"])}</p>
+{orline}
+          <article class="inst-card inst-manual" id="install-yourself">
+            <p class="hc-tag">{esc(I["early"])} · {esc(I["manual_tag"])}</p>
+            <h3 class="h3">{esc(I["manual_h"])}</h3>
+            <p>{esc(I["manual_body"])}</p>
+            <h4 class="inst-sub" id="before-you-start">{esc(I["before_h2"])}</h4>
+            <ul class="inst-check">
+{before}
+            </ul>
+            <div class="inst-steps">
+              <div class="inst-step" id="step-1">
+                <h4 class="inst-h">{esc(I["step1_h"])}</h4>
+                <p class="lead">{esc(I["step1_lead"])}</p>
 {step1}
-          <p>{esc(I["step1_next"])}</p>
-          <p class="inst-ok"><span aria-hidden="true">✓</span> {esc(I["step1_ok"])}</p>
-          <p class="inst-note">{esc(I["step1_restart"])}</p>
-          {todo(I["step1_connect_todo"])}
-          <p class="inst-note">{esc(I["step1_update"])} <a href="{I["review_url"]}">{esc(I["review"])}</a></p>
-        </div>
-        <div class="inst-step" id="step-2">
-          <h2 class="h2 inst-h">{esc(I["step3_h"])}</h2>
-          <p class="lead">{esc(I["step3_lead"])}</p>
-          <ul class="inst-try">
+                <p>{esc(I["step1_next"])}</p>
+                <p class="inst-ok"><span aria-hidden="true">✓</span> {esc(I["step1_ok"])}</p>
+                <p class="inst-note">{esc(I["step1_restart"])}</p>
+                {todo(I["step1_connect_todo"])}
+                <p class="inst-note">{esc(I["step1_update"])} <a href="{I["review_url"]}">{esc(I["review"])}</a></p>
+              </div>
+              <div class="inst-step" id="step-2">
+                <h4 class="inst-h">{esc(I["step3_h"])}</h4>
+                <p class="lead">{esc(I["step3_lead"])}</p>
+                <ul class="inst-try">
 {tries}
-          </ul>
+                </ul>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
