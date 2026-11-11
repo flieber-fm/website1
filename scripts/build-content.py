@@ -534,16 +534,17 @@ def install_main() -> str:
           <p class="lead">{esc(I["browser_lead"])}</p>
         </div>
         <div class="inst-choices">
-          <article class="inst-card inst-main">
+          <article class="inst-card inst-main" id="connector-prompt">
+            <h2 class="h3">{esc(I["browser_prompt_h"])}</h2>
+            <p>{esc(I["browser_prompt_body"])}</p>
+            {cprompt}
+          </article>
+          <article class="inst-card" id="connector-steps">
+            <h2 class="h3">{esc(I["browser_self_h"])}</h2>
             <ol class="inst-steps-list">
 {blist}
             </ol>
             <p class="inst-note">{esc(I["browser_note"])}</p>
-          </article>
-          <article class="inst-card" id="connector-prompt">
-            <h2 class="h3">{esc(I["browser_prompt_h"])}</h2>
-            <p>{esc(I["browser_prompt_body"])}</p>
-            {cprompt}
           </article>
         </div>
       </div>
