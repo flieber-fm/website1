@@ -238,27 +238,27 @@ Prompt: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL ht
 
 Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. The best choice for most people: nothing to install, it works inside the AI apps you already use, and you sign in with your Flieber account. Connector address: https://mcp.flieber.com/mcp. If asked for an OAuth client, use your own OAuth client with client ID LK4yVcCMOjgiwSsK and no client secret.
 
-### What Claude can do with Flieber
+### What your agent can do with Flieber
 
 - Answer questions: Actual sales, sales adjusted for stockouts and price effects, forecasts, 30, 90 and 365-day trends, products, listings and SKU mapping.
 - Set up your account: Create an organization, connect stores (Amazon, eBay, Etsy, Walmart, BigCommerce and Shopify), map SKUs, add inventory locations and go live.
-- Adjust a forecast: Change the forecast for a product in a store for a given month.
+- Operate your inventory: Adjust forecasts, build and edit replenishment plans, add and track inbound shipments, update lead times and prepare Amazon FBA shipments, always with your OK first.
 
 ### Built to be safe
 
-- Claude shows you every change first and waits for your OK before applying it.
-- Going live is permanent, so Claude always asks you to confirm it.
+- Your agent shows you every change first and waits for your OK before applying it.
+- Going live is permanent, so your agent always asks you to confirm it.
 - You sign in on Flieber's own page. You never paste a password or key into a chat.
-- Claude sees only what your Flieber account is allowed to see.
+- Your agent sees only what your Flieber account is allowed to see.
 - Actual sales, adjusted sales and forecasts are kept separate, so numbers are never mixed.
 
 ### If something goes wrong
 
 - Flieber doesn't appear in your AI tool: Quit it completely and open it again. Still missing? Paste `flieber mcp register --client claude-desktop` into Terminal or PowerShell and press Enter (for Claude Code or Cursor, use `claude-code` or `cursor`).
 - “Command not found” after installing: Close the Terminal or PowerShell window, open a new one and try again.
-- Claude says you're not signed in: Paste `flieber login` into Terminal or PowerShell and press Enter.
-- Claude says changes are turned off: Run the installer again. Set Flieber up by hand? See Manual setup in the technical reference.
-- Claude says your plan doesn't include something: Contact your Flieber account team.
+- Your agent says you're not signed in: Paste `flieber login` into Terminal or PowerShell and press Enter.
+- Your agent says changes are turned off: Run the installer again. Set Flieber up by hand? See Manual setup in the technical reference.
+- Your agent says your plan doesn't include something: Contact your Flieber account team.
 - “Your organization is being set up”: Wait a minute or two, then try again. Do not create it a second time.
 - “Too many requests” or a timeout: Wait a moment and ask again, or ask for a shorter date range.
 - Anything else: Contact Flieber support. Never share your sign-in or key.
@@ -273,7 +273,7 @@ Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent tha
 
 **Do I need a Flieber account?** Yes. The installer walks you through creating one. Your free trial starts when you create your account in Flieber.
 
-**Can Claude change things in Flieber?** Only with your OK. Claude shows you every change first and waits for your approval.
+**Can my agent change things in Flieber?** Only with your OK. Your agent shows you every change first and waits for your approval.
 
 **Is my data used to train AI models?** No. Flieber does not train on customer data, and its AI providers are set up not to.
 

@@ -613,7 +613,7 @@ def install_main() -> str:
       </div>
     </section>
 '''
-    out += section("what-claude-can-do", "Capabilities", I["can_h2"],
+    out += section("what-your-agent-can-do", "Capabilities", I["can_h2"],
                    f'        <div class="why-grid">\n{cards(I["can"])}\n        </div>\n        <p class="link-row"><a class="link-arrow" href="../developers/cli/#tools">{esc(I["can_link"])} {ARROW}</a></p>', soft=True)
     safe = "\n".join(f'          <article class="why-card"><p>{esc(s)}</p></article>' for s in I["safe"])
     out += section("built-to-be-safe", "Safety", I["safe_h2"], f'        <div class="why-grid inst-safe">\n{safe}\n        </div>', soft=False)
