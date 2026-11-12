@@ -216,7 +216,7 @@ How you work together:
 
 https://www.flieber.com/mcp (also https://www.flieber.com/install)
 
-Ask about your sales, forecasts and catalog, or set up your Flieber account, in plain language from the AI tool you already use.
+Choose this if you build with AI on your own computer. Flieber becomes a command your agent, your scripts and your scheduled jobs can run, and you can sign in with an API key or on a remote machine. Works with Claude Code, Cursor, Codex, Muse and other agents that run commands.
 
 ### Let your AI tool set it up (easiest)
 
@@ -236,7 +236,7 @@ Prompt: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL ht
 
 ### Use Flieber in any AI agent: live
 
-Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. Add Flieber as a connector, then sign in with your Flieber account. Connector address: https://mcp.flieber.com/mcp. If asked for an OAuth client, use your own OAuth client with client ID LK4yVcCMOjgiwSsK and no client secret.
+Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. The best choice for most people: nothing to install, it works inside the AI apps you already use, and you sign in with your Flieber account. Connector address: https://mcp.flieber.com/mcp. If asked for an OAuth client, use your own OAuth client with client ID LK4yVcCMOjgiwSsK and no client secret.
 
 ### What Claude can do with Flieber
 
@@ -265,7 +265,9 @@ Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent tha
 
 ### Questions
 
-**Which AI tools work with Flieber?** Claude Desktop, Claude Code, Cursor and Muse, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector.
+**Which AI tools work with Flieber?** Any agent that supports MCP, such as Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex and Muse, through the connector. Agents that run commands on your computer, such as Claude Code, Cursor, Codex and Muse, can also use Flieber CLI.
+
+**Should I add the connector or install the CLI?** Both give your agent the same Flieber data and actions. Add the connector if you use Flieber from an AI app such as Claude, ChatGPT or Grok: there is nothing to install. Install the CLI if you build with AI on your own computer and want Flieber as a command your agent, scripts and scheduled jobs can run, or need to sign in with an API key or on a remote machine.
 
 **Do I need to be technical?** No. Paste one prompt into your AI tool and it sets Flieber up for you, or install it yourself with the steps on this page.
 

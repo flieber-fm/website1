@@ -572,8 +572,9 @@ INSTALL = {
     "slug": "install", "name": "Install",
     "kicker": "Or use our CLI tool",
     "h1": "Use Flieber from your terminal",
-    "lead": ("Ask about your sales, forecasts and catalog, or set up your Flieber account, in plain language from the "
-             "AI tool you already use."),
+    "lead": ("Choose this if you build with AI on your own computer. Flieber becomes a command your agent, your scripts "
+             "and your scheduled jobs can run, and you can sign in with an API key or on a remote machine. Works with "
+             "Claude Code, Cursor, Codex, Muse and other agents that run commands."),
     "prompt_tag": "One prompt",
     "prompt_h": "Let your AI tool set it up",
     "prompt_body": ("Copy this prompt and paste it into " + INSTALL_PROMPT_TOOLS + ". It installs Flieber, "
@@ -587,8 +588,9 @@ INSTALL = {
     "browser_h": "Use Flieber in any AI agent",
     "browser_body": "Add Flieber as a connector in any AI agent that supports MCP and sign in with your Flieber account. Nothing to install.",
     "browser_btn": "Show me how",
-    "browser_lead": ("Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. Add "
-                     "Flieber as a connector, then sign in with your Flieber account."),
+    "browser_lead": ("Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. The "
+                     "best choice for most people: nothing to install, it works inside the AI apps you already use, and "
+                     "you sign in with your Flieber account."),
     "browser_steps": ["In your AI agent, open the settings where connectors or MCP servers are added and add a custom one (in Claude and ChatGPT: Settings, then Connectors).*",
                       "Name it Flieber and paste this address:",
                       "If it asks for an OAuth client, choose Use your own OAuth client and paste this client ID. Leave the client secret blank.",
@@ -651,7 +653,8 @@ INSTALL = {
                 ("“Too many requests” or a timeout", "Wait a moment and ask again, or ask for a shorter date range."),
                 ("Anything else", "Contact Flieber support. Never share your sign-in or key.")],
     "faq_h2": "Questions",
-    "faq": [("Which AI tools work with Flieber?", "Claude Desktop, Claude Code, Cursor and Muse, through Flieber CLI. Claude and ChatGPT in the browser, as a custom connector."),
+    "faq": [("Which AI tools work with Flieber?", "Any agent that supports MCP, such as Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex and Muse, through the connector. Agents that run commands on your computer, such as Claude Code, Cursor, Codex and Muse, can also use Flieber CLI."),
+            ("Should I add the connector or install the CLI?", "Both give your agent the same Flieber data and actions. Add the connector if you use Flieber from an AI app such as Claude, ChatGPT or Grok: there is nothing to install. Install the CLI if you build with AI on your own computer and want Flieber as a command your agent, scripts and scheduled jobs can run, or need to sign in with an API key or on a remote machine."),
             ("Do I need to be technical?", "No. Paste one prompt into your AI tool and it sets Flieber up for you, or install it yourself with the steps on this page."),
             ("Do I need a Flieber account?", "Yes. The installer walks you through creating one. Your free trial starts when you create your account in Flieber."),
             ("Can Claude change things in Flieber?", "Only with your OK. Claude shows you every change first and waits for your approval."),
