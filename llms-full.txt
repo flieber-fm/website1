@@ -224,7 +224,7 @@ Copy this prompt and paste it into any AI tool that can run commands on your com
 
 Prompt: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows, run this in PowerShell: irm https://cli.flieber.com/install.ps1 | iex. The installer opens my browser so I can sign in or create my account, then connects Flieber to you. Explain each step in plain language and ask me before you run anything. When it's done, tell me if I need to restart you."
 
-### Or install it yourself (about 5 minutes)
+### Install it yourself (about 5 minutes)
 
 - A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.
 - An AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse.

@@ -239,9 +239,9 @@ CONNECTOR_PROMPT = ("Help me connect Flieber to you as an MCP connector. Server 
                     "with OAuth; if an OAuth client ID is needed, use " + HOSTED_MCP_CLIENT_ID + " and leave the client secret "
                     "blank. If you can add MCP servers yourself, ask me before you change anything, add it and tell me what "
                     "you did. If you can't, guide me one step at a time and wait for me after each step: open the settings "
-                    "where connectors or MCP servers are added (in Claude and ChatGPT: Settings, then Connectors), add a custom "
-                    "connector named Flieber with the address above, and if it asks for an OAuth client, choose Use your own "
-                    "OAuth client with the client ID above. Then I sign in with my Flieber account, or create one; on the same "
+                    "where connectors or MCP servers are added (in Claude and ChatGPT: 'Settings', then 'Connectors'), add a custom "
+                    "connector named 'Flieber' with the address above, and if it asks for an OAuth client, choose 'Use your own "
+                    "OAuth client' with the client ID above. Then I sign in with my Flieber account, or create one; on the same "
                     "page I accept Flieber's terms and the terms of the AI early access. If my plan or workspace doesn't allow "
                     "custom connectors, tell me. When Flieber is connected, show me what Flieber can do.")
 
@@ -570,7 +570,7 @@ INSTALL_PROMPT_TOOLS = "any AI tool that can run commands on your computer, such
 # /install (plain-language install page, from Fabricio's Install Page brief, Oct 19)
 INSTALL = {
     "slug": "install", "name": "Install",
-    "kicker": "Or use our CLI tool",
+    "kicker": "Use our CLI tool instead",
     "h1": "Use Flieber from your terminal",
     "lead": ("Choose this if you build with AI on your own computer. Flieber becomes a command your agent, your scripts "
              "and your scheduled jobs can run, and you can sign in with an API key or on a remote machine. Works with "
@@ -581,7 +581,7 @@ INSTALL = {
                     "helps you sign in and connects itself. It asks before every step."),
     "prompt_todo": "",
     "manual_tag": "About 5 minutes",
-    "manual_h": "Or install it yourself",
+    "manual_h": "Install it yourself",
     "manual_body": "Install Flieber, then try it. Works with any agent: Claude Desktop, Claude Code, Cursor, Muse, Grok Bot and more.",
     "manual_btn": "Start",
     "browser_tag": "Nothing to install",
@@ -591,15 +591,15 @@ INSTALL = {
     "browser_lead": ("Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. The "
                      "best choice for most people: nothing to install, it works inside the AI apps you already use, and "
                      "you sign in with your Flieber account."),
-    "browser_steps": ["In your AI agent, open the settings where connectors or MCP servers are added and add a custom one (in Claude and ChatGPT: Settings, then Connectors).*",
-                      "Name it Flieber and paste this address:",
-                      "If it asks for an OAuth client, choose Use your own OAuth client and paste this client ID. Leave the client secret blank.",
+    "browser_steps": ["In your AI agent, open the settings where connectors or MCP servers are added and add a custom one (in Claude and ChatGPT: 'Settings', then 'Connectors').*",
+                      "Name it 'Flieber' and paste this address:",
+                      "If it asks for an OAuth client, choose 'Use your own OAuth client' and paste the client ID below. Leave the client secret blank.",
                       "Sign in with your Flieber account, or create one. On the same page you accept Flieber's terms and the terms of the AI early access.",
                       "Open a new chat and ask: What can Flieber do?"],
     "browser_todo": "",
     "browser_note": "*Subject to the rules of your AI agent's plan.",
     "browser_prompt_h": "Let your AI agent guide you",
-    "browser_self_h": "Or do it yourself",
+    "browser_self_h": "Do it yourself",
     "browser_prompt_body": "Paste this into a new chat in your agent. Agents that can add MCP servers themselves, such as Claude Code or Codex, connect it after asking you; in Claude, ChatGPT and other chat apps, it walks you through each step.",
     "before_h2": "Before you start",
     "before": ["A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.",
@@ -611,7 +611,7 @@ INSTALL = {
     "step1_lead": "This installs Flieber on your computer, signs you in and connects Flieber to your AI tool.",
     "win_body": "Download the installer, then open the file you downloaded.",
     "win_btn": "Download the installer",
-    "win_warn": "If Windows shows a blue “Windows protected your PC” box, click More info, then Run anyway.",
+    "win_warn": "If Windows shows a blue “Windows protected your PC” box, click 'More info', then 'Run anyway'.",
     "win_todo": "",
     "win_alt": "Prefer PowerShell?",
     "win_alt_body": "Open PowerShell: press the Start key, type PowerShell and press Enter. Paste this command and press Enter.",
