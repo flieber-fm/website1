@@ -1070,7 +1070,7 @@ def work_card(e, p: str) -> str:
             if e["custom"] else "")
     return f'''          <article class="work-card" id="{e["id"]}" data-group="{e["group"]}" data-modules="{" ".join(e["modules"])}">
             <div class="work-top"><span class="n">P{e["n"]}</span><h3 class="h3">{esc(e["title"])}</h3></div>
-            <div class="work-prompt"><p id="{e["id"]}-q">“{esc(e["prompt"])}”</p><button class="work-copy" type="button" data-copy="#{e["id"]}-q">Copy</button></div>
+            <div class="work-prompt"><p id="{e["id"]}-q">{esc(e["prompt"])}</p><button class="work-copy" type="button" data-copy="#{e["id"]}-q">Copy</button></div>
             <dl class="work-dl">
               <div><dt>What Flieber does</dt><dd>{esc(e["does"])}</dd></div>
               <div><dt>What you get</dt><dd>{esc(e["gets"])}</dd></div>
