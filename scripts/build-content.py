@@ -30,7 +30,8 @@ def slug(text: str) -> str:
 
 def esc(text: str) -> str:
     """HTML-escape, then use typographic apostrophes like the rest of the site."""
-    return html.escape(text, quote=False).replace("'", "’")
+    # opening quote after a space, bracket or start ('Settings'); every other ' is an apostrophe or closing quote
+    return re.sub(r"(^|[\s(\[“])'", r"\1‘", html.escape(text, quote=False)).replace("'", "’")
 
 
 def md_bold(text: str) -> str:
