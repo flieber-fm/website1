@@ -1514,6 +1514,11 @@ a.int-tile:hover { border-color: var(--black); }
 .inst-or { margin: 22px 0; }
 .inst-or span { padding: 6px 18px; border: 1px solid var(--black); border-radius: 999px; background: var(--yellow); color: var(--black); font-size: 14px; font-weight: 600; letter-spacing: .1em; }
 .inst-or::before, .inst-or::after { background: var(--black); }
+.doc-connect { display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; padding: 18px 22px; border: 1px solid var(--black); border-radius: var(--radius-l); background: var(--yellow); color: var(--black); text-decoration: none; font-size: 16px; line-height: 1.45; }
+.doc-connect b { font-weight: 600; }
+.doc-connect-cta { font-weight: 600; white-space: nowrap; }
+.doc-connect:hover .doc-connect-cta { text-decoration: underline; }
+.doc-connect { margin-bottom: 36px; }
 
 </style>
 
@@ -1640,6 +1645,7 @@ a.int-tile:hover { border-color: var(--black); }
       </aside>
 
       <article class="doc-body">
+        <a class="doc-connect" href="/mcp"><span><b>Want to use Flieber in your AI agent?</b> Connect it in a few minutes: Claude, ChatGPT, Grok, Claude Code, Codex, Muse or any agent that supports MCP.</span><span class="doc-connect-cta">Connect your agent <span class="arrow" aria-hidden="true">→</span></span></a>
         <h1 class="h1">Flieber, for AI agents</h1>
         <p class="lead">This page is for agents evaluating tools on behalf of a commerce brand. Everything here is also available at <a href="/llms.txt">/llms.txt</a> and <a href="/capabilities.json">/capabilities.json</a>; the full feature list is at <a href="/features">/features</a> and <a href="/llms-full.txt">/llms-full.txt</a>. Last updated <time datetime="2026-10-19">October 19, 2026</time>.</p>
 

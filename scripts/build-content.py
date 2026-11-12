@@ -1407,6 +1407,7 @@ def agents_main() -> str:
       </aside>
 
       <article class="doc-body">
+        <a class="doc-connect" href="../mcp/"><span><b>Want to use Flieber in your AI agent?</b> Connect it in a few minutes: Claude, ChatGPT, Grok, Claude Code, Codex, Muse or any agent that supports MCP.</span><span class="doc-connect-cta">Connect your agent {ARROW}</span></a>
         <h1 class="h1">Flieber, for AI agents</h1>
         <p class="lead">This page is for agents evaluating tools on behalf of a commerce brand. Everything here is also available at <a href="../llms.txt">/llms.txt</a> and <a href="../capabilities.json">/capabilities.json</a>; the full feature list is at <a href="../features/">/features</a> and <a href="../llms-full.txt">/llms-full.txt</a>. Last updated <time datetime="{C.LAST_UPDATED}">{C.LAST_UPDATED_TEXT}</time>.</p>
 
