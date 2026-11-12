@@ -1274,14 +1274,17 @@ def pages_text() -> list:
         L += ["", "How you work together:", "", f"- Your team: {m['team']}", f"- Flieber's AI: {m['ai']}",
               f"- Flieber's planners (Managed Services): {m['planners']}", ""]
     M, I = C.MCP_PAGE, C.INSTALL
-    L += [f"## {M['name']}: {I['h1']}", "", f"{C.SITE}/{M['slug']} (also {C.SITE}/install)", "", I["lead"], "",
-          f"### {I['prompt_h']} (easiest)", "", I["prompt_body"], "", f'Prompt: "{C.INSTALL_PROMPT}"', "",
-          f"### {I['manual_h']} ({I['manual_tag'].lower()})", ""]
+    # same order as the page (Nov 11): the connector first, then the CLI
+    L += [f"## {M['name']}: {I['browser_h']}", "", f"{C.SITE}/{M['slug']} (also {C.SITE}/install)", "", I["browser_lead"], "",
+          f"### {I['browser_prompt_h']}", "", I["browser_prompt_body"], "", f'Prompt: "{C.CONNECTOR_PROMPT}"', "",
+          f"### {I['browser_self_h']}", ""] + [f"{i}. {t}" + (f" `{C.HOSTED_MCP_URL}`" if i == 2 else f" `{C.HOSTED_MCP_CLIENT_ID}`" if i == 3 else "") for i, t in enumerate(I["browser_steps"], 1)] + [I["browser_note"], "",
+          f"### {I['kicker']}: {I['h1']}", "", I["lead"], "",
+          f"#### {I['prompt_h']}", "", I["prompt_body"], "", f'Prompt: "{C.INSTALL_PROMPT}"', "",
+          f"#### {I['manual_h']} ({I['manual_tag'].lower()})", ""]
     L += [f"- {x}" for x in I["before"]]
     L += ["", f"1. {I['step1_h']}: macOS and Linux `{C.CLI['install'][0][1]}`; Windows one click {C.CLI['bat']}, or PowerShell `{C.CLI['install'][1][1]}`. {I['step1_next']}",
           f"   {I['step1_ok']} {I['step1_restart']}",
           f"2. {I['step3_h']}: " + " · ".join(f'"{q}"' for q in I["prompts"]), "",
-          f"### {I['browser_h']}: " + ("live" if C.HOSTED_MCP_LIVE else "coming soon"), "", (I["browser_lead"] + " Connector address: " + C.HOSTED_MCP_URL + ". If asked for an OAuth client, use your own OAuth client with client ID " + C.HOSTED_MCP_CLIENT_ID + " and no client secret.") if C.HOSTED_MCP_LIVE else I["browser_body"], "",
           f"### {I['can_h2']}", ""] + [f"- {a}: {b}" for a, b in I["can"]] + ["", f"### {I['safe_h2']}", ""] + [f"- {x}" for x in I["safe"]]
     L += ["", f"### {I['trouble_h2']}", ""] + [f"- {a}: {b}" for a, b in I["trouble"]] + ["", f"### {I['faq_h2']}", ""]
     for q, a in I["faq"]:

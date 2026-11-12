@@ -212,19 +212,38 @@ How you work together:
 - Flieber's AI: Run it on schedule, across Flieber and your connected apps, and stop for approval where you asked it to.
 - Flieber's planners (Managed Services): Help design the workflows that save your team the most time.
 
-## MCP and AI agents: Use Flieber from your terminal
+## MCP and AI agents: Use Flieber in any AI agent
 
 https://www.flieber.com/mcp (also https://www.flieber.com/install)
 
+Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. The best choice for most people: nothing to install, it works inside the AI apps you already use, and you sign in with your Flieber account.
+
+### Let your AI agent guide you
+
+Paste this into a new chat in your agent. Agents that can add MCP servers themselves, such as Claude Code or Codex, connect it after asking you; in Claude, ChatGPT and other chat apps, it walks you through each step.
+
+Prompt: "Help me connect Flieber to you as an MCP connector. Server address: https://mcp.flieber.com/mcp. It signs in with OAuth; if an OAuth client ID is needed, use LK4yVcCMOjgiwSsK and leave the client secret blank. If you can add MCP servers yourself, ask me before you change anything, add it and tell me what you did. If you can't, guide me one step at a time and wait for me after each step: open the settings where connectors or MCP servers are added (in Claude and ChatGPT: 'Settings', then 'Connectors'), add a custom connector named 'Flieber' with the address above, and if it asks for an OAuth client, choose 'Use your own OAuth client' with the client ID above. Then I sign in with my Flieber account, or create one; on the same page I accept Flieber's terms and the terms of the AI early access. If my plan or workspace doesn't allow custom connectors, tell me. When Flieber is connected, show me what Flieber can do."
+
+### Do it yourself
+
+1. In your AI agent, open the settings where connectors or MCP servers are added and add a custom one (in Claude and ChatGPT: 'Settings', then 'Connectors').*
+2. Name it 'Flieber' and paste this address: `https://mcp.flieber.com/mcp`
+3. If it asks for an OAuth client, choose 'Use your own OAuth client' and paste the client ID below. Leave the client secret blank. `LK4yVcCMOjgiwSsK`
+4. Sign in with your Flieber account, or create one. On the same page you accept Flieber's terms and the terms of the AI early access.
+5. Open a new chat and ask: What can Flieber do?
+*Subject to the rules of your AI agent's plan.
+
+### Use our CLI tool instead: Use Flieber from your terminal
+
 Choose this if you build with AI on your own computer. Flieber becomes a command your agent, your scripts and your scheduled jobs can run, and you can sign in with an API key or on a remote machine. Works with Claude Code, Cursor, Codex, Muse and other agents that run commands.
 
-### Let your AI tool set it up (easiest)
+#### Let your AI tool set it up
 
 Copy this prompt and paste it into any AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself. It asks before every step.
 
 Prompt: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows, run this in PowerShell: irm https://cli.flieber.com/install.ps1 | iex. The installer opens my browser so I can sign in or create my account, then connects Flieber to you. Explain each step in plain language and ask me before you run anything. When it's done, tell me if I need to restart you."
 
-### Install it yourself (about 5 minutes)
+#### Install it yourself (about 5 minutes)
 
 - A Windows, Mac or Linux computer. No admin rights and no Python needed; the installer sets up everything.
 - An AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse.
@@ -233,10 +252,6 @@ Prompt: "Install Flieber on this computer. On macOS or Linux, run: curl -fsSL ht
 1. Step 1: Install Flieber and sign in: macOS and Linux `curl -fsSL https://cli.flieber.com/install.sh | sh`; Windows one click https://cli.flieber.com/flieber-install.bat, or PowerShell `irm https://cli.flieber.com/install.ps1 | iex`. Your browser opens the Flieber sign-in page. Sign in, or create your account: on the same page you accept Flieber's terms and the terms of the AI early access. Back in the window, you'll see your Flieber organizations. No organization yet? The installer offers to create one with you.
    You'll see your Flieber organization listed. Flieber is now connected to your AI tool. Using Claude Desktop? Quit it completely and open it again.
 2. Step 2: Try it: "Which products sold the most units last month?" · "Show me the forecast for my top 10 products for the next 90 days." · "Which of my SKUs are not mapped to a product yet?" · "Help me connect my Shopify store to Flieber."
-
-### Use Flieber in any AI agent: live
-
-Claude, ChatGPT, Grok, Grok Bot, Claude Code, Codex, Muse or any other agent that supports MCP. The best choice for most people: nothing to install, it works inside the AI apps you already use, and you sign in with your Flieber account. Connector address: https://mcp.flieber.com/mcp. If asked for an OAuth client, use your own OAuth client with client ID LK4yVcCMOjgiwSsK and no client secret.
 
 ### What your agent can do with Flieber
 
