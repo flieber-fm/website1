@@ -999,9 +999,9 @@ INTEGRATIONS = [  # slug, name, matches (names in NATIVE / ASSISTED), reads, sen
 MS = {
     "slug": "managed-services", "name": "Managed Services",
     "h1": "Flieber's specialists, alongside your team",
-    "lead": ("Your team plans and decides. Flieber's specialists work alongside it, from a second set of eyes on all your "
-             "data and planning to planning and operations together. Start light and grow from there. Decisions always "
-             "stay with you."),
+    "lead": ("Your team plans and decides. Flieber's specialists work alongside it at the level that fits your operation: "
+             "Lite, a second set of eyes on all your data and planning; Core, working sessions and plans built together; "
+             "Full, operations from purchase orders to the warehouse. Decisions always stay with you."),
     "what_h2": "What Managed Services is",
     "what": ("Managed Services works where planning, operations and technology meet: the decisions your team makes, the "
              "execution that follows and the tools, AI and automation that make both easier. Flieber's specialists don't "
@@ -1011,26 +1011,25 @@ MS = {
     "do": [("A Flieber tool built for you", "A complete Flieber tool, with demand forecast, inventory forecast and replenishment planning, in its own space on Flieber's servers, at its own address (yourbrand.flieber.com), with your logo and colours, tuned to your needs, use cases and preferences."),
            ("Your requests, built in", "What your team needs is built into your tool, instead of becoming a workaround or waiting on a long roadmap."),
            ("Continuous improvement", "Every new case becomes an automation, an alert or a simpler step, and the context gathered over time makes decisions better."),
-           ("A team of specialists", "Planners, data specialists and engineers behind the account people you talk to.")],
-    "plans_h2": "Three levels, one path",
-    "plans_lead": ("Start with Lite, move to Core when it makes sense (we suggest reviewing around month 3) and to Full later "
-                   "if it fits. You can move up at any time."),
+           ("A team of specialists", "Planners, data specialists, operators and engineers behind the account people you talk to.")],
+    "plans_h2": "Three levels of support",
+    "plans_lead": "Choose the level that fits your operation today, and move up whenever you need more.",
     "plans": [
-        {"id": "lite", "step": "Step 1 · Start here", "name": "Lite", "tag": "A second set of eyes on all your data and planning",
+        {"id": "lite", "step": "Level 1", "name": "Lite", "tag": "A second set of eyes on all your data and planning",
          "sub": "You plan, decide and run operations. Our specialists watch everything so nothing slips and you get the full value of Flieber.",
-         "items": [("Keep Flieber right", "Data, SKU mappings, new products set up, stores, lead times, MOQs and settings, always correct."),
+         "items": [("Keep Flieber updated", "Data, SKU mappings, new products set up, stores, lead times, MOQs and settings, always current."),
                    ("Integration issues solved", "Not only flagged: we follow each one until it's fixed."),
                    ("Early flags", "What needs your attention: unmapped SKUs, products to set up, data that looks wrong and decisions only you can make."),
                    ("Forecast drift", "Once forecasts are approved, we review drift closely."),
                    ("Your context in Flieber", "We gather context from your team and documents and add it to Flieber."),
                    ("Regular reviews", "Every two weeks with your team, plus a monthly management meeting.")]},
-        {"id": "core", "step": "Step 2 · When it makes sense", "name": "Core", "tag": "Planning, together", "sub": "Everything in Lite, plus our specialists plan alongside your team:",
+        {"id": "core", "step": "Level 2", "name": "Core", "tag": "Planning, together", "sub": "Everything in Lite, plus our specialists plan alongside your team:",
          "items": [("A weekly working session", "Time every week to plan together."),
                    ("Forecast reviews", "With full, thorough reports."),
                    ("Purchase and replenishment plans", "Built with you, and approved plans turned into purchase-order files."),
                    ("Your S&OP", "Our specialists take part in it."),
                    ("Your call on every plan", "You approve every plan and order, send the orders and run operations.")]},
-        {"id": "full", "step": "Step 3 · Later, if it fits", "name": "Full", "tag": "Planning and operations", "sub": "Everything in Core, plus operational execution:",
+        {"id": "full", "step": "Level 3", "name": "Full", "tag": "Planning and operations", "sub": "Everything in Core, plus operational execution:",
          "items": [("Purchase orders and production", "We place POs and follow up with suppliers until production is done."),
                    ("Freight", "Forwarder quotes and bookings, and following shipments and customs with your forwarder and broker."),
                    ("Logistics to the warehouse", "Following logistics to the warehouse and reconciling received quantities."),
@@ -1055,10 +1054,10 @@ MS = {
     "price_cta": "Talk to a specialist",
     "faq": [("Do your specialists make decisions for us?", "No. Your team makes every decision; our specialists work alongside it with the best data and context. On Full, our team carries out the orders and follow-ups you approve."),
             ("What's the difference between Lite, Core and Full?", "Lite is a second set of eyes on all your data and planning: our specialists watch everything so nothing slips. Core adds planning together: a weekly working session, forecast reviews, purchase and replenishment plans and your S&OP. Full adds operational execution after your approval: purchase orders, supplier follow-up, freight, logistics to the warehouse and workflow automations."),
-            ("Where should we start?", "Most teams start with Lite and move to Core when it makes sense; we suggest reviewing around month 3. Full comes later, if it fits."),
+            ("Which level is right for us?", "Lite if your team runs planning and operations and wants a second set of eyes on everything. Core if you want to plan together with our specialists. Full if you also want support with operations, from purchase orders to the warehouse. Talk to a specialist about what fits your operation."),
             ("Can we move up a level?", "Yes, at any time."),
-            ("Who are Flieber's specialists?", "Planners, data specialists and engineers who master the Flieber platform and draw on experience from more than 1,000 brands since 2019."),
-            ("Who do we work with day to day?", "Dedicated account people, backed by a team of specialists: planners, data specialists and engineers."),
+            ("Who are Flieber's specialists?", "Planners, data specialists, operators and engineers who master the Flieber platform and draw on experience from more than 1,000 brands since 2019."),
+            ("Who do we work with day to day?", "Dedicated account people, backed by a team of specialists: planners, data specialists, operators and engineers."),
             ("What is the Flieber tool built for us?", "A complete Flieber tool, with demand forecast, inventory forecast and replenishment planning, in its own space on Flieber's servers, at its own address (yourbrand.flieber.com), with your logo and colours, tuned to your needs, use cases and preferences. Every level includes it."),
             ("What hours and time zones do your specialists work in?", "As a rule, 8am to 6pm Eastern Time. We can adjust for customers in very different time zones, such as Europe and Australia."),
             ("Which languages do your specialists speak?", "English is the team's main language, and the team includes native speakers of other languages, such as Spanish and Portuguese."),

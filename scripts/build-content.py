@@ -982,7 +982,7 @@ def ms_main() -> str:
 {items}
             </ul>
           </article>''')
-    out += section("plans", "The path", M["plans_h2"], '        <div class="which ms-plans">\n' + "\n".join(plans) + "\n        </div>", soft=True, lead=M["plans_lead"])
+    out += section("plans", "Levels", M["plans_h2"], '        <div class="which ms-plans">\n' + "\n".join(plans) + "\n        </div>", soft=True, lead=M["plans_lead"])
     out += section("why-managed-services", "Outcomes", M["why_h2"], f'        <div class="why-grid mcp-do">\n{cards(M["why"])}\n        </div>', soft=False)
     fit = "\n".join(f'            <li>{esc(x)}</li>' for x in M["for"])
     out += section("who-its-for", "Fit", M["for_h2"], f'        <ul class="ms-for">\n{fit}\n        </ul>', soft=True)
@@ -1556,7 +1556,7 @@ def llms_txt() -> str:
          "## Offers", "",
          "Flieber is one product, offered two ways on the same platform:", "",
          "- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; Flieber shows the price as soon as onboarding is done, before the brand pays anything.",
-         "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialists (planners, data specialists and engineers) working alongside the brand's team; decisions always stay with the brand. Three levels, as a path: Lite (a second set of eyes on all the brand's data and planning), Core (planning together: weekly working session, forecast reviews, purchase and replenishment plans, S&OP) and Full (adds operational execution after approval: purchase orders, supplier follow-up, freight, logistics to the warehouse). Every level includes a Flieber tool built for the brand. Monthly fee by level and platform tier; talk to a specialist. " + C.MANAGED_SERVICES_URL,
+         "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialists (planners, data specialists, operators and engineers) working alongside the brand's team; decisions always stay with the brand. Three levels: Lite (a second set of eyes on all the brand's data and planning), Core (planning together: weekly working session, forecast reviews, purchase and replenishment plans, S&OP) and Full (adds operational execution after approval: purchase orders, supplier follow-up, freight, logistics to the warehouse). Every level includes a Flieber tool built for the brand. Monthly fee by level and platform tier; talk to a specialist. " + C.MANAGED_SERVICES_URL,
          f"- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: {C.SITE}/{C.BWA['slug']}. Start with a 14-day free trial, no credit card required.", "",
          "## Modules", "",
          "One product in five modules. Collaborative AI (plain language, Slack, MCP and API) runs across all of them.", ""] + [
