@@ -9,7 +9,7 @@ Generated from https://www.flieber.com/features and https://www.flieber.com/agen
 Flieber is one product, offered two ways on the same platform:
 
 - Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; Flieber shows the price as soon as onboarding is done, before the brand pays anything.
-- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Two plans: Lite (planning) and Full (planning plus execution of approved orders, supplier follow-up, freight and inbound shipments). Quoted per brand. https://www.flieber.com/managed-services
+- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialists (planners, data specialists and engineers) working alongside the brand's team; decisions always stay with the brand. Three levels, as a path: Lite (a second set of eyes on all the brand's data and planning), Core (planning together: weekly working session, forecast reviews, purchase and replenishment plans, S&OP) and Full (adds operational execution after approval: purchase orders, supplier follow-up, freight, logistics to the warehouse). Every level includes a Flieber tool built for the brand. Monthly fee by level and platform tier; talk to a specialist. https://www.flieber.com/managed-services
 - The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: https://www.flieber.com/customize. Start with a 14-day free trial, no credit card required.
 
 ## Modules
@@ -66,7 +66,7 @@ One page per topic; not a complete list of what Flieber does.
 
 ## Managed Services
 
-- [Managed Services](https://www.flieber.com/managed-services): Running demand and inventory planning in-house takes time, focus and expertise. Managed Services pairs the Flieber platform with a dedicated team of planners who co-lead your planning process with you. Your team keeps the final say on every decision.
+- [Managed Services](https://www.flieber.com/managed-services): Your team plans and decides. Flieber's specialists work alongside it, from a second set of eyes on all your data and planning to planning and operations together. Start light and grow from there. Decisions always stay with you.
 
 ## Who we are
 
@@ -178,7 +178,7 @@ All integrations: https://www.flieber.com/integrations
 ## Pricing and terms
 
 - Flieber Self-Serve: priced to your operation, based on features enabled and data volume; Flieber shows the price as soon as onboarding is done, before the brand pays anything.
-- Flieber Managed Services: quoted per brand, after a conversation with a planner about channels, warehouses and where the process breaks down.
+- Flieber Managed Services: three levels, Lite (a second set of eyes on all your data and planning), Core (planning, together) and Full (planning and operations), billed monthly by level and platform tier; talk to a specialist about what fits.
 - Monthly contracts, no annual commitment.
 - 14-day free trial, no credit card required.
 - Unlimited users on every plan, including the free trial.

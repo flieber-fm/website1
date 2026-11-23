@@ -1520,6 +1520,12 @@ a.int-tile:hover { border-color: var(--black); }
 .doc-connect-cta { font-weight: 600; white-space: nowrap; }
 .doc-connect:hover .doc-connect-cta { text-decoration: underline; }
 .doc-connect { margin-bottom: 36px; }
+.ms-plans { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ms-plans .which-sub { font-size: 15px; font-weight: 400; color: var(--text-2); text-transform: none; letter-spacing: 0; line-height: 1.45; }
+@media (max-width: 960px) { .ms-plans { grid-template-columns: 1fr; } }
+.ms-step { margin: 0 0 6px; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
+.ms-plan#lite { border-color: var(--black); }
+.ms-plan#lite .ms-step { color: var(--black); }
 
 </style>
 

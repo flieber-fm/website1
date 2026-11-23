@@ -969,11 +969,12 @@ def ms_main() -> str:
     tick = '<span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>'
     out = page_head(M["name"], M["h1"], M["lead"], demo_first=True)
     out += section("what-it-is", "Managed Services", M["what_h2"], f'        <p class="feat-approval">{esc(M["what"])}</p>', soft=True)
-    out += section("what-planners-do", "Planners", M["do_h2"], f'        <div class="why-grid mcp-do">\n{cards(M["do"])}\n        </div>', soft=False)
+    out += section("every-level", "Every level", M["do_h2"], f'        <div class="why-grid mcp-do">\n{cards(M["do"])}\n        </div>', soft=False)
     plans = []
     for pl in M["plans"]:
         items = "\n".join(f'              <li>{tick}<p><b>{esc(t)}</b> {esc(d)}</p></li>' for t, d in pl["items"])
         plans.append(f'''          <article class="which-card ms-plan" id="{pl["id"]}" aria-labelledby="plan-{pl["id"]}">
+            <p class="ms-step">{esc(pl.get("step", ""))}</p>
             <h3 class="which-name" id="plan-{pl["id"]}">{esc(pl["name"])}</h3>
             <p class="which-tag">{esc(pl["tag"])}</p>
             <h4 class="which-sub">{esc(pl["sub"])}</h4>
@@ -981,9 +982,7 @@ def ms_main() -> str:
 {items}
             </ul>
           </article>''')
-    out += section("plans", "Scope", M["plans_h2"], '        <div class="which ms-plans">\n' + "\n".join(plans) + f'''
-        </div>
-        <p class="mcp-note">{esc(M["plans_note"])} <a class="link-arrow" href="{p}{C.BWA["slug"]}/#engineers">Customize Flieber {ARROW}</a></p>''', soft=True, lead=M["plans_lead"])
+    out += section("plans", "The path", M["plans_h2"], '        <div class="which ms-plans">\n' + "\n".join(plans) + "\n        </div>", soft=True, lead=M["plans_lead"])
     out += section("why-managed-services", "Outcomes", M["why_h2"], f'        <div class="why-grid mcp-do">\n{cards(M["why"])}\n        </div>', soft=False)
     fit = "\n".join(f'            <li>{esc(x)}</li>' for x in M["for"])
     out += section("who-its-for", "Fit", M["for_h2"], f'        <ul class="ms-for">\n{fit}\n        </ul>', soft=True)
@@ -1043,7 +1042,7 @@ def build_oct3_pages() -> None:
     url = f"{C.SITE}/{M['slug']}"
     service = {"@type": "Service", "@id": url + "#service", "name": "Flieber Managed Services", "url": url,
                "description": M["lead"], "provider": {"@id": ORG["@id"]}}
-    write_page(f"{M['slug']}/index.html", 1, url, f"Managed Services: {M['h1'][0].lower() + M['h1'][1:]} | Flieber", M["lead"],
+    write_page(f"{M['slug']}/index.html", 1, url, f"Managed Services: {M['h1'] if M['h1'].startswith('Flieber') else M['h1'][0].lower() + M['h1'][1:]} | Flieber", M["lead"],
                ld([ORG, webpage(url, M["h1"], M["lead"]), service, faqpage(url, M["faq"])]), ms_main())
     D = C.DEVREF
     url = f"{C.SITE}/{D['slug']}"
@@ -1322,8 +1321,8 @@ def pages_text() -> list:
     L += [f"- {t}: {d}" for t, d in M["do"]]
     L += ["", f"### {M['plans_h2']}", "", M["plans_lead"], ""]
     for pl in M["plans"]:
-        L += [f"**{pl['name']}: {pl['tag']}.** {pl['sub']}:", ""] + [f"- {t}: {d}" for t, d in pl["items"]] + [""]
-    L += [M["plans_note"], "", f"### {M['why_h2']}", ""] + [f"- {t}: {d}" for t, d in M["why"]]
+        L += [f"**{pl['name']}** ({pl['step']}): {pl['tag']}. {pl['sub']}", ""] + [f"- {t}: {d}" for t, d in pl["items"]] + [""]
+    L += [f"### {M['why_h2']}", ""] + [f"- {t}: {d}" for t, d in M["why"]]
     L += ["", f"### {M['for_h2']}", ""] + [f"- {x}" for x in M["for"]]
     L += ["", f"### {M['with_h2']}", "", M["with"], "", f"### {M['price_h2']}", "", M["price"], f"{M['price_cta']}: {C.DEMO}", ""]
     for q, a in M["faq"]:
@@ -1557,7 +1556,7 @@ def llms_txt() -> str:
          "## Offers", "",
          "Flieber is one product, offered two ways on the same platform:", "",
          "- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; Flieber shows the price as soon as onboarding is done, before the brand pays anything.",
-         "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialized planners as a sounding board for decisions, in the brand's S&OP meetings, keeping the data accurate and helping run the planning practice. Two plans: Lite (planning) and Full (planning plus execution of approved orders, supplier follow-up, freight and inbound shipments). Quoted per brand. " + C.MANAGED_SERVICES_URL,
+         "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialists (planners, data specialists and engineers) working alongside the brand's team; decisions always stay with the brand. Three levels, as a path: Lite (a second set of eyes on all the brand's data and planning), Core (planning together: weekly working session, forecast reviews, purchase and replenishment plans, S&OP) and Full (adds operational execution after approval: purchase orders, supplier follow-up, freight, logistics to the warehouse). Every level includes a Flieber tool built for the brand. Monthly fee by level and platform tier; talk to a specialist. " + C.MANAGED_SERVICES_URL,
          f"- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: {C.SITE}/{C.BWA['slug']}. Start with a 14-day free trial, no credit card required.", "",
          "## Modules", "",
          "One product in five modules. Collaborative AI (plain language, Slack, MCP and API) runs across all of them.", ""] + [
@@ -1669,7 +1668,7 @@ def capabilities() -> dict:
             {"name": "Flieber Self-Serve", "delivery": ["app", "mcp", "api"], "price": "Priced to your operation", "best_for": C.RECOMMEND_SELF,
              "options": [{"name": "Data layer only", "delivery": ["mcp", "api"], "url": f"{C.SITE}/{C.BWA['slug']}", "free_trial": "14 days, no credit card required",
                           "best_for": C.RECOMMEND_DATA_LAYER}]},
-            {"name": "Flieber Managed Services", "delivery": ["managed"], "price": "Quoted per brand", "best_for": C.RECOMMEND_MANAGED,
+            {"name": "Flieber Managed Services", "delivery": ["managed"], "price": "Monthly fee by level and platform tier; talk to a specialist", "levels": [{"name": pl["name"], "summary": pl["tag"]} for pl in C.MS["plans"]], "best_for": C.RECOMMEND_MANAGED,
              "plans": [{"name": pl["name"], "scope": pl["tag"], "includes": [t for t, _ in pl["items"]]} for pl in C.MS["plans"]]},
             {"name": "Flieber's engineers (custom builds)", "delivery": ["service"], "price": "Quoted per project",
              "availability": "Qualified accounts", "separate_from": "Flieber Managed Services", "url": f"{C.SITE}/{C.BWA['slug']}#engineers",

@@ -38,7 +38,21 @@
       "delivery": [
         "managed"
       ],
-      "price": "Quoted per brand",
+      "price": "Monthly fee by level and platform tier; talk to a specialist",
+      "levels": [
+        {
+          "name": "Lite",
+          "summary": "A second set of eyes on all your data and planning"
+        },
+        {
+          "name": "Core",
+          "summary": "Planning, together"
+        },
+        {
+          "name": "Full",
+          "summary": "Planning and operations"
+        }
+      ],
       "best_for": [
         "Sells across many channels, warehouses or regions",
         "Runs kits, bundles, backorders, long lead times or high MOQs",
@@ -47,25 +61,36 @@
       "plans": [
         {
           "name": "Lite",
-          "scope": "Planning, co-led with your team",
+          "scope": "A second set of eyes on all your data and planning",
           "includes": [
-            "Configuration and parameters",
-            "Data loading",
-            "Forecast management",
-            "Anomaly detection",
-            "Replenishment recommendations",
-            "Reporting"
+            "Keep Flieber right",
+            "Integration issues solved",
+            "Early flags",
+            "Forecast drift",
+            "Your context in Flieber",
+            "Regular reviews"
+          ]
+        },
+        {
+          "name": "Core",
+          "scope": "Planning, together",
+          "includes": [
+            "A weekly working session",
+            "Forecast reviews",
+            "Purchase and replenishment plans",
+            "Your S&OP",
+            "Your call on every plan"
           ]
         },
         {
           "name": "Full",
-          "scope": "Planning and execution",
+          "scope": "Planning and operations",
           "includes": [
-            "Purchase and transfer orders",
-            "Production management",
-            "Freight management",
-            "Inbound shipments",
-            "Other specific needs"
+            "Purchase orders and production",
+            "Freight",
+            "Logistics to the warehouse",
+            "Workflow automations",
+            "Your call, your terms"
           ]
         }
       ]
