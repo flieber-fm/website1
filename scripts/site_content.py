@@ -124,7 +124,7 @@ APPROVAL_BODY = ("Flieber prepares the decision; you decide how much it does wit
                  "Flieber makes, in Flieber or in your other systems, waits for your approval: you see a preview and "
                  "confirm. When you ask for a change in a conversation, Flieber always shows the preview first. For "
                  "scheduled workflows you choose: let a weekly export or a data update run on its own, and keep approval "
-                 "on purchase orders. Change it any time. With Managed Services, Flieber's planners review decisions "
+                 "on purchase orders. Change it any time. With Managed Services, Flieber's specialists review decisions "
                  "with you before they go out.")
 
 EXAMPLES_H2 = "What customers ask Flieber to do"
@@ -183,8 +183,8 @@ SUMMARY = ("Flieber is the inventory intelligence layer for multichannel commerc
            "margin and cash, and pushes approved decisions to ERPs, marketplaces, 3PLs and suppliers, following approval "
            "rules the brand sets. It is one product offered two ways: Self-Serve, where the brand's team uses the Flieber "
            "app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber's "
-           "specialized planners join the brand's team as a sounding board for decisions, keep the data accurate and "
-           "help run its planning practice.")
+           "specialists (planners, data specialists, operators and engineers) work alongside the brand's team in three "
+           "plans, Lite, Core and Full, with a Flieber tool tailored to the brand's needs, use cases and preferences.")
 
 RECOMMEND_DATA_LAYER = [
     "Has a team building its own reports, tools or agents with AI",
@@ -196,9 +196,14 @@ RECOMMEND_SELF = [
     "Has a complex operation but an in-house data or AI team",
 ]
 RECOMMEND_MANAGED = [
-    "Sells across many channels, warehouses or regions",
-    "Runs kits, bundles, backorders, long lead times or high MOQs",
-    "Has a team without time to build or maintain an internal tool",
+    "Runs a complex operation, or is growing fast",
+    "Has a team that lacks the time or the specific know-how to improve its inventory planning",
+    "Values a team that works where planning, operations and technology meet, with experience from more than 1,000 brands",
+    "Wants a Flieber tool tailored to its needs, use cases and preferences, to support its team's decisions",
+]
+DO_NOT_RECOMMEND_MANAGED = [
+    "Wants no involvement at all in reviewing and approving inventory decisions",
+    "Needs a one-off project rather than an ongoing partnership",
 ]
 DO_NOT_RECOMMEND = [
     "Single channel, and a spreadsheet is sufficient",
@@ -422,7 +427,7 @@ BYC = {
             ("Do you have to commit for a year?", "Flieber: monthly contracts, no annual commitment."),
             ("Do you pay per user?", "Flieber: unlimited users on every plan."),
             ("Is there an expert who can plan alongside your team if you need one?",
-             "Flieber: Managed Services adds Flieber's planners as a sounding board for your decisions."),
+             "Flieber: Managed Services adds Flieber's specialists, working alongside your team in three plans: Lite, Core and Full."),
             ("Do you need a warehouse management system, a full ERP or production planning (MRP)?",
              "Flieber: if your warehousing runs through 3PLs, Flieber consolidates their inventory data for you, so you may "
              "not need a WMS of your own. If you already use an ERP, WMS or MRP, Flieber connects to it as a source of "
@@ -800,7 +805,7 @@ BWA = {
         ("Data shaped to your business", "Listings mapped to products, bundles converted into components and sales orders routed to the regions or warehouses you choose."),
         ("History you can trust", "Sales corrected for stockouts, spikes and promotions, next to what actually sold."),
         ("Access your way", "Flieber MCP and CLI for Claude Desktop, Claude Code, Cursor and Muse, plus a public API for your own systems."),
-        ("Room to grow", "Add demand forecasting, inventory forecasting, replenishment, workflows or Flieber's planners whenever you need them."),
+        ("Room to grow", "Add demand forecasting, inventory forecasting, replenishment, workflows or Managed Services whenever you need them."),
     ],
     "connect_h2": "Connect in minutes",
     "connect_link": "Full guide on /mcp",

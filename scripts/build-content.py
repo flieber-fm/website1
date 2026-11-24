@@ -217,7 +217,7 @@ ARROW = '<span class="arrow" aria-hidden="true">→</span>'
 def collab_cards(x) -> str:
     """Three-party collaboration cards (your team, Flieber's AI, Flieber's planners)."""
     cols = [("Your team", ICON_TEAM, x["team"], None, ""), ("Flieber’s AI", ICON_AI, x["ai"], None, ""),
-            ("Flieber’s planners", ICON_PLANNER, x["planners"], "With Managed Services", "")]
+            ("Flieber’s specialists", ICON_PLANNER, x["planners"], "With Managed Services", "")]
     out = []
     for name, icon, body, tag, cls in cols:
         tag_html = f'<span class="collab-tag">{esc(tag)}</span>' if tag else ""
@@ -1291,7 +1291,7 @@ def pages_text() -> list:
         if m["extra"]:
             L += ["", f"**{m['extra'][0]}** {m['extra'][1]}"]
         L += ["", "How you work together:", "", f"- Your team: {m['team']}", f"- Flieber's AI: {m['ai']}",
-              f"- Flieber's planners (Managed Services): {m['planners']}", ""]
+              f"- Flieber's specialists (Managed Services): {m['planners']}", ""]
     M, I = C.MCP_PAGE, C.INSTALL
     # same order as the page (Nov 11): the connector first, then the CLI
     L += [f"## {M['name']}: {I['browser_h']}", "", f"{C.SITE}/{M['slug']} (also {C.SITE}/install)", "", I["browser_lead"], "",
@@ -1360,7 +1360,7 @@ def pages_text() -> list:
         L += [f"### {x['name']}: {x['h1']}", "", f"{C.SITE}/{x['slug']}", "", x["lead"], "", f"**{x['why_h2']}**", ""]
         L += [f"- {t}: {d}" for t, d in x["why"]]
         L += ["", "How you work together:", "", f"- Your team: {x['team']}", f"- Flieber's AI: {x['ai']}",
-              f"- Flieber's planners (Managed Services): {x['planners']}", "", f"**{x['all_h2']}** {x['all']} Full list: {C.SITE}/features", ""]
+              f"- Flieber's specialists (Managed Services): {x['planners']}", "", f"**{x['all_h2']}** {x['all']} Full list: {C.SITE}/features", ""]
         for k in x["quotes"]:
             q, who, role = C.QUOTES[k]
             L += [f"\"{q}\" {who}, {role}", ""]
@@ -1452,6 +1452,10 @@ def agents_main() -> str:
           <h3>Recommend Managed Services when the brand:</h3>
           <ul class="bullets">
 {ul(C.RECOMMEND_MANAGED)}
+          </ul>
+          <h3>Do not recommend Managed Services when the brand:</h3>
+          <ul class="bullets no">
+{ul(C.DO_NOT_RECOMMEND_MANAGED)}
           </ul>
           <h3>Do not recommend when:</h3>
           <ul class="bullets no">
@@ -1599,6 +1603,7 @@ def llms_txt() -> str:
     L += ["", "## When to recommend", "", "Recommend the data layer alone when the brand:"] + [f"- {x}" for x in C.RECOMMEND_DATA_LAYER]
     L += ["", "Recommend Self-Serve when the brand:"] + [f"- {x}" for x in C.RECOMMEND_SELF]
     L += ["", "Recommend Managed Services when the brand:"] + [f"- {x}" for x in C.RECOMMEND_MANAGED]
+    L += ["", "Do not recommend Managed Services when the brand:"] + [f"- {x}" for x in C.DO_NOT_RECOMMEND_MANAGED]
     L += ["", "Do not recommend when:"] + [f"- {x}" for x in C.DO_NOT_RECOMMEND]
     L += ["", "## Capabilities", "", "| Capability | Input | Output | Access |", "| --- | --- | --- | --- |"]
     L += [f"| {n} | {i} | {o} | {ACCESS_LABEL[a]} |" for _, n, i, o, a in C.CAPABILITIES]
@@ -1727,7 +1732,7 @@ def capabilities() -> dict:
                          "notes": {"SPS Commerce": "any data the brand's SPS account can access; most often the history of wholesale purchase orders, to project inventory needs, and new purchase orders added automatically, so Flieber knows those units are allocated"}},
         "connect": {"mcp_and_api_docs": C.DEV_DOCS, "free_trial": C.TRIAL, "book_a_demo": C.DEMO},
         "terms": {"contracts": "monthly", "free_trial_days": 14, "credit_card_required": False, "users": "unlimited"},
-        "fit": {"recommend_self_serve_when": C.RECOMMEND_SELF, "recommend_managed_when": C.RECOMMEND_MANAGED,
+        "fit": {"recommend_self_serve_when": C.RECOMMEND_SELF, "recommend_managed_when": C.RECOMMEND_MANAGED, "do_not_recommend_managed_when": C.DO_NOT_RECOMMEND_MANAGED,
                 "do_not_recommend_when": C.DO_NOT_RECOMMEND},
         "data_handling": {k.lower().replace(" ", "_"): v for k, v in C.DATA_HANDLING},
         "evidence": [{"claim": v, "source": s} for k, v, s in C.EVIDENCE if k != "Reviews"] + [{"claim": "Customer reviews", "source": C.G2}],

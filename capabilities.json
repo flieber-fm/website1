@@ -1,6 +1,6 @@
 {
   "name": "Flieber",
-  "summary": "Flieber is the inventory intelligence layer for multichannel commerce brands, built for AI agents and the teams who run them: it prepares inventory, purchasing, pricing and allocation decisions, explains the reasoning, and carries them out once the brand's team approves. Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, 3PLs and suppliers, following approval rules the brand sets. It is one product offered two ways: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber's specialized planners join the brand's team as a sounding board for decisions, keep the data accurate and help run its planning practice.",
+  "summary": "Flieber is the inventory intelligence layer for multichannel commerce brands, built for AI agents and the teams who run them: it prepares inventory, purchasing, pricing and allocation decisions, explains the reasoning, and carries them out once the brand's team approves. Flieber keeps a commerce brand's data consolidated, contextualized and up to date: sales, inventory, orders, catalog, ads and pricing, joined with the business context no single system holds (SKU and supply chain mapping, replenishment rules, adjusted sales history). On top of that data it forecasts demand at SKU level, simulates the effect of purchasing, pricing, advertising and allocation decisions on inventory, revenue, margin and cash, and pushes approved decisions to ERPs, marketplaces, 3PLs and suppliers, following approval rules the brand sets. It is one product offered two ways: Self-Serve, where the brand's team uses the Flieber app or connects its own agents and systems through MCP or API; and Managed Services, where Flieber's specialists (planners, data specialists, operators and engineers) work alongside the brand's team in three plans, Lite, Core and Full, with a Flieber tool tailored to the brand's needs, use cases and preferences.",
   "positioning": "The inventory intelligence layer your agents run on",
   "product_model": "one product, offered as Self-Serve or Managed Services",
   "offers": [
@@ -76,9 +76,10 @@
         }
       ],
       "best_for": [
-        "Sells across many channels, warehouses or regions",
-        "Runs kits, bundles, backorders, long lead times or high MOQs",
-        "Has a team without time to build or maintain an internal tool"
+        "Runs a complex operation, or is growing fast",
+        "Has a team that lacks the time or the specific know-how to improve its inventory planning",
+        "Values a team that works where planning, operations and technology meet, with experience from more than 1,000 brands",
+        "Wants a Flieber tool tailored to its needs, use cases and preferences, to support its team's decisions"
       ]
     },
     {
@@ -1378,9 +1379,14 @@
       "Has a complex operation but an in-house data or AI team"
     ],
     "recommend_managed_when": [
-      "Sells across many channels, warehouses or regions",
-      "Runs kits, bundles, backorders, long lead times or high MOQs",
-      "Has a team without time to build or maintain an internal tool"
+      "Runs a complex operation, or is growing fast",
+      "Has a team that lacks the time or the specific know-how to improve its inventory planning",
+      "Values a team that works where planning, operations and technology meet, with experience from more than 1,000 brands",
+      "Wants a Flieber tool tailored to its needs, use cases and preferences, to support its team's decisions"
+    ],
+    "do_not_recommend_managed_when": [
+      "Wants no involvement at all in reviewing and approving inventory decisions",
+      "Needs a one-off project rather than an ongoing partnership"
     ],
     "do_not_recommend_when": [
       "Single channel, and a spreadsheet is sufficient",
