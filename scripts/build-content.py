@@ -971,7 +971,7 @@ def ms_main() -> str:
     # positioning and what every plan includes, in one section (Nov 24)
     out += section("what-it-is", "What you get", M["what_h2"], f'''        <p class="feat-approval">{esc(M["what"])}</p>
         <h3 class="h3 ms-sub" id="every-plan">{esc(M["do_h2"])}</h3>
-        <div class="why-grid mcp-do">
+        <div class="why-grid mcp-do ms-align">
 {cards(M["do"])}
         </div>''', soft=True)
     plans = []
@@ -985,24 +985,24 @@ def ms_main() -> str:
 {items}
             </ul>
           </article>''')
-    out += section("plans", "Plans", M["plans_h2"], '        <div class="which ms-plans">\n' + "\n".join(plans) + "\n        </div>", soft=True, lead=M["plans_lead"])
+    out += section("plans", "Plans", M["plans_h2"], '        <div class="which ms-plans">\n' + "\n".join(plans) + "\n        </div>", soft=False, lead=M["plans_lead"])
     axes = "\n".join(f'''          <article class="why-card ms-axis">
             <span class="n">{esc(t.split(" · ")[0])}</span>
             <h3 class="h3">{esc(t.split(" · ")[1])}</h3>
             <p>{esc(d)}</p>
           </article>''' for t, d in M["axes"])
-    out += section("what-we-bring", "What we bring", M["why_h2"], f'''        <div class="why-grid ms-axes">
+    out += section("what-we-bring", "What we bring", M["why_h2"], f'''        <div class="why-grid ms-axes ms-align">
 {axes}
         </div>
-        <div class="why-grid mcp-do ms-bring">
+        <div class="why-grid mcp-do ms-bring ms-align">
 {cards(M["why"])}
-        </div>''', soft=False, lead=M["why_lead"])
+        </div>''', soft=True, lead=M["why_lead"])
     fit = "\n".join(f'            <li>{esc(x)}</li>' for x in M["for"])
-    out += section("who-its-for", "Fit", M["for_h2"], f'        <ul class="ms-for">\n{fit}\n        </ul>', soft=True, lead=M["for_lead"])
-    out += section("with-flieber", "Built for you", M["with_h2"], f'        <p class="feat-approval">{esc(M["with"])}</p>', soft=False)
+    out += section("who-its-for", "Fit", M["for_h2"], f'        <ul class="ms-for">\n{fit}\n        </ul>', soft=False, lead=M["for_lead"])
+    out += section("with-flieber", "Tailored to you", M["with_h2"], f'        <p class="feat-approval">{esc(M["with"])}</p>', soft=True)
     out += section("pricing", "Pricing", M["price_h2"], f'''        <p class="feat-approval">{esc(M["price"])}</p>
-        <p class="ms-price-cta"><a class="btn btn-dark" href="{C.DEMO}">{esc(M["price_cta"])} {ARROW}</a></p>''', soft=True)
-    out += section("questions", "Questions", "Questions", faq_details(M["faq"]), soft=False)
+        <p class="ms-price-cta"><a class="btn btn-dark" href="{C.DEMO}">{esc(M["price_cta"])} {ARROW}</a></p>''', soft=False)
+    out += section("questions", "Questions", "Questions", faq_details(M["faq"]), soft=True)
     out += closing(h2=M["close_h2"], body="", demo_first=True)
     return out
 
@@ -1569,7 +1569,7 @@ def llms_txt() -> str:
          "## Offers", "",
          "Flieber is one product, offered two ways on the same platform:", "",
          "- Flieber Self-Serve: the Flieber app plus Flieber's data and context modules through MCP and API. Priced to your operation; Flieber shows the price as soon as onboarding is done, before the brand pays anything.",
-         "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialists (planners, data specialists, operators and engineers) working alongside the brand's team; decisions always stay with the brand. Three plans: Lite (a second set of eyes on all the brand's data and planning), Core (planning together: weekly working session, forecast reviews, purchase and replenishment plans, S&OP) and Full (adds operational execution after approval: purchase orders, supplier follow-up, freight, logistics to the warehouse). Every level includes a Flieber tool built for the brand. Monthly fee by plan and platform tier; talk to a specialist. " + C.MANAGED_SERVICES_URL,
+         "- Flieber Managed Services: everything in Self-Serve, plus Flieber's specialists (planners, data specialists, operators and engineers) working alongside the brand's team; decisions always stay with the brand. Three plans: Lite (a second set of eyes on all the brand's data and planning), Core (planning together: weekly working session, forecast reviews, purchase and replenishment plans, S&OP) and Full (adds operational execution after approval: purchase orders, supplier follow-up, freight, logistics to the warehouse). Every plan includes a Flieber tool tailored to the brand's specific needs, use cases and preferences. Monthly fee by plan and platform tier; talk to a specialist. " + C.MANAGED_SERVICES_URL,
          f"- The data layer can also be bought on its own, through MCP and API, for teams building their own tools with AI: {C.SITE}/{C.BWA['slug']}. Start with a 14-day free trial, no credit card required.", "",
          "## Modules", "",
          "One product in five modules. Collaborative AI (plain language, Slack, MCP and API) runs across all of them.", ""] + [

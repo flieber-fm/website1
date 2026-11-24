@@ -1532,6 +1532,16 @@ a.int-tile:hover { border-color: var(--black); }
 .ms-axis .n { font-family: var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--black); background: var(--yellow); border: 1px solid var(--black); border-radius: 4px; padding: 3px 7px; width: max-content; }
 .ms-bring { margin-top: 16px; }
 @media (max-width: 860px) { .ms-axes { grid-template-columns: 1fr; } }
+.ms-plans { grid-template-rows: auto auto auto 1fr; }
+.ms-plans > .ms-plan { display: grid; grid-row: span 4; grid-template-rows: subgrid; align-content: start; }
+.ms-plans > .ms-plan > * { margin-top: 0; margin-bottom: 0; }
+.ms-plans .which-tag { align-self: start; }
+.ms-plans .which-sub { align-self: end; padding-bottom: 4px; }
+.ms-align { grid-template-rows: auto auto 1fr; }
+.ms-align > .why-card { display: grid; grid-row: span 3; grid-template-rows: subgrid; align-content: start; row-gap: 10px; }
+.ms-align > .why-card > * { margin: 0; }
+@media (max-width: 960px) { .ms-plans { grid-template-rows: none; } .ms-plans > .ms-plan { grid-row: auto; grid-template-rows: none; } }
+@media (max-width: 860px) { .ms-align { grid-template-rows: none; } .ms-align > .why-card { grid-row: auto; grid-template-rows: none; } }
 
 </style>
 
