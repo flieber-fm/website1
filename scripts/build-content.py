@@ -969,7 +969,7 @@ def ms_main() -> str:
     tick = '<span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>'
     out = page_head(M["name"], M["h1"], M["lead"], demo_first=True)
     # positioning and what every plan includes, in one section (Nov 24)
-    out += section("what-it-is", "Managed Services", M["what_h2"], f'''        <p class="feat-approval">{esc(M["what"])}</p>
+    out += section("what-it-is", "What you get", M["what_h2"], f'''        <p class="feat-approval">{esc(M["what"])}</p>
         <h3 class="h3 ms-sub" id="every-plan">{esc(M["do_h2"])}</h3>
         <div class="why-grid mcp-do">
 {cards(M["do"])}
