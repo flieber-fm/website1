@@ -1526,6 +1526,12 @@ a.int-tile:hover { border-color: var(--black); }
 .ms-step { margin: 0 0 6px; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
 .ms-plan#lite { border-color: var(--black); }
 .ms-plan#lite .ms-step { color: var(--black); }
+.ms-sub { margin: 40px 0 16px; }
+.ms-axes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ms-axis { border-color: var(--black); }
+.ms-axis .n { font-family: var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--black); background: var(--yellow); border: 1px solid var(--black); border-radius: 4px; padding: 3px 7px; width: max-content; }
+.ms-bring { margin-top: 16px; }
+@media (max-width: 860px) { .ms-axes { grid-template-columns: 1fr; } }
 
 </style>
 
@@ -1547,7 +1553,7 @@ a.int-tile:hover { border-color: var(--black); }
       "@id": "https://www.flieber.com/managed-services",
       "url": "https://www.flieber.com/managed-services",
       "name": "Flieber's specialists, alongside your team",
-      "description": "Your team plans and decides. Flieber's specialists work alongside it at the level that fits your operation: Lite, a second set of eyes on all your data and planning; Core, working sessions and plans built together; Full, operations from purchase orders to the warehouse. Decisions always stay with you.",
+      "description": "Your team plans and decides. Flieber's specialists work alongside it, with the plan that fits your operation: Lite, a second set of eyes on all your data and planning; Core, working sessions and plans built together; Full, operations from purchase orders to the warehouse. All in a Flieber tool built for your brand.",
       "isPartOf": {
         "@type": "WebSite",
         "url": "https://www.flieber.com"
@@ -1558,7 +1564,7 @@ a.int-tile:hover { border-color: var(--black); }
       "@id": "https://www.flieber.com/managed-services#service",
       "name": "Flieber Managed Services",
       "url": "https://www.flieber.com/managed-services",
-      "description": "Your team plans and decides. Flieber's specialists work alongside it at the level that fits your operation: Lite, a second set of eyes on all your data and planning; Core, working sessions and plans built together; Full, operations from purchase orders to the warehouse. Decisions always stay with you.",
+      "description": "Your team plans and decides. Flieber's specialists work alongside it, with the plan that fits your operation: Lite, a second set of eyes on all your data and planning; Core, working sessions and plans built together; Full, operations from purchase orders to the warehouse. All in a Flieber tool built for your brand.",
       "provider": {
         "@id": "https://www.flieber.com/#organization"
       }
@@ -1586,7 +1592,7 @@ a.int-tile:hover { border-color: var(--black); }
         },
         {
           "@type": "Question",
-          "name": "Which level is right for us?",
+          "name": "Which plan is right for us?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Lite if your team runs planning and operations and wants a second set of eyes on everything. Core if you want to plan together with our specialists. Full if you also want support with operations, from purchase orders to the warehouse. Talk to a specialist about what fits your operation."
@@ -1594,7 +1600,7 @@ a.int-tile:hover { border-color: var(--black); }
         },
         {
           "@type": "Question",
-          "name": "Can we move up a level?",
+          "name": "Can we move to a bigger plan later?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes, at any time."
@@ -1621,7 +1627,7 @@ a.int-tile:hover { border-color: var(--black); }
           "name": "What is the Flieber tool built for us?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A complete Flieber tool, with demand forecast, inventory forecast and replenishment planning, in its own space on Flieber's servers, at its own address (yourbrand.flieber.com), with your logo and colours, tuned to your needs, use cases and preferences. Every level includes it."
+            "text": "A complete Flieber tool, with demand forecast, inventory forecast and replenishment planning, in its own space on Flieber's servers, at its own address (yourbrand.flieber.com), with your logo and colours, tuned to your needs, use cases and preferences. Every plan includes it."
           }
         },
         {
@@ -1771,7 +1777,7 @@ a.int-tile:hover { border-color: var(--black); }
         <div class="section-head">
           <span class="kicker">Managed Services</span>
           <h1 class="h1" id="page-title">Flieber’s specialists, alongside your team</h1>
-          <p class="lead">Your team plans and decides. Flieber’s specialists work alongside it at the level that fits your operation: Lite, a second set of eyes on all your data and planning; Core, working sessions and plans built together; Full, operations from purchase orders to the warehouse. Decisions always stay with you.</p>
+          <p class="lead">Your team plans and decides. Flieber’s specialists work alongside it, with the plan that fits your operation: Lite, a second set of eyes on all your data and planning; Core, working sessions and plans built together; Full, operations from purchase orders to the warehouse. All in a Flieber tool built for your brand.</p>
         </div>
         <div class="sol-actions">
           <a class="btn btn-primary" href="https://www.flieber.com/book-a-demo">Book a demo <span class="arrow" aria-hidden="true">→</span></a>
@@ -1786,16 +1792,8 @@ a.int-tile:hover { border-color: var(--black); }
           <span class="kicker">Managed Services</span>
           <h2 class="h2" id="what-it-is-title" style="margin-top:20px">What Managed Services is</h2>
         </div>
-        <p class="feat-approval">Managed Services works where planning, operations and technology meet: the decisions your team makes, the execution that follows and the tools, AI and automation that make both easier. Flieber’s specialists don’t replace your team or redo its work. They make sure nothing slips, bring benchmarks from more than 1,000 brands and turn every new case into an automation, an alert or a simpler step.</p>
-      </div>
-    </section>
-
-    <section class="section" id="every-level" aria-labelledby="every-level-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Every level</span>
-          <h2 class="h2" id="every-level-title" style="margin-top:20px">What every level includes</h2>
-        </div>
+        <p class="feat-approval">Managed Services pairs a Flieber tool built for your brand with a team of Flieber specialists who work alongside yours, where planning, operations and technology meet: the decisions your team makes, the execution that follows and the tools, AI and automation that make both easier.</p>
+        <h3 class="h3 ms-sub" id="every-plan">Every plan includes</h3>
         <div class="why-grid mcp-do">
           <article class="why-card">
             <span class="n">01</span>
@@ -1824,13 +1822,12 @@ a.int-tile:hover { border-color: var(--black); }
     <section class="section section-soft" id="plans" aria-labelledby="plans-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Levels</span>
-          <h2 class="h2" id="plans-title" style="margin-top:20px">Three levels of support</h2>
+          <span class="kicker">Plans</span>
+          <h2 class="h2" id="plans-title" style="margin-top:20px">Three plans</h2>
           <p class="lead">Choose the level that fits your operation today, and move up whenever you need more.</p>
         </div>
         <div class="which ms-plans">
           <article class="which-card ms-plan" id="lite" aria-labelledby="plan-lite">
-            <p class="ms-step">Level 1</p>
             <h3 class="which-name" id="plan-lite">Lite</h3>
             <p class="which-tag">A second set of eyes on all your data and planning</p>
             <h4 class="which-sub">You plan, decide and run operations. Our specialists watch everything so nothing slips and you get the full value of Flieber.</h4>
@@ -1844,7 +1841,6 @@ a.int-tile:hover { border-color: var(--black); }
             </ul>
           </article>
           <article class="which-card ms-plan" id="core" aria-labelledby="plan-core">
-            <p class="ms-step">Level 2</p>
             <h3 class="which-name" id="plan-core">Core</h3>
             <p class="which-tag">Planning, together</p>
             <h4 class="which-sub">Everything in Lite, plus our specialists plan alongside your team:</h4>
@@ -1857,7 +1853,6 @@ a.int-tile:hover { border-color: var(--black); }
             </ul>
           </article>
           <article class="which-card ms-plan" id="full" aria-labelledby="plan-full">
-            <p class="ms-step">Level 3</p>
             <h3 class="which-name" id="plan-full">Full</h3>
             <p class="which-tag">Planning and operations</p>
             <h4 class="which-sub">Everything in Core, plus operational execution:</h4>
@@ -1873,32 +1868,50 @@ a.int-tile:hover { border-color: var(--black); }
       </div>
     </section>
 
-    <section class="section" id="why-managed-services" aria-labelledby="why-managed-services-title">
+    <section class="section" id="what-we-bring" aria-labelledby="what-we-bring-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Outcomes</span>
-          <h2 class="h2" id="why-managed-services-title" style="margin-top:20px">What it changes for your business</h2>
+          <span class="kicker">What we bring</span>
+          <h2 class="h2" id="what-we-bring-title" style="margin-top:20px">Not another pair of hands: the intersection your team doesn’t have</h2>
+          <p class="lead">In most brands, the knowledge behind planning is spread across many people. Managed Services isn’t a team that does the same work in their place. It works alongside yours without adding to its workload: it learns the context behind each person, matches it with what we’ve seen across more than 1,000 brands and turns it into new capabilities and automations in your tool, so the whole operation runs on one picture.</p>
         </div>
-        <div class="why-grid mcp-do">
+        <div class="why-grid ms-axes">
+          <article class="why-card ms-axis">
+            <span class="n">Planning</span>
+            <h3 class="h3">Decisions</h3>
+            <p>Forecasts reviewed against your data and the context behind it, and against how more than 1,000 brands plan. On Core, we build the plans with you.</p>
+          </article>
+          <article class="why-card ms-axis">
+            <span class="n">Operations</span>
+            <h3 class="h3">Execution</h3>
+            <p>We learn how your purchase orders, inbound, warehouses and channels really run, so every plan fits the way you operate. On Full, we also take on that execution with you.</p>
+          </article>
+          <article class="why-card ms-axis">
+            <span class="n">Technology</span>
+            <h3 class="h3">Usability, AI and automation</h3>
+            <p>What we learn becomes part of your tool: automations, alerts, dashboards and simpler steps, so it’s solved once instead of handled every week.</p>
+          </article>
+        </div>
+        <div class="why-grid mcp-do ms-bring">
           <article class="why-card">
             <span class="n">01</span>
-            <h3 class="h3">Sell more</h3>
-            <p>Meet demand without losing revenue to stockouts.</p>
+            <h3 class="h3">A new tool, not more workarounds</h3>
+            <p>We work closely enough with your team to see what you need, often before you ask, and build it into your own tool, based on what has worked across more than 1,000 brands.</p>
           </article>
           <article class="why-card">
             <span class="n">02</span>
-            <h3 class="h3">Free up cash</h3>
-            <p>Avoid tying capital up in inventory you don’t need.</p>
+            <h3 class="h3">What works at other brands</h3>
+            <p>Practices that worked elsewhere come to your operation from day one, and so do the lessons from what didn’t.</p>
           </article>
           <article class="why-card">
             <span class="n">03</span>
-            <h3 class="h3">Protect your margins</h3>
-            <p>Fewer mistakes, lower storage costs and a more efficient operation.</p>
+            <h3 class="h3">Your bridge to AI-first planning</h3>
+            <p>We already plan this way: AI reads your data and documents and spots the risks, and every piece of context we gather makes the next decision better.</p>
           </article>
           <article class="why-card">
             <span class="n">04</span>
-            <h3 class="h3">Give your team time back</h3>
-            <p>Our specialists watch the details and catch issues early, so your team can focus on decisions.</p>
+            <h3 class="h3">One shared picture, knowledge that stays</h3>
+            <p>Forecasts, inbound, purchase orders and reporting come together in one tool the whole team plans from. Every adjustment, decision and reason is kept there, so knowledge doesn’t leave when people change roles.</p>
           </article>
         </div>
       </div>
@@ -1909,13 +1922,13 @@ a.int-tile:hover { border-color: var(--black); }
         <div class="section-head">
           <span class="kicker">Fit</span>
           <h2 class="h2" id="who-its-for-title" style="margin-top:20px">Who it’s for</h2>
+          <p class="lead">Flieber Managed Services is for you if:</p>
         </div>
         <ul class="ms-for">
-            <li>You sell across many channels, warehouses or regions</li>
-            <li>You run kits, bundles, backorders, long lead times or high MOQs</li>
-            <li>Your team doesn’t have the time for the upkeep a planning tool needs, or doesn’t know it needs doing</li>
-            <li>You’re growing fast and want specialist support alongside your team</li>
-            <li>You want to draw on the experience of more than 1,000 other brands since 2019 to grow your business</li>
+            <li>You run a complex brand, or you’re growing fast</li>
+            <li>Your team lacks the time or the specific know-how to take your inventory planning to the next level</li>
+            <li>You see value in a team that works where planning, operations and technology meet, with experience from more than 1,000 brands</li>
+            <li>You want a Flieber tool built for your needs, use cases and preferences, to support your team’s decisions</li>
         </ul>
       </div>
     </section>
@@ -1923,10 +1936,10 @@ a.int-tile:hover { border-color: var(--black); }
     <section class="section" id="with-flieber" aria-labelledby="with-flieber-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">One product</span>
-          <h2 class="h2" id="with-flieber-title" style="margin-top:20px">How it works with the rest of Flieber</h2>
+          <span class="kicker">Built for you</span>
+          <h2 class="h2" id="with-flieber-title" style="margin-top:20px">The same platform, a tool built for you</h2>
         </div>
-        <p class="feat-approval">Managed Services adds to any way you use Flieber: the app, your own agents through MCP or API, or the data layer on its own. Our specialists and your team see the same data and context in real time.</p>
+        <p class="feat-approval">Self-Serve gives every team the same Flieber app. With Managed Services, you get your own Flieber tool on that same platform: its own space and address, your logo and colours, and views, alerts and automations built around your needs, use cases and preferences. It still works with your own agents through MCP or API, and our specialists and your team see the same data and context in real time.</p>
       </div>
     </section>
 
@@ -1957,11 +1970,11 @@ a.int-tile:hover { border-color: var(--black); }
             <p>Lite is a second set of eyes on all your data and planning: our specialists watch everything so nothing slips. Core adds planning together: a weekly working session, forecast reviews, purchase and replenishment plans and your S&amp;OP. Full adds operational execution after your approval: purchase orders, supplier follow-up, freight, logistics to the warehouse and workflow automations.</p>
           </details>
           <details>
-            <summary>Which level is right for us?<span class="plus" aria-hidden="true"></span></summary>
+            <summary>Which plan is right for us?<span class="plus" aria-hidden="true"></span></summary>
             <p>Lite if your team runs planning and operations and wants a second set of eyes on everything. Core if you want to plan together with our specialists. Full if you also want support with operations, from purchase orders to the warehouse. Talk to a specialist about what fits your operation.</p>
           </details>
           <details>
-            <summary>Can we move up a level?<span class="plus" aria-hidden="true"></span></summary>
+            <summary>Can we move to a bigger plan later?<span class="plus" aria-hidden="true"></span></summary>
             <p>Yes, at any time.</p>
           </details>
           <details>
@@ -1974,7 +1987,7 @@ a.int-tile:hover { border-color: var(--black); }
           </details>
           <details>
             <summary>What is the Flieber tool built for us?<span class="plus" aria-hidden="true"></span></summary>
-            <p>A complete Flieber tool, with demand forecast, inventory forecast and replenishment planning, in its own space on Flieber’s servers, at its own address (yourbrand.flieber.com), with your logo and colours, tuned to your needs, use cases and preferences. Every level includes it.</p>
+            <p>A complete Flieber tool, with demand forecast, inventory forecast and replenishment planning, in its own space on Flieber’s servers, at its own address (yourbrand.flieber.com), with your logo and colours, tuned to your needs, use cases and preferences. Every plan includes it.</p>
           </details>
           <details>
             <summary>What hours and time zones do your specialists work in?<span class="plus" aria-hidden="true"></span></summary>

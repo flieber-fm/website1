@@ -265,7 +265,7 @@ ASSISTED = [
 
 PRICING_TERMS = [
     "**Flieber Self-Serve:** priced to your operation, based on features enabled and data volume; Flieber shows the price as soon as onboarding is done, before the brand pays anything.",
-    "**Flieber Managed Services:** three levels, Lite (a second set of eyes on all your data and planning), Core (planning, together) and Full (planning and operations), billed monthly by level and platform tier; talk to a specialist about what fits.",
+    "**Flieber Managed Services:** three plans, Lite (a second set of eyes on all your data and planning), Core (planning, together) and Full (planning and operations), billed monthly by plan and platform tier; talk to a specialist about what fits.",
     "Monthly contracts, no annual commitment.",
     "14-day free trial, no credit card required.",
     "Unlimited users on every plan, including the free trial.",
@@ -999,23 +999,22 @@ INTEGRATIONS = [  # slug, name, matches (names in NATIVE / ASSISTED), reads, sen
 MS = {
     "slug": "managed-services", "name": "Managed Services",
     "h1": "Flieber's specialists, alongside your team",
-    "lead": ("Your team plans and decides. Flieber's specialists work alongside it at the level that fits your operation: "
+    "lead": ("Your team plans and decides. Flieber's specialists work alongside it, with the plan that fits your operation: "
              "Lite, a second set of eyes on all your data and planning; Core, working sessions and plans built together; "
-             "Full, operations from purchase orders to the warehouse. Decisions always stay with you."),
+             "Full, operations from purchase orders to the warehouse. All in a Flieber tool built for your brand."),
     "what_h2": "What Managed Services is",
-    "what": ("Managed Services works where planning, operations and technology meet: the decisions your team makes, the "
-             "execution that follows and the tools, AI and automation that make both easier. Flieber's specialists don't "
-             "replace your team or redo its work. They make sure nothing slips, bring benchmarks from more than 1,000 "
-             "brands and turn every new case into an automation, an alert or a simpler step."),
-    "do_h2": "What every level includes",
+    "what": ("Managed Services pairs a Flieber tool built for your brand with a team of Flieber specialists who work "
+             "alongside yours, where planning, operations and technology meet: the decisions your team makes, the execution "
+             "that follows and the tools, AI and automation that make both easier."),
+    "do_h2": "Every plan includes",
     "do": [("A Flieber tool built for you", "A complete Flieber tool, with demand forecast, inventory forecast and replenishment planning, in its own space on Flieber's servers, at its own address (yourbrand.flieber.com), with your logo and colours, tuned to your needs, use cases and preferences."),
            ("Your requests, built in", "What your team needs is built into your tool, instead of becoming a workaround or waiting on a long roadmap."),
            ("Continuous improvement", "Every new case becomes an automation, an alert or a simpler step, and the context gathered over time makes decisions better."),
            ("A team of specialists", "Planners, data specialists, operators and engineers behind the account people you talk to.")],
-    "plans_h2": "Three levels of support",
+    "plans_h2": "Three plans",
     "plans_lead": "Choose the level that fits your operation today, and move up whenever you need more.",
     "plans": [
-        {"id": "lite", "step": "Level 1", "name": "Lite", "tag": "A second set of eyes on all your data and planning",
+        {"id": "lite", "name": "Lite", "tag": "A second set of eyes on all your data and planning",
          "sub": "You plan, decide and run operations. Our specialists watch everything so nothing slips and you get the full value of Flieber.",
          "items": [("Keep Flieber updated", "Data, SKU mappings, new products set up, stores, lead times, MOQs and settings, always current."),
                    ("Integration issues solved", "Not only flagged: we follow each one until it's fixed."),
@@ -1023,42 +1022,52 @@ MS = {
                    ("Forecast drift", "Once forecasts are approved, we review drift closely."),
                    ("Your context in Flieber", "We gather context from your team and documents and add it to Flieber."),
                    ("Regular reviews", "Every two weeks with your team, plus a monthly management meeting.")]},
-        {"id": "core", "step": "Level 2", "name": "Core", "tag": "Planning, together", "sub": "Everything in Lite, plus our specialists plan alongside your team:",
+        {"id": "core", "name": "Core", "tag": "Planning, together", "sub": "Everything in Lite, plus our specialists plan alongside your team:",
          "items": [("A weekly working session", "Time every week to plan together."),
                    ("Forecast reviews", "With full, thorough reports."),
                    ("Purchase and replenishment plans", "Built with you, and approved plans turned into purchase-order files."),
                    ("Your S&OP", "Our specialists take part in it."),
                    ("Your call on every plan", "You approve every plan and order, send the orders and run operations.")]},
-        {"id": "full", "step": "Level 3", "name": "Full", "tag": "Planning and operations", "sub": "Everything in Core, plus operational execution:",
+        {"id": "full", "name": "Full", "tag": "Planning and operations", "sub": "Everything in Core, plus operational execution:",
          "items": [("Purchase orders and production", "We place POs and follow up with suppliers until production is done."),
                    ("Freight", "Forwarder quotes and bookings, and following shipments and customs with your forwarder and broker."),
                    ("Logistics to the warehouse", "Following logistics to the warehouse and reconciling received quantities."),
                    ("Workflow automations", "Automations for execution."),
                    ("Your call, your terms", "You still approve every plan and order and keep supplier terms, payments and budget.")]},
     ],
-    "why_h2": "What it changes for your business",
-    "why": [("Sell more", "Meet demand without losing revenue to stockouts."),
-            ("Free up cash", "Avoid tying capital up in inventory you don't need."),
-            ("Protect your margins", "Fewer mistakes, lower storage costs and a more efficient operation."),
-            ("Give your team time back", "Our specialists watch the details and catch issues early, so your team can focus on decisions.")],
+    "why_h2": "Not another pair of hands: the intersection your team doesn't have",
+    "why_lead": ("In most brands, the knowledge behind planning is spread across many people. Managed Services isn't a team that "
+                 "does the same work in their place. It works alongside yours without adding to its workload: it learns the "
+                 "context behind each person, matches it with what we've seen across more than 1,000 brands and turns it into "
+                 "new capabilities and automations in your tool, so the whole operation runs on one picture."),
+    "axes": [("Planning · Decisions", "Forecasts reviewed against your data and the context behind it, and against how more than 1,000 brands plan. On Core, we build the plans with you."),
+             ("Operations · Execution", "We learn how your purchase orders, inbound, warehouses and channels really run, so every plan fits the way you operate. On Full, we also take on that execution with you."),
+             ("Technology · Usability, AI and automation", "What we learn becomes part of your tool: automations, alerts, dashboards and simpler steps, so it's solved once instead of handled every week.")],
+    "why": [("A new tool, not more workarounds", "We work closely enough with your team to see what you need, often before you ask, and build it into your own tool, based on what has worked across more than 1,000 brands."),
+            ("What works at other brands", "Practices that worked elsewhere come to your operation from day one, and so do the lessons from what didn't."),
+            ("Your bridge to AI-first planning", "We already plan this way: AI reads your data and documents and spots the risks, and every piece of context we gather makes the next decision better."),
+            ("One shared picture, knowledge that stays", "Forecasts, inbound, purchase orders and reporting come together in one tool the whole team plans from. Every adjustment, decision and reason is kept there, so knowledge doesn't leave when people change roles.")],
     "for_h2": "Who it's for",
-    "for": ["You sell across many channels, warehouses or regions", "You run kits, bundles, backorders, long lead times or high MOQs",
-            "Your team doesn't have the time for the upkeep a planning tool needs, or doesn't know it needs doing",
-            "You're growing fast and want specialist support alongside your team",
-            "You want to draw on the experience of more than 1,000 other brands since 2019 to grow your business"],
-    "with_h2": "How it works with the rest of Flieber",
-    "with": ("Managed Services adds to any way you use Flieber: the app, your own agents through MCP or API, or the data "
-             "layer on its own. Our specialists and your team see the same data and context in real time."),
+    "for_lead": "Flieber Managed Services is for you if:",
+    "for": ["You run a complex brand, or you're growing fast",
+            "Your team lacks the time or the specific know-how to take your inventory planning to the next level",
+            "You see value in a team that works where planning, operations and technology meet, with experience from more than 1,000 brands",
+            "You want a Flieber tool built for your needs, use cases and preferences, to support your team's decisions"],
+    "with_h2": "The same platform, a tool built for you",
+    "with": ("Self-Serve gives every team the same Flieber app. With Managed Services, you get your own Flieber tool on that "
+             "same platform: its own space and address, your logo and colours, and views, alerts and automations built around "
+             "your needs, use cases and preferences. It still works with your own agents through MCP or API, and our "
+             "specialists and your team see the same data and context in real time."),
     "price_h2": "Pricing", "price": ("A monthly fee that depends on the level you choose and your platform tier. Talk to a specialist about "
                                      "what fits your operation."),
     "price_cta": "Talk to a specialist",
     "faq": [("Do your specialists make decisions for us?", "No. Your team makes every decision; our specialists work alongside it with the best data and context. On Full, our team carries out the orders and follow-ups you approve."),
             ("What's the difference between Lite, Core and Full?", "Lite is a second set of eyes on all your data and planning: our specialists watch everything so nothing slips. Core adds planning together: a weekly working session, forecast reviews, purchase and replenishment plans and your S&OP. Full adds operational execution after your approval: purchase orders, supplier follow-up, freight, logistics to the warehouse and workflow automations."),
-            ("Which level is right for us?", "Lite if your team runs planning and operations and wants a second set of eyes on everything. Core if you want to plan together with our specialists. Full if you also want support with operations, from purchase orders to the warehouse. Talk to a specialist about what fits your operation."),
-            ("Can we move up a level?", "Yes, at any time."),
+            ("Which plan is right for us?", "Lite if your team runs planning and operations and wants a second set of eyes on everything. Core if you want to plan together with our specialists. Full if you also want support with operations, from purchase orders to the warehouse. Talk to a specialist about what fits your operation."),
+            ("Can we move to a bigger plan later?", "Yes, at any time."),
             ("Who are Flieber's specialists?", "Planners, data specialists, operators and engineers who master the Flieber platform and draw on experience from more than 1,000 brands since 2019."),
             ("Who do we work with day to day?", "Dedicated account people, backed by a team of specialists: planners, data specialists, operators and engineers."),
-            ("What is the Flieber tool built for us?", "A complete Flieber tool, with demand forecast, inventory forecast and replenishment planning, in its own space on Flieber's servers, at its own address (yourbrand.flieber.com), with your logo and colours, tuned to your needs, use cases and preferences. Every level includes it."),
+            ("What is the Flieber tool built for us?", "A complete Flieber tool, with demand forecast, inventory forecast and replenishment planning, in its own space on Flieber's servers, at its own address (yourbrand.flieber.com), with your logo and colours, tuned to your needs, use cases and preferences. Every plan includes it."),
             ("What hours and time zones do your specialists work in?", "As a rule, 8am to 6pm Eastern Time. We can adjust for customers in very different time zones, such as Europe and Australia."),
             ("Which languages do your specialists speak?", "English is the team's main language, and the team includes native speakers of other languages, such as Spanish and Portuguese."),
             ("What access do your specialists have to our data and systems?", "The access you choose to give them. At a minimum, they have full access to the data in your Flieber account. The more context you share from outside Flieber, the better their work."),

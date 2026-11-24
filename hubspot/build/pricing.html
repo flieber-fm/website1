@@ -1526,6 +1526,12 @@ a.int-tile:hover { border-color: var(--black); }
 .ms-step { margin: 0 0 6px; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
 .ms-plan#lite { border-color: var(--black); }
 .ms-plan#lite .ms-step { color: var(--black); }
+.ms-sub { margin: 40px 0 16px; }
+.ms-axes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ms-axis { border-color: var(--black); }
+.ms-axis .n { font-family: var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--black); background: var(--yellow); border: 1px solid var(--black); border-radius: 4px; padding: 3px 7px; width: max-content; }
+.ms-bring { margin-top: 16px; }
+@media (max-width: 860px) { .ms-axes { grid-template-columns: 1fr; } }
 
 </style>
 
@@ -1635,7 +1641,7 @@ a.int-tile:hover { border-color: var(--black); }
         <div class="section-head">
           <span class="kicker">Pricing</span>
           <h1 class="h1" id="pricing-title">Pay for the complexity you actually run</h1>
-          <p class="lead">Two ways to work with Flieber, on the same platform. Self-Serve scales with the features you enable and your data volume. Managed Services adds Flieber’s specialists alongside your team, in three levels.</p>
+          <p class="lead">Two ways to work with Flieber, on the same platform. Self-Serve scales with the features you enable and your data volume. Managed Services adds Flieber’s specialists alongside your team, in three plans.</p>
           <ul class="under-doors">
             <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Free trial</li>
             <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Monthly contracts, no annual commitment</li>
@@ -1671,15 +1677,15 @@ a.int-tile:hover { border-color: var(--black); }
             <p class="which-tag">Flieber’s specialists, alongside your team</p>
             <div class="plan-price">
               <p class="plan-amount">Lite, Core or Full</p>
-              <p class="plan-basis">A monthly fee by level and platform tier. Talk to a specialist about what fits your operation.</p>
+              <p class="plan-basis">A monthly fee by plan and platform tier. Talk to a specialist about what fits your operation.</p>
             </div>
             <h3 class="which-sub">What you get</h3>
             <ul class="which-list">
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Three levels of support: choose the one that fits your operation and move up whenever you need more</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Three plans: choose the one that fits your operation and move to a bigger plan whenever you need more</li>
               <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span><span><a href="/managed-services#lite">Lite</a>: a second set of eyes on all your data and planning</span></li>
               <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span><span><a href="/managed-services#core">Core</a>: planning, together, with a weekly working session and your S&amp;OP</span></li>
               <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span><span><a href="/managed-services#full">Full</a>: planning and operations, from purchase orders to the warehouse</span></li>
-              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Every level includes a Flieber tool built for you, on the same platform as Self-Serve</li>
+              <li><span class="ico" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#1B1C1C" stroke-width="1.6"/></svg></span>Every plan includes a Flieber tool built for you, on the same platform as Self-Serve</li>
             </ul>
             <div class="which-foot">
               <a class="btn btn-dark" href="https://www.flieber.com/book-a-demo">Book a demo <span class="arrow" aria-hidden="true">→</span></a>
@@ -1709,7 +1715,7 @@ a.int-tile:hover { border-color: var(--black); }
           <div class="pillar">
             <span class="num"><i aria-hidden="true"></i>02</span>
             <h3>We price</h3>
-            <p>Self-Serve is priced on the features you enable and your data volume. Managed Services is a monthly fee by level and platform tier.</p>
+            <p>Self-Serve is priced on the features you enable and your data volume. Managed Services is a monthly fee by plan and platform tier.</p>
           </div>
           <div class="pillar">
             <span class="num"><i aria-hidden="true"></i>03</span>
@@ -1850,7 +1856,7 @@ a.int-tile:hover { border-color: var(--black); }
           </details>
           <details>
             <summary>How does pricing work?<span class="plus" aria-hidden="true"></span></summary>
-            <p>Flieber Self-Serve is priced on the features you enable and your data volume. Flieber shows your price as soon as onboarding is done, before you pay anything. Flieber Managed Services is a monthly fee by level and platform tier; talk to a specialist about what fits.</p>
+            <p>Flieber Self-Serve is priced on the features you enable and your data volume. Flieber shows your price as soon as onboarding is done, before you pay anything. Flieber Managed Services is a monthly fee by plan and platform tier; talk to a specialist about what fits.</p>
           </details>
           <details>
             <summary>How many users can I add?<span class="plus" aria-hidden="true"></span></summary>

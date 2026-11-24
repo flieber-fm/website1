@@ -1526,6 +1526,12 @@ a.int-tile:hover { border-color: var(--black); }
 .ms-step { margin: 0 0 6px; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
 .ms-plan#lite { border-color: var(--black); }
 .ms-plan#lite .ms-step { color: var(--black); }
+.ms-sub { margin: 40px 0 16px; }
+.ms-axes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ms-axis { border-color: var(--black); }
+.ms-axis .n { font-family: var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--black); background: var(--yellow); border: 1px solid var(--black); border-radius: 4px; padding: 3px 7px; width: max-content; }
+.ms-bring { margin-top: 16px; }
+@media (max-width: 860px) { .ms-axes { grid-template-columns: 1fr; } }
 
 </style>
 
