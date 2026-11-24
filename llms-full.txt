@@ -879,7 +879,7 @@ Self-Serve gives every team the same Flieber app. With Managed Services, you get
 
 ### Pricing
 
-A monthly fee that depends on the level you choose and your platform tier. Talk to a specialist about what fits your operation.
+A monthly fee that depends on the plan you choose and your platform tier. Talk to a specialist about what fits your operation.
 Talk to a specialist: https://www.flieber.com/book-a-demo
 
 **Do your specialists make decisions for us?** No. Your team makes every decision; our specialists work alongside it with the best data and context. On Full, our team carries out the orders and follow-ups you approve.

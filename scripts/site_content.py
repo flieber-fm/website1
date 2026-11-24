@@ -1064,7 +1064,7 @@ MS = {
              "same platform: its own space and address, your logo and colours, and views, alerts and automations built around "
              "your needs, use cases and preferences. It still works with your own agents through MCP or API, and our "
              "specialists and your team see the same data and context in real time."),
-    "price_h2": "Pricing", "price": ("A monthly fee that depends on the level you choose and your platform tier. Talk to a specialist about "
+    "price_h2": "Pricing", "price": ("A monthly fee that depends on the plan you choose and your platform tier. Talk to a specialist about "
                                      "what fits your operation."),
     "price_cta": "Talk to a specialist",
     "faq": [("Do your specialists make decisions for us?", "No. Your team makes every decision; our specialists work alongside it with the best data and context. On Full, our team carries out the orders and follow-ups you approve."),
