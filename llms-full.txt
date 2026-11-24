@@ -867,6 +867,12 @@ Flieber Managed Services is for you if:
 - You see value in a team that works where planning, operations and technology meet, with experience from more than 1,000 brands
 - You want a Flieber tool tailored to your specific needs, use cases and preferences, to support your team's decisions
 
+It's not for you if:
+- Your operation is simple, a single channel and a small catalog, and a spreadsheet does the job. Managed Services would be overkill.
+- You don't want to dedicate any time to reviewing and approving inventory decisions. Hire an internal employee.
+- You're looking for custom software built from scratch. Contract a software house to build your own tool.
+- You need a one-off project rather than an ongoing partnership. Hire a temporary consultant.
+
 ### The same platform, tailored to you
 
 Self-Serve gives every team the same Flieber app. With Managed Services, you get your own Flieber tool on that same platform: its own space and address, your logo and colours, and views, alerts and automations built around your needs, use cases and preferences. It still works with your own agents through MCP or API, and our specialists and your team see the same data and context in real time.

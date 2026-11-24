@@ -998,7 +998,14 @@ def ms_main() -> str:
 {cards(M["why"])}
         </div>''', soft=True, lead=M["why_lead"])
     fit = "\n".join(f'            <li>{esc(x)}</li>' for x in M["for"])
-    out += section("who-its-for", "Fit", M["for_h2"], f'        <ul class="ms-for">\n{fit}\n        </ul>', soft=False, lead=M["for_lead"])
+    notfit = "\n".join(f'            <li><span>{esc(a)}. <span class="ms-not-alt">{esc(b)}</span></span></li>' for a, b in M["not"])
+    out += section("who-its-for", "Fit", M["for_h2"], f'''        <ul class="ms-for">
+{fit}
+        </ul>
+        <h3 class="ms-not-h">{esc(M["not_h3"])}</h3>
+        <ul class="ms-not">
+{notfit}
+        </ul>''', soft=False, lead=M["for_lead"])
     out += section("with-flieber", "Tailored to you", M["with_h2"], f'        <p class="feat-approval">{esc(M["with"])}</p>', soft=True)
     out += section("pricing", "Pricing", M["price_h2"], f'''        <p class="feat-approval">{esc(M["price"])}</p>
         <p class="ms-price-cta"><a class="btn btn-dark" href="{C.DEMO}">{esc(M["price_cta"])} {ARROW}</a></p>''', soft=False)
@@ -1336,7 +1343,7 @@ def pages_text() -> list:
     for pl in M["plans"]:
         L += [f"**{pl['name']}**: {pl['tag']}. {pl['sub']}", ""] + [f"- {t}: {d}" for t, d in pl["items"]] + [""]
     L += [f"### {M['why_h2']}", "", M["why_lead"], ""] + [f"- {t}: {d}" for t, d in M["axes"]] + [""] + [f"- {t}: {d}" for t, d in M["why"]]
-    L += ["", f"### {M['for_h2']}", "", M["for_lead"]] + [f"- {x}" for x in M["for"]]
+    L += ["", f"### {M['for_h2']}", "", M["for_lead"]] + [f"- {x}" for x in M["for"]] + ["", M["not_h3"]] + [f"- {a}. {b}" for a, b in M["not"]]
     L += ["", f"### {M['with_h2']}", "", M["with"], "", f"### {M['price_h2']}", "", M["price"], f"{M['price_cta']}: {C.DEMO}", ""]
     for q, a in M["faq"]:
         L += [f"**{q}** {a}", ""]

@@ -1054,6 +1054,11 @@ MS = {
             "Your team lacks the time or the specific know-how to take your inventory planning to the next level",
             "You see value in a team that works where planning, operations and technology meet, with experience from more than 1,000 brands",
             "You want a Flieber tool tailored to your specific needs, use cases and preferences, to support your team's decisions"],
+    "not_h3": "It's not for you if:",
+    "not": [("Your operation is simple, a single channel and a small catalog, and a spreadsheet does the job", "Managed Services would be overkill."),
+            ("You don't want to dedicate any time to reviewing and approving inventory decisions", "Hire an internal employee."),
+            ("You're looking for custom software built from scratch", "Contract a software house to build your own tool."),
+            ("You need a one-off project rather than an ongoing partnership", "Hire a temporary consultant.")],
     "with_h2": "The same platform, tailored to you",
     "with": ("Self-Serve gives every team the same Flieber app. With Managed Services, you get your own Flieber tool on that "
              "same platform: its own space and address, your logo and colours, and views, alerts and automations built around "
