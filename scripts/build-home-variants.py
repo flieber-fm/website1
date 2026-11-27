@@ -96,10 +96,10 @@ VARIANTS = [
      "sub": ("Frozen copy of the main page with the two-step layout: Data layer or Full platform, then Customization and Managed "
              "as separate rows; before the add-ons moved inside each card and the section title was removed.")},
     {"name": "Positioning, Nov 27 brief (proposal)", "file": "scripts/home-snapshots/2026-11-27-positioning.html", "no_tail": True,
-     "eyebrow": "Proposal on the Nov 27, 2026 positioning brief: one product, the team inside the copy, Self-Serve as the second path",
-     "h1": "Bring AI into your operation. Keep your team",
-     "sub": ("Flieber builds a planning system around how your brand runs, and operates it with a team that works alongside yours. "
-             "Built with scripts/build-positioning-variant.py; hero video, customer logos and the Self-Serve page are placeholders.")},
+     "eyebrow": "Proposal on the Nov 27, 2026 positioning brief (revised): one product, specialists inside the copy, Self-Serve as the second path",
+     "h1": "If your team is buried in spreadsheets, who’s planning what’s next?",
+     "sub": ("Flieber combines AI and specialists to power your inventory decisions. Your team keeps every call. "
+             "Built with scripts/build-positioning-variant.py; hero video, customer logos, the Self-Serve page and the monthly scorecard are placeholders.")},
 ]
 
 # Hero card: the six sample scenarios, shown as requests from agents and people.
