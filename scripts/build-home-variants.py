@@ -95,6 +95,11 @@ VARIANTS = [
      "h1": "The inventory intelligence layer your agents run on",
      "sub": ("Frozen copy of the main page with the two-step layout: Data layer or Full platform, then Customization and Managed "
              "as separate rows; before the add-ons moved inside each card and the section title was removed.")},
+    {"name": "Positioning, Nov 27 brief (proposal)", "file": "scripts/home-snapshots/2026-11-27-positioning.html", "no_tail": True,
+     "eyebrow": "Proposal on the Nov 27, 2026 positioning brief: one product, the team inside the copy, Self-Serve as the second path",
+     "h1": "Bring AI into your operation. Keep your team",
+     "sub": ("Flieber builds a planning system around how your brand runs, and operates it with a team that works alongside yours. "
+             "Built with scripts/build-positioning-variant.py; hero video, customer logos and the Self-Serve page are placeholders.")},
 ]
 
 # Hero card: the six sample scenarios, shown as requests from agents and people.
@@ -195,7 +200,7 @@ def finish(t: str, i: int, v: dict) -> str:
 
 def hub(base: str) -> str:
     rows = "\n".join(f'''        <a class="vh-card" href="{i}/"><span class="vh-n">V{i} · {html.escape(v["name"])}</span>
-          <span class="vh-eb">{html.escape(v["eyebrow"])} · MCP-native</span>
+          <span class="vh-eb">{html.escape(v["eyebrow"])}{"" if v.get("no_tail") else " · MCP-native"}</span>
           <span class="vh-h1">{v["h1"]}</span><span class="vh-sub">{v["sub"]}</span></a>''' for i, v in enumerate(VARIANTS, 1))
     main_h1 = re.search(r'<h1 class="h1" id="hero-title">([^<]*)</h1>', base).group(1)
     return f'''<!doctype html>
@@ -214,7 +219,7 @@ p.lead{{color:var(--muted);margin:0 0 32px;max-width:680px}}
 .vh-sub{{display:block;margin-top:10px;color:var(--muted);font-size:15px}}
 </style></head><body><main>
 <h1>Homepage variants</h1>
-<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it; V7 is the main page as it stood until Nov 2, before the offer and module matrix; V8 is the first matrix version (cards), replaced the same day by the track; V9 is the first track, before it moved into the hero; V10 is the hero card with value copy, before the agentic copy; V11 is the agentic copy, before Karyna's feedback (when to choose each, shared engine); V12 is the four-tab version, before Managed Services became its own layer; V13 is the three-tab card, before the base-plus-add-ons layout; V14 is the two-step version, before the add-ons moved into the cards. V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
+<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it; V7 is the main page as it stood until Nov 2, before the offer and module matrix; V8 is the first matrix version (cards), replaced the same day by the track; V9 is the first track, before it moved into the hero; V10 is the hero card with value copy, before the agentic copy; V11 is the agentic copy, before Karyna's feedback (when to choose each, shared engine); V12 is the four-tab version, before Managed Services became its own layer; V13 is the three-tab card, before the base-plus-add-ons layout; V14 is the two-step version, before the add-ons moved into the cards. V15 is a proposal built on the Nov 27 positioning brief, not yet the main page. V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
         <a class="vh-card main" href="../"><span class="vh-n">Main · live preview today</span><span class="vh-h1">{main_h1}</span></a>
 {rows}
 </main></body></html>
