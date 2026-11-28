@@ -40,8 +40,10 @@
 <style>
 /* Positioning variant (Nov 27 brief): page-scoped components */
 .pv-hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,56px);align-items:center}
-@media(min-width:980px){.pv-hero-grid{grid-template-columns:1.05fr 1fr}}
-.pv-hero-grid .h1{font-size:clamp(38px,4.6vw,62px)}
+@media(min-width:980px){.pv-hero-grid{grid-template-columns:1.2fr 1fr}}
+.pv-hero-grid .h1{font-size:clamp(34px,3.6vw,50px);line-height:1.06}
+.pv-br{display:none}
+@media(min-width:980px){.pv-br{display:block}}
 .pv-hero-grid .lead{max-width:560px;margin-top:22px}
 .pv-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:28px}
 .pv-alt{font-size:15px;color:var(--charcoal);text-decoration:underline;text-underline-offset:3px}
@@ -146,7 +148,7 @@
 /* hero stage */
 .pv-hero-grid{align-items:stretch}
 .pv-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:100%;padding:clamp(28px,4vw,56px) clamp(18px,3vw,40px);border-radius:28px;background:radial-gradient(90% 70% at 85% 0%,var(--yellow-light),transparent 60%),radial-gradient(80% 70% at 0% 100%,#DDE7F7,transparent 60%),var(--gray-light);overflow:hidden}
-.pv-stage .pv-video{width:100%;box-shadow:0 24px 60px rgba(27,28,28,.22)}
+.pv-stage .pv-video{width:100%;max-width:400px;box-shadow:0 24px 60px rgba(27,28,28,.22)}
 .pv-float{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13.5px;line-height:1.35;box-shadow:0 12px 30px rgba(27,28,28,.12);animation:pvFloat 6s ease-in-out infinite}
 .pv-float b{font-weight:600}
 .pv-float-a{top:44px;left:22px}
@@ -155,7 +157,8 @@
 .pv-approve{padding:6px 10px;border-radius:8px;background:var(--yellow);font-weight:600;font-size:12.5px}
 .pv-illus{position:absolute;right:24px;top:14px;max-width:46%;text-align:right;font:500 10.5px/1 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-dark)}
 @keyframes pvFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-@media(max-width:979px){.pv-stage{padding:64px 16px 72px}}
+@media(max-width:979px){.pv-stage{padding:64px 16px 72px}.pv-stage .pv-video{max-width:none}}
+@media(min-width:980px){.pv-stage{padding:92px 32px 96px}}
 @media(max-width:600px){.pv-float{font-size:12px;padding:8px 10px}.pv-float-a{top:14px;left:14px}.pv-float-b{right:14px;bottom:14px}.pv-illus{display:none}}
 /* why now icons */
 .pv-ico{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--yellow);color:var(--black);margin-bottom:18px;justify-self:start}
@@ -278,7 +281,7 @@
       <div class="wrap">
         <div class="pv-hero-grid">
           <div>
-            <h1 class="h1" id="hero-title">AI that powers decisions. Humans who shape it around your business</h1>
+            <h1 class="h1" id="hero-title">AI that powers decisions.<span class="pv-br"></span> Humans who shape it around your business</h1>
             <p class="lead">Planning is entering a new era: automations that learn, data and context without limits, intelligence that compounds. Flieber takes your inventory decisions there, with a platform tailored to your brand and specialists who’ve seen how more than 1,000 brands operate.</p>
             <div class="pv-actions">
               <a class="btn btn-primary" href="https://www.flieber.com/book-a-demo">Talk to a specialist <span class="arrow" aria-hidden="true">→</span></a>
