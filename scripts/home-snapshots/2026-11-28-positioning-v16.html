@@ -171,7 +171,7 @@
 @keyframes pvSpin{to{transform:rotate(360deg)}}
 /* steps connector */
 .pv-steps-wrap{position:relative}
-@media(min-width:820px){.pv-steps-wrap::before{content:"";position:absolute;left:43px;right:43px;top:42px;border-top:2px dashed var(--gray-medium);z-index:0}
+@media(min-width:820px){.pv-steps-wrap::before{content:"";position:absolute;left:43px;right:43px;top:43px;border-top:2px dashed var(--gray-medium);z-index:0}
 .pv-steps-wrap .pv-card{position:relative;z-index:1}}
 /* MIT bars */
 .pv-bars{margin-top:22px;display:grid;gap:12px}
@@ -184,6 +184,12 @@
 .in-view .pv-bar-t i,.no-js .pv-bar-t i{transform:none}
 .pv-bar-v{font:500 12.5px ui-monospace,monospace;color:var(--charcoal);white-space:nowrap}
 @media(prefers-reduced-motion:reduce){.pv-float,.pv-spin{animation:none}.pv-bar-t i{transform:none;transition:none}}
+.pv-card-h{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
+.pv-card-h h3{margin:0!important}
+.pv-card-h .pv-ico+h3{padding-top:9px}
+.pv-card-h .pv-num+h3{padding-top:4px}
+.pv-card-h .pv-ico,.pv-card-h .pv-num{flex:none;margin:0}
+.pv-row>.pv-card>.pv-card-h{margin-bottom:14px;align-self:start}
 .pv-final{text-align:center}
 .pv-final .h2{max-width:760px;margin:20px auto 0}
 .pv-final .pv-actions{justify-content:center}
@@ -292,20 +298,17 @@
           <span class="kicker">The gap</span>
           <h2 class="h2" id="gap-title" style="margin-top:20px">Why now?</h2>
         </div>
-        <div class="pv-3 pv-row pv-span3 reveal-stagger">
+        <div class="pv-3 pv-row pv-span2 reveal-stagger">
           <article class="pv-card">
-            <span class="pv-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span>
-            <h3>AI is changing how you plan</h3>
+            <div class="pv-card-h"><span class="pv-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span><h3>AI is changing how you plan</h3></div>
             <p>Forecasts can now take in everything a business knows, not only its sales history. Routine work runs on its own, and every cycle feeds what was learned back in, so each plan is sharper than the last.</p>
           </article>
           <article class="pv-card">
-            <span class="pv-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></span>
-            <h3>Few know how to get there</h3>
+            <div class="pv-card-h"><span class="pv-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></span><h3>Few know how to get there</h3></div>
             <p>AI is in every board meeting, conference and newsletter. Your team sees the potential, but between daily firefighting and the next purchase order, nobody has the time or the knowledge to bring it into how your business plans.</p>
           </article>
           <article class="pv-card">
-            <span class="pv-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M6 21V4"/><path d="M6 4h12l-2.5 4.5L18 13H6"/></svg></span>
-            <h3>First movers will win</h3>
+            <div class="pv-card-h"><span class="pv-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M6 21V4"/><path d="M6 4h12l-2.5 4.5L18 13H6"/></svg></span><h3>First movers will win</h3></div>
             <p>While most brands are still working out where to start, the ones that take planning and operations to the next level first will move faster, react sooner and build an advantage that grows every cycle.</p>
           </article>
         </div>
@@ -361,20 +364,17 @@
           <h2 class="h2" id="how-title" style="margin-top:20px">How do we get there?</h2>
         </div>
 <div class="pv-steps-wrap">
-        <div class="pv-3 pv-row pv-span3 reveal-stagger">
+        <div class="pv-3 pv-row pv-span2 reveal-stagger">
           <article class="pv-card">
-            <span class="pv-num" aria-hidden="true">1</span>
-            <h3>We learn how you operate</h3>
+            <div class="pv-card-h"><span class="pv-num" aria-hidden="true">1</span><h3>We learn how you operate</h3></div>
             <p>Our team connects your data and creates a routine of interactions with yours to continuously capture the context behind your numbers, from finance to marketing to operations. Within the first month, you already start seeing measurable value.</p>
           </article>
           <article class="pv-card">
-            <span class="pv-num" aria-hidden="true">2</span>
-            <h3>We tailor your platform</h3>
+            <div class="pv-card-h"><span class="pv-num" aria-hidden="true">2</span><h3>We tailor your platform</h3></div>
             <p>You get your own version of Flieber, with your logo and colors, tailored to your use cases and how your team operates. Forecasting models are fine-tuned to your catalog, and new products and wholesale channels are handled by specialized tools. Views, alerts and workflows follow your preferences. When a new need comes up, it becomes part of your platform instead of a spreadsheet workaround or a long wait on the roadmap of a generic system.</p>
           </article>
           <article class="pv-card">
-            <span class="pv-num" aria-hidden="true">3</span>
-            <h3>We stay, and it keeps getting smarter</h3>
+            <div class="pv-card-h"><span class="pv-num" aria-hidden="true">3</span><h3>We stay, and it keeps getting smarter</h3></div>
             <p>Your Flieber specialists stay with your account, learning from the different people in your team. Each cycle, new opportunities are detected and more of the routine moves onto automations. Every plan is reviewed with your team before money goes out, and every month you get a scorecard on the measures that show your progress.</p>
           </article>
         </div>

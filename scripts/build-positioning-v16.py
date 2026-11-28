@@ -156,7 +156,7 @@ CSS = """<style>
 @keyframes pvSpin{to{transform:rotate(360deg)}}
 /* steps connector */
 .pv-steps-wrap{position:relative}
-@media(min-width:820px){.pv-steps-wrap::before{content:"";position:absolute;left:43px;right:43px;top:42px;border-top:2px dashed var(--gray-medium);z-index:0}
+@media(min-width:820px){.pv-steps-wrap::before{content:"";position:absolute;left:43px;right:43px;top:43px;border-top:2px dashed var(--gray-medium);z-index:0}
 .pv-steps-wrap .pv-card{position:relative;z-index:1}}
 /* MIT bars */
 .pv-bars{margin-top:22px;display:grid;gap:12px}
@@ -169,13 +169,24 @@ CSS = """<style>
 .in-view .pv-bar-t i,.no-js .pv-bar-t i{transform:none}
 .pv-bar-v{font:500 12.5px ui-monospace,monospace;color:var(--charcoal);white-space:nowrap}
 @media(prefers-reduced-motion:reduce){.pv-float,.pv-spin{animation:none}.pv-bar-t i{transform:none;transition:none}}
+.pv-card-h{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
+.pv-card-h h3{margin:0!important}
+.pv-card-h .pv-ico+h3{padding-top:9px}
+.pv-card-h .pv-num+h3{padding-top:4px}
+.pv-card-h .pv-ico,.pv-card-h .pv-num{flex:none;margin:0}
+.pv-row>.pv-card>.pv-card-h{margin-bottom:14px;align-self:start}
 .pv-final{text-align:center}
 .pv-final .h2{max-width:760px;margin:20px auto 0}
 .pv-final .pv-actions{justify-content:center}
 </style>"""
 
 
-def card(title: str, body: str, extra: str = "", lead: str = "") -> str:
+def card(title: str, body: str, extra: str = "", lead: str = "", side: str = "") -> str:
+    if side:
+        return f'''          <article class="pv-card">
+            <div class="pv-card-h">{side}<h3>{title}</h3></div>
+            <p>{body}</p>{extra}
+          </article>'''
     return f'''          <article class="pv-card">{lead}
             <h3>{title}</h3>
             <p>{body}</p>{extra}
@@ -319,9 +330,9 @@ def row(cards: str, span: int) -> str:
 
 
 def main_html() -> str:
-    gap = "\n".join(card(t, b, lead=icon(i)) for i, (t, b) in enumerate(GAP))
+    gap = "\n".join(card(t, b, side=icon(i).strip()) for i, (t, b) in enumerate(GAP))
     era = "\n".join(card(t, b, lead=viz(i)) for i, (t, b) in enumerate(ERA))
-    steps = "\n".join(card(t, b, lead=f'\n            <span class="pv-num" aria-hidden="true">{i}</span>') for i, (t, b) in enumerate(STEPS, 1))
+    steps = "\n".join(card(t, b, side=f'<span class="pv-num" aria-hidden="true">{i}</span>') for i, (t, b) in enumerate(STEPS, 1))
     moments = "\n".join(f'''          <article class="pv-card pv-moment">
             <span class="pv-tag">{m}</span>
             <blockquote>{q}</blockquote>
@@ -373,7 +384,7 @@ def main_html() -> str:
     <section class="section section-soft" id="why-now" aria-labelledby="gap-title">
       <div class="wrap">
 {head("The gap", "Why now?", "gap-title")}
-{row(gap, 3)}
+{row(gap, 2)}
       </div>
     </section>
 
@@ -390,7 +401,7 @@ def main_html() -> str:
       <div class="wrap">
 {head("How Flieber gets you there", "How do we get there?", "how-title")}
 <div class="pv-steps-wrap">
-{row(steps, 3)}
+{row(steps, 2)}
         </div>
       </div>
     </section>
