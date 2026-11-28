@@ -103,8 +103,13 @@ CSS = """<style>
 .pv-team-i b{display:block;font-size:19px;font-weight:600;letter-spacing:-.01em}
 .pv-team-i span{display:block;margin-top:8px;color:var(--charcoal);font-size:15px;line-height:1.5}
 #proof .quotes{margin-top:64px}
-.pv-proof{display:grid;grid-template-columns:1fr;gap:40px;align-items:end}
-@media(min-width:960px){.pv-proof{grid-template-columns:5fr 7fr;gap:64px}}
+.pv-proof{display:grid;grid-template-columns:1fr;gap:32px;align-items:stretch;margin-top:40px}
+.pv-proof-l{display:flex;flex-direction:column}
+@media(min-width:960px){.pv-proof-note{margin-left:calc((100% - 40px) / 3 + 40px)}}
+@media(min-width:960px){.pv-proof{grid-template-columns:4fr 8fr;gap:40px}}
+.pv-exp{flex:1;display:flex;flex-direction:column;justify-content:flex-end;background:var(--yellow);border-radius:16px;padding:22px 24px}
+.pv-exp .pv-res-n{font-size:clamp(48px,6vw,72px)}
+.pv-exp .pv-res-l{color:var(--black)}
 .pv-proof .pv-big{margin:36px 0 0}
 .pv-proof .pv-sub{margin:0 0 18px}
 .pv-res{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -189,7 +194,7 @@ FAQ = [
     ("Why does it cost more than software?",
      "Because you’re not buying a tool your team then has to make work. You get three things software alone doesn’t give you. A platform tailored to your brand, with your products, channels, suppliers and rules built in. Specialists who keep it right as your business changes, review plans with your team and turn recurring work into automations. And what we’ve learned from more than 1,000 brands, so you start from what works instead of from scratch. Compare it with what the alternatives really cost: the time your team spends working around a generic tool, a new hire to run the process, or an in-house app someone has to maintain. Inventory shapes your advertising, promotions and cash flow, and one avoided stockout or overstock on a bestseller can pay for a year."),
     ("I just want software. I don’t want to pay for a team.",
-     "We understand, and for years we sold Flieber that way. Here’s what we learned from more than 1,000 brands: software that has to fit everyone leaves gaps. Each brand used a small slice of it and filled the rest with spreadsheets and workarounds, so planning still depended on a few people’s heads. The specialists aren’t a team added on top of the software. They’re how the platform gets shaped around your business and how it keeps up as you change: new channels, new suppliers, people joining and leaving. They don’t replace your team or take your decisions. Their job is to learn how you operate and find where better data or automation will make the biggest difference, then build it into your platform. That’s the work a generic tool can’t do, and it’s what makes the difference. And you decide how much they take on, from a second set of eyes on your plans to the whole planning preparation."),
+     "We understand, and for years we sold Flieber that way. Here’s what we learned from more than 1,000 brands: software that has to fit everyone leaves gaps. Each brand used a small slice of it and filled the rest with spreadsheets and workarounds, so planning still depended on a few people’s heads. The specialists aren’t a team added on top of the software. They work with your team to make every planning cycle more streamlined and complete: they bring best practices from what works across other brands, act as a second set of eyes before money goes out, and find where better data or automation will help, building it into your platform as your business changes. They don’t replace your team or take your decisions. You decide how involved they get, from reviewing your plans to preparing the whole planning cycle for your team’s approval."),
     ("What happens in the first month?",
      "We get everything ready for you to plan on a solid foundation. Our team learns how you operate and gathers the context behind your numbers from the people involved, from finance to marketing to operations. We connect your data, map your products, channels and suppliers, and make the platform your own: views, alerts, workflows and forecasting set up around your use cases and preferences. Together we define the main gaps to close and the indicators we’ll follow. Within the first month, you already start seeing measurable value, and every cycle after that builds on it."),
 ]
@@ -327,19 +332,18 @@ def main_html() -> str:
     <!-- Can I trust you? -->
     <section class="section" id="proof" aria-labelledby="proof-title">
       <div class="wrap">
+{head("Proof", "Can I trust you?", "proof-title")}
         <div class="pv-proof reveal">
           <div class="pv-proof-l">
-            <span class="kicker">Proof</span>
-            <h2 class="h2" id="proof-title" style="margin-top:20px">Can I trust you?</h2>
-            <p class="pv-big">1,000+</p>
-            <p class="pv-big-l">brands have used Flieber since 2019.</p>
+            <h3 class="pv-sub">Experience</h3>
+            <div class="pv-exp"><span class="pv-res-n">1,000+</span><span class="pv-res-l">brands have used Flieber since 2019</span></div>
           </div>
           <div class="pv-proof-r">
             <h3 class="pv-sub">What brands see after 12 months or more</h3>
             <div class="pv-res">{results}</div>
-            <p class="pv-cite">Averages across customers using Flieber for 12 months or more. Not a guarantee for every brand.</p>
           </div>
         </div>
+        <p class="pv-cite pv-proof-note">Results are averages across customers using Flieber for 12 months or more. Not a guarantee for every brand.</p>
         <div class="pv-teamband reveal">
           <div>
             <h3 class="pv-sub" style="margin-top:0">The team behind your account</h3>
