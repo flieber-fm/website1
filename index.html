@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- PREVIEW ONLY: remove before public launch -->
   <meta name="robots" content="noindex, nofollow">
-  <title>Flieber: the inventory intelligence layer your agents run on</title>
-  <meta name="description" content="Flieber is the inventory intelligence layer your agents run on: live data from every channel, the business context that connects it, a planning engine and workflows, under the rules you set. Connect Claude, ChatGPT or your own agents through MCP or API.">
+  <title>Flieber: combining AI and specialists to power your inventory decisions</title>
+  <meta name="description" content="Flieber: combining AI and specialists to power your inventory decisions. Your team keeps every call.">
   <link rel="canonical" href="https://www.flieber.com/">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#F5ED61">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Flieber">
-  <meta property="og:title" content="Flieber: the inventory intelligence layer your agents run on">
-  <meta property="og:description" content="Live data, business context, a planning engine and workflows for Claude, ChatGPT, your own agents and your team.">
+  <meta property="og:title" content="Flieber: combining AI and specialists to power your inventory decisions">
+  <meta property="og:description" content="A planning platform tailored to your brand, with specialists who work with your team. Your team keeps every call.">
   <meta property="og:url" content="https://www.flieber.com/">
   <meta name="twitter:card" content="summary">
 
@@ -37,111 +37,241 @@
       hs.src = 'https://js.hs-scripts.com/5767502.js'; document.head.appendChild(hs);
     })(location.hostname);
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.flieber.com/#organization",
-        "name": "Flieber",
-        "url": "https://www.flieber.com",
-        "logo": "https://www.flieber.com/assets/img/flieber-logo.svg",
-        "foundingDate": "2019",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "169 Madison Avenue",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "postalCode": "10016",
-          "addressCountry": "US"
-        }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://www.flieber.com/mcp#flieber-cli",
-        "name": "Flieber CLI",
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "macOS, Linux, Windows",
-        "description": "Flieber CLI puts Flieber's data and actions in your terminal and in local MCP clients such as Claude Code, Cursor, Claude Desktop and Muse: sales, adjusted sales, forecasts, catalog and store onboarding, through the same tools in the command line and over MCP. One command installs it, creates your Flieber account or signs you in, and gets your agents ready.",
-        "installUrl": "https://www.flieber.com/mcp#flieber-cli",
-        "downloadUrl": "https://pypi.org/project/flieber/",
-        "publisher": {
-          "@id": "https://www.flieber.com/#organization"
-        }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "name": "Flieber",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "publisher": { "@id": "https://www.flieber.com/#organization" },
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "Flieber Self-Serve",
-            "description": "Price on request"
-          },
-          {
-            "@type": "Offer",
-            "name": "Flieber Managed Services",
-            "description": "Price on request"
-          }
-        ]
-      }
-    ]
-  }
-  </script>
+<style>
+/* Positioning variant (Nov 27 brief): page-scoped components */
+.pv-hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,56px);align-items:center}
+@media(min-width:980px){.pv-hero-grid{grid-template-columns:1.2fr 1fr}}
+.pv-hero-grid .h1{font-size:clamp(34px,3.6vw,50px);line-height:1.06}
+.pv-br{display:none}
+@media(min-width:980px){.pv-br{display:block}}
+.pv-hero-grid .lead{max-width:560px;margin-top:22px}
+.pv-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:28px}
+.pv-alt{font-size:15px;color:var(--charcoal);text-decoration:underline;text-underline-offset:3px}
+.pv-alt:hover{color:var(--black)}
+.pv-video{margin:0;position:relative;aspect-ratio:16/9;border-radius:20px;background:var(--black);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 24px;overflow:hidden}
+.pv-video::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 85% 10%,rgba(245,237,97,.28),transparent 60%)}
+.pv-play{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:var(--yellow);display:grid;place-items:center}
+.pv-play svg{margin-left:4px}
+@media(max-width:600px){.pv-video{aspect-ratio:auto;min-height:300px;padding:18px}.pv-play{top:30%;width:56px;height:56px}}
+.pv-video p{position:relative;margin:0;font-size:14px;line-height:1.45;color:rgba(255,255,255,.82)}
+.pv-video b{color:#fff;font-weight:600}
+.pv-ph{display:inline-block;margin-bottom:8px;padding:3px 8px;border:1px dashed rgba(255,255,255,.55);border-radius:6px;font:600 11px/1.2 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--yellow)}
+.pv-ph.dark{border-color:var(--gray-dark);color:var(--charcoal)}
+.pv-3{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px}
+@media(min-width:820px){.pv-3{grid-template-columns:repeat(3,1fr)}}
+.pv-2{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px}
+@media(min-width:820px){.pv-2{grid-template-columns:repeat(2,1fr)}}
+.pv-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 26px 28px}
+.section-soft .pv-card{background:#fff}
+.pv-card h3{margin:0 0 10px;font-size:20px;line-height:1.25;letter-spacing:-.02em;font-weight:600}
+.pv-card p{margin:0;color:var(--charcoal);font-size:16px;line-height:1.55}
+.pv-num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--yellow);font:600 15px/1 ui-monospace,monospace;margin-bottom:18px}
+.pv-proof-pt{margin-top:16px!important;padding-top:14px;border-top:1px solid var(--line);font-size:14px!important;color:var(--black)!important}
+.pv-proof-pt b{font-weight:600}
+.pv-moments{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px}
+@media(min-width:700px){.pv-moments{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.pv-moments{grid-template-columns:repeat(3,1fr)}}
+.pv-moment{display:flex;flex-direction:column;gap:14px}
+.pv-moment .pv-tag{font:600 12px/1.2 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-dark)}
+.pv-moment blockquote{margin:0;font-size:19px;line-height:1.35;letter-spacing:-.01em}
+.pv-moment p{margin-top:auto!important;padding-top:14px;border-top:1px solid var(--line)}
+.pv-beyond{max-width:860px;margin:0 auto;text-align:center;font-size:clamp(24px,3vw,34px);line-height:1.25;letter-spacing:-.025em}
+.pv-stats{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px}
+@media(min-width:820px){.pv-stats{grid-template-columns:repeat(3,1fr)}}
+.pv-stat{border-top:2px solid var(--black);padding-top:18px}
+.pv-stat strong{display:block;font-size:clamp(34px,4vw,48px);line-height:1;letter-spacing:-.04em;font-weight:500}
+.pv-stat span{display:block;margin-top:12px;color:var(--charcoal);font-size:15px;line-height:1.5}
+.pv-integ{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.pv-integ-l{font-size:14px;color:var(--gray-dark);margin-right:6px}
+.pv-chip{padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:15px}
+.pv-logos{margin-top:28px;padding:18px 20px;border:1px dashed var(--gray-medium);border-radius:14px;color:var(--charcoal);font-size:14px}
+.pv-ss{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;background:var(--gray-light);border-radius:22px;padding:clamp(26px,4vw,44px)}
+@media(min-width:820px){.pv-ss{grid-template-columns:1fr auto}}
+.pv-ss h2{margin:0 0 8px}
+.pv-ss p{margin:0;color:var(--charcoal);max-width:620px}
+.pv-pend{display:inline-block;margin-left:6px;padding:1px 7px;border:1px dashed var(--gray-dark);border-radius:6px;font:600 10px/1.5 ui-monospace,monospace;letter-spacing:.05em;text-transform:uppercase;color:var(--charcoal);vertical-align:2px;white-space:nowrap}
+.pv-build{display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,56px);align-items:start}
+@media(min-width:900px){.pv-build{grid-template-columns:1fr 1fr}}
+.pv-big{font-size:clamp(56px,7vw,88px);line-height:1;letter-spacing:-.05em;font-weight:500}
+.pv-big-l{margin-top:12px;color:var(--charcoal);font-size:16px;line-height:1.5;max-width:420px}
+.pv-build .lead{margin-top:0}
+.pv-cite{margin-top:18px;font-size:13px;line-height:1.5;color:var(--gray-dark)}
+.pv-cite a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.pv-note{display:inline-grid;place-items:center;width:20px;height:20px;margin:0 2px;border-radius:50%;background:var(--blue);color:#fff;font:600 11px/1 ui-monospace,monospace;vertical-align:3px;cursor:help}
+.pv-ex{padding:1px 6px;border:1px dashed var(--gray-dark);border-radius:6px;background:var(--yellow-light);font-size:.92em;white-space:normal}
+.pv-reassure{margin:16px 0 0;max-width:520px;font-size:16px;line-height:1.5;font-weight:600;color:var(--black)}
+.pv-close{max-width:820px;margin:36px 0 0;font-size:clamp(19px,2vw,23px);line-height:1.4;letter-spacing:-.015em}
+.pv-row{align-items:start}
+@supports (grid-template-rows:subgrid){
+  .pv-row>.pv-card{display:grid;grid-template-rows:subgrid;align-content:start;row-gap:0}
+  .pv-span2>.pv-card{grid-row:span 2}
+  .pv-span3>.pv-card{grid-row:span 3}
+  .pv-row>.pv-card>*{margin-top:0;margin-bottom:0}
+  .pv-row>.pv-card>h3{margin-bottom:10px;align-self:start}
+  .pv-span3.pv-3>.pv-card>.pv-num{margin-bottom:18px}
+  .pv-moments.pv-row>.pv-card{row-gap:14px}
+  .pv-moments.pv-row>.pv-card>p{margin-top:0!important}
+}
+.pv-sub{margin:56px 0 18px;font-size:22px;line-height:1.25;letter-spacing:-.02em;font-weight:600}
+.pv-team-lead{margin:-6px 0 18px;color:var(--charcoal);font-size:16px}
+.pv-team{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:820px){.pv-team{grid-template-columns:repeat(3,1fr)}}
+.pv-team-i{border-top:2px solid var(--black);padding-top:16px}
+.pv-team-i b{display:block;font-size:19px;font-weight:600;letter-spacing:-.01em}
+.pv-team-i span{display:block;margin-top:8px;color:var(--charcoal);font-size:15px;line-height:1.5}
+.pv-voices{background:var(--yellow)}
+.pv-voices .quotes{margin-top:0}
+.pv-voices .quote-dots button{background:rgba(27,28,28,.22)}
+.pv-voices .quote-dots button[aria-current="true"]{background:var(--black)}
+.pv-voices .icon-btn{border-color:rgba(27,28,28,.35)}
+.pv-voices .avatar{background:#fff}
+.pv-proof{display:grid;grid-template-columns:1fr;gap:32px;align-items:stretch;margin-top:40px}
+.pv-proof-l{display:flex;flex-direction:column}
+@media(min-width:960px){.pv-proof-note{margin-left:calc((100% - 40px) / 3 + 40px)}}
+@media(min-width:960px){.pv-proof{grid-template-columns:4fr 8fr;gap:40px}}
+.pv-exp{flex:1;display:flex;flex-direction:column;justify-content:flex-end;background:var(--yellow);border-radius:16px;padding:22px 24px}
+.pv-exp .pv-res-n{font-size:clamp(48px,6vw,72px)}
+.pv-exp .pv-res-l{color:var(--black)}
+.pv-proof .pv-big{margin:36px 0 0}
+.pv-proof .pv-sub{margin:0 0 18px}
+.pv-res{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pv-res-i{background:var(--gray-light);border-radius:16px;padding:20px 22px}
+.pv-res-n{display:block;font-size:clamp(34px,4vw,46px);line-height:1;letter-spacing:-.04em;font-weight:500}
+.pv-res-l{display:block;margin-top:10px;color:var(--charcoal);font-size:15px;line-height:1.4}
+.pv-teamband{margin-top:56px;display:grid;grid-template-columns:1fr;gap:28px;background:var(--black);color:var(--gray-light);border-radius:22px;padding:clamp(26px,4vw,44px)}
+@media(min-width:960px){.pv-teamband{grid-template-columns:4fr 8fr;gap:48px}}
+.pv-teamband .pv-sub{color:#fff}
+.pv-teamband .pv-team-lead{margin:8px 0 0;color:rgba(240,245,246,.75)}
+.pv-teamband .pv-team-i{border-top-color:var(--yellow)}
+.pv-teamband .pv-team-i b{color:#fff}
+.pv-teamband .pv-team-i span{color:rgba(240,245,246,.75)}
+/* hero stage */
+.pv-hero-grid{align-items:stretch}
+.pv-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:100%;padding:clamp(28px,4vw,56px) clamp(18px,3vw,40px);border-radius:28px;background:radial-gradient(90% 70% at 85% 0%,var(--yellow-light),transparent 60%),radial-gradient(80% 70% at 0% 100%,#DDE7F7,transparent 60%),var(--gray-light);overflow:hidden}
+.pv-stage .pv-video{width:100%;max-width:400px;box-shadow:0 24px 60px rgba(27,28,28,.22)}
+.pv-float{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13.5px;line-height:1.35;box-shadow:0 12px 30px rgba(27,28,28,.12);animation:pvFloat 6s ease-in-out infinite}
+.pv-float b{font-weight:600}
+.pv-float-a{top:44px;left:22px}
+.pv-float-b{right:22px;bottom:22px;animation-delay:-3s}
+.pv-dot{width:9px;height:9px;border-radius:50%;background:#2BB673;box-shadow:0 0 0 4px rgba(43,182,115,.18)}
+.pv-approve{padding:6px 10px;border-radius:8px;background:var(--yellow);font-weight:600;font-size:12.5px}
+.pv-illus{position:absolute;right:24px;top:14px;max-width:46%;text-align:right;font:500 10.5px/1 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-dark)}
+@keyframes pvFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media(max-width:979px){.pv-stage{padding:64px 16px 72px}.pv-stage .pv-video{max-width:none}}
+@media(min-width:980px){.pv-stage{padding:92px 32px 96px}}
+@media(max-width:600px){.pv-float{font-size:12px;padding:8px 10px}.pv-float-a{top:14px;left:14px}.pv-float-b{right:14px;bottom:14px}.pv-illus{display:none}}
+/* why now icons */
+.pv-ico{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--yellow);color:var(--black);margin-bottom:18px;justify-self:start}
+/* dark era section */
+.pv-dark .pv-card{background:#262829;border-color:rgba(240,245,246,.1)}
+.pv-dark .pv-card h3{color:#fff}
+.pv-dark .pv-card p{color:rgba(240,245,246,.75)}
+.pv-viz{margin:-6px -6px 22px;height:142px}
+.pv-viz svg{width:100%;height:100%;display:block}
+.pv-viz path{stroke:var(--gray-dark);stroke-width:1.6}
+.pv-viz .pv-viz-y{stroke:var(--yellow);stroke-width:2.2}
+.pv-viz .pv-viz-base{stroke:rgba(240,245,246,.15)}
+.pv-viz-t{font:500 10.5px ui-monospace,monospace;fill:var(--gray-medium)}
+.pv-viz-dot{fill:var(--yellow)}
+.pv-viz-dot2{fill:#fff}
+.pv-viz-loop{stroke:var(--yellow);stroke-width:2;stroke-dasharray:6 7}
+.pv-spin{transform-origin:130px 55px;animation:pvSpin 14s linear infinite}
+@keyframes pvSpin{to{transform:rotate(360deg)}}
+/* steps connector */
+.pv-steps-wrap{position:relative}
+
+/* MIT bars */
+.pv-bars{margin-top:22px;display:grid;gap:12px}
+.pv-bar{display:grid;grid-template-columns:1fr;gap:6px}
+@media(min-width:600px){.pv-bar{grid-template-columns:190px 1fr 170px;align-items:center;gap:14px}}
+.pv-bar-l{font-size:14px;color:var(--charcoal)}
+.pv-bar-t{height:14px;border-radius:7px;background:var(--gray-light);overflow:hidden}
+.pv-bar-t i{display:block;height:100%;width:var(--w);border-radius:7px;background:var(--yellow);transform-origin:left;transform:scaleX(0);transition:transform 1.2s var(--ease) .2s}
+.pv-bar:last-child .pv-bar-t i{background:var(--gray-medium)}
+.in-view .pv-bar-t i,.no-js .pv-bar-t i{transform:none}
+.pv-bar-v{font:500 12.5px ui-monospace,monospace;color:var(--charcoal);white-space:nowrap}
+@media(prefers-reduced-motion:reduce){.pv-float,.pv-spin{animation:none}.pv-bar-t i{transform:none;transition:none}}
+.pv-card-h{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
+.pv-card-h h3{margin:0!important}
+.pv-card-h .pv-ico+h3{padding-top:9px}
+.pv-card-h .pv-num+h3{padding-top:4px}
+.pv-card-h .pv-ico,.pv-card-h .pv-num{flex:none;margin:0}
+.pv-row>.pv-card>.pv-card-h{margin-bottom:14px;align-self:start}
+.pv-row>.pv-card>.pv-viz{margin-bottom:36px}
+/* product views from the video kit */
+.pv-demo{margin:18px 0 0;font:500 11px/1.4 ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
+.pv-demo-dark{color:var(--gray-medium)}
+.pv-iv-band{fill:rgba(86,209,138,.12);stroke:rgba(86,209,138,.35)}
+.pv-iv-lost{fill:rgba(255,90,90,.18)}
+.pv-viz path.pv-iv-ln{stroke:#fff;stroke-width:2}
+.pv-viz path.pv-iv-on{stroke:var(--yellow);stroke-width:2.2;stroke-dasharray:6 5}
+.pv-red{fill:#FF8A8A}
+.pv-toasts{display:grid;gap:6px;height:100%;align-content:start;overflow:hidden}
+.pv-toast{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#1F2122;border:1px solid rgba(240,245,246,.1);border-radius:10px;padding:5px 9px;animation:pvToast 9s ease-in-out infinite}
+.pv-toast:nth-child(2){animation-delay:1.2s}.pv-toast:nth-child(3){animation-delay:2.4s}
+.pv-toast b{display:block;font-size:12px;color:#fff;font-weight:600;line-height:1.3}
+.pv-toast small{display:block;font-size:11px;color:var(--gray-medium);line-height:1.3}
+.pv-toast em{font:normal 600 10px ui-monospace,monospace;color:var(--black);background:var(--yellow);border-radius:6px;padding:3px 6px;white-space:nowrap}
+@keyframes pvToast{0%,6%{opacity:.25;transform:translateX(-6px)}12%,80%{opacity:1;transform:none}92%,100%{opacity:.25}}
+.pv-viz-step{height:auto;margin:0 0 22px;align-self:stretch}
+.pv-viz-step .pv-sv{height:100%;box-sizing:border-box}
+.pv-sv{border-radius:12px;background:var(--gray-light);padding:12px;font-size:11.5px;line-height:1.35;min-height:96px}
+.pv-sv-learn{display:grid;gap:5px}
+.pv-sv-rules{display:grid;gap:5px}
+.pv-sv-rules div:not(.pv-sv-h){background:#fff;border-radius:7px;padding:5px 8px;display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:baseline}
+.pv-sv-rules b{font-size:11px;font-weight:600;white-space:nowrap}
+.pv-sv-rules span{font:500 10.5px/1.35 ui-monospace,monospace;color:var(--charcoal)}
+.pv-card p.pv-sv-tags{display:flex;flex-wrap:wrap;gap:4px;margin:3px 0 0;font-size:10.5px;line-height:1.2}
+.pv-sv-tags i{font-style:normal;padding:3px 7px;border-radius:999px;background:var(--black);color:#fff}
+.pv-sv-rules .pv-sv-h,.pv-sv-learn .pv-sv-h{display:block;background:none;padding:0;margin:0 0 2px;font:500 10px ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
+.pv-sv-learn .pv-sv-h{display:block;background:none;padding:0;margin:0 0 2px;font:500 10px ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
+.pv-sv-learn div{background:#fff;border-radius:7px;padding:5px 8px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.pv-sv-learn b{font-size:11px;font-weight:600}
+.pv-sv-learn span{color:var(--charcoal);font-size:10.5px}
+.pv-sv-top{display:flex;align-items:center;gap:8px;background:var(--black);color:#fff;border-radius:8px;padding:7px 8px;flex-wrap:wrap}
+.pv-sv-logo{border:1px dashed rgba(255,255,255,.5);border-radius:5px;padding:2px 6px;font-size:10px;color:var(--yellow)}
+.pv-sv-top b{font-size:11px;font-weight:600}
+.pv-sv-url{margin-left:auto;font:500 10px ui-monospace,monospace;color:var(--gray-medium)}
+.pv-sv-sw{display:flex;align-items:center;gap:6px;margin-top:10px}
+.pv-sv-sw i{width:18px;height:18px;border-radius:5px;background:#3D5AFE}
+.pv-sv-sw i:nth-child(2){background:#2BB673}.pv-sv-sw i:nth-child(3){background:var(--yellow)}
+.pv-sv-sw span{margin-left:4px;color:var(--charcoal)}
+.pv-stg{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.pv-stg span{position:relative;text-align:center;padding:7px 2px;border-radius:7px;background:#fff;font-size:10.5px;color:var(--charcoal);animation:pvStage 7.5s linear infinite}
+.pv-stg span:nth-child(2){animation-delay:1s}.pv-stg span:nth-child(3){animation-delay:2s}.pv-stg span:nth-child(4){animation-delay:3s}.pv-stg span:nth-child(5){animation-delay:4s}
+@keyframes pvStage{0%{background:#fff;color:var(--charcoal)}6%,70%{background:var(--yellow);color:var(--black)}80%,100%{background:#fff;color:var(--charcoal)}}
+.pv-sv-chip{display:inline-block;margin-top:10px;padding:4px 9px;border-radius:999px;background:rgba(43,182,115,.14);color:#167A4B;font-weight:600;font-size:11px}
+.pv-float-a{max-width:300px}
+@media(prefers-reduced-motion:reduce){.pv-toast,.pv-stg span{animation:none}}
+/* hero to logo strip: tighter so the logos show in the first screen */
+#main>.hero{padding-top:clamp(32px,4.5vw,64px);padding-bottom:clamp(24px,3vw,40px)}
+#main>.logos-band .logos-block{padding-top:clamp(12px,1.5vw,20px)}
+.pv-final{text-align:center}
+.pv-final .h2{max-width:760px;margin:20px auto 0}
+.pv-final .pv-actions{justify-content:center}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ================= NAV ================= -->
-  <div class="review-bar" role="note">Review build · <b>Option 2</b> · Agent positioning (Oct&nbsp;7) on Option&nbsp;2’s design</div>
+  <div class="review-bar" role="note">Review build · <b>Positioning</b> · positioning rebuild · work in progress</div>
   <header class="nav" id="nav">
     <div class="wrap">
       <a class="nav-logo" href="./" aria-label="Flieber home">
         <img src="assets/img/flieber-logo.svg" alt="Flieber" width="116" height="20">
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <div class="nav-drop">
-          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-product">Product <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
-          <div class="nav-menu" id="nav-product">
-            <a class="nav-menu-all" href="features/">All features <span aria-hidden="true">→</span></a>
-            <div class="nav-sub">
-              <a href="product/data-layer/">Data layer</a>
-              <a href="product/demand-forecasting/">Demand forecasting</a>
-              <a href="product/inventory-forecasting/">Inventory forecasting</a>
-              <a href="product/replenishment/">Replenishment</a>
-              <a href="product/workflows/">Workflows</a>
-            </div>
-            <hr class="nav-menu-sep">
-            <a href="prompt-ideas/">Prompt ideas</a>
-            <a href="integrations/">Integrations</a>
-            <a href="mcp/">MCP and AI agents</a>
-            <a href="security/">Security &amp; data</a>
-          </div>
-        </div>
-        <div class="nav-drop">
-          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-solutions">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
-          <div class="nav-menu" id="nav-solutions">
-            <a href="multichannel/">Multichannel brands</a>
-            <a href="agencies/">Agencies and aggregators</a>
-            <a href="customize/">Customize Flieber</a>
-            <hr class="nav-menu-sep">
-            <a href="before-you-choose/">Before you choose</a>
-          </div>
-        </div>
-        <a href="pricing/">Pricing</a>
+        <a href="#how-flieber-gets-you-there">How it works</a>
+        <a href="#when-brands-bring-us-in">When brands bring us in</a>
+        <a href="#questions">Questions</a>
         <a href="who-we-are/">Who we are</a>
-        <a class="agents-link" href="agents/" aria-label="For AI agents"><code>/agents</code></a>
         <a class="menu-only" href="https://app.flieber.com">Log in</a>
-        <a class="menu-only" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        <a class="menu-only" href="https://www.flieber.com/book-a-demo">Talk to a specialist</a>
       </nav>
       <div class="nav-cta">
         <a class="nav-login" href="https://app.flieber.com">Log in</a>
-        <a class="btn btn-ghost btn-sm" href="https://www.flieber.com/book-a-demo">Book a demo</a>
-        <a class="btn btn-primary btn-sm" href="https://www.flieber.com/free-trial">Start free trial</a>
+        <a class="btn btn-primary btn-sm" href="https://www.flieber.com/book-a-demo">Talk to a specialist</a>
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
       </div>
     </div>
@@ -149,193 +279,36 @@
 
   <main id="main">
 
-    <!-- ================= 1. HERO ================= -->
+    <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap">
-        <div class="hero-top">
-          <div class="hero-copy">
-            <span class="eyebrow"><span class="pulse" aria-hidden="true"></span><span>Built for AI agents and the teams who run them</span><span class="eb-tail"><span class="sep" aria-hidden="true"></span>MCP-native</span></span>
-            <h1 class="h1" id="hero-title">The inventory intelligence layer your agents run on</h1>
-            <p class="lead">Live data from every channel, the business context that connects it, a planning engine that does the math, and workflows that carry out what you approve, all under the rules you set. Connect Claude, ChatGPT or your own agents through MCP or API. Your team works from the same data layer, whether in the Flieber app, in Slack or with the help of our planners.</p>
+        <div class="pv-hero-grid">
+          <div>
+            <h1 class="h1" id="hero-title">AI that powers decisions.<span class="pv-br"></span> Humans who shape it around your business</h1>
+            <p class="lead">Planning is entering a new era: automations that learn, data and context without limits, intelligence that compounds. Flieber takes your inventory decisions there, with a platform tailored to your brand and specialists who’ve seen how more than 1,000 brands operate.</p>
+            <div class="pv-actions">
+              <a class="btn btn-primary" href="https://www.flieber.com/book-a-demo">Talk to a specialist <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+            </div>
           </div>
-
-          <!-- Illustrative decision simulations (sample data, no customer data).
-               Rotates slowly; pauses on hover/focus; pause button; no autoplay
-               under reduced motion. -->
-          <figure class="sim sim-compact" id="sim" aria-labelledby="sim-title">
-            <div class="sim-head">
-              <span class="sim-title" id="sim-title">Agents at work on Flieber</span>
-              <span class="sim-badge">Sample data</span>
-            </div>
-            <div class="sim-tabs" role="tablist" aria-label="Example decisions">
-              <button class="sim-tab" type="button" role="tab" id="sim-tab-0" aria-controls="sim-panel-0" aria-selected="true"><span>Wholesale order</span><i class="sim-progress" aria-hidden="true"></i></button>
-              <button class="sim-tab" type="button" role="tab" id="sim-tab-1" aria-controls="sim-panel-1" aria-selected="false" tabindex="-1"><span>Promotion</span><i class="sim-progress" aria-hidden="true"></i></button>
-              <button class="sim-tab" type="button" role="tab" id="sim-tab-2" aria-controls="sim-panel-2" aria-selected="false" tabindex="-1"><span>Influencer campaign</span><i class="sim-progress" aria-hidden="true"></i></button>
-              <button class="sim-tab" type="button" role="tab" id="sim-tab-3" aria-controls="sim-panel-3" aria-selected="false" tabindex="-1"><span>Ad campaign</span><i class="sim-progress" aria-hidden="true"></i></button>
-              <button class="sim-tab" type="button" role="tab" id="sim-tab-4" aria-controls="sim-panel-4" aria-selected="false" tabindex="-1"><span>Purchase order</span><i class="sim-progress" aria-hidden="true"></i></button>
-              <button class="sim-tab" type="button" role="tab" id="sim-tab-5" aria-controls="sim-panel-5" aria-selected="false" tabindex="-1"><span>Warehouse transfer</span><i class="sim-progress" aria-hidden="true"></i></button>
-            </div>
-            <div class="sim-stage">
-              <div class="sim-panel active" role="tabpanel" id="sim-panel-0" aria-labelledby="sim-tab-0">
-                <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>Claude <span class="sim-src-arrow" aria-hidden="true">→</span> Flieber</p>
-                <p class="sim-q">“A wholesale buyer wants <b>1,800 units</b> of the travel kit. Can we take the order?”</p>
-                <table class="sim-table">
-                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Accept all</th><th scope="col">Split 1,100 now / 700 after the next PO</th></tr></thead>
-                  <tbody><tr><th scope="row">Amazon stockout days</th><td>21</td><td class="win">0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$384K</td><td class="win">$401K</td></tr><tr><th scope="row">Margin</th><td>$112K</td><td class="win">$127K</td></tr><tr><th scope="row">Cash low point</th><td>$64K</td><td class="win">$78K</td></tr></tbody>
-                </table>
-                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Split the order: no Amazon stockout, more margin and a higher cash low point.</p>
-              </div>
-              <div class="sim-panel" role="tabpanel" id="sim-panel-1" aria-labelledby="sim-tab-1" aria-hidden="true">
-                <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>Slack · #marketing <span class="sim-src-arrow" aria-hidden="true">→</span> Flieber</p>
-                <p class="sim-q">“Can we run <b>25% off</b> the travel kit next week?”</p>
-                <table class="sim-table">
-                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Run next week</th><th scope="col">Run after the next PO lands</th></tr></thead>
-                  <tbody><tr><th scope="row">Stockout days</th><td>12</td><td class="win">0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$268K</td><td class="win">$291K</td></tr><tr><th scope="row">Margin</th><td>$61K</td><td class="win">$74K</td></tr><tr><th scope="row">Cash low point</th><td class="win">$83K</td><td>$79K</td></tr></tbody>
-                </table>
-                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Wait for the PO: no stockout mid-promo and $13K more margin, for a slightly lower cash low point.</p>
-              </div>
-              <div class="sim-panel" role="tabpanel" id="sim-panel-2" aria-labelledby="sim-tab-2" aria-hidden="true">
-                <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>ChatGPT <span class="sim-src-arrow" aria-hidden="true">→</span> Flieber</p>
-                <p class="sim-q">“An influencer post could <b>double demand</b> for our hero SKU. When should it go live?”</p>
-                <table class="sim-table">
-                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Launch now</th><th scope="col">Launch after the next PO lands</th></tr></thead>
-                  <tbody><tr><th scope="row">Stockout days</th><td>18</td><td class="win">0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$212K</td><td class="win">$236K</td></tr><tr><th scope="row">Margin</th><td>$58K</td><td class="win">$71K</td></tr><tr><th scope="row">Cash low point</th><td class="win">$91K</td><td>$87K</td></tr></tbody>
-                </table>
-                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Launch after the PO lands: paid demand isn’t wasted on a sold-out product.</p>
-              </div>
-              <div class="sim-panel" role="tabpanel" id="sim-panel-3" aria-labelledby="sim-tab-3" aria-hidden="true">
-                <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>Your agent · daily check <span class="sim-src-arrow" aria-hidden="true">→</span> Flieber</p>
-                <p class="sim-q">“Flagged: a hero SKU will <b>sell out 3 weeks</b> before its next PO lands.”</p>
-                <table class="sim-table">
-                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Keep ads at full budget</th><th scope="col">Cut ads 60% until the PO lands</th></tr></thead>
-                  <tbody><tr><th scope="row">Stockout days</th><td>21</td><td class="win">0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$331K</td><td class="win">$348K</td></tr><tr><th scope="row">Margin</th><td>$88K</td><td class="win">$109K</td></tr><tr><th scope="row">Cash low point</th><td>$70K</td><td class="win">$84K</td></tr></tbody>
-                </table>
-                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Cut ad spend until the PO lands: no stockout, and no budget spent sending shoppers to a sold-out product.</p>
-              </div>
-              <div class="sim-panel" role="tabpanel" id="sim-panel-4" aria-labelledby="sim-tab-4" aria-hidden="true">
-                <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>Claude <span class="sim-src-arrow" aria-hidden="true">→</span> Flieber</p>
-                <p class="sim-q">“A supplier offers <b>8% off</b> for six months of stock. Is it worth it?”</p>
-                <table class="sim-table">
-                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Take the discount, order 6 months</th><th scope="col">Order 3 months at list price</th></tr></thead>
-                  <tbody><tr><th scope="row">Stockout days</th><td>0</td><td>0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$520K</td><td>$520K</td></tr><tr><th scope="row">Margin</th><td class="win">$171K</td><td>$162K</td></tr><tr><th scope="row">Cash low point</th><td>$22K</td><td class="win">$95K</td></tr></tbody>
-                </table>
-                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Order 3 months: the discount adds $9K of margin but drops the cash low point by $73K.</p>
-              </div>
-              <div class="sim-panel" role="tabpanel" id="sim-panel-5" aria-labelledby="sim-tab-5" aria-hidden="true">
-                <p class="sim-src"><span class="sim-src-dot" aria-hidden="true"></span>Slack · scheduled <span class="sim-src-arrow" aria-hidden="true">→</span> Flieber</p>
-                <p class="sim-q">“Ops wants to send <b>2,000 units</b> from the 3PL to Amazon FBA. Should we?”</p>
-                <table class="sim-table">
-                  <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">Send all 2,000 now</th><th scope="col">Send 1,200 now / 800 after the next PO</th></tr></thead>
-                  <tbody><tr><th scope="row">Shopify stockout days</th><td>16</td><td class="win">0</td></tr><tr><th scope="row">Revenue, next 90 days</th><td>$447K</td><td class="win">$468K</td></tr><tr><th scope="row">Margin</th><td>$141K</td><td class="win">$147K</td></tr><tr><th scope="row">Cash low point</th><td class="win">$76K</td><td>$74K</td></tr></tbody>
-                </table>
-                <p class="sim-rec"><span class="sim-rec-label">Recommendation</span> Split the transfer: the 3PL keeps enough stock to fulfill Shopify orders, for slightly more inbound freight.</p>
-              </div>
-            </div>
-            <div class="sim-foot">
-              <figcaption>Sample data. Illustrative only.</figcaption>
-              <button class="sim-pause" type="button" aria-pressed="false" aria-label="Pause rotation"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect class="i-pause" x="2" y="1.5" width="2.6" height="9" rx=".6"/><rect class="i-pause" x="7.4" y="1.5" width="2.6" height="9" rx=".6"/><path class="i-play" d="M3 1.6v8.8L10.4 6z"/></svg></button>
-            </div>
+          <div class="pv-stage">
+            <div class="pv-float pv-float-a" aria-hidden="true"><span class="pv-dot"></span><span><b>Draft ready</b><br>Supplier 1 · Dec 2026 · 14 products · $47,750</span></div>
+          <figure class="pv-video" aria-label="Hero video placeholder">
+            <span class="pv-play" aria-hidden="true"><svg width="22" height="24" viewBox="0 0 22 24"><path d="M2 2l18 10L2 22z" fill="#1B1C1C"/></svg></span>
+            <p><span class="pv-ph">Placeholder</span><br><b>Hero video, about 60 to 75 seconds.</b> The shift, the gap, the bridge, smarter every cycle, then “Flieber: where AI meets inventory experts.” Plays with captions so it works with the sound off.</p>
           </figure>
-        </div>
-
-        <!-- Ways to use Flieber (Nov 2): two options in the hero, each with its own add-ons -->
-        <div class="ways ways-cards reveal" id="how-you-work">
-          <h2 class="sr-only" id="how-you-work-title">Ways to use Flieber</h2>
-          <div class="ways-base">
-            <article class="ways-card ways-data" aria-labelledby="ways-data-h">
-              <p class="door-num"><span class="ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4"><ellipse cx="8" cy="3.8" rx="5" ry="1.8"/><path d="M3 3.8v8.4c0 1 2.2 1.8 5 1.8s5-.8 5-1.8V3.8M3 8c0 1 2.2 1.8 5 1.8s5-.8 5-1.8"/></svg></span>Flieber Data layer</p>
-              <h3 class="ways-h" id="ways-data-h">Build your own logic</h3>
-              <p class="ways-p">Every channel, warehouse, 3PL and supplier connected, mapped to how you run the business and kept current, with no pipelines or APIs for you to maintain. Build your own forecasting and planning on top.</p>
-              <div class="ways-foot">
-                <span class="which-price">Priced to your operation</span>
-                <a class="btn btn-dark" href="product/data-layer/">See the data layer <span class="arrow" aria-hidden="true">→</span></a>
-              </div>
-              <div class="ways-addons">
-                <p class="ways-addons-label">Add-on</p>
-                <a class="ways-addon ways-custom" href="customize/#engineers">
-                  <span class="ways-dot" aria-hidden="true"></span>
-                  <span class="ways-addon-body"><b>Customization</b> Custom agents and workflows, dashboards and reports, tailored interfaces, integrations and features, built by Flieber’s engineers around how your team operates. For qualified accounts, quoted per project.</span>
-                  <span class="ways-addon-go">Check if you qualify <span class="arrow" aria-hidden="true">→</span></span>
-                </a>
-              </div>
-            </article>
-            <article class="ways-card ways-full" aria-labelledby="ways-full-h">
-              <p class="door-num"><span class="ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4"><path d="M2 13.5h12M4 11V7.5M7 11V4.5M10 11V6M13 11V2.8"/></svg></span>Flieber Full platform</p>
-              <h3 class="ways-h" id="ways-full-h">Use Flieber’s planning engine</h3>
-              <p class="ways-p">The data layer plus demand forecasting, inventory forecasting, replenishment and workflows. Flieber’s AI prepares every decision with the reasoning behind it, and you make the call.</p>
-              <div class="ways-foot">
-                <span class="which-price">Priced to your operation</span>
-                <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
-                <a class="link-arrow" href="features/">See every feature <span class="arrow" aria-hidden="true">→</span></a>
-              </div>
-              <div class="ways-addons">
-                <p class="ways-addons-label">Add-ons</p>
-                <a class="ways-addon ways-custom" href="customize/#engineers">
-                  <span class="ways-dot" aria-hidden="true"></span>
-                  <span class="ways-addon-body"><b>Customization</b> Custom agents and workflows, dashboards and reports, tailored interfaces, integrations and features, built by Flieber’s engineers around how your team operates. For qualified accounts, quoted per project.</span>
-                  <span class="ways-addon-go">Check if you qualify <span class="arrow" aria-hidden="true">→</span></span>
-                </a>
-                <a class="ways-addon ways-ms" href="managed-services/">
-                  <span class="ways-dot" aria-hidden="true"></span>
-                  <span class="ways-addon-body"><b>Managed Services</b> Flieber’s specialists work alongside your team, in three plans: Lite, a second set of eyes on all your data and planning; Core, planning together; and Full, planning and operations.</span>
-                  <span class="ways-addon-go">About Managed Services <span class="arrow" aria-hidden="true">→</span></span>
-                </a>
-              </div>
-            </article>
+            <div class="pv-float pv-float-b" aria-hidden="true"><span><b>ALMN-CRON-LUGG below MOQ 500</b><br>Round up: +$1,440, +32 days of cover</span><span class="pv-approve">Round up</span></div>
+            <span class="pv-illus" aria-hidden="true">Illustration · Flieber Demo Account</span>
           </div>
-          <p class="ways-either">Use either one in the Flieber app, in Slack or with your own AI agents through MCP and API.</p>
         </div>
-
-        <ul class="under-doors">
-          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>14-day free trial</li>
-          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>No credit card</li>
-          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Monthly contracts</li>
-          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.2l3 3 6-6.4" stroke="#1B1C1C" stroke-width="1.6"/></svg>Setup included</li>
-        </ul>
       </div>
     </section>
 
-    <!-- CONNECT:start (generated by scripts/build-content.py from HOME_CONNECT, INSTALL_PROMPT and CLI; do not edit by hand) -->
-    <section class="qs-band" id="connect-your-agent" aria-labelledby="qs-title">
-    <div class="wrap qs-wrap">
-      <div class="section-head qs-intro">
-        <span class="kicker">Flieber MCP</span>
-        <h2 class="h2" id="qs-title">Connect Flieber to your AI tool</h2>
-        <p class="lead">Claude, ChatGPT, Cursor and your own agents get Flieber’s data and actions through Flieber’s MCP server. Install it with Flieber CLI, or add it as a connector in Claude or ChatGPT in the browser.</p>
-      </div>
-      <div class="qs reveal" aria-labelledby="qs-label">
-        <div class="qs-head">
-          <h2 class="qs-label" id="qs-label">Quick start</h2>
-          <a class="qs-all" href="mcp/">All install options <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="qs-tabs" role="tablist" aria-label="Install options"><button class="qs-tab" type="button" role="tab" id="qs-tab-prompt" aria-controls="qs-panel-prompt" aria-selected="true">Ask your AI tool</button><button class="qs-tab" type="button" role="tab" id="qs-tab-macos" aria-controls="qs-panel-macos" aria-selected="false" tabindex="-1">macOS and Linux</button><button class="qs-tab" type="button" role="tab" id="qs-tab-windows" aria-controls="qs-panel-windows" aria-selected="false" tabindex="-1">Windows</button></div>
-        <div class="qs-panel" role="tabpanel" id="qs-panel-prompt" aria-labelledby="qs-tab-prompt">
-          <p class="qs-note">Copy this prompt into any AI tool that can run commands on your computer, such as Claude Desktop, Claude Code, Cursor or Muse. It installs Flieber, helps you sign in and connects itself, asking before every step.</p>
-          <div class="cmd cmd-prompt"><span class="cmd-label">Paste into your AI tool</span><pre><code>Install Flieber on this computer. On macOS or Linux, run: curl -fsSL https://cli.flieber.com/install.sh | sh. On Windows, run this in PowerShell: irm https://cli.flieber.com/install.ps1 | iex. The installer opens my browser so I can sign in or create my account, then connects Flieber to you. Explain each step in plain language and ask me before you run anything. When it’s done, tell me if I need to restart you.</code></pre><button class="cmd-copy" type="button" aria-label="Copy the prompt">Copy</button></div>
-        </div>
-        <div class="qs-panel" role="tabpanel" id="qs-panel-macos" aria-labelledby="qs-tab-macos" hidden>
-          <p class="qs-note">Open Terminal (on a Mac: press Cmd + Space, type Terminal, press Enter), paste this and press Enter. The installer creates your Flieber account or signs you in, and connects Flieber to your AI tool.</p>
-                    <div class="cmd"><span class="cmd-label">macOS and Linux</span><pre><code>curl -fsSL https://cli.flieber.com/install.sh | sh</code></pre><button class="cmd-copy" type="button" aria-label="Copy the macOS and Linux command">Copy</button></div>
-          <p class="qs-then">Then open a new chat and ask: What can Flieber do? Using Claude Desktop? Quit it and open it again first.</p>
-        </div>
-        <div class="qs-panel" role="tabpanel" id="qs-panel-windows" aria-labelledby="qs-tab-windows" hidden>
-          <p class="qs-note">Download the installer and open it. It creates your Flieber account or signs you in, and connects Flieber to your AI tool.</p>
-          <a class="btn btn-primary qs-dl" href="https://cli.flieber.com/flieber-install.bat" download>Download the installer <span class="arrow" aria-hidden="true">→</span></a>
-          <p class="qs-then">Or paste this in PowerShell, a built-in Windows app (press the Start key, type PowerShell, press Enter):</p>
-                    <div class="cmd"><span class="cmd-label">Windows (PowerShell)</span><pre><code>irm https://cli.flieber.com/install.ps1 | iex</code></pre><button class="cmd-copy" type="button" aria-label="Copy the Windows (PowerShell) command">Copy</button></div>
-          <p class="qs-then">Then open a new chat and ask: What can Flieber do? Using Claude Desktop? Quit it and open it again first.</p>
-        </div>
-        <p class="qs-foot">Works with Claude Desktop, Claude Code, Cursor and Muse. Using Claude or ChatGPT in the browser? <a href="mcp/#claude-in-browser">Add Flieber as a connector</a>. For agents: <a href="agents/">/agents</a> and <a href="llms.txt">/llms.txt</a>.</p>
-      </div>
-    </div>
-    </section>
-    <!-- CONNECT:end -->
-
-    <!-- ================= 2. LOGOS ================= -->
+    <!-- Customer logos, as on the live homepage -->
     <section class="logos-band" aria-labelledby="logos-label">
       <div class="wrap">
         <div class="logos-block">
-          <p class="logos-label" id="logos-label">Trusted by hundreds of brands</p>
+          <p class="logos-label" id="logos-label">Brands that plan with Flieber</p>
           <div class="logos" role="group" aria-labelledby="logos-label">
             <div class="logos-track">
             <img src="assets/logos/mannatech.png" alt="Mannatech" loading="lazy">
@@ -374,406 +347,204 @@
       </div>
     </section>
 
-
-    <!-- ================= 3. WHY INVENTORY ================= -->
-    <section class="section section-soft" id="why-inventory" aria-labelledby="why-title">
+    <!-- Why now? The gap -->
+    <section class="section section-soft" id="why-now" aria-labelledby="gap-title">
       <div class="wrap">
-        <div class="why-head reveal">
-          <div>
-            <span class="kicker">Why inventory</span>
-            <h2 class="h2" id="why-title" style="margin-top:20px">Purchases, promotions, ads, financing: every one is ultimately an inventory decision</h2>
+        <div class="section-head reveal">
+          <span class="kicker">The gap</span>
+          <h2 class="h2" id="gap-title" style="margin-top:20px">Why now?</h2>
+        </div>
+        <div class="pv-3 pv-row pv-span2 reveal-stagger">
+          <article class="pv-card">
+            <div class="pv-card-h"><span class="pv-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span><h3>AI is changing how you plan</h3></div>
+            <p>Forecasts can now take in everything a business knows, not only its sales history. Routine work runs on its own, and every cycle feeds what was learned back in, so each plan is sharper than the last.</p>
+          </article>
+          <article class="pv-card">
+            <div class="pv-card-h"><span class="pv-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></span><h3>Few know how to get there</h3></div>
+            <p>AI is in every board meeting, conference and newsletter. Your team sees the potential, but between daily firefighting and the next purchase order, nobody has the time or the knowledge to bring it into how your business plans.</p>
+          </article>
+          <article class="pv-card">
+            <div class="pv-card-h"><span class="pv-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M6 21V4"/><path d="M6 4h12l-2.5 4.5L18 13H6"/></svg></span><h3>First movers will win</h3></div>
+            <p>While most brands are still working out where to start, the ones that take planning and operations to the next level first will move faster, react sooner and build an advantage that grows every cycle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- What changes? The new era of planning -->
+    <section class="section on-dark pv-dark" id="what-changes" aria-labelledby="era-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">The new era of planning</span>
+          <h2 class="h2" id="era-title" style="margin-top:20px">What changes?</h2>
+        </div>
+        <div class="pv-3 pv-row pv-span3 reveal-stagger">
+          <article class="pv-card">
+            <div class="pv-viz" aria-hidden="true"><svg viewBox="0 0 260 110" fill="none">
+              <text x="6" y="17" class="pv-viz-t">sales</text><text x="6" y="43" class="pv-viz-t">marketing</text>
+              <text x="6" y="69" class="pv-viz-t">cash</text><text x="6" y="95" class="pv-viz-t">past decisions</text>
+              <path class="viz-draw" d="M104 14 C150 14 150 56 196 56"/><path class="viz-draw" d="M104 40 C150 40 150 56 196 56"/>
+              <path class="viz-draw" d="M104 66 C150 66 150 56 196 56"/><path class="viz-draw" d="M104 92 C150 92 150 56 196 56"/>
+              <path class="viz-draw pv-viz-y" d="M206 56 H252"/><circle cx="200" cy="56" r="9" class="pv-viz-dot"/>
+            </svg></div>
+            <h3>Data and context without limits</h3>
+            <p>Not just sales, inventory and purchase orders. Add marketing plans, cash flow, competitive information and the reasons behind past decisions. Flieber’s AI takes all of it into account in every forecast and plan, so your decisions reflect how your business really works, not just what your systems record.</p>
+          </article>
+          <article class="pv-card">
+            <div class="pv-viz" aria-hidden="true"><div class="pv-toasts"><div class="pv-toast"><span><b>Draft ready</b><small>Supplier 1 · 14 products · $47,750</small></span><em>Flieber</em></div><div class="pv-toast"><span><b>Draft ready</b><small>3PL US → FBA US · 5 pallets + 1 by air</small></span><em>Slack</em></div><div class="pv-toast"><span><b>2 items need you</b><small>Supplier 1 · Dec 2026</small></span><em>Claude</em></div></div></div>
+            <h3>Automations that get smarter</h3>
+            <p>Flieber specialists gather context from everyone involved in your business, from finance to marketing to operations, and bring what they’ve learned from more than 1,000 brands. They turn it into automations that take the routine off your team and improve with every cycle, so your people spend their time growing the brand, not running the process.</p>
+          </article>
+          <article class="pv-card">
+            <div class="pv-viz" aria-hidden="true"><svg viewBox="0 0 260 110" fill="none"><rect x="8" width="244" y="62.5" height="21.8" class="pv-iv-band"/><rect x="110.5" width="16.4" y="18" height="82" class="pv-iv-lost"/>
+              <path d="M8 100 H252" class="pv-viz-base"/>
+              <path class="viz-draw pv-iv-ln" d="M8.0 63.2 L10.1 64.0 L12.1 64.8 L14.2 65.5 L16.2 66.2 L18.3 67.0 L20.3 67.8 L22.4 68.5 L24.4 69.2 L26.5 70.0 L28.5 70.8 L30.6 71.5 L32.6 72.2 L34.7 73.0 L36.7 73.8 L38.8 74.5 L40.8 75.2 L42.9 76.0 L44.9 76.8 L47.0 77.5 L49.0 78.2 L51.1 79.0 L53.1 79.8 L55.2 80.5 L57.2 81.2 L59.3 82.0 L61.3 82.8 L63.4 83.5 L65.4 84.2 L67.5 85.0 L69.5 85.8 L71.6 86.5 L73.6 87.2 L75.7 88.0 L77.7 88.8 L79.8 89.5 L81.8 90.2 L83.9 91.0 L85.9 91.8 L88.0 92.5 L90.0 93.2 L92.1 94.0 L94.1 94.8 L96.2 95.5 L98.2 96.2 L100.3 97.0 L102.3 97.8 L104.4 98.5 L106.4 99.2 L108.5 100.0 L110.5 100.0 L112.6 100.0 L114.6 100.0 L116.7 100.0 L118.7 100.0 L120.8 100.0 L122.8 100.0 L124.9 100.0"/>
+              <path class="pv-iv-on" d="M124.9 100.0 L126.9 25.8 L129.0 26.5 L131.0 27.2 L133.1 28.0 L135.1 28.8 L137.2 29.5 L139.2 30.2 L141.3 31.0 L143.3 31.8 L145.4 32.5 L147.4 33.2 L149.5 34.0 L151.5 34.8 L153.6 35.5 L155.6 36.2 L157.7 37.0 L159.7 37.8 L161.8 38.5 L163.8 39.2 L165.9 40.0 L167.9 40.8 L170.0 41.5 L172.0 42.2 L174.1 43.0 L176.1 43.8 L178.2 44.5 L180.2 45.2 L182.3 46.0 L184.3 46.8 L186.4 47.5 L188.4 48.2 L190.5 49.0 L192.5 49.8 L194.6 50.5 L196.6 51.2 L198.7 52.0 L200.7 52.8 L202.8 53.5 L204.8 54.2 L206.9 55.0 L208.9 55.8 L211.0 56.5 L213.0 57.2 L215.1 58.0 L217.1 58.8 L219.2 59.5 L221.2 60.2 L223.3 61.0 L225.3 61.8 L227.4 62.5 L229.4 63.2 L231.5 64.0 L233.5 64.8 L235.6 65.5 L237.6 66.2 L239.7 67.0 L241.7 67.8 L243.8 68.5 L245.8 69.2 L247.9 70.0 L249.9 70.8 L252.0 71.5"/>
+              <path d="M120.9 4 L132.9 4 L126.9 13Z" class="pv-viz-dot"/>
+              <text x="133.1" y="12" class="pv-viz-t">on order</text>
+              <text x="250" y="80.2" text-anchor="end" class="pv-viz-t">safety</text>
+              <text x="108.5" y="30" text-anchor="end" class="pv-viz-t pv-red">stockout</text>
+            </svg></div>
+            <h3>Intelligence that compounds</h3>
+            <p>Every exception resolved, every plan approved and every outcome observed feeds back in. Insights build on each other and alerts get sharper, so each cycle you plan with more confidence than the last, and what your team learns stays even when people change.</p>
+          </article>
+        </div>
+        <p class="pv-demo pv-demo-dark reveal">Illustration · Flieber Demo Account · fictional products and people</p>
+      </div>
+    </section>
+
+    <!-- How do we get there? -->
+    <section class="section section-soft" id="how-flieber-gets-you-there" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">How Flieber gets you there</span>
+          <h2 class="h2" id="how-title" style="margin-top:20px">How do we get there?</h2>
+        </div>
+<div class="pv-steps-wrap">
+        <div class="pv-3 pv-row pv-span3 reveal-stagger">
+          <article class="pv-card">
+            <div class="pv-viz pv-viz-step" aria-hidden="true"><div class="pv-sv pv-sv-learn"><div class="pv-sv-h">At setup · we learn how your company works</div>
+              <div><b>Your team</b><span>How you plan · who approves what</span></div>
+              <div><b>Your integrations</b><span>Amazon · Shopify · your ERP · your 3PL</span></div>
+              <div><b>Your AI agents</b><span>Your rules · your notes · your history</span></div></div></div>
+            <div class="pv-card-h"><span class="pv-num" aria-hidden="true">1</span><h3>We learn how you operate</h3></div>
+            <p>Our team connects your data and creates a routine of interactions with yours to continuously capture the context behind your numbers, from finance to marketing to operations. Within the first month, you already start seeing measurable value.</p>
+          </article>
+          <article class="pv-card">
+            <div class="pv-viz pv-viz-step" aria-hidden="true"><div class="pv-sv pv-sv-rules"><div class="pv-sv-h">Your platform · fine-tuned to how you operate</div>
+              <div><b>Supplier 1</b><span>every 4 weeks · cover 120 days · full cartons · round up to MOQ if within 10%</span></div>
+              <div><b>Supplier 2</b><span>every 6 weeks · cover 90 days · full containers</span></div>
+              <div><b>3PL US → FBA US</b><span>weekly · by the pallet</span></div>
+              <p class="pv-sv-tags"><i>Rules in your own words</i><i>Combined MOQs</i><i>Launches</i><i>Wholesale</i><i>Your approval stages</i></p></div></div>
+            <div class="pv-card-h"><span class="pv-num" aria-hidden="true">2</span><h3>We tailor your platform</h3></div>
+            <p>You get your own version of Flieber, with your logo and colors, tailored to your use cases and how your team operates. Forecasting models are fine-tuned to your catalog, and new products and wholesale channels are handled by specialized tools. Views, alerts and workflows follow your preferences. When a new need comes up, it becomes part of your platform instead of a spreadsheet workaround or a long wait on the roadmap of a generic system.</p>
+          </article>
+          <article class="pv-card">
+            <div class="pv-viz pv-viz-step" aria-hidden="true"><div class="pv-sv pv-sv-stages"><div class="pv-stg"><span>Draft</span><span>In review</span><span>Ops</span><span>Finance</span><span>Approved</span></div>
+              <div class="pv-sv-chip">Engine improved · your platform gets it too</div></div></div>
+            <div class="pv-card-h"><span class="pv-num" aria-hidden="true">3</span><h3>We stay, and it keeps getting smarter</h3></div>
+            <p>Your Flieber specialists stay with your account, learning from the different people in your team. Each cycle, new opportunities are detected and more of the routine moves onto automations. Every plan is reviewed with your team before money goes out, and every month you get a scorecard on the measures that show your progress.</p>
+          </article>
+        </div>
+        </div>
+        <p class="pv-demo reveal">Illustration · Flieber Demo Account · fictional products and people</p>
+      </div>
+    </section>
+
+    <!-- Why not just buy or build software? -->
+    <section class="section" id="why-not-software-alone" aria-labelledby="build-title">
+      <div class="wrap">
+        <div class="pv-build reveal">
+          <div class="reveal">
+            <span class="kicker">Why software alone isn’t enough anymore</span>
+            <h2 class="h2" id="build-title" style="margin-top:20px">Why not just buy or build software?</h2>
           </div>
-          <p class="lead">For most product brands, inventory is the biggest use of cash. Every major decision either adds to it, draws it down, or depends on it being there. That’s why Flieber starts with inventory, and why getting it wrong costs more than almost any other mistake.</p>
-        </div>
-
-        <div class="cards-4 reveal-stagger">
-          <article class="icard">
-            <div class="icard-viz" aria-hidden="true">
-              <svg viewBox="0 0 260 120">
-                <path d="M14 104 H246" stroke="#CCD9DB"/>
-                <path class="viz-draw" d="M14 40 L60 70 L84 84 L100 92 L100 32 L150 58 L200 82 L246 96" fill="none" stroke="#1B1C1C" stroke-width="2"/>
-                <rect x="94" y="22" width="12" height="82" rx="3" fill="#F5ED61" opacity=".9"/>
-                <path d="M100 92 V32" stroke="#1B1C1C" stroke-width="2"/>
-                <text x="112" y="24" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">PO lands</text>
-                <text x="246" y="118" text-anchor="end" font-size="9" fill="#5C6568" font-family="ui-monospace,monospace">units on hand</text>
-              </svg>
+          <div class="reveal">
+            <p class="lead">For years, software had to fit every customer the same way. Each brand used a small slice of it and filled the gaps with spreadsheets. AI changed that: a platform can now be tailored to each brand, and the value comes from shaping it around how you work. That takes people who know the work, which is why Flieber now comes with the specialists who shape it, and why we no longer sell the software on its own.</p>
+            <p class="lead" style="margin-top:18px">Building it yourself is the other route, and it rarely holds: MIT’s study <i>The GenAI Divide: State of AI in Business 2025</i> found that partnering with specialists succeeds about three times as often as building in-house.</p>
+            <div class="pv-bars" aria-hidden="true">
+              <div class="pv-bar"><span class="pv-bar-l">Partnering with specialists</span><span class="pv-bar-t"><i style="--w:100%"></i></span><span class="pv-bar-v">about 67%</span></div>
+              <div class="pv-bar"><span class="pv-bar-l">Building in-house</span><span class="pv-bar-t"><i style="--w:33%"></i></span><span class="pv-bar-v">about a third as often</span></div>
             </div>
-            <h3 class="h3">Purchases and transfers</h3>
-            <p>A PO locks up cash for months. Buy too much and it sits in a warehouse; buy too little and you stock out.</p>
-          </article>
-
-          <article class="icard">
-            <div class="icard-viz" aria-hidden="true">
-              <svg viewBox="0 0 260 120">
-                <rect x="118" y="14" width="76" height="90" fill="#F5ED61" opacity=".55"/>
-                <text x="156" y="28" text-anchor="middle" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">promo</text>
-                <path d="M14 104 H246" stroke="#CCD9DB"/>
-                <path class="viz-draw" d="M14 48 L60 56 L118 64 L160 104 L246 104" fill="none" stroke="#1B1C1C" stroke-width="2"/>
-                <circle cx="160" cy="104" r="4" fill="#1B1C1C"/>
-                <text x="170" y="96" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">stockout</text>
-              </svg>
-            </div>
-            <h3 class="h3">Promotions</h3>
-            <p>A discount only pays off if you have the units to sell. Run it on thin stock and you trade margin for a stockout.</p>
-          </article>
-
-          <article class="icard">
-            <div class="icard-viz" aria-hidden="true">
-              <svg viewBox="0 0 260 120">
-                <rect x="70" y="14" width="150" height="90" fill="#F5ED61" opacity=".55"/>
-                <text x="145" y="28" text-anchor="middle" font-size="10" fill="#1B1C1C" font-family="ui-monospace,monospace">campaign</text>
-                <path d="M14 104 H246" stroke="#CCD9DB"/>
-                <path d="M70 84 L110 60 L150 44 L220 36" fill="none" stroke="#757F82" stroke-width="1.5" stroke-dasharray="4 4"/>
-                <text x="222" y="50" text-anchor="end" font-size="9" fill="#5C6568" font-family="ui-monospace,monospace">paid demand</text>
-                <path class="viz-draw" d="M14 52 L70 58 L110 80 L138 104 L246 104" fill="none" stroke="#1B1C1C" stroke-width="2"/>
-                <circle cx="138" cy="104" r="4" fill="#1B1C1C"/>
-              </svg>
-            </div>
-            <h3 class="h3">Ads and influencer campaigns</h3>
-            <p>Demand you pay for is wasted if the product runs out mid-campaign.</p>
-          </article>
-
-          <article class="icard">
-            <div class="icard-viz" aria-hidden="true">
-              <svg viewBox="0 0 260 120">
-                <path d="M14 104 H246" stroke="#CCD9DB"/>
-                <g fill="#CCD9DB">
-                  <rect x="104" y="52" width="22" height="52" rx="3"/><rect x="132" y="44" width="22" height="60" rx="3"/><rect x="160" y="58" width="22" height="46" rx="3"/><rect x="188" y="38" width="22" height="66" rx="3"/>
-                </g>
-                <rect x="216" y="30" width="22" height="74" rx="3" fill="#F5ED61" stroke="#1B1C1C"/>
-                <path d="M14 66 H246" stroke="#1B1C1C" stroke-width="1.5" stroke-dasharray="5 4"/>
-                <text x="14" y="58" font-size="9" fill="#1B1C1C" font-family="ui-monospace,monospace">borrowing</text>
-                <text x="14" y="80" font-size="9" fill="#1B1C1C" font-family="ui-monospace,monospace">base</text>
-                <text x="104" y="22" font-size="9" fill="#5C6568" font-family="ui-monospace,monospace">stock value</text>
-              </svg>
-            </div>
-            <h3 class="h3">Financing</h3>
-            <p>Credit lines and inventory loans are sized on stock value and sell-through. What you can borrow depends on your inventory numbers being right.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 4. COLLABORATIVE AI ================= -->
-    <section class="section" id="collaborative-ai" aria-labelledby="collab-title">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="kicker">Collaborative AI</span>
-          <h2 class="h2" id="collab-title" style="margin-top:20px">Your team decides. Agents do the work around it</h2>
-          <p class="lead">Inventory decisions commit cash for months. With Flieber, your team stays in charge of them, while Flieber’s AI and your own agents take on everything around them.</p>
-        </div>
-
-        <div class="collab reveal-stagger">
-          <article class="collab-card">
-            <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><circle cx="5.5" cy="5.5" r="2.2"/><circle cx="11" cy="6" r="1.8"/><path d="M1.6 13.5c.5-2.3 2-3.6 3.9-3.6s3.4 1.3 3.9 3.6M10 9.6c1.9 0 3.3 1.2 3.8 3.4"/></svg></span><span class="collab-step">Decides</span></div>
-            <h3 class="h3">Your team</h3>
-            <p>Set the objectives and constraints, add the context no system has, and make the final call on every decision that commits cash.</p>
-          </article>
-          <article class="collab-card">
-            <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><path d="M8 1.8l1.5 3.7 3.7 1.5-3.7 1.5L8 12.2 6.5 8.5 2.8 7l3.7-1.5z"/><path d="M12.6 11.2l.6 1.5 1.5.6-1.5.6-.6 1.5-.6-1.5-1.5-.6 1.5-.6z"/></svg></span><span class="collab-step">Prepare and carry out</span></div>
-            <h3 class="h3">Flieber’s AI and your agents</h3>
-            <p>Keep your data consolidated and current, watch every SKU and every signal, prepare each decision with the reasoning behind it and carry it out once you approve. Your own agents work from the same data, context and engine through MCP and API.</p>
-          </article>
-          <article class="collab-card">
-            <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg></span><span class="collab-step">Advises</span></div>
-            <h3 class="h3">Flieber’s specialists</h3>
-            <p>Optional, with Managed Services. Planners, data specialists, operators and engineers who work alongside your team in three plans: Lite, Core and Full.</p>
-          </article>
-        </div>
-
-        <p class="collab-under reveal"><a href="features/#control-and-approval"><span>You decide how much runs on its own. By default, every change waits for your approval.</span> <span class="arrow" aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <!-- ================= 5. HOW FLIEBER IS BUILT (stacked six layers) =================
-         Scroll-driven, after legora.com: the scene stays pinned while each layer drops onto the
-         stack (data first, at the bottom) and its card opens on the left; at the end the plates
-         close into one block. Pure CSS 3D; assets/js/site.js drives it. Reduced motion or no JS:
-         the full stack and every description show, unpinned. -->
-    <section class="section layerstack-sec" id="how-flieber-is-built" aria-labelledby="stack-title">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="kicker">How Flieber is built</span>
-          <h2 class="h2" id="stack-title" style="margin-top:20px">What your agents run on</h2>
-          <p class="lead">An agent on a spreadsheet can sound confident and still get inventory wrong. It doesn’t know which listings are the same product, what’s inside a bundle or that last month’s dip was a stockout. Before running your brand with agents, someone has to keep the data true. Each layer adds something the one below it doesn’t have.</p>
-        </div>
-      </div>
-      <div class="layerstack" id="layerstack" style="--n:6">
-        <div class="ls-pin">
-          <div class="wrap ls-grid">
-            <ol class="ls-steps" aria-label="The six layers, from data to decisions">
-              <li class="ls-step is-active" data-step="0">
-                <button class="ls-pill" type="button" aria-controls="ls-body-0" aria-expanded="true"><span class="ls-name">Your data</span><span class="ls-plus" aria-hidden="true"></span></button>
-                <div class="ls-body" id="ls-body-0">
-                  <div class="ls-body-inner">
-                    <p class="ls-title">Your data</p>
-                    <p>Sales, orders, inventory and shipments arrive from every connected system, each in its own format, and are reconciled into one record. Gaps and anomalies surface here, before anything is planned on them.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="ls-step" data-step="1">
-                <button class="ls-pill" type="button" aria-controls="ls-body-1" aria-expanded="false"><span class="ls-name">Business context</span><span class="ls-plus" aria-hidden="true"></span></button>
-                <div class="ls-body" id="ls-body-1">
-                  <div class="ls-body-inner">
-                    <p class="ls-title">Business context</p>
-                    <p>The records become a model of how your business actually works: which listings are the same product, which components make a bundle, which supplier ships to which warehouse and what a stockout did to last month’s sales.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="ls-step" data-step="2">
-                <button class="ls-pill" type="button" aria-controls="ls-body-2" aria-expanded="false"><span class="ls-name">Planning engine</span><span class="ls-plus" aria-hidden="true"></span></button>
-                <div class="ls-body" id="ls-body-2">
-                  <div class="ls-body-inner">
-                    <p class="ls-title">Planning engine</p>
-                    <p>Proprietary algorithms do the math: forecasts, projections and recommendations computed against your real constraints, shaped by the business context of more than 1,000 commerce brands since 2019.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="ls-step" data-step="3">
-                <button class="ls-pill" type="button" aria-controls="ls-body-3" aria-expanded="false"><span class="ls-name">Collaborative AI</span><span class="ls-plus" aria-hidden="true"></span></button>
-                <div class="ls-body" id="ls-body-3">
-                  <div class="ls-body-inner">
-                    <p class="ls-title">Collaborative AI</p>
-                    <p>The AI layer translates between the engine and whoever is asking, your team or your agents. It turns a question or an objective into a calculation, explains the result in plain language and runs the follow-up work on schedule.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="ls-step" data-step="4">
-                <button class="ls-pill" type="button" aria-controls="ls-body-4" aria-expanded="false"><span class="ls-name">Where you work</span><span class="ls-plus" aria-hidden="true"></span></button>
-                <div class="ls-body" id="ls-body-4">
-                  <div class="ls-body-inner">
-                    <p class="ls-title">Where you work</p>
-                    <p>The same answers reach you wherever you work: in the Flieber app, Slack and Google Sheets, or through Claude and your own agents via MCP and API.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="ls-step" data-step="5">
-                <button class="ls-pill" type="button" aria-controls="ls-body-5" aria-expanded="false"><span class="ls-name">Control</span><span class="ls-plus" aria-hidden="true"></span></button>
-                <div class="ls-body" id="ls-body-5">
-                  <div class="ls-body-inner">
-                    <p class="ls-title">Control</p>
-                    <p>Nothing changes in your systems without passing the approval rules you set. Your data is never sold or shared, and Flieber does not train on it.</p>
-                  </div>
-                </div>
-              </li>
-            </ol>
-            <div class="ls-scene" aria-hidden="true">
-              <div class="iso" id="iso">
-                <div class="iso-floor"></div>
-                <div class="iso-plate" style="--i:0" data-plate="0">
-                  <div class="iso-top"><span class="iso-label">Your data</span></div>
-                  <div class="iso-side iso-side-a"></div>
-                  <div class="iso-side iso-side-b"></div>
-                </div>
-                <div class="iso-plate" style="--i:1" data-plate="1">
-                  <div class="iso-top"><span class="iso-label">Business context</span></div>
-                  <div class="iso-side iso-side-a"></div>
-                  <div class="iso-side iso-side-b"></div>
-                </div>
-                <div class="iso-plate" style="--i:2" data-plate="2">
-                  <div class="iso-top"><span class="iso-label">Planning engine</span></div>
-                  <div class="iso-side iso-side-a"></div>
-                  <div class="iso-side iso-side-b"></div>
-                </div>
-                <div class="iso-plate" style="--i:3" data-plate="3">
-                  <div class="iso-top"><span class="iso-label">Collaborative AI</span></div>
-                  <div class="iso-side iso-side-a"></div>
-                  <div class="iso-side iso-side-b"></div>
-                </div>
-                <div class="iso-plate" style="--i:4" data-plate="4">
-                  <div class="iso-top"><span class="iso-label">Where you work</span></div>
-                  <div class="iso-side iso-side-a"></div>
-                  <div class="iso-side iso-side-b"></div>
-                </div>
-                <div class="iso-plate" style="--i:5" data-plate="5">
-                  <div class="iso-top"><span class="iso-label">Control</span><svg class="iso-mark" viewBox="0 2 192 137" aria-hidden="true"><path d="M0.3 3.25C0 2.74 0.37 2.1 0.96 2.1L107.21 2.1C110.4 2.1 113.48 3.21 115.95 5.22L187.56 63.81C191.68 67.19 191.68 73.49 187.56 76.86L115.95 135.45C113.48 137.47 110.4 138.57 107.21 138.57L70.3 138.57C69.47 138.57 68.71 138.13 68.3 137.42L43.57 94.23C43.27 93.72 43.64 93.08 44.23 93.08L141.7 93.08C142.12 93.08 142.46 92.74 142.46 92.32L142.46 48.36C142.46 47.94 142.12 47.59 141.7 47.59L27.29 47.59C26.47 47.59 25.71 47.16 25.3 46.45L0.3 3.25"/></svg></div>
-                  <div class="iso-side iso-side-a"></div>
-                  <div class="iso-side iso-side-b"></div>
-                </div>
-              </div>
-            </div>
-            <p class="ls-more"><a class="link-arrow" href="security/">How we handle your data <span class="arrow" aria-hidden="true">→</span></a></p>
-            <div class="ls-progress" aria-hidden="true"><i></i></div>
+            <p class="pv-cite">Source: MIT NANDA, <i>The GenAI Divide: State of AI in Business 2025</i>. Vendor and partnership routes succeeded about 67% of the time, and internal builds about a third as often (<a href="https://www.aol.com/finance/mit-report-95-generative-ai-105412029.html" rel="noopener" target="_blank">as reported by Fortune</a>). This is an outside study, not a Flieber result.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= 6. FIVE MODULES (question-led cards) ================= -->
-    <section class="section on-dark" id="modules" aria-labelledby="modules-title">
+    <!-- Is this for me? -->
+    <section class="section section-soft" id="when-brands-bring-us-in" aria-labelledby="moments-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="kicker">Modules</span>
-          <h2 class="h2" id="modules-title" style="margin-top:20px">Five modules, one product</h2>
-          <p class="lead">Each module answers one of the questions every inventory planner asks. Take all five or only the ones you need: the data layer works on its own, and if you keep your own data, the forecasting and planning modules can work from it.</p>
+          <span class="kicker">When brands bring us in</span>
+          <h2 class="h2" id="moments-title" style="margin-top:20px">Is this for me?</h2>
         </div>
-        <div class="mq-grid reveal-stagger">
-          <a class="mq-card" href="product/data-layer/">
-            <span class="mq-mod"><span class="n">01</span>Data layer</span>
-            <h3 class="mq-q">What’s actually happening across my business?</h3>
-            <p>One current, reconciled view of every channel, warehouse and supplier, ready for your team or your own tools. Available on its own.</p>
-            <span class="mq-go">Data layer <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-          <a class="mq-card" href="product/demand-forecasting/">
-            <span class="mq-mod"><span class="n">02</span>Demand forecasting</span>
-            <h3 class="mq-q">What will sell, and where?</h3>
-            <p>Forecasts for every product on every channel, corrected for stockouts and promotions.</p>
-            <span class="mq-go">Demand forecasting <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-          <a class="mq-card" href="product/inventory-forecasting/">
-            <span class="mq-mod"><span class="n">03</span>Inventory forecasting</span>
-            <h3 class="mq-q">Where will I run out, or sit on too much?</h3>
-            <p>Stockouts, overstock and lost sales by product and location, while there’s still time to act.</p>
-            <span class="mq-go">Inventory forecasting <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-          <a class="mq-card" href="product/replenishment/">
-            <span class="mq-mod"><span class="n">04</span>Replenishment</span>
-            <h3 class="mq-q">What should I buy or move, how much and when?</h3>
-            <p>Purchase and transfer recommendations within MOQs, case packs, lead times and cash, tested before you commit.</p>
-            <span class="mq-go">Replenishment <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-          <a class="mq-card" href="product/workflows/">
-            <span class="mq-mod"><span class="n">05</span>Workflows</span>
-            <h3 class="mq-q">How does the decision get done?</h3>
-            <p>Approved decisions carried into suppliers, ERPs, Amazon, 3PLs and your own tools, with as much or as little approval as you choose.</p>
-            <span class="mq-go">Workflows <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-        </div>
-        <p class="link-row reveal"><a class="link-arrow mq-all" href="features/">See every feature <span class="arrow" aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <!-- ================= 7. SOLUTIONS ================= -->
-    <section class="section" id="solutions" aria-labelledby="solutions-title">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="kicker">Solutions</span>
-          <h2 class="h2" id="solutions-title" style="margin-top:20px">Built for the way your business is organized</h2>
-          <p class="lead">Whether you run one brand across many channels or many brands at once, Flieber covers the whole operation.</p>
-          <p class="link-row"><a class="link-arrow" href="features/">See every feature <span class="arrow" aria-hidden="true">→</span></a></p>
-        </div>
-        <div class="sol-two reveal-stagger">
-          <a class="sol-card" href="multichannel/">
-            <span class="n">01</span>
-            <h3 class="h3">Multichannel brands</h3>
-            <p>DTC, marketplaces and wholesale in one plan, drawing on one inventory.</p>
-            <span class="sol-go">Multichannel brands <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-          <a class="sol-card" href="agencies/">
-            <span class="n">02</span>
-            <h3 class="h3">Agencies and aggregators</h3>
-            <p>Every brand in one place, planned individually or consolidated.</p>
-            <span class="sol-go">Agencies and aggregators <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-        </div>
-        <p class="sol-compare reveal"><span>Comparing platforms?</span> <a href="before-you-choose/">Before you choose, ask these questions</a> <span class="arrow" aria-hidden="true">→</span></p>
-        <div class="which-after reveal">
-          <p class="which-under">Not sure what fits? Book a demo and we’ll tell you honestly, even if the answer is neither.</p>
-          <div class="fit-col fit-no">
-            <h3 class="h3">Probably not for you if:</h3>
-            <ul>
-              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You sell on one channel and a spreadsheet still works</li>
-              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You’re looking for a warehouse management system or a full ERP</li>
-              <li><span class="ico" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 2l6 6M8 2L2 8" stroke="#757F82" stroke-width="1.5"/></svg></span>You plan manufacturing runs (MRP) rather than buying finished goods</li>
-            </ul>
-          </div>
+        <div class="pv-moments pv-row pv-span3 reveal-stagger">
+          <article class="pv-card pv-moment">
+            <span class="pv-tag">A planner leaves or changes roles</span>
+            <blockquote>“The person who knew how all this works is gone.”</blockquote>
+            <p>What they knew is captured in your system, so the intelligence stays when people change.</p>
+          </article>
+          <article class="pv-card pv-moment">
+            <span class="pv-tag">A new channel, retailer or wholesale account</span>
+            <blockquote>“We just added Amazon, TikTok Shop, a big retailer.”</blockquote>
+            <p>We plan every channel from one picture, including wholesale and launches with no sales history.</p>
+          </article>
+          <article class="pv-card pv-moment">
+            <span class="pv-tag">A system dies or changes</span>
+            <blockquote>“Our planning tool shut down.” “We’re moving ERP or warehouse.”</blockquote>
+            <p>We set up around your new systems and keep planning running through the switch.</p>
+          </article>
+          <article class="pv-card pv-moment">
+            <span class="pv-tag">Fast growth</span>
+            <blockquote>“We’re aiming to double, and the way we plan won’t hold.”</blockquote>
+            <p>Planning scales with you: the routine runs on its own, and your team stays focused on the calls.</p>
+          </article>
+          <article class="pv-card pv-moment">
+            <span class="pv-tag">An inventory scare</span>
+            <blockquote>“We ran out of our bestseller.” “We’re sitting on months of stock.”</blockquote>
+            <p>Risks are flagged before they hit your shelves or your cash, and every plan is checked before money goes out.</p>
+          </article>
+          <article class="pv-card pv-moment">
+            <span class="pv-tag">A push to use AI</span>
+            <blockquote>“The board asked what we’re doing with AI.”</blockquote>
+            <p>A clear path into AI for your operation, with people who’ve done it for more than 1,000 brands.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ================= 8. WHAT YOU CAN DO ================= -->
-    <section class="section section-soft" id="use-cases" aria-labelledby="asks-title">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="kicker">What you can do with it</span>
-          <h2 class="h2" id="asks-title" style="margin-top:20px">Ask anything your operation depends on</h2>
-        </div>
-
-        <div class="asks reveal-stagger">
-          <a class="ask" href="prompt-ideas/#p4">
-            <span class="n">01</span>
-            <h3 class="h3">Know the position</h3>
-            <p>On-hand, inbound and days of cover by SKU, channel and location.</p>
-            <div class="prompt"><div><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3v5a3 3 0 003 3h7m0 0l-3-3m3 3l-3 3" stroke="currentColor" stroke-width="1.4"/></svg><span>“Which of our top SKUs run out on Amazon before their next purchase order lands?”</span></div></div>
-          </a>
-          <a class="ask" href="prompt-ideas/#p14">
-            <span class="n">02</span>
-            <h3 class="h3">Forecast demand</h3>
-            <p>SKU-level forecasts per channel, reconstructed through stockouts and promotions.</p>
-            <div class="prompt"><div><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3v5a3 3 0 003 3h7m0 0l-3-3m3 3l-3 3" stroke="currentColor" stroke-width="1.4"/></svg><span>“What will the holiday bundle sell in Q4 if we keep it in stock?”</span></div></div>
-          </a>
-          <a class="ask featured" href="prompt-ideas/#p22">
-            <span class="n">03</span>
-            <h3 class="h3">Simulate a decision</h3>
-            <p>Impact on inventory, revenue, margin and cash before anything is committed.</p>
-            <div class="prompt"><div><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3v5a3 3 0 003 3h7m0 0l-3-3m3 3l-3 3" stroke="currentColor" stroke-width="1.4"/></svg><span>“If we pause ads on the five SKUs most at risk of stocking out, what happens to cash in November?”</span></div></div>
-          </a>
-          <a class="ask" href="prompt-ideas/#p6">
-            <span class="n">04</span>
-            <h3 class="h3">Draft purchase orders</h3>
-            <p>Replenishment by supplier, with MOQs, lead times and container fill applied.</p>
-            <div class="prompt"><div><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3v5a3 3 0 003 3h7m0 0l-3-3m3 3l-3 3" stroke="currentColor" stroke-width="1.4"/></svg><span>“Every Monday, draft POs by supplier and send them to NetSuite for approval.”</span></div></div>
-          </a>
-          <a class="ask" href="prompt-ideas/#p32">
-            <span class="n">05</span>
-            <h3 class="h3">Watch and alert</h3>
-            <p>Scheduled checks that flag only what needs a human.</p>
-            <div class="prompt"><div><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3v5a3 3 0 003 3h7m0 0l-3-3m3 3l-3 3" stroke="currentColor" stroke-width="1.4"/></svg><span>“When a large wholesale order comes in, check whether fulfilling it puts DTC or Amazon stock at risk and recommend whether to accept, split, delay or replenish.”</span></div></div>
-          </a>
-          <a class="ask" href="prompt-ideas/#p23">
-            <span class="n">06</span>
-            <h3 class="h3">Act beyond inventory</h3>
-            <p>Tie pricing and ad decisions to what your inventory can support.</p>
-            <div class="prompt"><div><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3v5a3 3 0 003 3h7m0 0l-3-3m3 3l-3 3" stroke="currentColor" stroke-width="1.4"/></svg><span>“When a product has a forecasted stockout, adjust price and ad campaigns accordingly.”</span></div></div>
-          </a>
-        </div>
-        <p class="link-row reveal"><a class="link-arrow" href="prompt-ideas/">More prompt ideas <span class="arrow" aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <!-- ================= 10. PROOF ================= -->
-    <section class="section section-soft" id="proof" aria-labelledby="proof-title">
+    <!-- Can I trust you? -->
+    <section class="section" id="proof" aria-labelledby="proof-title">
       <div class="wrap">
         <div class="section-head reveal">
           <span class="kicker">Proof</span>
-          <h2 class="h2" id="proof-title" style="margin-top:20px">What brands get when people and AI plan together</h2>
+          <h2 class="h2" id="proof-title" style="margin-top:20px">Can I trust you?</h2>
         </div>
-
-        <div class="results-block results-light reveal">
-          <ul class="results">
-            <li class="result">
-              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5.5 11.5L12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>38%</span>
-              <span class="result-label">increase in sales</span>
-            </li>
-            <li class="result">
-              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5.5 12.5L12 19l6.5-6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>62%</span>
-              <span class="result-label">reduction in stockouts</span>
-            </li>
-            <li class="result">
-              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5.5 12.5L12 19l6.5-6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>17%</span>
-              <span class="result-label">reduction in excess inventory</span>
-            </li>
-            <li class="result">
-              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5.5 12.5L12 19l6.5-6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>88%</span>
-              <span class="result-label">less time on replenishment decisions</span>
-            </li>
-          </ul>
-          <p class="results-note">Average across customers using Flieber for 12+ months</p>
-        </div>
-
-        <div class="proof-top reveal-stagger">
-          <div class="stat">
-            <div class="stat-bars" aria-hidden="true">
-              <i style="--h:62%"></i><i style="--h:70%"></i><i style="--h:58%"></i><i style="--h:76%"></i><i style="--h:66%"></i><i style="--h:80%"></i><i style="--h:72%"></i><i style="--h:84%"></i><i class="win" style="--h:40%"></i>
-            </div>
-            <div class="big">36<sup>%</sup></div>
-            <p class="claim">more accurate than our previous portfolio of 16 forecasting models, tested on a random sample of 46,000 products.</p>
-            <div class="verify">
-              <span class="badge">Custom forecasting models developed in partnership with Nixtla</span>
-            </div>
+        <div class="pv-proof reveal">
+          <div class="pv-proof-l">
+            <h3 class="pv-sub">Experience</h3>
+            <div class="pv-exp"><span class="pv-res-n">1,000+</span><span class="pv-res-l">brands have used Flieber since 2019</span></div>
+          </div>
+          <div class="pv-proof-r">
+            <h3 class="pv-sub">What brands see after 12 months or more</h3>
+            <div class="pv-res"><div class="pv-res-i"><span class="pv-res-n">↑38%</span><span class="pv-res-l">more sales</span></div><div class="pv-res-i"><span class="pv-res-n">↓62%</span><span class="pv-res-l">fewer stockouts</span></div><div class="pv-res-i"><span class="pv-res-n">↓17%</span><span class="pv-res-l">less excess inventory</span></div><div class="pv-res-i"><span class="pv-res-n">↓88%</span><span class="pv-res-l">less time on replenishment decisions</span></div></div>
           </div>
         </div>
+        <p class="pv-cite pv-proof-note">Results are averages across customers using Flieber for 12 months or more. Not a guarantee for every brand.</p>
+        <div class="pv-teamband reveal">
+          <div>
+            <h3 class="pv-sub" style="margin-top:0">The team behind your account</h3>
+            <p class="pv-team-lead">Experience at the intersection of planning, operations and technology.</p>
+          </div>
+          <div class="pv-team"><div class="pv-team-i"><b>Former operators</b><span>People who have planned and run operations at commerce brands themselves.</span></div><div class="pv-team-i"><b>A senior AI team</b><span>The engineers and data scientists behind your models and automations.</span></div><div class="pv-team-i"><b>Process consultants</b><span>Experience improving how planning teams work, not only what tools they use.</span></div></div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Customer voices -->
+    <section class="section pv-voices" id="customer-quotes" aria-label="What customers say">
+      <div class="wrap">
         <div class="quotes reveal" id="quotes" aria-roledescription="carousel" aria-label="Customer quotes">
           <div class="quote-stage" aria-live="polite">
             <figure class="quote active" aria-roledescription="slide" aria-label="1 of 5">
@@ -811,89 +582,61 @@
       </div>
     </section>
 
-    <!-- ================= 11. FROM THE FOUNDER ================= -->
-    <section class="section on-dark founder" id="who-we-are" aria-labelledby="founder-title">
+    <!-- What else should I know? -->
+    <section class="section section-soft" id="questions" aria-labelledby="questions-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="kicker">Who we are</span>
-          <h2 class="h2" id="founder-title" style="margin-top:20px">Why we built Flieber to work with planners, not around them</h2>
+          <span class="kicker">Questions</span>
+          <h2 class="h2" id="questions-title" style="margin-top:20px">What else should I know?</h2>
         </div>
-        <figure class="founder-quote reveal">
-          <blockquote>
-            <p>Planners bring judgment. They know the supplier who always ships late, the retailer who over-promises, the promotion that isn’t in any system yet and the hidden rules that impact each decision. AI brings speed, vigilance and precision: it watches every SKU, every channel and every change, around the clock. Neither is enough on its own. Flieber puts them on the same team. Flieber’s AI gives teams the most up-to-date contextualized data; your people make the calls; Flieber prepares every decision and carries it out once approved.</p>
-            <p>Our vision is to give every commerce brand operator the tools to focus on what matters most: making the best decisions and driving progress. By making contextualized data always available, removing repetitive tasks and streamlining complex workflows, we help operators spend less time on clerical work and more time actually making impactful decisions.</p>
-            <p>We’re building more than a product. Alongside industry professionals, we’re building a new gold standard for operations at modern commerce brands. A future where tech complements expertise, where commerce teams operate with confidence and efficiency and where every operator has the freedom to do their best work.</p>
-          </blockquote>
-          <figcaption>
-            <span class="founder-photo"><img src="assets/img/fabricio-miranda.jpg" alt="Fabricio Miranda" width="64" height="64" loading="lazy"></span>
-            <span class="founder-who"><b>Fabricio Miranda</b><span>Founder and CEO</span></span>
-          </figcaption>
-        </figure>
-        <ul class="founder-facts reveal">
-          <li>More than 1,000 commerce brands since 2019</li>
-          <li>Thousands of users</li>
-          <li>169 Madison Avenue, New York</li>
-        </ul>
-        <p class="founder-more reveal"><a class="link-arrow" href="who-we-are/">Read our story <span class="arrow" aria-hidden="true">→</span></a></p>
+        <div class="faq">
+          <details>
+            <summary>I already have a great team.<span class="plus" aria-hidden="true"></span></summary>
+            <p>Good, because Flieber works through them, not around them. Your team keeps every decision and every relationship with suppliers and partners. What changes is the work around those decisions: data checks, plan preparation and follow-ups move onto automations, new context reaches them every day, and they get specialists who have seen how more than 1,000 brands solve the same problems. Most teams are not short on talent; they are short on time.</p>
+          </details>
+          <details>
+            <summary>Why not build this ourselves with AI?<span class="plus" aria-hidden="true"></span></summary>
+            <p>You can, and some brands try. The first version is usually exciting. The hard part comes after: every new use case, team change and data source adds upkeep, until maintaining the tool becomes someone’s full-time job. MIT found that partnering with specialists succeeds about three times as often as building in-house. With Flieber you start from what works across more than 1,000 brands, and the upkeep is ours.</p>
+          </details>
+          <details>
+            <summary>What exactly do your specialists do?<span class="plus" aria-hidden="true"></span></summary>
+            <p>They create a routine of interactions with your team, which can go as far as joining your planning and S&amp;OP meetings if you want them there. Through it, they gather context from finance, marketing and operations and make sure your platform has it. They keep your data and setup right as your business changes, review plans with your team before money goes out, and find the opportunities for better data and automation in how you work. Behind your main contacts is a wider team with experience at the intersection of planning, operations and technology.</p>
+          </details>
+          <details>
+            <summary>Do I lose control?<span class="plus" aria-hidden="true"></span></summary>
+            <p>No. Your team approves every plan and every order, and nothing moves without that approval. You also decide how much the specialists take on: some brands start with a second set of eyes on their plans, others hand over the whole planning preparation, and you can change that as trust builds.</p>
+          </details>
+          <details>
+            <summary>Do your specialists leave after setup?<span class="plus" aria-hidden="true"></span></summary>
+            <p>No. Once your platform is set up, the specialists stay with your account. Their ongoing work is what makes the automations learn and the intelligence compound.</p>
+          </details>
+          <details>
+            <summary>How do I know it’s working?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Every month you get a scorecard on the measures you agree on with us at the start. You also see the work directly: plans reviewed, exceptions resolved and routine moved onto automations.</p>
+          </details>
+          <details>
+            <summary>Why does it cost more than software?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Because you’re not buying a tool your team then has to make work. You get three things software alone doesn’t give you. A platform tailored to your brand, with your products, channels, suppliers and rules built in. Specialists who keep it right as your business changes, review plans with your team and turn recurring work into automations. And what we’ve learned from more than 1,000 brands, so you start from what works instead of from scratch. Compare it with what the alternatives really cost: the time your team spends working around a generic tool, a new hire to run the process, or an in-house app someone has to maintain. Inventory shapes your advertising, promotions and cash flow, and one avoided stockout or overstock on a bestseller can pay for a year.</p>
+          </details>
+          <details>
+            <summary>I just want software. I don’t want to pay for a team.<span class="plus" aria-hidden="true"></span></summary>
+            <p>We understand, and for years we sold Flieber that way. Here’s what we learned from more than 1,000 brands: software that has to fit everyone leaves gaps. Each brand used a small slice of it and filled the rest with spreadsheets and workarounds, so planning still depended on a few people’s heads. The specialists aren’t a team added on top of the software. They work with your team to make every planning cycle more streamlined and complete: they bring best practices from what works across other brands, act as a second set of eyes before money goes out, and find where better data or automation will help, building it into your platform as your business changes. They don’t replace your team or take your decisions. You decide how involved they get, from reviewing your plans to preparing the whole planning cycle for your team’s approval.</p>
+          </details>
+          <details>
+            <summary>What happens in the first month?<span class="plus" aria-hidden="true"></span></summary>
+            <p>We get everything ready for you to plan on a solid foundation. Our team learns how you operate and gathers the context behind your numbers from the people involved, from finance to marketing to operations. We connect your data, map your products, channels and suppliers, and make the platform your own: views, alerts, workflows and forecasting set up around your use cases and preferences. Together we define the main gaps to close and the indicators we’ll follow. Within the first month, you already start seeing measurable value, and every cycle after that builds on it.</p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <!-- ================= 12. YOUR DATA STAYS YOURS ================= -->
-    <section class="section" id="security" aria-labelledby="security-title">
+    <!-- Final call to action -->
+    <section class="section pv-final" id="talk-to-a-specialist" aria-labelledby="final-title">
       <div class="wrap">
-        <div class="sec-strip-head reveal">
-          <div>
-            <span class="kicker">Security</span>
-            <h2 class="h2" id="security-title" style="margin-top:20px">Your data stays yours</h2>
-          </div>
-          <a class="link-arrow" href="security/">How we handle your data <span class="arrow" aria-hidden="true">→</span></a>
-        </div>
-        <ul class="sec-strip reveal-stagger">
-          <li>
-            <span class="sec-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#1B1C1C" stroke-width="1.4"><path d="M9 1.8l6 2.4v4.3c0 3.7-2.5 6.6-6 7.7-3.5-1.1-6-4-6-7.7V4.2z"/><path d="M6.3 9.1l1.9 1.9 3.6-3.8"/></svg></span>
-            <h3>Never sold or shared</h3>
-            <p>Your data stays yours.</p>
-          </li>
-          <li>
-            <span class="sec-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#1B1C1C" stroke-width="1.4"><circle cx="9" cy="9" r="6.6"/><path d="M4.4 13.6l9.2-9.2"/></svg></span>
-            <h3>No training on your data</h3>
-            <p>Flieber does not train on customer data, and its AI providers are set up not to.</p>
-          </li>
-          <li>
-            <span class="sec-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#1B1C1C" stroke-width="1.4"><rect x="3.2" y="7.8" width="11.6" height="8" rx="2"/><path d="M5.8 7.8V5.6a3.2 3.2 0 016.4 0v2.2"/></svg></span>
-            <h3>Encrypted on AWS</h3>
-            <p>Hosted on Amazon Web Services in the US, encrypted in transit and at rest.</p>
-          </li>
-          <li>
-            <span class="sec-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#1B1C1C" stroke-width="1.4"><rect x="2.4" y="3" width="13.2" height="12" rx="2"/><path d="M5.6 9.2l2.2 2.2 4.6-4.8"/></svg></span>
-            <h3>Changes follow your rules</h3>
-            <p>Every change Flieber makes to your systems follows approval rules you set.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ================= 13. TRY IT ================= -->
-    <section class="section try" id="try" aria-labelledby="try-title">
-      <div class="wrap" style="position:relative">
-        <div class="section-head reveal">
-          <span class="kicker">Try it</span>
-          <h2 class="h2" id="try-title" style="margin-top:20px">Try Flieber free on your own data</h2>
-          <p class="lead">Start a 14-day free trial, no credit card required and no demo call. Flieber shows your price as soon as onboarding is done, before you pay anything.</p>
-        </div>
-        <div class="try-grid reveal-stagger">
-          <div class="try-card dark">
-            <span class="label"><i aria-hidden="true"></i>During the trial</span>
-            <p style="margin-top:14px">Connect your channels through native integrations (Amazon Seller Central, Shopify, Walmart, TikTok Shop, eBay, Etsy, BigCommerce, Google Sheets). Standard setup included.</p>
-          </div>
-          <div class="try-card">
-            <span class="label"><i aria-hidden="true"></i>On a paid plan</span>
-            <p style="margin-top:14px">Assisted integrations and simple customizations, set up by Flieber’s team.</p>
-          </div>
-        </div>
-        <div class="try-actions reveal">
-          <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        <h2 class="h2" id="final-title">See what your planning looks like in the new era</h2>
+        <div class="pv-actions">
+          <a class="btn btn-primary" href="https://www.flieber.com/book-a-demo">Talk to a specialist <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
         </div>
       </div>
     </section>
@@ -905,7 +648,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <img src="assets/img/flieber-logo-light.svg" alt="Flieber" width="132" height="23">
-          <p class="tagline">The inventory intelligence layer <em>your agents run on.</em></p>
+          <p class="tagline">Flieber: where AI meets <em>inventory experts.</em></p>
         </div>
         <div>
           <h2 class="footer-h">Product</h2>
@@ -916,7 +659,6 @@
             <li><a href="mcp/">MCP and AI agents</a></li>
             <li><a href="pricing/">Pricing</a></li>
             <li><a href="security/">Security &amp; data</a></li>
-            <li><a href="managed-services/">Managed Services</a></li>
           </ul>
         </div>
         <div>
@@ -950,7 +692,6 @@
           </ul>
         </div>
       </div>
-      <div class="footer-mark" aria-hidden="true"><img src="assets/img/flieber-logo-light.svg" alt=""></div>
       <div class="footer-bottom">
         <span>169 Madison Avenue, New York, NY 10016</span>
         <span>© <span id="year">2026</span> Flieber</span>

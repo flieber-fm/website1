@@ -109,4 +109,6 @@ Decided by Fabricio after the brief, and already in V16 (the brief may lag behin
 
 - Service `website-positioning` (bba98e77-a21e-4b8d-adac-e77c24dc06d9), branch `claude/website-positioning`.
 - URL: https://website-positioning-production.up.railway.app (same robots and noindex setup as the Option 2 preview).
-- At creation it serves the same site as the Option 2 preview; V16 is at /home-variants/16/. Making V16 the homepage (`index.html`) is the first build step.
+- Prepared (Nov 28): V16 is the homepage. `scripts/build-positioning-v16.py` writes `index.html` (and the V16 snapshot). The Option 2 homepage is kept as `scripts/home-option2-legacy.html`: the V16 generator takes its head, footer, logo strip, results and quotes from it, and `build-content.py` reads the founder quote and quotes from it and syncs its Connect and prompt blocks into it, so the build never overwrites `index.html`. `scripts/site_chrome.py` no longer writes the shared nav and footer into `index.html` (V16 has its own).
+- Full rebuild on this branch: `python3 scripts/build-content.py && python3 scripts/build-positioning-v16.py && python3 scripts/build-hubspot.py && python3 scripts/build-home-variants.py`
+- Every other page is still the Option 2 page with the old nav and footer; rebuilding them on the brief is the project.

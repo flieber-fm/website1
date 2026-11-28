@@ -207,7 +207,7 @@ def hub(base: str) -> str:
     rows = "\n".join(f'''        <a class="vh-card" href="{i}/"><span class="vh-n">V{i} · {html.escape(v["name"])}</span>
           <span class="vh-eb">{html.escape(v["eyebrow"])}{"" if v.get("no_tail") else " · MCP-native"}</span>
           <span class="vh-h1">{v["h1"]}</span><span class="vh-sub">{v["sub"]}</span></a>''' for i, v in enumerate(VARIANTS, 1))
-    main_h1 = re.search(r'<h1 class="h1" id="hero-title">([^<]*)</h1>', base).group(1)
+    main_h1 = re.sub(r"<[^>]+>", "", re.search(r'<h1 class="h1" id="hero-title">(.*?)</h1>', base, re.S).group(1))
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow"><title>Homepage variants | Flieber preview</title>

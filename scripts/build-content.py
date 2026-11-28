@@ -1016,7 +1016,7 @@ def ms_main() -> str:
 
 def who_main() -> str:
     WH, p = C.WHO, "../"
-    home = (ROOT / "index.html").read_text(encoding="utf-8")
+    home = (ROOT / "scripts/home-option2-legacy.html").read_text(encoding="utf-8")
     founder = re.search(r'<figure class="founder-quote reveal">.*?</figure>', home, re.S).group(0)
     quotes = re.search(r'<div class="quotes reveal" id="quotes".*?\n        </div>\n', home, re.S).group(0)
     out = page_head(WH["name"], WH["h1"], WH["lead"])
@@ -1191,7 +1191,7 @@ def home_connect_html() -> str:
 
 def sync_home_connect() -> None:
     """Homepage "Connect your agent" block, between the hero and the logos band (Oct 26)."""
-    f = ROOT / "index.html"
+    f = ROOT / "scripts/home-option2-legacy.html"  # Option 2 homepage; index.html is now V16
     s = f.read_text(encoding="utf-8")
     block = home_connect_html()
     if "<!-- CONNECT:start" in s:
@@ -1213,7 +1213,7 @@ def sync_home_connect() -> None:
 
 def sync_home_asks() -> None:
     """The six homepage prompt cards come from the library (draft 15.5)."""
-    f = ROOT / "index.html"
+    f = ROOT / "scripts/home-option2-legacy.html"  # Option 2 homepage; index.html is now V16
     s = f.read_text(encoding="utf-8")
     start = s.index('<div class="asks reveal-stagger">')
     end = s.index('</section>', start)
@@ -1348,7 +1348,7 @@ def pages_text() -> list:
     for q, a in M["faq"]:
         L += [f"**{q}** {a}", ""]
     WH = C.WHO
-    home = (ROOT / "index.html").read_text(encoding="utf-8")
+    home = (ROOT / "scripts/home-option2-legacy.html").read_text(encoding="utf-8")
     paras = [html.unescape(re.sub(r"<[^>]+>", "", x)).strip() for x in
              re.findall(r"<p>(.*?)</p>", re.search(r'<figure class="founder-quote.*?</blockquote>', home, re.S).group(0), re.S)]
     L += [f"## {WH['name']}: {WH['h1']}", "", f"{C.SITE}/{WH['slug']}", "", WH["lead"], "", f"### {WH['why_h2']}", ""]

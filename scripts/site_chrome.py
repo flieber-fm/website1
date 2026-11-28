@@ -16,7 +16,7 @@ def esc(text: str) -> str:
 
 
 PAGE_FILES = {  # file: (path prefix to the site root, current nav item)
-    "index.html": ("", None),
+    # "index.html" is V16 on the positioning branch; it carries its own nav and footer (build-positioning-v16.py)
     "features/index.html": ("../", "product"),
     "pricing/index.html": ("../", "pricing"),
     "security/index.html": ("../", "product"),

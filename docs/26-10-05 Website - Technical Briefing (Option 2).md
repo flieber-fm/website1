@@ -357,6 +357,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Nov 28 | Positioning branch prepared: V16 is now the homepage of the website-positioning preview (index.html written by build-positioning-v16.py); the Option 2 homepage kept as scripts/home-option2-legacy.html as the source for shared blocks; shared chrome no longer written into index.html on this branch. Other pages unchanged |
 | Nov 28 | Positioning rebuild of the whole site set up as its own project (Fabricio's go): handover in docs/26-11-28 Handover - Positioning rebuild.md; new branch claude/website-positioning (from this branch at the V16 work); new Railway service website-positioning (bba98e77-a21e-4b8d-adac-e77c24dc06d9) at https://website-positioning-production.up.railway.app. This branch and the website-option-2 preview stay as the source of the live site |
 | Nov 28 | Homepage V16 (Fabricio): less space above the hero and between the hero and the customer logo strip, so the logos show in the first screen on a laptop (V16 only) |
 | Nov 28 | Homepage V16 hero (Fabricio): H1 smaller (up to 50px, was 62px) and the text column wider, with a line break after "AI that powers decisions." on desktop, so the H1 reads in three lines instead of five and the buttons and logo strip stay in the first screen; hero video placeholder capped at 400px wide inside the panel so the floating cards have room |

@@ -3,7 +3,7 @@
 
 V15 (scripts/build-positioning-variant.py) is kept frozen with Claude's suggested changes; this page follows the brief verbatim.
 Writes scripts/home-snapshots/2026-11-28-positioning-v16.html, which build-home-variants.py shows as V16.
-Header, footer, styles and scripts come from the current index.html so the page keeps the site's design;
+Header, footer, styles and scripts come from scripts/home-option2-legacy.html (the Option 2 homepage) so the page keeps the site's design;
 only the review bar, nav, main content, footer tagline and footer links change.
 Placeholders (hero video, customer logos, Self-Serve page) are marked on the page, as the brief asks.
 """
@@ -324,7 +324,7 @@ def head(kicker: str, h2: str, hid: str, lead: str = "") -> str:
 
 
 def live_part(start: str, end: str) -> str:
-    src = (ROOT / "index.html").read_text(encoding="utf-8")
+    src = (ROOT / "scripts/home-option2-legacy.html").read_text(encoding="utf-8")  # Option 2 homepage: chrome, logos, quotes
     s = src.index(start)
     return src[s:src.index(end, s) + len(end)]
 
@@ -612,7 +612,7 @@ def rep(t: str, a: str, b: str) -> str:
 
 
 def main() -> None:
-    src = (ROOT / "index.html").read_text(encoding="utf-8")
+    src = (ROOT / "scripts/home-option2-legacy.html").read_text(encoding="utf-8")  # Option 2 homepage: chrome, logos, quotes
     top = src[:src.index("  <main id=\"main\">")]
     bottom = src[src.index("  </main>") + len("  </main>\n"):]
 
@@ -621,7 +621,7 @@ def main() -> None:
     top = re.sub(r'(<meta property="og:title" content=")[^"]*', r"\1" + TAGLINE[:-1], top, count=1)
     top = re.sub(r'(<meta property="og:description" content=")[^"]*', r"\1A planning platform tailored to your brand, with specialists who work with your team. Your team keeps every call.", top, count=1)
     top = re.sub(r'\s*<script type="application/ld\+json">.*?</script>', "", top, count=1, flags=re.S)
-    top = re.sub(r'<div class="review-bar"[^>]*>.*?</div>', '<div class="review-bar" role="note">Review build · <b>Positioning</b> · brief as written (doc rev 98) · V16</div>', top, count=1, flags=re.S)
+    top = re.sub(r'<div class="review-bar"[^>]*>.*?</div>', '<div class="review-bar" role="note">Review build · <b>Positioning</b> · positioning rebuild · work in progress</div>', top, count=1, flags=re.S)
     top = top.replace("</head>", CSS + "\n</head>", 1)
     # Nav: one product, the team inside the copy, Self-Serve as the secondary path.
     nav = re.search(r'<nav class="nav-links" aria-label="Primary">.*?</nav>', top, flags=re.S).group(0)
@@ -648,6 +648,7 @@ def main() -> None:
     for bad in ("Managed Services", "managed-services", "Lite", "Core,", "Full plan", "—", "Flieber Studio", "Flieber Inventory", "alongside", "run by Flieber", "Managed", "dashboard", "single source of truth", "visibility", "planning system", "Self-Serve", "Beyond inventory"):
         assert bad not in page, f"brief rule broken: {bad}"
     OUT.write_text(page, encoding="utf-8")
+    (ROOT / "index.html").write_text(page, encoding="utf-8")  # positioning rebuild: V16 is the homepage
     print("wrote", OUT.relative_to(ROOT))
 
 
