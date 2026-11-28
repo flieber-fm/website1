@@ -14,7 +14,7 @@ Start with a page map and the open decisions (section 7), in the agreed question
 | --- | --- |
 | Repository | flieber-fm/website1 |
 | Branch for this project | `claude/website-positioning` (branched from `claude/eager-bohr-ui8a03` at the end of the V16 work) |
-| Preview for this project | Railway project `flieber-website-preview` (3397c035-5e34-414b-9313-77fcd801b205), service `website-positioning`, environment production (60f85989-2e87-47ff-9c38-a1e09e881c34). URL in section 9. |
+| Preview for this project | Railway project `flieber-website-preview` (3397c035-5e34-414b-9313-77fcd801b205), service `website-positioning`, environment production (60f85989-2e87-47ff-9c38-a1e09e881c34). https://website-positioning-production.up.railway.app (service id bba98e77-a21e-4b8d-adac-e77c24dc06d9). |
 | Source of the live site | branch `claude/eager-bohr-ui8a03`, preview service `website-option-2` (3fb896a0-4acf-43b8-b9b8-e8488bf936d1), https://website-option-2-production.up.railway.app. Keep it as the record of what is live; urgent fixes to the live site happen there. |
 | Never touch | branch `claude/gracious-dijkstra-qgcgls` and Railway service `website` (8da31dca-d78f-4eba-b6eb-87c828b39528). The other services in the project (website-option-3, 6, 7, website-homepage-v1) belong to other work: leave them alone. |
 | Positioning brief (single source) | Claude Doc https://claude.ai/artifact/Stwen2G6hAsc5BSaEjnTHK (Fabricio edits it; always read the latest revision). Snapshots in `docs/briefs/` (v1, v2, rev 84, rev 92, rev 98). |
@@ -107,5 +107,6 @@ Decided by Fabricio after the brief, and already in V16 (the brief may lag behin
 
 ## 9. Preview
 
-- Service `website-positioning`, branch `claude/website-positioning`.
-- URL: see the latest entry in the decision log (added when the service was created).
+- Service `website-positioning` (bba98e77-a21e-4b8d-adac-e77c24dc06d9), branch `claude/website-positioning`.
+- URL: https://website-positioning-production.up.railway.app (same robots and noindex setup as the Option 2 preview).
+- At creation it serves the same site as the Option 2 preview; V16 is at /home-variants/16/. Making V16 the homepage (`index.html`) is the first build step.
