@@ -109,6 +109,14 @@
   .pv-moments.pv-row>.pv-card{row-gap:14px}
   .pv-moments.pv-row>.pv-card>p{margin-top:0!important}
 }
+.pv-sub{margin:56px 0 18px;font-size:22px;line-height:1.25;letter-spacing:-.02em;font-weight:600}
+.pv-team-lead{margin:-6px 0 18px;color:var(--charcoal);font-size:16px}
+.pv-team{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:820px){.pv-team{grid-template-columns:repeat(3,1fr)}}
+.pv-team-i{border-top:2px solid var(--black);padding-top:16px}
+.pv-team-i b{display:block;font-size:19px;font-weight:600;letter-spacing:-.01em}
+.pv-team-i span{display:block;margin-top:8px;color:var(--charcoal);font-size:15px;line-height:1.5}
+#proof .quotes{margin-top:56px}
 .pv-final{text-align:center}
 .pv-final .h2{max-width:760px;margin:20px auto 0}
 .pv-final .pv-actions{justify-content:center}
@@ -168,6 +176,49 @@
       </div>
     </section>
 
+    <!-- Customer logos, as on the live homepage -->
+    <section class="logos-band" aria-labelledby="logos-label">
+      <div class="wrap">
+        <div class="logos-block">
+          <p class="logos-label" id="logos-label">More than 1,000 brands have used Flieber since 2019</p>
+          <div class="logos" role="group" aria-labelledby="logos-label">
+            <div class="logos-track">
+            <img src="../../assets/logos/mannatech.png" alt="Mannatech" loading="lazy">
+            <img src="../../assets/logos/piccalio.png" alt="Piccalio" loading="lazy">
+            <img class="logo-square" src="../../assets/logos/jaeger.png" alt="Jaeger Tools" loading="lazy">
+            <img src="../../assets/logos/lifepro.png" alt="Lifepro Fitness" loading="lazy">
+            <img class="logo-square" src="../../assets/logos/wargames.png" alt="Wargames Delivered" loading="lazy">
+            <img src="../../assets/logos/qualico.png" alt="Qualico" loading="lazy">
+            <img src="../../assets/logos/southshore.png" alt="Southshore Fine Linens" loading="lazy">
+            <img src="../../assets/logos/bearaby.png" alt="Bearaby" loading="lazy">
+            <img src="../../assets/logos/alt-group.png" alt="ALT Group" loading="lazy">
+            <img class="logo-square" src="../../assets/logos/waterglider.png" alt="Waterglider International" loading="lazy">
+            <img class="logo-thin" src="../../assets/logos/modloft.png" alt="Modloft" loading="lazy">
+            <img src="../../assets/logos/zugu.png" alt="Zugu" loading="lazy">
+            <img src="../../assets/logos/primal-harvest.png" alt="Primal Harvest" loading="lazy">
+            <img src="../../assets/logos/unybrands.png" alt="Unybrands" loading="lazy">
+              <!-- duplicate set for seamless loop -->
+            <img src="../../assets/logos/mannatech.png" alt="" aria-hidden="true" loading="lazy">
+            <img src="../../assets/logos/piccalio.png" alt="" aria-hidden="true" loading="lazy">
+            <img class="logo-square" src="../../assets/logos/jaeger.png" alt="" aria-hidden="true" loading="lazy">
+            <img src="../../assets/logos/lifepro.png" alt="" aria-hidden="true" loading="lazy">
+            <img class="logo-square" src="../../assets/logos/wargames.png" alt="" aria-hidden="true" loading="lazy">
+            <img src="../../assets/logos/qualico.png" alt="" aria-hidden="true" loading="lazy">
+            <img src="../../assets/logos/southshore.png" alt="" aria-hidden="true" loading="lazy">
+            <img src="../../assets/logos/bearaby.png" alt="" aria-hidden="true" loading="lazy">
+            <img src="../../assets/logos/alt-group.png" alt="" aria-hidden="true" loading="lazy">
+            <img class="logo-square" src="../../assets/logos/waterglider.png" alt="" aria-hidden="true" loading="lazy">
+            <img class="logo-thin" src="../../assets/logos/modloft.png" alt="" aria-hidden="true" loading="lazy">
+            <img src="../../assets/logos/zugu.png" alt="" aria-hidden="true" loading="lazy">
+            <img src="../../assets/logos/primal-harvest.png" alt="" aria-hidden="true" loading="lazy">
+            <img src="../../assets/logos/unybrands.png" alt="" aria-hidden="true" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Why now? The gap -->
     <section class="section section-soft" id="why-now" aria-labelledby="gap-title">
       <div class="wrap">
@@ -177,15 +228,15 @@
         </div>
         <div class="pv-3 pv-row pv-span2 reveal-stagger">
           <article class="pv-card">
-            <h3>Planning is changing for good</h3>
+            <h3>AI is changing how you plan</h3>
             <p>Work that took a planner days now runs on its own. Forecasts take in everything a business knows, not only its sales history. The brands that move first will plan faster and with fewer surprises than the ones that wait.</p>
           </article>
           <article class="pv-card">
             <h3>Few know how to get there</h3>
-            <p>AI is in every board meeting, conference and newsletter. Your team sees the potential, but between daily firefighting and the next purchase order, nobody has the time or the map to bring it into how your business plans.</p>
+            <p>AI is in every board meeting, conference and newsletter. Your team sees the potential, but between daily firefighting and the next purchase order, nobody has the time or the knowledge to bring it into how your business plans.</p>
           </article>
           <article class="pv-card">
-            <h3>In-house AI becomes a second job</h3>
+            <h3>In-house apps become a full-time job</h3>
             <p>It starts as an exciting project. Then new use cases appear, people join and leave, and the infrastructure needs upkeep. Soon your team is fixing bugs in a tool it built instead of growing the brand.</p>
           </article>
         </div>
@@ -210,7 +261,7 @@
           </article>
           <article class="pv-card">
             <h3>Intelligence that compounds</h3>
-            <p>Every exception resolved, every plan approved and every outcome observed feeds back in. Insights build on each other and alerts get sharper, so each season you plan with more confidence than the last, and what your team learns stays even when people change.</p>
+            <p>Every exception resolved, every plan approved and every outcome observed feeds back in. Insights build on each other and alerts get sharper, so each cycle you plan with more confidence than the last, and what your team learns stays even when people change.</p>
           </article>
         </div>
       </div>
@@ -227,17 +278,17 @@
           <article class="pv-card">
             <span class="pv-num" aria-hidden="true">1</span>
             <h3>We learn how you operate</h3>
-            <p>We connect your data and join your planning and S&amp;OP meetings to capture the context behind the numbers, from finance, marketing and operations. Setup takes about the first month, and you see value before it ends.</p>
+            <p>Our team connects your data and creates a routine of interactions with yours to continuously capture the context behind your numbers, from finance to marketing to operations. Within the first month, you already start seeing measurable value.</p>
           </article>
           <article class="pv-card">
             <span class="pv-num" aria-hidden="true">2</span>
             <h3>We tailor your platform</h3>
-            <p>You get your own Flieber, with your logo and colors, built around how your team works. Forecasting models are fine-tuned to your catalog, and each product and store gets the model that performs best. Views, alerts and workflows follow your needs, use cases and preferences, with dedicated forecasting for launches and wholesale. When a new need comes up, it becomes part of your platform instead of a spreadsheet workaround or a long wait on someone else’s roadmap.</p>
+            <p>You get your own version of Flieber, with your logo and colors, tailored to your use cases and how your team operates. Forecasting models are fine-tuned to your catalog, and new products and wholesale channels are handled by specialized tools. Views, alerts and workflows follow your preferences. When a new need comes up, it becomes part of your platform instead of a spreadsheet workaround or a long wait on the roadmap of a generic system.</p>
           </article>
           <article class="pv-card">
             <span class="pv-num" aria-hidden="true">3</span>
             <h3>We stay, and it keeps getting smarter</h3>
-            <p>Your specialists stay with your account. Each cycle, more of the routine moves onto automations, every plan is reviewed with your team before money goes out, and every month you get a scorecard on the measures you agreed on. <span class="pv-pend" title="Open item in the brief: confirm before this goes live">Pending confirmation</span></p>
+            <p>Your Flieber specialists stay with your account, learning from the different people in your team. Each cycle, new opportunities are detected and more of the routine moves onto automations. Every plan is reviewed with your team before money goes out, and every month you get a scorecard on the measures that show your progress.</p>
           </article>
         </div>
       </div>
@@ -310,12 +361,70 @@
           <h2 class="h2" id="proof-title" style="margin-top:20px">Can I trust you?</h2>
         </div>
         <div class="pv-stats reveal-stagger">
-          <div class="pv-stat"><strong>1,000+</strong><span>More than 1,000 brands have used Flieber since 2019.</span></div>
+          <div class="pv-stat"><strong>1,000+</strong><span>Brands have used Flieber.</span></div>
+          <div class="pv-stat"><strong>2019</strong><span>Operating since 2019.</span></div>
           <div class="pv-stat"><strong>100+</strong><span>Brands planning with Flieber today.</span></div>
-          <div class="pv-stat"><strong>36%</strong><span>More accurate, verified by Nixtla against 16 statistical and machine-learning models on 46,000 products.</span></div>
         </div>
-        <div class="pv-integ reveal"><span class="pv-integ-l">Native integrations</span><span class="pv-chip">Amazon</span><span class="pv-chip">Shopify</span><span class="pv-chip">Walmart</span><span class="pv-chip">NetSuite</span><span class="pv-chip">Flexport</span><span class="pv-chip">Google Sheets</span><span class="pv-integ-l">Other sources connect through Google Sheets or custom scripts.</span></div>
-        <div class="pv-logos reveal"><span class="pv-ph dark">Placeholder</span> Customer logos, quotes and results appear here once each customer approves them in writing.</div>
+        <h3 class="pv-sub reveal">Results for brands using Flieber for 12+ months</h3>
+        <div class="results-block results-light reveal">
+          <ul class="results">
+            <li class="result">
+              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5.5 11.5L12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>38%</span>
+              <span class="result-label">increase in sales</span>
+            </li>
+            <li class="result">
+              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5.5 12.5L12 19l6.5-6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>62%</span>
+              <span class="result-label">reduction in stockouts</span>
+            </li>
+            <li class="result">
+              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5.5 12.5L12 19l6.5-6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>17%</span>
+              <span class="result-label">reduction in excess inventory</span>
+            </li>
+            <li class="result">
+              <span class="result-num"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5.5 12.5L12 19l6.5-6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>88%</span>
+              <span class="result-label">less time on replenishment decisions</span>
+            </li>
+          </ul>
+          <p class="results-note">Average across customers using Flieber for 12+ months. Averages, not a guarantee for every brand.</p>
+        </div>
+        <p class="pv-cite reveal">Forecasts 36% more accurate, verified by Nixtla against 16 statistical and machine-learning models on 46,000 products.</p>
+        <h3 class="pv-sub reveal">The team behind your account</h3>
+        <p class="pv-team-lead reveal">Experience at the intersection of planning, operations and technology.</p>
+        <div class="pv-team reveal-stagger"><div class="pv-team-i"><b>Former operators</b><span>People who have planned and run operations at commerce brands themselves.</span></div><div class="pv-team-i"><b>A senior AI team</b><span>The engineers and data scientists behind your models and automations.</span></div><div class="pv-team-i"><b>Process consultants</b><span>Experience improving how planning teams work, not only what tools they use.</span></div></div>
+        <div class="quotes reveal" id="quotes" aria-roledescription="carousel" aria-label="Customer quotes">
+          <div class="quote-stage" aria-live="polite">
+            <figure class="quote active" aria-roledescription="slide" aria-label="1 of 5">
+              <blockquote>Flieber considers everything no other software picks up. It killed our Amazon stockouts.</blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">TR</span><span class="who"><b>Tehsin Rashad</b><span>Operations Manager, Lifepro Fitness</span></span></figcaption>
+            </figure>
+            <figure class="quote" aria-roledescription="slide" aria-label="2 of 5">
+              <blockquote>Flieber is helping us effectively manage stock across all of our sales channels by customizing our calculations to the data points that matter most.</blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">JA</span><span class="who"><b>Jenn Angel</b><span>COO, Zugu</span></span></figcaption>
+            </figure>
+            <figure class="quote" aria-roledescription="slide" aria-label="3 of 5">
+              <blockquote>We have always been challenged with out-of-stock inventory and long lead times. Flieber was a game changer for us.</blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">SB</span><span class="who"><b>Stephanie Buchholtz</b><span>VP Merchandise Planning, Modloft</span></span></figcaption>
+            </figure>
+            <figure class="quote" aria-roledescription="slide" aria-label="4 of 5">
+              <blockquote>Flieber has allowed me to reduce manual work while planning and forecasting products, and to handle different regions and sales channels in a single place.</blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">LE</span><span class="who"><b>Leonardo Escalona</b><span>Inventory Planner, Prime6 Brands (Primal Harvest)</span></span></figcaption>
+            </figure>
+            <figure class="quote" aria-roledescription="slide" aria-label="5 of 5">
+              <blockquote>Flieber creates a ‘one stop shop’ where I can see demand-level data across all my brands and make educated replenishment decisions.</blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">BS</span><span class="who"><b>Bryan Smallwood</b><span>Supply Chain Manager, Unybrands</span></span></figcaption>
+            </figure>
+          </div>
+          <div class="quote-controls">
+            <div class="quote-dots" role="group" aria-label="Choose quote"></div>
+            <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+              <a class="link-arrow" href="https://www.g2.com/products/flieber/reviews" target="_blank" rel="noopener">Read more reviews on G2 <span class="arrow" aria-hidden="true">→</span></a>
+              <div class="quote-arrows">
+                <button class="icon-btn" type="button" data-dir="-1" aria-label="Previous quote"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="#1B1C1C" stroke-width="1.6"/></svg></button>
+                <button class="icon-btn" type="button" data-dir="1" aria-label="Next quote"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="#1B1C1C" stroke-width="1.6"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -337,7 +446,7 @@
           </details>
           <details>
             <summary>What exactly do your specialists do?<span class="plus" aria-hidden="true"></span></summary>
-            <p>They join your planning and S&amp;OP meetings, gather context from finance, marketing and operations, and make sure your platform has it. They keep your data and setup right as your business changes, review plans with your team before money goes out, and turn every recurring task into an automation. Behind your main contacts is a wider team with experience across planning, operations and technology.</p>
+            <p>They create a routine of interactions with your team, which can go as far as joining your planning and S&amp;OP meetings if you want them there. Through it, they gather context from finance, marketing and operations and make sure your platform has it. They keep your data and setup right as your business changes, review plans with your team before money goes out, and turn every recurring task into an automation. Behind your main contacts is a wider team with experience at the intersection of planning, operations and technology.</p>
           </details>
           <details>
             <summary>Do I lose control?<span class="plus" aria-hidden="true"></span></summary>
@@ -345,23 +454,23 @@
           </details>
           <details>
             <summary>Do your specialists leave after setup?<span class="plus" aria-hidden="true"></span></summary>
-            <p>No. Setup takes about the first month, and the specialists stay with your account after that. Their ongoing work is what makes the automations learn and the intelligence compound.</p>
+            <p>No. Once your platform is set up, the specialists stay with your account. Their ongoing work is what makes the automations learn and the intelligence compound.</p>
           </details>
           <details>
-            <summary>How do I know it’s working? <span class="pv-pend" title="Open item in the brief: confirm before this goes live">Pending confirmation</span><span class="plus" aria-hidden="true"></span></summary>
+            <summary>How do I know it’s working?<span class="plus" aria-hidden="true"></span></summary>
             <p>Every month you get a scorecard on the measures you agree on with us at the start. You also see the work directly: plans reviewed, exceptions resolved and routine moved onto automations.</p>
           </details>
           <details>
             <summary>Why does it cost more than software?<span class="plus" aria-hidden="true"></span></summary>
-            <p>Because it is more than software. You get a platform tailored to your brand, automations and context your team could not build or maintain alone, and specialists who work with your team every week. Inventory shapes your advertising, promotions and cash flow, and one avoided stockout or overstock on a bestseller can pay for a year.</p>
+            <p>Because you’re not buying a tool your team then has to make work. You get three things software alone doesn’t give you. A platform tailored to your brand, with your products, channels, suppliers and rules built in. Specialists who keep it right as your business changes, review plans with your team and turn recurring work into automations. And what we’ve learned from more than 1,000 brands, so you start from what works instead of from scratch. Compare it with what the alternatives really cost: the time your team spends working around a generic tool, a new hire to run the process, or an in-house app someone has to maintain. Inventory shapes your advertising, promotions and cash flow, and one avoided stockout or overstock on a bestseller can pay for a year.</p>
+          </details>
+          <details>
+            <summary>I just want software. I don’t want to pay for a team.<span class="plus" aria-hidden="true"></span></summary>
+            <p>We understand, and for years we sold Flieber that way. Here’s what we learned from more than 1,000 brands: software that has to fit everyone leaves gaps. Each brand used a small slice of it and filled the rest with spreadsheets and workarounds, so planning still depended on a few people’s heads. The specialists aren’t a team added on top of the software. They’re how the platform gets shaped around your business and how it keeps up as you change: new channels, new suppliers, people joining and leaving. They don’t replace your team or take your decisions. Their job is to move routine work onto automations, so each cycle your team spends less time on the process and more on the brand. And you decide how much they take on, from a second set of eyes on your plans to the whole planning preparation.</p>
           </details>
           <details>
             <summary>What happens in the first month?<span class="plus" aria-hidden="true"></span></summary>
-            <p>We connect your data, map your products, channels and suppliers, join your planning meetings and set up your platform. You see value before the month ends: cleaner data, the first alerts and a first look at your plans with fresh eyes.</p>
-          </details>
-          <details>
-            <summary>Can I buy just the software?<span class="plus" aria-hidden="true"></span></summary>
-            <p>Not anymore. Software on its own leaves you with the gaps that made spreadsheets necessary in the first place. The value now comes from a platform shaped around your business, and that takes people who know the work.</p>
+            <p>We get everything ready for you to plan on a solid foundation. Our team learns how you operate and gathers the context behind your numbers from the people involved, from finance to marketing to operations. We connect your data, map your products, channels and suppliers, and make the platform your own: views, alerts, workflows and forecasting set up around your use cases and preferences. Together we define the main gaps to close and the indicators we’ll follow. Within the first month, you already start seeing measurable value, and every cycle after that builds on it.</p>
           </details>
         </div>
       </div>
