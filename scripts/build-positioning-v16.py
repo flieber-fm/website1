@@ -228,6 +228,9 @@ CSS = """<style>
 .pv-sv-chip{display:inline-block;margin-top:10px;padding:4px 9px;border-radius:999px;background:rgba(43,182,115,.14);color:#167A4B;font-weight:600;font-size:11px}
 .pv-float-a{max-width:300px}
 @media(prefers-reduced-motion:reduce){.pv-toast,.pv-stg span{animation:none}}
+/* hero to logo strip: tighter so the logos show in the first screen */
+#main>.hero{padding-top:clamp(32px,4.5vw,64px);padding-bottom:clamp(24px,3vw,40px)}
+#main>.logos-band .logos-block{padding-top:clamp(12px,1.5vw,20px)}
 .pv-final{text-align:center}
 .pv-final .h2{max-width:760px;margin:20px auto 0}
 .pv-final .pv-actions{justify-content:center}

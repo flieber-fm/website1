@@ -357,6 +357,7 @@ Decisions taken with Fabricio for Option 2, newest first. Option 1's decision lo
 
 | Date | Decision |
 | --- | --- |
+| Nov 28 | Homepage V16 (Fabricio): less space above the hero and between the hero and the customer logo strip, so the logos show in the first screen on a laptop (V16 only) |
 | Nov 28 | Homepage V16 hero (Fabricio): H1 smaller (up to 50px, was 62px) and the text column wider, with a line break after "AI that powers decisions." on desktop, so the H1 reads in three lines instead of five and the buttons and logo strip stay in the first screen; hero video placeholder capped at 400px wide inside the panel so the floating cards have room |
 | Nov 28 | Homepage V16 (Fabricio): oversized footer logo watermark removed (it is part of the shared footer, so the main homepage and other pages still have it); customer quotes moved out of the proof section into their own yellow band; step 2 product view now shows tailoring rather than branding: "Your platform · fine-tuned to how you operate" with the Replenishment Plan video's supplier rules (Supplier 1: every 4 weeks · cover 120 days · full cartons · round up to MOQ if within 10%; Supplier 2: every 6 weeks · cover 90 days · full containers; 3PL US → FBA US: weekly · by the pallet) and tags (rules in your own words, combined MOQs, launches, wholesale, your approval stages) |
 | Nov 28 | Homepage V16: 36px between each product view or drawing and the card title below it (Fabricio: too tight; the row rule zeroing child margins had been overriding the intended gap) |
