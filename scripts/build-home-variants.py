@@ -100,11 +100,11 @@ VARIANTS = [
      "h1": "AI is changing how brands plan inventory. Flieber gets your team there",
      "sub": ("Automations that learn, context beyond sales and inventory, intelligence that compounds. Blue numbers mark suggested changes to the brief. "
              "Built with scripts/build-positioning-variant.py; hero video, customer logos, the Self-Serve page and the monthly scorecard are placeholders.")},
-    {"name": "Positioning, brief as written (doc rev 92)", "file": "scripts/home-snapshots/2026-11-28-positioning-v16.html", "no_tail": True,
+    {"name": "Positioning, brief as written (doc rev 98)", "file": "scripts/home-snapshots/2026-11-28-positioning-v16.html", "no_tail": True,
      "eyebrow": "The positioning brief as written on Nov 28, 2026, without Claude's suggested changes (those stay in V15)",
      "h1": "AI that powers decisions. Humans who shape it around your business",
-     "sub": ("Planning is entering a new era: automations that learn, data and context without limits, intelligence that compounds. "
-             "Built with scripts/build-positioning-v16.py; hero video, customer logos, the Self-Serve page and the monthly scorecard are placeholders.")},
+     "sub": ("One offer, no software-only path. The page follows seven buyer questions, from Why now? to What else should I know?. "
+             "Built with scripts/build-positioning-v16.py; hero video, customer logos and the monthly scorecard are placeholders.")},
 ]
 
 # Hero card: the six sample scenarios, shown as requests from agents and people.
@@ -224,7 +224,7 @@ p.lead{{color:var(--muted);margin:0 0 32px;max-width:680px}}
 .vh-sub{{display:block;margin-top:10px;color:var(--muted);font-size:15px}}
 </style></head><body><main>
 <h1>Homepage variants</h1>
-<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it; V7 is the main page as it stood until Nov 2, before the offer and module matrix; V8 is the first matrix version (cards), replaced the same day by the track; V9 is the first track, before it moved into the hero; V10 is the hero card with value copy, before the agentic copy; V11 is the agentic copy, before Karyna's feedback (when to choose each, shared engine); V12 is the four-tab version, before Managed Services became its own layer; V13 is the three-tab card, before the base-plus-add-ons layout; V14 is the two-step version, before the add-ons moved into the cards. V15 is a proposal on the Nov 27 positioning brief with Claude's suggested changes tagged; V16 is the same brief as written on Nov 28 (new hero, Talk to a specialist), without those suggestions. Neither is the main page yet. V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
+<p class="lead">Every homepage version considered. Main is the live preview; V6 is the main page as it stood until Oct 7, when the Intelligence layer variant replaced it; V7 is the main page as it stood until Nov 2, before the offer and module matrix; V8 is the first matrix version (cards), replaced the same day by the track; V9 is the first track, before it moved into the hero; V10 is the hero card with value copy, before the agentic copy; V11 is the agentic copy, before Karyna's feedback (when to choose each, shared engine); V12 is the four-tab version, before Managed Services became its own layer; V13 is the three-tab card, before the base-plus-add-ons layout; V14 is the two-step version, before the add-ons moved into the cards. V15 is a proposal on the Nov 27 positioning brief with Claude's suggested changes tagged; V16 is the brief as written on Nov 28 (one offer, seven buyer questions), without those suggestions. Neither is the main page yet. V1 to V5 share the same agent follow-ons (hero card, doors, roles section and the How Flieber is built lead), so they differ in eyebrow, H1 and subhead. Each page has a compare bar at the bottom to jump between versions.</p>
         <a class="vh-card main" href="../"><span class="vh-n">Main · live preview today</span><span class="vh-h1">{main_h1}</span></a>
 {rows}
 </main></body></html>

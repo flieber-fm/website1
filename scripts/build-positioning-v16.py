@@ -84,6 +84,17 @@ CSS = """<style>
 .pv-ex{padding:1px 6px;border:1px dashed var(--gray-dark);border-radius:6px;background:var(--yellow-light);font-size:.92em;white-space:normal}
 .pv-reassure{margin:16px 0 0;max-width:520px;font-size:16px;line-height:1.5;font-weight:600;color:var(--black)}
 .pv-close{max-width:820px;margin:36px 0 0;font-size:clamp(19px,2vw,23px);line-height:1.4;letter-spacing:-.015em}
+.pv-row{align-items:start}
+@supports (grid-template-rows:subgrid){
+  .pv-row>.pv-card{display:grid;grid-template-rows:subgrid;align-content:start;row-gap:0}
+  .pv-span2>.pv-card{grid-row:span 2}
+  .pv-span3>.pv-card{grid-row:span 3}
+  .pv-row>.pv-card>*{margin-top:0;margin-bottom:0}
+  .pv-row>.pv-card>h3{margin-bottom:10px;align-self:start}
+  .pv-span3.pv-3>.pv-card>.pv-num{margin-bottom:18px}
+  .pv-moments.pv-row>.pv-card{row-gap:14px}
+  .pv-moments.pv-row>.pv-card>p{margin-top:0!important}
+}
 .pv-final{text-align:center}
 .pv-final .h2{max-width:760px;margin:20px auto 0}
 .pv-final .pv-actions{justify-content:center}
@@ -97,31 +108,31 @@ def card(title: str, body: str, extra: str = "", lead: str = "") -> str:
           </article>'''
 
 
-ERA = [
-    ("Automations that get smarter with every cycle",
-     "Routine work runs on its own and improves each time it runs."),
-    ("Data and context without limits",
-     "Not just sales, inventory and purchase orders. Add marketing plans, cash flow, competitive information, and the history of past decisions and why you made them. Flieber’s AI takes all of it into account in every forecast and every plan. And it builds with every use: each new piece of context is kept and applied from then on, so the system keeps learning from it."),
-    ("Intelligence that compounds",
-     "Every exception resolved and every outcome observed feeds back in, so insights build on each other, alerts get sharper and the automations keep improving."),
+GAP = [
+    ("Planning is changing for good",
+     "Work that took a planner days now runs on its own. Forecasts take in everything a business knows, not only its sales history. The brands that move first will plan faster and with fewer surprises than the ones that wait."),
+    ("Few know how to get there",
+     "AI is in every board meeting, conference and newsletter. Your team sees the potential, but between daily firefighting and the next purchase order, nobody has the time or the map to bring it into how your business plans."),
+    ("In-house AI becomes a second job",
+     "It starts as an exciting project. Then new use cases appear, people join and leave, and the infrastructure needs upkeep. Soon your team is fixing bugs in a tool it built instead of growing the brand."),
 ]
 
-GAP = [
-    ("Everyone knows planning is changing",
-     "Routine work running on its own and AI in every plan. Most brands know this shift is coming."),
-    ("Few know how to get there",
-     "Few teams know how to get from the way they work today to the new way."),
-    ("Building it alone is slow",
-     "Building it in-house is slow, and most in-house AI projects stall."),
+ERA = [
+    ("Data and context without limits",
+     "Not just sales, inventory and purchase orders. Add marketing plans, cash flow, competitive information and the reasons behind past decisions. Flieber’s AI takes all of it into account in every forecast and plan, so your decisions reflect how your business really works, not just what your systems record."),
+    ("Automations that get smarter",
+     "Flieber specialists gather context from everyone involved in your business, from finance to marketing to operations, and bring what they’ve learned from more than 1,000 brands. They turn it into automations that take the routine off your team and improve with every cycle, so your people spend their time growing the brand, not running the process."),
+    ("Intelligence that compounds",
+     "Every exception resolved, every plan approved and every outcome observed feeds back in. Insights build on each other and alerts get sharper, so each season you plan with more confidence than the last, and what your team learns stays even when people change."),
 ]
 
 STEPS = [
     ("We learn how you operate",
-     "We connect your data, join your planning meetings and capture the context behind your numbers. Setup takes about the first month, and you see value before it ends."),
+     "We connect your data and join your planning and S&amp;OP meetings to capture the context behind the numbers, from finance, marketing and operations. Setup takes about the first month, and you see value before it ends."),
     ("We tailor your platform",
-     "Your channels, suppliers, rules and views."),
-    ("We stay and it keeps getting smarter",
-     f"Your specialists stay with the account, the routine moves onto automations cycle after cycle and your team approves every plan. Every month you get a scorecard on the measures we agree on together. {PEND}"),
+     "You get your own Flieber, with your logo and colors, built around how your team works. Forecasting models are fine-tuned to your catalog, and each product and store gets the model that performs best. Views, alerts and workflows follow your needs, use cases and preferences, with dedicated forecasting for launches and wholesale. When a new need comes up, it becomes part of your platform instead of a spreadsheet workaround or a long wait on someone else’s roadmap."),
+    ("We stay, and it keeps getting smarter",
+     f"Your specialists stay with your account. Each cycle, more of the routine moves onto automations, every plan is reviewed with your team before money goes out, and every month you get a scorecard on the measures you agreed on. {PEND}"),
 ]
 
 MOMENTS = [
@@ -141,20 +152,23 @@ MOMENTS = [
 
 FAQ = [
     ("I already have a great team.",
-     "Good: we work with them, not instead of them. The routine moves onto automations, new data reaches them every day, and they spend their time on the calls that matter."),
+     "Good, because Flieber works through them, not around them. Your team keeps every decision and every relationship with suppliers and partners. What changes is the work around those decisions: data checks, plan preparation and follow-ups move onto automations, new context reaches them every day, and they get specialists who have seen how more than 1,000 brands solve the same problems. Most teams are not short on talent; they are short on time."),
     ("Why not build this ourselves with AI?",
-     "You can, but most in-house AI projects stall. Partnering with specialists succeeds about three times as often, and you get what we’ve learned from more than 1,000 brands from day one."),
-    ("Do I lose control?", "No. Your team approves every plan and every order."),
+     "You can, and some brands try. The first version is usually exciting. The hard part comes after: every new use case, team change and data source adds upkeep, until maintaining the tool becomes someone’s full-time job. MIT found that partnering with specialists succeeds about three times as often as building in-house. With Flieber you start from what works across more than 1,000 brands, and the upkeep is ours."),
+    ("What exactly do your specialists do?",
+     "They join your planning and S&amp;OP meetings, gather context from finance, marketing and operations, and make sure your platform has it. They keep your data and setup right as your business changes, review plans with your team before money goes out, and turn every recurring task into an automation. Behind your main contacts is a wider team with experience across planning, operations and technology."),
+    ("Do I lose control?",
+     "No. Your team approves every plan and every order, and nothing moves without that approval. You also decide how much the specialists take on: some brands start with a second set of eyes on their plans, others hand over the whole planning preparation, and you can change that as trust builds."),
     ("Do your specialists leave after setup?",
-     "No. They stay with your account, and your platform keeps getting smarter with every cycle."),
+     "No. Setup takes about the first month, and the specialists stay with your account after that. Their ongoing work is what makes the automations learn and the intelligence compound."),
     (f"How do I know it’s working? {PEND}",
-     "Every month you get a scorecard on the measures we agree on together."),
+     "Every month you get a scorecard on the measures you agree on with us at the start. You also see the work directly: plans reviewed, exceptions resolved and routine moved onto automations."),
     ("Why does it cost more than software?",
-     "Because it’s more than software: a platform tailored to your brand, automations and data your team could not build alone, and specialists who work with your team. Inventory shapes your most important decisions, and one avoided stockout or overstock on a bestseller can pay for a year."),
+     "Because it is more than software. You get a platform tailored to your brand, automations and context your team could not build or maintain alone, and specialists who work with your team every week. Inventory shapes your advertising, promotions and cash flow, and one avoided stockout or overstock on a bestseller can pay for a year."),
     ("What happens in the first month?",
-     "We connect your data, set up your platform and learn how you operate. You see value before the month ends."),
-    ("Can I just use the tool?",
-     f'Yes. <a href="{SELF_SERVE}">Flieber Self-Serve</a> gives you the app, CLI and API.'),
+     "We connect your data, map your products, channels and suppliers, join your planning meetings and set up your platform. You see value before the month ends: cleaner data, the first alerts and a first look at your plans with fresh eyes."),
+    ("Can I buy just the software?",
+     "Not anymore. Software on its own leaves you with the gaps that made spreadsheets necessary in the first place. The value now comes from a platform shaped around your business, and that takes people who know the work."),
 ]
 
 INTEGRATIONS = ["Amazon", "Shopify", "Walmart", "NetSuite", "Flexport", "Google Sheets"]
@@ -168,9 +182,15 @@ def head(kicker: str, h2: str, hid: str, lead: str = "") -> str:
         </div>'''
 
 
+def row(cards: str, span: int) -> str:
+    return f'''        <div class="pv-3 pv-row pv-span{span} reveal-stagger">
+{cards}
+        </div>'''
+
+
 def main_html() -> str:
-    era = "\n".join(card(t, b) for t, b in ERA)
     gap = "\n".join(card(t, b) for t, b in GAP)
+    era = "\n".join(card(t, b) for t, b in ERA)
     steps = "\n".join(card(t, b, lead=f'\n            <span class="pv-num" aria-hidden="true">{i}</span>') for i, (t, b) in enumerate(STEPS, 1))
     moments = "\n".join(f'''          <article class="pv-card pv-moment">
             <span class="pv-tag">{m}</span>
@@ -182,20 +202,20 @@ def main_html() -> str:
             <p>{a}</p>
           </details>''' for q, a in FAQ)
     chips = "".join(f'<span class="pv-chip">{n}</span>' for n in INTEGRATIONS)
+    buttons = f'''<a class="btn btn-primary" href="{BOOK}">Talk to a specialist {ARROW}</a>
+              <a class="btn btn-ghost" href="{BOOK}">Book a demo</a>'''
     return f'''  <main id="main">
 
-    <!-- 1. Hero -->
+    <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap">
         <div class="pv-hero-grid">
           <div>
             <h1 class="h1" id="hero-title">AI that powers decisions. Humans who shape it around your business</h1>
-            <p class="lead">Planning is entering a new era: automations that learn, data and context without limits, intelligence that compounds.</p>
+            <p class="lead">Planning is entering a new era: automations that learn, data and context without limits, intelligence that compounds. Flieber takes your inventory decisions there, with a platform tailored to your brand and specialists who’ve seen how more than 1,000 brands operate.</p>
             <div class="pv-actions">
-              <a class="btn btn-primary" href="{BOOK}">Talk to a specialist {ARROW}</a>
-              <a class="btn btn-ghost" href="{BOOK}">Book a demo</a>
+              {buttons}
             </div>
-            <p class="pv-reassure">Tailored to your brand by specialists who’ve seen how more than 1,000 brands operate. Your team keeps every call.</p>
           </div>
           <figure class="pv-video" aria-label="Hero video placeholder">
             <span class="pv-play" aria-hidden="true"><svg width="22" height="24" viewBox="0 0 22 24"><path d="M2 2l18 10L2 22z" fill="#1B1C1C"/></svg></span>
@@ -205,74 +225,61 @@ def main_html() -> str:
       </div>
     </section>
 
-    <!-- 2. The new era of planning -->
-    <section class="section section-soft" id="new-era" aria-labelledby="era-title">
+    <!-- Why now? The gap -->
+    <section class="section section-soft" id="why-now" aria-labelledby="gap-title">
       <div class="wrap">
-{head("The new era of planning", "What planning looks like now", "era-title")}
-        <div class="pv-3 reveal-stagger">
-{era}
-        </div>
-        <p class="pv-close reveal">All in a platform tailored to your brand, with specialists who’ve seen how more than 1,000 brands operate. Welcome to the new era of planning.</p>
+{head("The gap", "Why now?", "gap-title")}
+{row(gap, 2)}
       </div>
     </section>
 
-    <!-- 3. The gap -->
-    <section class="section" id="the-gap" aria-labelledby="gap-title">
+    <!-- What changes? The new era of planning -->
+    <section class="section" id="what-changes" aria-labelledby="era-title">
       <div class="wrap">
-{head("The gap", "Most brands see the shift coming. Few know how to get there", "gap-title")}
-        <div class="pv-3 reveal-stagger">
-{gap}
-        </div>
+{head("The new era of planning", "What changes?", "era-title")}
+{row(era, 2)}
       </div>
     </section>
 
-    <!-- 4. How Flieber gets you there -->
+    <!-- How do we get there? -->
     <section class="section section-soft" id="how-flieber-gets-you-there" aria-labelledby="how-title">
       <div class="wrap">
-{head("How it works", "How Flieber gets you there", "how-title")}
-        <div class="pv-3 reveal-stagger">
-{steps}
-        </div>
+{head("How Flieber gets you there", "How do we get there?", "how-title")}
+{row(steps, 3)}
       </div>
     </section>
 
-    <!-- 5. When brands bring us in -->
-    <section class="section" id="when-brands-bring-us-in" aria-labelledby="moments-title">
-      <div class="wrap">
-{head("When brands bring us in", "Something changes, and the current setup stops being enough", "moments-title", "Brands rarely bring us in during a quiet month. These are the moments we hear about most.")}
-        <div class="pv-moments reveal-stagger">
-{moments}
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. Why not build it yourself -->
-    <section class="section section-soft" id="why-not-build-it-yourself" aria-labelledby="build-title">
+    <!-- Why not just buy or build software? -->
+    <section class="section" id="why-not-software-alone" aria-labelledby="build-title">
       <div class="wrap">
         <div class="pv-build">
           <div class="reveal">
-            <span class="kicker">Build or partner</span>
-            <h2 class="h2" id="build-title" style="margin-top:20px">Why not build it yourself?</h2>
+            <span class="kicker">Why software alone isn’t enough anymore</span>
+            <h2 class="h2" id="build-title" style="margin-top:20px">Why not just buy or build software?</h2>
           </div>
           <div class="reveal">
-            <p class="lead">Brands that partner on AI succeed about three times as often as those that build it alone, according to MIT’s 2025 study of enterprise AI. We bring the platform, the specialists and what we’ve learned from more than 1,000 brands, so you don’t start from zero.</p>
+            <p class="lead">For years, software had to fit every customer the same way. Each brand used a small slice of it and filled the gaps with spreadsheets. AI changed that: a platform can now be tailored to each brand, and the value comes from shaping it around how you work. That takes people who know the work, which is why Flieber now comes with the specialists who shape it, and why we no longer sell the software on its own.</p>
+            <p class="lead" style="margin-top:18px">Building it yourself is the other route, and it rarely holds: MIT’s study <i>The GenAI Divide: State of AI in Business 2025</i> found that partnering with specialists succeeds about three times as often as building in-house.</p>
             <p class="pv-cite">Source: MIT NANDA, <i>The GenAI Divide: State of AI in Business 2025</i>. Vendor and partnership routes succeeded about 67% of the time, and internal builds about a third as often (<a href="{MIT_URL}" rel="noopener" target="_blank">as reported by Fortune</a>). This is an outside study, not a Flieber result.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 7. Beyond inventory -->
-    <section class="section" id="beyond-inventory" aria-label="Beyond inventory">
+    <!-- Is this for me? -->
+    <section class="section section-soft" id="when-brands-bring-us-in" aria-labelledby="moments-title">
       <div class="wrap">
-        <p class="pv-beyond reveal">Inventory shapes your advertising, promotions and cash flow, so planning connects finance, marketing and operations.</p>
+{head("When brands bring us in", "Is this for me?", "moments-title")}
+        <div class="pv-moments pv-row pv-span3 reveal-stagger">
+{moments}
+        </div>
       </div>
     </section>
 
-    <!-- 8. Proof -->
-    <section class="section section-soft" id="proof" aria-labelledby="proof-title">
+    <!-- Can I trust you? -->
+    <section class="section" id="proof" aria-labelledby="proof-title">
       <div class="wrap">
-{head("Proof", "Experience your team can lean on", "proof-title")}
+{head("Proof", "Can I trust you?", "proof-title")}
         <div class="pv-stats reveal-stagger">
           <div class="pv-stat"><strong>1,000+</strong><span>More than 1,000 brands have used Flieber since 2019.</span></div>
           <div class="pv-stat"><strong>100+</strong><span>Brands planning with Flieber today.</span></div>
@@ -283,36 +290,22 @@ def main_html() -> str:
       </div>
     </section>
 
-    <!-- 9. Self-Serve -->
-    <section class="section" id="self-serve" aria-labelledby="ss-title">
-      <div class="wrap">
-        <div class="pv-ss reveal">
-          <div>
-            <h2 class="h3" id="ss-title">Flieber Self-Serve</h2>
-            <p>Want to run Flieber yourself, or build your own tools on our data? Use the app, CLI and API directly.</p>
-          </div>
-          <a class="btn btn-ghost" href="{SELF_SERVE}">See Flieber Self-Serve {ARROW}</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 10. FAQ -->
+    <!-- What else should I know? -->
     <section class="section section-soft" id="questions" aria-labelledby="questions-title">
       <div class="wrap">
-{head("Questions", "What brands ask before they bring us in", "questions-title")}
+{head("Questions", "What else should I know?", "questions-title")}
         <div class="faq">
 {faq}
         </div>
       </div>
     </section>
 
-    <!-- 11. Final call to action -->
-    <section class="section pv-final" id="book-a-review" aria-labelledby="final-title">
+    <!-- Final call to action -->
+    <section class="section pv-final" id="talk-to-a-specialist" aria-labelledby="final-title">
       <div class="wrap">
-        <span class="kicker">Next step</span>
-        <h2 class="h2" id="final-title">See what your operation looks like in the new era of planning</h2>
+        <h2 class="h2" id="final-title">See what your planning looks like in the new era</h2>
         <div class="pv-actions">
-          <a class="btn btn-primary" href="{BOOK}">Talk to a specialist {ARROW}</a>
+          {buttons}
         </div>
       </div>
     </section>
@@ -335,15 +328,15 @@ def main() -> None:
     top = re.sub(r'(<meta property="og:title" content=")[^"]*', r"\1" + TAGLINE[:-1], top, count=1)
     top = re.sub(r'(<meta property="og:description" content=")[^"]*', r"\1A planning platform tailored to your brand, with specialists who work with your team. Your team keeps every call.", top, count=1)
     top = re.sub(r'\s*<script type="application/ld\+json">.*?</script>', "", top, count=1, flags=re.S)
-    top = re.sub(r'<div class="review-bar"[^>]*>.*?</div>', '<div class="review-bar" role="note">Review build · <b>Positioning</b> · brief as written (doc rev 92) · V16</div>', top, count=1, flags=re.S)
+    top = re.sub(r'<div class="review-bar"[^>]*>.*?</div>', '<div class="review-bar" role="note">Review build · <b>Positioning</b> · brief as written (doc rev 98) · V16</div>', top, count=1, flags=re.S)
     top = top.replace("</head>", CSS + "\n</head>", 1)
     # Nav: one product, the team inside the copy, Self-Serve as the secondary path.
     nav = re.search(r'<nav class="nav-links" aria-label="Primary">.*?</nav>', top, flags=re.S).group(0)
     top = top.replace(nav, f'''<nav class="nav-links" aria-label="Primary">
         <a href="#how-flieber-gets-you-there">How it works</a>
         <a href="#when-brands-bring-us-in">When brands bring us in</a>
+        <a href="#questions">Questions</a>
         <a href="who-we-are/">Who we are</a>
-        <a href="{SELF_SERVE}">Self-Serve</a>
         <a class="menu-only" href="https://app.flieber.com">Log in</a>
         <a class="menu-only" href="{BOOK}">Talk to a specialist</a>
       </nav>''')
@@ -355,10 +348,10 @@ def main() -> None:
 
     bottom = rep(bottom, '<p class="tagline">The inventory intelligence layer <em>your agents run on.</em></p>',
                  '<p class="tagline">Flieber: where AI meets <em>inventory experts.</em></p>')
-    bottom = rep(bottom, '            <li><a href="managed-services/">Managed Services</a></li>\n', f'            <li><a href="{SELF_SERVE}">Flieber Self-Serve</a></li>\n')
+    bottom = rep(bottom, '            <li><a href="managed-services/">Managed Services</a></li>\n', '')
 
     page = top + main_html() + bottom
-    for bad in ("Managed Services", "managed-services", "Lite", "Core,", "Full plan", "—", "Flieber Studio", "Flieber Inventory", "alongside", "run by Flieber", "Managed", "dashboard", "single source of truth", "visibility", "planning system"):
+    for bad in ("Managed Services", "managed-services", "Lite", "Core,", "Full plan", "—", "Flieber Studio", "Flieber Inventory", "alongside", "run by Flieber", "Managed", "dashboard", "single source of truth", "visibility", "planning system", "Self-Serve", "Beyond inventory"):
         assert bad not in page, f"brief rule broken: {bad}"
     OUT.write_text(page, encoding="utf-8")
     print("wrote", OUT.relative_to(ROOT))
