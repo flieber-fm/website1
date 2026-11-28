@@ -102,7 +102,22 @@ CSS = """<style>
 .pv-team-i{border-top:2px solid var(--black);padding-top:16px}
 .pv-team-i b{display:block;font-size:19px;font-weight:600;letter-spacing:-.01em}
 .pv-team-i span{display:block;margin-top:8px;color:var(--charcoal);font-size:15px;line-height:1.5}
-#proof .quotes{margin-top:56px}
+#proof .quotes{margin-top:64px}
+.pv-proof{display:grid;grid-template-columns:1fr;gap:40px;align-items:end}
+@media(min-width:960px){.pv-proof{grid-template-columns:5fr 7fr;gap:64px}}
+.pv-proof .pv-big{margin:36px 0 0}
+.pv-proof .pv-sub{margin:0 0 18px}
+.pv-res{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pv-res-i{background:var(--gray-light);border-radius:16px;padding:20px 22px}
+.pv-res-n{display:block;font-size:clamp(34px,4vw,46px);line-height:1;letter-spacing:-.04em;font-weight:500}
+.pv-res-l{display:block;margin-top:10px;color:var(--charcoal);font-size:15px;line-height:1.4}
+.pv-teamband{margin-top:56px;display:grid;grid-template-columns:1fr;gap:28px;background:var(--black);color:var(--gray-light);border-radius:22px;padding:clamp(26px,4vw,44px)}
+@media(min-width:960px){.pv-teamband{grid-template-columns:4fr 8fr;gap:48px}}
+.pv-teamband .pv-sub{color:#fff}
+.pv-teamband .pv-team-lead{margin:8px 0 0;color:rgba(240,245,246,.75)}
+.pv-teamband .pv-team-i{border-top-color:var(--yellow)}
+.pv-teamband .pv-team-i b{color:#fff}
+.pv-teamband .pv-team-i span{color:rgba(240,245,246,.75)}
 .pv-final{text-align:center}
 .pv-final .h2{max-width:760px;margin:20px auto 0}
 .pv-final .pv-actions{justify-content:center}
@@ -118,11 +133,11 @@ def card(title: str, body: str, extra: str = "", lead: str = "") -> str:
 
 GAP = [
     ("AI is changing how you plan",
-     "Work that took a planner days now runs on its own. Forecasts take in everything a business knows, not only its sales history. The brands that move first will plan faster and with fewer surprises than the ones that wait."),
+     "Forecasts can now take in everything a business knows, not only its sales history. Routine work runs on its own, and every cycle feeds what was learned back in, so each plan is sharper than the last."),
     ("Few know how to get there",
      "AI is in every board meeting, conference and newsletter. Your team sees the potential, but between daily firefighting and the next purchase order, nobody has the time or the knowledge to bring it into how your business plans."),
-    ("In-house apps become a full-time job",
-     "It starts as an exciting project. Then new use cases appear, people join and leave, and the infrastructure needs upkeep. Soon your team is fixing bugs in a tool it built instead of growing the brand."),
+    ("First movers will win",
+     "While most brands are still working out where to start, the ones that take planning and operations to the next level first will move faster, react sooner and build an advantage that grows every cycle."),
 ]
 
 ERA = [
@@ -164,7 +179,7 @@ FAQ = [
     ("Why not build this ourselves with AI?",
      "You can, and some brands try. The first version is usually exciting. The hard part comes after: every new use case, team change and data source adds upkeep, until maintaining the tool becomes someone’s full-time job. MIT found that partnering with specialists succeeds about three times as often as building in-house. With Flieber you start from what works across more than 1,000 brands, and the upkeep is ours."),
     ("What exactly do your specialists do?",
-     "They create a routine of interactions with your team, which can go as far as joining your planning and S&amp;OP meetings if you want them there. Through it, they gather context from finance, marketing and operations and make sure your platform has it. They keep your data and setup right as your business changes, review plans with your team before money goes out, and turn every recurring task into an automation. Behind your main contacts is a wider team with experience at the intersection of planning, operations and technology."),
+     "They create a routine of interactions with your team, which can go as far as joining your planning and S&amp;OP meetings if you want them there. Through it, they gather context from finance, marketing and operations and make sure your platform has it. They keep your data and setup right as your business changes, review plans with your team before money goes out, and find the opportunities for better data and automation in how you work. Behind your main contacts is a wider team with experience at the intersection of planning, operations and technology."),
     ("Do I lose control?",
      "No. Your team approves every plan and every order, and nothing moves without that approval. You also decide how much the specialists take on: some brands start with a second set of eyes on their plans, others hand over the whole planning preparation, and you can change that as trust builds."),
     ("Do your specialists leave after setup?",
@@ -174,7 +189,7 @@ FAQ = [
     ("Why does it cost more than software?",
      "Because you’re not buying a tool your team then has to make work. You get three things software alone doesn’t give you. A platform tailored to your brand, with your products, channels, suppliers and rules built in. Specialists who keep it right as your business changes, review plans with your team and turn recurring work into automations. And what we’ve learned from more than 1,000 brands, so you start from what works instead of from scratch. Compare it with what the alternatives really cost: the time your team spends working around a generic tool, a new hire to run the process, or an in-house app someone has to maintain. Inventory shapes your advertising, promotions and cash flow, and one avoided stockout or overstock on a bestseller can pay for a year."),
     ("I just want software. I don’t want to pay for a team.",
-     "We understand, and for years we sold Flieber that way. Here’s what we learned from more than 1,000 brands: software that has to fit everyone leaves gaps. Each brand used a small slice of it and filled the rest with spreadsheets and workarounds, so planning still depended on a few people’s heads. The specialists aren’t a team added on top of the software. They’re how the platform gets shaped around your business and how it keeps up as you change: new channels, new suppliers, people joining and leaving. They don’t replace your team or take your decisions. Their job is to move routine work onto automations, so each cycle your team spends less time on the process and more on the brand. And you decide how much they take on, from a second set of eyes on your plans to the whole planning preparation."),
+     "We understand, and for years we sold Flieber that way. Here’s what we learned from more than 1,000 brands: software that has to fit everyone leaves gaps. Each brand used a small slice of it and filled the rest with spreadsheets and workarounds, so planning still depended on a few people’s heads. The specialists aren’t a team added on top of the software. They’re how the platform gets shaped around your business and how it keeps up as you change: new channels, new suppliers, people joining and leaving. They don’t replace your team or take your decisions. Their job is to learn how you operate and find where better data or automation will make the biggest difference, then build it into your platform. That’s the work a generic tool can’t do, and it’s what makes the difference. And you decide how much they take on, from a second set of eyes on your plans to the whole planning preparation."),
     ("What happens in the first month?",
      "We get everything ready for you to plan on a solid foundation. Our team learns how you operate and gathers the context behind your numbers from the people involved, from finance to marketing to operations. We connect your data, map your products, channels and suppliers, and make the platform your own: views, alerts, workflows and forecasting set up around your use cases and preferences. Together we define the main gaps to close and the indicators we’ll follow. Within the first month, you already start seeing measurable value, and every cycle after that builds on it."),
 ]
@@ -195,6 +210,9 @@ def live_part(start: str, end: str) -> str:
     s = src.index(start)
     return src[s:src.index(end, s) + len(end)]
 
+
+RESULTS = [("↑", "38%", "more sales"), ("↓", "62%", "fewer stockouts"),
+           ("↓", "17%", "less excess inventory"), ("↓", "88%", "less time on replenishment decisions")]
 
 TEAM = [
     ("Former operators", "People who have planned and run operations at commerce brands themselves."),
@@ -224,10 +242,9 @@ def main_html() -> str:
           </details>''' for q, a in FAQ)
     logos = live_part('    <section class="logos-band"', "    </section>").replace(
         '<p class="logos-label" id="logos-label">Trusted by hundreds of brands</p>',
-        '<p class="logos-label" id="logos-label">More than 1,000 brands have used Flieber since 2019</p>')
-    results = live_part('        <div class="results-block results-light reveal">', "        </div>").replace(
-        '<p class="results-note">Average across customers using Flieber for 12+ months</p>',
-        '<p class="results-note">Average across customers using Flieber for 12+ months. Averages, not a guarantee for every brand.</p>')
+        '<p class="logos-label" id="logos-label">Brands that plan with Flieber</p>')
+    results = "".join(f'<div class="pv-res-i"><span class="pv-res-n">{arrow}{n}</span><span class="pv-res-l">{l}</span></div>'
+                      for arrow, n, l in RESULTS)
     quotes = live_part('        <div class="quotes reveal" id="quotes"', "            </div>\n          </div>\n        </div>")
     team = "".join(f'<div class="pv-team-i"><b>{n}</b><span>{d}</span></div>' for n, d in TEAM)
     buttons = f'''<a class="btn btn-primary" href="{BOOK}">Talk to a specialist {ARROW}</a>
@@ -310,18 +327,26 @@ def main_html() -> str:
     <!-- Can I trust you? -->
     <section class="section" id="proof" aria-labelledby="proof-title">
       <div class="wrap">
-{head("Proof", "Can I trust you?", "proof-title")}
-        <div class="pv-stats reveal-stagger">
-          <div class="pv-stat"><strong>1,000+</strong><span>Brands have used Flieber.</span></div>
-          <div class="pv-stat"><strong>2019</strong><span>Operating since 2019.</span></div>
-          <div class="pv-stat"><strong>100+</strong><span>Brands planning with Flieber today.</span></div>
+        <div class="pv-proof reveal">
+          <div class="pv-proof-l">
+            <span class="kicker">Proof</span>
+            <h2 class="h2" id="proof-title" style="margin-top:20px">Can I trust you?</h2>
+            <p class="pv-big">1,000+</p>
+            <p class="pv-big-l">brands have used Flieber since 2019.</p>
+          </div>
+          <div class="pv-proof-r">
+            <h3 class="pv-sub">What brands see after 12 months or more</h3>
+            <div class="pv-res">{results}</div>
+            <p class="pv-cite">Averages across customers using Flieber for 12 months or more. Not a guarantee for every brand.</p>
+          </div>
         </div>
-        <h3 class="pv-sub reveal">Results for brands using Flieber for 12+ months</h3>
-{results}
-        <p class="pv-cite reveal">Forecasts 36% more accurate, verified by Nixtla against 16 statistical and machine-learning models on 46,000 products.</p>
-        <h3 class="pv-sub reveal">The team behind your account</h3>
-        <p class="pv-team-lead reveal">Experience at the intersection of planning, operations and technology.</p>
-        <div class="pv-team reveal-stagger">{team}</div>
+        <div class="pv-teamband reveal">
+          <div>
+            <h3 class="pv-sub" style="margin-top:0">The team behind your account</h3>
+            <p class="pv-team-lead">Experience at the intersection of planning, operations and technology.</p>
+          </div>
+          <div class="pv-team">{team}</div>
+        </div>
 {quotes}
       </div>
     </section>
