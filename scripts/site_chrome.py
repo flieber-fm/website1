@@ -1,7 +1,8 @@
 """Navigation and footer shared by every page (Option 2 brief, sections 3 and 4).
 
-Navigation: Product (menu: All features with the five modules nested under it, then Prompt ideas, Integrations, MCP and AI agents and Security & data) · Solutions (menu: the three pages by type of
-business and goal, then a divider and Before you choose) · Pricing · Who we are · /agents, then Log in · Book a demo · Start free trial.
+Navigation (positioning rebuild, Nov 28): Product (menu: All features with the four modules nested under it, then Prompt ideas, Integrations, MCP and AI agents and
+Security & data) · Solutions (menu: the pages by type of business) · How it works · Pricing · Who we are · /agents, then Log in · Talk to a specialist.
+One call to action (Fabricio, Nov 28): no free trial, no second button.
 build-content.py writes these into every page listed in PAGE_FILES.
 """
 import html
@@ -61,16 +62,13 @@ def nav_html(p: str, cur) -> str:
     # "All features" first, the five modules nested under it, then a divider and the other product pages.
     product = f'            <a class="nav-menu-all" href="{p}features/">All features <span aria-hidden="true">→</span></a>\n'
     product += '            <div class="nav-sub">\n'
-    product += "\n".join(f'              <a href="{p}product/{m["slug"]}/">{esc(m["name"])}</a>' for m in C.MODULES)
+    product += "\n".join(f'              <a href="{p}product/{m["slug"]}/">{esc(m["name"])}</a>' for m in C.MODULES if m["slug"] != "data-layer")
     product += '\n            </div>\n            <hr class="nav-menu-sep">'
     product += f'\n            <a href="{p}{W.PAGE["slug"]}/">{esc(W.PAGE["name"])}</a>'
     product += f'\n            <a href="{p}integrations/">Integrations</a>'
     product += f'\n            <a href="{p}{C.MCP_PAGE["slug"]}/">{esc(C.MCP_PAGE["name"])}</a>'
     product += f'\n            <a href="{p}security/">Security &amp; data</a>'
     sol = "\n".join(f'            <a href="{p}{x["slug"]}/">{esc(x["name"])}</a>' for x in C.SOLUTIONS)
-    sol += f'\n            <a href="{p}{C.BWA["slug"]}/">{esc(C.BWA["name"])}</a>'
-    sol += '\n            <hr class="nav-menu-sep">'  # Before you choose is a buyer resource, not an audience
-    sol += f'\n            <a href="{p}{C.BYC["slug"]}/">{esc(C.BYC["name"])}</a>'
     agents_cur = ' aria-current="page"' if cur == "agents" else ""
     return f"""  <header class="nav" id="nav">
     <div class="wrap">
@@ -80,16 +78,16 @@ def nav_html(p: str, cur) -> str:
       <nav class="nav-links" aria-label="Primary">
         {drop_html("product", "Product", cur, product)}
         {drop_html("solutions", "Solutions", cur, sol)}
+        {a((p or "./") + "#how-flieber-gets-you-there", "How it works", "how")}
         {a(p + "pricing/", "Pricing", "pricing")}
         {a(p + "who-we-are/", "Who we are", "who")}
         <a class="agents-link" href="{p}agents/"{agents_cur} aria-label="For AI agents"><code>/agents</code></a>
         <a class="menu-only" href="https://app.flieber.com">Log in</a>
-        <a class="menu-only" href="{C.DEMO}">Book a demo</a>
+        <a class="menu-only" href="{C.DEMO}">Talk to a specialist</a>
       </nav>
       <div class="nav-cta">
         <a class="nav-login" href="https://app.flieber.com">Log in</a>
-        <a class="btn btn-ghost btn-sm" href="{C.DEMO}">Book a demo</a>
-        <a class="btn btn-primary btn-sm" href="{C.TRIAL}">Start free trial</a>
+        <a class="btn btn-primary btn-sm" href="{C.DEMO}">Talk to a specialist</a>
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
       </div>
     </div>
@@ -98,16 +96,13 @@ def nav_html(p: str, cur) -> str:
 
 def footer_html(p: str, mark: bool) -> str:
     sol = "\n".join(f'            <li><a href="{p}{x["slug"]}/">{esc(x["name"])}</a></li>' for x in C.SOLUTIONS)
-    sol += f'\n            <li><a href="{p}{C.BWA["slug"]}/">{esc(C.BWA["name"])}</a></li>'
-    sol += f'\n            <li><a href="{p}{C.BYC["slug"]}/">{esc(C.BYC["name"])}</a></li>'
-    mark_html = (f'\n      <div class="footer-mark" aria-hidden="true"><img src="{p}assets/img/flieber-logo-light.svg" alt=""></div>'
-                 if mark else "")
+    mark_html = ""  # the faded logo watermark looked like a mistake (Fabricio, Nov 28): off on every page
     return f"""  <footer class="footer">
     <div class="wrap">
       <div class="footer-top">
         <div class="footer-brand">
           <img src="{p}assets/img/flieber-logo-light.svg" alt="Flieber" width="132" height="23">
-          <p class="tagline">The inventory intelligence layer <em>your agents run on.</em></p>
+          <p class="tagline">Flieber: where AI meets <em>inventory experts.</em></p>
         </div>
         <div>
           <h2 class="footer-h">Product</h2>
@@ -118,7 +113,6 @@ def footer_html(p: str, mark: bool) -> str:
             <li><a href="{p}{C.MCP_PAGE["slug"]}/">{esc(C.MCP_PAGE["name"])}</a></li>
             <li><a href="{p}pricing/">Pricing</a></li>
             <li><a href="{p}security/">Security &amp; data</a></li>
-            <li><a href="{p}{C.MS["slug"]}/">Managed Services</a></li>
           </ul>
         </div>
         <div>
@@ -158,8 +152,8 @@ def footer_html(p: str, mark: bool) -> str:
 
 
 # Review banner: tells the Option 2 preview apart from the other options open in the browser. Remove before launch.
-REVIEW_BAR = ('  <div class="review-bar" role="note">Review build · <b>Option 2</b> · '
-              'Agent positioning (Oct&nbsp;7) on Option&nbsp;2’s design</div>\n')
+REVIEW_BAR = ('  <div class="review-bar" role="note">Review build · <b>Positioning</b> · '
+              'positioning rebuild · work in progress</div>\n')
 
 
 def apply(root) -> None:

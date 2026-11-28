@@ -262,10 +262,34 @@
         <img src="assets/img/flieber-logo.svg" alt="Flieber" width="116" height="20">
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#how-flieber-gets-you-there">How it works</a>
-        <a href="#when-brands-bring-us-in">When brands bring us in</a>
-        <a href="#questions">Questions</a>
+        <div class="nav-drop">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-product">Product <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-product">
+            <a class="nav-menu-all" href="features/">All features <span aria-hidden="true">→</span></a>
+            <div class="nav-sub">
+              <a href="product/demand-forecasting/">Demand forecasting</a>
+              <a href="product/inventory-forecasting/">Inventory forecasting</a>
+              <a href="product/replenishment/">Replenishment</a>
+              <a href="product/workflows/">Workflows</a>
+            </div>
+            <hr class="nav-menu-sep">
+            <a href="prompt-ideas/">Prompt ideas</a>
+            <a href="integrations/">Integrations</a>
+            <a href="mcp/">MCP and AI agents</a>
+            <a href="security/">Security &amp; data</a>
+          </div>
+        </div>
+        <div class="nav-drop">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-solutions">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-menu" id="nav-solutions">
+            <a href="multichannel/">Multichannel brands</a>
+            <a href="agencies/">Agencies and aggregators</a>
+          </div>
+        </div>
+        <a href="./#how-flieber-gets-you-there">How it works</a>
+        <a href="pricing/">Pricing</a>
         <a href="who-we-are/">Who we are</a>
+        <a class="agents-link" href="agents/" aria-label="For AI agents"><code>/agents</code></a>
         <a class="menu-only" href="https://app.flieber.com">Log in</a>
         <a class="menu-only" href="https://www.flieber.com/book-a-demo">Talk to a specialist</a>
       </nav>
@@ -666,8 +690,6 @@
           <ul>
             <li><a href="multichannel/">Multichannel brands</a></li>
             <li><a href="agencies/">Agencies and aggregators</a></li>
-            <li><a href="customize/">Customize Flieber</a></li>
-            <li><a href="before-you-choose/">Before you choose</a></li>
           </ul>
         </div>
         <div>

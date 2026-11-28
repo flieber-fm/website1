@@ -8,7 +8,11 @@ only the review bar, nav, main content, footer tagline and footer links change.
 Placeholders (hero video, customer logos, Self-Serve page) are marked on the page, as the brief asks.
 """
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import site_chrome  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "scripts" / "home-snapshots" / "2026-11-28-positioning-v16.html"
@@ -623,33 +627,16 @@ def main() -> None:
     top = re.sub(r'\s*<script type="application/ld\+json">.*?</script>', "", top, count=1, flags=re.S)
     top = re.sub(r'<div class="review-bar"[^>]*>.*?</div>', '<div class="review-bar" role="note">Review build · <b>Positioning</b> · positioning rebuild · work in progress</div>', top, count=1, flags=re.S)
     top = top.replace("</head>", CSS + "\n</head>", 1)
-    # Nav: one product, the team inside the copy, Self-Serve as the secondary path.
-    nav = re.search(r'<nav class="nav-links" aria-label="Primary">.*?</nav>', top, flags=re.S).group(0)
-    top = top.replace(nav, f'''<nav class="nav-links" aria-label="Primary">
-        <a href="#how-flieber-gets-you-there">How it works</a>
-        <a href="#when-brands-bring-us-in">When brands bring us in</a>
-        <a href="#questions">Questions</a>
-        <a href="who-we-are/">Who we are</a>
-        <a class="menu-only" href="https://app.flieber.com">Log in</a>
-        <a class="menu-only" href="{BOOK}">Talk to a specialist</a>
-      </nav>''')
-    cta = re.search(r'<div class="nav-cta">.*?<button class="nav-toggle"', top, flags=re.S).group(0)
-    top = top.replace(cta, f'''<div class="nav-cta">
-        <a class="nav-login" href="https://app.flieber.com">Log in</a>
-        <a class="btn btn-primary btn-sm" href="{BOOK}">Talk to a specialist</a>
-        <button class="nav-toggle"''')
-
-    bottom = re.sub(r'\s*<div class="footer-mark"[^>]*>.*?</div>', '', bottom, count=1, flags=re.S)
-    bottom = rep(bottom, '<p class="tagline">The inventory intelligence layer <em>your agents run on.</em></p>',
-                 '<p class="tagline">Flieber: where AI meets <em>inventory experts.</em></p>')
-    bottom = rep(bottom, '            <li><a href="managed-services/">Managed Services</a></li>\n', '')
+    # Nav and footer: the shared ones (scripts/site_chrome.py), so the homepage matches every other page.
+    top = re.sub(r'  <header class="nav" id="nav">.*?</header>', lambda m: site_chrome.nav_html("", None), top, count=1, flags=re.S)
+    bottom = re.sub(r'  <footer class="footer">.*?</footer>', lambda m: site_chrome.footer_html("", False), bottom, count=1, flags=re.S)
 
     page = top + main_html() + bottom
     for bad in ("Managed Services", "managed-services", "Lite", "Core,", "Full plan", "—", "Flieber Studio", "Flieber Inventory", "alongside", "run by Flieber", "Managed", "dashboard", "single source of truth", "visibility", "planning system", "Self-Serve", "Beyond inventory"):
         assert bad not in page, f"brief rule broken: {bad}"
-    OUT.write_text(page, encoding="utf-8")
-    (ROOT / "index.html").write_text(page, encoding="utf-8")  # positioning rebuild: V16 is the homepage
-    print("wrote", OUT.relative_to(ROOT))
+    # The V16 snapshot (OUT) is frozen as Fabricio saw it on Nov 28; this branch only writes the homepage.
+    (ROOT / "index.html").write_text(page, encoding="utf-8")
+    print("wrote index.html")
 
 
 if __name__ == "__main__":
