@@ -102,7 +102,12 @@ CSS = """<style>
 .pv-team-i{border-top:2px solid var(--black);padding-top:16px}
 .pv-team-i b{display:block;font-size:19px;font-weight:600;letter-spacing:-.01em}
 .pv-team-i span{display:block;margin-top:8px;color:var(--charcoal);font-size:15px;line-height:1.5}
-#proof .quotes{margin-top:64px}
+.pv-voices{background:var(--yellow)}
+.pv-voices .quotes{margin-top:0}
+.pv-voices .quote-dots button{background:rgba(27,28,28,.22)}
+.pv-voices .quote-dots button[aria-current="true"]{background:var(--black)}
+.pv-voices .icon-btn{border-color:rgba(27,28,28,.35)}
+.pv-voices .avatar{background:#fff}
 .pv-proof{display:grid;grid-template-columns:1fr;gap:32px;align-items:stretch;margin-top:40px}
 .pv-proof-l{display:flex;flex-direction:column}
 @media(min-width:960px){.pv-proof-note{margin-left:calc((100% - 40px) / 3 + 40px)}}
@@ -194,6 +199,13 @@ CSS = """<style>
 .pv-viz-step .pv-sv{height:100%;box-sizing:border-box}
 .pv-sv{border-radius:12px;background:var(--gray-light);padding:12px;font-size:11.5px;line-height:1.35;min-height:96px}
 .pv-sv-learn{display:grid;gap:5px}
+.pv-sv-rules{display:grid;gap:5px}
+.pv-sv-rules div:not(.pv-sv-h){background:#fff;border-radius:7px;padding:5px 8px;display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:baseline}
+.pv-sv-rules b{font-size:11px;font-weight:600;white-space:nowrap}
+.pv-sv-rules span{font:500 10.5px/1.35 ui-monospace,monospace;color:var(--charcoal)}
+.pv-card p.pv-sv-tags{display:flex;flex-wrap:wrap;gap:4px;margin:3px 0 0;font-size:10.5px;line-height:1.2}
+.pv-sv-tags i{font-style:normal;padding:3px 7px;border-radius:999px;background:var(--black);color:#fff}
+.pv-sv-rules .pv-sv-h,.pv-sv-learn .pv-sv-h{display:block;background:none;padding:0;margin:0 0 2px;font:500 10px ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
 .pv-sv-learn .pv-sv-h{display:block;background:none;padding:0;margin:0 0 2px;font:500 10px ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
 .pv-sv-learn div{background:#fff;border-radius:7px;padding:5px 8px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
 .pv-sv-learn b{font-size:11px;font-weight:600}
@@ -407,8 +419,11 @@ STEP_VIEWS = [
               <div><b>Your team</b><span>How you plan · who approves what</span></div>
               <div><b>Your integrations</b><span>Amazon · Shopify · your ERP · your 3PL</span></div>
               <div><b>Your AI agents</b><span>Your rules · your notes · your history</span></div></div>""",
-    """<div class="pv-sv pv-sv-brand"><div class="pv-sv-top"><span class="pv-sv-logo">Your logo</span><b>Replenishment Plan</b><span class="pv-sv-url">yourbrand.flieber.com</span></div>
-              <div class="pv-sv-sw"><i></i><i></i><i></i><span>Your colors · your views</span></div></div>""",
+    """<div class="pv-sv pv-sv-rules"><div class="pv-sv-h">Your platform · fine-tuned to how you operate</div>
+              <div><b>Supplier 1</b><span>every 4 weeks · cover 120 days · full cartons · round up to MOQ if within 10%</span></div>
+              <div><b>Supplier 2</b><span>every 6 weeks · cover 90 days · full containers</span></div>
+              <div><b>3PL US → FBA US</b><span>weekly · by the pallet</span></div>
+              <p class="pv-sv-tags"><i>Rules in your own words</i><i>Combined MOQs</i><i>Launches</i><i>Wholesale</i><i>Your approval stages</i></p></div>""",
     """<div class="pv-sv pv-sv-stages"><div class="pv-stg"><span>Draft</span><span>In review</span><span>Ops</span><span>Finance</span><span>Approved</span></div>
               <div class="pv-sv-chip">Engine improved · your platform gets it too</div></div>""",
 ]
@@ -552,6 +567,12 @@ def main_html() -> str:
           </div>
           <div class="pv-team">{team}</div>
         </div>
+      </div>
+    </section>
+
+    <!-- Customer voices -->
+    <section class="section pv-voices" id="customer-quotes" aria-label="What customers say">
+      <div class="wrap">
 {quotes}
       </div>
     </section>
@@ -612,6 +633,7 @@ def main() -> None:
         <a class="btn btn-primary btn-sm" href="{BOOK}">Talk to a specialist</a>
         <button class="nav-toggle"''')
 
+    bottom = re.sub(r'\s*<div class="footer-mark"[^>]*>.*?</div>', '', bottom, count=1, flags=re.S)
     bottom = rep(bottom, '<p class="tagline">The inventory intelligence layer <em>your agents run on.</em></p>',
                  '<p class="tagline">Flieber: where AI meets <em>inventory experts.</em></p>')
     bottom = rep(bottom, '            <li><a href="managed-services/">Managed Services</a></li>\n', '')

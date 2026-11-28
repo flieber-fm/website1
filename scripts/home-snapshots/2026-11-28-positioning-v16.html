@@ -117,7 +117,12 @@
 .pv-team-i{border-top:2px solid var(--black);padding-top:16px}
 .pv-team-i b{display:block;font-size:19px;font-weight:600;letter-spacing:-.01em}
 .pv-team-i span{display:block;margin-top:8px;color:var(--charcoal);font-size:15px;line-height:1.5}
-#proof .quotes{margin-top:64px}
+.pv-voices{background:var(--yellow)}
+.pv-voices .quotes{margin-top:0}
+.pv-voices .quote-dots button{background:rgba(27,28,28,.22)}
+.pv-voices .quote-dots button[aria-current="true"]{background:var(--black)}
+.pv-voices .icon-btn{border-color:rgba(27,28,28,.35)}
+.pv-voices .avatar{background:#fff}
 .pv-proof{display:grid;grid-template-columns:1fr;gap:32px;align-items:stretch;margin-top:40px}
 .pv-proof-l{display:flex;flex-direction:column}
 @media(min-width:960px){.pv-proof-note{margin-left:calc((100% - 40px) / 3 + 40px)}}
@@ -209,6 +214,13 @@
 .pv-viz-step .pv-sv{height:100%;box-sizing:border-box}
 .pv-sv{border-radius:12px;background:var(--gray-light);padding:12px;font-size:11.5px;line-height:1.35;min-height:96px}
 .pv-sv-learn{display:grid;gap:5px}
+.pv-sv-rules{display:grid;gap:5px}
+.pv-sv-rules div:not(.pv-sv-h){background:#fff;border-radius:7px;padding:5px 8px;display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:baseline}
+.pv-sv-rules b{font-size:11px;font-weight:600;white-space:nowrap}
+.pv-sv-rules span{font:500 10.5px/1.35 ui-monospace,monospace;color:var(--charcoal)}
+.pv-card p.pv-sv-tags{display:flex;flex-wrap:wrap;gap:4px;margin:3px 0 0;font-size:10.5px;line-height:1.2}
+.pv-sv-tags i{font-style:normal;padding:3px 7px;border-radius:999px;background:var(--black);color:#fff}
+.pv-sv-rules .pv-sv-h,.pv-sv-learn .pv-sv-h{display:block;background:none;padding:0;margin:0 0 2px;font:500 10px ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
 .pv-sv-learn .pv-sv-h{display:block;background:none;padding:0;margin:0 0 2px;font:500 10px ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
 .pv-sv-learn div{background:#fff;border-radius:7px;padding:5px 8px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
 .pv-sv-learn b{font-size:11px;font-weight:600}
@@ -413,8 +425,11 @@
             <p>Our team connects your data and creates a routine of interactions with yours to continuously capture the context behind your numbers, from finance to marketing to operations. Within the first month, you already start seeing measurable value.</p>
           </article>
           <article class="pv-card">
-            <div class="pv-viz pv-viz-step" aria-hidden="true"><div class="pv-sv pv-sv-brand"><div class="pv-sv-top"><span class="pv-sv-logo">Your logo</span><b>Replenishment Plan</b><span class="pv-sv-url">yourbrand.flieber.com</span></div>
-              <div class="pv-sv-sw"><i></i><i></i><i></i><span>Your colors · your views</span></div></div></div>
+            <div class="pv-viz pv-viz-step" aria-hidden="true"><div class="pv-sv pv-sv-rules"><div class="pv-sv-h">Your platform · fine-tuned to how you operate</div>
+              <div><b>Supplier 1</b><span>every 4 weeks · cover 120 days · full cartons · round up to MOQ if within 10%</span></div>
+              <div><b>Supplier 2</b><span>every 6 weeks · cover 90 days · full containers</span></div>
+              <div><b>3PL US → FBA US</b><span>weekly · by the pallet</span></div>
+              <p class="pv-sv-tags"><i>Rules in your own words</i><i>Combined MOQs</i><i>Launches</i><i>Wholesale</i><i>Your approval stages</i></p></div></div>
             <div class="pv-card-h"><span class="pv-num" aria-hidden="true">2</span><h3>We tailor your platform</h3></div>
             <p>You get your own version of Flieber, with your logo and colors, tailored to your use cases and how your team operates. Forecasting models are fine-tuned to your catalog, and new products and wholesale channels are handled by specialized tools. Views, alerts and workflows follow your preferences. When a new need comes up, it becomes part of your platform instead of a spreadsheet workaround or a long wait on the roadmap of a generic system.</p>
           </article>
@@ -518,6 +533,12 @@
           </div>
           <div class="pv-team"><div class="pv-team-i"><b>Former operators</b><span>People who have planned and run operations at commerce brands themselves.</span></div><div class="pv-team-i"><b>A senior AI team</b><span>The engineers and data scientists behind your models and automations.</span></div><div class="pv-team-i"><b>Process consultants</b><span>Experience improving how planning teams work, not only what tools they use.</span></div></div>
         </div>
+      </div>
+    </section>
+
+    <!-- Customer voices -->
+    <section class="section pv-voices" id="customer-quotes" aria-label="What customers say">
+      <div class="wrap">
         <div class="quotes reveal" id="quotes" aria-roledescription="carousel" aria-label="Customer quotes">
           <div class="quote-stage" aria-live="polite">
             <figure class="quote active" aria-roledescription="slide" aria-label="1 of 5">
@@ -665,7 +686,6 @@
           </ul>
         </div>
       </div>
-      <div class="footer-mark" aria-hidden="true"><img src="assets/img/flieber-logo-light.svg" alt=""></div>
       <div class="footer-bottom">
         <span>169 Madison Avenue, New York, NY 10016</span>
         <span>© <span id="year">2026</span> Flieber</span>
