@@ -123,6 +123,52 @@ CSS = """<style>
 .pv-teamband .pv-team-i{border-top-color:var(--yellow)}
 .pv-teamband .pv-team-i b{color:#fff}
 .pv-teamband .pv-team-i span{color:rgba(240,245,246,.75)}
+/* hero stage */
+.pv-hero-grid{align-items:stretch}
+.pv-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:100%;padding:clamp(28px,4vw,56px) clamp(18px,3vw,40px);border-radius:28px;background:radial-gradient(90% 70% at 85% 0%,var(--yellow-light),transparent 60%),radial-gradient(80% 70% at 0% 100%,#DDE7F7,transparent 60%),var(--gray-light);overflow:hidden}
+.pv-stage .pv-video{width:100%;box-shadow:0 24px 60px rgba(27,28,28,.22)}
+.pv-float{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13.5px;line-height:1.35;box-shadow:0 12px 30px rgba(27,28,28,.12);animation:pvFloat 6s ease-in-out infinite}
+.pv-float b{font-weight:600}
+.pv-float-a{top:22px;left:22px}
+.pv-float-b{right:22px;bottom:22px;animation-delay:-3s}
+.pv-dot{width:9px;height:9px;border-radius:50%;background:#2BB673;box-shadow:0 0 0 4px rgba(43,182,115,.18)}
+.pv-approve{padding:6px 10px;border-radius:8px;background:var(--yellow);font-weight:600;font-size:12.5px}
+.pv-illus{position:absolute;left:24px;bottom:14px;font:500 10.5px/1 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-dark)}
+@keyframes pvFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media(max-width:979px){.pv-stage{padding:64px 16px 72px}}
+@media(max-width:600px){.pv-float{font-size:12px;padding:8px 10px}.pv-float-a{top:14px;left:14px}.pv-float-b{right:14px;bottom:14px}.pv-illus{display:none}}
+/* why now icons */
+.pv-ico{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--yellow);color:var(--black);margin-bottom:18px;justify-self:start}
+/* dark era section */
+.pv-dark .pv-card{background:#262829;border-color:rgba(240,245,246,.1)}
+.pv-dark .pv-card h3{color:#fff}
+.pv-dark .pv-card p{color:rgba(240,245,246,.75)}
+.pv-viz{margin:-6px -6px 18px;height:110px}
+.pv-viz svg{width:100%;height:100%;display:block}
+.pv-viz path{stroke:var(--gray-dark);stroke-width:1.6}
+.pv-viz .pv-viz-y{stroke:var(--yellow);stroke-width:2.2}
+.pv-viz .pv-viz-base{stroke:rgba(240,245,246,.15)}
+.pv-viz-t{font:500 10.5px ui-monospace,monospace;fill:var(--gray-medium)}
+.pv-viz-dot{fill:var(--yellow)}
+.pv-viz-dot2{fill:#fff}
+.pv-viz-loop{stroke:var(--yellow);stroke-width:2;stroke-dasharray:6 7}
+.pv-spin{transform-origin:130px 55px;animation:pvSpin 14s linear infinite}
+@keyframes pvSpin{to{transform:rotate(360deg)}}
+/* steps connector */
+.pv-steps-wrap{position:relative}
+@media(min-width:820px){.pv-steps-wrap::before{content:"";position:absolute;left:43px;right:43px;top:42px;border-top:2px dashed var(--gray-medium);z-index:0}
+.pv-steps-wrap .pv-card{position:relative;z-index:1}}
+/* MIT bars */
+.pv-bars{margin-top:22px;display:grid;gap:12px}
+.pv-bar{display:grid;grid-template-columns:1fr;gap:6px}
+@media(min-width:600px){.pv-bar{grid-template-columns:190px 1fr 170px;align-items:center;gap:14px}}
+.pv-bar-l{font-size:14px;color:var(--charcoal)}
+.pv-bar-t{height:14px;border-radius:7px;background:var(--gray-light);overflow:hidden}
+.pv-bar-t i{display:block;height:100%;width:var(--w);border-radius:7px;background:var(--yellow);transform-origin:left;transform:scaleX(0);transition:transform 1.2s var(--ease) .2s}
+.pv-bar:last-child .pv-bar-t i{background:var(--gray-medium)}
+.in-view .pv-bar-t i,.no-js .pv-bar-t i{transform:none}
+.pv-bar-v{font:500 12.5px ui-monospace,monospace;color:var(--charcoal);white-space:nowrap}
+@media(prefers-reduced-motion:reduce){.pv-float,.pv-spin{animation:none}.pv-bar-t i{transform:none;transition:none}}
 .pv-final{text-align:center}
 .pv-final .h2{max-width:760px;margin:20px auto 0}
 .pv-final .pv-actions{justify-content:center}
@@ -226,6 +272,46 @@ TEAM = [
 ]
 
 
+GAP_ICONS = [
+    '<path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>',
+    '<circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/>',
+    '<path d="M6 21V4"/><path d="M6 4h12l-2.5 4.5L18 13H6"/>',
+]
+
+
+def icon(i: int) -> str:
+    return (f'\n            <span class="pv-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" '
+            f'stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">{GAP_ICONS[i]}</svg></span>')
+
+
+ERA_VIZ = [
+    # data and context: many streams converging into one plan
+    """<svg viewBox="0 0 260 110" fill="none">
+              <text x="6" y="17" class="pv-viz-t">sales</text><text x="6" y="43" class="pv-viz-t">marketing</text>
+              <text x="6" y="69" class="pv-viz-t">cash</text><text x="6" y="95" class="pv-viz-t">past decisions</text>
+              <path class="viz-draw" d="M104 14 C150 14 150 56 196 56"/><path class="viz-draw" d="M104 40 C150 40 150 56 196 56"/>
+              <path class="viz-draw" d="M104 66 C150 66 150 56 196 56"/><path class="viz-draw" d="M104 92 C150 92 150 56 196 56"/>
+              <path class="viz-draw pv-viz-y" d="M206 56 H252"/><circle cx="200" cy="56" r="9" class="pv-viz-dot"/>
+            </svg>""",
+    # automations: a loop that keeps turning
+    """<svg viewBox="0 0 260 110" fill="none">
+              <g class="pv-spin"><circle cx="130" cy="55" r="38" class="pv-viz-loop"/>
+              <circle cx="130" cy="17" r="5" class="pv-viz-dot"/><circle cx="163" cy="74" r="5" class="pv-viz-dot2"/><circle cx="97" cy="74" r="5" class="pv-viz-dot2"/></g>
+              <text x="130" y="59" text-anchor="middle" class="pv-viz-t">every cycle</text>
+            </svg>""",
+    # intelligence: a curve that compounds
+    """<svg viewBox="0 0 260 110" fill="none">
+              <path d="M10 100 H252" class="pv-viz-base"/>
+              <path class="viz-draw pv-viz-y" d="M12 96 C70 94 110 86 150 66 S220 22 250 10"/>
+              <circle cx="70" cy="92" r="3.5" class="pv-viz-dot2"/><circle cx="150" cy="66" r="3.5" class="pv-viz-dot2"/><circle cx="250" cy="10" r="5" class="pv-viz-dot"/>
+            </svg>""",
+]
+
+
+def viz(i: int) -> str:
+    return f'\n            <div class="pv-viz" aria-hidden="true">{ERA_VIZ[i]}</div>'
+
+
 def row(cards: str, span: int) -> str:
     return f'''        <div class="pv-3 pv-row pv-span{span} reveal-stagger">
 {cards}
@@ -233,8 +319,8 @@ def row(cards: str, span: int) -> str:
 
 
 def main_html() -> str:
-    gap = "\n".join(card(t, b) for t, b in GAP)
-    era = "\n".join(card(t, b) for t, b in ERA)
+    gap = "\n".join(card(t, b, lead=icon(i)) for i, (t, b) in enumerate(GAP))
+    era = "\n".join(card(t, b, lead=viz(i)) for i, (t, b) in enumerate(ERA))
     steps = "\n".join(card(t, b, lead=f'\n            <span class="pv-num" aria-hidden="true">{i}</span>') for i, (t, b) in enumerate(STEPS, 1))
     moments = "\n".join(f'''          <article class="pv-card pv-moment">
             <span class="pv-tag">{m}</span>
@@ -267,10 +353,15 @@ def main_html() -> str:
               {buttons}
             </div>
           </div>
+          <div class="pv-stage">
+            <div class="pv-float pv-float-a" aria-hidden="true"><span class="pv-dot"></span>Context added: spring promotion plan</div>
           <figure class="pv-video" aria-label="Hero video placeholder">
             <span class="pv-play" aria-hidden="true"><svg width="22" height="24" viewBox="0 0 22 24"><path d="M2 2l18 10L2 22z" fill="#1B1C1C"/></svg></span>
             <p><span class="pv-ph">Placeholder</span><br><b>Hero video, about 60 to 75 seconds.</b> The shift, the gap, the bridge, smarter every cycle, then “{SHORT}” Plays with captions so it works with the sound off.</p>
           </figure>
+            <div class="pv-float pv-float-b" aria-hidden="true"><span><b>Purchase plan ready</b><br>Waiting for your team’s approval</span><span class="pv-approve">Approve</span></div>
+            <span class="pv-illus" aria-hidden="true">Illustrative</span>
+          </div>
         </div>
       </div>
     </section>
@@ -282,15 +373,15 @@ def main_html() -> str:
     <section class="section section-soft" id="why-now" aria-labelledby="gap-title">
       <div class="wrap">
 {head("The gap", "Why now?", "gap-title")}
-{row(gap, 2)}
+{row(gap, 3)}
       </div>
     </section>
 
     <!-- What changes? The new era of planning -->
-    <section class="section" id="what-changes" aria-labelledby="era-title">
+    <section class="section on-dark pv-dark" id="what-changes" aria-labelledby="era-title">
       <div class="wrap">
 {head("The new era of planning", "What changes?", "era-title")}
-{row(era, 2)}
+{row(era, 3)}
       </div>
     </section>
 
@@ -298,14 +389,16 @@ def main_html() -> str:
     <section class="section section-soft" id="how-flieber-gets-you-there" aria-labelledby="how-title">
       <div class="wrap">
 {head("How Flieber gets you there", "How do we get there?", "how-title")}
+<div class="pv-steps-wrap">
 {row(steps, 3)}
+        </div>
       </div>
     </section>
 
     <!-- Why not just buy or build software? -->
     <section class="section" id="why-not-software-alone" aria-labelledby="build-title">
       <div class="wrap">
-        <div class="pv-build">
+        <div class="pv-build reveal">
           <div class="reveal">
             <span class="kicker">Why software alone isn’t enough anymore</span>
             <h2 class="h2" id="build-title" style="margin-top:20px">Why not just buy or build software?</h2>
@@ -313,6 +406,10 @@ def main_html() -> str:
           <div class="reveal">
             <p class="lead">For years, software had to fit every customer the same way. Each brand used a small slice of it and filled the gaps with spreadsheets. AI changed that: a platform can now be tailored to each brand, and the value comes from shaping it around how you work. That takes people who know the work, which is why Flieber now comes with the specialists who shape it, and why we no longer sell the software on its own.</p>
             <p class="lead" style="margin-top:18px">Building it yourself is the other route, and it rarely holds: MIT’s study <i>The GenAI Divide: State of AI in Business 2025</i> found that partnering with specialists succeeds about three times as often as building in-house.</p>
+            <div class="pv-bars" aria-hidden="true">
+              <div class="pv-bar"><span class="pv-bar-l">Partnering with specialists</span><span class="pv-bar-t"><i style="--w:100%"></i></span><span class="pv-bar-v">about 67%</span></div>
+              <div class="pv-bar"><span class="pv-bar-l">Building in-house</span><span class="pv-bar-t"><i style="--w:33%"></i></span><span class="pv-bar-v">about a third as often</span></div>
+            </div>
             <p class="pv-cite">Source: MIT NANDA, <i>The GenAI Divide: State of AI in Business 2025</i>. Vendor and partnership routes succeeded about 67% of the time, and internal builds about a third as often (<a href="{MIT_URL}" rel="noopener" target="_blank">as reported by Fortune</a>). This is an outside study, not a Flieber result.</p>
           </div>
         </div>
