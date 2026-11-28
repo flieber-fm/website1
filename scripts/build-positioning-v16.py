@@ -129,11 +129,11 @@ CSS = """<style>
 .pv-stage .pv-video{width:100%;box-shadow:0 24px 60px rgba(27,28,28,.22)}
 .pv-float{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13.5px;line-height:1.35;box-shadow:0 12px 30px rgba(27,28,28,.12);animation:pvFloat 6s ease-in-out infinite}
 .pv-float b{font-weight:600}
-.pv-float-a{top:22px;left:22px}
+.pv-float-a{top:44px;left:22px}
 .pv-float-b{right:22px;bottom:22px;animation-delay:-3s}
 .pv-dot{width:9px;height:9px;border-radius:50%;background:#2BB673;box-shadow:0 0 0 4px rgba(43,182,115,.18)}
 .pv-approve{padding:6px 10px;border-radius:8px;background:var(--yellow);font-weight:600;font-size:12.5px}
-.pv-illus{position:absolute;left:24px;bottom:14px;font:500 10.5px/1 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-dark)}
+.pv-illus{position:absolute;right:24px;top:14px;max-width:46%;text-align:right;font:500 10.5px/1 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-dark)}
 @keyframes pvFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @media(max-width:979px){.pv-stage{padding:64px 16px 72px}}
 @media(max-width:600px){.pv-float{font-size:12px;padding:8px 10px}.pv-float-a{top:14px;left:14px}.pv-float-b{right:14px;bottom:14px}.pv-illus{display:none}}
@@ -143,7 +143,7 @@ CSS = """<style>
 .pv-dark .pv-card{background:#262829;border-color:rgba(240,245,246,.1)}
 .pv-dark .pv-card h3{color:#fff}
 .pv-dark .pv-card p{color:rgba(240,245,246,.75)}
-.pv-viz{margin:-6px -6px 18px;height:110px}
+.pv-viz{margin:-6px -6px 22px;height:142px}
 .pv-viz svg{width:100%;height:100%;display:block}
 .pv-viz path{stroke:var(--gray-dark);stroke-width:1.6}
 .pv-viz .pv-viz-y{stroke:var(--yellow);stroke-width:2.2}
@@ -156,8 +156,7 @@ CSS = """<style>
 @keyframes pvSpin{to{transform:rotate(360deg)}}
 /* steps connector */
 .pv-steps-wrap{position:relative}
-@media(min-width:820px){.pv-steps-wrap::before{content:"";position:absolute;left:43px;right:43px;top:43px;border-top:2px dashed var(--gray-medium);z-index:0}
-.pv-steps-wrap .pv-card{position:relative;z-index:1}}
+
 /* MIT bars */
 .pv-bars{margin-top:22px;display:grid;gap:12px}
 .pv-bar{display:grid;grid-template-columns:1fr;gap:6px}
@@ -175,6 +174,44 @@ CSS = """<style>
 .pv-card-h .pv-num+h3{padding-top:4px}
 .pv-card-h .pv-ico,.pv-card-h .pv-num{flex:none;margin:0}
 .pv-row>.pv-card>.pv-card-h{margin-bottom:14px;align-self:start}
+/* product views from the video kit */
+.pv-demo{margin:18px 0 0;font:500 11px/1.4 ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
+.pv-demo-dark{color:var(--gray-medium)}
+.pv-iv-band{fill:rgba(86,209,138,.12);stroke:rgba(86,209,138,.35)}
+.pv-iv-lost{fill:rgba(255,90,90,.18)}
+.pv-viz path.pv-iv-ln{stroke:#fff;stroke-width:2}
+.pv-viz path.pv-iv-on{stroke:var(--yellow);stroke-width:2.2;stroke-dasharray:6 5}
+.pv-red{fill:#FF8A8A}
+.pv-toasts{display:grid;gap:6px;height:100%;align-content:start;overflow:hidden}
+.pv-toast{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#1F2122;border:1px solid rgba(240,245,246,.1);border-radius:10px;padding:5px 9px;animation:pvToast 9s ease-in-out infinite}
+.pv-toast:nth-child(2){animation-delay:1.2s}.pv-toast:nth-child(3){animation-delay:2.4s}
+.pv-toast b{display:block;font-size:12px;color:#fff;font-weight:600;line-height:1.3}
+.pv-toast small{display:block;font-size:11px;color:var(--gray-medium);line-height:1.3}
+.pv-toast em{font:normal 600 10px ui-monospace,monospace;color:var(--black);background:var(--yellow);border-radius:6px;padding:3px 6px;white-space:nowrap}
+@keyframes pvToast{0%,6%{opacity:.25;transform:translateX(-6px)}12%,80%{opacity:1;transform:none}92%,100%{opacity:.25}}
+.pv-viz-step{height:auto;margin:0 0 22px;align-self:stretch}
+.pv-viz-step .pv-sv{height:100%;box-sizing:border-box}
+.pv-sv{border-radius:12px;background:var(--gray-light);padding:12px;font-size:11.5px;line-height:1.35;min-height:96px}
+.pv-sv-learn{display:grid;gap:5px}
+.pv-sv-learn .pv-sv-h{display:block;background:none;padding:0;margin:0 0 2px;font:500 10px ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
+.pv-sv-learn div{background:#fff;border-radius:7px;padding:5px 8px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.pv-sv-learn b{font-size:11px;font-weight:600}
+.pv-sv-learn span{color:var(--charcoal);font-size:10.5px}
+.pv-sv-top{display:flex;align-items:center;gap:8px;background:var(--black);color:#fff;border-radius:8px;padding:7px 8px;flex-wrap:wrap}
+.pv-sv-logo{border:1px dashed rgba(255,255,255,.5);border-radius:5px;padding:2px 6px;font-size:10px;color:var(--yellow)}
+.pv-sv-top b{font-size:11px;font-weight:600}
+.pv-sv-url{margin-left:auto;font:500 10px ui-monospace,monospace;color:var(--gray-medium)}
+.pv-sv-sw{display:flex;align-items:center;gap:6px;margin-top:10px}
+.pv-sv-sw i{width:18px;height:18px;border-radius:5px;background:#3D5AFE}
+.pv-sv-sw i:nth-child(2){background:#2BB673}.pv-sv-sw i:nth-child(3){background:var(--yellow)}
+.pv-sv-sw span{margin-left:4px;color:var(--charcoal)}
+.pv-stg{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.pv-stg span{position:relative;text-align:center;padding:7px 2px;border-radius:7px;background:#fff;font-size:10.5px;color:var(--charcoal);animation:pvStage 7.5s linear infinite}
+.pv-stg span:nth-child(2){animation-delay:1s}.pv-stg span:nth-child(3){animation-delay:2s}.pv-stg span:nth-child(4){animation-delay:3s}.pv-stg span:nth-child(5){animation-delay:4s}
+@keyframes pvStage{0%{background:#fff;color:var(--charcoal)}6%,70%{background:var(--yellow);color:var(--black)}80%,100%{background:#fff;color:var(--charcoal)}}
+.pv-sv-chip{display:inline-block;margin-top:10px;padding:4px 9px;border-radius:999px;background:rgba(43,182,115,.14);color:#167A4B;font-weight:600;font-size:11px}
+.pv-float-a{max-width:300px}
+@media(prefers-reduced-motion:reduce){.pv-toast,.pv-stg span{animation:none}}
 .pv-final{text-align:center}
 .pv-final .h2{max-width:760px;margin:20px auto 0}
 .pv-final .pv-actions{justify-content:center}
@@ -319,8 +356,61 @@ ERA_VIZ = [
 ]
 
 
+DEMO_NOTE = "Illustration · Flieber Demo Account · fictional products and people"
+
+
+def inv_chart() -> str:
+    """Mini Inventory Forecast, same simulation as the videos: stock runs out, the approved plan adds a dashed on-order line."""
+    n, dem, avg = 120, 30, 30
+    def sim(inb):
+        s, st = 1500, []
+        for k in range(n):
+            for d, q in inb:
+                if k == d: s += q
+            s = max(0, s - dem); st.append(s)
+        return st
+    if0, if1 = sim([]), sim([(58, 3000)])
+    x = lambda k: 8 + k * 244 / (n - 1)
+    y = lambda v: 100 - min(1, v / 3200) * 80
+    path = lambda st, a, b: "M" + " L".join(f"{x(k):.1f} {y(v):.1f}" for k, v in enumerate(st) if a <= k <= b)
+    band = f'<rect x="8" width="244" y="{y(50*avg):.1f}" height="{y(21*avg)-y(50*avg):.1f}" class="pv-iv-band"/>'
+    lost = f'<rect x="{x(50):.1f}" width="{x(58)-x(50):.1f}" y="18" height="82" class="pv-iv-lost"/>'
+    return f"""<svg viewBox="0 0 260 110" fill="none">{band}{lost}
+              <path d="M8 100 H252" class="pv-viz-base"/>
+              <path class="viz-draw pv-iv-ln" d="{path(if0, 0, 57)}"/>
+              <path class="pv-iv-on" d="{path(if1, 57, n - 1)}"/>
+              <path d="M{x(58)-6:.1f} 4 L{x(58)+6:.1f} 4 L{x(58):.1f} 13Z" class="pv-viz-dot"/>
+              <text x="{x(61):.1f}" y="12" class="pv-viz-t">on order</text>
+              <text x="250" y="{y(21*avg)-4:.1f}" text-anchor="end" class="pv-viz-t">safety</text>
+              <text x="{x(49):.1f}" y="30" text-anchor="end" class="pv-viz-t pv-red">stockout</text>
+            </svg>"""
+
+
+TOASTS = [("Draft ready", "Supplier 1 · 14 products · $47,750", "Flieber"),
+          ("Draft ready", "3PL US → FBA US · 5 pallets + 1 by air", "Slack"),
+          ("2 items need you", "Supplier 1 · Dec 2026", "Claude")]
+
+
+def toasts() -> str:
+    rows = "".join(f'<div class="pv-toast"><span><b>{h}</b><small>{d}</small></span><em>{s}</em></div>' for h, d, s in TOASTS)
+    return f'<div class="pv-toasts">{rows}</div>'
+
+
 def viz(i: int) -> str:
-    return f'\n            <div class="pv-viz" aria-hidden="true">{ERA_VIZ[i]}</div>'
+    inner = ERA_VIZ[0] if i == 0 else toasts() if i == 1 else inv_chart()
+    return f'\n            <div class="pv-viz" aria-hidden="true">{inner}</div>'
+
+
+STEP_VIEWS = [
+    """<div class="pv-sv pv-sv-learn"><div class="pv-sv-h">At setup · we learn how your company works</div>
+              <div><b>Your team</b><span>How you plan · who approves what</span></div>
+              <div><b>Your integrations</b><span>Amazon · Shopify · your ERP · your 3PL</span></div>
+              <div><b>Your AI agents</b><span>Your rules · your notes · your history</span></div></div>""",
+    """<div class="pv-sv pv-sv-brand"><div class="pv-sv-top"><span class="pv-sv-logo">Your logo</span><b>Replenishment Plan</b><span class="pv-sv-url">yourbrand.flieber.com</span></div>
+              <div class="pv-sv-sw"><i></i><i></i><i></i><span>Your colors · your views</span></div></div>""",
+    """<div class="pv-sv pv-sv-stages"><div class="pv-stg"><span>Draft</span><span>In review</span><span>Ops</span><span>Finance</span><span>Approved</span></div>
+              <div class="pv-sv-chip">Engine improved · your platform gets it too</div></div>""",
+]
 
 
 def row(cards: str, span: int) -> str:
@@ -332,7 +422,7 @@ def row(cards: str, span: int) -> str:
 def main_html() -> str:
     gap = "\n".join(card(t, b, side=icon(i).strip()) for i, (t, b) in enumerate(GAP))
     era = "\n".join(card(t, b, lead=viz(i)) for i, (t, b) in enumerate(ERA))
-    steps = "\n".join(card(t, b, side=f'<span class="pv-num" aria-hidden="true">{i}</span>') for i, (t, b) in enumerate(STEPS, 1))
+    steps = "\n".join(card(t, b, side=f'<span class="pv-num" aria-hidden="true">{i}</span>').replace('<article class="pv-card">', f'<article class="pv-card">\n            <div class="pv-viz pv-viz-step" aria-hidden="true">{STEP_VIEWS[i-1]}</div>', 1) for i, (t, b) in enumerate(STEPS, 1))
     moments = "\n".join(f'''          <article class="pv-card pv-moment">
             <span class="pv-tag">{m}</span>
             <blockquote>{q}</blockquote>
@@ -365,13 +455,13 @@ def main_html() -> str:
             </div>
           </div>
           <div class="pv-stage">
-            <div class="pv-float pv-float-a" aria-hidden="true"><span class="pv-dot"></span>Context added: spring promotion plan</div>
+            <div class="pv-float pv-float-a" aria-hidden="true"><span class="pv-dot"></span><span><b>Draft ready</b><br>Supplier 1 · Dec 2026 · 14 products · $47,750</span></div>
           <figure class="pv-video" aria-label="Hero video placeholder">
             <span class="pv-play" aria-hidden="true"><svg width="22" height="24" viewBox="0 0 22 24"><path d="M2 2l18 10L2 22z" fill="#1B1C1C"/></svg></span>
             <p><span class="pv-ph">Placeholder</span><br><b>Hero video, about 60 to 75 seconds.</b> The shift, the gap, the bridge, smarter every cycle, then “{SHORT}” Plays with captions so it works with the sound off.</p>
           </figure>
-            <div class="pv-float pv-float-b" aria-hidden="true"><span><b>Purchase plan ready</b><br>Waiting for your team’s approval</span><span class="pv-approve">Approve</span></div>
-            <span class="pv-illus" aria-hidden="true">Illustrative</span>
+            <div class="pv-float pv-float-b" aria-hidden="true"><span><b>ALMN-CRON-LUGG below MOQ 500</b><br>Round up: +$1,440, +32 days of cover</span><span class="pv-approve">Round up</span></div>
+            <span class="pv-illus" aria-hidden="true">Illustration · Flieber Demo Account</span>
           </div>
         </div>
       </div>
@@ -393,6 +483,7 @@ def main_html() -> str:
       <div class="wrap">
 {head("The new era of planning", "What changes?", "era-title")}
 {row(era, 3)}
+        <p class="pv-demo pv-demo-dark reveal">{DEMO_NOTE}</p>
       </div>
     </section>
 
@@ -401,8 +492,9 @@ def main_html() -> str:
       <div class="wrap">
 {head("How Flieber gets you there", "How do we get there?", "how-title")}
 <div class="pv-steps-wrap">
-{row(steps, 2)}
+{row(steps, 3)}
         </div>
+        <p class="pv-demo reveal">{DEMO_NOTE}</p>
       </div>
     </section>
 

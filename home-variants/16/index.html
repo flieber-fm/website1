@@ -143,11 +143,11 @@
 .pv-stage .pv-video{width:100%;box-shadow:0 24px 60px rgba(27,28,28,.22)}
 .pv-float{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13.5px;line-height:1.35;box-shadow:0 12px 30px rgba(27,28,28,.12);animation:pvFloat 6s ease-in-out infinite}
 .pv-float b{font-weight:600}
-.pv-float-a{top:22px;left:22px}
+.pv-float-a{top:44px;left:22px}
 .pv-float-b{right:22px;bottom:22px;animation-delay:-3s}
 .pv-dot{width:9px;height:9px;border-radius:50%;background:#2BB673;box-shadow:0 0 0 4px rgba(43,182,115,.18)}
 .pv-approve{padding:6px 10px;border-radius:8px;background:var(--yellow);font-weight:600;font-size:12.5px}
-.pv-illus{position:absolute;left:24px;bottom:14px;font:500 10.5px/1 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-dark)}
+.pv-illus{position:absolute;right:24px;top:14px;max-width:46%;text-align:right;font:500 10.5px/1 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-dark)}
 @keyframes pvFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @media(max-width:979px){.pv-stage{padding:64px 16px 72px}}
 @media(max-width:600px){.pv-float{font-size:12px;padding:8px 10px}.pv-float-a{top:14px;left:14px}.pv-float-b{right:14px;bottom:14px}.pv-illus{display:none}}
@@ -157,7 +157,7 @@
 .pv-dark .pv-card{background:#262829;border-color:rgba(240,245,246,.1)}
 .pv-dark .pv-card h3{color:#fff}
 .pv-dark .pv-card p{color:rgba(240,245,246,.75)}
-.pv-viz{margin:-6px -6px 18px;height:110px}
+.pv-viz{margin:-6px -6px 22px;height:142px}
 .pv-viz svg{width:100%;height:100%;display:block}
 .pv-viz path{stroke:var(--gray-dark);stroke-width:1.6}
 .pv-viz .pv-viz-y{stroke:var(--yellow);stroke-width:2.2}
@@ -170,8 +170,7 @@
 @keyframes pvSpin{to{transform:rotate(360deg)}}
 /* steps connector */
 .pv-steps-wrap{position:relative}
-@media(min-width:820px){.pv-steps-wrap::before{content:"";position:absolute;left:43px;right:43px;top:43px;border-top:2px dashed var(--gray-medium);z-index:0}
-.pv-steps-wrap .pv-card{position:relative;z-index:1}}
+
 /* MIT bars */
 .pv-bars{margin-top:22px;display:grid;gap:12px}
 .pv-bar{display:grid;grid-template-columns:1fr;gap:6px}
@@ -189,6 +188,44 @@
 .pv-card-h .pv-num+h3{padding-top:4px}
 .pv-card-h .pv-ico,.pv-card-h .pv-num{flex:none;margin:0}
 .pv-row>.pv-card>.pv-card-h{margin-bottom:14px;align-self:start}
+/* product views from the video kit */
+.pv-demo{margin:18px 0 0;font:500 11px/1.4 ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
+.pv-demo-dark{color:var(--gray-medium)}
+.pv-iv-band{fill:rgba(86,209,138,.12);stroke:rgba(86,209,138,.35)}
+.pv-iv-lost{fill:rgba(255,90,90,.18)}
+.pv-viz path.pv-iv-ln{stroke:#fff;stroke-width:2}
+.pv-viz path.pv-iv-on{stroke:var(--yellow);stroke-width:2.2;stroke-dasharray:6 5}
+.pv-red{fill:#FF8A8A}
+.pv-toasts{display:grid;gap:6px;height:100%;align-content:start;overflow:hidden}
+.pv-toast{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#1F2122;border:1px solid rgba(240,245,246,.1);border-radius:10px;padding:5px 9px;animation:pvToast 9s ease-in-out infinite}
+.pv-toast:nth-child(2){animation-delay:1.2s}.pv-toast:nth-child(3){animation-delay:2.4s}
+.pv-toast b{display:block;font-size:12px;color:#fff;font-weight:600;line-height:1.3}
+.pv-toast small{display:block;font-size:11px;color:var(--gray-medium);line-height:1.3}
+.pv-toast em{font:normal 600 10px ui-monospace,monospace;color:var(--black);background:var(--yellow);border-radius:6px;padding:3px 6px;white-space:nowrap}
+@keyframes pvToast{0%,6%{opacity:.25;transform:translateX(-6px)}12%,80%{opacity:1;transform:none}92%,100%{opacity:.25}}
+.pv-viz-step{height:auto;margin:0 0 22px;align-self:stretch}
+.pv-viz-step .pv-sv{height:100%;box-sizing:border-box}
+.pv-sv{border-radius:12px;background:var(--gray-light);padding:12px;font-size:11.5px;line-height:1.35;min-height:96px}
+.pv-sv-learn{display:grid;gap:5px}
+.pv-sv-learn .pv-sv-h{display:block;background:none;padding:0;margin:0 0 2px;font:500 10px ui-monospace,monospace;letter-spacing:.04em;color:var(--gray-dark)}
+.pv-sv-learn div{background:#fff;border-radius:7px;padding:5px 8px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.pv-sv-learn b{font-size:11px;font-weight:600}
+.pv-sv-learn span{color:var(--charcoal);font-size:10.5px}
+.pv-sv-top{display:flex;align-items:center;gap:8px;background:var(--black);color:#fff;border-radius:8px;padding:7px 8px;flex-wrap:wrap}
+.pv-sv-logo{border:1px dashed rgba(255,255,255,.5);border-radius:5px;padding:2px 6px;font-size:10px;color:var(--yellow)}
+.pv-sv-top b{font-size:11px;font-weight:600}
+.pv-sv-url{margin-left:auto;font:500 10px ui-monospace,monospace;color:var(--gray-medium)}
+.pv-sv-sw{display:flex;align-items:center;gap:6px;margin-top:10px}
+.pv-sv-sw i{width:18px;height:18px;border-radius:5px;background:#3D5AFE}
+.pv-sv-sw i:nth-child(2){background:#2BB673}.pv-sv-sw i:nth-child(3){background:var(--yellow)}
+.pv-sv-sw span{margin-left:4px;color:var(--charcoal)}
+.pv-stg{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.pv-stg span{position:relative;text-align:center;padding:7px 2px;border-radius:7px;background:#fff;font-size:10.5px;color:var(--charcoal);animation:pvStage 7.5s linear infinite}
+.pv-stg span:nth-child(2){animation-delay:1s}.pv-stg span:nth-child(3){animation-delay:2s}.pv-stg span:nth-child(4){animation-delay:3s}.pv-stg span:nth-child(5){animation-delay:4s}
+@keyframes pvStage{0%{background:#fff;color:var(--charcoal)}6%,70%{background:var(--yellow);color:var(--black)}80%,100%{background:#fff;color:var(--charcoal)}}
+.pv-sv-chip{display:inline-block;margin-top:10px;padding:4px 9px;border-radius:999px;background:rgba(43,182,115,.14);color:#167A4B;font-weight:600;font-size:11px}
+.pv-float-a{max-width:300px}
+@media(prefers-reduced-motion:reduce){.pv-toast,.pv-stg span{animation:none}}
 .pv-final{text-align:center}
 .pv-final .h2{max-width:760px;margin:20px auto 0}
 .pv-final .pv-actions{justify-content:center}
@@ -241,13 +278,13 @@
             </div>
           </div>
           <div class="pv-stage">
-            <div class="pv-float pv-float-a" aria-hidden="true"><span class="pv-dot"></span>Context added: spring promotion plan</div>
+            <div class="pv-float pv-float-a" aria-hidden="true"><span class="pv-dot"></span><span><b>Draft ready</b><br>Supplier 1 · Dec 2026 · 14 products · $47,750</span></div>
           <figure class="pv-video" aria-label="Hero video placeholder">
             <span class="pv-play" aria-hidden="true"><svg width="22" height="24" viewBox="0 0 22 24"><path d="M2 2l18 10L2 22z" fill="#1B1C1C"/></svg></span>
             <p><span class="pv-ph">Placeholder</span><br><b>Hero video, about 60 to 75 seconds.</b> The shift, the gap, the bridge, smarter every cycle, then “Flieber: where AI meets inventory experts.” Plays with captions so it works with the sound off.</p>
           </figure>
-            <div class="pv-float pv-float-b" aria-hidden="true"><span><b>Purchase plan ready</b><br>Waiting for your team’s approval</span><span class="pv-approve">Approve</span></div>
-            <span class="pv-illus" aria-hidden="true">Illustrative</span>
+            <div class="pv-float pv-float-b" aria-hidden="true"><span><b>ALMN-CRON-LUGG below MOQ 500</b><br>Round up: +$1,440, +32 days of cover</span><span class="pv-approve">Round up</span></div>
+            <span class="pv-illus" aria-hidden="true">Illustration · Flieber Demo Account</span>
           </div>
         </div>
       </div>
@@ -340,24 +377,25 @@
             <p>Not just sales, inventory and purchase orders. Add marketing plans, cash flow, competitive information and the reasons behind past decisions. Flieber’s AI takes all of it into account in every forecast and plan, so your decisions reflect how your business really works, not just what your systems record.</p>
           </article>
           <article class="pv-card">
-            <div class="pv-viz" aria-hidden="true"><svg viewBox="0 0 260 110" fill="none">
-              <g class="pv-spin"><circle cx="130" cy="55" r="38" class="pv-viz-loop"/>
-              <circle cx="130" cy="17" r="5" class="pv-viz-dot"/><circle cx="163" cy="74" r="5" class="pv-viz-dot2"/><circle cx="97" cy="74" r="5" class="pv-viz-dot2"/></g>
-              <text x="130" y="59" text-anchor="middle" class="pv-viz-t">every cycle</text>
-            </svg></div>
+            <div class="pv-viz" aria-hidden="true"><div class="pv-toasts"><div class="pv-toast"><span><b>Draft ready</b><small>Supplier 1 · 14 products · $47,750</small></span><em>Flieber</em></div><div class="pv-toast"><span><b>Draft ready</b><small>3PL US → FBA US · 5 pallets + 1 by air</small></span><em>Slack</em></div><div class="pv-toast"><span><b>2 items need you</b><small>Supplier 1 · Dec 2026</small></span><em>Claude</em></div></div></div>
             <h3>Automations that get smarter</h3>
             <p>Flieber specialists gather context from everyone involved in your business, from finance to marketing to operations, and bring what they’ve learned from more than 1,000 brands. They turn it into automations that take the routine off your team and improve with every cycle, so your people spend their time growing the brand, not running the process.</p>
           </article>
           <article class="pv-card">
-            <div class="pv-viz" aria-hidden="true"><svg viewBox="0 0 260 110" fill="none">
-              <path d="M10 100 H252" class="pv-viz-base"/>
-              <path class="viz-draw pv-viz-y" d="M12 96 C70 94 110 86 150 66 S220 22 250 10"/>
-              <circle cx="70" cy="92" r="3.5" class="pv-viz-dot2"/><circle cx="150" cy="66" r="3.5" class="pv-viz-dot2"/><circle cx="250" cy="10" r="5" class="pv-viz-dot"/>
+            <div class="pv-viz" aria-hidden="true"><svg viewBox="0 0 260 110" fill="none"><rect x="8" width="244" y="62.5" height="21.8" class="pv-iv-band"/><rect x="110.5" width="16.4" y="18" height="82" class="pv-iv-lost"/>
+              <path d="M8 100 H252" class="pv-viz-base"/>
+              <path class="viz-draw pv-iv-ln" d="M8.0 63.2 L10.1 64.0 L12.1 64.8 L14.2 65.5 L16.2 66.2 L18.3 67.0 L20.3 67.8 L22.4 68.5 L24.4 69.2 L26.5 70.0 L28.5 70.8 L30.6 71.5 L32.6 72.2 L34.7 73.0 L36.7 73.8 L38.8 74.5 L40.8 75.2 L42.9 76.0 L44.9 76.8 L47.0 77.5 L49.0 78.2 L51.1 79.0 L53.1 79.8 L55.2 80.5 L57.2 81.2 L59.3 82.0 L61.3 82.8 L63.4 83.5 L65.4 84.2 L67.5 85.0 L69.5 85.8 L71.6 86.5 L73.6 87.2 L75.7 88.0 L77.7 88.8 L79.8 89.5 L81.8 90.2 L83.9 91.0 L85.9 91.8 L88.0 92.5 L90.0 93.2 L92.1 94.0 L94.1 94.8 L96.2 95.5 L98.2 96.2 L100.3 97.0 L102.3 97.8 L104.4 98.5 L106.4 99.2 L108.5 100.0 L110.5 100.0 L112.6 100.0 L114.6 100.0 L116.7 100.0 L118.7 100.0 L120.8 100.0 L122.8 100.0 L124.9 100.0"/>
+              <path class="pv-iv-on" d="M124.9 100.0 L126.9 25.8 L129.0 26.5 L131.0 27.2 L133.1 28.0 L135.1 28.8 L137.2 29.5 L139.2 30.2 L141.3 31.0 L143.3 31.8 L145.4 32.5 L147.4 33.2 L149.5 34.0 L151.5 34.8 L153.6 35.5 L155.6 36.2 L157.7 37.0 L159.7 37.8 L161.8 38.5 L163.8 39.2 L165.9 40.0 L167.9 40.8 L170.0 41.5 L172.0 42.2 L174.1 43.0 L176.1 43.8 L178.2 44.5 L180.2 45.2 L182.3 46.0 L184.3 46.8 L186.4 47.5 L188.4 48.2 L190.5 49.0 L192.5 49.8 L194.6 50.5 L196.6 51.2 L198.7 52.0 L200.7 52.8 L202.8 53.5 L204.8 54.2 L206.9 55.0 L208.9 55.8 L211.0 56.5 L213.0 57.2 L215.1 58.0 L217.1 58.8 L219.2 59.5 L221.2 60.2 L223.3 61.0 L225.3 61.8 L227.4 62.5 L229.4 63.2 L231.5 64.0 L233.5 64.8 L235.6 65.5 L237.6 66.2 L239.7 67.0 L241.7 67.8 L243.8 68.5 L245.8 69.2 L247.9 70.0 L249.9 70.8 L252.0 71.5"/>
+              <path d="M120.9 4 L132.9 4 L126.9 13Z" class="pv-viz-dot"/>
+              <text x="133.1" y="12" class="pv-viz-t">on order</text>
+              <text x="250" y="80.2" text-anchor="end" class="pv-viz-t">safety</text>
+              <text x="108.5" y="30" text-anchor="end" class="pv-viz-t pv-red">stockout</text>
             </svg></div>
             <h3>Intelligence that compounds</h3>
             <p>Every exception resolved, every plan approved and every outcome observed feeds back in. Insights build on each other and alerts get sharper, so each cycle you plan with more confidence than the last, and what your team learns stays even when people change.</p>
           </article>
         </div>
+        <p class="pv-demo pv-demo-dark reveal">Illustration · Flieber Demo Account · fictional products and people</p>
       </div>
     </section>
 
@@ -369,21 +407,30 @@
           <h2 class="h2" id="how-title" style="margin-top:20px">How do we get there?</h2>
         </div>
 <div class="pv-steps-wrap">
-        <div class="pv-3 pv-row pv-span2 reveal-stagger">
+        <div class="pv-3 pv-row pv-span3 reveal-stagger">
           <article class="pv-card">
+            <div class="pv-viz pv-viz-step" aria-hidden="true"><div class="pv-sv pv-sv-learn"><div class="pv-sv-h">At setup · we learn how your company works</div>
+              <div><b>Your team</b><span>How you plan · who approves what</span></div>
+              <div><b>Your integrations</b><span>Amazon · Shopify · your ERP · your 3PL</span></div>
+              <div><b>Your AI agents</b><span>Your rules · your notes · your history</span></div></div></div>
             <div class="pv-card-h"><span class="pv-num" aria-hidden="true">1</span><h3>We learn how you operate</h3></div>
             <p>Our team connects your data and creates a routine of interactions with yours to continuously capture the context behind your numbers, from finance to marketing to operations. Within the first month, you already start seeing measurable value.</p>
           </article>
           <article class="pv-card">
+            <div class="pv-viz pv-viz-step" aria-hidden="true"><div class="pv-sv pv-sv-brand"><div class="pv-sv-top"><span class="pv-sv-logo">Your logo</span><b>Replenishment Plan</b><span class="pv-sv-url">yourbrand.flieber.com</span></div>
+              <div class="pv-sv-sw"><i></i><i></i><i></i><span>Your colors · your views</span></div></div></div>
             <div class="pv-card-h"><span class="pv-num" aria-hidden="true">2</span><h3>We tailor your platform</h3></div>
             <p>You get your own version of Flieber, with your logo and colors, tailored to your use cases and how your team operates. Forecasting models are fine-tuned to your catalog, and new products and wholesale channels are handled by specialized tools. Views, alerts and workflows follow your preferences. When a new need comes up, it becomes part of your platform instead of a spreadsheet workaround or a long wait on the roadmap of a generic system.</p>
           </article>
           <article class="pv-card">
+            <div class="pv-viz pv-viz-step" aria-hidden="true"><div class="pv-sv pv-sv-stages"><div class="pv-stg"><span>Draft</span><span>In review</span><span>Ops</span><span>Finance</span><span>Approved</span></div>
+              <div class="pv-sv-chip">Engine improved · your platform gets it too</div></div></div>
             <div class="pv-card-h"><span class="pv-num" aria-hidden="true">3</span><h3>We stay, and it keeps getting smarter</h3></div>
             <p>Your Flieber specialists stay with your account, learning from the different people in your team. Each cycle, new opportunities are detected and more of the routine moves onto automations. Every plan is reviewed with your team before money goes out, and every month you get a scorecard on the measures that show your progress.</p>
           </article>
         </div>
         </div>
+        <p class="pv-demo reveal">Illustration · Flieber Demo Account · fictional products and people</p>
       </div>
     </section>
 
