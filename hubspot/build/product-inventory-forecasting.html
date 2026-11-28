@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inventory forecasting: see stockouts and overstock before they happen | Flieber</title>
+  <title>Inventory forecasting | Flieber</title>
   <link rel="icon" href="https://www.flieber.com/hubfs/flieber-2026/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#F5ED61">
 
@@ -1820,6 +1820,69 @@ a.int-tile:hover { border-color: var(--black); }
 .df-act span{flex:1 1 180px;color:var(--charcoal);font-size:12.5px}
 .df-btn{font-style:normal;font-size:12px;font-weight:600;border:1px solid var(--line);border-radius:8px;padding:5px 10px}
 .df-btn.y{background:var(--yellow);border-color:var(--yellow)}
+.pv-hero-grid>*{min-width:0}
+.pv-phead .pv-video{align-self:center;width:100%}
+.df-scroll{overflow-x:auto}
+.df-st{font-size:11px;font-weight:600;border-radius:6px;padding:2px 7px;white-space:nowrap}
+.df-st-sl{background:#FFE3E0;color:#A12C1E}.df-st-so{background:#A12C1E;color:#fff}.df-st-bs{background:#FFF1D6;color:#9A5B00}.df-st-hl{background:rgba(43,182,115,.14);color:#167A4B}
+.df-net{display:grid;grid-template-columns:1fr;gap:4px;margin-top:12px}
+@media(min-width:700px){.df-net{grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:center}}
+.df-node{background:var(--gray-light);border-radius:10px;padding:8px 10px}
+.df-node small{display:block;color:var(--gray-dark);font:500 10px ui-monospace,monospace;letter-spacing:.03em}
+.df-node b{display:block;font-weight:600;font-size:12.5px;margin-top:2px}
+.df-node span{display:block;color:var(--charcoal);font-size:11.5px;margin-top:2px}
+.df-edge{display:flex;align-items:center;justify-content:center;padding:2px 0}
+.df-edge span{font:500 10px ui-monospace,monospace;color:var(--gray-dark);white-space:nowrap}
+.df-edge span::before{content:"↓ "}
+@media(min-width:700px){.df-edge span::before{content:""}.df-edge span::after{content:" →"}}
+.df-onway{display:inline-block;margin-top:10px;font-size:11.5px;font-weight:600;background:var(--yellow-light);border-radius:7px;padding:3px 8px}
+.df-params{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}
+.df-params span{border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+.df-params small{display:block;color:var(--gray-dark);font-size:10.5px}
+.df-params b{font-weight:600}
+@media(max-width:480px){.df-params{grid-template-columns:repeat(2,1fr)}}
+.df-flags{display:grid;gap:6px;margin-top:10px}
+.df-flags div{display:grid;grid-template-columns:1fr auto;gap:2px 10px;background:var(--gray-light);border-radius:10px;padding:8px 10px}
+.df-flags b{font-weight:600}
+.df-flags small{grid-column:1;color:var(--charcoal);font-size:12px}
+.df-flags em{grid-row:1/3;grid-column:2;align-self:center;font-style:normal;font-size:11px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:6px;padding:3px 7px;white-space:nowrap}
+.df-scs{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.df-sc{border:1px solid var(--line);border-radius:9px;padding:5px 9px}
+.df-sc.on{background:var(--yellow);border-color:var(--yellow)}
+.df-sc b{display:block;font-size:12px;font-weight:600}.df-sc small{font-size:11px;color:var(--charcoal)}
+.df-base{stroke:var(--line)}
+.df-line{stroke:var(--black);stroke-width:2}
+.df-alt{stroke:#D98A00;stroke-width:2;stroke-dasharray:5 4}
+.df-mark{fill:var(--black)}
+.df-red{fill:#C0392B}
+.df-vars{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:12px}
+@media(min-width:520px){.df-vars{grid-template-columns:repeat(4,1fr)}}
+.df-vars div{background:var(--gray-light);border-radius:9px;padding:7px 9px}
+.df-vars small{display:block;color:var(--gray-dark);font-size:10.5px}
+.df-vars b{font-weight:600;font-size:12.5px}
+.df-rules{display:grid;gap:6px;margin-top:10px}
+.df-rules div{display:grid;grid-template-columns:110px 1fr;gap:10px;background:var(--gray-light);border-radius:9px;padding:7px 10px}
+.df-rules b{font-weight:600}.df-rules span{font:500 11px/1.4 ui-monospace,monospace;color:var(--charcoal)}
+@media(max-width:480px){.df-rules div{grid-template-columns:1fr}}
+.df-toasts{display:grid;gap:6px;margin-top:10px}
+.df-toast{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--line);border-radius:10px;padding:6px 10px}
+.df-toast b{display:block;font-weight:600;font-size:12px}.df-toast small{font-size:11.5px;color:var(--charcoal)}
+.df-toast em{font-style:normal;font:600 10.5px ui-monospace,monospace;background:var(--yellow);border-radius:6px;padding:3px 7px}
+.df-alerts{display:grid;gap:6px;margin-top:10px}
+.df-alerts div{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--gray-light);border-radius:10px;padding:8px 10px}
+.df-alerts b{display:block;font-weight:600}.df-alerts small{font-size:12px;color:var(--charcoal)}
+.df-alerts em{white-space:nowrap}
+.df-c1{fill:var(--black)}.df-c2{fill:#C9CED0}
+.df-legend .l-c1::before{background:var(--black);height:9px;width:9px;vertical-align:0}
+.df-legend .l-c2::before{background:#C9CED0;height:9px;width:9px;vertical-align:0}
+.df-stg{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:12px}
+.df-stg span{text-align:center;padding:6px 2px;border-radius:7px;background:var(--gray-light);font-size:11px;color:var(--charcoal)}
+.df-stg span.on{background:var(--yellow);color:var(--black);font-weight:600}
+.df-wfs{display:grid;gap:6px;margin-top:10px;position:relative}
+.df-wf{background:var(--gray-light);border-radius:10px;padding:8px 12px;border-left:3px solid var(--line)}
+.df-wf small{display:block;font:500 10.5px ui-monospace,monospace;color:var(--gray-dark)}
+.df-wf b{font-weight:600;font-size:13px}
+.df-wf.stop{background:var(--yellow-light);border-left-color:var(--yellow)}
 
 </style>
 
@@ -1829,38 +1892,53 @@ a.int-tile:hover { border-color: var(--black); }
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.flieber.com/#organization",
-      "name": "Flieber",
-      "url": "https://www.flieber.com",
-      "logo": "https://www.flieber.com/hubfs/flieber-2026/flieber-logo.svg",
-      "foundingDate": "2019"
-    },
-    {
       "@type": "WebPage",
       "@id": "https://www.flieber.com/product/inventory-forecasting",
       "url": "https://www.flieber.com/product/inventory-forecasting",
-      "name": "See stockouts and overstock before they happen",
-      "description": "Flieber projects stock for every product at every location from on-hand inventory, inbound shipments and forecast demand, so problems show up while there's still time to act.",
+      "name": "Inventory forecasting | Flieber",
+      "description": "Stock projected for every product at every location, from your supplier to every channel, so stockouts and overstock show up while there is still time to act.",
       "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://www.flieber.com"
+        "@id": "https://www.flieber.com/#website"
+      },
+      "publisher": {
+        "@id": "https://www.flieber.com/#organization"
       }
     },
     {
-      "@type": "SoftwareApplication",
-      "name": "Flieber",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "url": "https://www.flieber.com/product/inventory-forecasting",
-      "publisher": {
-        "@id": "https://www.flieber.com/#organization"
-      },
-      "featureList": [
-        "Inventory projections",
-        "Stockouts, overstock and lost sales",
-        "Backorders and preorders",
-        "Inventory history and balances"
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which locations does Flieber cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every location in your supply chain that Flieber can see: origin and regional warehouses, 3PLs, Amazon fulfillment centers and the channels they serve, connected through native or assisted integrations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when data is missing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flieber flags it. Missing lead times or safety stock are filled by the rules you agree with your specialists, and anything that needs a decision is left for your review."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we test a change before acting on it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Add a purchase, delay a shipment or raise demand for a period, and see the effect on projected stock before anything is committed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it handle backorders and preorders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Backorder demand counts in inventory and replenishment calculations, with settings by product and store, and products sold before they arrive have their own plans."
+          }
+        }
       ]
     }
   ]
@@ -1919,143 +1997,206 @@ a.int-tile:hover { border-color: var(--black); }
 
   <main id="main">
 
-    <section class="page-head sol-head" aria-labelledby="page-title">
-      <div class="wrap">
-        <div class="section-head">
+    <section class="page-head pv-phead" aria-labelledby="if-title">
+      <div class="wrap pv-hero-grid">
+        <div>
           <span class="kicker">Product · Inventory forecasting</span>
-          <h1 class="h1" id="page-title">See stockouts and overstock before they happen</h1>
-          <p class="lead">Flieber projects stock for every product at every location from on-hand inventory, inbound shipments and forecast demand, so problems show up while there’s still time to act.</p>
+          <h1 class="h1" id="if-title">See stockouts and overstock before they happen</h1>
+          <p class="lead">Flieber projects stock for every product at every location, from your supplier to every channel, using on-hand inventory, inbound shipments and forecast demand. Risks show up while there is still time to act, and your team decides what to do.</p>
+          <div class="pv-actions">
+            <a class="btn btn-primary" href="https://www.flieber.com/book-a-demo">Talk to a specialist <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="pv-alt" href="#how-it-works">See how it works</a>
+          </div>
         </div>
-        <div class="sol-actions">
-          <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
+        <figure class="pv-video" aria-label="Module video">
+          <span class="pv-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8z" fill="#1B1C1C"/></svg></span>
+          <p><span class="pv-ph">Video placeholder</span><br><b>The approved module video goes here</b> once its closing card is re-cut for the new offer.</p>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="how-it-works" aria-labelledby="products-title">
+      <div class="wrap">
+        <div class="pv-build">
+          <div class="reveal">
+            <span class="kicker">How it works</span>
+            <h2 class="h2" id="products-title" style="margin-top:20px">Every product, at every location</h2>
+            <p class="lead">Each product gets its days of cover, its status and the next action, location by location. Inventory sits at the center of every decision, from what to buy to what to promote.</p>
+            <div class="pv-integ"><span class="pv-chip">Replenishments</span><span class="pv-chip">Transfers</span><span class="pv-chip">Advertising</span><span class="pv-chip">Promotions</span><span class="pv-chip">Cash flow</span></div>
+          </div>
+          <div class="reveal">
+            <div class="df-view">
+              <div class="df-view-h"><b>Products</b><small>every product at every location · days of cover · next action</small></div>
+              <div class="df-scroll"><table class="df-table"><tr><th>Product</th><th>Location</th><th>Cover</th><th>Status</th><th>Next</th></tr><tr><td><span class="df-tier">A</span> BLCK-SPRT-JRSY</td><td>FBA US</td><td>9 days</td><td><span class="df-st df-st-sl">Stockout likely</span></td><td>Buy 1,800 by Dec 2</td></tr><tr><td><span class="df-tier">A</span> GREY-CHNL-MATS</td><td>FBA CA</td><td>0 days</td><td><span class="df-st df-st-so">Out of stock</span></td><td>Transfer 400 now</td></tr><tr><td><span class="df-tier">B</span> BLCK-CFEE-MAKR</td><td>3PL US</td><td>16 days</td><td><span class="df-st df-st-bs">Below safety</span></td><td>Buy 600 by Dec 6</td></tr><tr><td><span class="df-tier">B</span> PINK-TRVL-BKPK</td><td>FBA EU</td><td>48 days</td><td><span class="df-st df-st-hl">Healthy</span></td><td>No action</td></tr><tr><td><span class="df-tier">C</span> ALMN-CRON-LUGG</td><td>FBA UK</td><td>74 days</td><td><span class="df-st df-st-hl">Healthy</span></td><td>No action</td></tr></table></div>
+            </div>
+            <p class="pv-demo">Illustration · Flieber Demo Account · fictional products and people</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="what-you-can-do" aria-labelledby="what-you-can-do-title">
+    <section class="section" id="supply-chain" aria-labelledby="net-title">
       <div class="wrap">
-        <div class="section-head">
+        <div class="pv-build">
+          <div class="reveal">
+            <div class="df-view">
+              <div class="df-view-h"><b>Supply chain</b><small>from your supplier to every channel · lead times on each route</small></div>
+              <div class="df-net"><div class="df-node"><small>Supplier</small><b>Supplier 1</b><span>makes to order</span></div><div class="df-edge"><span>45 days</span></div><div class="df-node"><small>Origin storage</small><b>3PL China</b><span>4,800 on hand</span></div><div class="df-edge"><span>30 to 35 days</span></div><div class="df-node"><small>Regional storage</small><b>3PL US · 3PL EU</b><span>3,120 · 1,640 on hand</span></div><div class="df-edge"><span>6 to 7 days</span></div><div class="df-node"><small>Fulfillment and channels</small><b>FBA US · Shopify US · FBA EU · Wholesale EU</b></div></div>
+              <div class="df-onway">On the way · PO-1042 · 2,400 units</div>
+              <div class="df-params"><span><small>Safety stock</small><b>21 days</b></span><span><small>Target</small><b>50 days</b></span><span><small>MOQ</small><b>500</b></span><span><small>Case pack</small><b>24</b></span></div>
+            </div>
+            <p class="pv-demo">Illustration · Flieber Demo Account · fictional products and people</p>
+          </div>
+          <div class="reveal">
+            <span class="kicker">Your supply chain</span>
+            <h2 class="h2" id="net-title" style="margin-top:20px">Modeled from your supplier to every channel</h2>
+            <p class="lead">Every route has its lead time, every location its on-hand stock and every product its safety stock, target, MOQ and case pack, so the projection follows how stock really moves.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="flags" aria-labelledby="flags-title">
+      <div class="wrap">
+        <div class="pv-build">
+          <div class="reveal">
+            <span class="kicker">Flags</span>
+            <h2 class="h2" id="flags-title" style="margin-top:20px">Gaps found before they distort a plan</h2>
+            <p class="lead">A missing lead time or safety stock quietly breaks a projection. Flieber flags each gap, fills it by the rules agreed with your team and leaves the rest for your review.</p>
+          </div>
+          <div class="reveal">
+            <div class="df-view">
+              <div class="df-view-h"><b>Flags</b><small>gaps in the data, found before they distort a plan</small></div>
+              <div class="df-flags"><div><b>Lead time missing</b><small>3PL China → 3PL EU</small><em>Filled by rule · 35 days</em></div><div><b>Lead time missing</b><small>3PL EU → FBA EU</small><em>Filled by rule · 6 days</em></div><div><b>Safety stock not set</b><small>04PC-PLCM-SETT · tier B</small><em>Filled by rule · 21 days</em></div><div><b>No demand forecast</b><small>New listing · PINK-TRVL-BKPK · Shopify EU</small><em>For your review</em></div></div>
+            </div>
+            <p class="pv-demo">Illustration · Flieber Demo Account · fictional products and people</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="scenarios" aria-labelledby="sc-title">
+      <div class="wrap">
+        <div class="pv-build">
+          <div class="reveal">
+            <div class="df-view">
+              <div class="df-view-h"><span class="df-tier">A</span><b>BLCK-SPRT-JRSY</b><small>Scenarios · projected stock, next 90 days</small></div>
+              <div class="df-scs"><span class="df-sc on"><b>Add a purchase</b><small>1,200 units · Jan 12</small></span><span class="df-sc"><b>Delay a shipment</b><small>PO-1042 · Dec 18 → Jan 5</small></span><span class="df-sc"><b>Raise demand</b><small>+25% · Dec 1–24</small></span></div>
+              <svg viewBox="0 0 300 120" fill="none" aria-hidden="true"><rect x="8" width="284" y="41.5" height="36.3" class="pv-iv-band"/><text x="290" y="73.7" text-anchor="end" class="df-t">safety</text><rect x="100.5" width="40.3" y="14" height="90" class="pv-iv-lost"/><text x="97.5" y="24" text-anchor="end" class="df-t df-red">stockout</text>
+                <path d="M8 104 H292" class="df-base"/><path class="df-line" d="M8.0 60.6 L11.2 61.8 L14.4 63.1 L17.6 64.3 L20.8 65.6 L24.0 66.8 L27.1 68.1 L30.3 69.7 L33.5 71.2 L36.7 72.8 L39.9 74.3 L43.1 75.9 L46.3 77.5 L49.5 79.0 L52.7 80.6 L55.9 82.2 L59.1 83.7 L62.2 85.3 L65.4 86.9 L68.6 88.4 L71.8 90.0 L75.0 91.5 L78.2 93.1 L81.4 94.7 L84.6 96.2 L87.8 97.8 L91.0 99.4 L94.2 100.9 L97.3 102.5 L100.5 104.0 L103.7 104.0 L106.9 104.0 L110.1 104.0 L113.3 104.0 L116.5 104.0 L119.7 104.0 L122.9 104.0 L126.1 104.0 L129.3 104.0 L132.4 104.0 L135.6 104.0 L138.8 104.0 L142.0 33.8 L145.2 35.0 L148.4 36.3 L151.6 37.5 L154.8 38.8 L158.0 40.0 L161.2 41.3 L164.4 42.5 L167.6 43.8 L170.7 45.0 L173.9 46.3 L177.1 47.5 L180.3 48.8 L183.5 50.1 L186.7 51.3 L189.9 52.6 L193.1 53.8 L196.3 55.1 L199.5 56.3 L202.7 57.6 L205.8 58.8 L209.0 60.1 L212.2 61.3 L215.4 62.6 L218.6 63.8 L221.8 65.1 L225.0 66.3 L228.2 67.6 L231.4 68.8 L234.6 70.1 L237.8 71.3 L240.9 72.6 L244.1 73.8 L247.3 75.1 L250.5 76.3 L253.7 77.6 L256.9 78.8 L260.1 80.1 L263.3 81.3 L266.5 82.6 L269.7 83.8 L272.9 85.1 L276.0 86.3 L279.2 87.6 L282.4 88.8 L285.6 90.1 L288.8 91.3 L292.0 92.6"/><path class="df-alt" d="M8.0 60.6 L11.2 61.8 L14.4 63.1 L17.6 64.3 L20.8 65.6 L24.0 66.8 L27.1 68.1 L30.3 69.7 L33.5 71.2 L36.7 72.8 L39.9 74.3 L43.1 75.9 L46.3 77.5 L49.5 79.0 L52.7 80.6 L55.9 82.2 L59.1 83.7 L62.2 85.3 L65.4 86.9 L68.6 88.4 L71.8 90.0 L75.0 91.5 L78.2 93.1 L81.4 94.7 L84.6 24.8 L87.8 26.3 L91.0 27.9 L94.2 29.5 L97.3 31.0 L100.5 32.6 L103.7 34.2 L106.9 35.4 L110.1 36.7 L113.3 37.9 L116.5 39.2 L119.7 40.4 L122.9 41.7 L126.1 42.9 L129.3 44.2 L132.4 45.4 L135.6 46.7 L138.8 47.9 L142.0 49.2 L145.2 50.4 L148.4 51.7 L151.6 52.9 L154.8 54.2 L158.0 55.4 L161.2 56.7 L164.4 22.2 L167.6 23.4 L170.7 24.7 L173.9 25.9 L177.1 27.2 L180.3 28.4 L183.5 29.7 L186.7 30.9 L189.9 32.2 L193.1 33.4 L196.3 34.7 L199.5 35.9 L202.7 37.2 L205.8 38.4 L209.0 39.7 L212.2 40.9 L215.4 42.2 L218.6 43.4 L221.8 44.7 L225.0 45.9 L228.2 47.2 L231.4 48.4 L234.6 49.7 L237.8 50.9 L240.9 52.2 L244.1 53.4 L247.3 54.7 L250.5 55.9 L253.7 57.2 L256.9 58.4 L260.1 59.7 L263.3 60.9 L266.5 62.2 L269.7 63.4 L272.9 64.7 L276.0 65.9 L279.2 67.2 L282.4 68.5 L285.6 69.7 L288.8 71.0 L292.0 72.2"/><path d="M79.6 4 L89.6 4 L84.6 12Z" class="df-mark"/><text x="92.6" y="11" class="df-t">PO-1042</text>
+              </svg>
+              <div class="df-legend"><span class="l-ap">Projected stock today</span><span class="l-md">With the changes you are testing</span></div>
+            </div>
+            <p class="pv-demo">Illustration · Flieber Demo Account · fictional products and people</p>
+          </div>
+          <div class="reveal">
+            <span class="kicker">Scenarios</span>
+            <h2 class="h2" id="sc-title" style="margin-top:20px">Test a change before you commit</h2>
+            <p class="lead">Add a purchase, delay a shipment or raise demand for a promotion, and see what happens to projected stock before any money goes out. Every change is logged with who made it and why.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="tailored" aria-labelledby="tailor-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Tailored to your brand</span>
+          <h2 class="h2" id="tailor-title" style="margin-top:20px">Built around how you operate</h2>
+          <p class="lead">You don’t adapt to the software. Your inventory forecast follows your supply chain, your rules and everything your team knows.</p>
+        </div>
+        <div class="pv-3 pv-row pv-span2 reveal-stagger">
+          <article class="pv-card">
+            <h3>Your supply chain, as it is</h3>
+            <p>From factory to origin storage, regional warehouses, fulfillment centers and channels, with the lead time of every route between them.</p>
+          </article>
+          <article class="pv-card">
+            <h3>Your rules, built in</h3>
+            <p>Which stores get stock first, where to fall back when a location runs low and how backorders count, set once and applied every day.</p>
+          </article>
+          <article class="pv-card">
+            <h3>Context without limits</h3>
+            <p>Promotions, ad campaigns, purchase timing and anything your team knows go into the projection, so risks reflect how your business works.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="your-specialists" aria-labelledby="spec-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Your specialists</span>
+          <h2 class="h2" id="spec-title" style="margin-top:20px">What your specialists do, plan by plan</h2>
+        </div>
+        <div class="pv-3 pv-row pv-span2 reveal-stagger">
+          <article class="pv-card">
+            <h3>Lite</h3>
+            <p>Your specialists keep lead times, safety stock and settings current, fill gaps in the data and flag the products at risk before they reach you.</p>
+          </article>
+          <article class="pv-card">
+            <h3>Core</h3>
+            <p>Everything in Lite, plus the biggest risks walked through with your team in every weekly session and in your S&amp;OP meetings.</p>
+          </article>
+          <article class="pv-card">
+            <h3>Full</h3>
+            <p>Everything in Core, with the purchases and transfers you approve followed through to suppliers, freight and your warehouses.</p>
+          </article>
+        </div>
+        <p class="pv-cite"><a href="/pricing#plans">Compare the plans</a></p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="features" aria-labelledby="feat-title">
+      <div class="wrap">
+        <div class="section-head reveal">
           <span class="kicker">Features</span>
-          <h2 class="h2" id="what-you-can-do-title" style="margin-top:20px">What you can do</h2>
+          <h2 class="h2" id="feat-title" style="margin-top:20px">What’s included</h2>
         </div>
-        <div class="feat-grid">
-            <a class="feat-card sol-feat" href="/features#inventory-projections">
-              <h3 class="h3">Inventory projections <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and consolidated warehouse needs.</p>
-              <p class="feat-tag">Read</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#stockouts-overstock-and-lost-sales">
-              <h3 class="h3">Stockouts, overstock and lost sales <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Projected stockout dates, products below safety stock, excess inventory and the sales lost to unavailable stock or late shipments.</p>
-              <p class="feat-tag">Read</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#backorders-and-preorders">
-              <h3 class="h3">Backorders and preorders <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Counts accumulated backorder demand in inventory and replenishment calculations, with settings at the product and store level, and plans for products sold before they arrive.</p>
-              <p class="feat-tag">Read</p>
-            </a>
-            <a class="feat-card sol-feat" href="/features#inventory-history-and-balances">
-              <h3 class="h3">Inventory history and balances <span class="arrow" aria-hidden="true">→</span></h3>
-              <p>Snapshots and balances across every connected location, including inbound and in-transit stock.</p>
-              <p class="feat-tag">Read</p>
-            </a>
+        <div class="pv-feats reveal">
+            <div class="pv-feat"><b>Inventory projections</b><span>Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and warehouse needs.</span></div>
+            <div class="pv-feat"><b>Stockouts, overstock and lost sales</b><span>Projected stockout dates, products below safety stock, excess inventory and the sales at stake.</span></div>
+            <div class="pv-feat"><b>Backorders and preorders</b><span>Backorder demand counted in inventory and replenishment, with settings by product and store, and plans for preorders.</span></div>
+            <div class="pv-feat"><b>Inventory history and balances</b><span>Snapshots and balances across every connected location, including inbound and in-transit stock.</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="together" aria-labelledby="together-title">
+    <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Collaborative AI</span>
-          <h2 class="h2" id="together-title" style="margin-top:20px">How you work together</h2>
+        <div class="section-head reveal">
+          <span class="kicker">Questions</span>
+          <h2 class="h2" id="faq-title" style="margin-top:20px">Asked often</h2>
         </div>
-        <div class="collab">
-          <article class="collab-card">
-            <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><circle cx="5.5" cy="5.5" r="2.2"/><circle cx="11" cy="6" r="1.8"/><path d="M1.6 13.5c.5-2.3 2-3.6 3.9-3.6s3.4 1.3 3.9 3.6M10 9.6c1.9 0 3.3 1.2 3.8 3.4"/></svg></span></div>
-            <h3 class="h3">Your team</h3>
-            <p>Decide where to take risk and where to protect stock.</p>
-          </article>
-          <article class="collab-card">
-            <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><path d="M8 1.8l1.5 3.7 3.7 1.5-3.7 1.5L8 12.2 6.5 8.5 2.8 7l3.7-1.5z"/><path d="M12.6 11.2l.6 1.5 1.5.6-1.5.6-.6 1.5-.6-1.5-1.5-.6 1.5-.6z"/></svg></span></div>
-            <h3 class="h3">Flieber’s AI</h3>
-            <p>Project inventory daily, surface the products at risk and estimate the sales at stake.</p>
-          </article>
-          <article class="collab-card">
-            <div class="collab-top"><span class="collab-ic"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#1B1C1C" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="5" r="2.6"/><path d="M2.8 14c.6-2.7 2.7-4.3 5.2-4.3s4.6 1.6 5.2 4.3"/></svg></span><span class="collab-tag">With Managed Services</span></div>
-            <h3 class="h3">Flieber’s specialists</h3>
-            <p>Walk through the biggest risks with you every planning cycle.</p>
-          </article>
+        <div class="faq reveal">
+          <details>
+            <summary>Which locations does Flieber cover?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Every location in your supply chain that Flieber can see: origin and regional warehouses, 3PLs, Amazon fulfillment centers and the channels they serve, connected through native or assisted integrations.</p>
+          </details>
+          <details>
+            <summary>What happens when data is missing?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Flieber flags it. Missing lead times or safety stock are filled by the rules you agree with your specialists, and anything that needs a decision is left for your review.</p>
+          </details>
+          <details>
+            <summary>Can we test a change before acting on it?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Yes. Add a purchase, delay a shipment or raise demand for a period, and see the effect on projected stock before anything is committed.</p>
+          </details>
+          <details>
+            <summary>Does it handle backorders and preorders?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Yes. Backorder demand counts in inventory and replenishment calculations, with settings by product and store, and products sold before they arrive have their own plans.</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <section class="section" id="common-uses" aria-labelledby="common-uses-title">
+    <section class="section pv-final" id="talk-to-a-specialist" aria-labelledby="final-title">
       <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Use cases</span>
-          <h2 class="h2" id="common-uses-title" style="margin-top:20px">Common uses</h2>
-        </div>
-        <div class="mod-grid">
-          <a class="mod-card" href="/use-cases/shopify-inventory-forecasting">
-            <h3 class="h3">Shopify inventory forecasting <span class="arrow" aria-hidden="true">→</span></h3>
-          </a>
-          <a class="mod-card" href="/use-cases/multi-warehouse-3pl-inventory">
-            <h3 class="h3">Multi-warehouse and 3PL planning <span class="arrow" aria-hidden="true">→</span></h3>
-          </a>
-          <a class="mod-card" href="/use-cases/backorders-preorders">
-            <h3 class="h3">Backorders and preorders <span class="arrow" aria-hidden="true">→</span></h3>
-          </a>
+        <span class="kicker">Next step</span>
+        <h2 class="h2" id="final-title">See what inventory forecasting looks like for your brand</h2>
+        <div class="pv-actions">
+          <a class="btn btn-primary" href="https://www.flieber.com/book-a-demo">Talk to a specialist <span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
-
-    <section class="section" id="works-with" aria-labelledby="works-with-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Modules</span>
-          <h2 class="h2" id="works-with-title" style="margin-top:20px">Works with</h2>
-        </div>
-        <div class="mod-grid">
-          <a class="mod-card" href="/product/data-layer">
-            <span class="n">01</span>
-            <h3 class="h3">Data layer <span class="arrow" aria-hidden="true">→</span></h3>
-            <p>One current, reconciled view of every channel, warehouse and supplier, ready for your team or your own tools. Available on its own.</p>
-          </a>
-          <a class="mod-card" href="/product/demand-forecasting">
-            <span class="n">02</span>
-            <h3 class="h3">Demand forecasting <span class="arrow" aria-hidden="true">→</span></h3>
-            <p>Forecasts for every product on every channel, corrected for stockouts and promotions.</p>
-          </a>
-          <a class="mod-card" href="/product/replenishment">
-            <span class="n">04</span>
-            <h3 class="h3">Replenishment <span class="arrow" aria-hidden="true">→</span></h3>
-            <p>Purchase and transfer recommendations within MOQs, case packs, lead times and cash, tested before you commit.</p>
-          </a>
-          <a class="mod-card" href="/product/workflows">
-            <span class="n">05</span>
-            <h3 class="h3">Workflows <span class="arrow" aria-hidden="true">→</span></h3>
-            <p>Approved decisions carried into suppliers, ERPs, Amazon, 3PLs and your own tools, with as much or as little approval as you choose.</p>
-          </a>
-        </div>
-        <p class="link-row"><a class="link-arrow" href="/features">All features <span class="arrow" aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <section class="section try" id="next" aria-labelledby="next-title">
-      <div class="wrap" style="position:relative">
-        <div class="section-head">
-          <span class="kicker">Next step</span>
-          <h2 class="h2" id="next-title" style="margin-top:20px">See it on your own data</h2>
-          <p class="lead">Start a 14-day free trial, no credit card required, or book a demo and we’ll walk through how Flieber works for your operation.</p>
-        </div>
-        <div class="try-actions">
-          <a class="btn btn-primary" href="https://www.flieber.com/free-trial">Start free trial <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-ghost" href="https://www.flieber.com/book-a-demo">Book a demo</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- ================= FOOTER ================= -->

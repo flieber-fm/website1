@@ -1820,6 +1820,69 @@ a.int-tile:hover { border-color: var(--black); }
 .df-act span{flex:1 1 180px;color:var(--charcoal);font-size:12.5px}
 .df-btn{font-style:normal;font-size:12px;font-weight:600;border:1px solid var(--line);border-radius:8px;padding:5px 10px}
 .df-btn.y{background:var(--yellow);border-color:var(--yellow)}
+.pv-hero-grid>*{min-width:0}
+.pv-phead .pv-video{align-self:center;width:100%}
+.df-scroll{overflow-x:auto}
+.df-st{font-size:11px;font-weight:600;border-radius:6px;padding:2px 7px;white-space:nowrap}
+.df-st-sl{background:#FFE3E0;color:#A12C1E}.df-st-so{background:#A12C1E;color:#fff}.df-st-bs{background:#FFF1D6;color:#9A5B00}.df-st-hl{background:rgba(43,182,115,.14);color:#167A4B}
+.df-net{display:grid;grid-template-columns:1fr;gap:4px;margin-top:12px}
+@media(min-width:700px){.df-net{grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:center}}
+.df-node{background:var(--gray-light);border-radius:10px;padding:8px 10px}
+.df-node small{display:block;color:var(--gray-dark);font:500 10px ui-monospace,monospace;letter-spacing:.03em}
+.df-node b{display:block;font-weight:600;font-size:12.5px;margin-top:2px}
+.df-node span{display:block;color:var(--charcoal);font-size:11.5px;margin-top:2px}
+.df-edge{display:flex;align-items:center;justify-content:center;padding:2px 0}
+.df-edge span{font:500 10px ui-monospace,monospace;color:var(--gray-dark);white-space:nowrap}
+.df-edge span::before{content:"↓ "}
+@media(min-width:700px){.df-edge span::before{content:""}.df-edge span::after{content:" →"}}
+.df-onway{display:inline-block;margin-top:10px;font-size:11.5px;font-weight:600;background:var(--yellow-light);border-radius:7px;padding:3px 8px}
+.df-params{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}
+.df-params span{border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+.df-params small{display:block;color:var(--gray-dark);font-size:10.5px}
+.df-params b{font-weight:600}
+@media(max-width:480px){.df-params{grid-template-columns:repeat(2,1fr)}}
+.df-flags{display:grid;gap:6px;margin-top:10px}
+.df-flags div{display:grid;grid-template-columns:1fr auto;gap:2px 10px;background:var(--gray-light);border-radius:10px;padding:8px 10px}
+.df-flags b{font-weight:600}
+.df-flags small{grid-column:1;color:var(--charcoal);font-size:12px}
+.df-flags em{grid-row:1/3;grid-column:2;align-self:center;font-style:normal;font-size:11px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:6px;padding:3px 7px;white-space:nowrap}
+.df-scs{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.df-sc{border:1px solid var(--line);border-radius:9px;padding:5px 9px}
+.df-sc.on{background:var(--yellow);border-color:var(--yellow)}
+.df-sc b{display:block;font-size:12px;font-weight:600}.df-sc small{font-size:11px;color:var(--charcoal)}
+.df-base{stroke:var(--line)}
+.df-line{stroke:var(--black);stroke-width:2}
+.df-alt{stroke:#D98A00;stroke-width:2;stroke-dasharray:5 4}
+.df-mark{fill:var(--black)}
+.df-red{fill:#C0392B}
+.df-vars{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:12px}
+@media(min-width:520px){.df-vars{grid-template-columns:repeat(4,1fr)}}
+.df-vars div{background:var(--gray-light);border-radius:9px;padding:7px 9px}
+.df-vars small{display:block;color:var(--gray-dark);font-size:10.5px}
+.df-vars b{font-weight:600;font-size:12.5px}
+.df-rules{display:grid;gap:6px;margin-top:10px}
+.df-rules div{display:grid;grid-template-columns:110px 1fr;gap:10px;background:var(--gray-light);border-radius:9px;padding:7px 10px}
+.df-rules b{font-weight:600}.df-rules span{font:500 11px/1.4 ui-monospace,monospace;color:var(--charcoal)}
+@media(max-width:480px){.df-rules div{grid-template-columns:1fr}}
+.df-toasts{display:grid;gap:6px;margin-top:10px}
+.df-toast{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--line);border-radius:10px;padding:6px 10px}
+.df-toast b{display:block;font-weight:600;font-size:12px}.df-toast small{font-size:11.5px;color:var(--charcoal)}
+.df-toast em{font-style:normal;font:600 10.5px ui-monospace,monospace;background:var(--yellow);border-radius:6px;padding:3px 7px}
+.df-alerts{display:grid;gap:6px;margin-top:10px}
+.df-alerts div{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--gray-light);border-radius:10px;padding:8px 10px}
+.df-alerts b{display:block;font-weight:600}.df-alerts small{font-size:12px;color:var(--charcoal)}
+.df-alerts em{white-space:nowrap}
+.df-c1{fill:var(--black)}.df-c2{fill:#C9CED0}
+.df-legend .l-c1::before{background:var(--black);height:9px;width:9px;vertical-align:0}
+.df-legend .l-c2::before{background:#C9CED0;height:9px;width:9px;vertical-align:0}
+.df-stg{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:12px}
+.df-stg span{text-align:center;padding:6px 2px;border-radius:7px;background:var(--gray-light);font-size:11px;color:var(--charcoal)}
+.df-stg span.on{background:var(--yellow);color:var(--black);font-weight:600}
+.df-wfs{display:grid;gap:6px;margin-top:10px;position:relative}
+.df-wf{background:var(--gray-light);border-radius:10px;padding:8px 12px;border-left:3px solid var(--line)}
+.df-wf small{display:block;font:500 10.5px ui-monospace,monospace;color:var(--gray-dark)}
+.df-wf b{font-weight:600;font-size:13px}
+.df-wf.stop{background:var(--yellow-light);border-left-color:var(--yellow)}
 
 </style>
 
@@ -1986,7 +2049,7 @@ a.int-tile:hover { border-color: var(--black); }
               <path class="viz-draw pv-viz-y" d="M206 56 H252"/><circle cx="200" cy="56" r="9" class="pv-viz-dot"/>
             </svg></div>
             <h3>Data and context without limits</h3>
-            <p>Not just sales, inventory and purchase orders. Add marketing plans, cash flow, competitive information and the reasons behind past decisions. Flieber’s AI takes all of it into account in every forecast and plan, so your decisions reflect how your business really works, not just what your systems record.</p>
+            <p>Not just sales, inventory and purchase orders. Add marketing plans, cash flow, the reasons behind past decisions and what the web says about your brand and market. Flieber’s AI takes all of it into account in every forecast and plan, so your decisions reflect how your business really works, not just what your systems record.</p>
           </article>
           <article class="pv-card">
             <div class="pv-viz" aria-hidden="true"><div class="pv-toasts"><div class="pv-toast"><span><b>Draft ready</b><small>Supplier 1 · 14 products · $47,750</small></span><em>Flieber</em></div><div class="pv-toast"><span><b>Draft ready</b><small>3PL US → FBA US · 5 pallets + 1 by air</small></span><em>Slack</em></div><div class="pv-toast"><span><b>2 items need you</b><small>Supplier 1 · Dec 2026</small></span><em>Claude</em></div></div></div>
@@ -2026,7 +2089,7 @@ a.int-tile:hover { border-color: var(--black); }
               <div><b>Your integrations</b><span>Amazon · Shopify · your ERP · your 3PL</span></div>
               <div><b>Your AI agents</b><span>Your rules · your notes · your history</span></div></div></div>
             <div class="pv-card-h"><span class="pv-num" aria-hidden="true">1</span><h3>We learn how you operate</h3></div>
-            <p>Our team connects your data and creates a routine of interactions with yours to continuously capture the context behind your numbers, from finance to marketing to operations. Within the first month, you already start seeing measurable value.</p>
+            <p>Our team connects your data and sets up a routine of interactions with yours to capture the context behind your numbers, from finance to marketing to operations, plus what the web says about your brand. Together we agree on the gaps to close first and the measures we’ll follow.</p>
           </article>
           <article class="pv-card">
             <div class="pv-viz pv-viz-step" aria-hidden="true"><div class="pv-sv pv-sv-rules"><div class="pv-sv-h">Your platform · fine-tuned to how you operate</div>
@@ -2035,7 +2098,7 @@ a.int-tile:hover { border-color: var(--black); }
               <div><b>3PL US → FBA US</b><span>weekly · by the pallet</span></div>
               <p class="pv-sv-tags"><i>Rules in your own words</i><i>Combined MOQs</i><i>Launches</i><i>Wholesale</i><i>Your approval stages</i></p></div></div>
             <div class="pv-card-h"><span class="pv-num" aria-hidden="true">2</span><h3>We tailor your platform</h3></div>
-            <p>You get your own version of Flieber, with your logo and colors, tailored to your use cases and how your team operates. Forecasting models are fine-tuned to your catalog, and new products and wholesale channels are handled by specialized tools. Views, alerts and workflows follow your preferences. When a new need comes up, it becomes part of your platform instead of a spreadsheet workaround or a long wait on the roadmap of a generic system.</p>
+            <p>You get your own Flieber, with your logo and colors, set up around your use cases and how your team operates. Forecasting models are fine-tuned to your catalog, and views, alerts and workflows follow your preferences. New needs become part of your platform, not spreadsheet workarounds or a wait on someone else’s roadmap.</p>
           </article>
           <article class="pv-card">
             <div class="pv-viz pv-viz-step" aria-hidden="true"><div class="pv-sv pv-sv-stages"><div class="pv-stg"><span>Draft</span><span>In review</span><span>Ops</span><span>Finance</span><span>Approved</span></div>
@@ -2222,7 +2285,7 @@ a.int-tile:hover { border-color: var(--black); }
           </details>
           <details>
             <summary>What happens in the first month?<span class="plus" aria-hidden="true"></span></summary>
-            <p>We get everything ready for you to plan on a solid foundation. Our team learns how you operate and gathers the context behind your numbers from the people involved, from finance to marketing to operations. We connect your data, map your products, channels and suppliers, and make the platform your own: views, alerts, workflows and forecasting set up around your use cases and preferences. Together we define the main gaps to close and the indicators we’ll follow. Within the first month, you already start seeing measurable value, and every cycle after that builds on it.</p>
+            <p>We get everything ready for you to plan on a solid foundation. Our team learns how you operate and gathers the context behind your numbers from the people involved, from finance to marketing to operations. We connect your data, map your products, channels and suppliers, and make the platform your own: views, alerts, workflows and forecasting set up around your use cases and preferences. Together we define the main gaps to close and the indicators we’ll follow. Every cycle after that builds on it.</p>
           </details>
         </div>
       </div>

@@ -15,10 +15,10 @@ ROOT = Path(__file__).resolve().parent.parent
 BOOK = "https://www.flieber.com/book-a-demo"
 ARROW = '<span class="arrow" aria-hidden="true">→</span>'
 DEMO_NOTE = "Illustration · Flieber Demo Account · fictional products and people"
-NIXTLA = "36% more accurate, verified by Nixtla against 16 statistical and machine-learning models on 46,000 products."
+NIXTLA = "Developed with Nixtla: 36% more accurate than our previous portfolio of 16 forecasting models, tested on 46,000 products."  # conservative wording (Fabricio, Nov 28)
 BANNED = ("Managed Services", "managed-services", "Self-Serve", "free trial", "Free trial", "Start free", "—", "alongside",
           "run by Flieber", "take over", "Flieber Studio", "Flieber Inventory", "dashboard", "single source of truth",
-          "visibility", "Essentials", "Pro tier", "Max tier", "$")
+          "visibility", "Essentials", "Pro tier", "Max tier", "Beyond inventory")
 
 
 # ---------- shared pieces ----------
@@ -67,7 +67,7 @@ def strip_tags(s: str) -> str:
     return re.sub(r"<[^>]+>", "", s).replace("&amp;", "&")
 
 
-def write(rel: str, title: str, desc: str, main: str, faq=None) -> None:
+def write(rel: str, title: str, desc: str, main: str, faq=None, extra_banned=()) -> None:
     f = ROOT / rel
     src = f.read_text(encoding="utf-8")
     top = src[:src.index('  <main id="main">')]
@@ -86,7 +86,7 @@ def write(rel: str, title: str, desc: str, main: str, faq=None) -> None:
     top = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: ld, top, count=1, flags=re.S)
     page = top + main + bottom
     body = main
-    for bad in BANNED:
+    for bad in BANNED + tuple(extra_banned):
         assert bad not in body, f"{rel}: brief rule broken: {bad}"
     f.write_text(page, encoding="utf-8")
     print("wrote", rel)
@@ -325,8 +325,8 @@ def model_view() -> str:
             </div>'''
 
 
-def changes_view() -> str:
-    rows = [("Nov 20 · 10:42", "Maya Chen", "your team", "Holiday promotion · Dec 1–24 · +15%"),
+def changes_view(rows=None) -> str:
+    rows = rows or [("Nov 20 · 10:42", "Maya Chen", "your team", "Holiday promotion · Dec 1–24 · +15%"),
             ("Nov 18 · 16:05", "Rafael Lima", "Flieber team", "Took out a one-off week · Amazon US"),
             ("Nov 12 · 09:30", "Rafael Lima", "Flieber team", "Shopify US → Naive + seasonality")]
     tr = "".join(f'<div class="df-log-r"><small>{w}</small><span><b>{n}</b><i>{r}</i></span><span>{c}</span><em>↶ Undo</em></div>' for w, n, r, c in rows)
@@ -505,13 +505,470 @@ def df_main() -> str:
   </main>'''
 
 
+# ---------- module page skeleton ----------
+
+def hero(kicker, h1, hid, lead, video: bool, alt_href="#how-it-works", alt="See how it works") -> str:
+    if video:
+        right = '''<figure class="pv-video" aria-label="Module video">
+          <span class="pv-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8z" fill="#1B1C1C"/></svg></span>
+          <p><span class="pv-ph">Video placeholder</span><br><b>The approved module video goes here</b> once its closing card is re-cut for the new offer.</p>
+        </figure>'''
+    else:
+        right = '''<figure class="pv-video" aria-label="Module video">
+          <span class="pv-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8z" fill="#1B1C1C"/></svg></span>
+          <p><span class="pv-ph">Video placeholder</span><br><b>The workflows video is in production.</b> It goes here once approved.</p>
+        </figure>'''
+    return f'''
+    <section class="page-head pv-phead" aria-labelledby="{hid}">
+      <div class="wrap pv-hero-grid">
+        <div>
+          <span class="kicker">{kicker}</span>
+          <h1 class="h1" id="{hid}">{h1}</h1>
+          <p class="lead">{lead}</p>
+          <div class="pv-actions">
+            <a class="btn btn-primary" href="{BOOK}">Talk to a specialist {ARROW}</a>
+            <a class="pv-alt" href="{alt_href}">{alt}</a>
+          </div>
+        </div>
+        {right}
+      </div>
+    </section>'''
+
+
+def split(sid, kicker, h2, hid, lead, view, soft=False, extra="", flip=False) -> str:
+    text = f'''<div class="reveal">
+            <span class="kicker">{kicker}</span>
+            <h2 class="h2" id="{hid}" style="margin-top:20px">{h2}</h2>
+            <p class="lead">{lead}</p>{extra}
+          </div>'''
+    pic = f'''<div class="reveal">
+            {view}
+            <p class="pv-demo">{DEMO_NOTE}</p>
+          </div>'''
+    a, b = (pic, text) if flip else (text, pic)
+    return f'''
+    <section class="section{' section-soft' if soft else ''}" id="{sid}" aria-labelledby="{hid}">
+      <div class="wrap">
+        <div class="pv-build">
+          {a}
+          {b}
+        </div>
+      </div>
+    </section>'''
+
+
+def cards_section(sid, kicker, h2, hid, lead, items, soft=False, after="") -> str:
+    cards = "\n".join(card(t, b) for t, b in items)
+    return f'''
+    <section class="section{' section-soft' if soft else ''}" id="{sid}" aria-labelledby="{hid}">
+      <div class="wrap">
+{head(kicker, h2, hid, lead)}
+        <div class="pv-3 pv-row pv-span2 reveal-stagger">
+{cards}
+        </div>{after}
+      </div>
+    </section>'''
+
+
+def tail(plans, features, faq, final_h2, soft_first=False) -> str:
+    feats = "\n".join(f'            <div class="pv-feat"><b>{t}</b><span>{b}</span></div>' for t, b in features)
+    a, b = ("section section-soft", "section") if soft_first else ("section", "section section-soft")
+    return f'''{cards_section("your-specialists", "Your specialists", "What your specialists do, plan by plan", "spec-title", "", plans, soft=soft_first,
+                      after='\n        <p class="pv-cite"><a href="../../pricing/#plans">Compare the plans</a></p>')}
+
+    <section class="{b}" id="features" aria-labelledby="feat-title">
+      <div class="wrap">
+{head("Features", "What’s included", "feat-title")}
+        <div class="pv-feats reveal">
+{feats}
+        </div>
+      </div>
+    </section>
+
+    <section class="{a}" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+{head("Questions", "Asked often", "faq-title")}
+        <div class="faq reveal">
+{faq_html(faq)}
+        </div>
+      </div>
+    </section>
+{final(final_h2, "final-title")}'''
+
+
+def chips(items) -> str:
+    return '\n            <div class="pv-integ">' + "".join(f'<span class="pv-chip">{m}</span>' for m in items) + "</div>"
+
+
+# ---------- /product/inventory-forecasting ----------
+
+def inv_sim(start, dem, inb=(), n=90):
+    s, st = start, []
+    for k in range(n):
+        for d, q in inb:
+            if k == d:
+                s += q
+        s = max(0, s - dem(k))
+        st.append(s)
+    return st
+
+
+def inv_svg(st, alt=None, w=300, h=120, top=None, safety=None, target=None, mark=None, label=None) -> str:
+    top = top or max(st + (alt or []) + [target or 0]) * 1.1
+    n = len(st)
+    x = lambda k: 8 + k * (w - 16) / (n - 1)
+    y = lambda v: h - 16 - v / top * (h - 30)
+    path = lambda vals: "M" + " L".join(f"{x(k):.1f} {y(v):.1f}" for k, v in enumerate(vals))
+    band = (f'<rect x="8" width="{w - 16}" y="{y(target):.1f}" height="{y(safety) - y(target):.1f}" class="pv-iv-band"/>'
+            f'<text x="{w - 10}" y="{y(safety) - 4:.1f}" text-anchor="end" class="df-t">safety</text>') if safety else ""
+    lost = ""
+    zero = [k for k, v in enumerate(st) if v == 0]
+    if zero:
+        lost = (f'<rect x="{x(zero[0]):.1f}" width="{x(zero[-1]) - x(zero[0]) + 2:.1f}" y="14" height="{h - 30}" class="pv-iv-lost"/>'
+                f'<text x="{x(zero[0]) - 3:.1f}" y="24" text-anchor="end" class="df-t df-red">stockout</text>')
+    alt_p = f'<path class="df-alt" d="{path(alt)}"/>' if alt else ""
+    m = (f'<path d="M{x(mark) - 5:.1f} 4 L{x(mark) + 5:.1f} 4 L{x(mark):.1f} 12Z" class="df-mark"/>'
+         f'<text x="{x(mark) + 8:.1f}" y="11" class="df-t">{label}</text>') if mark is not None else ""
+    return f'''<svg viewBox="0 0 {w} {h}" fill="none" aria-hidden="true">{band}{lost}
+                <path d="M8 {h - 16} H{w - 8}" class="df-base"/><path class="df-line" d="{path(st)}"/>{alt_p}{m}
+              </svg>'''
+
+
+IF_ROWS = [("A", "BLCK-SPRT-JRSY", "FBA US", "9 days", "sl", "Stockout likely", "Buy 1,800 by Dec 2"),
+           ("A", "GREY-CHNL-MATS", "FBA CA", "0 days", "so", "Out of stock", "Transfer 400 now"),
+           ("B", "BLCK-CFEE-MAKR", "3PL US", "16 days", "bs", "Below safety", "Buy 600 by Dec 6"),
+           ("B", "PINK-TRVL-BKPK", "FBA EU", "48 days", "hl", "Healthy", "No action"),
+           ("C", "ALMN-CRON-LUGG", "FBA UK", "74 days", "hl", "Healthy", "No action")]
+
+
+def if_products_view() -> str:
+    rows = "".join(f'<tr><td><span class="df-tier">{t}</span> {c}</td><td>{loc}</td><td>{d}</td><td><span class="df-st df-st-{k}">{l}</span></td><td>{a}</td></tr>'
+                   for t, c, loc, d, k, l, a in IF_ROWS)
+    return f'''<div class="df-view">
+              <div class="df-view-h"><b>Products</b><small>every product at every location · days of cover · next action</small></div>
+              <div class="df-scroll"><table class="df-table"><tr><th>Product</th><th>Location</th><th>Cover</th><th>Status</th><th>Next</th></tr>{rows}</table></div>
+            </div>'''
+
+
+NET = [("Supplier", "Supplier 1", "makes to order"), ("Origin storage", "3PL China", "4,800 on hand"),
+       ("Regional storage", "3PL US · 3PL EU", "3,120 · 1,640 on hand"), ("Fulfillment and channels", "FBA US · Shopify US · FBA EU · Wholesale EU", "")]
+NET_LT = ["45 days", "30 to 35 days", "6 to 7 days"]
+
+
+def if_network_view() -> str:
+    parts = []
+    for i, (r, n, s) in enumerate(NET):
+        parts.append(f'<div class="df-node"><small>{r}</small><b>{n}</b>{f"<span>{s}</span>" if s else ""}</div>')
+        if i < len(NET_LT):
+            parts.append(f'<div class="df-edge"><span>{NET_LT[i]}</span></div>')
+    params = "".join(f"<span><small>{a}</small><b>{b}</b></span>" for a, b in [("Safety stock", "21 days"), ("Target", "50 days"), ("MOQ", "500"), ("Case pack", "24")])
+    return f'''<div class="df-view">
+              <div class="df-view-h"><b>Supply chain</b><small>from your supplier to every channel · lead times on each route</small></div>
+              <div class="df-net">{"".join(parts)}</div>
+              <div class="df-onway">On the way · PO-1042 · 2,400 units</div>
+              <div class="df-params">{params}</div>
+            </div>'''
+
+
+def if_flags_view() -> str:
+    flags = [("Lead time missing", "3PL China → 3PL EU", "Filled by rule · 35 days"),
+             ("Lead time missing", "3PL EU → FBA EU", "Filled by rule · 6 days"),
+             ("Safety stock not set", "04PC-PLCM-SETT · tier B", "Filled by rule · 21 days"),
+             ("No demand forecast", "New listing · PINK-TRVL-BKPK · Shopify EU", "For your review")]
+    rows = "".join(f'<div><b>{a}</b><small>{b}</small><em>{c}</em></div>' for a, b, c in flags)
+    return f'''<div class="df-view">
+              <div class="df-view-h"><b>Flags</b><small>gaps in the data, found before they distort a plan</small></div>
+              <div class="df-flags">{rows}</div>
+            </div>'''
+
+
+def if_scenario_view() -> str:
+    base = inv_sim(1500, lambda k: 42 * (1.25 if 7 <= k <= 30 else 1), [(42, 2400)])
+    alt = inv_sim(1500, lambda k: 42 * (1.25 if 7 <= k <= 30 else 1), [(24, 2400), (49, 1200)])
+    acts = "".join(f'<span class="df-sc{" on" if i == 0 else ""}"><b>{a}</b><small>{b}</small></span>' for i, (a, b) in enumerate(
+        [("Add a purchase", "1,200 units · Jan 12"), ("Delay a shipment", "PO-1042 · Dec 18 → Jan 5"), ("Raise demand", "+25% · Dec 1–24")]))
+    return f'''<div class="df-view">
+              <div class="df-view-h"><span class="df-tier">A</span><b>BLCK-SPRT-JRSY</b><small>Scenarios · projected stock, next 90 days</small></div>
+              <div class="df-scs">{acts}</div>
+              {inv_svg(base, alt=alt, safety=21 * 42, target=50 * 42, mark=24, label="PO-1042")}
+              <div class="df-legend"><span class="l-ap">Projected stock today</span><span class="l-md">With the changes you are testing</span></div>
+            </div>'''
+
+
+IF_TAILOR = [
+    ("Your supply chain, as it is",
+     "From factory to origin storage, regional warehouses, fulfillment centers and channels, with the lead time of every route between them."),
+    ("Your rules, built in",
+     "Which stores get stock first, where to fall back when a location runs low and how backorders count, set once and applied every day."),
+    ("Context without limits",
+     "Promotions, ad campaigns, purchase timing and anything your team knows go into the projection, so risks reflect how your business works."),
+]
+
+IF_PLANS = [
+    ("Lite", "Your specialists keep lead times, safety stock and settings current, fill gaps in the data and flag the products at risk before they reach you."),
+    ("Core", "Everything in Lite, plus the biggest risks walked through with your team in every weekly session and in your S&amp;OP meetings."),
+    ("Full", "Everything in Core, with the purchases and transfers you approve followed through to suppliers, freight and your warehouses."),
+]
+
+IF_FEATURES = [
+    ("Inventory projections", "Stock by product, channel and location from on-hand, inbound and forecast demand, with days of cover and warehouse needs."),
+    ("Stockouts, overstock and lost sales", "Projected stockout dates, products below safety stock, excess inventory and the sales at stake."),
+    ("Backorders and preorders", "Backorder demand counted in inventory and replenishment, with settings by product and store, and plans for preorders."),
+    ("Inventory history and balances", "Snapshots and balances across every connected location, including inbound and in-transit stock."),
+]
+
+IF_FAQ = [
+    ("Which locations does Flieber cover?",
+     "Every location in your supply chain that Flieber can see: origin and regional warehouses, 3PLs, Amazon fulfillment centers and the channels they serve, connected through native or assisted integrations."),
+    ("What happens when data is missing?",
+     "Flieber flags it. Missing lead times or safety stock are filled by the rules you agree with your specialists, and anything that needs a decision is left for your review."),
+    ("Can we test a change before acting on it?",
+     "Yes. Add a purchase, delay a shipment or raise demand for a period, and see the effect on projected stock before anything is committed."),
+    ("Does it handle backorders and preorders?",
+     "Yes. Backorder demand counts in inventory and replenishment calculations, with settings by product and store, and products sold before they arrive have their own plans."),
+]
+
+
+def if_main() -> str:
+    decisions = chips(["Replenishments", "Transfers", "Advertising", "Promotions", "Cash flow"])
+    return f'''  <main id="main">
+{hero("Product · Inventory forecasting", "See stockouts and overstock before they happen", "if-title",
+      "Flieber projects stock for every product at every location, from your supplier to every channel, using on-hand inventory, inbound shipments and forecast demand. Risks show up while there is still time to act, and your team decides what to do.", True)}
+{split("how-it-works", "How it works", "Every product, at every location", "products-title",
+       "Each product gets its days of cover, its status and the next action, location by location. Inventory sits at the center of every decision, from what to buy to what to promote.",
+       if_products_view(), soft=True, extra=decisions)}
+{split("supply-chain", "Your supply chain", "Modeled from your supplier to every channel", "net-title",
+       "Every route has its lead time, every location its on-hand stock and every product its safety stock, target, MOQ and case pack, so the projection follows how stock really moves.",
+       if_network_view(), flip=True)}
+{split("flags", "Flags", "Gaps found before they distort a plan", "flags-title",
+       "A missing lead time or safety stock quietly breaks a projection. Flieber flags each gap, fills it by the rules agreed with your team and leaves the rest for your review.",
+       if_flags_view(), soft=True)}
+{split("scenarios", "Scenarios", "Test a change before you commit", "sc-title",
+       "Add a purchase, delay a shipment or raise demand for a promotion, and see what happens to projected stock before any money goes out. Every change is logged with who made it and why.",
+       if_scenario_view(), flip=True)}
+{cards_section("tailored", "Tailored to your brand", "Built around how you operate", "tailor-title",
+               "You don’t adapt to the software. Your inventory forecast follows your supply chain, your rules and everything your team knows.", IF_TAILOR, soft=True)}
+{tail(IF_PLANS, IF_FEATURES, IF_FAQ, "See what inventory forecasting looks like for your brand")}
+  </main>'''
+
+
+# ---------- /product/replenishment ----------
+
+def rp_order_view() -> str:
+    vars_ = [("MOQs", "all met"), ("Cartons", "full cartons"), ("Container", "40' HC · 96% full"), ("Price breaks", "$4.50 tier reached"),
+             ("Landed cost", "$47,750"), ("Cash out", "Dec 30% · Feb 70%"), ("Approvals", "Ops ✓ · Finance ✓")]
+    rows = "".join(f'<div><small>{a}</small><b>{b}</b></div>' for a, b in vars_)
+    return f'''<div class="df-view">
+              <div class="df-view-h"><b>Supplier 1 · Dec 2026</b><small>14 products · one purchase order</small><span class="df-ok" style="margin-left:auto">Ready to send</span></div>
+              <div class="df-vars">{rows}</div>
+            </div>'''
+
+
+def rp_rules_view() -> str:
+    rules = [("Supplier 1", "every 4 weeks · cover 120 days · full cartons · round up to MOQ if within 10%"),
+             ("Supplier 2", "every 6 weeks · cover 90 days · full containers"),
+             ("3PL US → FBA US", "weekly · by the pallet")]
+    toasts = [("Draft ready", "Supplier 1 · Dec 2026 · 14 products", "Flieber"), ("Draft ready", "3PL US → FBA US · 5 pallets + 1 by air", "Slack"),
+              ("Draft ready", "Supplier 2 · Jan 2027 · 1 container", "Email"), ("2 items need you", "Supplier 1 · Dec 2026", "Claude")]
+    r = "".join(f'<div><b>{a}</b><span>{b}</span></div>' for a, b in rules)
+    t = "".join(f'<div class="df-toast"><span><b>{a}</b><small>{b}</small></span><em>{c}</em></div>' for a, b, c in toasts)
+    return f'''<div class="df-view">
+              <div class="df-view-h"><b>Your buying rules</b><small>in your own words</small></div>
+              <div class="df-rules">{r}</div>
+              <div class="df-toasts">{t}</div>
+            </div>'''
+
+
+def rp_exceptions_view() -> str:
+    alerts = [("Order by Dec 2, 2026", "in 3 days", ""),
+              ("ALMN-CRON-LUGG below MOQ 500", "no rounding rule · round up: +$1,440, +32 days of cover", "Round up"),
+              ("Container 78% full · 40' HC", "top up with 3 products → 96%", "Top up"),
+              ("BLCK-CFEE-MAKR · +120 units", "reaches $4.50 · saves $1,140", "Add 120")]
+    rows = "".join(f'<div><span><b>{a}</b><small>{b}</small></span>{f"<em class=\"df-btn y\">{c}</em>" if c else ""}</div>' for a, b, c in alerts)
+    return f'''<div class="df-view">
+              <div class="df-view-h"><b>Supplier 1 · Dec 2026</b><small>drafted by rule · only the exceptions need you</small></div>
+              <div class="df-alerts">{rows}</div>
+            </div>'''
+
+
+def rp_cash_view() -> str:
+    cash = [("Dec", 14.6, 11.2), ("Jan", 38.2, 22.4), ("Feb", 61.4, 40.1), ("Mar", 22.0, 30.3), ("Apr", 18.5, 21.0)]
+    w, h, top = 300, 120, 66
+    bw = (w - 20) / len(cash)
+    bars = ""
+    for i, (m, a, b) in enumerate(cash):
+        x0 = 10 + i * bw
+        for j, v in enumerate((a, b)):
+            y = h - 18 - v / top * (h - 30)
+            bars += f'<rect class="{"df-c1" if j == 0 else "df-c2"}" x="{x0 + 8 + j * 18:.1f}" y="{y:.1f}" width="16" height="{h - 18 - y:.1f}" rx="2"/>'
+        bars += f'<text x="{x0 + bw / 2:.1f}" y="{h - 4}" text-anchor="middle" class="df-t">{m}</text>'
+    stages = "".join(f"<span{' class=\"on\"' if i < 4 else ''}>{s}</span>" for i, s in enumerate(["Draft", "In review", "Ops", "Finance", "Approved"]))
+    return f'''<div class="df-view">
+              <div class="df-view-h"><b>Cash out by month</b><small>$ thousands · purchases planned vs budget</small></div>
+              <svg viewBox="0 0 {w} {h}" fill="none" aria-hidden="true">{bars}<path d="M10 {h - 18} H{w - 10}" class="df-base"/></svg>
+              <div class="df-legend"><span class="l-c1">Planned purchases</span><span class="l-c2">Budget</span></div>
+              <div class="df-stg">{stages}</div>
+            </div>'''
+
+
+RP_TAILOR = [
+    ("Buying rules in your words",
+     "Buying cycles, coverage and rounding rules for each supplier and route, written the way your team already talks about them, and applied every cycle."),
+    ("MOQs as they really work",
+     "Minimums combined across products, case packs, cartons, pallets and containers, with price breaks and freight weighed before an order is drafted."),
+    ("Your approval process",
+     "Your own stages, from draft to operations and finance to approved, so every order follows the path your team already uses before money goes out."),
+]
+
+RP_PLANS = [
+    ("Lite", "Your specialists keep lead times, MOQs, case packs and buying rules current, so every plan Flieber drafts starts from the right settings."),
+    ("Core", "Everything in Lite, plus purchase and replenishment plans built with your team every week and approved plans turned into purchase-order files."),
+    ("Full", "Everything in Core, with the orders you approve placed and followed with suppliers, forwarders and your warehouse until they arrive."),
+]
+
+RP_FEATURES = [
+    ("Purchase and transfer recommendations", "What to order or transfer, how much and when, by product and location, including warehouse to FBA."),
+    ("Planning parameters", "Safety stock, target days of cover, overstock thresholds, lead times and order frequency, by product, category or channel."),
+    ("Order and shipping constraints", "MOQs and supplier constraints, container planning and rounding to case packs, cartons or pallets."),
+    ("Decision simulations", "Test changes to quantities, demand, arrival dates or lead times and see the effect on stock, revenue, margin and cash."),
+    ("Multi-month purchase planning", "A long buying horizon split into seasonally weighted orders, with cartons, MOQs and lead times applied."),
+    ("AI order-quantity adjustments", "Quantities rebalanced across destinations and fitted to containers, budget and cash, following notes in plain language."),
+    ("Saved plans and purchase orders", "Plans by supplier and date, with costs. Create and track purchase orders and group them under master orders."),
+]
+
+RP_FAQ = [
+    ("Does Flieber send orders without us?",
+     "No. Flieber drafts the plans and your team approves every order. On Full, your specialists place the orders you approve and follow them through."),
+    ("Can it handle combined MOQs and containers?",
+     "Yes. Minimums can be combined across products, and orders are fitted to case packs, cartons, pallets and container capacity, with price breaks and freight weighed in."),
+    ("Can we plan within a cash budget?",
+     "Yes. Purchases are planned against your cash by month, and quantities can be fitted to budget and cash-flow limits before anything is approved."),
+    ("Does it plan transfers to Amazon too?",
+     "Yes. Transfers from your warehouses or 3PLs to fulfillment locations such as FBA are planned by product and location, in the format you ship in."),
+]
+
+
+def rp_main() -> str:
+    juggle = chips(["MOQs", "Cartons", "Containers", "Price breaks", "Freight", "Tariffs", "Cash", "Approvals"])
+    return f'''  <main id="main">
+{hero("Product · Replenishment", "Know what to buy, how much and when", "rp-title",
+      "Flieber drafts purchase and transfer plans on every cycle, within your MOQs, cartons, containers, price breaks, lead times and cash. Your team reviews only the exceptions and approves every order.", True)}
+{split("how-it-works", "How it works", "Every order weighs everything at once", "order-title",
+       "One purchase order has to meet minimums, fill cartons and containers, reach price breaks, cover freight and tariffs, fit your cash and pass your approvals. Flieber weighs all of it before an order is drafted.",
+       rp_order_view(), soft=True, extra=juggle)}
+{split("rules", "Every cycle", "Plans drafted by your rules, on schedule", "rules-title",
+       "Your buying rules are written in your own words, supplier by supplier and route by route. On every cycle, Flieber drafts the plans and lets you know in Flieber, Slack, email or Claude.",
+       rp_rules_view(), flip=True)}
+{split("exceptions", "Exceptions", "Your team reviews only what needs a decision", "exc-title",
+       "Lines that follow your rules are ready. What doesn’t fit, a product below its MOQ, a container not yet full, a price break within reach, comes to your team with the option and its cost.",
+       rp_exceptions_view(), soft=True)}
+{split("cash", "Cash and approvals", "Every plan checked against your cash before money goes out", "cash-title",
+       "Planned purchases are compared with your budget month by month, and each plan moves through your approval stages before an order is sent.",
+       rp_cash_view(), flip=True)}
+{cards_section("tailored", "Tailored to your brand", "Built around how you buy", "tailor-title",
+               "You don’t adapt to the software. Your replenishment follows your suppliers, your constraints and your approval process.", RP_TAILOR, soft=True)}
+{tail(RP_PLANS, RP_FEATURES, RP_FAQ, "See what replenishment looks like for your brand")}
+  </main>'''
+
+
+# ---------- /product/workflows ----------
+
+WF_WHERE = [
+    ("Orders sent to suppliers",
+     "Approved purchase orders sent to each supplier in their own format, by email, file or Google Sheet, and pushed into NetSuite or other ERPs."),
+    ("Inbound shipments created",
+     "Approved transfers become inbound shipments in Amazon and in your 3PL and warehouse systems, then followed through delivery."),
+    ("Alerts where your team works",
+     "Scheduled checks for stockout risk, excess inventory and orders due, delivered by email, Slack, Microsoft Teams or Google Sheets."),
+]
+
+
+def wf_view() -> str:
+    steps = [("Every Monday · 8 am", "Draft the transfers from 3PL US to FBA US"), ("Check", "Full pallets · ground unless a product runs out first"),
+             ("Ask for approval", "Maya Chen, in Slack"), ("When approved", "Create the inbound shipment in Amazon"), ("Then", "Follow it to delivery and flag any delay")]
+    rows = "".join(f'<div class="df-wf{" stop" if i == 2 else ""}"><small>{a}</small><b>{b}</b></div>' for i, (a, b) in enumerate(steps))
+    return f'''<div class="df-view">
+              <div class="df-view-h"><b>Weekly FBA transfers</b><small>a workflow described in plain language</small></div>
+              <div class="df-wfs">{rows}</div>
+            </div>'''
+
+
+def wf_mcp_view() -> str:
+    return '''<div class="df-view df-chat">
+              <div class="df-view-h"><b>Flieber</b><small>connected to your other systems</small></div>
+              <p class="df-u">BLCK-SPRT-JRSY will run out on FBA US before the next shipment lands. Pause its ad campaign until Dec 18?</p>
+              <p class="df-a">Waiting for your approval. Once approved, the campaign is paused in your ads tool and resumes when stock is back.</p>
+              <div class="df-act"><span>Nothing changes until your team approves</span><em class="df-btn">Not now</em><em class="df-btn y">Approve</em></div>
+            </div>'''
+
+
+WF_PLANS = [
+    ("Lite", "Your specialists keep your workflows running as your systems change, and follow every failed sync or missed step until it’s fixed."),
+    ("Core", "Everything in Lite, plus new workflows designed with your team every week, starting with the ones that save the most time."),
+    ("Full", "Everything in Core, plus workflow automations for execution, from purchase orders and freight to logistics to your warehouse."),
+]
+
+WF_FEATURES = [
+    ("Purchase orders to suppliers", "Each order sent into the supplier’s system or as an email, file or Google Sheet in their own format."),
+    ("Purchase orders to ERPs", "Approved orders pushed into NetSuite, or into other ERPs through assisted integrations."),
+    ("Inbound shipments in Amazon and 3PLs", "Inbound shipments created in Amazon and in connected 3PL and warehouse systems from an approved plan."),
+    ("Inbound shipment tracking", "Orders and shipments followed through delivery, by manual entry, Google Sheets or automatic import."),
+    ("Alerts and scheduled reports", "Checks for stockout risk, excess inventory and orders due, by email, Slack, Microsoft Teams or Google Sheets."),
+    ("Custom workflows and agents", "Describe a recurring job in plain language and Flieber runs it on schedule, across its data and your apps."),
+    ("Actions in other systems", "Flieber connects to systems with an MCP server, so it can act where a decision lands, with your approval."),
+]
+
+WF_FAQ = [
+    ("What needs approval?",
+     "You decide. Each workflow stops for approval wherever your team wants it to, and nothing it would change moves until someone approves."),
+    ("Which systems can workflows reach?",
+     "Your suppliers by email, file or Google Sheet, NetSuite, Amazon, your 3PL and warehouse systems, the tools your team uses for alerts, and any system with an MCP server."),
+    ("Do we need to build the workflows ourselves?",
+     "No. Describe the job in plain language. Your specialists help design the workflows that save your team the most time and keep them running as your systems change."),
+]
+
+
+def wf_main() -> str:
+    where = "\n".join(card(t, b) for t, b in WF_WHERE)
+    return f'''  <main id="main">
+{hero("Product · Workflows", "From approved decision to done", "wf-title",
+      "Once your team approves a decision, Flieber carries it into the systems where it lands: your suppliers, your ERP, Amazon, your 3PLs and the tools you already use. You decide how much runs on its own and where it stops for approval.", False,
+      alt_href="#where", alt="See where decisions go")}
+
+    <section class="section section-soft" id="where" aria-labelledby="where-title">
+      <div class="wrap">
+{head("Where decisions go", "Approved in Flieber, done where it lands", "where-title", "The work after a decision is where time goes: sending orders, creating shipments, chasing updates. Workflows take it on, on your terms.")}
+        <div class="pv-3 pv-row pv-span2 reveal-stagger">
+{where}
+        </div>
+      </div>
+    </section>
+{split("how-it-works", "In plain language", "Describe the job, set where it stops", "wf2-title",
+       "Write a recurring job the way you would explain it to a colleague. Flieber runs it on schedule, across its own data and your connected apps, and stops for approval where you asked it to.",
+       wf_view())}
+{split("other-systems", "Other systems", "Act where the decision lands", "mcp-title",
+       "Inventory shapes your ads, promotions and cash flow. Flieber connects to any system with an MCP server, so a stock risk can become a paused campaign or a supplier confirmation, always with your approval.",
+       wf_mcp_view(), soft=True, flip=True)}
+{tail(WF_PLANS, WF_FEATURES, WF_FAQ, "See which workflows would save your team the most time")}
+  </main>'''
+
+
 def main() -> None:
     write("pricing/index.html", "Pricing: one offer, three plans | Flieber",
           "One offer in three plans, Lite, Core and Full: a platform tailored to your brand and Flieber specialists who work with your team. Priced monthly by your size and plan.",
-          pricing_main(), PRICING_FAQ)
+          pricing_main(), PRICING_FAQ, extra_banned=("$",))
     write("product/demand-forecasting/index.html", "Demand forecasting | Flieber",
           "Forecasts for every product on every channel, from corrected sales history, the best model for each product and the context your team adds. Your team approves every forecast.",
           df_main(), DF_FAQ)
+    write("product/inventory-forecasting/index.html", "Inventory forecasting | Flieber",
+          "Stock projected for every product at every location, from your supplier to every channel, so stockouts and overstock show up while there is still time to act.",
+          if_main(), IF_FAQ)
+    write("product/replenishment/index.html", "Replenishment | Flieber",
+          "Purchase and transfer plans drafted on every cycle, within your MOQs, cartons, containers, price breaks, lead times and cash. Your team approves every order.",
+          rp_main(), RP_FAQ)
+    write("product/workflows/index.html", "Workflows | Flieber",
+          "Approved decisions carried into your suppliers, your ERP, Amazon, your 3PLs and the tools you already use, with approval wherever your team wants it.",
+          wf_main(), WF_FAQ)
 
 
 if __name__ == "__main__":

@@ -52,7 +52,7 @@ GAP = [
 
 ERA = [
     ("Data and context without limits",
-     "Not just sales, inventory and purchase orders. Add marketing plans, cash flow, competitive information and the reasons behind past decisions. Flieber’s AI takes all of it into account in every forecast and plan, so your decisions reflect how your business really works, not just what your systems record."),
+     "Not just sales, inventory and purchase orders. Add marketing plans, cash flow, the reasons behind past decisions and what the web says about your brand and market. Flieber’s AI takes all of it into account in every forecast and plan, so your decisions reflect how your business really works, not just what your systems record."),
     ("Automations that get smarter",
      "Flieber specialists gather context from everyone involved in your business, from finance to marketing to operations, and bring what they’ve learned from more than 1,000 brands. They turn it into automations that take the routine off your team and improve with every cycle, so your people spend their time growing the brand, not running the process."),
     ("Intelligence that compounds",
@@ -61,9 +61,9 @@ ERA = [
 
 STEPS = [
     ("We learn how you operate",
-     "Our team connects your data and creates a routine of interactions with yours to continuously capture the context behind your numbers, from finance to marketing to operations. Within the first month, you already start seeing measurable value."),
+     "Our team connects your data and sets up a routine of interactions with yours to capture the context behind your numbers, from finance to marketing to operations, plus what the web says about your brand. Together we agree on the gaps to close first and the measures we’ll follow."),
     ("We tailor your platform",
-     "You get your own version of Flieber, with your logo and colors, tailored to your use cases and how your team operates. Forecasting models are fine-tuned to your catalog, and new products and wholesale channels are handled by specialized tools. Views, alerts and workflows follow your preferences. When a new need comes up, it becomes part of your platform instead of a spreadsheet workaround or a long wait on the roadmap of a generic system."),
+     "You get your own Flieber, with your logo and colors, set up around your use cases and how your team operates. Forecasting models are fine-tuned to your catalog, and views, alerts and workflows follow your preferences. New needs become part of your platform, not spreadsheet workarounds or a wait on someone else’s roadmap."),
     ("We stay, and it keeps getting smarter",
      "Your Flieber specialists stay with your account, learning from the different people in your team. Each cycle, new opportunities are detected and more of the routine moves onto automations. Every plan is reviewed with your team before money goes out, and every month you get a scorecard on the measures that show your progress."),
 ]
@@ -101,7 +101,7 @@ FAQ = [
     ("I just want software. I don’t want to pay for a team.",
      "We understand, and for years we sold Flieber that way. Here’s what we learned from more than 1,000 brands: software that has to fit everyone leaves gaps. Each brand used a small slice of it and filled the rest with spreadsheets and workarounds, so planning still depended on a few people’s heads. The specialists aren’t a team added on top of the software. They work with your team to make every planning cycle more streamlined and complete: they bring best practices from what works across other brands, act as a second set of eyes before money goes out, and find where better data or automation will help, building it into your platform as your business changes. They don’t replace your team or take your decisions. You decide how involved they get, from reviewing your plans to preparing the whole planning cycle for your team’s approval."),
     ("What happens in the first month?",
-     "We get everything ready for you to plan on a solid foundation. Our team learns how you operate and gathers the context behind your numbers from the people involved, from finance to marketing to operations. We connect your data, map your products, channels and suppliers, and make the platform your own: views, alerts, workflows and forecasting set up around your use cases and preferences. Together we define the main gaps to close and the indicators we’ll follow. Within the first month, you already start seeing measurable value, and every cycle after that builds on it."),
+     "We get everything ready for you to plan on a solid foundation. Our team learns how you operate and gathers the context behind your numbers from the people involved, from finance to marketing to operations. We connect your data, map your products, channels and suppliers, and make the platform your own: views, alerts, workflows and forecasting set up around your use cases and preferences. Together we define the main gaps to close and the indicators we’ll follow. Every cycle after that builds on it."),
 ]
 
 INTEGRATIONS = ["Amazon", "Shopify", "Walmart", "NetSuite", "Flexport", "Google Sheets"]
